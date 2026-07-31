@@ -27,9 +27,6 @@
 </LineStyle>
 </Style>
 <Style id="stationPin">
-<IconStyle>
-<Icon><href>https://maps.google.com/mapfiles/kml/shapes/rail.png</href></Icon>
-</IconStyle>
 </Style>
 <Placemark>
 <name>IR1 Rheinschiene-Jütland</name>

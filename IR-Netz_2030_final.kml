@@ -33,6 +33,7 @@
 </Style>
 <Placemark>
 <name>IR1 Rheinschiene-Juetland</name>
+<description><![CDATA[<b>Koeln Hbf → Fredericia</b><br/><br/><b>Bahnhoefe (25 Halte):</b><br/><br/><br/>&#8226;&#160;<b>Koeln Hbf</b>: ab 07:00<br/>&#8226;&#160;<b>Leverkusen Mitte</b>: an 07:11 / ab 07:12<br/>&#8226;&#160;<b>Solingen Hbf</b>: an 07:24 / ab 07:26<br/>&#8226;&#160;<b>Wuppertal Hbf</b>: an 07:38 / ab 07:41<br/>&#8226;&#160;<b>Hagen Hbf</b>: an 07:58 / ab 08:00<br/>&#8226;&#160;<b>Witten Hbf</b>: an 08:10 / ab 08:11<br/>&#8226;&#160;<b>Bochum Hbf</b>: an 08:20 / ab 08:23<br/>&#8226;&#160;<b>Recklinghausen Hbf</b>: an 08:42 / ab 08:44<br/>&#8226;&#160;<b>Duelmen</b>: an 09:00 / ab 09:01<br/>&#8226;&#160;<b>Muenster Hbf</b>: an 09:17 / ab 09:20<br/>&#8226;&#160;<b>Osnabrueck Hbf</b>: an 09:41 / ab 09:43<br/>&#8226;&#160;<b>Diepholz</b>: an 10:09 / ab 10:10<br/>&#8226;&#160;<b>Bremen Hbf</b>: an 10:34 / ab 10:37<br/>&#8226;&#160;<b>Rotenburg Wuemme</b>: an 10:55 / ab 10:56<br/>&#8226;&#160;<b>Hamburg Hbf</b>: an 11:28 / ab 11:32<br/>&#8226;&#160;<b>Neumuenster</b>: an 12:22 / ab 12:24<br/>&#8226;&#160;<b>Rendsburg</b>: an 12:49 / ab 12:50<br/>&#8226;&#160;<b>Schleswig</b>: an 13:15 / ab 13:16<br/>&#8226;&#160;<b>Flensburg</b>: an 13:49 / ab 13:52<br/>&#8226;&#160;<b>Padborg</b>: an 14:04 / ab 14:07<br/>&#8226;&#160;<b>Tinglev</b>: an 14:14 / ab 14:15<br/>&#8226;&#160;<b>Vojens</b>: an 14:31 / ab 14:32<br/>&#8226;&#160;<b>Lunderskov</b>: an 14:42 / ab 14:43<br/>&#8226;&#160;<b>Kolding</b>: an 14:54 / ab 14:56<br/>&#8226;&#160;<b>Fredericia</b>: an 15:11]]></description>
 <styleUrl>#lineIR1</styleUrl>
 <LineString>
 <tessellate>1</tessellate>
@@ -41,6 +42,7 @@
 </Placemark>
 <Placemark>
 <name>IR2 Ostseestern</name>
+<description><![CDATA[<b>Berlin Hbf → Malmoe C</b><br/><br/><b>Bahnhoefe (23 Halte):</b><br/><br/><br/>&#8226;&#160;<b>Berlin Hbf</b>: ab 06:55<br/>&#8226;&#160;<b>Berlin-Spandau</b>: an 07:05 / ab 07:07<br/>&#8226;&#160;<b>Rathenow</b>: an 07:42 / ab 07:44<br/>&#8226;&#160;<b>Stendal</b>: an 08:00 / ab 08:02<br/>&#8226;&#160;<b>Salzwedel</b>: an 08:28 / ab 08:30<br/>&#8226;&#160;<b>Uelzen</b>: an 08:54 / ab 08:57<br/>&#8226;&#160;<b>Lueneburg</b>: an 09:32 / ab 09:34<br/>&#8226;&#160;<b>Hamburg Hbf</b>: an 09:59 / ab 10:02<br/>&#8226;&#160;<b>Neumuenster</b>: an 10:52 / ab 10:54<br/>&#8226;&#160;<b>Rendsburg</b>: an 11:19 / ab 11:20<br/>&#8226;&#160;<b>Schleswig</b>: an 11:45 / ab 11:46<br/>&#8226;&#160;<b>Flensburg</b>: an 12:19 / ab 12:22<br/>&#8226;&#160;<b>Padborg</b>: an 12:34 / ab 12:37<br/>&#8226;&#160;<b>Lunderskov</b>: an 12:57 / ab 12:59<br/>&#8226;&#160;<b>Kolding</b>: an 13:06 / ab 13:08<br/>&#8226;&#160;<b>Middelfart</b>: an 13:24 / ab 13:26<br/>&#8226;&#160;<b>Odense</b>: an 13:38 / ab 13:40<br/>&#8226;&#160;<b>Nyborg</b>: an 13:51 / ab 13:52<br/>&#8226;&#160;<b>Slagelse</b>: an 14:07 / ab 14:08<br/>&#8226;&#160;<b>Ringsted</b>: an 14:21 / ab 14:23<br/>&#8226;&#160;<b>Koebenhavn Syd</b>: an 14:37 / ab 14:39<br/>&#8226;&#160;<b>Koebenhavn Lufthavn</b>: an 14:46 / ab 14:48<br/>&#8226;&#160;<b>Malmoe C</b>: an 15:03]]></description>
 <styleUrl>#lineIR2</styleUrl>
 <LineString>
 <tessellate>1</tessellate>
@@ -49,6 +51,7 @@
 </Placemark>
 <Placemark>
 <name>IR3 Thueringer Wald</name>
+<description><![CDATA[<b>Berlin Hbf → Muenchen Hbf</b><br/><br/><b>Bahnhoefe (18 Halte):</b><br/><br/><br/>&#8226;&#160;<b>Berlin Hbf</b>: ab 07:00<br/>&#8226;&#160;<b>Berlin Suedkreuz</b>: an 07:04 / ab 07:06<br/>&#8226;&#160;<b>BER Flughafen</b>: an 07:14 / ab 07:16<br/>&#8226;&#160;<b>Lutherstadt Wittenberg</b>: an 07:31 / ab 07:33<br/>&#8226;&#160;<b>Bitterfeld</b>: an 07:52 / ab 07:54<br/>&#8226;&#160;<b>Leipzig Hbf</b>: an 08:13 / ab 08:15<br/>&#8226;&#160;<b>Halle Saale Hbf</b>: an 08:35 / ab 08:37<br/>&#8226;&#160;<b>Naumburg Saale</b>: an 08:52 / ab 08:53<br/>&#8226;&#160;<b>Erfurt Hbf</b>: an 09:15 / ab 09:17<br/>&#8226;&#160;<b>Coburg</b>: an 09:54 / ab 09:56<br/>&#8226;&#160;<b>Bamberg</b>: an 10:19 / ab 10:21<br/>&#8226;&#160;<b>Forchheim</b>: an 10:34 / ab 10:36<br/>&#8226;&#160;<b>Nuernberg Hbf</b>: an 10:50 / ab 10:53<br/>&#8226;&#160;<b>Kinding Altmuehltal</b>: an 11:12 / ab 11:14<br/>&#8226;&#160;<b>Ingolstadt Hbf</b>: an 11:33 / ab 11:35<br/>&#8226;&#160;<b>Pfaffenhofen Ilm</b>: an 11:48 / ab 11:50<br/>&#8226;&#160;<b>Dachau</b>: an 12:05 / ab 12:07<br/>&#8226;&#160;<b>Muenchen Hbf</b>: an 12:14]]></description>
 <styleUrl>#lineIR3</styleUrl>
 <LineString>
 <tessellate>1</tessellate>
@@ -57,6 +60,7 @@
 </Placemark>
 <Placemark>
 <name>IR4 Ruhr-Rhein-Express</name>
+<description><![CDATA[<b>Berlin Hbf → Arnhem Centraal</b><br/><br/><b>Bahnhoefe (17 Halte):</b><br/><br/><br/>&#8226;&#160;<b>Berlin Hbf</b>: ab 07:00<br/>&#8226;&#160;<b>Berlin-Spandau</b>: an 07:10 / ab 07:12<br/>&#8226;&#160;<b>Rathenow</b>: an 07:32 / ab 07:34<br/>&#8226;&#160;<b>Stendal</b>: an 07:50 / ab 07:52<br/>&#8226;&#160;<b>Oebisfelde</b>: an 08:10 / ab 08:12<br/>&#8226;&#160;<b>Wolfsburg Hbf</b>: an 08:23 / ab 08:25<br/>&#8226;&#160;<b>Hannover Hbf</b>: an 08:56 / ab 08:59<br/>&#8226;&#160;<b>Minden</b>: an 09:29 / ab 09:31<br/>&#8226;&#160;<b>Bielefeld Hbf</b>: an 09:50 / ab 09:52<br/>&#8226;&#160;<b>Hamm Westf</b>: an 10:11 / ab 10:13<br/>&#8226;&#160;<b>Dortmund Hbf</b>: an 10:40 / ab 10:42<br/>&#8226;&#160;<b>Bochum Hbf</b>: an 10:55 / ab 10:57<br/>&#8226;&#160;<b>Essen Hbf</b>: an 11:07 / ab 11:09<br/>&#8226;&#160;<b>Oberhausen Hbf</b>: an 11:17 / ab 11:19<br/>&#8226;&#160;<b>Wesel</b>: an 11:38 / ab 11:40<br/>&#8226;&#160;<b>Emmerich</b>: an 11:59 / ab 12:01<br/>&#8226;&#160;<b>Arnhem Centraal</b>: an 12:18]]></description>
 <styleUrl>#lineIR4</styleUrl>
 <LineString>
 <tessellate>1</tessellate>

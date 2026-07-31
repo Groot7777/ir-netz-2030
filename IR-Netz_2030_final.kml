@@ -35,7 +35,7 @@
 <Placemark>
 <name>IR1 Rheinschiene-Jütland</name>
 <description><![CDATA[<div class="kmldesc"><b>Köln Hauptbahnhof → Fredericia</b><br/><br/><b>Bahnhöfe (25 Halte):</b><br/><br/><br/>&#8226;&#160;<b>Köln Hauptbahnhof</b>: ab 07:00<br/>&#8226;&#160;<b>Leverkusen Mitte</b>: an 07:11 / ab 07:12<br/>&#8226;&#160;<b>Solingen Hauptbahnhof</b>: an 07:24 / ab 07:26<br/>&#8226;&#160;<b>Wuppertal Hauptbahnhof</b>: an 07:38 / ab 07:41<br/>&#8226;&#160;<b>Hagen Hauptbahnhof</b>: an 07:58 / ab 08:00<br/>&#8226;&#160;<b>Witten Hbf</b>: an 08:10 / ab 08:11<br/>&#8226;&#160;<b>Bochum Hauptbahnhof</b>: an 08:20 / ab 08:23<br/>&#8226;&#160;<b>Recklinghausen Hauptbahnhof</b>: an 08:42 / ab 08:44<br/>&#8226;&#160;<b>Dülmen</b>: an 09:00 / ab 09:01<br/>&#8226;&#160;<b>Münster (Westf) Hauptbahnhof</b>: an 09:17 / ab 09:20<br/>&#8226;&#160;<b>Osnabrück Hauptbahnhof</b>: an 09:41 / ab 09:43<br/>&#8226;&#160;<b>Diepholz</b>: an 10:09 / ab 10:10<br/>&#8226;&#160;<b>Bremen Hauptbahnhof</b>: an 10:34 / ab 10:37<br/>&#8226;&#160;<b>Rotenburg (Wümme)</b>: an 10:55 / ab 10:56<br/>&#8226;&#160;<b>Hamburg Hauptbahnhof</b>: an 11:28 / ab 11:32<br/>&#8226;&#160;<b>Neumünster</b>: an 12:22 / ab 12:24<br/>&#8226;&#160;<b>Rendsburg</b>: an 12:49 / ab 12:50<br/>&#8226;&#160;<b>Schleswig</b>: an 13:15 / ab 13:16<br/>&#8226;&#160;<b>Flensburg</b>: an 13:49 / ab 13:52<br/>&#8226;&#160;<b>Padborg</b>: an 14:04 / ab 14:07<br/>&#8226;&#160;<b>Tinglev</b>: an 14:14 / ab 14:15<br/>&#8226;&#160;<b>Vojens</b>: an 14:31 / ab 14:32<br/>&#8226;&#160;<b>Lunderskov</b>: an 14:42 / ab 14:43<br/>&#8226;&#160;<b>Kolding</b>: an 14:54 / ab 14:56<br/>&#8226;&#160;<b>Fredericia</b>: an 15:11</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>8.4309253</longitude><latitude>53.2545797</latitude><range>400000</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>8.4309253</longitude><latitude>53.2545797</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>400000</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#lineIR1</styleUrl>
 <LineString>
 <tessellate>1</tessellate>
@@ -45,7 +45,7 @@
 <Placemark>
 <name>IR2 Ostseestern</name>
 <description><![CDATA[<div class="kmldesc"><b>Berlin Hauptbahnhof → Malmö C</b><br/><br/><b>Bahnhöfe (23 Halte):</b><br/><br/><br/>&#8226;&#160;<b>Berlin Hauptbahnhof</b>: ab 06:55<br/>&#8226;&#160;<b>Berlin-Spandau</b>: an 07:05 / ab 07:07<br/>&#8226;&#160;<b>Rathenow</b>: an 07:42 / ab 07:44<br/>&#8226;&#160;<b>Stendal</b>: an 08:00 / ab 08:02<br/>&#8226;&#160;<b>Salzwedel</b>: an 08:28 / ab 08:30<br/>&#8226;&#160;<b>Uelzen</b>: an 08:54 / ab 08:57<br/>&#8226;&#160;<b>Lüneburg</b>: an 09:32 / ab 09:34<br/>&#8226;&#160;<b>Hamburg Hauptbahnhof</b>: an 09:59 / ab 10:02<br/>&#8226;&#160;<b>Neumünster</b>: an 10:52 / ab 10:54<br/>&#8226;&#160;<b>Rendsburg</b>: an 11:19 / ab 11:20<br/>&#8226;&#160;<b>Schleswig</b>: an 11:45 / ab 11:46<br/>&#8226;&#160;<b>Flensburg</b>: an 12:19 / ab 12:22<br/>&#8226;&#160;<b>Padborg</b>: an 12:34 / ab 12:37<br/>&#8226;&#160;<b>Lunderskov</b>: an 12:57 / ab 12:59<br/>&#8226;&#160;<b>Kolding</b>: an 13:06 / ab 13:08<br/>&#8226;&#160;<b>Middelfart</b>: an 13:24 / ab 13:26<br/>&#8226;&#160;<b>Odense</b>: an 13:38 / ab 13:40<br/>&#8226;&#160;<b>Nyborg</b>: an 13:51 / ab 13:52<br/>&#8226;&#160;<b>Slagelse</b>: an 14:07 / ab 14:08<br/>&#8226;&#160;<b>Ringsted</b>: an 14:21 / ab 14:23<br/>&#8226;&#160;<b>København Syd</b>: an 14:37 / ab 14:39<br/>&#8226;&#160;<b>København Lufthavn</b>: an 14:46 / ab 14:48<br/>&#8226;&#160;<b>Malmö C</b>: an 15:03</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.31246175</longitude><latitude>54.091610849999995</latitude><range>395098.9992443515</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.31246175</longitude><latitude>54.091610849999995</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>395098.9992443515</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#lineIR2</styleUrl>
 <LineString>
 <tessellate>1</tessellate>
@@ -55,7 +55,7 @@
 <Placemark>
 <name>IR3 Thüringer Wald</name>
 <description><![CDATA[<div class="kmldesc"><b>Berlin Hauptbahnhof → München Hauptbahnhof</b><br/><br/><b>Bahnhöfe (18 Halte):</b><br/><br/><br/>&#8226;&#160;<b>Berlin Hauptbahnhof</b>: ab 07:00<br/>&#8226;&#160;<b>Berlin Südkreuz</b>: an 07:04 / ab 07:06<br/>&#8226;&#160;<b>Flughafen BER</b>: an 07:14 / ab 07:16<br/>&#8226;&#160;<b>Lutherstadt Wittenberg</b>: an 07:31 / ab 07:33<br/>&#8226;&#160;<b>Bitterfeld</b>: an 07:52 / ab 07:54<br/>&#8226;&#160;<b>Leipzig Hauptbahnhof</b>: an 08:13 / ab 08:15<br/>&#8226;&#160;<b>Halle (Saale) Hauptbahnhof</b>: an 08:35 / ab 08:37<br/>&#8226;&#160;<b>Naumburg (Saale)</b>: an 08:52 / ab 08:53<br/>&#8226;&#160;<b>Erfurt Hauptbahnhof</b>: an 09:15 / ab 09:17<br/>&#8226;&#160;<b>Coburg</b>: an 09:54 / ab 09:56<br/>&#8226;&#160;<b>Bamberg</b>: an 10:19 / ab 10:21<br/>&#8226;&#160;<b>Forchheim</b>: an 10:34 / ab 10:36<br/>&#8226;&#160;<b>Nürnberg Hauptbahnhof</b>: an 10:50 / ab 10:53<br/>&#8226;&#160;<b>Kinding (Altmühltal)</b>: an 11:12 / ab 11:14<br/>&#8226;&#160;<b>Ingolstadt Hauptbahnhof</b>: an 11:33 / ab 11:35<br/>&#8226;&#160;<b>Pfaffenhofen (Ilm)</b>: an 11:48 / ab 11:50<br/>&#8226;&#160;<b>Dachau</b>: an 12:05 / ab 12:07<br/>&#8226;&#160;<b>München Hauptbahnhof</b>: an 12:14</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>12.1964375</longitude><latitude>50.33316135</latitude><range>400000</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>12.1964375</longitude><latitude>50.33316135</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>400000</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#lineIR3</styleUrl>
 <LineString>
 <tessellate>1</tessellate>
@@ -65,7 +65,7 @@
 <Placemark>
 <name>IR4 Ruhr-Rhein-Express</name>
 <description><![CDATA[<div class="kmldesc"><b>Berlin Hauptbahnhof → Arnhem Centraal</b><br/><br/><b>Bahnhöfe (17 Halte):</b><br/><br/><br/>&#8226;&#160;<b>Berlin Hauptbahnhof</b>: ab 07:00<br/>&#8226;&#160;<b>Berlin-Spandau</b>: an 07:10 / ab 07:12<br/>&#8226;&#160;<b>Rathenow</b>: an 07:32 / ab 07:34<br/>&#8226;&#160;<b>Stendal</b>: an 07:50 / ab 07:52<br/>&#8226;&#160;<b>Oebisfelde</b>: an 08:10 / ab 08:12<br/>&#8226;&#160;<b>Wolfsburg Hauptbahnhof</b>: an 08:23 / ab 08:25<br/>&#8226;&#160;<b>Hannover Hauptbahnhof</b>: an 08:56 / ab 08:59<br/>&#8226;&#160;<b>Minden</b>: an 09:29 / ab 09:31<br/>&#8226;&#160;<b>Bielefeld Hauptbahnhof</b>: an 09:50 / ab 09:52<br/>&#8226;&#160;<b>Hamm (Westf)</b>: an 10:11 / ab 10:13<br/>&#8226;&#160;<b>Dortmund Hauptbahnhof</b>: an 10:40 / ab 10:42<br/>&#8226;&#160;<b>Bochum Hauptbahnhof</b>: an 10:55 / ab 10:57<br/>&#8226;&#160;<b>Essen Hauptbahnhof</b>: an 11:07 / ab 11:09<br/>&#8226;&#160;<b>Oberhausen Hauptbahnhof</b>: an 11:17 / ab 11:19<br/>&#8226;&#160;<b>Wesel</b>: an 11:38 / ab 11:40<br/>&#8226;&#160;<b>Emmerich</b>: an 11:59 / ab 12:01<br/>&#8226;&#160;<b>Arnhem Centraal</b>: an 12:18</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.6353755</longitude><latitude>52.016579699999994</latitude><range>400000</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.6353755</longitude><latitude>52.016579699999994</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>400000</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#lineIR4</styleUrl>
 <LineString>
 <tessellate>1</tessellate>
@@ -75,483 +75,483 @@
 <Placemark>
 <name>Arnhem Centraal</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 12:18</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>5.9011598</longitude><latitude>51.9844332</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>5.9011598</longitude><latitude>51.9844332</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>5.9011598,51.9844332,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Bamberg</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 10:19 / ab 10:21</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.8997336</longitude><latitude>49.9006357</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.8997336</longitude><latitude>49.9006357</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.8997336,49.9006357,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Berlin Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: ab 06:55<br/><b>IR3</b> Thüringer Wald: ab 07:00<br/><b>IR4</b> Ruhr-Rhein-Express: ab 07:00</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>13.3696614</longitude><latitude>52.5249451</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>13.3696614</longitude><latitude>52.5249451</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>13.3696614,52.5249451,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Berlin Südkreuz</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:04 / ab 07:06</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>13.3660396</longitude><latitude>52.4765716</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>13.3660396</longitude><latitude>52.4765716</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>13.3660396,52.4765716,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Berlin-Spandau</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 07:05 / ab 07:07<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:10 / ab 07:12</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>13.1956287</longitude><latitude>52.5347694</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>13.1956287</longitude><latitude>52.5347694</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>13.1956287,52.5347694,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Bielefeld Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 09:50 / ab 09:52</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>8.5327135</longitude><latitude>52.0293323</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>8.5327135</longitude><latitude>52.0293323</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>8.5327135,52.0293323,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Bitterfeld</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:52 / ab 07:54</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>12.3168951</longitude><latitude>51.6225986</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>12.3168951</longitude><latitude>51.6225986</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>12.3168951,51.6225986,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Bochum Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:20 / ab 08:23<br/><b>IR4</b> Ruhr-Rhein-Express: an 10:55 / ab 10:57</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.2232341</longitude><latitude>51.4785335</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.2232341</longitude><latitude>51.4785335</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.2232341,51.4785335,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Bremen Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:34 / ab 10:37</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>8.8137576</longitude><latitude>53.0832972</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>8.8137576</longitude><latitude>53.0832972</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>8.8137576,53.0832972,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Coburg</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 09:54 / ab 09:56</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.9575111</longitude><latitude>50.2627593</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.9575111</longitude><latitude>50.2627593</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.9575111,50.2627593,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Dachau</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 12:05 / ab 12:07</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.4442831</longitude><latitude>48.2546558</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.4442831</longitude><latitude>48.2546558</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.4442831,48.2546558,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Diepholz</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:09 / ab 10:10</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>8.3805296</longitude><latitude>52.6049309</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>8.3805296</longitude><latitude>52.6049309</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>8.3805296,52.6049309,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Dortmund Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 10:40 / ab 10:42</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.4592831</longitude><latitude>51.5178935</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.4592831</longitude><latitude>51.5178935</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.4592831,51.5178935,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Dülmen</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:00 / ab 09:01</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.2949425</longitude><latitude>51.827701</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.2949425</longitude><latitude>51.827701</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.2949425,51.827701,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Emmerich</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:59 / ab 12:01</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>6.2556203</longitude><latitude>51.8342608</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>6.2556203</longitude><latitude>51.8342608</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>6.2556203,51.8342608,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Erfurt Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 09:15 / ab 09:17</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.0380824</longitude><latitude>50.9722853</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.0380824</longitude><latitude>50.9722853</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.0380824,50.9722853,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Essen Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:07 / ab 11:09</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.0144679</longitude><latitude>51.4514769</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.0144679</longitude><latitude>51.4514769</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.0144679,51.4514769,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Flensburg</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 13:49 / ab 13:52<br/><b>IR2</b> Ostseestern: an 12:19 / ab 12:22</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.4365273</longitude><latitude>54.7741124</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.4365273</longitude><latitude>54.7741124</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.4365273,54.7741124,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Flughafen BER</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:14 / ab 07:16</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>13.5083312</longitude><latitude>52.3639907</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>13.5083312</longitude><latitude>52.3639907</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>13.5083312,52.3639907,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Forchheim</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 10:34 / ab 10:36</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.0700855</longitude><latitude>49.7169143</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.0700855</longitude><latitude>49.7169143</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.0700855,49.7169143,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Fredericia</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 15:11</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.739523</longitude><latitude>55.5684379</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.739523</longitude><latitude>55.5684379</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.739523,55.5684379,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Hagen Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:58 / ab 08:00</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.4606062</longitude><latitude>51.36296</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.4606062</longitude><latitude>51.36296</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.4606062,51.36296,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Halle (Saale) Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:35 / ab 08:37</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.9872964</longitude><latitude>51.4774872</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.9872964</longitude><latitude>51.4774872</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.9872964,51.4774872,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Hamburg Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 11:28 / ab 11:32<br/><b>IR2</b> Ostseestern: an 09:59 / ab 10:02</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.0064364</longitude><latitude>53.5531993</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.0064364</longitude><latitude>53.5531993</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.0064364,53.5531993,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Hamm (Westf)</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 10:11 / ab 10:13</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.807713</longitude><latitude>51.6785747</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.807713</longitude><latitude>51.6785747</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.807713,51.6785747,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Hannover Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:56 / ab 08:59</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.7416533</longitude><latitude>52.3769504</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.7416533</longitude><latitude>52.3769504</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.7416533,52.3769504,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Ingolstadt Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:33 / ab 11:35</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.4374071</longitude><latitude>48.7443901</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.4374071</longitude><latitude>48.7443901</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.4374071,48.7443901,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Kinding (Altmühltal)</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:12 / ab 11:14</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.37816</longitude><latitude>48.9915057</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.37816</longitude><latitude>48.9915057</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.37816,48.9915057,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Kolding</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:54 / ab 14:56<br/><b>IR2</b> Ostseestern: an 13:06 / ab 13:08</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.4814404</longitude><latitude>55.4905542</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.4814404</longitude><latitude>55.4905542</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.4814404,55.4905542,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Köln Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: ab 07:00</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>6.9590705</longitude><latitude>50.9427839</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>6.9590705</longitude><latitude>50.9427839</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>6.9590705,50.9427839,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>København Lufthavn</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 14:46 / ab 14:48</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>12.649417</longitude><latitude>55.6295551</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>12.649417</longitude><latitude>55.6295551</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>12.649417,55.6295551,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>København Syd</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 14:37 / ab 14:39</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>12.5154898</longitude><latitude>55.6525525</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>12.5154898</longitude><latitude>55.6525525</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>12.5154898,55.6525525,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Leipzig Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:13 / ab 08:15</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>12.3830858</longitude><latitude>51.3465518</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>12.3830858</longitude><latitude>51.3465518</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>12.3830858,51.3465518,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Leverkusen Mitte</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:11 / ab 07:12</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>6.9916768</longitude><latitude>51.031774</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>6.9916768</longitude><latitude>51.031774</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>6.9916768,51.031774,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Lunderskov</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:42 / ab 14:43<br/><b>IR2</b> Ostseestern: an 12:57 / ab 12:59</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.3040943</longitude><latitude>55.4803997</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.3040943</longitude><latitude>55.4803997</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.3040943,55.4803997,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Lüneburg</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 09:32 / ab 09:34</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.4197721</longitude><latitude>53.2497728</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.4197721</longitude><latitude>53.2497728</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.4197721,53.2497728,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Lutherstadt Wittenberg</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:31 / ab 07:33</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>12.6620632</longitude><latitude>51.8675201</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>12.6620632</longitude><latitude>51.8675201</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>12.6620632,51.8675201,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Malmö C</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 15:03</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>13.0006612</longitude><latitude>55.6091374</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>13.0006612</longitude><latitude>55.6091374</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>13.0006612,55.6091374,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Middelfart</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 13:24 / ab 13:26</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.7344457</longitude><latitude>55.5016258</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.7344457</longitude><latitude>55.5016258</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.7344457,55.5016258,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Minden</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 09:29 / ab 09:31</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>8.9344598</longitude><latitude>52.2905618</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>8.9344598</longitude><latitude>52.2905618</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>8.9344598,52.2905618,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>München Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 12:14</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.5556199</longitude><latitude>48.1415328</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.5556199</longitude><latitude>48.1415328</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.5556199,48.1415328,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Münster (Westf) Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:17 / ab 09:20</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.635792</longitude><latitude>51.9564055</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.635792</longitude><latitude>51.9564055</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.635792,51.9564055,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Naumburg (Saale)</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:52 / ab 08:53</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.7966387</longitude><latitude>51.1629266</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.7966387</longitude><latitude>51.1629266</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.7966387,51.1629266,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Neumünster</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 12:22 / ab 12:24<br/><b>IR2</b> Ostseestern: an 10:52 / ab 10:54</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.980273</longitude><latitude>54.0764928</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.980273</longitude><latitude>54.0764928</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.980273,54.0764928,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Nürnberg Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 10:50 / ab 10:53</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.0823089</longitude><latitude>49.4451991</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.0823089</longitude><latitude>49.4451991</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.0823089,49.4451991,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Nyborg</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 13:51 / ab 13:52</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.8035012</longitude><latitude>55.3138856</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.8035012</longitude><latitude>55.3138856</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.8035012,55.3138856,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Oberhausen Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:17 / ab 11:19</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>6.8516806</longitude><latitude>51.4749062</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>6.8516806</longitude><latitude>51.4749062</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>6.8516806,51.4749062,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Odense</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 13:38 / ab 13:40</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.3861989</longitude><latitude>55.4018379</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.3861989</longitude><latitude>55.4018379</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.3861989,55.4018379,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Oebisfelde</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:10 / ab 08:12</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.9839815</longitude><latitude>52.4392322</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.9839815</longitude><latitude>52.4392322</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.9839815,52.4392322,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Osnabrück Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:41 / ab 09:43</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>8.0615665</longitude><latitude>52.2729063</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>8.0615665</longitude><latitude>52.2729063</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>8.0615665,52.2729063,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Padborg</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:04 / ab 14:07<br/><b>IR2</b> Ostseestern: an 12:34 / ab 12:37</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.3589629</longitude><latitude>54.8235559</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.3589629</longitude><latitude>54.8235559</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.3589629,54.8235559,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Pfaffenhofen (Ilm)</name>
 <description><![CDATA[<div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:48 / ab 11:50</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.5117749</longitude><latitude>48.5219072</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.5117749</longitude><latitude>48.5219072</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.5117749,48.5219072,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Rathenow</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 07:42 / ab 07:44<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:32 / ab 07:34</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>12.3549984</longitude><latitude>52.5997366</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>12.3549984</longitude><latitude>52.5997366</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>12.3549984,52.5997366,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Recklinghausen Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:42 / ab 08:44</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.203273</longitude><latitude>51.6160957</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.203273</longitude><latitude>51.6160957</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.203273,51.6160957,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Rendsburg</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 12:49 / ab 12:50<br/><b>IR2</b> Ostseestern: an 11:19 / ab 11:20</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.6707886</longitude><latitude>54.3024043</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.6707886</longitude><latitude>54.3024043</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.6707886,54.3024043,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Ringsted</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 14:21 / ab 14:23</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.7860978</longitude><latitude>55.4380663</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.7860978</longitude><latitude>55.4380663</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.7860978,55.4380663,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Rotenburg (Wümme)</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:55 / ab 10:56</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.3908499</longitude><latitude>53.1124706</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.3908499</longitude><latitude>53.1124706</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.3908499,53.1124706,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Salzwedel</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 08:28 / ab 08:30</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.1611006</longitude><latitude>52.8582934</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.1611006</longitude><latitude>52.8582934</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.1611006,52.8582934,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Schleswig</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 13:15 / ab 13:16<br/><b>IR2</b> Ostseestern: an 11:45 / ab 11:46</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.5378994</longitude><latitude>54.499583</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.5378994</longitude><latitude>54.499583</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.5378994,54.499583,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Slagelse</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 14:07 / ab 14:08</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.3485562</longitude><latitude>55.4075014</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.3485562</longitude><latitude>55.4075014</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.3485562,55.4075014,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Solingen Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:24 / ab 07:26</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.004223</longitude><latitude>51.1611221</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.004223</longitude><latitude>51.1611221</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.004223,51.1611221,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Stendal</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 08:00 / ab 08:02<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:50 / ab 07:52</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>11.8548875</longitude><latitude>52.5946768</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>11.8548875</longitude><latitude>52.5946768</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>11.8548875,52.5946768,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Tinglev</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:14 / ab 14:15</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.2581486</longitude><latitude>54.9361334</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.2581486</longitude><latitude>54.9361334</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.2581486,54.9361334,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Uelzen</name>
 <description><![CDATA[<div class="kmldesc"><b>IR2</b> Ostseestern: an 08:54 / ab 08:57</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.5529747</longitude><latitude>52.9695952</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.5529747</longitude><latitude>52.9695952</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.5529747,52.9695952,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Vojens</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:31 / ab 14:32</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>9.3049359</longitude><latitude>55.2484701</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>9.3049359</longitude><latitude>55.2484701</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>9.3049359,55.2484701,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Wesel</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:38 / ab 11:40</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>6.6271721</longitude><latitude>51.6561632</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>6.6271721</longitude><latitude>51.6561632</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>6.6271721,51.6561632,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Witten Hbf</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:10 / ab 08:11</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.3293869</longitude><latitude>51.4355898</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.3293869</longitude><latitude>51.4355898</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.3293869,51.4355898,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Wolfsburg Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:23 / ab 08:25</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>10.7871395</longitude><latitude>52.4294853</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>10.7871395</longitude><latitude>52.4294853</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>10.7871395,52.4294853,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Wuppertal Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:38 / ab 07:41</div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.1500534</longitude><latitude>51.2545784</latitude><range>2500</range><tilt>0</tilt><heading>0</heading></LookAt>
+<LookAt><longitude>7.1500534</longitude><latitude>51.2545784</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPin</styleUrl>
 <Point><coordinates>7.1500534,51.2545784,0</coordinates></Point>
 </Placemark>

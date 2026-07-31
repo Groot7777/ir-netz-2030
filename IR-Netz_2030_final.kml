@@ -70,298 +70,10 @@
 <Folder>
 <name>Bahnhöfe</name>
 <Placemark>
-<name>Köln Hauptbahnhof</name>
+<name>Arnhem Centraal</name>
 <styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: ab 07:00</div>]]></description>
-<Point><coordinates>6.9590705,50.9427839,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Leverkusen Mitte</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:11 / ab 07:12</div>]]></description>
-<Point><coordinates>6.9916768,51.031774,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Solingen Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:24 / ab 07:26</div>]]></description>
-<Point><coordinates>7.004223,51.1611221,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Wuppertal Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:38 / ab 07:41</div>]]></description>
-<Point><coordinates>7.1500534,51.2545784,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Hagen Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:58 / ab 08:00</div>]]></description>
-<Point><coordinates>7.4606062,51.36296,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Witten Hbf</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:10 / ab 08:11</div>]]></description>
-<Point><coordinates>7.3293869,51.4355898,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Bochum Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:20 / ab 08:23<br/><b>IR4</b> Ruhr-Rhein-Express: an 10:55 / ab 10:57</div>]]></description>
-<Point><coordinates>7.2232341,51.4785335,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Recklinghausen Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:42 / ab 08:44</div>]]></description>
-<Point><coordinates>7.203273,51.6160957,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Dülmen</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:00 / ab 09:01</div>]]></description>
-<Point><coordinates>7.2949425,51.827701,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Münster (Westf) Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:17 / ab 09:20</div>]]></description>
-<Point><coordinates>7.635792,51.9564055,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Osnabrück Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:41 / ab 09:43</div>]]></description>
-<Point><coordinates>8.0615665,52.2729063,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Diepholz</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:09 / ab 10:10</div>]]></description>
-<Point><coordinates>8.3805296,52.6049309,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Bremen Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:34 / ab 10:37</div>]]></description>
-<Point><coordinates>8.8137576,53.0832972,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Rotenburg (Wümme)</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:55 / ab 10:56</div>]]></description>
-<Point><coordinates>9.3908499,53.1124706,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Hamburg Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 11:28 / ab 11:32<br/><b>IR2</b> Ostseestern: an 09:59 / ab 10:02</div>]]></description>
-<Point><coordinates>10.0064364,53.5531993,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Neumünster</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 12:22 / ab 12:24<br/><b>IR2</b> Ostseestern: an 10:52 / ab 10:54</div>]]></description>
-<Point><coordinates>9.980273,54.0764928,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Rendsburg</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 12:49 / ab 12:50<br/><b>IR2</b> Ostseestern: an 11:19 / ab 11:20</div>]]></description>
-<Point><coordinates>9.6707886,54.3024043,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Schleswig</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 13:15 / ab 13:16<br/><b>IR2</b> Ostseestern: an 11:45 / ab 11:46</div>]]></description>
-<Point><coordinates>9.5378994,54.499583,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Flensburg</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 13:49 / ab 13:52<br/><b>IR2</b> Ostseestern: an 12:19 / ab 12:22</div>]]></description>
-<Point><coordinates>9.4365273,54.7741124,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Padborg</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:04 / ab 14:07<br/><b>IR2</b> Ostseestern: an 12:34 / ab 12:37</div>]]></description>
-<Point><coordinates>9.3589629,54.8235559,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Tinglev</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:14 / ab 14:15</div>]]></description>
-<Point><coordinates>9.2581486,54.9361334,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Vojens</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:31 / ab 14:32</div>]]></description>
-<Point><coordinates>9.3049359,55.2484701,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Lunderskov</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:42 / ab 14:43<br/><b>IR2</b> Ostseestern: an 12:57 / ab 12:59</div>]]></description>
-<Point><coordinates>9.3040943,55.4803997,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Kolding</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:54 / ab 14:56<br/><b>IR2</b> Ostseestern: an 13:06 / ab 13:08</div>]]></description>
-<Point><coordinates>9.4814404,55.4905542,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Fredericia</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 15:11</div>]]></description>
-<Point><coordinates>9.739523,55.5684379,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Berlin Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: ab 06:55<br/><b>IR3</b> Thüringer Wald: ab 07:00<br/><b>IR4</b> Ruhr-Rhein-Express: ab 07:00</div>]]></description>
-<Point><coordinates>13.3696614,52.5249451,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Berlin-Spandau</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 07:05 / ab 07:07<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:10 / ab 07:12</div>]]></description>
-<Point><coordinates>13.1956287,52.5347694,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Rathenow</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 07:42 / ab 07:44<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:32 / ab 07:34</div>]]></description>
-<Point><coordinates>12.3549984,52.5997366,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Stendal</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 08:00 / ab 08:02<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:50 / ab 07:52</div>]]></description>
-<Point><coordinates>11.8548875,52.5946768,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Salzwedel</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 08:28 / ab 08:30</div>]]></description>
-<Point><coordinates>11.1611006,52.8582934,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Uelzen</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 08:54 / ab 08:57</div>]]></description>
-<Point><coordinates>10.5529747,52.9695952,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Lüneburg</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 09:32 / ab 09:34</div>]]></description>
-<Point><coordinates>10.4197721,53.2497728,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Middelfart</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 13:24 / ab 13:26</div>]]></description>
-<Point><coordinates>9.7344457,55.5016258,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Odense</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 13:38 / ab 13:40</div>]]></description>
-<Point><coordinates>10.3861989,55.4018379,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Nyborg</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 13:51 / ab 13:52</div>]]></description>
-<Point><coordinates>10.8035012,55.3138856,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Slagelse</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 14:07 / ab 14:08</div>]]></description>
-<Point><coordinates>11.3485562,55.4075014,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Ringsted</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 14:21 / ab 14:23</div>]]></description>
-<Point><coordinates>11.7860978,55.4380663,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>København Syd</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 14:37 / ab 14:39</div>]]></description>
-<Point><coordinates>12.5154898,55.6525525,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>København Lufthavn</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 14:46 / ab 14:48</div>]]></description>
-<Point><coordinates>12.649417,55.6295551,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Malmö C</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 15:03</div>]]></description>
-<Point><coordinates>13.0006612,55.6091374,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Berlin Südkreuz</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:04 / ab 07:06</div>]]></description>
-<Point><coordinates>13.3660396,52.4765716,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Flughafen BER</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:14 / ab 07:16</div>]]></description>
-<Point><coordinates>13.5083312,52.3639907,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Lutherstadt Wittenberg</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:31 / ab 07:33</div>]]></description>
-<Point><coordinates>12.6620632,51.8675201,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Bitterfeld</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:52 / ab 07:54</div>]]></description>
-<Point><coordinates>12.3168951,51.6225986,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Leipzig Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:13 / ab 08:15</div>]]></description>
-<Point><coordinates>12.3830858,51.3465518,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Halle (Saale) Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:35 / ab 08:37</div>]]></description>
-<Point><coordinates>11.9872964,51.4774872,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Naumburg (Saale)</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:52 / ab 08:53</div>]]></description>
-<Point><coordinates>11.7966387,51.1629266,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Erfurt Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 09:15 / ab 09:17</div>]]></description>
-<Point><coordinates>11.0380824,50.9722853,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Coburg</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 09:54 / ab 09:56</div>]]></description>
-<Point><coordinates>10.9575111,50.2627593,0</coordinates></Point>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 12:18</div>]]></description>
+<Point><coordinates>5.9011598,51.9844332,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Bamberg</name>
@@ -370,70 +82,22 @@
 <Point><coordinates>10.8997336,49.9006357,0</coordinates></Point>
 </Placemark>
 <Placemark>
-<name>Forchheim</name>
+<name>Berlin Hauptbahnhof</name>
 <styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 10:34 / ab 10:36</div>]]></description>
-<Point><coordinates>11.0700855,49.7169143,0</coordinates></Point>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: ab 06:55<br/><b>IR3</b> Thüringer Wald: ab 07:00<br/><b>IR4</b> Ruhr-Rhein-Express: ab 07:00</div>]]></description>
+<Point><coordinates>13.3696614,52.5249451,0</coordinates></Point>
 </Placemark>
 <Placemark>
-<name>Nürnberg Hauptbahnhof</name>
+<name>Berlin Südkreuz</name>
 <styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 10:50 / ab 10:53</div>]]></description>
-<Point><coordinates>11.0823089,49.4451991,0</coordinates></Point>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:04 / ab 07:06</div>]]></description>
+<Point><coordinates>13.3660396,52.4765716,0</coordinates></Point>
 </Placemark>
 <Placemark>
-<name>Kinding (Altmühltal)</name>
+<name>Berlin-Spandau</name>
 <styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:12 / ab 11:14</div>]]></description>
-<Point><coordinates>11.37816,48.9915057,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Ingolstadt Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:33 / ab 11:35</div>]]></description>
-<Point><coordinates>11.4374071,48.7443901,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Pfaffenhofen (Ilm)</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:48 / ab 11:50</div>]]></description>
-<Point><coordinates>11.5117749,48.5219072,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Dachau</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 12:05 / ab 12:07</div>]]></description>
-<Point><coordinates>11.4442831,48.2546558,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>München Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 12:14</div>]]></description>
-<Point><coordinates>11.5556199,48.1415328,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Oebisfelde</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:10 / ab 08:12</div>]]></description>
-<Point><coordinates>10.9839815,52.4392322,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Wolfsburg Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:23 / ab 08:25</div>]]></description>
-<Point><coordinates>10.7871395,52.4294853,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Hannover Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:56 / ab 08:59</div>]]></description>
-<Point><coordinates>9.7416533,52.3769504,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Minden</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 09:29 / ab 09:31</div>]]></description>
-<Point><coordinates>8.9344598,52.2905618,0</coordinates></Point>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 07:05 / ab 07:07<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:10 / ab 07:12</div>]]></description>
+<Point><coordinates>13.1956287,52.5347694,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Bielefeld Hauptbahnhof</name>
@@ -442,10 +106,40 @@
 <Point><coordinates>8.5327135,52.0293323,0</coordinates></Point>
 </Placemark>
 <Placemark>
-<name>Hamm (Westf)</name>
+<name>Bitterfeld</name>
 <styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 10:11 / ab 10:13</div>]]></description>
-<Point><coordinates>7.807713,51.6785747,0</coordinates></Point>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:52 / ab 07:54</div>]]></description>
+<Point><coordinates>12.3168951,51.6225986,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Bochum Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:20 / ab 08:23<br/><b>IR4</b> Ruhr-Rhein-Express: an 10:55 / ab 10:57</div>]]></description>
+<Point><coordinates>7.2232341,51.4785335,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Bremen Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:34 / ab 10:37</div>]]></description>
+<Point><coordinates>8.8137576,53.0832972,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Coburg</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 09:54 / ab 09:56</div>]]></description>
+<Point><coordinates>10.9575111,50.2627593,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Dachau</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 12:05 / ab 12:07</div>]]></description>
+<Point><coordinates>11.4442831,48.2546558,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Diepholz</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:09 / ab 10:10</div>]]></description>
+<Point><coordinates>8.3805296,52.6049309,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Dortmund Hauptbahnhof</name>
@@ -454,22 +148,10 @@
 <Point><coordinates>7.4592831,51.5178935,0</coordinates></Point>
 </Placemark>
 <Placemark>
-<name>Essen Hauptbahnhof</name>
+<name>Dülmen</name>
 <styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:07 / ab 11:09</div>]]></description>
-<Point><coordinates>7.0144679,51.4514769,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Oberhausen Hauptbahnhof</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:17 / ab 11:19</div>]]></description>
-<Point><coordinates>6.8516806,51.4749062,0</coordinates></Point>
-</Placemark>
-<Placemark>
-<name>Wesel</name>
-<styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:38 / ab 11:40</div>]]></description>
-<Point><coordinates>6.6271721,51.6561632,0</coordinates></Point>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:00 / ab 09:01</div>]]></description>
+<Point><coordinates>7.2949425,51.827701,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Emmerich</name>
@@ -478,10 +160,328 @@
 <Point><coordinates>6.2556203,51.8342608,0</coordinates></Point>
 </Placemark>
 <Placemark>
-<name>Arnhem Centraal</name>
+<name>Erfurt Hauptbahnhof</name>
 <styleUrl>#stationPin</styleUrl>
-<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 12:18</div>]]></description>
-<Point><coordinates>5.9011598,51.9844332,0</coordinates></Point>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 09:15 / ab 09:17</div>]]></description>
+<Point><coordinates>11.0380824,50.9722853,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Essen Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:07 / ab 11:09</div>]]></description>
+<Point><coordinates>7.0144679,51.4514769,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Flensburg</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 13:49 / ab 13:52<br/><b>IR2</b> Ostseestern: an 12:19 / ab 12:22</div>]]></description>
+<Point><coordinates>9.4365273,54.7741124,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Flughafen BER</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:14 / ab 07:16</div>]]></description>
+<Point><coordinates>13.5083312,52.3639907,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Forchheim</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 10:34 / ab 10:36</div>]]></description>
+<Point><coordinates>11.0700855,49.7169143,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Fredericia</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 15:11</div>]]></description>
+<Point><coordinates>9.739523,55.5684379,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Hagen Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:58 / ab 08:00</div>]]></description>
+<Point><coordinates>7.4606062,51.36296,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Halle (Saale) Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:35 / ab 08:37</div>]]></description>
+<Point><coordinates>11.9872964,51.4774872,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Hamburg Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 11:28 / ab 11:32<br/><b>IR2</b> Ostseestern: an 09:59 / ab 10:02</div>]]></description>
+<Point><coordinates>10.0064364,53.5531993,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Hamm (Westf)</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 10:11 / ab 10:13</div>]]></description>
+<Point><coordinates>7.807713,51.6785747,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Hannover Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:56 / ab 08:59</div>]]></description>
+<Point><coordinates>9.7416533,52.3769504,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Ingolstadt Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:33 / ab 11:35</div>]]></description>
+<Point><coordinates>11.4374071,48.7443901,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Kinding (Altmühltal)</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:12 / ab 11:14</div>]]></description>
+<Point><coordinates>11.37816,48.9915057,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Kolding</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:54 / ab 14:56<br/><b>IR2</b> Ostseestern: an 13:06 / ab 13:08</div>]]></description>
+<Point><coordinates>9.4814404,55.4905542,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Köln Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: ab 07:00</div>]]></description>
+<Point><coordinates>6.9590705,50.9427839,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>København Lufthavn</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 14:46 / ab 14:48</div>]]></description>
+<Point><coordinates>12.649417,55.6295551,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>København Syd</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 14:37 / ab 14:39</div>]]></description>
+<Point><coordinates>12.5154898,55.6525525,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Leipzig Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:13 / ab 08:15</div>]]></description>
+<Point><coordinates>12.3830858,51.3465518,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Leverkusen Mitte</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:11 / ab 07:12</div>]]></description>
+<Point><coordinates>6.9916768,51.031774,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Lunderskov</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:42 / ab 14:43<br/><b>IR2</b> Ostseestern: an 12:57 / ab 12:59</div>]]></description>
+<Point><coordinates>9.3040943,55.4803997,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Lüneburg</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 09:32 / ab 09:34</div>]]></description>
+<Point><coordinates>10.4197721,53.2497728,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Lutherstadt Wittenberg</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 07:31 / ab 07:33</div>]]></description>
+<Point><coordinates>12.6620632,51.8675201,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Malmö C</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 15:03</div>]]></description>
+<Point><coordinates>13.0006612,55.6091374,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Middelfart</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 13:24 / ab 13:26</div>]]></description>
+<Point><coordinates>9.7344457,55.5016258,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Minden</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 09:29 / ab 09:31</div>]]></description>
+<Point><coordinates>8.9344598,52.2905618,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>München Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 12:14</div>]]></description>
+<Point><coordinates>11.5556199,48.1415328,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Münster (Westf) Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:17 / ab 09:20</div>]]></description>
+<Point><coordinates>7.635792,51.9564055,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Naumburg (Saale)</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 08:52 / ab 08:53</div>]]></description>
+<Point><coordinates>11.7966387,51.1629266,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Neumünster</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 12:22 / ab 12:24<br/><b>IR2</b> Ostseestern: an 10:52 / ab 10:54</div>]]></description>
+<Point><coordinates>9.980273,54.0764928,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Nürnberg Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 10:50 / ab 10:53</div>]]></description>
+<Point><coordinates>11.0823089,49.4451991,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Nyborg</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 13:51 / ab 13:52</div>]]></description>
+<Point><coordinates>10.8035012,55.3138856,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Oberhausen Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:17 / ab 11:19</div>]]></description>
+<Point><coordinates>6.8516806,51.4749062,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Odense</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 13:38 / ab 13:40</div>]]></description>
+<Point><coordinates>10.3861989,55.4018379,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Oebisfelde</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:10 / ab 08:12</div>]]></description>
+<Point><coordinates>10.9839815,52.4392322,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Osnabrück Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 09:41 / ab 09:43</div>]]></description>
+<Point><coordinates>8.0615665,52.2729063,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Padborg</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:04 / ab 14:07<br/><b>IR2</b> Ostseestern: an 12:34 / ab 12:37</div>]]></description>
+<Point><coordinates>9.3589629,54.8235559,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Pfaffenhofen (Ilm)</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR3</b> Thüringer Wald: an 11:48 / ab 11:50</div>]]></description>
+<Point><coordinates>11.5117749,48.5219072,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Rathenow</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 07:42 / ab 07:44<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:32 / ab 07:34</div>]]></description>
+<Point><coordinates>12.3549984,52.5997366,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Recklinghausen Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:42 / ab 08:44</div>]]></description>
+<Point><coordinates>7.203273,51.6160957,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Rendsburg</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 12:49 / ab 12:50<br/><b>IR2</b> Ostseestern: an 11:19 / ab 11:20</div>]]></description>
+<Point><coordinates>9.6707886,54.3024043,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Ringsted</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 14:21 / ab 14:23</div>]]></description>
+<Point><coordinates>11.7860978,55.4380663,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Rotenburg (Wümme)</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 10:55 / ab 10:56</div>]]></description>
+<Point><coordinates>9.3908499,53.1124706,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Salzwedel</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 08:28 / ab 08:30</div>]]></description>
+<Point><coordinates>11.1611006,52.8582934,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Schleswig</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 13:15 / ab 13:16<br/><b>IR2</b> Ostseestern: an 11:45 / ab 11:46</div>]]></description>
+<Point><coordinates>9.5378994,54.499583,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Slagelse</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 14:07 / ab 14:08</div>]]></description>
+<Point><coordinates>11.3485562,55.4075014,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Solingen Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:24 / ab 07:26</div>]]></description>
+<Point><coordinates>7.004223,51.1611221,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Stendal</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 08:00 / ab 08:02<br/><b>IR4</b> Ruhr-Rhein-Express: an 07:50 / ab 07:52</div>]]></description>
+<Point><coordinates>11.8548875,52.5946768,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Tinglev</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:14 / ab 14:15</div>]]></description>
+<Point><coordinates>9.2581486,54.9361334,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Uelzen</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR2</b> Ostseestern: an 08:54 / ab 08:57</div>]]></description>
+<Point><coordinates>10.5529747,52.9695952,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Vojens</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 14:31 / ab 14:32</div>]]></description>
+<Point><coordinates>9.3049359,55.2484701,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Wesel</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 11:38 / ab 11:40</div>]]></description>
+<Point><coordinates>6.6271721,51.6561632,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Witten Hbf</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 08:10 / ab 08:11</div>]]></description>
+<Point><coordinates>7.3293869,51.4355898,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Wolfsburg Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR4</b> Ruhr-Rhein-Express: an 08:23 / ab 08:25</div>]]></description>
+<Point><coordinates>10.7871395,52.4294853,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Wuppertal Hauptbahnhof</name>
+<styleUrl>#stationPin</styleUrl>
+<description><![CDATA[<style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style><div class="kmldesc"><b>IR1</b> Rheinschiene-Jütland: an 07:38 / ab 07:41</div>]]></description>
+<Point><coordinates>7.1500534,51.2545784,0</coordinates></Point>
 </Placemark>
 </Folder>
 </Document>

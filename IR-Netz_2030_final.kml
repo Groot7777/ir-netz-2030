@@ -28,7 +28,7 @@
 </Style>
 <Style id="stationPin">
 <IconStyle>
-<Icon><href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href></Icon>
+<Icon><href>https://maps.google.com/mapfiles/kml/shapes/rail.png</href></Icon>
 </IconStyle>
 </Style>
 <Placemark>

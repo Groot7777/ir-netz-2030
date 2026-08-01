@@ -4,8 +4,14 @@
   <name>IR-Netz 2030 - Globales Maglev-Netzwerk</name>
   <Style id="station_default">
     <IconStyle>
-      <scale>1.0</scale>
+      <scale>1.1</scale>
+      <Icon>
+        <href>https://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+      </Icon>
     </IconStyle>
+    <LabelStyle>
+      <scale>0</scale>
+    </LabelStyle>
   </Style>
   <Style id="line_arktis_afrika">
     <LineStyle><color>ffd1ce00</color><width>4</width></LineStyle>

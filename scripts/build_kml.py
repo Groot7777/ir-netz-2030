@@ -340,8 +340,14 @@ def main():
 
     style_default_icon = """  <Style id="station_default">
     <IconStyle>
-      <scale>1.0</scale>
+      <scale>1.1</scale>
+      <Icon>
+        <href>https://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+      </Icon>
     </IconStyle>
+    <LabelStyle>
+      <scale>0</scale>
+    </LabelStyle>
   </Style>"""
 
     doc = f"""<?xml version="1.0" encoding="UTF-8"?>

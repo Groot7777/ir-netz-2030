@@ -193,8 +193,7 @@ def kml_placemark_line(line, path_simplified, color_hex):
         t = " / ".join(parts) if parts else ""
         nm = s.get("display") or s["key"]
         desc_parts.append(f"{xml_escape(nm)}: {t}<br/>")
-    desc_parts.append(DARK_MODE_CSS)
-    description = "".join(desc_parts)
+    description = wrap_description("".join(desc_parts))
 
     return f"""  <Placemark>
     <name>{name}</name>
@@ -217,7 +216,13 @@ def kml_placemark_line(line, path_simplified, color_hex):
 """
 
 
-DARK_MODE_CSS = """<style>@media (prefers-color-scheme: dark) { body { background:#1e1e1e; color:#eee; } }</style>"""
+def wrap_description(html):
+    # Google Earth (esp. Mobile) renders the balloon content on a dark card
+    # regardless of the system theme, and its HTML sanitizer strips <style>
+    # blocks / media queries. A fixed light inline color is the only reliable
+    # way to keep the text readable there without going illegible on a
+    # light-themed renderer (still fine at ~#e6e6e6 either way).
+    return f'<div style="color:#e6e6e6;">{html}</div>'
 
 
 def build_station_registry(lines, geocode_cache):
@@ -279,8 +284,7 @@ def kml_placemark_station(key, info, geocode_cache):
             desc_parts.append(f"<i>{line_name}</i> Endstation: {takt_str}{note_str}<br/>")
         else:
             desc_parts.append(f"<i>{line_name}</i> Richtung {dest}: {takt_str}{note_str}<br/>")
-    desc_parts.append(DARK_MODE_CSS)
-    description = "".join(desc_parts)
+    description = wrap_description("".join(desc_parts))
 
     placemark = f"""  <Placemark>
     <name>{name}</name>
@@ -353,7 +357,7 @@ def main():
     doc = f"""<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>IR-Netz 2030 - Globales Maglev-Netzwerk</name>
+  <name>Maglev-Netz 2030</name>
 {style_default_icon}
 {os.linesep.join(styles)}
 {''.join(line_placemarks)}{''.join(station_placemarks)}</Document>

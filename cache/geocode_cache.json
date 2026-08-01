@@ -555,13 +555,13 @@
     "source": "pdf_exact"
   },
   "Duesseldorf": {
-    "lat": 51.2277,
-    "lon": 6.7735,
+    "lat": 51.27817,
+    "lon": 6.76684,
     "source": "override"
   },
   "Duisburg": {
-    "lat": 51.4344,
-    "lon": 6.7623,
+    "lat": 51.4405,
+    "lon": 6.76884,
     "source": "override"
   },
   "Dunkerque": {
@@ -597,8 +597,8 @@
     "source": "override"
   },
   "Essen": {
-    "lat": 51.4556,
-    "lon": 7.0116,
+    "lat": 51.45148,
+    "lon": 7.01447,
     "source": "override"
   },
   "Fairbanks Nord": {
@@ -629,8 +629,8 @@
     "source": "photon"
   },
   "Frankfurt Flughafen": {
-    "lat": 50.05,
-    "lon": 8.5706,
+    "lat": 50.05747,
+    "lon": 8.60332,
     "source": "override"
   },
   "Gdansk Glowny": {
@@ -985,8 +985,8 @@
     "source": "override"
   },
   "Kassel Kreuz Mitte": {
-    "lat": 51.3358,
-    "lon": 9.5031,
+    "lat": 51.2748,
+    "lon": 9.5294,
     "source": "override"
   },
   "Kobenhavn H": {
@@ -995,8 +995,8 @@
     "source": "pdf_exact"
   },
   "Koblenz": {
-    "lat": 50.3569,
-    "lon": 7.5886,
+    "lat": 50.365,
+    "lon": 7.60648,
     "source": "override"
   },
   "Kochi Kalamassery": {
@@ -1005,8 +1005,8 @@
     "source": "override"
   },
   "Koeln": {
-    "lat": 50.9413,
-    "lon": 6.9583,
+    "lat": 50.88386,
+    "lon": 6.96005,
     "source": "override"
   },
   "Kosice": {
@@ -1094,8 +1094,8 @@
     "source": "photon"
   },
   "Linz": {
-    "lat": 48.29,
-    "lon": 14.2938,
+    "lat": 48.31735,
+    "lon": 14.30278,
     "source": "override"
   },
   "List Sylt": {
@@ -1141,8 +1141,8 @@
     "source": "override"
   },
   "Mannheim": {
-    "lat": 49.4796,
-    "lon": 8.4692,
+    "lat": 49.45972,
+    "lon": 8.51114,
     "source": "override"
   },
   "Marler Strasse": {
@@ -1200,8 +1200,8 @@
     "source": "photon"
   },
   "Muenchen": {
-    "lat": 48.1402,
-    "lon": 11.5581,
+    "lat": 48.136,
+    "lon": 11.687,
     "source": "override"
   },
   "Muenster": {
@@ -1514,8 +1514,8 @@
     "source": "override"
   },
   "Salzburg": {
-    "lat": 47.8129,
-    "lon": 13.045,
+    "lat": 47.83137,
+    "lon": 13.05556,
     "source": "override"
   },
   "San Diego Torrey Pines": {
@@ -1606,8 +1606,8 @@
     "source": "override"
   },
   "St Poelten": {
-    "lat": 48.2081,
-    "lon": 15.6247,
+    "lat": 48.17734,
+    "lon": 15.60667,
     "source": "override"
   },
   "St Stephen Border Gate": {
@@ -1881,8 +1881,8 @@
     "source": "override"
   },
   "Wien": {
-    "lat": 48.2082,
-    "lon": 16.3738,
+    "lat": 48.15213,
+    "lon": 16.48397,
     "source": "override"
   },
   "Wien Schwechat Ost": {

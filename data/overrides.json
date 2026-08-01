@@ -59,6 +59,11 @@
     "lon": 10.8858,
     "note": "Augsburg Hbf (real)"
   },
+  "August-Bebel-Platz": {
+    "lat": 51.48093,
+    "lon": 7.13835,
+    "note": "August-Bebel-Platz Bochum (real) - vorheriger Photon-Treffer lag faelschlich in Witten (Lev-Hasharon-Platz)"
+  },
   "Baghdad": {
     "lat": 33.3152,
     "lon": 44.3661,
@@ -270,14 +275,14 @@
     "note": "Detroit/Romulus (real, Flughafenumfeld)"
   },
   "Duesseldorf": {
-    "lat": 51.2277,
-    "lon": 6.7735,
-    "note": "Düsseldorf Hbf (real)"
+    "lat": 51.27817,
+    "lon": 6.76684,
+    "note": "Duesseldorf Flughafen-Terminal (noerdlicher Terminal) - laut Bahnhoefe-PDF/rheinruhrkrim-Note, NICHT Duesseldorf Hbf"
   },
   "Duisburg": {
-    "lat": 51.4344,
-    "lon": 6.7623,
-    "note": "Duisburg Hbf (real)"
+    "lat": 51.4405,
+    "lon": 6.76884,
+    "note": "Duisburg Innenhafen, Stelzenviadukt parallel zur A40 - laut Bahnhoefe-PDF/rheinruhrkrim-Note"
   },
   "Eberswalde Hbf": {
     "lat": 52.8339,
@@ -295,9 +300,9 @@
     "note": "Esbjerg (real Zentrum)"
   },
   "Essen": {
-    "lat": 51.4556,
-    "lon": 7.0116,
-    "note": "Essen Hbf (real)"
+    "lat": 51.45148,
+    "lon": 7.01447,
+    "note": "Essen Hbf (A40-Korridor, ueber den alten Hauptbahnhof) - laut Bahnhoefe-PDF/rheinruhrkrim-Note"
   },
   "Fairbanks Nord": {
     "lat": 64.8378,
@@ -315,9 +320,9 @@
     "note": "Flughafen BER (real)"
   },
   "Frankfurt Flughafen": {
-    "lat": 50.05,
-    "lon": 8.5706,
-    "note": "Frankfurt Flughafen (real)"
+    "lat": 50.05747,
+    "lon": 8.60332,
+    "note": "Frankfurter Kreuz A3/A5 (echter Autobahnkreuz-Knoten) - laut Bahnhoefe-PDF/rheinruhrkrim-Note, NICHT Flughafen-Terminal"
   },
   "Gdansk Glowny": {
     "lat": 54.3559,
@@ -475,14 +480,14 @@
     "note": "Kasan (real Zentrum)"
   },
   "Kassel Kreuz Mitte": {
-    "lat": 51.3358,
-    "lon": 9.5031,
-    "note": "Kassel (real, Autobahnkreuz Kassel-Mitte)"
+    "lat": 51.2748,
+    "lon": 9.5294,
+    "note": "Kreuz Kassel-Mitte A7/A49 (echter motorway_junction) - laut paris_singapur-Note, vorheriger Wert lag ~7km daneben"
   },
   "Koblenz": {
-    "lat": 50.3569,
-    "lon": 7.5886,
-    "note": "Koblenz Hbf (real)"
+    "lat": 50.365,
+    "lon": 7.60648,
+    "note": "Deutsches Eck / Altstadt am Rhein-Mosel-Zusammenfluss - laut Bahnhoefe-PDF (Felskaverne unter dem Rhein, Innenstadt)"
   },
   "Kochi Kalamassery": {
     "lat": 10.05,
@@ -490,9 +495,9 @@
     "note": "Kochi/Kalamassery (real Industriegebiet)"
   },
   "Koeln": {
-    "lat": 50.9413,
-    "lon": 6.9583,
-    "note": "Köln Hbf (real)"
+    "lat": 50.88386,
+    "lon": 6.96005,
+    "note": "Kreuz Koeln-Sued A4/A555 (echter Autobahnkreuz-Knoten) - laut Bahnhoefe-PDF/rheinruhrkrim-Note, NICHT Koeln Hbf"
   },
   "Kosice": {
     "lat": 48.7164,
@@ -555,9 +560,9 @@
     "note": "Lille (real Zentrum)"
   },
   "Linz": {
-    "lat": 48.29,
-    "lon": 14.2938,
-    "note": "Linz Hbf (real)"
+    "lat": 48.31735,
+    "lon": 14.30278,
+    "note": "Linz-Hafenstrasse/A7 (Industriehafen-Areal, echter motorway_junction) - laut Bahnhoefe-PDF/rheinruhrkrim-Note, NICHT Linz Hbf"
   },
   "List Sylt": {
     "lat": 55.0142,
@@ -585,9 +590,9 @@
     "note": "Mandal (real Zentrum)"
   },
   "Mannheim": {
-    "lat": 49.4796,
-    "lon": 8.4692,
-    "note": "Mannheim Hbf (real)"
+    "lat": 49.45972,
+    "lon": 8.51114,
+    "note": "Rangierbahnhof Mannheim/A6 - laut Bahnhoefe-PDF/rheinruhrkrim-Note, NICHT Mannheim Hbf"
   },
   "Medan Kualanamu": {
     "lat": 3.6422,
@@ -620,9 +625,9 @@
     "note": "Moskau/Moskva (real Zentrum, deutscher Exonym beibehalten); Photon fand faelschlich ein Restaurant in St. Petersburg"
   },
   "Muenchen": {
-    "lat": 48.1402,
-    "lon": 11.5581,
-    "note": "München Hbf (real)"
+    "lat": 48.136,
+    "lon": 11.687,
+    "note": "Neue Messe Muenchen/Riem am Autobahnring A99 (oestlicher Messebereich) - laut rheinruhrkrim-Note, NICHT Muenchen Hbf"
   },
   "Mumbai Navi Mumbai": {
     "lat": 19.033,
@@ -769,6 +774,11 @@
     "lon": 18.3486,
     "note": "Reda (real Zentrum)"
   },
+  "Regio Hub Kreuz Bochum": {
+    "lat": 51.482,
+    "lon": 7.179,
+    "note": "Dreieck Bochum-West A40/A448 (echter motorway_junction) - vorheriger Photon-Treffer war ein Vending-Machine-POI namens Regiomat"
+  },
   "Richmond North Gate": {
     "lat": 37.66,
     "lon": -77.48,
@@ -815,9 +825,9 @@
     "note": "Saint John NB (real Stadtgebiet)"
   },
   "Salzburg": {
-    "lat": 47.8129,
-    "lon": 13.045,
-    "note": "Salzburg Hbf (real)"
+    "lat": 47.83137,
+    "lon": 13.05556,
+    "note": "Autobahnknoten Salzburg-Nord/A1 (echter motorway_junction) - laut Bahnhoefe-PDF/rheinruhrkrim-Note, NICHT Salzburg Hbf"
   },
   "San Diego Torrey Pines": {
     "lat": 32.8994,
@@ -890,9 +900,9 @@
     "note": "St. Petersburg (real Zentrum)"
   },
   "St Poelten": {
-    "lat": 48.2081,
-    "lon": 15.6247,
-    "note": "St. Pölten Hbf (real)"
+    "lat": 48.17734,
+    "lon": 15.60667,
+    "note": "St. Poelten Sued/A1 (echter motorway_junction, suedlich von St. Poelten) - laut Bahnhoefe-PDF/rheinruhrkrim-Note, NICHT St. Poelten Hbf"
   },
   "St Stephen Border Gate": {
     "lat": 45.197,
@@ -1040,9 +1050,9 @@
     "note": "Whitehorse (real Zentrum)"
   },
   "Wien": {
-    "lat": 48.2082,
-    "lon": 16.3738,
-    "note": "Wien (real Zentrum)"
+    "lat": 48.15213,
+    "lon": 16.48397,
+    "note": "Knoten Schwechat A4/S1 (echter motorway_junction bei Schwechat) - laut Bahnhoefe-PDF/rheinruhrkrim-Note, NICHT Wien Zentrum"
   },
   "Wien Schwechat Ost": {
     "lat": 48.1327,

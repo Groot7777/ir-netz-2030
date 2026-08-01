@@ -39,6 +39,9 @@ OVERPASS_ENDPOINTS = [
 MARGIN_DEG = 0.15  # padding around the two stops' bbox, in degrees
 FILTERS = {
     "highway": '["highway"~"^(motorway|trunk|motorway_link|trunk_link)$"]',
+    # For regional lines whose stops sit under ordinary city streets (not just
+    # Autobahnen) between named Autobahnkreuz endpoints -- e.g. wbc, muenster_ruhr.
+    "highway_local": '["highway"~"^(motorway|trunk|primary|secondary|tertiary|motorway_link|trunk_link|primary_link|secondary_link)$"]',
     "railway": '["railway"~"^(rail|construction)$"]',
 }
 

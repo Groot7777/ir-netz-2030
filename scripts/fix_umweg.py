@@ -28,6 +28,7 @@ OVERPASS_ENDPOINTS = [
 ]
 FILTERS = {
     "highway": '["highway"~"^(motorway|trunk|motorway_link|trunk_link)$"]',
+    "highway_local": '["highway"~"^(motorway|trunk|primary|secondary|tertiary|motorway_link|trunk_link|primary_link|secondary_link)$"]',
     "railway": '["railway"~"^(rail|construction)$"]',
 }
 RATIO_THRESHOLD = 1.6

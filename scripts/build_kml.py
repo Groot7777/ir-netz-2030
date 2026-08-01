@@ -217,12 +217,15 @@ def kml_placemark_line(line, path_simplified, color_hex):
 
 
 def wrap_description(html):
-    # Setting text color alone left light text on the renderer's default
-    # light card (nearly invisible). Background+color together fixed the
-    # contrast but the padding made it read as an inset card with visible
-    # edges instead of flowing text -- drop the padding/margin so the color
-    # fills flush to the container instead of looking like a boxed-in card.
-    return f'<div style="background-color:#1e1e1e;color:#eeeeee;margin:0;padding:0;">{html}</div>'
+    # The balloon's native description container has its own default inset
+    # (padding/margin) around whatever HTML we hand it, so a flush div still
+    # leaves a ring of the container's own (light) background showing around
+    # ours. Bleed past it with a negative margin so our background reaches
+    # the real container edge instead of stopping at the inner content box.
+    return (
+        '<div style="background-color:#1e1e1e;color:#eeeeee;'
+        'margin:-12px;padding:12px;">' + html + '</div>'
+    )
 
 
 def build_station_registry(lines, geocode_cache):

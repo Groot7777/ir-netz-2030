@@ -218,10 +218,11 @@ def kml_placemark_line(line, path_simplified, color_hex):
 
 def wrap_description(html):
     # Setting text color alone left light text on the renderer's default
-    # light card (nearly invisible). The reference project gets a dark card
-    # with light text, so set both background and text color explicitly
-    # instead of relying on the renderer's default.
-    return f'<div style="background-color:#1e1e1e;color:#eeeeee;padding:8px;">{html}</div>'
+    # light card (nearly invisible). Background+color together fixed the
+    # contrast but the padding made it read as an inset card with visible
+    # edges instead of flowing text -- drop the padding/margin so the color
+    # fills flush to the container instead of looking like a boxed-in card.
+    return f'<div style="background-color:#1e1e1e;color:#eeeeee;margin:0;padding:0;">{html}</div>'
 
 
 def build_station_registry(lines, geocode_cache):

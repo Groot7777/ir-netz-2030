@@ -217,11 +217,11 @@ def kml_placemark_line(line, path_simplified, color_hex):
 
 
 def wrap_description(html):
-    # The balloon content card in Google Earth (incl. Mobile) is white/light,
-    # not dark -- only the "content managed by author" warning banner above it
-    # is dark chrome. Forcing a light text color made it nearly invisible, so
-    # just use the renderer's default (dark) text, same as an unstyled balloon.
-    return html
+    # Setting text color alone left light text on the renderer's default
+    # light card (nearly invisible). The reference project gets a dark card
+    # with light text, so set both background and text color explicitly
+    # instead of relying on the renderer's default.
+    return f'<div style="background-color:#1e1e1e;color:#eeeeee;padding:8px;">{html}</div>'
 
 
 def build_station_registry(lines, geocode_cache):

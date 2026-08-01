@@ -217,14 +217,18 @@ def kml_placemark_line(line, path_simplified, color_hex):
 
 
 def wrap_description(html):
-    # The balloon's native description container has its own default inset
-    # (padding/margin) around whatever HTML we hand it, so a flush div still
-    # leaves a ring of the container's own (light) background showing around
-    # ours. Bleed past it with a negative margin so our background reaches
-    # the real container edge instead of stopping at the inner content box.
+    # Matches the technique from the user's reference KML (which renders
+    # correctly): a plain class on the div, with the actual coloring done via
+    # a trailing @media(prefers-color-scheme: dark) block using !important on
+    # html,body,.kmldesc together. Inline background/margin tricks kept
+    # leaving a native container inset visible as a white ring; this doesn't,
+    # because it repaints the renderer's own html/body, not just our div.
     return (
-        '<div style="background-color:#1e1e1e;color:#eeeeee;'
-        'margin:-12px;padding:12px;">' + html + '</div>'
+        '<div class="kmldesc">' + html + '</div>'
+        '<style>@media (prefers-color-scheme: dark) {'
+        'html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}'
+        '.kmldesc a{color:#8ab4f8 !important;}'
+        '}</style>'
     )
 
 

@@ -1,0 +1,53 @@
+{
+  "_comment": "Segment pairs (station keys, order-independent) with no real-world road/rail infrastructure to route along. These get a geodetic great-circle line between the portal points instead of Overpass/Dijkstra routing.",
+  "crossings": [
+    {"a": "Helsingborg", "b": "Helsingoer", "name": "Öresund-Tunnel", "line": "oslo_inverness"},
+    {"a": "Nykoebing Falster", "b": "Rostock Seehafen", "name": "Fehmarnbelt-Tunnel (Kadetrinne)", "line": "oslo_inverness"},
+    {"a": "Calais Coquelles", "b": "Dover Portal Kaverne", "name": "Ärmelkanal-Tunnel", "line": "oslo_inverness"},
+    {"a": "Cardiff", "b": "Dublin Port Kaverne", "name": "Irische-See-Tunnel", "line": "oslo_inverness"},
+    {"a": "Belfast Titanic Quarter", "b": "Glasgow Eurocentral", "name": "Nordkanal-Tunnel", "line": "oslo_inverness"},
+
+    {"a": "Den Helder", "b": "Den Burg Texel", "name": "Marsdiep-Tunnel", "line": "lille_bergen"},
+    {"a": "Den Burg Texel", "b": "West-Terschelling", "name": "Wattenmeer-Inseltunnel", "line": "lille_bergen"},
+    {"a": "West-Terschelling", "b": "Hollum Ameland", "name": "Wattenmeer-Inseltunnel", "line": "lille_bergen"},
+    {"a": "Hollum Ameland", "b": "Ballum Ameland", "name": "Ameland-Inseltunnel", "line": "lille_bergen"},
+    {"a": "Ballum Ameland", "b": "Nes Ameland", "name": "Ameland-Inseltunnel", "line": "lille_bergen"},
+    {"a": "Nes Ameland", "b": "Schiermonnikoog", "name": "Wattenmeer-Inseltunnel (Borndiep)", "line": "lille_bergen"},
+    {"a": "Schiermonnikoog", "b": "Borkum", "name": "Wattenmeer-Inseltunnel (Sektorengrenze)", "line": "lille_bergen"},
+    {"a": "Borkum", "b": "Juist", "name": "Ems-Ästuar-Tunnel", "line": "lille_bergen"},
+    {"a": "Juist", "b": "Norderney", "name": "Wattenmeer-Inseltunnel", "line": "lille_bergen"},
+    {"a": "Norderney", "b": "Baltrum", "name": "Wattenmeer-Inseltunnel", "line": "lille_bergen"},
+    {"a": "Baltrum", "b": "Langeoog", "name": "Wattenmeer-Inseltunnel", "line": "lille_bergen"},
+    {"a": "Langeoog", "b": "Spiekeroog", "name": "Wattenmeer-Inseltunnel", "line": "lille_bergen"},
+    {"a": "Spiekeroog", "b": "Wangerooge", "name": "Wattenmeer-Inseltunnel", "line": "lille_bergen"},
+    {"a": "Wangerooge", "b": "Helgoland Tiefseehub", "name": "Deutsche-Bucht-Tunnel", "line": "lille_bergen"},
+    {"a": "Helgoland Tiefseehub", "b": "St Peter Ording", "name": "Deutsche-Bucht-Tunnel", "line": "lille_bergen"},
+    {"a": "St Peter Ording", "b": "Amrum", "name": "Nordfriesisches-Wattenmeer-Tunnel", "line": "lille_bergen"},
+    {"a": "Amrum", "b": "Hoernum Sylt", "name": "Nordfriesisches-Wattenmeer-Tunnel", "line": "lille_bergen"},
+    {"a": "Hoernum Sylt", "b": "Westerland Sylt", "name": "Sylter-Basistunnel", "line": "lille_bergen"},
+    {"a": "Westerland Sylt", "b": "List Sylt", "name": "Sylter-Basistunnel", "line": "lille_bergen"},
+    {"a": "List Sylt", "b": "Havneby Romo", "name": "Lister-Tief-Tunnel", "line": "lille_bergen"},
+    {"a": "Havneby Romo", "b": "Sonderho Fano", "name": "Dänisches-Wattenmeer-Tunnel", "line": "lille_bergen"},
+    {"a": "Sonderho Fano", "b": "Nordby Fano", "name": "Dänisches-Wattenmeer-Tunnel", "line": "lille_bergen"},
+    {"a": "Nordby Fano", "b": "Esbjerg Turmbahnhof", "name": "Dänisches-Wattenmeer-Tunnel", "line": "lille_bergen"},
+    {"a": "Hirtshals", "b": "Kristiansand", "name": "Skagerrak-Vakuumtunnel", "line": "lille_bergen"},
+
+    {"a": "Antalya Aksu Dreieck", "b": "Nicosia Geri", "name": "Transmediterraner Megatunnel (Levantinisches Becken, West)", "line": "paris_singapur"},
+    {"a": "Nicosia Geri", "b": "Tripoli El Mina", "name": "Transmediterraner Megatunnel (Levantinisches Becken, Ost)", "line": "paris_singapur"},
+    {"a": "Kochi Kalamassery", "b": "Colombo Kelaniya", "name": "Palkstraßen-Tunnel", "line": "paris_singapur"},
+    {"a": "Colombo Kelaniya", "b": "Great Nicobar Galathea", "name": "Indischer-Ozean-Megatunnel (1.650 km)", "line": "paris_singapur"},
+    {"a": "Great Nicobar Galathea", "b": "Medan Kualanamu", "name": "Andamanensee-Tunnel", "line": "paris_singapur"},
+    {"a": "Medan Kualanamu", "b": "Kuala Lumpur KLIA City", "name": "Straße-von-Malakka-See-Viadukt", "line": "paris_singapur"},
+
+    {"a": "Izmir Bornova Ost", "b": "Athens", "name": "Ägäischer-Untersee-Tunnel", "line": "arktis_afrika"},
+    {"a": "Athens", "b": "Siracusa", "name": "Ionischer-Untersee-Vakuumtunnel (900 km)", "line": "arktis_afrika"},
+    {"a": "Palermo", "b": "Tunis", "name": "Tunesien-Untersee-Tunnel", "line": "arktis_afrika"},
+
+    {"a": "Cabo San Lucas Deep", "b": "Puerto Vallarta East", "name": "Mar-de-Cortés-Untersee-Tunnel (550 km, Golf von Kalifornien)", "line": "pcms"},
+
+    {"a": "West Ocean City", "b": "Atlantic City Egg Harbor", "name": "Delaware-Bay-Untersee-Tunnel", "line": "pnw_mae"},
+
+    {"a": "Jakutsk Ost", "b": "Big Diomede", "name": "Ostsibirien/Tschuktschen-Durchquerung (kein durchgehendes reales Straßennetz)", "line": "weltachse1"},
+    {"a": "Big Diomede", "b": "Fairbanks Nord", "name": "Beringstraßen-Untersee-Tunnel (85 km)", "line": "weltachse1"}
+  ]
+}

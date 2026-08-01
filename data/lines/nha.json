@@ -1,0 +1,26 @@
+{
+  "id": "nha",
+  "name_ascii": "NHA Northern Horizon Arc",
+  "name_display": "Northern Horizon Arc (NHA)",
+  "color_rgb": "556B2F",
+  "geometry_source": "highway",
+  "vehicle_note": "6-gleisig (2x Express, 2x Regional, 2x Güter-Transit), ETCS Level 3 Moving Block im relativen Bremswegabstand, 800m-Züge",
+  "infra_note": "6.470 km, 12 Std. 16 Min., 13 Zwischenhalte plus zahlreiche Non-Stop-Bypass-Durchfahrten (u.a. Bend-East, Burns-Basin, Ely-West, Kingman-North, Flagstaff-South, Santa Fe-East, Colorado Springs Bypass, North Platte-Hub, Gary-Indiana Loop, Windsor-Gateway, Hamilton-Escarpment, Buffalo-Depew Bypass, Springfield-Mass Pike). Zeiten lokal (PT/MT/CT/ET). Größte Tunnel: Mount Hood (42 km), Black Canyon/Lake Mead (18 km), Raton Pass (52 km), Detroit River (7 km, unterseeisch nach Kanada). Teilt Surrey/Seattle-Tukwila/Portland-Salmon Creek mit PCMS und NCAMS, sowie Chicago-Joliet Mega-Hub und Boston-West Route 128 mit NCAMS.",
+  "start_time": "07:00:00",
+  "stops": [
+    {"key": "Surrey Vancouver", "display": "Surrey (Vancouver)", "arr": null, "dep": "07:00:00", "km": 0.0, "note": "Geländebahnhof Ebene 0 im Autobahnkeil des Highway 1 (Junction 75)"},
+    {"key": "Seattle Tukwila Hub", "display": "Seattle-Tukwila Hub", "arr": "07:20:00", "dep": "07:22:00", "km": 200.0, "note": "Vertikaler Turmbahnhof am Autobahnkreuz I-5/I-405"},
+    {"key": "Portland Salmon Creek", "display": "Portland-Salmon Creek", "arr": "07:47:00", "dep": "07:49:00", "km": 450.0, "note": "Geländebahnhof am Knotenpunkt I-5/I-205"},
+    {"key": "Las Vegas South Gateway", "display": "Las Vegas-South Gateway", "arr": "10:04:00", "dep": "10:08:00", "km": 1750.0, "note": "Turmbahnhof südlich des Strips am Autobahnkreuz I-15/CC-215"},
+    {"key": "Albuquerque West Bypass", "display": "Albuquerque-West Bypass", "arr": "12:43:00", "dep": "12:45:00", "km": 2650.0, "note": "Bodengleicher Geländebahnhof an der Westperipherie (I-40/Coors Blvd)"},
+    {"key": "Denver Northeast Hub", "display": "Denver-Northeast Hub", "arr": "14:05:00", "dep": "14:09:00", "km": 3350.0, "note": "Ebenen-Geländebahnhof am Kreuz I-76/E-470 nahe Denver International Airport"},
+    {"key": "Omaha West Gateway", "display": "Omaha-West Gateway", "arr": "16:39:00", "dep": "16:41:00", "km": 4200.0, "note": "Trogbahnhof westlich von Omaha am Kreuz I-80/Highway 31 bei Gretna"},
+    {"key": "Des Moines West Hub", "display": "Des Moines-West Hub", "arr": "17:06:00", "dep": "17:08:00", "km": 4420.0, "note": "Geländebahnhof am Kreuz I-80/I-35 (Waukee-Bypass)"},
+    {"key": "Chicago Joliet Mega-Hub", "display": "Chicago-Joliet Mega-Hub", "arr": "18:03:00", "dep": "18:07:00", "km": 4920.0, "note": "Vertikal gestapelter Bahnhof am Riesenkreuz I-80/I-55 bei Joliet/Channahon"},
+    {"key": "Detroit Romulus Hub", "display": "Detroit-Romulus Hub", "arr": "19:52:00", "dep": "19:55:00", "km": 5320.0, "note": "Turmbahnhof am Kreuz I-94/I-275 (Romulus), vor dem Detroit River Tunnel nach Kanada"},
+    {"key": "Niagara Falls North Hub", "display": "Niagara Falls-North Hub", "arr": "20:43:00", "dep": "20:45:00", "km": 5720.0, "note": "Hochbahnhof nördlich der Wasserfälle, direkt nach der US-Grenzbrücke"},
+    {"key": "Rochester South Hub", "display": "Rochester-South Hub", "arr": "21:00:00", "dep": "21:02:00", "km": 5840.0, "note": "Geländebahnhof am Kreuz I-90/I-390 (Henrietta)"},
+    {"key": "Albany West Hub", "display": "Albany-West Hub", "arr": "21:42:00", "dep": "21:44:00", "km": 6200.0, "note": "Trogbahnhof am Kreuz I-90/I-87, letzter Knoten vor der Berkshire-Gebirgspassage"},
+    {"key": "Boston West Route 128", "display": "Boston-West Route 128", "arr": "22:16:00", "dep": null, "km": 6470.0, "note": "Unterirdischer Kavernenbahnhof (Ebene -4) am Riesenkreuz I-90 Mass Pike/I-95 Route 128 bei Weston"}
+  ]
+}

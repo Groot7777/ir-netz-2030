@@ -1,0 +1,27 @@
+{
+  "id": "weltachse1",
+  "name_ascii": "Weltachse 1 Bochum-Vancouver",
+  "name_display": "Weltachse 1 (Bochum–Vancouver)",
+  "color_rgb": "FF1493",
+  "geometry_source": "highway",
+  "vehicle_note": "6-gleisig (2x Express, 2x Güter, 2x Regional), ETCS Level 3 Moving Block, 800m-Passagierzüge / 1.200m-Güterzüge (240 TEU)",
+  "infra_note": "13.450 km, 23 Std. 56 Min., Bochum Hbf bis Surrey (Vancouver) via Berlin, Warschau, Kiew, Sibirien und die Beringstraße. Zeiten lokal mit Tagesmarkierung; 'Diomede-Paradoxon': durch die Datumsgrenze im Beringstraßen-Tunnel liegt die lokale Ankunft in Fairbanks kalendarisch vor der Abfahrt in Diomede. Größte Tunnel/Bauwerke: Ural-Bergtunnelkette (80 km), Beringstraßen-Untersee-Tunnel (85 km, mit Zwischenhalt Big Diomede auf der Grenze).",
+  "start_time": "07:00:00",
+  "stops": [
+    {"key": "Bochum", "display": "Bochum Hbf", "arr": null, "dep": "07:00:00", "km": 0.0, "day_offset": 0, "note": "Vertikal gestapelter Turm- und Tiefbahnhof, Ebene -2/-3, Weltachsen-Startpunkt"},
+    {"key": "Bielefeld", "arr": "07:14:00", "dep": "07:16:00", "km": 120.0, "day_offset": 0, "note": "Hochbahnhof über der Kreuzung A2/A33"},
+    {"key": "Hannover Wuelferode Ost", "display": "Hannover (Wülferode Ost)", "arr": "07:27:00", "dep": "07:29:00", "km": 210.0, "day_offset": 0, "note": "Turmbahnhof an der Kreuzung A2/A7"},
+    {"key": "Berlin Schoenefelder Kreuz", "display": "Berlin (Schönefelder Kreuz)", "arr": "07:58:00", "dep": "08:00:00", "km": 480.0, "day_offset": 0, "note": "Langgestreckter Hochbahnhof parallel zur A10/A113"},
+    {"key": "Poznan Wschod", "display": "Posen (Poznań Wschód)", "arr": "08:25:00", "dep": "08:27:00", "km": 710.0, "day_offset": 0, "note": "Ebenen-Geländebahnhof östlich von Posen an der A2/S5"},
+    {"key": "Lodz Polnoc", "display": "Łódź (Północ)", "arr": "08:48:00", "dep": "08:50:00", "km": 900.0, "day_offset": 0, "note": "Kombinierter Bahnhof am Knoten Stryków (A1/A2)"},
+    {"key": "Warszawa Konotopa", "display": "Warszawa (Konotopa)", "arr": "09:04:00", "dep": "09:08:00", "km": 1020.0, "day_offset": 0, "note": "Peripherer Turmbahnhof westlich der Stadt (A2/S2)"},
+    {"key": "Kyiv Boryspil", "display": "Kyiv (Boryspil)", "arr": "11:28:00", "dep": "11:32:00", "km": 1800.0, "day_offset": 0, "note": "Monumentaler Turmbahnhof im Autobahnkeil der E40"},
+    {"key": "Kasan Nord", "display": "Kasan (Nord)", "arr": "14:29:00", "dep": "14:31:00", "km": 2950.0, "day_offset": 0, "note": "Bahnhof nördlich der M7 an der geografischen Luftlinie nach Sibirien"},
+    {"key": "Nowosibirsk Tolmachevo", "display": "Nowosibirsk (Tolmachevo)", "arr": "22:03:00", "dep": "22:06:00", "km": 5050.0, "day_offset": 0, "note": "Hochbahnhof auf beheizten Betonstelzen an der R-254-Achse"},
+    {"key": "Jakutsk Ost", "display": "Jakutsk (Ost, Nizhny Bestyakh)", "arr": "04:43:00", "dep": "04:48:00", "km": 7800.0, "day_offset": 1, "note": "Hochbahnhof auf kryogenisch gekühlten Pfeilern im Permafrost, vor der arktischen Tunnelzone"},
+    {"key": "Big Diomede", "display": "Diomede Islands (Big Diomede)", "arr": "11:58:00", "dep": "12:00:00", "km": 10200.0, "day_offset": 1, "note": "Unterseeischer Felskavernen-Nothalthub tief unter der Beringstraße, ohne Bahnsteige und öffentlichen Zugang, exakt auf der russisch-amerikanischen Grenze"},
+    {"key": "Fairbanks Nord", "display": "Fairbanks (Nord)", "arr": "16:47:00", "dep": "16:50:00", "km": 11200.0, "day_offset": 0, "note": "Geländebahnhof am Steese Highway, erstes nordamerikanisches Festland-Gateway (Diomede-Paradoxon: Ankunft kalendarisch vor der Abfahrt in Diomede durch die Datumsgrenze)"},
+    {"key": "Whitehorse Valley", "display": "Whitehorse (Valley)", "arr": "20:17:00", "dep": "20:19:00", "km": 12000.0, "day_offset": 0, "note": "Tief- und Trogbahnhof im engen Yukon-Tal (Alaska Highway)"},
+    {"key": "Surrey Vancouver", "display": "Surrey (Vancouver)", "arr": "21:56:00", "dep": null, "km": 13450.0, "day_offset": 0, "note": "Interkontinentaler Endpunkt südlich von Vancouver (Highway 1)"}
+  ]
+}

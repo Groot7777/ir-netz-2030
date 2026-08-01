@@ -1,0 +1,23 @@
+{
+  "id": "pcms",
+  "name_ascii": "PCMS Pacific Crest and Mesoamerica Spine",
+  "name_display": "PCMS – Pacific Crest & Mesoamerica Spine",
+  "color_rgb": "8B4513",
+  "geometry_source": "highway",
+  "vehicle_note": "6-gleisig (2x Express, 2x Regional, 2x Güter-Transit), ETCS Level 3 Moving Block im relativen Bremswegabstand, 800m-Züge",
+  "infra_note": "5.250 km, 10 Std. 23 Min., 9 Zwischenhalte (plus 20 lastfreie Non-Stop-Durchfahrtsbahnhöfe ohne Passagierhalt: Bellingham-North, Everett-East, Tacoma-Dome Bypass, Olympia-South Ring, Eugene-East, Medford-North, Redding-South, Chico-East, Fresno-Central, Bakersfield-North, Anaheim-Transit, Oceanside-Coast, San Quintín, Guerrero Negro, Loreto-Coast, La Paz-North Gate, Tepic-East, Guadalajara-North Bypass, Celaya-Plains, Querétaro-West Bypass). Zeiten in PT/MT/CT vor Ort. Größter Tunnel: Mar-de-Cortés (550 km, Golf von Kalifornien).",
+  "start_time": "07:00:00",
+  "stops": [
+    {"key": "Surrey Vancouver", "display": "Surrey (Vancouver)", "arr": null, "dep": "07:00:00", "km": 0.0, "note": "Geländebahnhof Ebene 0 im Autobahnkeil südlich des Fraser River (Highway 1, Junction 75)"},
+    {"key": "Seattle Tukwila Hub", "display": "Seattle-Tukwila Hub", "arr": "07:20:00", "dep": "07:22:00", "km": 200.0, "note": "Vertikaler Turmbahnhof am Autobahnkreuz I-5/I-405"},
+    {"key": "Portland Salmon Creek", "display": "Portland-Salmon Creek", "arr": "07:47:00", "dep": "07:49:00", "km": 450.0, "note": "Bodengleicher Geländebahnhof am Knotenpunkt I-5/I-205"},
+    {"key": "Sacramento North Hub", "display": "Sacramento-North Hub", "arr": "09:21:00", "dep": "09:25:00", "km": 1350.0, "note": "Peripherer Knotenpunkt am Riesenkreuz I-5/I-80 (Natomas)"},
+    {"key": "Bay Area Mega-Hub", "display": "Bay Area Mega-Hub (Milpitas)", "arr": "09:43:00", "dep": "09:47:00", "km": 1500.0, "note": "Östlich von San Jose am Kreuz I-680/US-101 (Milpitas-Bypass)"},
+    {"key": "Los Angeles Sylmar Hub", "display": "Los Angeles-Sylmar Hub", "arr": "10:39:00", "dep": "10:43:00", "km": 2000.0, "note": "Nördliches Einfallstor zum LA-Becken am Kreuz I-5/I-210, dahinter Tiefkaverne Ebene -4"},
+    {"key": "San Diego Torrey Pines", "display": "San Diego-Torrey Pines", "arr": "11:05:00", "dep": "11:07:00", "km": 2200.0, "note": "Terrassenbahnhof im Sorrento Valley am Kreuz I-5/I-805"},
+    {"key": "Ensenada North Port", "display": "Ensenada-North Port Hub", "arr": "11:25:00", "dep": "11:27:00", "km": 2350.0, "note": "Erste Station auf mexikanischem Boden am Knotenpunkt Highway 1D/Highway 3, Gütergleise zum Tiefseehafen"},
+    {"key": "Cabo San Lucas Deep", "display": "Cabo San Lucas-Deep Terminal", "arr": "14:59:00", "dep": "15:03:00", "km": 3850.0, "note": "Kavernenbahnhof 80m tief im Granitfels am Südzipfel der Baja, vor dem Mar-de-Cortés-Tunnel"},
+    {"key": "Puerto Vallarta East", "display": "Puerto Vallarta-East Hub", "arr": "17:28:00", "dep": "17:30:00", "km": 4400.0, "note": "Tiefgelegter Betontrog im Flusstal des Río Ameca, nach Austritt aus dem 550 km langen Meeresbodentunnel"},
+    {"key": "Mexico City Huehuetoca", "display": "Mexico City-Huehuetoca Hub", "arr": "19:23:00", "dep": null, "km": 5250.0, "note": "Finaler Endpunkt am Riesenkreuz Autobahn 57D/Circuito Exterior Mexiquense"}
+  ]
+}

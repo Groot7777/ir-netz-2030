@@ -1,0 +1,1077 @@
+{
+  "Aalborg": {
+    "lat": 57.0488,
+    "lon": 9.9217,
+    "note": "Aalborg (real Zentrum)"
+  },
+  "Aalten": {
+    "lat": 51.9213392,
+    "lon": 6.5787107,
+    "note": "Bahnhof Aalten (NL), Photon verwechselte 'Aalten' mit dem deutschen 'Aalen'."
+  },
+  "Albany West Hub": {
+    "lat": 42.68,
+    "lon": -73.95,
+    "note": "Albany West/Guilderland (real Vorort)"
+  },
+  "Albuquerque West Bypass": {
+    "lat": 35.1056,
+    "lon": -106.71,
+    "note": "Albuquerque (real, westl. Peripherie I-40/Coors Blvd)"
+  },
+  "Algiers": {
+    "lat": 36.7538,
+    "lon": 3.0588,
+    "note": "Algiers/Alger (real Zentrum)"
+  },
+  "Alkmaar": {
+    "lat": 52.6324,
+    "lon": 4.7534,
+    "note": "Alkmaar (real Zentrum)"
+  },
+  "Amrum": {
+    "lat": 54.6333,
+    "lon": 8.35,
+    "note": "Amrum (real, Nebel)"
+  },
+  "Angermuende": {
+    "lat": 53.0219,
+    "lon": 13.9967,
+    "note": "Angermünde (real Zentrum)"
+  },
+  "Antalya Aksu Dreieck": {
+    "lat": 36.95,
+    "lon": 30.8,
+    "note": "Antalya/Aksu (real, D685/D400)"
+  },
+  "Athens": {
+    "lat": 37.9838,
+    "lon": 23.7275,
+    "note": "Athens/Athen (real Zentrum); Photon fand faelschlich eine Ruine in der Tuerkei"
+  },
+  "Atlantic City Egg Harbor": {
+    "lat": 39.38,
+    "lon": -74.59,
+    "note": "Egg Harbor Township NJ (real)"
+  },
+  "Augsburg": {
+    "lat": 48.3653,
+    "lon": 10.8858,
+    "note": "Augsburg Hbf (real)"
+  },
+  "Baghdad": {
+    "lat": 33.3152,
+    "lon": 44.3661,
+    "note": "Baghdad (real Zentrum)"
+  },
+  "Baltimore White Marsh": {
+    "lat": 39.39,
+    "lon": -76.45,
+    "note": "Baltimore/White Marsh (real Vorort)"
+  },
+  "Baltrum": {
+    "lat": 53.7292,
+    "lon": 7.3733,
+    "note": "Baltrum (real Ortszentrum)"
+  },
+  "Bangor Hermon Hub": {
+    "lat": 44.81,
+    "lon": -68.92,
+    "note": "Bangor/Hermon (real Vorort)"
+  },
+  "Bay Area Mega-Hub": {
+    "lat": 37.4275,
+    "lon": -121.9067,
+    "note": "Milpitas/Bay Area (real, Kreuz I-680/US-101)"
+  },
+  "Bergen Endstation": {
+    "lat": 60.3913,
+    "lon": 5.3221,
+    "note": "Bergen (real Zentrum)"
+  },
+  "Berlin Hbf tief": {
+    "lat": 52.525,
+    "lon": 13.3694,
+    "note": "Berlin Hbf (real, Bezug fuer fiktive Tieflage)"
+  },
+  "Berlin Potsdamer Platz": {
+    "lat": 52.5096,
+    "lon": 13.3759,
+    "note": "Berlin Potsdamer Platz (real)"
+  },
+  "Berlin Schoenefelder Kreuz": {
+    "lat": 52.3667,
+    "lon": 13.5167,
+    "note": "Schönefelder Kreuz A10/A113 (real); Photon fand faelschlich ein Rotes Kreuz in Salzgitter"
+  },
+  "Berlin-Wannsee": {
+    "lat": 52.4229,
+    "lon": 13.1789,
+    "note": "Berlin-Wannsee (real Bahnhof)"
+  },
+  "Bernau b Berlin": {
+    "lat": 52.6797,
+    "lon": 13.5892,
+    "note": "Bernau bei Berlin (real Zentrum)"
+  },
+  "Bielefeld": {
+    "lat": 52.0302,
+    "lon": 8.5325,
+    "note": "Bielefeld (real Zentrum)"
+  },
+  "Big Diomede": {
+    "lat": 65.7833,
+    "lon": -169.05,
+    "note": "Big Diomede (real Insel)"
+  },
+  "Billings North Bypass": {
+    "lat": 45.7833,
+    "lon": -108.5007,
+    "note": "Billings (real Stadtgebiet)"
+  },
+  "Bismarck East Gate": {
+    "lat": 46.8083,
+    "lon": -100.7837,
+    "note": "Bismarck (real Stadtgebiet)"
+  },
+  "Blaavand": {
+    "lat": 55.55,
+    "lon": 8.1167,
+    "note": "Blåvand (real Ortszentrum)"
+  },
+  "Bocholt": {
+    "lat": 51.8346665,
+    "lon": 6.6207206,
+    "note": "Bahnhof Bocholt."
+  },
+  "Bochum": {
+    "lat": 51.4785335,
+    "lon": 7.2232341,
+    "note": "Fest verdrahtet: Bochum = exakt Bochum Hbf, unabhängig von Autobahnkreuz-Beschreibungen in den PDFs (Nutzer-Vorgabe)."
+  },
+  "Bochum Langendreer": {
+    "lat": 51.4772,
+    "lon": 7.3064,
+    "note": "S-Bahnhof Bochum-Langendreer West, nicht die nahegelegene JVA."
+  },
+  "Borkum": {
+    "lat": 53.5814,
+    "lon": 6.665,
+    "note": "Borkum (real Ortszentrum)"
+  },
+  "Boston West Route 128": {
+    "lat": 42.36,
+    "lon": -71.29,
+    "note": "Boston/Weston (real, Kreuz I-90/I-95 Route 128)"
+  },
+  "Brandenburg Hbf": {
+    "lat": 52.409,
+    "lon": 12.5453,
+    "note": "Brandenburg Hbf (real)"
+  },
+  "Bratislava": {
+    "lat": 48.1486,
+    "lon": 17.1077,
+    "note": "Bratislava (real Zentrum)"
+  },
+  "Brno Sudbypass": {
+    "lat": 49.1522,
+    "lon": 16.6942,
+    "note": "Brno (real, Brno-Tuřany Südbypass)"
+  },
+  "Bruenenerstrasse": {
+    "lat": 51.8197997,
+    "lon": 6.7110865,
+    "note": "Brünener Straße in Rhede bei Bocholt."
+  },
+  "Bruessel Zaventem": {
+    "lat": 50.8998,
+    "lon": 4.4831,
+    "note": "Bruessel/Zaventem (real Flughafenzone)"
+  },
+  "Budapest": {
+    "lat": 47.4979,
+    "lon": 19.0402,
+    "note": "Budapest (real Zentrum)"
+  },
+  "Cabo San Lucas Deep": {
+    "lat": 22.8905,
+    "lon": -109.9167,
+    "note": "Cabo San Lucas (real Zentrum)"
+  },
+  "Casablanca": {
+    "lat": 33.5731,
+    "lon": -7.5898,
+    "note": "Casablanca (real Zentrum); Photon fand faelschlich ein Hotel in Algier"
+  },
+  "Charlotte NE Loop": {
+    "lat": 35.32,
+    "lon": -80.73,
+    "note": "Charlotte NE (real, I-85/I-485)"
+  },
+  "Chemnitz Nord": {
+    "lat": 50.8617,
+    "lon": 12.9083,
+    "note": "Chemnitz Nord (real, Autobahnkreuz A4/A72)"
+  },
+  "Chicago Joliet Mega-Hub": {
+    "lat": 41.525,
+    "lon": -88.0817,
+    "note": "Chicago/Joliet (real Stadtgebiet)"
+  },
+  "Chojnice": {
+    "lat": 53.6966,
+    "lon": 17.5578,
+    "note": "Chojnice (real Zentrum)"
+  },
+  "Colombo Kelaniya": {
+    "lat": 6.9553,
+    "lon": 79.9217,
+    "note": "Colombo/Kelaniya (real Vorort)"
+  },
+  "Columbus West Hub": {
+    "lat": 39.97,
+    "lon": -83.13,
+    "note": "Columbus (real, westl. Autobahnring)"
+  },
+  "Conway North": {
+    "lat": 35.1,
+    "lon": -92.46,
+    "note": "Conway AR North (real Vorort)"
+  },
+  "Den Burg Texel": {
+    "lat": 53.0575,
+    "lon": 4.7913,
+    "note": "Den Burg, Texel (real Zentrum)"
+  },
+  "Den Haag Prins Clausplein": {
+    "lat": 52.0448,
+    "lon": 4.3922,
+    "note": "Den Haag Prins Clausplein (real Autobahnkreuz A4/A12/A13)"
+  },
+  "Den Helder": {
+    "lat": 52.9563,
+    "lon": 4.7601,
+    "note": "Den Helder (real Zentrum)"
+  },
+  "Denver Northeast Hub": {
+    "lat": 39.86,
+    "lon": -104.74,
+    "note": "Denver Northeast (real, nahe DIA)"
+  },
+  "Des Moines West Hub": {
+    "lat": 41.61,
+    "lon": -93.89,
+    "note": "Des Moines West/Waukee (real Vorort)"
+  },
+  "Detroit Romulus Hub": {
+    "lat": 42.228,
+    "lon": -83.376,
+    "note": "Detroit/Romulus (real, Flughafenumfeld)"
+  },
+  "Duesseldorf": {
+    "lat": 51.2277,
+    "lon": 6.7735,
+    "note": "Düsseldorf Hbf (real)"
+  },
+  "Duisburg": {
+    "lat": 51.4344,
+    "lon": 6.7623,
+    "note": "Duisburg Hbf (real)"
+  },
+  "Eberswalde Hbf": {
+    "lat": 52.8339,
+    "lon": 13.8115,
+    "note": "Eberswalde Hbf (real)"
+  },
+  "Ensenada North Port": {
+    "lat": 31.8667,
+    "lon": -116.6,
+    "note": "Ensenada (real Zentrum, Mexiko)"
+  },
+  "Esbjerg Turmbahnhof": {
+    "lat": 55.4667,
+    "lon": 8.45,
+    "note": "Esbjerg (real Zentrum)"
+  },
+  "Essen": {
+    "lat": 51.4556,
+    "lon": 7.0116,
+    "note": "Essen Hbf (real)"
+  },
+  "Fairbanks Nord": {
+    "lat": 64.8378,
+    "lon": -147.7164,
+    "note": "Fairbanks (real Zentrum)"
+  },
+  "Fargo West Hub": {
+    "lat": 46.8772,
+    "lon": -96.8,
+    "note": "Fargo (real Stadtgebiet, westl. Zufahrt)"
+  },
+  "Flughafen BER": {
+    "lat": 52.3667,
+    "lon": 13.5033,
+    "note": "Flughafen BER (real)"
+  },
+  "Frankfurt Flughafen": {
+    "lat": 50.05,
+    "lon": 8.5706,
+    "note": "Frankfurt Flughafen (real)"
+  },
+  "Gdansk Glowny": {
+    "lat": 54.3559,
+    "lon": 18.6466,
+    "note": "Gdańsk Główny (real Bahnhof)"
+  },
+  "Gdansk Wrzeszcz": {
+    "lat": 54.3733,
+    "lon": 18.6183,
+    "note": "Gdańsk Wrzeszcz (real Bahnhof)"
+  },
+  "Gdynia Glowna": {
+    "lat": 54.5189,
+    "lon": 18.5314,
+    "note": "Gdynia Główna (real Bahnhof)"
+  },
+  "Graz Feldkirchen": {
+    "lat": 47.0127456,
+    "lon": 15.4428881,
+    "note": "Korrekt per Photon aufgeloest, nur knapp ueber dem strengen Distanz-Schwellenwert"
+  },
+  "Great Nicobar Galathea": {
+    "lat": 6.9,
+    "lon": 93.9,
+    "note": "Great Nicobar/Galathea Bay (real)"
+  },
+  "Halifax Dartmouth": {
+    "lat": 44.682,
+    "lon": -63.575,
+    "note": "Halifax/Dartmouth (real Stadtgebiet)"
+  },
+  "Hannover Wuelferode Ost": {
+    "lat": 52.3667,
+    "lon": 9.85,
+    "note": "Hannover Ost/Wülferode (real, östlich der Stadt)"
+  },
+  "Hartford North Hub": {
+    "lat": 41.79,
+    "lon": -72.69,
+    "note": "Hartford (real, nördl. Stadtgebiet)"
+  },
+  "Haugesund": {
+    "lat": 59.4139,
+    "lon": 5.2681,
+    "note": "Haugesund (real Zentrum)"
+  },
+  "Havneby Romo": {
+    "lat": 55.09,
+    "lon": 8.57,
+    "note": "Havneby, Rømø (real Ortszentrum)"
+  },
+  "Heiane": {
+    "lat": 59.7617512,
+    "lon": 5.45551,
+    "note": "Korrekt per Photon aufgeloest, nur knapp ueber dem strengen Distanz-Schwellenwert"
+  },
+  "Hel": {
+    "lat": 54.6083,
+    "lon": 18.8014,
+    "note": "Hel (real Zentrum, Halbinselspitze)"
+  },
+  "Helgoland Tiefseehub": {
+    "lat": 54.1793,
+    "lon": 7.8874,
+    "note": "Helgoland (real Hauptinsel)"
+  },
+  "Helsinki": {
+    "lat": 60.1699,
+    "lon": 24.9384,
+    "note": "Helsinki (real Zentrum)"
+  },
+  "Hirtshals": {
+    "lat": 57.59,
+    "lon": 9.96,
+    "note": "Hirtshals (real Zentrum)"
+  },
+  "Hjorring": {
+    "lat": 57.4708,
+    "lon": 9.9847,
+    "note": "Hjørring (real Zentrum)"
+  },
+  "Hoek van Holland": {
+    "lat": 51.9767,
+    "lon": 4.1333,
+    "note": "Hoek van Holland (real Zentrum)"
+  },
+  "Hoernum Sylt": {
+    "lat": 54.755,
+    "lon": 8.3378,
+    "note": "Hörnum, Sylt (real Ortszentrum)"
+  },
+  "Hollum Ameland": {
+    "lat": 53.4436,
+    "lon": 5.6446,
+    "note": "Hollum, Ameland (real Ortszentrum)"
+  },
+  "Holstebro": {
+    "lat": 56.36,
+    "lon": 8.6156,
+    "note": "Holstebro (real Zentrum)"
+  },
+  "Honningsvaag": {
+    "lat": 70.9821,
+    "lon": 25.9704,
+    "note": "Honningsvåg (real Stadtzentrum)"
+  },
+  "Inari": {
+    "lat": 68.9061,
+    "lon": 27.0276,
+    "note": "Inari (real Ortszentrum)"
+  },
+  "Indianapolis South Hub": {
+    "lat": 39.65,
+    "lon": -86.15,
+    "note": "Indianapolis (real, südl. Autobahnring)"
+  },
+  "Isfahan Kaveh Transit": {
+    "lat": 32.6546,
+    "lon": 51.668,
+    "note": "Isfahan (real, Kaveh Industriezone)"
+  },
+  "Istanbul": {
+    "lat": 41.0082,
+    "lon": 28.9784,
+    "note": "Istanbul (real Zentrum); Photon fand faelschlich einen Deli in Kyiv"
+  },
+  "Izmir Bornova Ost": {
+    "lat": 38.4636,
+    "lon": 27.2159,
+    "note": "Izmir/Bornova (real Ortszentrum); Photon fand sonst falsche Treffer in der Tuerkei-Region Istanbul"
+  },
+  "Jakutsk Ost": {
+    "lat": 61.95,
+    "lon": 129.9,
+    "note": "Nizhny Bestyakh/Jakutsk-Ost (real Ortszentrum)"
+  },
+  "Jastarnia": {
+    "lat": 54.6978,
+    "lon": 18.6844,
+    "note": "Jastarnia (real Zentrum, Halbinsel Hel)"
+  },
+  "Juist": {
+    "lat": 53.6667,
+    "lon": 7.05,
+    "note": "Juist (real Ortszentrum)"
+  },
+  "Karachi Port Qasim": {
+    "lat": 24.7833,
+    "lon": 67.3333,
+    "note": "Karachi/Port Qasim (real Hafengebiet)"
+  },
+  "Kasan Nord": {
+    "lat": 55.7887,
+    "lon": 49.1221,
+    "note": "Kasan (real Zentrum)"
+  },
+  "Kassel Kreuz Mitte": {
+    "lat": 51.3358,
+    "lon": 9.5031,
+    "note": "Kassel (real, Autobahnkreuz Kassel-Mitte)"
+  },
+  "Koblenz": {
+    "lat": 50.3569,
+    "lon": 7.5886,
+    "note": "Koblenz Hbf (real)"
+  },
+  "Kochi Kalamassery": {
+    "lat": 10.05,
+    "lon": 76.3167,
+    "note": "Kochi/Kalamassery (real Industriegebiet)"
+  },
+  "Koeln": {
+    "lat": 50.9413,
+    "lon": 6.9583,
+    "note": "Köln Hbf (real)"
+  },
+  "Kosice": {
+    "lat": 48.7164,
+    "lon": 21.2611,
+    "note": "Košice (real Zentrum)"
+  },
+  "Kreuz B70 B67": {
+    "lat": 51.798,
+    "lon": 6.768,
+    "note": "Kein exakter OSM-Treffer; entlang der B70/B67 zwischen Raesfeld und Rhede interpoliert (km-Marker-basiert)."
+  },
+  "Kreuz Dortmund West": {
+    "lat": 51.4956,
+    "lon": 7.405,
+    "note": "Realer Autobahnkreuz-Punkt (motorway_junction), nicht der nahegelegene IU-Campus."
+  },
+  "Kristiansand": {
+    "lat": 58.1467,
+    "lon": 8.0,
+    "note": "Kristiansand (real Zentrum)"
+  },
+  "Kuala Lumpur KLIA City": {
+    "lat": 2.7456,
+    "lon": 101.7099,
+    "note": "Kuala Lumpur/KLIA (real Flughafenzone)"
+  },
+  "Kyiv": {
+    "lat": 50.4501,
+    "lon": 30.5234,
+    "note": "Kyiv (real Zentrum)"
+  },
+  "Kyiv Boryspil": {
+    "lat": 50.345,
+    "lon": 30.8947,
+    "note": "Kyiv/Boryspil (real Flughafenzone)"
+  },
+  "Kyiv E40": {
+    "lat": 50.4501,
+    "lon": 30.5234,
+    "note": "Kyiv (real Zentrum, westlicher Autobahnring E40)"
+  },
+  "Langeoog": {
+    "lat": 53.7307,
+    "lon": 7.5027,
+    "note": "Langeoog (real Ortszentrum)"
+  },
+  "Las Vegas South Gateway": {
+    "lat": 36.0397,
+    "lon": -115.155,
+    "note": "Las Vegas South (real, Kreuz I-15/CC-215)"
+  },
+  "Leipzig Schkeuditz": {
+    "lat": 51.3841,
+    "lon": 12.2306,
+    "note": "Leipzig/Schkeuditz (real, Schkeuditzer Kreuz)"
+  },
+  "Lille Turmbahnhof": {
+    "lat": 50.6292,
+    "lon": 3.0573,
+    "note": "Lille (real Zentrum)"
+  },
+  "Linz": {
+    "lat": 48.29,
+    "lon": 14.2938,
+    "note": "Linz Hbf (real)"
+  },
+  "List Sylt": {
+    "lat": 55.0142,
+    "lon": 8.4339,
+    "note": "List, Sylt (real Ortszentrum)"
+  },
+  "Lodz Polnoc": {
+    "lat": 51.85,
+    "lon": 19.45,
+    "note": "Łódź Nord (real, nördlich der Stadt bei Stryków)"
+  },
+  "Los Angeles Sylmar Hub": {
+    "lat": 34.3121,
+    "lon": -118.4429,
+    "note": "Los Angeles/Sylmar (real, Kreuz I-5/I-210)"
+  },
+  "Lviv": {
+    "lat": 49.8397,
+    "lon": 24.0297,
+    "note": "Lviv (real Zentrum)"
+  },
+  "Mandal": {
+    "lat": 58.0294,
+    "lon": 7.4508,
+    "note": "Mandal (real Zentrum)"
+  },
+  "Mannheim": {
+    "lat": 49.4796,
+    "lon": 8.4692,
+    "note": "Mannheim Hbf (real)"
+  },
+  "Medan Kualanamu": {
+    "lat": 3.6422,
+    "lon": 98.8853,
+    "note": "Medan/Kualanamu Flughafen (real)"
+  },
+  "Mexico City Huehuetoca": {
+    "lat": 19.8447,
+    "lon": -99.2119,
+    "note": "Huehuetoca (real Zentrum, noerdl. Mexiko-Stadt)"
+  },
+  "Milwaukee Oak Creek Hub": {
+    "lat": 42.8858,
+    "lon": -87.8848,
+    "note": "Milwaukee/Oak Creek (real Vorort)"
+  },
+  "Minneapolis Maple Grove": {
+    "lat": 45.0941,
+    "lon": -93.456,
+    "note": "Minneapolis/Maple Grove (real Vorort)"
+  },
+  "Moncton Maritime Hub": {
+    "lat": 46.0878,
+    "lon": -64.7782,
+    "note": "Moncton (real Stadtgebiet)"
+  },
+  "Moskau": {
+    "lat": 55.7558,
+    "lon": 37.6173,
+    "note": "Moskau/Moskva (real Zentrum, deutscher Exonym beibehalten); Photon fand faelschlich ein Restaurant in St. Petersburg"
+  },
+  "Muenchen": {
+    "lat": 48.1402,
+    "lon": 11.5581,
+    "note": "München Hbf (real)"
+  },
+  "Mumbai Navi Mumbai": {
+    "lat": 19.033,
+    "lon": 73.0297,
+    "note": "Navi Mumbai (real)"
+  },
+  "NYC Penn Deep": {
+    "lat": 40.7506,
+    "lon": -73.9935,
+    "note": "New York Penn Station (real)"
+  },
+  "Nashville Briley East": {
+    "lat": 36.19,
+    "lon": -86.66,
+    "note": "Nashville/Briley Parkway East (real)"
+  },
+  "Niagara Falls North Hub": {
+    "lat": 43.12,
+    "lon": -79.04,
+    "note": "Niagara Falls NY (real, US-Seite)"
+  },
+  "Nicosia Geri": {
+    "lat": 35.1667,
+    "lon": 33.3167,
+    "note": "Nicosia/Geri (real Vorort)"
+  },
+  "Nordby Fano": {
+    "lat": 55.4333,
+    "lon": 8.4167,
+    "note": "Nordby, Fanø (real Ortszentrum)"
+  },
+  "Norderney": {
+    "lat": 53.7056,
+    "lon": 7.162,
+    "note": "Norderney (real Ortszentrum)"
+  },
+  "Nowosibirsk Tolmachevo": {
+    "lat": 55.0126,
+    "lon": 82.6672,
+    "note": "Nowosibirsk/Tolmachevo (real Flughafenzone)"
+  },
+  "Odesa": {
+    "lat": 46.4825,
+    "lon": 30.7233,
+    "note": "Odesa (real Zentrum); Photon fand faelschlich ein Restaurant in Kyiv"
+  },
+  "Odessa": {
+    "lat": 46.4825,
+    "lon": 30.7233,
+    "note": "Odessa/Odesa (real Zentrum)"
+  },
+  "Oftebro": {
+    "lat": 58.1488442,
+    "lon": 7.093585,
+    "note": "Korrekt per Photon aufgeloest, nur knapp ueber dem strengen Distanz-Schwellenwert"
+  },
+  "Oklahoma City West Gate": {
+    "lat": 35.51,
+    "lon": -97.68,
+    "note": "Oklahoma City West (real Stadtgebiet)"
+  },
+  "Omaha West Gateway": {
+    "lat": 41.14,
+    "lon": -96.24,
+    "note": "Omaha West/Gretna (real Vorort)"
+  },
+  "Oulu": {
+    "lat": 65.0121,
+    "lon": 25.4651,
+    "note": "Oulu (real Zentrum)"
+  },
+  "Palermo": {
+    "lat": 38.1157,
+    "lon": 13.3615,
+    "note": "Palermo (real Zentrum); Photon fand faelschlich ein Geschaeft in der Tuerkei"
+  },
+  "Paris CDG": {
+    "lat": 49.0097,
+    "lon": 2.5479,
+    "note": "Paris CDG Flughafen (real)"
+  },
+  "Pasewalk": {
+    "lat": 53.5039,
+    "lon": 14.0,
+    "note": "Pasewalk (real Zentrum)"
+  },
+  "Philadelphia Northeast": {
+    "lat": 40.08,
+    "lon": -75.01,
+    "note": "Philadelphia Northeast (real Stadtteil)"
+  },
+  "Pigeon Mountain": {
+    "lat": 35.77,
+    "lon": -83.56,
+    "note": "Sevierville/Pigeon Forge (real Gebiet)"
+  },
+  "Pittsburgh Monroeville": {
+    "lat": 40.4302,
+    "lon": -79.7889,
+    "note": "Pittsburgh/Monroeville (real Vorort)"
+  },
+  "Portland Salmon Creek": {
+    "lat": 45.6987,
+    "lon": -122.665,
+    "note": "Portland/Salmon Creek (real, Kreuz I-5/I-205, Vancouver WA)"
+  },
+  "Portland West Hub Maine": {
+    "lat": 43.68,
+    "lon": -70.35,
+    "note": "Portland Maine (real, westl. Stadtgebiet)"
+  },
+  "Potsdam Hbf": {
+    "lat": 52.3906,
+    "lon": 13.0645,
+    "note": "Potsdam Hbf (real)"
+  },
+  "Poznan Wschod": {
+    "lat": 52.4064,
+    "lon": 16.9772,
+    "note": "Poznań (real Zentrum, Bezug für östl. Autobahnknoten)"
+  },
+  "Praha Letnany": {
+    "lat": 50.1264,
+    "lon": 14.53,
+    "note": "Praha/Letňany (real Stadtteil)"
+  },
+  "Puck": {
+    "lat": 54.7189,
+    "lon": 18.4083,
+    "note": "Puck (real Zentrum)"
+  },
+  "Puerto Vallarta East": {
+    "lat": 20.6534,
+    "lon": -105.2253,
+    "note": "Puerto Vallarta (real Zentrum)"
+  },
+  "Rajkot Hirasar Airport": {
+    "lat": 22.32,
+    "lon": 70.75,
+    "note": "Rajkot/Hirasar Airport (real)"
+  },
+  "Reda": {
+    "lat": 54.6011,
+    "lon": 18.3486,
+    "note": "Reda (real Zentrum)"
+  },
+  "Richmond North Gate": {
+    "lat": 37.66,
+    "lon": -77.48,
+    "note": "Richmond North/Glen Allen (real Vorort)"
+  },
+  "Ringkobing": {
+    "lat": 56.0908,
+    "lon": 8.2444,
+    "note": "Ringkøbing (real Zentrum)"
+  },
+  "Rochester South Hub": {
+    "lat": 43.07,
+    "lon": -77.62,
+    "note": "Rochester/Henrietta (real Vorort)"
+  },
+  "Rosenheim": {
+    "lat": 47.8506,
+    "lon": 12.1183,
+    "note": "Rosenheim Hbf (real)"
+  },
+  "Rovaniemi": {
+    "lat": 66.5039,
+    "lon": 25.7294,
+    "note": "Rovaniemi (real Bahnhof/Zentrum)"
+  },
+  "Rumia": {
+    "lat": 54.5719,
+    "lon": 18.39,
+    "note": "Rumia (real Zentrum)"
+  },
+  "Runowo Pomorskie": {
+    "lat": 53.5521184,
+    "lon": 15.5278998,
+    "note": "Korrekt per Photon aufgeloest, nur knapp ueber dem strengen Distanz-Schwellenwert"
+  },
+  "Sacramento North Hub": {
+    "lat": 38.6875,
+    "lon": -121.321,
+    "note": "Sacramento North/Natomas (real, Kreuz I-5/I-80)"
+  },
+  "Saint John Bypass": {
+    "lat": 45.3,
+    "lon": -66.08,
+    "note": "Saint John NB (real Stadtgebiet)"
+  },
+  "Salzburg": {
+    "lat": 47.8129,
+    "lon": 13.045,
+    "note": "Salzburg Hbf (real)"
+  },
+  "San Diego Torrey Pines": {
+    "lat": 32.8994,
+    "lon": -117.234,
+    "note": "San Diego/Torrey Pines (real, Kreuz I-5/I-805)"
+  },
+  "Sarajevo Ilidza": {
+    "lat": 43.8397,
+    "lon": 18.2919,
+    "note": "Sarajevo/Ilidža (real Stadtteil)"
+  },
+  "Schiermonnikoog": {
+    "lat": 53.4833,
+    "lon": 6.1667,
+    "note": "Schiermonnikoog (real Ortszentrum)"
+  },
+  "Seattle Tukwila Hub": {
+    "lat": 47.474,
+    "lon": -122.261,
+    "note": "Seattle/Tukwila (real, Kreuz I-5/I-405)"
+  },
+  "Sevastopol": {
+    "lat": 44.6054,
+    "lon": 33.522,
+    "note": "Sevastopol/Sewastopol (real Zentrum)"
+  },
+  "Singapore Changi": {
+    "lat": 1.3592,
+    "lon": 103.9895,
+    "note": "Singapore/Changi (real Flughafenzone)"
+  },
+  "Siracusa": {
+    "lat": 37.0755,
+    "lon": 15.2866,
+    "note": "Siracusa (real Zentrum); Photon fand faelschlich einen Berg in der Tuerkei"
+  },
+  "Skjern": {
+    "lat": 55.95,
+    "lon": 8.4931,
+    "note": "Skjern (real Zentrum)"
+  },
+  "Skopje Ilinden": {
+    "lat": 41.9686,
+    "lon": 21.5583,
+    "note": "Skopje/Ilinden (real Stadtteil)"
+  },
+  "Sonderho Fano": {
+    "lat": 55.3167,
+    "lon": 8.4167,
+    "note": "Sønderho, Fanø (real Ortszentrum)"
+  },
+  "Spiekeroog": {
+    "lat": 53.7717,
+    "lon": 7.685,
+    "note": "Spiekeroog (real Ortszentrum)"
+  },
+  "Spokane West Hub": {
+    "lat": 47.6588,
+    "lon": -117.426,
+    "note": "Spokane (real Stadtgebiet)"
+  },
+  "St Peter Ording": {
+    "lat": 54.3097,
+    "lon": 8.6386,
+    "note": "St. Peter-Ording (real Zentrum)"
+  },
+  "St Petersburg": {
+    "lat": 59.9311,
+    "lon": 30.3609,
+    "note": "St. Petersburg (real Zentrum)"
+  },
+  "St Poelten": {
+    "lat": 48.2081,
+    "lon": 15.6247,
+    "note": "St. Pölten Hbf (real)"
+  },
+  "St Stephen Border Gate": {
+    "lat": 45.197,
+    "lon": -67.283,
+    "note": "St. Stephen NB (real, Grenzstadt)"
+  },
+  "Starogard Gdanski": {
+    "lat": 53.9689,
+    "lon": 18.5308,
+    "note": "Starogard Gdański (real Zentrum)"
+  },
+  "Stavanger": {
+    "lat": 58.97,
+    "lon": 5.7331,
+    "note": "Stavanger (real Zentrum)"
+  },
+  "Struer": {
+    "lat": 56.4931,
+    "lon": 8.6003,
+    "note": "Struer (real Zentrum)"
+  },
+  "Stuttgart": {
+    "lat": 48.7842,
+    "lon": 9.1817,
+    "note": "Stuttgart Hbf (real)"
+  },
+  "Surat Hazira Guertel": {
+    "lat": 21.0833,
+    "lon": 72.65,
+    "note": "Surat/Hazira (real Industriegürtel)"
+  },
+  "Surrey Vancouver": {
+    "lat": 49.1913,
+    "lon": -122.849,
+    "note": "Surrey/Vancouver (real Stadtgebiet, Bezug für Highway-1-Knoten)"
+  },
+  "Szczecin Glowny": {
+    "lat": 53.4257,
+    "lon": 14.5518,
+    "note": "Szczecin Główny (real Bahnhof)"
+  },
+  "Szczecinek": {
+    "lat": 53.7061,
+    "lon": 16.6994,
+    "note": "Szczecinek (real Zentrum)"
+  },
+  "Tampere": {
+    "lat": 61.4978,
+    "lon": 23.761,
+    "note": "Tampere (real Bahnhof)"
+  },
+  "Tczew": {
+    "lat": 54.0924,
+    "lon": 18.7997,
+    "note": "Tczew (real Bahnhof)"
+  },
+  "Thessaloniki Sindos": {
+    "lat": 40.7167,
+    "lon": 22.8167,
+    "note": "Thessaloniki/Sindos (real Industriegebiet)"
+  },
+  "Thisted": {
+    "lat": 56.9564,
+    "lon": 8.6939,
+    "note": "Thisted (real Zentrum)"
+  },
+  "Tripoli El Mina": {
+    "lat": 34.45,
+    "lon": 35.8333,
+    "note": "Tripoli/El-Mina (real Hafenviertel, Libanon)"
+  },
+  "Tunis": {
+    "lat": 36.8065,
+    "lon": 10.1815,
+    "note": "Tunis (real Zentrum); Photon fand faelschlich ein Geschaeft in der Tuerkei"
+  },
+  "Turbat Wuesten Bypass": {
+    "lat": 26.0031,
+    "lon": 63.0522,
+    "note": "Turbat (real Zentrum, Belutschistan)"
+  },
+  "Turku": {
+    "lat": 60.4518,
+    "lon": 22.2666,
+    "note": "Turku (real Zentrum); Photon verwechselte 'Turku' mit dem Geschaeft 'Turkisliike' in Tampere"
+  },
+  "Twer": {
+    "lat": 56.8587,
+    "lon": 35.9006,
+    "note": "Twer/Tver (real Zentrum, deutscher Exonym beibehalten); Photon fand faelschlich einen Pub 'Tower' in St. Petersburg"
+  },
+  "Ueckendorfer Platz": {
+    "lat": 51.4937086,
+    "lon": 7.1239131,
+    "note": "Korrekt getroffen, nur knapp über dem strengen Distanz-Schwellenwert."
+  },
+  "Ulm": {
+    "lat": 48.3984,
+    "lon": 9.9825,
+    "note": "Ulm Hbf (real)"
+  },
+  "Vlissingen": {
+    "lat": 51.4426,
+    "lon": 3.5734,
+    "note": "Vlissingen (real Zentrum)"
+  },
+  "Wangerooge": {
+    "lat": 53.7936,
+    "lon": 7.8908,
+    "note": "Wangerooge (real Ortszentrum)"
+  },
+  "Warszawa Konotopa": {
+    "lat": 52.21,
+    "lon": 20.87,
+    "note": "Warszawa Konotopa (real, westl. Autobahnknoten A2/S2)"
+  },
+  "Washington Greenbelt": {
+    "lat": 39.0,
+    "lon": -76.88,
+    "note": "Washington/Greenbelt (real Vorort)"
+  },
+  "West Memphis Hub": {
+    "lat": 35.1465,
+    "lon": -90.1848,
+    "note": "West Memphis AR (real Stadtgebiet)"
+  },
+  "West Ocean City": {
+    "lat": 38.34,
+    "lon": -75.13,
+    "note": "West Ocean City MD (real)"
+  },
+  "West-Terschelling": {
+    "lat": 53.3606,
+    "lon": 5.2214,
+    "note": "West-Terschelling (real Ortszentrum)"
+  },
+  "Westerland Sylt": {
+    "lat": 54.9078,
+    "lon": 8.3078,
+    "note": "Westerland, Sylt (real Zentrum)"
+  },
+  "Whitehorse Valley": {
+    "lat": 60.7212,
+    "lon": -135.0568,
+    "note": "Whitehorse (real Zentrum)"
+  },
+  "Wien": {
+    "lat": 48.2082,
+    "lon": 16.3738,
+    "note": "Wien (real Zentrum)"
+  },
+  "Wien Schwechat Ost": {
+    "lat": 48.1327,
+    "lon": 16.4832,
+    "note": "Wien/Schwechat (real Flughafenzone)"
+  },
+  "Winterswijk": {
+    "lat": 51.968013,
+    "lon": 6.7147769,
+    "note": "Bahnhof Winterswijk (NL)."
+  },
+  "Wladyslawowo": {
+    "lat": 54.7889,
+    "lon": 18.4083,
+    "note": "Władysławowo (real Zentrum)"
+  },
+  "Wuppertal Nord": {
+    "lat": 51.3125198,
+    "lon": 7.2586638,
+    "note": "Kreuz Wuppertal-Nord (A46/A43), realer Autobahnknoten für den fiktiven Hub."
+  },
+  "Wyborg": {
+    "lat": 60.7097,
+    "lon": 28.7519,
+    "note": "Wyborg/Vyborg (real Zentrum, deutscher Exonym beibehalten)"
+  },
+  "Zagreb Pleso": {
+    "lat": 45.7429,
+    "lon": 16.0688,
+    "note": "Zagreb/Pleso Flughafen (real)"
+  }
+}

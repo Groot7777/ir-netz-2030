@@ -1,0 +1,13 @@
+{
+  "muenster_ruhr": {"lat": 51.5918019, "lon": 7.6616804, "note": "Kamen (Startbahnhof-Stadt)"},
+  "wbc": {"lat": 51.264018, "lon": 7.1780374, "note": "Wuppertal (Startbahnhof-Stadt)"},
+  "lille_bergen": {"lat": 50.6292, "lon": 3.0573, "note": "Lille (Startbahnhof-Stadt)"},
+  "arktis_afrika": {"lat": 71.1725, "lon": 25.7854, "note": "Nordkapp (Startbahnhof)"},
+  "brandenburg_hel": {"lat": 52.4125, "lon": 12.5316, "note": "Brandenburg an der Havel (Startbahnhof-Stadt)"},
+  "ncams": {"lat": 49.1913, "lon": -122.849, "note": "Surrey/Vancouver (Startbahnhof-Stadt)"},
+  "nha": {"lat": 49.1913, "lon": -122.849, "note": "Surrey/Vancouver (Startbahnhof-Stadt)"},
+  "pcms": {"lat": 49.1913, "lon": -122.849, "note": "Surrey/Vancouver (Startbahnhof-Stadt)"},
+  "pnw_mae": {"lat": 49.1913, "lon": -122.849, "note": "Surrey/Vancouver (Startbahnhof-Stadt)"},
+  "weltachse1": {"lat": 51.4785335, "lon": 7.2232341, "note": "Bochum Hbf (Startbahnhof, override)"},
+  "rheinruhrkrim": {"lat": 51.4785335, "lon": 7.2232341, "note": "Bochum Hbf (Startbahnhof, override)"}
+}

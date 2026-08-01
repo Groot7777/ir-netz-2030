@@ -1,0 +1,27 @@
+{
+  "id": "pnw_mae",
+  "name_ascii": "PNW-MAE Pacific Northwest and Mid-Atlantic Express",
+  "name_display": "PNW-MAE (Pacific Northwest & Mid-Atlantic Express)",
+  "color_rgb": "B8860B",
+  "geometry_source": "highway",
+  "vehicle_note": "6-gleisig (2x Express, 2x Regional, 2x Güter-Transit), ETCS Level 3 Moving Block, Halbstundentakt 24/7. Schwere 1.200m-Fracht-Maglevs nutzen separate periphere Terminals außerhalb der Passagierbahnhöfe.",
+  "infra_note": "6.100 km, 11 Std. 46 Min., 13 Zwischenhalte plus zahlreiche Non-Stop-Bypass-Durchfahrten (Bellingham-North, Everett-East, Tacoma-Dome Bypass, Olympia-South Ring, Bend-East, Burns-Basin, Ely-West, Amarillo-East, Sayre-Plains, Shawnee-Loop, Fort Smith River-Viaduct, Little Rock-North Ring, Jackson-South Bypass, Knoxville-West Gate, Greensboro-East Loop, Petersburg-South Bypass, Williamsburg-East, Toms River-Bypass, Edison-Metropark Transit). Zeiten lokal (PT/MT/CT/ET). Größte Tunnel: Mount Hood (42 km), Black Canyon/Lake Mead (18 km), Great Smoky Mountains (78 km), Chesapeake Bay (34 km), Delaware Bay (22 km), Hudson River. Teilt Surrey/Seattle-Tukwila/Portland-Salmon Creek/Las Vegas-South/Albuquerque-West mit NHA und NYC Penn Deep mit NCAMS/NHA.",
+  "start_time": "07:00:00",
+  "stops": [
+    {"key": "Surrey Vancouver", "display": "Surrey (Vancouver)", "arr": null, "dep": "07:00:00", "km": 0.0, "note": "Geländebahnhof Ebene 0 im Autobahnkeil des Highway 1 (Junction 75)"},
+    {"key": "Seattle Tukwila Hub", "display": "Seattle-Tukwila Hub", "arr": "07:20:00", "dep": "07:22:00", "km": 200.0, "note": "Vertikaler Turmbahnhof am Autobahnkreuz I-5/I-405"},
+    {"key": "Portland Salmon Creek", "display": "Portland-Salmon Creek", "arr": "07:47:00", "dep": "07:49:00", "km": 450.0, "note": "Geländebahnhof am Knotenpunkt I-5/I-205"},
+    {"key": "Las Vegas South Gateway", "display": "Las Vegas-South Gateway", "arr": "10:04:00", "dep": "10:08:00", "km": 1750.0, "note": "Turmbahnhof südlich des Strips am Autobahnkreuz I-15/CC-215"},
+    {"key": "Albuquerque West Bypass", "display": "Albuquerque-West Bypass", "arr": "12:43:00", "dep": "12:45:00", "km": 2650.0, "note": "Bodengleicher Geländebahnhof an der Westperipherie (I-40/Coors Blvd)"},
+    {"key": "Oklahoma City West Gate", "display": "Oklahoma City-West Gate", "arr": "15:15:00", "dep": "15:17:00", "km": 3500.0, "note": "Geländebahnhof an der Kreuzung I-40/Kilpatrick Turnpike"},
+    {"key": "Conway North", "display": "Conway-North", "arr": "16:05:00", "dep": "16:07:00", "km": 3950.0, "note": "Trogbahnhof an der Kreuzung I-40/US-65"},
+    {"key": "West Memphis Hub", "display": "West Memphis Hub", "arr": "16:30:00", "dep": "16:34:00", "km": 4150.0, "note": "Hochbahnhof am Autobahnknoten I-40/I-55 (Arkansas-Seite)"},
+    {"key": "Nashville Briley East", "display": "Nashville-Briley East", "arr": "17:12:00", "dep": "17:16:00", "km": 4500.0, "note": "Turmbahnhof an der Kreuzung I-40/Briley Parkway"},
+    {"key": "Pigeon Mountain", "display": "Pigeon-Mountain Portal", "arr": "17:51:00", "dep": "17:53:00", "km": 4800.0, "note": "Tiefbahnhof in einer Felskaverne östlich von Sevierville/Pigeon Forge vor dem Great-Smoky-Mountains-Basistunnel"},
+    {"key": "Charlotte NE Loop", "display": "Charlotte-NE Loop", "arr": "18:25:00", "dep": "18:29:00", "km": 5050.0, "note": "Hochbahnhof über dem nordöstlichen Autobahnring an der Schnittstelle I-85/I-485"},
+    {"key": "Richmond North Gate", "display": "Richmond-North Gate", "arr": "19:17:00", "dep": "19:19:00", "km": 5500.0, "note": "Geländebahnhof am Knotenpunkt I-95/I-295 (Glen Allen)"},
+    {"key": "West Ocean City", "arr": "19:54:00", "dep": "19:56:00", "km": 5750.0, "note": "Geländebahnhof mit Tunnelrampe an der US-50-Umfahrung, vor dem Delaware-Bay-Tunnel"},
+    {"key": "Atlantic City Egg Harbor", "display": "Atlantic City-Egg Harbor", "arr": "20:21:00", "dep": "20:23:00", "km": 5900.0, "note": "Geländebahnhof an der Kreuzung Atlantic City Expressway/Garden State Parkway"},
+    {"key": "NYC Penn Deep", "display": "New York City Penn Deep", "arr": "20:46:00", "dep": null, "km": 6100.0, "note": "Ultratransit-Tiefbahnhof unter der Penn Station (Ebene -4/-5), nach dem Hudson River Basistunnel"}
+  ]
+}

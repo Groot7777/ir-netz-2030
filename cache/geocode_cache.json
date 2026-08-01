@@ -1,0 +1,2007 @@
+{
+  "Aalborg": {
+    "lat": 57.0488,
+    "lon": 9.9217,
+    "source": "override"
+  },
+  "Aalten": {
+    "lat": 51.9213392,
+    "lon": 6.5787107,
+    "source": "override"
+  },
+  "Albany West Hub": {
+    "lat": 42.68,
+    "lon": -73.95,
+    "source": "override"
+  },
+  "Albuquerque West Bypass": {
+    "lat": 35.1056,
+    "lon": -106.71,
+    "source": "override"
+  },
+  "Algiers": {
+    "lat": 36.7538,
+    "lon": 3.0588,
+    "source": "override"
+  },
+  "Alkmaar": {
+    "lat": 52.6324,
+    "lon": 4.7534,
+    "source": "override"
+  },
+  "Amrum": {
+    "lat": 54.6333,
+    "lon": 8.35,
+    "source": "override"
+  },
+  "Amsterdam Science Park": {
+    "lat": 52.335,
+    "lon": 4.935,
+    "source": "pdf_exact"
+  },
+  "Angermuende": {
+    "lat": 53.0219,
+    "lon": 13.9967,
+    "source": "override"
+  },
+  "Antalya Aksu Dreieck": {
+    "lat": 36.95,
+    "lon": 30.8,
+    "source": "override"
+  },
+  "Arnhem": {
+    "lat": 51.985,
+    "lon": 5.955,
+    "source": "pdf_exact"
+  },
+  "Athens": {
+    "lat": 37.9838,
+    "lon": 23.7275,
+    "source": "override"
+  },
+  "Atlantic City Egg Harbor": {
+    "lat": 39.38,
+    "lon": -74.59,
+    "source": "override"
+  },
+  "Augsburg": {
+    "lat": 48.3653,
+    "lon": 10.8858,
+    "source": "override"
+  },
+  "August-Bebel-Platz": {
+    "bbox_step": 0,
+    "city": "Witten",
+    "confidence": "high",
+    "dist_from_anchor_km": 9.1,
+    "km_delta": 3.5,
+    "lat": 51.4409466,
+    "lon": 7.3341687,
+    "matched_name": "Lev-Hasharon-Platz",
+    "osm_value": "residential",
+    "source": "photon"
+  },
+  "Baghdad": {
+    "lat": 33.3152,
+    "lon": 44.3661,
+    "source": "override"
+  },
+  "Ballum Ameland": {
+    "bbox_step": 0,
+    "city": "Ballum",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.2,
+    "km_delta": 6.0,
+    "lat": 53.4501278,
+    "lon": 5.6745095,
+    "matched_name": "Zonnepark Ameland",
+    "osm_value": "industrial",
+    "source": "photon"
+  },
+  "Baltimore White Marsh": {
+    "lat": 39.39,
+    "lon": -76.45,
+    "source": "override"
+  },
+  "Baltrum": {
+    "lat": 53.7292,
+    "lon": 7.3733,
+    "source": "override"
+  },
+  "Bangor Hermon Hub": {
+    "lat": 44.81,
+    "lon": -68.92,
+    "source": "override"
+  },
+  "Bay Area Mega-Hub": {
+    "lat": 37.4275,
+    "lon": -121.9067,
+    "source": "override"
+  },
+  "Belfast Titanic Quarter": {
+    "lat": 54.605,
+    "lon": -5.905,
+    "source": "pdf_exact"
+  },
+  "Bergen Endstation": {
+    "lat": 60.3913,
+    "lon": 5.3221,
+    "source": "override"
+  },
+  "Berlin Hbf tief": {
+    "lat": 52.525,
+    "lon": 13.3694,
+    "source": "override"
+  },
+  "Berlin Potsdamer Platz": {
+    "lat": 52.5096,
+    "lon": 13.3759,
+    "source": "override"
+  },
+  "Berlin Schoenefelder Kreuz": {
+    "lat": 52.3667,
+    "lon": 13.5167,
+    "source": "override"
+  },
+  "Berlin-Wannsee": {
+    "lat": 52.4229,
+    "lon": 13.1789,
+    "source": "override"
+  },
+  "Bernau b Berlin": {
+    "lat": 52.6797,
+    "lon": 13.5892,
+    "source": "override"
+  },
+  "Bielefeld": {
+    "lat": 52.0302,
+    "lon": 8.5325,
+    "source": "override"
+  },
+  "Big Diomede": {
+    "lat": 65.7833,
+    "lon": -169.05,
+    "source": "override"
+  },
+  "Billings North Bypass": {
+    "lat": 45.7833,
+    "lon": -108.5007,
+    "source": "override"
+  },
+  "Bismarck East Gate": {
+    "lat": 46.8083,
+    "lon": -100.7837,
+    "source": "override"
+  },
+  "Blaavand": {
+    "lat": 55.55,
+    "lon": 8.1167,
+    "source": "override"
+  },
+  "Bocholt": {
+    "lat": 51.8346665,
+    "lon": 6.6207206,
+    "source": "override"
+  },
+  "Bochum": {
+    "lat": 51.4785335,
+    "lon": 7.2232341,
+    "source": "override"
+  },
+  "Bochum Am Roederschacht": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.7,
+    "km_delta": 2.0,
+    "lat": 51.434224,
+    "lon": 7.1766135,
+    "matched_name": "Am Röderschacht",
+    "osm_value": "tram_stop",
+    "source": "photon"
+  },
+  "Bochum Bergmannsheil": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.8,
+    "km_delta": 1.2999999999999972,
+    "lat": 51.4690667,
+    "lon": 7.2047406,
+    "matched_name": "KGV Bergmannsheil",
+    "osm_value": "allotments",
+    "source": "photon"
+  },
+  "Bochum Bermuda3eck": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.5,
+    "km_delta": 0.6000000000000014,
+    "lat": 51.4771856,
+    "lon": 7.2168192,
+    "matched_name": "Bermuda3eck / Musikforum - Kortumstraße",
+    "osm_value": "subway_entrance",
+    "source": "photon"
+  },
+  "Bochum Blankensteiner Strasse": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.2,
+    "km_delta": 1.7999999999999972,
+    "lat": 51.4306814,
+    "lon": 7.1930918,
+    "matched_name": "Blankensteiner Straße",
+    "osm_value": "unclassified",
+    "source": "photon"
+  },
+  "Bochum Ehrenfeld": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.5,
+    "km_delta": 0.8999999999999986,
+    "lat": 51.4725871,
+    "lon": 7.2144657,
+    "matched_name": "Schwester Ehrenfeld",
+    "osm_value": "restaurant",
+    "source": "photon"
+  },
+  "Bochum Kohlenstrasse": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.3,
+    "km_delta": 1.5,
+    "lat": 51.4632267,
+    "lon": 7.1985297,
+    "matched_name": "Kohlenstraße",
+    "osm_value": "tertiary",
+    "source": "photon"
+  },
+  "Bochum Langendreer": {
+    "lat": 51.4772,
+    "lon": 7.3064,
+    "source": "override"
+  },
+  "Bochum Lewackerstrasse": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.7,
+    "km_delta": 3.5,
+    "lat": 51.4180795,
+    "lon": 7.1590873,
+    "matched_name": "Lewackerstraße",
+    "osm_value": "residential",
+    "source": "photon"
+  },
+  "Bochum Ruhrpark": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.3,
+    "km_delta": 4.0,
+    "lat": 51.4916515,
+    "lon": 7.2836443,
+    "matched_name": "Ruhrpark",
+    "osm_value": "census",
+    "source": "photon"
+  },
+  "Bochum Suedbad": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.3,
+    "km_delta": 1.5,
+    "lat": 51.4253308,
+    "lon": 7.1569577,
+    "matched_name": "Südbad",
+    "osm_value": "census",
+    "source": "photon"
+  },
+  "Bochum Weitmar Mitte": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.4,
+    "km_delta": 1.4000000000000057,
+    "lat": 51.4518889,
+    "lon": 7.1928018,
+    "matched_name": "Weitmar Mitte",
+    "osm_value": "platform",
+    "source": "photon"
+  },
+  "Bochumer Ruhrstadion": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.2,
+    "km_delta": 2.5,
+    "lat": 51.4900826,
+    "lon": 7.2365091,
+    "matched_name": "Vonovia Ruhrstadion",
+    "osm_value": "stadium",
+    "source": "photon"
+  },
+  "Borkum": {
+    "lat": 53.5814,
+    "lon": 6.665,
+    "source": "override"
+  },
+  "Boston West Route 128": {
+    "lat": 42.36,
+    "lon": -71.29,
+    "source": "override"
+  },
+  "Brandenburg Hbf": {
+    "lat": 52.409,
+    "lon": 12.5453,
+    "source": "override"
+  },
+  "Bratislava": {
+    "lat": 48.1486,
+    "lon": 17.1077,
+    "source": "override"
+  },
+  "Brno Sudbypass": {
+    "lat": 49.1522,
+    "lon": 16.6942,
+    "source": "override"
+  },
+  "Bruenenerstrasse": {
+    "lat": 51.8197997,
+    "lon": 6.7110865,
+    "source": "override"
+  },
+  "Bruessel Zaventem": {
+    "lat": 50.8998,
+    "lon": 4.4831,
+    "source": "override"
+  },
+  "Brugge Sint Pieters": {
+    "lat": 51.23,
+    "lon": 3.21,
+    "source": "pdf_exact"
+  },
+  "Budapest": {
+    "lat": 47.4979,
+    "lon": 19.0402,
+    "source": "override"
+  },
+  "Buer Mitte": {
+    "bbox_step": 0,
+    "city": "Gelsenkirchen",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.6,
+    "km_delta": 3.5,
+    "lat": 51.5770967,
+    "lon": 7.0576897,
+    "matched_name": "Rathaus Buer",
+    "osm_value": "townhall",
+    "source": "photon"
+  },
+  "Cabo San Lucas Deep": {
+    "lat": 22.8905,
+    "lon": -109.9167,
+    "source": "override"
+  },
+  "Calais Coquelles": {
+    "lat": 50.935,
+    "lon": 1.81,
+    "source": "pdf_exact"
+  },
+  "Cardiff": {
+    "lat": 51.515,
+    "lon": -3.14,
+    "source": "pdf_exact"
+  },
+  "Casablanca": {
+    "lat": 33.5731,
+    "lon": -7.5898,
+    "source": "override"
+  },
+  "Castrop-Rauxel Breckenstrasse": {
+    "bbox_step": 0,
+    "city": "Castrop-Rauxel",
+    "confidence": "high",
+    "dist_from_anchor_km": 5.4,
+    "km_delta": 4.5,
+    "lat": 51.5378056,
+    "lon": 7.307119,
+    "matched_name": "Breckenstraße",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Castrop-Rauxel Muensterplatz": {
+    "bbox_step": 0,
+    "city": "Castrop-Rauxel",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.2,
+    "km_delta": 3.5,
+    "lat": 51.5490216,
+    "lon": 7.3076264,
+    "matched_name": "Castrop Münsterplatz",
+    "osm_value": "taxi",
+    "source": "photon"
+  },
+  "Chalupy": {
+    "bbox_step": 0,
+    "city": "Großendorf",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.9,
+    "km_delta": null,
+    "lat": 54.7735182,
+    "lon": 18.4654812,
+    "matched_name": "Chałupy 3",
+    "osm_value": "camp_site",
+    "source": "photon"
+  },
+  "Charlotte NE Loop": {
+    "lat": 35.32,
+    "lon": -80.73,
+    "source": "override"
+  },
+  "Chemnitz Nord": {
+    "lat": 50.8617,
+    "lon": 12.9083,
+    "source": "override"
+  },
+  "Chicago Joliet Mega-Hub": {
+    "lat": 41.525,
+    "lon": -88.0817,
+    "source": "override"
+  },
+  "Chojnice": {
+    "lat": 53.6966,
+    "lon": 17.5578,
+    "source": "override"
+  },
+  "Colombo Kelaniya": {
+    "lat": 6.9553,
+    "lon": 79.9217,
+    "source": "override"
+  },
+  "Columbus West Hub": {
+    "lat": 39.97,
+    "lon": -83.13,
+    "source": "override"
+  },
+  "Conway North": {
+    "lat": 35.1,
+    "lon": -92.46,
+    "source": "override"
+  },
+  "Den Burg Texel": {
+    "lat": 53.0575,
+    "lon": 4.7913,
+    "source": "override"
+  },
+  "Den Haag Prins Clausplein": {
+    "lat": 52.0448,
+    "lon": 4.3922,
+    "source": "override"
+  },
+  "Den Haag Ypenburg": {
+    "lat": 52.042,
+    "lon": 4.365,
+    "source": "pdf_exact"
+  },
+  "Den Helder": {
+    "lat": 52.9563,
+    "lon": 4.7601,
+    "source": "override"
+  },
+  "Denver Northeast Hub": {
+    "lat": 39.86,
+    "lon": -104.74,
+    "source": "override"
+  },
+  "Des Moines West Hub": {
+    "lat": 41.61,
+    "lon": -93.89,
+    "source": "override"
+  },
+  "Detroit Romulus Hub": {
+    "lat": 42.228,
+    "lon": -83.376,
+    "source": "override"
+  },
+  "Dorsten Bahnhof": {
+    "bbox_step": 0,
+    "city": "Dorsten",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.5,
+    "km_delta": 2.5,
+    "lat": 51.6585784,
+    "lon": 6.9711388,
+    "matched_name": "P&R, Dorsten Bahnhof, Ost",
+    "osm_value": "parking",
+    "source": "photon"
+  },
+  "Dorsten Borkener-Friedrichstrasse": {
+    "bbox_step": 0,
+    "city": "Dorsten",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.8,
+    "km_delta": 1.5,
+    "lat": 51.6818784,
+    "lon": 6.9561229,
+    "matched_name": "Borkener-/Friedrichstraße",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Dorsten Gottlieb-Daimler-Strasse": {
+    "bbox_step": 0,
+    "city": "Dorsten",
+    "confidence": "high",
+    "dist_from_anchor_km": 8.0,
+    "km_delta": 4.0,
+    "lat": 51.6609363,
+    "lon": 7.0218454,
+    "matched_name": "Gottlieb-Daimler-Straße",
+    "osm_value": "unclassified",
+    "source": "photon"
+  },
+  "Dover Portal Kaverne": {
+    "lat": 51.125,
+    "lon": 1.32,
+    "source": "pdf_exact"
+  },
+  "Dublin Port Kaverne": {
+    "lat": 53.35,
+    "lon": -6.19,
+    "source": "pdf_exact"
+  },
+  "Duesseldorf": {
+    "lat": 51.2277,
+    "lon": 6.7735,
+    "source": "override"
+  },
+  "Duisburg": {
+    "lat": 51.4344,
+    "lon": 6.7623,
+    "source": "override"
+  },
+  "Dunkerque": {
+    "lat": 51.015,
+    "lon": 2.305,
+    "source": "pdf_exact"
+  },
+  "Eberswalde Hbf": {
+    "lat": 52.8339,
+    "lon": 13.8115,
+    "source": "override"
+  },
+  "Ensenada North Port": {
+    "lat": 31.8667,
+    "lon": -116.6,
+    "source": "override"
+  },
+  "Erle Friedholt": {
+    "bbox_step": 0,
+    "city": "Raesfeld",
+    "confidence": "high",
+    "dist_from_anchor_km": 9.0,
+    "km_delta": 8.5,
+    "lat": 51.740833,
+    "lon": 6.8663158,
+    "matched_name": "Friedholt",
+    "osm_value": "unclassified",
+    "source": "photon"
+  },
+  "Esbjerg Turmbahnhof": {
+    "lat": 55.4667,
+    "lon": 8.45,
+    "source": "override"
+  },
+  "Essen": {
+    "lat": 51.4556,
+    "lon": 7.0116,
+    "source": "override"
+  },
+  "Fairbanks Nord": {
+    "lat": 64.8378,
+    "lon": -147.7164,
+    "source": "override"
+  },
+  "Fargo West Hub": {
+    "lat": 46.8772,
+    "lon": -96.8,
+    "source": "override"
+  },
+  "Flughafen BER": {
+    "lat": 52.3667,
+    "lon": 13.5033,
+    "source": "override"
+  },
+  "Flughafen Dortmund": {
+    "bbox_step": 0,
+    "city": "Dortmund",
+    "confidence": "high",
+    "dist_from_anchor_km": 6.2,
+    "km_delta": 14.5,
+    "lat": 51.5234547,
+    "lon": 7.6194271,
+    "matched_name": "Flughafen",
+    "osm_value": "census",
+    "source": "photon"
+  },
+  "Frankfurt Flughafen": {
+    "lat": 50.05,
+    "lon": 8.5706,
+    "source": "override"
+  },
+  "Gdansk Glowny": {
+    "lat": 54.3559,
+    "lon": 18.6466,
+    "source": "override"
+  },
+  "Gdansk Wrzeszcz": {
+    "lat": 54.3733,
+    "lon": 18.6183,
+    "source": "override"
+  },
+  "Gdansk Zaspa": {
+    "bbox_step": 0,
+    "city": "Danzig",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.4,
+    "km_delta": null,
+    "lat": 54.3920341,
+    "lon": 18.637485,
+    "matched_name": "Danzig Saspe Rangierbahnhof",
+    "osm_value": "yard",
+    "source": "photon"
+  },
+  "Gdynia Chylonia": {
+    "bbox_step": 0,
+    "city": "Gdingen",
+    "confidence": "high",
+    "dist_from_anchor_km": 5.2,
+    "km_delta": null,
+    "lat": 54.5453188,
+    "lon": 18.46462,
+    "matched_name": "Gdynia Chylonia",
+    "osm_value": "stop",
+    "source": "photon"
+  },
+  "Gdynia Glowna": {
+    "lat": 54.5189,
+    "lon": 18.5314,
+    "source": "override"
+  },
+  "Gdynia Wzgorze Sw Maksym": {
+    "bbox_step": 1,
+    "city": "Gdingen",
+    "confidence": "high",
+    "dist_from_anchor_km": 13.8,
+    "km_delta": null,
+    "lat": 54.5026612,
+    "lon": 18.5422765,
+    "matched_name": "Wzgórze Św. Maksymiliana Syrokomli 02",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Gelsenkirchen Hbf": {
+    "bbox_step": 0,
+    "city": "Gelsenkirchen",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.7,
+    "km_delta": 2.5,
+    "lat": 51.5051468,
+    "lon": 7.1073635,
+    "matched_name": "Gelsenkirchen Hbf Gf",
+    "osm_value": "signal_box",
+    "source": "photon"
+  },
+  "Glasgow Eurocentral": {
+    "lat": 55.845,
+    "lon": -4.015,
+    "source": "pdf_exact"
+  },
+  "Goteborg Savenas": {
+    "lat": 57.712,
+    "lon": 12.045,
+    "source": "pdf_exact"
+  },
+  "Graz Feldkirchen": {
+    "lat": 47.0127456,
+    "lon": 15.4428881,
+    "source": "override"
+  },
+  "Great Nicobar Galathea": {
+    "lat": 6.9,
+    "lon": 93.9,
+    "source": "override"
+  },
+  "Halden": {
+    "lat": 59.135,
+    "lon": 11.272,
+    "source": "pdf_exact"
+  },
+  "Halifax Dartmouth": {
+    "lat": 44.682,
+    "lon": -63.575,
+    "source": "override"
+  },
+  "Halmstad": {
+    "lat": 56.68,
+    "lon": 12.89,
+    "source": "pdf_exact"
+  },
+  "Hannover Lehrte": {
+    "lat": 52.41,
+    "lon": 9.83,
+    "source": "pdf_exact"
+  },
+  "Hannover Wuelferode Ost": {
+    "lat": 52.3667,
+    "lon": 9.85,
+    "source": "override"
+  },
+  "Hartford North Hub": {
+    "lat": 41.79,
+    "lon": -72.69,
+    "source": "override"
+  },
+  "Hattingen Lembeck": {
+    "bbox_step": 0,
+    "city": "Hattingen",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.3,
+    "km_delta": 3.5,
+    "lat": 51.387424,
+    "lon": 7.1606495,
+    "matched_name": "Ruhraue Hattingen",
+    "osm_value": "access_point",
+    "source": "photon"
+  },
+  "Hattingen Mitte": {
+    "bbox_step": 0,
+    "city": "Hattingen",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.8,
+    "km_delta": 1.5,
+    "lat": 51.3972273,
+    "lon": 7.180216,
+    "matched_name": "Hattingen (Ruhr) Mitte",
+    "osm_value": "halt",
+    "source": "photon"
+  },
+  "Hattingen Suedring": {
+    "bbox_step": 0,
+    "city": "Hattingen",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.0,
+    "km_delta": 3.5,
+    "lat": 51.3906916,
+    "lon": 7.1743177,
+    "matched_name": "Südring",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Haugesund": {
+    "lat": 59.4139,
+    "lon": 5.2681,
+    "source": "override"
+  },
+  "Havneby Romo": {
+    "lat": 55.09,
+    "lon": 8.57,
+    "source": "override"
+  },
+  "Heiane": {
+    "lat": 59.7617512,
+    "lon": 5.45551,
+    "source": "override"
+  },
+  "Hel": {
+    "lat": 54.6083,
+    "lon": 18.8014,
+    "source": "override"
+  },
+  "Helgoland Tiefseehub": {
+    "lat": 54.1793,
+    "lon": 7.8874,
+    "source": "override"
+  },
+  "Helsingborg": {
+    "lat": 56.072,
+    "lon": 12.715,
+    "source": "pdf_exact"
+  },
+  "Helsingoer": {
+    "lat": 56.025,
+    "lon": 12.595,
+    "source": "pdf_exact"
+  },
+  "Helsinki": {
+    "lat": 60.1699,
+    "lon": 24.9384,
+    "source": "override"
+  },
+  "Hirtshals": {
+    "lat": 57.59,
+    "lon": 9.96,
+    "source": "override"
+  },
+  "Hjorring": {
+    "lat": 57.4708,
+    "lon": 9.9847,
+    "source": "override"
+  },
+  "Hoek van Holland": {
+    "lat": 51.9767,
+    "lon": 4.1333,
+    "source": "override"
+  },
+  "Hoernum Sylt": {
+    "lat": 54.755,
+    "lon": 8.3378,
+    "source": "override"
+  },
+  "Hollum Ameland": {
+    "lat": 53.4436,
+    "lon": 5.6446,
+    "source": "override"
+  },
+  "Holstebro": {
+    "lat": 56.36,
+    "lon": 8.6156,
+    "source": "override"
+  },
+  "Honningsvaag": {
+    "lat": 70.9821,
+    "lon": 25.9704,
+    "source": "override"
+  },
+  "IKEA Dortmund": {
+    "bbox_step": 0,
+    "city": "Dortmund",
+    "confidence": "high",
+    "dist_from_anchor_km": 5.5,
+    "km_delta": 3.0,
+    "lat": 51.4912114,
+    "lon": 7.3728452,
+    "matched_name": "IKEA",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "IKEA Kamen": {
+    "bbox_step": 0,
+    "city": "Kamen",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.4,
+    "km_delta": 2.5,
+    "lat": 51.5698737,
+    "lon": 7.6689253,
+    "matched_name": "IKEA Restaurant",
+    "osm_value": "fast_food",
+    "source": "photon"
+  },
+  "IKEA Wuppertal": {
+    "bbox_step": 0,
+    "city": "Wuppertal",
+    "confidence": "high",
+    "dist_from_anchor_km": 7.1,
+    "km_delta": 1.5,
+    "lat": 51.3076403,
+    "lon": 7.2522519,
+    "matched_name": "IKEA / Drei Grenzen",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Inari": {
+    "lat": 68.9061,
+    "lon": 27.0276,
+    "source": "override"
+  },
+  "Indianapolis South Hub": {
+    "lat": 39.65,
+    "lon": -86.15,
+    "source": "override"
+  },
+  "Inverness Longman": {
+    "lat": 57.49,
+    "lon": -4.215,
+    "source": "pdf_exact"
+  },
+  "Isfahan Kaveh Transit": {
+    "lat": 32.6546,
+    "lon": 51.668,
+    "source": "override"
+  },
+  "Istanbul": {
+    "lat": 41.0082,
+    "lon": 28.9784,
+    "source": "override"
+  },
+  "Izmir Bornova Ost": {
+    "lat": 38.4636,
+    "lon": 27.2159,
+    "source": "override"
+  },
+  "Jakutsk Ost": {
+    "lat": 61.95,
+    "lon": 129.9,
+    "source": "override"
+  },
+  "Jastarnia": {
+    "lat": 54.6978,
+    "lon": 18.6844,
+    "source": "override"
+  },
+  "Juist": {
+    "lat": 53.6667,
+    "lon": 7.05,
+    "source": "override"
+  },
+  "Jurata": {
+    "bbox_step": 0,
+    "city": "Jurata",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.3,
+    "km_delta": null,
+    "lat": 54.6848897,
+    "lon": 18.7119671,
+    "matched_name": "Jurata",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Kamen City": {
+    "bbox_step": 0,
+    "city": "Kamen",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.1,
+    "km_delta": 3.5,
+    "lat": 51.591572,
+    "lon": 7.6649058,
+    "matched_name": "City Pizza",
+    "osm_value": "fast_food",
+    "source": "photon"
+  },
+  "Kamener Kreuz": {
+    "bbox_step": 0,
+    "city": "Kamen",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.3,
+    "km_delta": 0.0,
+    "lat": 51.6043005,
+    "lon": 7.6879388,
+    "matched_name": "Kamener Kreuz",
+    "osm_value": "motorway_junction",
+    "source": "photon"
+  },
+  "Karachi Port Qasim": {
+    "lat": 24.7833,
+    "lon": 67.3333,
+    "source": "override"
+  },
+  "Kasan Nord": {
+    "lat": 55.7887,
+    "lon": 49.1221,
+    "source": "override"
+  },
+  "Kassel Kreuz Mitte": {
+    "lat": 51.3358,
+    "lon": 9.5031,
+    "source": "override"
+  },
+  "Kobenhavn H": {
+    "lat": 55.672,
+    "lon": 12.564,
+    "source": "pdf_exact"
+  },
+  "Koblenz": {
+    "lat": 50.3569,
+    "lon": 7.5886,
+    "source": "override"
+  },
+  "Kochi Kalamassery": {
+    "lat": 10.05,
+    "lon": 76.3167,
+    "source": "override"
+  },
+  "Koeln": {
+    "lat": 50.9413,
+    "lon": 6.9583,
+    "source": "override"
+  },
+  "Kosice": {
+    "lat": 48.7164,
+    "lon": 21.2611,
+    "source": "override"
+  },
+  "Kreuz B70 B67": {
+    "lat": 51.798,
+    "lon": 6.768,
+    "source": "override"
+  },
+  "Kreuz Dortmund West": {
+    "lat": 51.4956,
+    "lon": 7.405,
+    "source": "override"
+  },
+  "Kristiansand": {
+    "lat": 58.1467,
+    "lon": 8.0,
+    "source": "override"
+  },
+  "Kuala Lumpur KLIA City": {
+    "lat": 2.7456,
+    "lon": 101.7099,
+    "source": "override"
+  },
+  "Kuznica": {
+    "bbox_step": 1,
+    "city": "Kußfeld",
+    "confidence": "high",
+    "dist_from_anchor_km": 8.2,
+    "km_delta": null,
+    "lat": 54.7365324,
+    "lon": 18.5753553,
+    "matched_name": "Kuźnica (Hel)",
+    "osm_value": "platform",
+    "source": "photon"
+  },
+  "Kyiv": {
+    "lat": 50.4501,
+    "lon": 30.5234,
+    "source": "override"
+  },
+  "Kyiv Boryspil": {
+    "lat": 50.345,
+    "lon": 30.8947,
+    "source": "override"
+  },
+  "Kyiv E40": {
+    "lat": 50.4501,
+    "lon": 30.5234,
+    "source": "override"
+  },
+  "Langeoog": {
+    "lat": 53.7307,
+    "lon": 7.5027,
+    "source": "override"
+  },
+  "Las Vegas South Gateway": {
+    "lat": 36.0397,
+    "lon": -115.155,
+    "source": "override"
+  },
+  "Leipzig Schkeuditz": {
+    "lat": 51.3841,
+    "lon": 12.2306,
+    "source": "override"
+  },
+  "Lille Turmbahnhof": {
+    "lat": 50.6292,
+    "lon": 3.0573,
+    "source": "override"
+  },
+  "Linden Mitte": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.9,
+    "km_delta": 2.0,
+    "lat": 51.4259198,
+    "lon": 7.1607802,
+    "matched_name": "Linden Mitte",
+    "osm_value": "tram_stop",
+    "source": "photon"
+  },
+  "Linz": {
+    "lat": 48.29,
+    "lon": 14.2938,
+    "source": "override"
+  },
+  "List Sylt": {
+    "lat": 55.0142,
+    "lon": 8.4339,
+    "source": "override"
+  },
+  "Lodz Polnoc": {
+    "lat": 51.85,
+    "lon": 19.45,
+    "source": "override"
+  },
+  "London Stratford Int": {
+    "lat": 51.545,
+    "lon": -0.015,
+    "source": "pdf_exact"
+  },
+  "Los Angeles Sylmar Hub": {
+    "lat": 34.3121,
+    "lon": -118.4429,
+    "source": "override"
+  },
+  "Lviv": {
+    "lat": 49.8397,
+    "lon": 24.0297,
+    "source": "override"
+  },
+  "Maerkische Strasse": {
+    "bbox_step": 0,
+    "city": "Dortmund",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.1,
+    "km_delta": 3.1999999999999993,
+    "lat": 51.5004963,
+    "lon": 7.4825902,
+    "matched_name": "Märkische Straße",
+    "osm_value": "secondary",
+    "source": "photon"
+  },
+  "Mandal": {
+    "lat": 58.0294,
+    "lon": 7.4508,
+    "source": "override"
+  },
+  "Mannheim": {
+    "lat": 49.4796,
+    "lon": 8.4692,
+    "source": "override"
+  },
+  "Marler Strasse": {
+    "bbox_step": 0,
+    "city": "Gelsenkirchen",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.7,
+    "km_delta": 5.0,
+    "lat": 51.5929048,
+    "lon": 7.0608089,
+    "matched_name": "Marler Straße",
+    "osm_value": "tertiary",
+    "source": "photon"
+  },
+  "Medan Kualanamu": {
+    "lat": 3.6422,
+    "lon": 98.8853,
+    "source": "override"
+  },
+  "Mexico City Huehuetoca": {
+    "lat": 19.8447,
+    "lon": -99.2119,
+    "source": "override"
+  },
+  "Milwaukee Oak Creek Hub": {
+    "lat": 42.8858,
+    "lon": -87.8848,
+    "source": "override"
+  },
+  "Minneapolis Maple Grove": {
+    "lat": 45.0941,
+    "lon": -93.456,
+    "source": "override"
+  },
+  "Moncton Maritime Hub": {
+    "lat": 46.0878,
+    "lon": -64.7782,
+    "source": "override"
+  },
+  "Moskau": {
+    "lat": 55.7558,
+    "lon": 37.6173,
+    "source": "override"
+  },
+  "Mrzezino": {
+    "bbox_step": 0,
+    "city": "Bresin",
+    "confidence": "high",
+    "dist_from_anchor_km": 7.1,
+    "km_delta": null,
+    "lat": 54.652664,
+    "lon": 18.4129871,
+    "matched_name": "Mrzezino Mr",
+    "osm_value": "signal_box",
+    "source": "photon"
+  },
+  "Muenchen": {
+    "lat": 48.1402,
+    "lon": 11.5581,
+    "source": "override"
+  },
+  "Muenster": {
+    "lat": 51.95,
+    "lon": 7.64,
+    "source": "pdf_exact"
+  },
+  "Mumbai Navi Mumbai": {
+    "lat": 19.033,
+    "lon": 73.0297,
+    "source": "override"
+  },
+  "NYC Penn Deep": {
+    "lat": 40.7506,
+    "lon": -73.9935,
+    "source": "override"
+  },
+  "Nashville Briley East": {
+    "lat": 36.19,
+    "lon": -86.66,
+    "source": "override"
+  },
+  "Nes Ameland": {
+    "bbox_step": 0,
+    "city": "Nes",
+    "confidence": "high",
+    "dist_from_anchor_km": 4.3,
+    "km_delta": 8.0,
+    "lat": 53.4507828,
+    "lon": 5.7388028,
+    "matched_name": "Duinen Ameland",
+    "osm_value": "nature_reserve",
+    "source": "photon"
+  },
+  "Niagara Falls North Hub": {
+    "lat": 43.12,
+    "lon": -79.04,
+    "source": "override"
+  },
+  "Nicosia Geri": {
+    "lat": 35.1667,
+    "lon": 33.3167,
+    "source": "override"
+  },
+  "Nordby Fano": {
+    "lat": 55.4333,
+    "lon": 8.4167,
+    "source": "override"
+  },
+  "Norderney": {
+    "lat": 53.7056,
+    "lon": 7.162,
+    "source": "override"
+  },
+  "Nordkapp": {
+    "bbox_step": 0,
+    "city": "Nordkapp",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.3,
+    "km_delta": 0.0,
+    "lat": 71.1699506,
+    "lon": 25.7858893,
+    "matched_name": "Nordkap",
+    "osm_value": "hamlet",
+    "source": "photon"
+  },
+  "Nowosibirsk Tolmachevo": {
+    "lat": 55.0126,
+    "lon": 82.6672,
+    "source": "override"
+  },
+  "Nykoebing Falster": {
+    "lat": 54.77,
+    "lon": 11.885,
+    "source": "pdf_exact"
+  },
+  "Oberhausen": {
+    "lat": 51.498,
+    "lon": 6.875,
+    "source": "pdf_exact"
+  },
+  "Odesa": {
+    "lat": 46.4825,
+    "lon": 30.7233,
+    "source": "override"
+  },
+  "Odessa": {
+    "lat": 46.4825,
+    "lon": 30.7233,
+    "source": "override"
+  },
+  "Oesterport": {
+    "lat": 55.692,
+    "lon": 12.589,
+    "source": "pdf_exact"
+  },
+  "Oftebro": {
+    "lat": 58.1488442,
+    "lon": 7.093585,
+    "source": "override"
+  },
+  "Oklahoma City West Gate": {
+    "lat": 35.51,
+    "lon": -97.68,
+    "source": "override"
+  },
+  "Omaha West Gateway": {
+    "lat": 41.14,
+    "lon": -96.24,
+    "source": "override"
+  },
+  "Oslo Alnabru": {
+    "lat": 59.931,
+    "lon": 10.844,
+    "source": "pdf_exact"
+  },
+  "Oulu": {
+    "lat": 65.0121,
+    "lon": 25.4651,
+    "source": "override"
+  },
+  "Oxford Cowley": {
+    "lat": 51.735,
+    "lon": -1.21,
+    "source": "pdf_exact"
+  },
+  "Palermo": {
+    "lat": 38.1157,
+    "lon": 13.3615,
+    "source": "override"
+  },
+  "Paris CDG": {
+    "lat": 49.0097,
+    "lon": 2.5479,
+    "source": "override"
+  },
+  "Pasewalk": {
+    "lat": 53.5039,
+    "lon": 14.0,
+    "source": "override"
+  },
+  "Philadelphia Northeast": {
+    "lat": 40.08,
+    "lon": -75.01,
+    "source": "override"
+  },
+  "Pigeon Mountain": {
+    "lat": 35.77,
+    "lon": -83.56,
+    "source": "override"
+  },
+  "Pittsburgh Monroeville": {
+    "lat": 40.4302,
+    "lon": -79.7889,
+    "source": "override"
+  },
+  "Polsum": {
+    "bbox_step": 0,
+    "city": "Gelsenkirchen",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.7,
+    "km_delta": 4.5,
+    "lat": 51.5919642,
+    "lon": 7.0514732,
+    "matched_name": "Polsumer Straße",
+    "osm_value": "secondary",
+    "source": "photon"
+  },
+  "Portland Salmon Creek": {
+    "lat": 45.6987,
+    "lon": -122.665,
+    "source": "override"
+  },
+  "Portland West Hub Maine": {
+    "lat": 43.68,
+    "lon": -70.35,
+    "source": "override"
+  },
+  "Potsdam Hbf": {
+    "lat": 52.3906,
+    "lon": 13.0645,
+    "source": "override"
+  },
+  "Poznan Wschod": {
+    "lat": 52.4064,
+    "lon": 16.9772,
+    "source": "override"
+  },
+  "Praha Letnany": {
+    "lat": 50.1264,
+    "lon": 14.53,
+    "source": "override"
+  },
+  "Puck": {
+    "lat": 54.7189,
+    "lon": 18.4083,
+    "source": "override"
+  },
+  "Puerto Vallarta East": {
+    "lat": 20.6534,
+    "lon": -105.2253,
+    "source": "override"
+  },
+  "Raesfeld Kirche": {
+    "bbox_step": 0,
+    "city": "Raesfeld",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.7,
+    "km_delta": 5.5,
+    "lat": 51.7702149,
+    "lon": 6.8400584,
+    "matched_name": "Kirche",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Rajkot Hirasar Airport": {
+    "lat": 22.32,
+    "lon": 70.75,
+    "source": "override"
+  },
+  "Reda": {
+    "lat": 54.6011,
+    "lon": 18.3486,
+    "source": "override"
+  },
+  "Regio Hub Kreuz Bochum": {
+    "bbox_step": 1,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 9.4,
+    "km_delta": 2.5,
+    "lat": 51.5216687,
+    "lon": 7.3116146,
+    "matched_name": "Regiomat",
+    "osm_value": "vending_machine",
+    "source": "photon"
+  },
+  "Richmond North Gate": {
+    "lat": 37.66,
+    "lon": -77.48,
+    "source": "override"
+  },
+  "Ringkobing": {
+    "lat": 56.0908,
+    "lon": 8.2444,
+    "source": "override"
+  },
+  "Rochester South Hub": {
+    "lat": 43.07,
+    "lon": -77.62,
+    "source": "override"
+  },
+  "Rosenheim": {
+    "lat": 47.8506,
+    "lon": 12.1183,
+    "source": "override"
+  },
+  "Rostock Seehafen": {
+    "lat": 54.145,
+    "lon": 12.125,
+    "source": "pdf_exact"
+  },
+  "Rotter Platz": {
+    "bbox_step": 0,
+    "city": "Wuppertal",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.0,
+    "km_delta": 1.5,
+    "lat": 51.2733041,
+    "lon": 7.18619,
+    "matched_name": "Rotter Platz",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Rovaniemi": {
+    "lat": 66.5039,
+    "lon": 25.7294,
+    "source": "override"
+  },
+  "Rumia": {
+    "lat": 54.5719,
+    "lon": 18.39,
+    "source": "override"
+  },
+  "Rumia Janowo": {
+    "bbox_step": 0,
+    "city": "Rahmel",
+    "confidence": "high",
+    "dist_from_anchor_km": 4.0,
+    "km_delta": null,
+    "lat": 54.5703001,
+    "lon": 18.4207085,
+    "matched_name": "Janowo Park",
+    "osm_value": "residential",
+    "source": "photon"
+  },
+  "Runowo Pomorskie": {
+    "lat": 53.5521184,
+    "lon": 15.5278998,
+    "source": "override"
+  },
+  "Sacramento North Hub": {
+    "lat": 38.6875,
+    "lon": -121.321,
+    "source": "override"
+  },
+  "Saint John Bypass": {
+    "lat": 45.3,
+    "lon": -66.08,
+    "source": "override"
+  },
+  "Salzburg": {
+    "lat": 47.8129,
+    "lon": 13.045,
+    "source": "override"
+  },
+  "San Diego Torrey Pines": {
+    "lat": 32.8994,
+    "lon": -117.234,
+    "source": "override"
+  },
+  "Sarajevo Ilidza": {
+    "lat": 43.8397,
+    "lon": 18.2919,
+    "source": "override"
+  },
+  "Schiermonnikoog": {
+    "lat": 53.4833,
+    "lon": 6.1667,
+    "source": "override"
+  },
+  "Schwerin": {
+    "lat": 53.595,
+    "lon": 11.425,
+    "source": "pdf_exact"
+  },
+  "Seattle Tukwila Hub": {
+    "lat": 47.474,
+    "lon": -122.261,
+    "source": "override"
+  },
+  "Sevastopol": {
+    "lat": 44.6054,
+    "lon": 33.522,
+    "source": "override"
+  },
+  "Signal Iduna Park": {
+    "bbox_step": 0,
+    "city": "Dortmund",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.5,
+    "km_delta": 1.5,
+    "lat": 51.4907602,
+    "lon": 7.457874,
+    "matched_name": "Dortmund Signal-Iduna-Park",
+    "osm_value": "station",
+    "source": "photon"
+  },
+  "Singapore Changi": {
+    "lat": 1.3592,
+    "lon": 103.9895,
+    "source": "override"
+  },
+  "Siracusa": {
+    "lat": 37.0755,
+    "lon": 15.2866,
+    "source": "override"
+  },
+  "Skjern": {
+    "lat": 55.95,
+    "lon": 8.4931,
+    "source": "override"
+  },
+  "Skopje Ilinden": {
+    "lat": 41.9686,
+    "lon": 21.5583,
+    "source": "override"
+  },
+  "Sonderho Fano": {
+    "lat": 55.3167,
+    "lon": 8.4167,
+    "source": "override"
+  },
+  "Spiekeroog": {
+    "lat": 53.7717,
+    "lon": 7.685,
+    "source": "override"
+  },
+  "Spokane West Hub": {
+    "lat": 47.6588,
+    "lon": -117.426,
+    "source": "override"
+  },
+  "St Peter Ording": {
+    "lat": 54.3097,
+    "lon": 8.6386,
+    "source": "override"
+  },
+  "St Petersburg": {
+    "lat": 59.9311,
+    "lon": 30.3609,
+    "source": "override"
+  },
+  "St Poelten": {
+    "lat": 48.2081,
+    "lon": 15.6247,
+    "source": "override"
+  },
+  "St Stephen Border Gate": {
+    "lat": 45.197,
+    "lon": -67.283,
+    "source": "override"
+  },
+  "Stadtkrone Ost": {
+    "bbox_step": 0,
+    "city": "Dortmund",
+    "confidence": "high",
+    "dist_from_anchor_km": 6.7,
+    "km_delta": 5.5,
+    "lat": 51.50597,
+    "lon": 7.5264408,
+    "matched_name": "Stadtkrone Ost",
+    "osm_value": "tram_stop",
+    "source": "photon"
+  },
+  "Starogard Gdanski": {
+    "lat": 53.9689,
+    "lon": 18.5308,
+    "source": "override"
+  },
+  "Stavanger": {
+    "lat": 58.97,
+    "lon": 5.7331,
+    "source": "override"
+  },
+  "Struer": {
+    "lat": 56.4931,
+    "lon": 8.6003,
+    "source": "override"
+  },
+  "Stuttgart": {
+    "lat": 48.7842,
+    "lon": 9.1817,
+    "source": "override"
+  },
+  "Surat Hazira Guertel": {
+    "lat": 21.0833,
+    "lon": 72.65,
+    "source": "override"
+  },
+  "Surrey Vancouver": {
+    "lat": 49.1913,
+    "lon": -122.849,
+    "source": "override"
+  },
+  "Swarzewo": {
+    "bbox_step": 0,
+    "city": "Gnesdau",
+    "confidence": "high",
+    "dist_from_anchor_km": 4.1,
+    "km_delta": null,
+    "lat": 54.7525392,
+    "lon": 18.3829572,
+    "matched_name": "Dworzec PKP Swarzewo",
+    "osm_value": "train_station",
+    "source": "photon"
+  },
+  "Szczecin Glowny": {
+    "lat": 53.4257,
+    "lon": 14.5518,
+    "source": "override"
+  },
+  "Szczecinek": {
+    "lat": 53.7061,
+    "lon": 16.6994,
+    "source": "override"
+  },
+  "Tampere": {
+    "lat": 61.4978,
+    "lon": 23.761,
+    "source": "override"
+  },
+  "Tczew": {
+    "lat": 54.0924,
+    "lon": 18.7997,
+    "source": "override"
+  },
+  "Thessaloniki Sindos": {
+    "lat": 40.7167,
+    "lon": 22.8167,
+    "source": "override"
+  },
+  "Thisted": {
+    "lat": 56.9564,
+    "lon": 8.6939,
+    "source": "override"
+  },
+  "Tripoli El Mina": {
+    "lat": 34.45,
+    "lon": 35.8333,
+    "source": "override"
+  },
+  "Tunis": {
+    "lat": 36.8065,
+    "lon": 10.1815,
+    "source": "override"
+  },
+  "Turbat Wuesten Bypass": {
+    "lat": 26.0031,
+    "lon": 63.0522,
+    "source": "override"
+  },
+  "Turku": {
+    "lat": 60.4518,
+    "lon": 22.2666,
+    "source": "override"
+  },
+  "Twer": {
+    "lat": 56.8587,
+    "lon": 35.9006,
+    "source": "override"
+  },
+  "Ueckendorfer Platz": {
+    "lat": 51.4937086,
+    "lon": 7.1239131,
+    "source": "override"
+  },
+  "Ulm": {
+    "lat": 48.3984,
+    "lon": 9.9825,
+    "source": "override"
+  },
+  "Utrecht Lunetten": {
+    "lat": 52.065,
+    "lon": 5.145,
+    "source": "pdf_exact"
+  },
+  "Valentinstrasse": {
+    "bbox_step": 0,
+    "city": "Gelsenkirchen",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.9,
+    "km_delta": 2.5,
+    "lat": 51.6026694,
+    "lon": 7.0690176,
+    "matched_name": "Valentinstraße",
+    "osm_value": "residential",
+    "source": "photon"
+  },
+  "Velbert Gartenheimstrasse": {
+    "bbox_step": 0,
+    "city": "Velbert",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.4,
+    "km_delta": 2.5,
+    "lat": 51.3431662,
+    "lon": 7.1299642,
+    "matched_name": "Gartenheimstraße",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Velbert Lembeck": {
+    "bbox_step": 0,
+    "city": "Velbert",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.4,
+    "km_delta": 4.5,
+    "lat": 51.3213797,
+    "lon": 7.1309974,
+    "matched_name": "Lembeck",
+    "osm_value": "stream",
+    "source": "photon"
+  },
+  "Velbert Nierenhof Busbahnhof": {
+    "bbox_step": 0,
+    "city": "Velbert",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.3,
+    "km_delta": 3.5,
+    "lat": 51.3731341,
+    "lon": 7.1375333,
+    "matched_name": "Nierenhof Busbahnhof",
+    "osm_value": "bus_station",
+    "source": "photon"
+  },
+  "Velbert-Langenberg": {
+    "bbox_step": 0,
+    "city": "Velbert",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.3,
+    "km_delta": 2.0,
+    "lat": 51.3542392,
+    "lon": 7.1241282,
+    "matched_name": "Bahnhofstreppe",
+    "osm_value": "steps",
+    "source": "photon"
+  },
+  "Veltins Arena": {
+    "bbox_step": 0,
+    "city": "Gelsenkirchen",
+    "confidence": "high",
+    "dist_from_anchor_km": 6.1,
+    "km_delta": 6.5,
+    "lat": 51.5545938,
+    "lon": 7.0676001,
+    "matched_name": "VELTINS-Arena",
+    "osm_value": "stadium",
+    "source": "photon"
+  },
+  "Vlissingen": {
+    "lat": 51.4426,
+    "lon": 3.5734,
+    "source": "override"
+  },
+  "Wangerooge": {
+    "lat": 53.7936,
+    "lon": 7.8908,
+    "source": "override"
+  },
+  "Warszawa Konotopa": {
+    "lat": 52.21,
+    "lon": 20.87,
+    "source": "override"
+  },
+  "Washington Greenbelt": {
+    "lat": 39.0,
+    "lon": -76.88,
+    "source": "override"
+  },
+  "Wattenscheider Strasse": {
+    "bbox_step": 0,
+    "city": "Bochum",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.7,
+    "km_delta": 1.5,
+    "lat": 51.4799953,
+    "lon": 7.193182,
+    "matched_name": "Wattenscheider Straße",
+    "osm_value": "secondary",
+    "source": "photon"
+  },
+  "West Memphis Hub": {
+    "lat": 35.1465,
+    "lon": -90.1848,
+    "source": "override"
+  },
+  "West Ocean City": {
+    "lat": 38.34,
+    "lon": -75.13,
+    "source": "override"
+  },
+  "West-Terschelling": {
+    "lat": 53.3606,
+    "lon": 5.2214,
+    "source": "override"
+  },
+  "Westerland Sylt": {
+    "lat": 54.9078,
+    "lon": 8.3078,
+    "source": "override"
+  },
+  "Westfalenpark": {
+    "bbox_step": 0,
+    "city": "Dortmund",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.5,
+    "km_delta": 1.8000000000000007,
+    "lat": 51.4975124,
+    "lon": 7.4767267,
+    "matched_name": "Westfalenpark",
+    "osm_value": "map",
+    "source": "photon"
+  },
+  "Whitehorse Valley": {
+    "lat": 60.7212,
+    "lon": -135.0568,
+    "source": "override"
+  },
+  "Wien": {
+    "lat": 48.2082,
+    "lon": 16.3738,
+    "source": "override"
+  },
+  "Wien Schwechat Ost": {
+    "lat": 48.1327,
+    "lon": 16.4832,
+    "source": "override"
+  },
+  "Winterswijk": {
+    "lat": 51.968013,
+    "lon": 6.7147769,
+    "source": "override"
+  },
+  "Wismar": {
+    "lat": 53.895,
+    "lon": 11.485,
+    "source": "pdf_exact"
+  },
+  "Wladyslawowo": {
+    "lat": 54.7889,
+    "lon": 18.4083,
+    "source": "override"
+  },
+  "Wladyslawowo Port": {
+    "bbox_step": 0,
+    "city": "Großendorf",
+    "confidence": "high",
+    "dist_from_anchor_km": 0.4,
+    "km_delta": null,
+    "lat": 54.7912634,
+    "lon": 18.4139092,
+    "matched_name": "Władysławowo, Portowa",
+    "osm_value": "bus_stop",
+    "source": "photon"
+  },
+  "Wuppertal Barmen": {
+    "bbox_step": 0,
+    "city": "Wuppertal",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.5,
+    "km_delta": 3.0,
+    "lat": 51.2721631,
+    "lon": 7.2001265,
+    "matched_name": "Rathaus Stadt Wuppertal",
+    "osm_value": "townhall",
+    "source": "photon"
+  },
+  "Wuppertal Buechenring": {
+    "bbox_step": 0,
+    "city": "Wuppertal",
+    "confidence": "high",
+    "dist_from_anchor_km": 1.0,
+    "km_delta": 4.0,
+    "lat": 51.2812541,
+    "lon": 7.1807415,
+    "matched_name": "Buchenring",
+    "osm_value": "footway",
+    "source": "photon"
+  },
+  "Wuppertal Doenberg Kirche": {
+    "bbox_step": 0,
+    "city": "Wuppertal",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.3,
+    "km_delta": 2.0,
+    "lat": 51.2982571,
+    "lon": 7.1631887,
+    "matched_name": "An der Kirche",
+    "osm_value": "service",
+    "source": "photon"
+  },
+  "Wuppertal Nord": {
+    "lat": 51.3125198,
+    "lon": 7.2586638,
+    "source": "override"
+  },
+  "Wuppertal Oberbarmen": {
+    "bbox_step": 0,
+    "city": "Wuppertal",
+    "confidence": "high",
+    "dist_from_anchor_km": 4.3,
+    "km_delta": 3.0,
+    "lat": 51.2740829,
+    "lon": 7.2211892,
+    "matched_name": "Wuppertal-Oberbarmen",
+    "osm_value": "stop",
+    "source": "photon"
+  },
+  "Wyborg": {
+    "lat": 60.7097,
+    "lon": 28.7519,
+    "source": "override"
+  },
+  "Zagreb Pleso": {
+    "lat": 45.7429,
+    "lon": 16.0688,
+    "source": "override"
+  },
+  "Zandvoort": {
+    "bbox_step": 0,
+    "city": "Rijswijk",
+    "confidence": "high",
+    "dist_from_anchor_km": 3.5,
+    "km_delta": 45.0,
+    "lat": 52.0489994,
+    "lon": 4.3415222,
+    "matched_name": "Zandvaart",
+    "osm_value": "stream",
+    "source": "photon"
+  },
+  "Zelistrzewo": {
+    "bbox_step": 0,
+    "city": "Sellistrau",
+    "confidence": "high",
+    "dist_from_anchor_km": 2.4,
+    "km_delta": null,
+    "lat": 54.6740475,
+    "lon": 18.416066,
+    "matched_name": "Żelistrzewo",
+    "osm_value": "stop",
+    "source": "photon"
+  }
+}

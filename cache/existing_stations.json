@@ -1,0 +1,1334 @@
+{
+ "Aachen Hbf": {
+  "lat": 50.7944455,
+  "lon": 6.2173543
+ },
+ "Allensbach": {
+  "lat": 47.7146228,
+  "lon": 9.0683278
+ },
+ "Allersberg (Rothsee)": {
+  "lat": 49.2617946,
+  "lon": 11.2126676
+ },
+ "Altena (Westf)": {
+  "lat": 51.3018435,
+  "lon": 7.6689744
+ },
+ "Altenburg": {
+  "lat": 50.9970305,
+  "lon": 12.443912
+ },
+ "Andernach": {
+  "lat": 50.434477,
+  "lon": 7.4050667
+ },
+ "Angermünde": {
+  "lat": 53.0158331,
+  "lon": 13.9959905
+ },
+ "Anklam": {
+  "lat": 53.8560688,
+  "lon": 13.7018698
+ },
+ "Arnhem Centraal": {
+  "lat": 51.9844332,
+  "lon": 5.9011598
+ },
+ "Arnhem Zuid": {
+  "lat": 51.9544945,
+  "lon": 5.8519491
+ },
+ "Augsburg Hbf": {
+  "lat": 48.3654907,
+  "lon": 10.8856913
+ },
+ "Aulendorf": {
+  "lat": 47.9528813,
+  "lon": 9.643902
+ },
+ "Bad Kleinen": {
+  "lat": 53.7666849,
+  "lon": 11.4661982
+ },
+ "Bad Nieuweschans": {
+  "lat": 53.1847702,
+  "lon": 7.2005246
+ },
+ "Bad Oldesloe": {
+  "lat": 53.8052678,
+  "lon": 10.3822381
+ },
+ "Bamberg": {
+  "lat": 49.9006357,
+  "lon": 10.8997336
+ },
+ "Bebra": {
+  "lat": 50.9689967,
+  "lon": 9.7982159
+ },
+ "Bergen auf Rügen": {
+  "lat": 54.4207415,
+  "lon": 13.4186019
+ },
+ "Berlin Alexanderplatz": {
+  "lat": 52.5215661,
+  "lon": 13.4112804
+ },
+ "Berlin Friedrichstraße": {
+  "lat": 52.5201744,
+  "lon": 13.3869884
+ },
+ "Berlin Gesundbrunnen": {
+  "lat": 52.5486453,
+  "lon": 13.3902169
+ },
+ "Berlin Hauptbahnhof": {
+  "lat": 52.5249451,
+  "lon": 13.3696614
+ },
+ "Berlin Ostbahnhof": {
+  "lat": 52.5103817,
+  "lon": 13.4349112
+ },
+ "Berlin Potsdamer Platz": {
+  "lat": 52.5094035,
+  "lon": 13.3766399
+ },
+ "Berlin Südkreuz": {
+  "lat": 52.4765716,
+  "lon": 13.3660396
+ },
+ "Berlin Zoologischer Garten": {
+  "lat": 52.5074342,
+  "lon": 13.3325608
+ },
+ "Berlin-Charlottenburg": {
+  "lat": 52.5043157,
+  "lon": 13.3026447
+ },
+ "Berlin-Ostkreuz": {
+  "lat": 52.5028779,
+  "lon": 13.4696738
+ },
+ "Berlin-Spandau": {
+  "lat": 52.5347694,
+  "lon": 13.1956287
+ },
+ "Berlin-Wannsee": {
+  "lat": 52.421199,
+  "lon": 13.1800603
+ },
+ "Bernau (b Berlin)": {
+  "lat": 52.6753854,
+  "lon": 13.5919415
+ },
+ "Bettembourg": {
+  "lat": 49.5165388,
+  "lon": 6.1015534
+ },
+ "Biberach (Riß)": {
+  "lat": 48.101927,
+  "lon": 9.7931144
+ },
+ "Bielefeld Hauptbahnhof": {
+  "lat": 52.0293323,
+  "lon": 8.5327135
+ },
+ "Bingen (Rhein) Hbf": {
+  "lat": 49.9688103,
+  "lon": 7.8834854
+ },
+ "Blerick": {
+  "lat": 51.3724162,
+  "lon": 6.155296
+ },
+ "Bochum Hauptbahnhof": {
+  "lat": 51.4785335,
+  "lon": 7.2232341
+ },
+ "Bochum-Höntrop": {
+  "lat": 51.4598402,
+  "lon": 7.1533882
+ },
+ "Bochum-Langendreer": {
+  "lat": 51.4779837,
+  "lon": 7.3236316
+ },
+ "Boisheim": {
+  "lat": 51.2743564,
+  "lon": 6.2746487
+ },
+ "Bonn Hauptbahnhof": {
+  "lat": 50.7320436,
+  "lon": 7.0967647
+ },
+ "Boppard Hbf": {
+  "lat": 50.2314019,
+  "lon": 7.5860131
+ },
+ "Boxmeer": {
+  "lat": 51.6444502,
+  "lon": 5.9394902
+ },
+ "Bramming": {
+  "lat": 55.4647252,
+  "lon": 8.706779
+ },
+ "Bramsche": {
+  "lat": 52.4109547,
+  "lon": 7.9749336
+ },
+ "Braunschweig Hauptbahnhof": {
+  "lat": 52.2521444,
+  "lon": 10.5403354
+ },
+ "Bredstedt": {
+  "lat": 53.9903222,
+  "lon": 9.8242286
+ },
+ "Bregenz": {
+  "lat": 47.5030195,
+  "lon": 9.7397629
+ },
+ "Bremen Hauptbahnhof": {
+  "lat": 53.0832972,
+  "lon": 8.8137576
+ },
+ "Bremerhaven Hbf": {
+  "lat": 53.5350147,
+  "lon": 8.5993743
+ },
+ "Bremerhaven-Lehe": {
+  "lat": 53.5667574,
+  "lon": 8.6006
+ },
+ "Bremervörde": {
+  "lat": 53.4830339,
+  "lon": 9.1401462
+ },
+ "Breyell": {
+  "lat": 51.2947108,
+  "lon": 6.2409843
+ },
+ "Brühl": {
+  "lat": 50.8292719,
+  "lon": 6.9126407
+ },
+ "Buchholz (Nordheide)": {
+  "lat": 53.3243628,
+  "lon": 9.8749387
+ },
+ "Buchs SG": {
+  "lat": 47.1687116,
+  "lon": 9.4787656
+ },
+ "Buxtehude": {
+  "lat": 53.4704853,
+  "lon": 9.6883066
+ },
+ "Béning": {
+  "lat": 49.1382851,
+  "lon": 6.8284737
+ },
+ "Böhlen (b Leipzig)": {
+  "lat": 51.2028739,
+  "lon": 12.382051
+ },
+ "Büchen": {
+  "lat": 53.4749221,
+  "lon": 10.6231911
+ },
+ "Bünde (Westf)": {
+  "lat": 52.202246,
+  "lon": 8.5743329
+ },
+ "Cheb": {
+  "lat": 50.0735304,
+  "lon": 12.38057
+ },
+ "Chemnitz Hauptbahnhof": {
+  "lat": 50.8395789,
+  "lon": 12.9305892
+ },
+ "Chur": {
+  "lat": 46.8535563,
+  "lon": 9.5296459
+ },
+ "Cloppenburg": {
+  "lat": 52.8438996,
+  "lon": 8.055793
+ },
+ "Cottbus Hauptbahnhof": {
+  "lat": 51.7512991,
+  "lon": 14.3223077
+ },
+ "Cuijk": {
+  "lat": 51.7266248,
+  "lon": 5.8741958
+ },
+ "Cuxhaven": {
+  "lat": 53.8602658,
+  "lon": 8.7048196
+ },
+ "Dalheim": {
+  "lat": 51.1490536,
+  "lon": 6.1787655
+ },
+ "Dillenburg": {
+  "lat": 50.7349252,
+  "lon": 8.2945961
+ },
+ "Dinkelscherben": {
+  "lat": 48.3422183,
+  "lon": 10.5880165
+ },
+ "Dinslaken": {
+  "lat": 51.5675421,
+  "lon": 6.7381238
+ },
+ "Dornbirn": {
+  "lat": 47.4175843,
+  "lon": 9.7386692
+ },
+ "Dortmund Hauptbahnhof": {
+  "lat": 51.5178935,
+  "lon": 7.4592831
+ },
+ "Dresden Hauptbahnhof": {
+  "lat": 51.0402452,
+  "lon": 13.7320768
+ },
+ "Dresden-Neustadt": {
+  "lat": 51.0658669,
+  "lon": 13.7405404
+ },
+ "Duisburg Hauptbahnhof": {
+  "lat": 51.4296701,
+  "lon": 6.7761771
+ },
+ "Dülken": {
+  "lat": 51.9434452,
+  "lon": 6.0144531
+ },
+ "Düsseldorf Flughafen": {
+  "lat": 51.2915724,
+  "lon": 6.7869558
+ },
+ "Düsseldorf Hauptbahnhof": {
+  "lat": 51.219734,
+  "lon": 6.7943015
+ },
+ "Düsseldorf-Benrath": {
+  "lat": 51.1610231,
+  "lon": 6.8842833
+ },
+ "Düsseldorf-Bilk": {
+  "lat": 51.2079601,
+  "lon": 6.7760884
+ },
+ "Eberswalde Hbf": {
+  "lat": 52.8341138,
+  "lon": 13.7971952
+ },
+ "Eindhoven": {
+  "lat": 51.4429623,
+  "lon": 5.4795265
+ },
+ "Eisenach": {
+  "lat": 50.9768973,
+  "lon": 10.3319937
+ },
+ "Elmshorn": {
+  "lat": 53.7542251,
+  "lon": 9.6592636
+ },
+ "Elst": {
+  "lat": 51.9172528,
+  "lon": 5.8549361
+ },
+ "Elsterwerda": {
+  "lat": 51.4598135,
+  "lon": 13.516501
+ },
+ "Emden Hbf": {
+  "lat": 53.3690779,
+  "lon": 7.1951814
+ },
+ "Emmerich": {
+  "lat": 51.8342608,
+  "lon": 6.2556203
+ },
+ "Empel-Rees": {
+  "lat": 51.7987012,
+  "lon": 6.4162798
+ },
+ "Erdorf": {
+  "lat": 49.9987743,
+  "lon": 6.5709898
+ },
+ "Erfurt Hauptbahnhof": {
+  "lat": 50.9722853,
+  "lon": 11.0380824
+ },
+ "Erkelenz": {
+  "lat": 51.076552,
+  "lon": 6.3215151
+ },
+ "Erkner": {
+  "lat": 52.4294226,
+  "lon": 13.7510608
+ },
+ "Esbjerg": {
+  "lat": 55.467837,
+  "lon": 8.4582375
+ },
+ "Essen (Oldb)": {
+  "lat": 52.7234288,
+  "lon": 7.9454061
+ },
+ "Essen Hauptbahnhof": {
+  "lat": 51.4514769,
+  "lon": 7.0144679
+ },
+ "Essen-Steele": {
+  "lat": 51.4506842,
+  "lon": 7.0755469
+ },
+ "Ettelbruck": {
+  "lat": 49.8477769,
+  "lon": 6.1068634
+ },
+ "Euskirchen": {
+  "lat": 50.657786,
+  "lon": 6.7921979
+ },
+ "Eutin": {
+  "lat": 54.1356688,
+  "lon": 10.6099686
+ },
+ "Feldkirch": {
+  "lat": 47.2409257,
+  "lon": 9.6043115
+ },
+ "Finnentrop": {
+  "lat": 51.1731935,
+  "lon": 7.9645839
+ },
+ "Flensburg": {
+  "lat": 54.7741124,
+  "lon": 9.4365273
+ },
+ "Flughafen BER": {
+  "lat": 52.3639907,
+  "lon": 13.5083312
+ },
+ "Flughafen Leipzig/Halle": {
+  "lat": 51.4233121,
+  "lon": 12.2236458
+ },
+ "Flöha": {
+  "lat": 50.854228,
+  "lon": 13.0752808
+ },
+ "Forbach": {
+  "lat": 49.1894859,
+  "lon": 6.9010985
+ },
+ "Frankfurt (Main) Hauptbahnhof": {
+  "lat": 50.1066539,
+  "lon": 8.6625808
+ },
+ "Frankfurt (Oder)": {
+  "lat": 52.3365359,
+  "lon": 14.5466945
+ },
+ "Frankfurt Flughafen Regionalbahnhof": {
+  "lat": 50.051299,
+  "lon": 8.5717548
+ },
+ "Frauenfeld": {
+  "lat": 47.5581253,
+  "lon": 8.8965638
+ },
+ "Fredericia": {
+  "lat": 55.5684379,
+  "lon": 9.739523
+ },
+ "Freiberg (Sachs)": {
+  "lat": 50.9086704,
+  "lon": 13.3445784
+ },
+ "Freital Hbf": {
+  "lat": 50.9886713,
+  "lon": 13.6374852
+ },
+ "Friedberg (Hess)": {
+  "lat": 50.3326909,
+  "lon": 8.761258
+ },
+ "Friedrichshafen Stadt": {
+  "lat": 47.6532337,
+  "lon": 9.4737004
+ },
+ "Fulda": {
+  "lat": 50.5547541,
+  "lon": 9.6843823
+ },
+ "Fürstenwalde (Spree)": {
+  "lat": 52.3671912,
+  "lon": 14.0584217
+ },
+ "Geilenkirchen": {
+  "lat": 50.9609951,
+  "lon": 6.1244361
+ },
+ "Gelnhausen": {
+  "lat": 50.1963557,
+  "lon": 9.1891404
+ },
+ "Gelsenkirchen Hauptbahnhof": {
+  "lat": 51.5047677,
+  "lon": 7.1022983
+ },
+ "Gerolstein": {
+  "lat": 50.2239216,
+  "lon": 6.6603576
+ },
+ "Glauchau (Sachs)": {
+  "lat": 50.8287631,
+  "lon": 12.54872
+ },
+ "Gotha": {
+  "lat": 50.939047,
+  "lon": 10.712378
+ },
+ "Greifswald": {
+  "lat": 54.0929537,
+  "lon": 13.3704504
+ },
+ "Grevenbroich": {
+  "lat": 51.0937713,
+  "lon": 6.5805114
+ },
+ "Groningen": {
+  "lat": 53.2109237,
+  "lon": 6.5641028
+ },
+ "Göttingen": {
+  "lat": 51.5367827,
+  "lon": 9.9258967
+ },
+ "Gößnitz": {
+  "lat": 50.8933179,
+  "lon": 12.4293618
+ },
+ "Günzburg": {
+  "lat": 48.4604337,
+  "lon": 10.2786722
+ },
+ "Gütersloh Hauptbahnhof": {
+  "lat": 51.9069041,
+  "lon": 8.3849458
+ },
+ "Hagen Hauptbahnhof": {
+  "lat": 51.36296,
+  "lon": 7.4606062
+ },
+ "Hagenow Land": {
+  "lat": 53.4134275,
+  "lon": 11.2153217
+ },
+ "Hagondange": {
+  "lat": 49.25371,
+  "lon": 6.1643362
+ },
+ "Haiger": {
+  "lat": 50.7412658,
+  "lon": 8.2214272
+ },
+ "Haldensleben": {
+  "lat": 52.2849888,
+  "lon": 11.4062942
+ },
+ "Halle (Saale) Hauptbahnhof": {
+  "lat": 51.4774872,
+  "lon": 11.9872964
+ },
+ "Hamburg Dammtor": {
+  "lat": 53.5611812,
+  "lon": 9.9890232
+ },
+ "Hamburg Hauptbahnhof": {
+  "lat": 53.5531993,
+  "lon": 10.0064364
+ },
+ "Hamburg-Elbbrücken": {
+  "lat": 53.535078,
+  "lon": 10.0234374
+ },
+ "Hamburg-Harburg": {
+  "lat": 53.4557227,
+  "lon": 9.9917669
+ },
+ "Hamm (Westf) Hbf": {
+  "lat": 51.6785747,
+  "lon": 7.807713
+ },
+ "Hanau Hauptbahnhof": {
+  "lat": 50.1210733,
+  "lon": 8.9292147
+ },
+ "Hannover Hauptbahnhof": {
+  "lat": 52.3769504,
+  "lon": 9.7416533
+ },
+ "Hannover Messe/Laatzen": {
+  "lat": 52.3173696,
+  "lon": 9.7924818
+ },
+ "Heidelberg Hauptbahnhof": {
+  "lat": 49.4034737,
+  "lon": 8.6754223
+ },
+ "Herborn (Dillkr)": {
+  "lat": 50.6845372,
+  "lon": 8.3080615
+ },
+ "Herford": {
+  "lat": 52.1196393,
+  "lon": 8.6637749
+ },
+ "Herzogenrath": {
+  "lat": 50.8714326,
+  "lon": 6.094601
+ },
+ "Hildesheim Hauptbahnhof": {
+  "lat": 52.1607208,
+  "lon": 9.9542033
+ },
+ "Hofgeismar": {
+  "lat": 51.4992011,
+  "lon": 9.3955424
+ },
+ "Homburg (Saar) Hbf": {
+  "lat": 49.3278137,
+  "lon": 7.3365309
+ },
+ "Hoogezand-Sappemeer": {
+  "lat": 53.1597953,
+  "lon": 6.7709176
+ },
+ "Husum": {
+  "lat": 54.4720689,
+  "lon": 9.0560508
+ },
+ "Ingelheim": {
+  "lat": 49.9760129,
+  "lon": 8.0532128
+ },
+ "Ingolstadt Hauptbahnhof": {
+  "lat": 48.7443901,
+  "lon": 11.4374071
+ },
+ "Jübek": {
+  "lat": 54.5589408,
+  "lon": 9.405124
+ },
+ "Jüterbog": {
+  "lat": 51.9974208,
+  "lon": 13.0540462
+ },
+ "Kaiserslautern Hauptbahnhof": {
+  "lat": 49.4359851,
+  "lon": 7.7689299
+ },
+ "Kaldenkirchen": {
+  "lat": 51.3272758,
+  "lon": 6.2031729
+ },
+ "Kall": {
+  "lat": 50.5383588,
+  "lon": 6.5568859
+ },
+ "Kamen": {
+  "lat": 51.5852133,
+  "lon": 7.6611059
+ },
+ "Kassel Hauptbahnhof": {
+  "lat": 51.3183386,
+  "lon": 9.4896007
+ },
+ "Kassel-Wilhelmshöhe": {
+  "lat": 51.3113881,
+  "lon": 9.4477049
+ },
+ "Kiel Hauptbahnhof": {
+  "lat": 54.3134725,
+  "lon": 10.130965
+ },
+ "Kißlegg": {
+  "lat": 47.7935805,
+  "lon": 9.8817723
+ },
+ "Koblenz Hauptbahnhof": {
+  "lat": 49.9688103,
+  "lon": 7.8834854
+ },
+ "Kolding": {
+  "lat": 55.4905542,
+  "lon": 9.4814404
+ },
+ "Konstanz": {
+  "lat": 47.6588689,
+  "lon": 9.1772175
+ },
+ "Konstanz-Petershausen": {
+  "lat": 47.6737893,
+  "lon": 9.1744445
+ },
+ "Kreuzlingen": {
+  "lat": 47.6525028,
+  "lon": 9.1690645
+ },
+ "Kreuztal": {
+  "lat": 50.9556286,
+  "lon": 7.992342
+ },
+ "Köln Hauptbahnhof": {
+  "lat": 50.9427839,
+  "lon": 6.9590705
+ },
+ "Köln Messe/Deutz": {
+  "lat": 50.9409887,
+  "lon": 6.9751312
+ },
+ "Köln Süd": {
+  "lat": 50.9276006,
+  "lon": 6.9372707
+ },
+ "Köln-Ehrenfeld": {
+  "lat": 50.9515024,
+  "lon": 6.9165293
+ },
+ "Königs Wusterhausen": {
+  "lat": 52.2967046,
+  "lon": 13.631528
+ },
+ "Landquart": {
+  "lat": 46.967441,
+  "lon": 9.5540962
+ },
+ "Landstuhl": {
+  "lat": 49.4163142,
+  "lon": 7.5663882
+ },
+ "Langenhagen Mitte": {
+  "lat": 52.4400847,
+  "lon": 9.7252642
+ },
+ "Laupheim West": {
+  "lat": 48.2304112,
+  "lon": 9.848247
+ },
+ "Leer (Ostfriesl)": {
+  "lat": 53.2313892,
+  "lon": 7.4651589
+ },
+ "Leipzig Hauptbahnhof": {
+  "lat": 51.3465518,
+  "lon": 12.3830858
+ },
+ "Leipzig MDR": {
+  "lat": 51.3200934,
+  "lon": 12.3862522
+ },
+ "Leipzig-Connewitz": {
+  "lat": 51.3009323,
+  "lon": 12.3865233
+ },
+ "Letmathe": {
+  "lat": 51.3628127,
+  "lon": 7.6183327
+ },
+ "Leverkusen Mitte": {
+  "lat": 51.031774,
+  "lon": 6.9916768
+ },
+ "Lindau-Reutin": {
+  "lat": 47.5524552,
+  "lon": 9.7031148
+ },
+ "Lippstadt": {
+  "lat": 51.6706881,
+  "lon": 8.3483173
+ },
+ "Liège-Guillemins": {
+  "lat": 50.624728,
+  "lon": 5.567065
+ },
+ "Ludwigsfelde": {
+  "lat": 52.2983507,
+  "lon": 13.267456
+ },
+ "Ludwigshafen (Rhein) Hbf": {
+  "lat": 49.4612724,
+  "lon": 8.4208339
+ },
+ "Lunderskov": {
+  "lat": 55.4803997,
+  "lon": 9.3040943
+ },
+ "Lutherstadt Wittenberg Hbf": {
+  "lat": 51.8675201,
+  "lon": 12.6620632
+ },
+ "Luxembourg": {
+  "lat": 49.5999681,
+  "lon": 6.1342493
+ },
+ "Lübben (Spreewald)": {
+  "lat": 51.940029,
+  "lon": 13.8765309
+ },
+ "Lübeck Hauptbahnhof": {
+  "lat": 53.8675937,
+  "lon": 10.6698551
+ },
+ "Lübeck-Travemünde Hafen": {
+  "lat": 53.958671,
+  "lon": 10.8650425
+ },
+ "Lüneburg": {
+  "lat": 53.2497728,
+  "lon": 10.4197721
+ },
+ "Magdeburg Hauptbahnhof": {
+  "lat": 52.1305167,
+  "lon": 11.6267187
+ },
+ "Mainz Hauptbahnhof": {
+  "lat": 50.001113,
+  "lon": 8.258723
+ },
+ "Mannheim Hauptbahnhof": {
+  "lat": 49.4792363,
+  "lon": 8.4694107
+ },
+ "Mariánské Lázně": {
+  "lat": 49.9569373,
+  "lon": 12.6945174
+ },
+ "Marktredwitz": {
+  "lat": 50.0044648,
+  "lon": 12.082401
+ },
+ "Meckenbeuren": {
+  "lat": 47.7003052,
+  "lon": 9.5586727
+ },
+ "Melsungen": {
+  "lat": 51.1261807,
+  "lon": 9.5463793
+ },
+ "Memmingen": {
+  "lat": 47.985407,
+  "lon": 10.1869867
+ },
+ "Merklingen": {
+  "lat": 48.5211319,
+  "lon": 9.7410035
+ },
+ "Merzig (Saar)": {
+  "lat": 49.4365845,
+  "lon": 6.6341891
+ },
+ "Metz-Ville": {
+  "lat": 49.1089882,
+  "lon": 6.1773412
+ },
+ "Mook-Molenhoek": {
+  "lat": 51.7665425,
+  "lon": 5.8789752
+ },
+ "Mönchengladbach Hauptbahnhof": {
+  "lat": 51.1967199,
+  "lon": 6.4462733
+ },
+ "Mülheim (Ruhr) Hbf": {
+  "lat": 51.4304596,
+  "lon": 6.8869735
+ },
+ "Münster (Westf) Hauptbahnhof": {
+  "lat": 51.9564055,
+  "lon": 7.635792
+ },
+ "Neu-Ulm": {
+  "lat": 48.3934059,
+  "lon": 10.0055604
+ },
+ "Neukieritzsch": {
+  "lat": 51.1508549,
+  "lon": 12.4127504
+ },
+ "Neumünster": {
+  "lat": 54.0764928,
+  "lon": 9.980273
+ },
+ "Neunkirchen (Saar) Hbf": {
+  "lat": 49.3532843,
+  "lon": 7.1768732
+ },
+ "Neuss Hauptbahnhof": {
+  "lat": 51.2044376,
+  "lon": 6.6846709
+ },
+ "Neustadt (Dosse)": {
+  "lat": 52.8533306,
+  "lon": 12.4500127
+ },
+ "Neustadt (Weinstraße) Hbf": {
+  "lat": 49.3495669,
+  "lon": 8.1403886
+ },
+ "Niebüll": {
+  "lat": 54.7892824,
+  "lon": 8.8346687
+ },
+ "Nienburg (Weser)": {
+  "lat": 52.6453759,
+  "lon": 9.2178273
+ },
+ "Nijmegen": {
+  "lat": 51.8431362,
+  "lon": 5.8530913
+ },
+ "Nijmegen Heyendaal": {
+  "lat": 51.8267778,
+  "lon": 5.8679526
+ },
+ "Nijmegen Lent": {
+  "lat": 51.862468,
+  "lon": 5.8596868
+ },
+ "Norddeich": {
+  "lat": 53.6214092,
+  "lon": 7.1610774
+ },
+ "Norddeich Mole": {
+  "lat": 53.6242722,
+  "lon": 7.1585724
+ },
+ "Norden": {
+  "lat": 53.5880655,
+  "lon": 7.2192605
+ },
+ "Nürnberg Hauptbahnhof": {
+  "lat": 49.4451991,
+  "lon": 11.0823089
+ },
+ "Oberhausen Hauptbahnhof": {
+  "lat": 51.4749062,
+  "lon": 6.8516806
+ },
+ "Oberwesel": {
+  "lat": 50.1041366,
+  "lon": 7.731883
+ },
+ "Offenbach (Main) Hbf": {
+  "lat": 50.1026882,
+  "lon": 8.7843612
+ },
+ "Oldenburg (Oldb) Hbf": {
+  "lat": 53.144191,
+  "lon": 8.2231132
+ },
+ "Osnabrück Hauptbahnhof": {
+  "lat": 52.2729063,
+  "lon": 8.0615665
+ },
+ "Ostseebad Binz": {
+  "lat": 54.4050029,
+  "lon": 13.6005789
+ },
+ "Padborg": {
+  "lat": 54.8235559,
+  "lon": 9.3589629
+ },
+ "Paderborn Hauptbahnhof": {
+  "lat": 51.7128598,
+  "lon": 8.7404385
+ },
+ "Pasewalk": {
+  "lat": 53.5150049,
+  "lon": 13.9892981
+ },
+ "Pegnitz": {
+  "lat": 49.7588731,
+  "lon": 11.5476588
+ },
+ "Plettenberg": {
+  "lat": 51.2319049,
+  "lon": 7.8687782
+ },
+ "Plzeň hlavní nádraží": {
+  "lat": 49.743329,
+  "lon": 13.3882551
+ },
+ "Plön": {
+  "lat": 54.1596338,
+  "lon": 10.4225787
+ },
+ "Potsdam Hauptbahnhof": {
+  "lat": 52.3915165,
+  "lon": 13.0672235
+ },
+ "Prenzlau": {
+  "lat": 53.3222738,
+  "lon": 13.8666984
+ },
+ "Probsteierhagen": {
+  "lat": 54.3651002,
+  "lon": 10.2926334
+ },
+ "Radolfzell": {
+  "lat": 47.7361897,
+  "lon": 8.9689062
+ },
+ "Ravensburg": {
+  "lat": 47.7846888,
+  "lon": 9.6062415
+ },
+ "Recklinghausen Hauptbahnhof": {
+  "lat": 51.6160957,
+  "lon": 7.203273
+ },
+ "Remagen": {
+  "lat": 50.5773213,
+  "lon": 7.2297079
+ },
+ "Rendsburg": {
+  "lat": 54.3024043,
+  "lon": 9.6707886
+ },
+ "Rheda-Wiedenbrück": {
+  "lat": 51.8572204,
+  "lon": 8.2865189
+ },
+ "Rheydt Hbf": {
+  "lat": 51.1632253,
+  "lon": 6.4396734
+ },
+ "Ribe": {
+  "lat": 55.3276297,
+  "lon": 8.7702814
+ },
+ "Ribnitz-Damgarten West": {
+  "lat": 54.2391997,
+  "lon": 12.4370512
+ },
+ "Roermond": {
+  "lat": 51.1925659,
+  "lon": 5.9938511
+ },
+ "Rommerskirchen": {
+  "lat": 51.0400311,
+  "lon": 6.6991122
+ },
+ "Rostock Hauptbahnhof": {
+  "lat": 54.0781503,
+  "lon": 12.1311246
+ },
+ "Rotenburg (Wümme)": {
+  "lat": 53.1124706,
+  "lon": 9.3908499
+ },
+ "Rövershagen": {
+  "lat": 54.1754054,
+  "lon": 12.2471922
+ },
+ "Rüsselsheim": {
+  "lat": 49.991701,
+  "lon": 8.4138251
+ },
+ "Saarbrücken Hauptbahnhof": {
+  "lat": 49.2411972,
+  "lon": 6.990794
+ },
+ "Saarlouis Hbf": {
+  "lat": 49.3277464,
+  "lon": 6.7502575
+ },
+ "Saint-Avold": {
+  "lat": 49.0858661,
+  "lon": 6.7208599
+ },
+ "Salzwedel": {
+  "lat": 52.8582934,
+  "lon": 11.1611006
+ },
+ "Sande": {
+  "lat": 53.4900687,
+  "lon": 8.0316614
+ },
+ "Sargans": {
+  "lat": 47.0453859,
+  "lon": 9.4453692
+ },
+ "Sassnitz": {
+  "lat": 54.5164576,
+  "lon": 13.6379367
+ },
+ "Scheemda": {
+  "lat": 53.1654348,
+  "lon": 6.977959
+ },
+ "Schleswig": {
+  "lat": 54.499583,
+  "lon": 9.5378994
+ },
+ "Schlüchtern": {
+  "lat": 50.3413274,
+  "lon": 9.5099786
+ },
+ "Schweinfurt Hauptbahnhof": {
+  "lat": 50.0350546,
+  "lon": 10.2120347
+ },
+ "Schwelm": {
+  "lat": 51.2905428,
+  "lon": 7.2896552
+ },
+ "Schwerin Hauptbahnhof": {
+  "lat": 53.6353803,
+  "lon": 11.4075049
+ },
+ "Schönberg (Holstein)": {
+  "lat": 54.3870394,
+  "lon": 10.375177
+ },
+ "Schönberger Strand": {
+  "lat": 54.4108721,
+  "lon": 10.4126636
+ },
+ "Schönkirchen": {
+  "lat": 54.3328568,
+  "lon": 10.2293602
+ },
+ "Siegen Hauptbahnhof": {
+  "lat": 50.8759626,
+  "lon": 8.0164616
+ },
+ "Soest": {
+  "lat": 51.5784166,
+  "lon": 8.1043635
+ },
+ "Soltau (Han) Hbf": {
+  "lat": 52.9830618,
+  "lon": 9.830759
+ },
+ "Stade": {
+  "lat": 53.5960704,
+  "lon": 9.4775887
+ },
+ "Stendal Hauptbahnhof": {
+  "lat": 52.5946768,
+  "lon": 11.8548875
+ },
+ "Stralsund Hauptbahnhof": {
+  "lat": 54.3088727,
+  "lon": 13.0777309
+ },
+ "Stuttgart Flughafen": {
+  "lat": 48.6904461,
+  "lon": 9.1926989
+ },
+ "Stuttgart Hauptbahnhof (tief)": {
+  "lat": 48.7830723,
+  "lon": 9.1799271
+ },
+ "Stříbro": {
+  "lat": 49.7413229,
+  "lon": 13.0006438
+ },
+ "Thionville": {
+  "lat": 49.3540017,
+  "lon": 6.169967
+ },
+ "Travemünde Strand": {
+  "lat": 53.9648668,
+  "lon": 10.8759593
+ },
+ "Trier Hauptbahnhof": {
+  "lat": 49.7569658,
+  "lon": 6.6519999
+ },
+ "Tønder": {
+  "lat": 54.9332725,
+  "lon": 8.8604254
+ },
+ "Uelzen": {
+  "lat": 52.9695952,
+  "lon": 10.5529747
+ },
+ "Ulm Hauptbahnhof": {
+  "lat": 48.3994159,
+  "lon": 9.9826024
+ },
+ "Vamdrup": {
+  "lat": 55.4279941,
+  "lon": 9.2864145
+ },
+ "Varel (Oldb)": {
+  "lat": 53.3990747,
+  "lon": 8.1502302
+ },
+ "Velgast": {
+  "lat": 54.2773746,
+  "lon": 12.8028588
+ },
+ "Venlo": {
+  "lat": 51.3650504,
+  "lon": 6.171433
+ },
+ "Venray": {
+  "lat": 51.526454,
+  "lon": 6.0142546
+ },
+ "Verden (Aller)": {
+  "lat": 52.9207954,
+  "lon": 9.237876
+ },
+ "Vierlingsbeek": {
+  "lat": 51.5920221,
+  "lon": 5.9970961
+ },
+ "Viersen": {
+  "lat": 51.2548242,
+  "lon": 6.4040894
+ },
+ "Vojens": {
+  "lat": 55.2484701,
+  "lon": 9.3049359
+ },
+ "Völklingen": {
+  "lat": 49.2488073,
+  "lon": 6.8492341
+ },
+ "Walsrode": {
+  "lat": 52.8653496,
+  "lon": 9.6012119
+ },
+ "Warburg (Westf)": {
+  "lat": 51.4928927,
+  "lon": 9.1640477
+ },
+ "Warnemünde": {
+  "lat": 54.1771708,
+  "lon": 12.0907477
+ },
+ "Wattenscheid": {
+  "lat": 51.4731889,
+  "lon": 7.1393524
+ },
+ "Weener": {
+  "lat": 53.1634122,
+  "lon": 7.3428884
+ },
+ "Wegberg": {
+  "lat": 51.1451807,
+  "lon": 6.2813289
+ },
+ "Weinfelden": {
+  "lat": 47.5662702,
+  "lon": 9.1064124
+ },
+ "Werdohl": {
+  "lat": 51.2594522,
+  "lon": 7.7576643
+ },
+ "Wesel": {
+  "lat": 51.6561632,
+  "lon": 6.6271721
+ },
+ "Wetter (Ruhr)": {
+  "lat": 51.3863795,
+  "lon": 7.3859313
+ },
+ "Wetzlar": {
+  "lat": 50.565262,
+  "lon": 8.5039213
+ },
+ "Wilhelmshaven": {
+  "lat": 53.5187847,
+  "lon": 8.1153355
+ },
+ "Winschoten": {
+  "lat": 53.139151,
+  "lon": 7.0356099
+ },
+ "Winterthur": {
+  "lat": 47.5003138,
+  "lon": 8.7239736
+ },
+ "Witten Hbf": {
+  "lat": 51.4355898,
+  "lon": 7.3293869
+ },
+ "Wittenberge": {
+  "lat": 53.0035282,
+  "lon": 11.7628096
+ },
+ "Wolfsburg Hauptbahnhof": {
+  "lat": 52.4294853,
+  "lon": 10.7871395
+ },
+ "Wunstorf": {
+  "lat": 52.4221569,
+  "lon": 9.4514075
+ },
+ "Wuppertal Hauptbahnhof": {
+  "lat": 51.2545784,
+  "lon": 7.1500534
+ },
+ "Wuppertal-Oberbarmen": {
+  "lat": 51.2738901,
+  "lon": 7.2212549
+ },
+ "Wuppertal-Vohwinkel": {
+  "lat": 51.2339487,
+  "lon": 7.0718314
+ },
+ "Wächtersbach": {
+  "lat": 50.2537919,
+  "lon": 9.295464
+ },
+ "Würzburg Hauptbahnhof": {
+  "lat": 49.8021549,
+  "lon": 9.935891
+ },
+ "Zevenaar": {
+  "lat": 51.9231973,
+  "lon": 6.0719818
+ },
+ "Zossen": {
+  "lat": 52.2189728,
+  "lon": 13.4387099
+ },
+ "Zwickau Hauptbahnhof": {
+  "lat": 50.7148501,
+  "lon": 12.4757824
+ },
+ "Zürich Flughafen": {
+  "lat": 47.4500978,
+  "lon": 8.5618985
+ },
+ "Zürich HB": {
+  "lat": 47.3781008,
+  "lon": 8.5393635
+ },
+ "Züssow": {
+  "lat": 53.9726913,
+  "lon": 13.5497776
+ }
+}

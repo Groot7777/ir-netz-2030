@@ -1,0 +1,1078 @@
+{
+ "Almelo": {
+  "distance_km": 0.47,
+  "estimated": false,
+  "lat": 52.3577052,
+  "lon": 6.6544143,
+  "manual_fixup": true,
+  "matched_name": "Almelo",
+  "osm_tag": "railway:station",
+  "query_used": "Almelo",
+  "tag_used": "railway:station"
+ },
+ "Arnsberg Westf": {
+  "distance_km": 33.6,
+  "estimated": false,
+  "lat": 51.4379642,
+  "lon": 7.9704112,
+  "matched_name": "Arnsberg-Neheim-Hüsten",
+  "osm_tag": "railway:station",
+  "query_used": "Arnsberg (Westf) Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Bad Bentheim": {
+  "distance_km": 24.8,
+  "estimated": false,
+  "lat": 52.3097332,
+  "lon": 7.1582889,
+  "matched_name": "Bad Bentheim",
+  "osm_tag": "railway:station",
+  "query_used": "Bad Bentheim Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Bad Schwartau": {
+  "distance_km": 0.3,
+  "estimated": false,
+  "lat": 53.9157492,
+  "lon": 10.702246,
+  "manual_fixup": true,
+  "matched_name": "Bad Schwartau",
+  "osm_tag": "railway:platform",
+  "query_used": "Bad Schwartau Bahnhof",
+  "tag_used": null
+ },
+ "Bestwig": {
+  "distance_km": 4.11,
+  "estimated": false,
+  "lat": 51.3617785,
+  "lon": 8.397973,
+  "manual_fixup": true,
+  "matched_name": "Bestwig",
+  "osm_tag": "railway:station",
+  "query_used": "Bestwig",
+  "tag_used": "railway:station"
+ },
+ "Bigge": {
+  "distance_km": 14.9,
+  "estimated": false,
+  "lat": 51.3579514,
+  "lon": 8.4762649,
+  "matched_name": "Bigge",
+  "osm_tag": "railway:station",
+  "query_used": "Bigge Bahnhof Olsberg",
+  "tag_used": "railway:station"
+ },
+ "Blankenstein Burg": {
+  "distance_km": 26.4,
+  "estimated": true,
+  "lat": 51.4070876,
+  "lon": 7.2304775,
+  "matched_name": "Burg Blankenstein",
+  "osm_tag": "amenity:restaurant",
+  "query_used": "Burg Blankenstein Hattingen",
+  "tag_used": null
+ },
+ "Bochum West": {
+  "distance_km": 6.2,
+  "estimated": false,
+  "lat": 51.4785335,
+  "lon": 7.2232341,
+  "matched_name": "Bochum Hauptbahnhof",
+  "osm_tag": "railway:station",
+  "query_used": "Bochum West",
+  "tag_used": "railway:station"
+ },
+ "Bochum-Bermuda3eck": {
+  "distance_km": 6.5,
+  "estimated": true,
+  "lat": 51.4771705,
+  "lon": 7.2168092,
+  "matched_name": "Bermudadreieck / Musikforum - Kortumstraße",
+  "osm_tag": "highway:elevator",
+  "query_used": "Bermudadreieck Bochum",
+  "tag_used": null
+ },
+ "Bochum-Dahlhausen": {
+  "distance_km": 33.0,
+  "estimated": false,
+  "lat": 51.4263805,
+  "lon": 7.1407653,
+  "matched_name": "Bochum-Dahlhausen",
+  "osm_tag": "railway:station",
+  "query_used": "Bochum-Dahlhausen",
+  "tag_used": "railway:station"
+ },
+ "Bochum-Hamme": {
+  "distance_km": 8.2,
+  "estimated": false,
+  "lat": 51.4911657,
+  "lon": 7.2011276,
+  "matched_name": "Bochum-Hamme",
+  "osm_tag": "railway:halt",
+  "query_used": "Bochum-Hamme",
+  "tag_used": "railway:halt"
+ },
+ "Bochum-Kohlenstrasse": {
+  "distance_km": 7.1,
+  "estimated": true,
+  "lat": 51.4629275,
+  "lon": 7.1992418,
+  "matched_name": "Kohlenstraße",
+  "osm_tag": "highway:tertiary",
+  "query_used": "Bochum Kohlenstraße",
+  "tag_used": null
+ },
+ "Bochum-Langendreer West": {
+  "distance_km": 3.1,
+  "estimated": false,
+  "lat": 51.4780252,
+  "lon": 7.3043713,
+  "matched_name": "Bochum-Langendreer West",
+  "osm_tag": "railway:halt",
+  "query_used": "Bochum-Langendreer West",
+  "tag_used": "railway:halt"
+ },
+ "Bochum-Riemke": {
+  "distance_km": 10.0,
+  "estimated": false,
+  "lat": 51.5179147,
+  "lon": 7.2053105,
+  "matched_name": "Bochum-Riemke",
+  "osm_tag": "railway:halt",
+  "query_used": "Bochum-Riemke",
+  "tag_used": "railway:halt"
+ },
+ "Bochum-Stahlhausen": {
+  "distance_km": 7.3,
+  "estimated": true,
+  "lat": 51.4719515,
+  "lon": 7.2002245,
+  "matched_name": "ECOCityCenter Bochum",
+  "osm_tag": "amenity:waste_transfer_station",
+  "query_used": "Bochum-Stahlhausen",
+  "tag_used": null
+ },
+ "Brandenburg Hbf": {
+  "distance_km": 2.57,
+  "estimated": false,
+  "lat": 52.4004813,
+  "lon": 12.5657504,
+  "manual_fixup": true,
+  "matched_name": "Brandenburg Hauptbahnhof",
+  "osm_tag": "railway:station",
+  "query_used": "Brandenburg Hauptbahnhof",
+  "tag_used": "railway:station"
+ },
+ "Buetzow": {
+  "distance_km": 6.6,
+  "estimated": false,
+  "lat": 53.8372304,
+  "lon": 11.998196,
+  "matched_name": "Bützow",
+  "osm_tag": "railway:station",
+  "query_used": "Bützow Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Chalupy": {
+  "distance_km": 5.7,
+  "estimated": false,
+  "lat": 54.7615324,
+  "lon": 18.5025954,
+  "matched_name": "Chałupy",
+  "osm_tag": "railway:halt",
+  "query_used": "Chałupy",
+  "tag_used": "railway:halt"
+ },
+ "Chojnice": {
+  "distance_km": 38.1,
+  "estimated": false,
+  "lat": 53.6890673,
+  "lon": 17.5777493,
+  "matched_name": "Chojnice",
+  "osm_tag": "railway:station",
+  "query_used": "Chojnice",
+  "tag_used": "railway:station"
+ },
+ "Dahl": {
+  "distance_km": 0.89,
+  "estimated": true,
+  "lat": 51.3054877,
+  "lon": 7.5316156,
+  "manual_fixup": true,
+  "matched_name": "Volme-Grill",
+  "osm_tag": "amenity:fast_food",
+  "query_used": "Dahl Volme",
+  "tag_used": null
+ },
+ "Dahlerbrueck": {
+  "distance_km": 12.3,
+  "estimated": false,
+  "lat": 51.2520007,
+  "lon": 7.5169973,
+  "matched_name": "Dahlerbrück",
+  "osm_tag": "railway:halt",
+  "query_used": "Dahlerbrück",
+  "tag_used": "railway:halt"
+ },
+ "Dortmund-Brackel": {
+  "distance_km": 19.0,
+  "estimated": false,
+  "lat": 51.5206764,
+  "lon": 7.5496544,
+  "matched_name": "Dortmund-Brackel",
+  "osm_tag": "railway:station",
+  "query_used": "Dortmund-Brackel",
+  "tag_used": "railway:station"
+ },
+ "Dortmund-Dorstfeld": {
+  "distance_km": 10.8,
+  "estimated": false,
+  "lat": 51.5092739,
+  "lon": 7.4242947,
+  "matched_name": "Dortmund-Dorstfeld",
+  "osm_tag": "railway:station",
+  "query_used": "Dortmund-Dorstfeld",
+  "tag_used": "railway:station"
+ },
+ "Dortmund-Dorstfeld Sued": {
+  "distance_km": 10.0,
+  "estimated": false,
+  "lat": 51.5007486,
+  "lon": 7.4199735,
+  "matched_name": "Dortmund-Dorstfeld Süd",
+  "osm_tag": "railway:halt",
+  "query_used": "Dortmund-Dorstfeld Süd",
+  "tag_used": "railway:halt"
+ },
+ "Dortmund-Kley": {
+  "distance_km": 6.3,
+  "estimated": false,
+  "lat": 51.4894618,
+  "lon": 7.3654812,
+  "matched_name": "Dortmund-Kley",
+  "osm_tag": "railway:halt",
+  "query_used": "Dortmund-Kley",
+  "tag_used": "railway:halt"
+ },
+ "Dortmund-Oespel": {
+  "distance_km": 7.2,
+  "estimated": false,
+  "lat": 51.4883923,
+  "lon": 7.3835428,
+  "matched_name": "Dortmund-Oespel",
+  "osm_tag": "railway:halt",
+  "query_used": "Dortmund-Oespel",
+  "tag_used": "railway:halt"
+ },
+ "Dortmund-Universitaet": {
+  "distance_km": 9.4,
+  "estimated": false,
+  "lat": 51.4923192,
+  "lon": 7.4173487,
+  "matched_name": "Dortmund Universität S",
+  "osm_tag": "railway:halt",
+  "query_used": "Dortmund Universität",
+  "tag_used": "railway:halt"
+ },
+ "Dortmund-Wickede": {
+  "distance_km": 23.0,
+  "estimated": false,
+  "lat": 51.5293524,
+  "lon": 7.6064714,
+  "matched_name": "Dortmund-Wickede West S",
+  "osm_tag": "railway:halt",
+  "query_used": "Dortmund-Wickede",
+  "tag_used": "railway:halt"
+ },
+ "Drensteinfurt": {
+  "distance_km": 0.2,
+  "estimated": false,
+  "lat": 51.7988761,
+  "lon": 7.7338736,
+  "manual_fixup": true,
+  "matched_name": "Drensteinfurt",
+  "osm_tag": "railway:halt",
+  "query_used": "Drensteinfurt",
+  "tag_used": null
+ },
+ "Essen West": {
+  "distance_km": 14.7,
+  "estimated": false,
+  "lat": 51.4441711,
+  "lon": 7.0886147,
+  "matched_name": "Essen-Steele Ost",
+  "osm_tag": "railway:station",
+  "query_used": "Essen West",
+  "tag_used": "railway:station"
+ },
+ "Essen-Altenessen": {
+  "distance_km": 20.7,
+  "estimated": false,
+  "lat": 51.4842762,
+  "lon": 7.0068439,
+  "matched_name": "Essen-Altenessen",
+  "osm_tag": "railway:station",
+  "query_used": "Essen-Altenessen Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Essen-Borbeck": {
+  "distance_km": 24.0,
+  "estimated": false,
+  "lat": 51.4617006,
+  "lon": 6.9539306,
+  "matched_name": "Essen-Borbeck Süd",
+  "osm_tag": "railway:halt",
+  "query_used": "Essen-Borbeck",
+  "tag_used": "railway:halt"
+ },
+ "Essen-Dellwig Ost": {
+  "distance_km": 26.5,
+  "estimated": false,
+  "lat": 51.4878611,
+  "lon": 6.9216999,
+  "matched_name": "Essen-Dellwig",
+  "osm_tag": "railway:halt",
+  "query_used": "Essen-Dellwig Ost",
+  "tag_used": "railway:halt"
+ },
+ "Essen-Eiberg": {
+  "distance_km": 13.3,
+  "estimated": false,
+  "lat": 51.4417321,
+  "lon": 7.1089523,
+  "matched_name": "Essen-Eiberg",
+  "osm_tag": "railway:halt",
+  "query_used": "Essen-Eiberg",
+  "tag_used": "railway:halt"
+ },
+ "Essen-Frohnhausen": {
+  "distance_km": 23.2,
+  "estimated": false,
+  "lat": 51.4551654,
+  "lon": 6.965176,
+  "matched_name": "Essen-Frohnhausen",
+  "osm_tag": "railway:halt",
+  "query_used": "Essen-Frohnhausen",
+  "tag_used": "railway:halt"
+ },
+ "Essen-Horst": {
+  "distance_km": 43.5,
+  "estimated": false,
+  "lat": 51.4375389,
+  "lon": 6.9892897,
+  "matched_name": "Holsterhauser Platz",
+  "osm_tag": "railway:station",
+  "query_used": "Essen-Horst",
+  "tag_used": "railway:station"
+ },
+ "Essen-Steele Ost": {
+  "distance_km": 15.6,
+  "estimated": false,
+  "lat": 51.4580333,
+  "lon": 7.0746135,
+  "matched_name": "Essen-Kray Süd",
+  "osm_tag": "railway:halt",
+  "query_used": "Essen-Steele Ost",
+  "tag_used": "railway:halt"
+ },
+ "Froendenberg": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 51.471343,
+  "lon": 7.7617558,
+  "manual_fixup": true,
+  "matched_name": "Fröndenberg",
+  "osm_tag": "railway:station",
+  "query_used": "Froendenberg",
+  "tag_used": null
+ },
+ "Gdansk Glowny": {
+  "distance_km": 2.2,
+  "estimated": false,
+  "lat": 54.3564345,
+  "lon": 18.6441946,
+  "matched_name": "Gdańsk Główny",
+  "osm_tag": "railway:station",
+  "query_used": "Gdańsk Główny",
+  "tag_used": "railway:station"
+ },
+ "Gdansk Wrzeszcz": {
+  "distance_km": 1.6,
+  "estimated": false,
+  "lat": 54.3817696,
+  "lon": 18.6055111,
+  "matched_name": "Gdańsk Wrzeszcz",
+  "osm_tag": "railway:station",
+  "query_used": "Gdańsk Wrzeszcz",
+  "tag_used": "railway:station"
+ },
+ "Gdansk Zaspa": {
+  "distance_km": 2.9,
+  "estimated": false,
+  "lat": 54.3897726,
+  "lon": 18.591526,
+  "matched_name": "Gdańsk Zaspa",
+  "osm_tag": "railway:halt",
+  "query_used": "Gdańsk Zaspa",
+  "tag_used": "railway:halt"
+ },
+ "Gdynia Chylonia": {
+  "distance_km": 22.0,
+  "estimated": false,
+  "lat": 54.5457503,
+  "lon": 18.4636617,
+  "matched_name": "Gdynia Chylonia",
+  "osm_tag": "railway:station",
+  "query_used": "Gdynia Chylonia",
+  "tag_used": "railway:station"
+ },
+ "Gdynia Glowna": {
+  "distance_km": 17.9,
+  "estimated": false,
+  "lat": 54.5217877,
+  "lon": 18.5268255,
+  "matched_name": "Gdynia Główna",
+  "osm_tag": "railway:station",
+  "query_used": "Gdynia Główna",
+  "tag_used": "railway:station"
+ },
+ "Gdynia Wzgorze Sw Maksyma": {
+  "distance_km": 15.1,
+  "estimated": false,
+  "lat": 54.4961509,
+  "lon": 18.5332216,
+  "matched_name": "Gdynia Stadion",
+  "osm_tag": "railway:halt",
+  "query_used": "Gdynia Wzgórze Świętego Maksymiliana",
+  "tag_used": "railway:halt"
+ },
+ "Gelsenkirchen-Zollverein Nord": {
+  "distance_km": 15.4,
+  "estimated": false,
+  "lat": 51.4926911,
+  "lon": 7.089043,
+  "matched_name": "Gelsenkirchen-Rotthausen",
+  "osm_tag": "railway:halt",
+  "query_used": "Gelsenkirchen Zollverein Nord",
+  "tag_used": "railway:halt"
+ },
+ "Grossenbrode Heiligenhafen": {
+  "distance_km": 1.5,
+  "estimated": true,
+  "lat": 54.3757,
+  "lon": 11.0711,
+  "manual_fixup": true,
+  "matched_name": "Großenbrode/Heiligenhafen (fiktive Neubaustation Mittelhof, ~1.5km NW vom Ortskern)",
+  "osm_tag": "estimated:new_station",
+  "query_used": "manual",
+  "tag_used": null
+ },
+ "Hagen-Vorhalle": {
+  "distance_km": 12.3,
+  "estimated": false,
+  "lat": 51.3881374,
+  "lon": 7.4336701,
+  "matched_name": "Hagen-Vorhalle",
+  "osm_tag": "railway:station",
+  "query_used": "Hagen-Vorhalle",
+  "tag_used": "railway:station"
+ },
+ "Hattingen Mitte": {
+  "distance_km": 29.5,
+  "estimated": true,
+  "lat": 51.3968326,
+  "lon": 7.1815839,
+  "matched_name": "Hattingen Mitte",
+  "osm_tag": "railway:platform",
+  "query_used": "Hattingen Mitte",
+  "tag_used": null
+ },
+ "Hattingen Ruhr": {
+  "distance_km": 21.1,
+  "estimated": false,
+  "lat": 51.4355898,
+  "lon": 7.3293869,
+  "matched_name": "Witten Hbf",
+  "osm_tag": "railway:station",
+  "query_used": "Hattingen (Ruhr) Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Haus Kemnade": {
+  "distance_km": 25.0,
+  "estimated": true,
+  "lat": 51.4062332,
+  "lon": 7.250857,
+  "matched_name": "Haus Kemnade",
+  "osm_tag": "railway:halt",
+  "query_used": "Haus Kemnade",
+  "tag_used": null
+ },
+ "Heinrichshuette": {
+  "distance_km": 29.7,
+  "estimated": false,
+  "lat": 51.4091049,
+  "lon": 7.1820907,
+  "matched_name": "Henrichshütte",
+  "osm_tag": "railway:halt",
+  "query_used": "Heinrichshütte Hattingen",
+  "tag_used": "railway:halt"
+ },
+ "Hel": {
+  "distance_km": 25.6,
+  "estimated": false,
+  "lat": 54.6110402,
+  "lon": 18.8008848,
+  "matched_name": "Hel",
+  "osm_tag": "railway:station",
+  "query_used": "Hel",
+  "tag_used": "railway:station"
+ },
+ "Hengelo": {
+  "distance_km": 1.0,
+  "estimated": false,
+  "lat": 52.2617754,
+  "lon": 6.7949086,
+  "matched_name": "Hengelo",
+  "osm_tag": "railway:station",
+  "query_used": "Hengelo Station",
+  "tag_used": "railway:station"
+ },
+ "Herbede": {
+  "distance_km": 1.81,
+  "estimated": false,
+  "lat": 51.4252888,
+  "lon": 7.2809911,
+  "manual_fixup": true,
+  "matched_name": "Herbede",
+  "osm_tag": "railway:halt",
+  "query_used": "Witten-Herbede",
+  "tag_used": "railway:halt"
+ },
+ "Holzwickede": {
+  "distance_km": 22.9,
+  "estimated": false,
+  "lat": 51.5048161,
+  "lon": 7.6192918,
+  "matched_name": "Holzwickede",
+  "osm_tag": "railway:station",
+  "query_used": "Holzwickede",
+  "tag_used": "railway:station"
+ },
+ "Jastarnia": {
+  "distance_km": 14.7,
+  "estimated": false,
+  "lat": 54.7016654,
+  "lon": 18.6766494,
+  "matched_name": "Jastarnia",
+  "osm_tag": "railway:station",
+  "query_used": "Jastarnia",
+  "tag_used": "railway:station"
+ },
+ "Jurata": {
+  "distance_km": 17.4,
+  "estimated": false,
+  "lat": 54.6849444,
+  "lon": 18.7134138,
+  "matched_name": "Jurata",
+  "osm_tag": "railway:halt",
+  "query_used": "Jurata",
+  "tag_used": "railway:halt"
+ },
+ "Koebenhavn H": {
+  "distance_km": 0.9,
+  "estimated": false,
+  "lat": 55.6724527,
+  "lon": 12.5653736,
+  "matched_name": "Københavns Hovedbanegård",
+  "osm_tag": "railway:station",
+  "query_used": "København H",
+  "tag_used": "railway:station"
+ },
+ "Kuznica": {
+  "distance_km": 8.3,
+  "estimated": false,
+  "lat": 54.7362391,
+  "lon": 18.5766364,
+  "matched_name": "Kuźnica (Hel)",
+  "osm_tag": "railway:station",
+  "query_used": "Kuźnica",
+  "tag_used": "railway:station"
+ },
+ "Leeuwarden": {
+  "distance_km": 38.8,
+  "estimated": false,
+  "lat": 53.1964772,
+  "lon": 5.7929849,
+  "matched_name": "Leeuwarden",
+  "osm_tag": "railway:station",
+  "query_used": "Leeuwarden Station",
+  "tag_used": "railway:station"
+ },
+ "Luedenscheid Hbf": {
+  "distance_km": 15.9,
+  "estimated": false,
+  "lat": 51.2078618,
+  "lon": 7.5708494,
+  "matched_name": "Lüdenscheid-Brügge (Westf.)",
+  "osm_tag": "railway:station",
+  "query_used": "Lüdenscheid Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Massen": {
+  "distance_km": 25.9,
+  "estimated": false,
+  "lat": 51.5415801,
+  "lon": 7.6432952,
+  "matched_name": "Massen",
+  "osm_tag": "railway:halt",
+  "query_used": "Unna-Massen Bahnhof",
+  "tag_used": "railway:halt"
+ },
+ "Meppel": {
+  "distance_km": 24.1,
+  "estimated": false,
+  "lat": 52.6919049,
+  "lon": 6.1979382,
+  "matched_name": "Meppel",
+  "osm_tag": "railway:station",
+  "query_used": "Meppel Station",
+  "tag_used": "railway:station"
+ },
+ "Mrzezino": {
+  "distance_km": 7.8,
+  "estimated": false,
+  "lat": 54.6530081,
+  "lon": 18.4130307,
+  "matched_name": "Mrzezino",
+  "osm_tag": "railway:station",
+  "query_used": "Mrzezino",
+  "tag_used": "railway:station"
+ },
+ "Muelheim Ruhr Hbf": {
+  "distance_km": 28.7,
+  "estimated": false,
+  "lat": 51.4304596,
+  "lon": 6.8869735,
+  "matched_name": "Mülheim Hbf",
+  "osm_tag": "railway:station",
+  "query_used": "Mülheim (Ruhr) Hauptbahnhof",
+  "tag_used": "railway:station"
+ },
+ "Muelheim West": {
+  "distance_km": 29.7,
+  "estimated": false,
+  "lat": 51.4395852,
+  "lon": 6.8715078,
+  "matched_name": "Mülheim (Ruhr) West",
+  "osm_tag": "railway:halt",
+  "query_used": "Mülheim (Ruhr) West",
+  "tag_used": "railway:halt"
+ },
+ "Muelheim-Styrum": {
+  "distance_km": 31.0,
+  "estimated": false,
+  "lat": 51.4491773,
+  "lon": 6.8526869,
+  "matched_name": "Mülheim (Ruhr)-Styrum",
+  "osm_tag": "railway:station",
+  "query_used": "Mülheim-Styrum",
+  "tag_used": "railway:station"
+ },
+ "Nykoebing Falster": {
+  "distance_km": 62.2,
+  "estimated": false,
+  "lat": 55.9217621,
+  "lon": 11.6730476,
+  "matched_name": "Nykøbing Sjælland Station",
+  "osm_tag": "railway:station",
+  "query_used": "Nykøbing Falster Station",
+  "tag_used": "railway:station"
+ },
+ "Oesterport": {
+  "distance_km": 0.6,
+  "estimated": false,
+  "lat": 55.692878,
+  "lon": 12.5859236,
+  "manual_fixup": true,
+  "matched_name": "Østerport",
+  "osm_tag": "railway:station",
+  "query_used": "Osterport",
+  "tag_used": "railway:station"
+ },
+ "Oldenburg in Holstein": {
+  "distance_km": 42.7,
+  "estimated": false,
+  "lat": 54.2839697,
+  "lon": 10.8826658,
+  "matched_name": "Oldenburg (Holstein)",
+  "osm_tag": "railway:station",
+  "query_used": "Bahnhofstraße 22 Oldenburg in Holstein",
+  "tag_used": "railway:station"
+ },
+ "Puck": {
+  "distance_km": 2.7,
+  "estimated": false,
+  "lat": 54.7148824,
+  "lon": 18.4086265,
+  "matched_name": "Puck",
+  "osm_tag": "railway:station",
+  "query_used": "Puck",
+  "tag_used": "railway:station"
+ },
+ "Reda": {
+  "distance_km": 15.2,
+  "estimated": false,
+  "lat": 54.59495,
+  "lon": 18.353264,
+  "matched_name": "Reda",
+  "osm_tag": "railway:station",
+  "query_used": "Reda",
+  "tag_used": "railway:station"
+ },
+ "Rheine": {
+  "distance_km": 43.3,
+  "estimated": false,
+  "lat": 52.27617,
+  "lon": 7.4340189,
+  "matched_name": "Rheine",
+  "osm_tag": "railway:station",
+  "query_used": "Rheine Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Ringsted": {
+  "distance_km": 55.5,
+  "estimated": true,
+  "lat": 55.4398733,
+  "lon": 11.7968415,
+  "matched_name": "Midt- og Sydsjællands Brand & Redning - St. Ringsted",
+  "osm_tag": "amenity:fire_station",
+  "query_used": "Ringsted Station",
+  "tag_used": null
+ },
+ "Roedby": {
+  "distance_km": 1.0,
+  "estimated": false,
+  "lat": 54.6806916,
+  "lon": 11.4311387,
+  "manual_fixup": true,
+  "matched_name": "Rødby",
+  "osm_tag": "railway:halt",
+  "query_used": "Rødby",
+  "tag_used": null
+ },
+ "Ruine Hardenstein": {
+  "distance_km": 22.1,
+  "estimated": true,
+  "lat": 51.4224501,
+  "lon": 7.3027339,
+  "matched_name": "Burgruine Hardenstein",
+  "osm_tag": "amenity:ferry_terminal",
+  "query_used": "Burgruine Hardenstein",
+  "tag_used": null
+ },
+ "Rumia": {
+  "distance_km": 17.3,
+  "estimated": false,
+  "lat": 54.5691391,
+  "lon": 18.3866641,
+  "matched_name": "Rumia",
+  "osm_tag": "railway:station",
+  "query_used": "Rumia",
+  "tag_used": "railway:station"
+ },
+ "Rumia Janowo": {
+  "distance_km": 18.1,
+  "estimated": false,
+  "lat": 54.5595683,
+  "lon": 18.4045381,
+  "matched_name": "Rumia Janowo",
+  "osm_tag": "railway:halt",
+  "query_used": "Rumia Janowo",
+  "tag_used": "railway:halt"
+ },
+ "Rummenohl": {
+  "distance_km": 9.4,
+  "estimated": false,
+  "lat": 51.2778627,
+  "lon": 7.5283996,
+  "matched_name": "Rummenohl",
+  "osm_tag": "railway:station",
+  "query_used": "Rummenohl",
+  "tag_used": "railway:station"
+ },
+ "Runowo Pomorskie": {
+  "distance_km": 55.2,
+  "estimated": false,
+  "lat": 53.5557588,
+  "lon": 15.5294538,
+  "matched_name": "Runowo Pomorskie",
+  "osm_tag": "railway:station",
+  "query_used": "Runowo Pomorskie",
+  "tag_used": "railway:station"
+ },
+ "Schalksmuehle": {
+  "distance_km": 13.0,
+  "estimated": false,
+  "lat": 51.2405511,
+  "lon": 7.5325914,
+  "matched_name": "Schalksmühle",
+  "osm_tag": "railway:halt",
+  "query_used": "Schalksmühle",
+  "tag_used": "railway:halt"
+ },
+ "Scharbeutz": {
+  "distance_km": 0.5,
+  "estimated": true,
+  "lat": 54.0199046,
+  "lon": 10.7457325,
+  "manual_fixup": true,
+  "matched_name": "Scharbeutz, Bahnhof",
+  "osm_tag": "highway:bus_stop",
+  "query_used": "Scharbeutz Bahnhof",
+  "tag_used": null
+ },
+ "Schwerte Ruhr": {
+  "distance_km": 10.7,
+  "estimated": false,
+  "lat": 51.4425888,
+  "lon": 7.5592083,
+  "matched_name": "Schwerte (Ruhr)",
+  "osm_tag": "railway:station",
+  "query_used": "Schwerte (Ruhr) Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Siedlinghausen": {
+  "distance_km": 6.42,
+  "estimated": true,
+  "lat": 51.258572,
+  "lon": 8.4738227,
+  "manual_fixup": true,
+  "matched_name": "Siedlinghausen",
+  "osm_tag": "railway:platform",
+  "query_used": "Siedlinghausen",
+  "tag_used": null
+ },
+ "Silbach": {
+  "distance_km": 0.38,
+  "estimated": true,
+  "lat": 51.2233732,
+  "lon": 8.481214,
+  "manual_fixup": true,
+  "matched_name": "Silbach",
+  "osm_tag": "railway:platform",
+  "query_used": "Silbach",
+  "tag_used": null
+ },
+ "Starogard Gdanski": {
+  "distance_km": 44.1,
+  "estimated": false,
+  "lat": 53.977148,
+  "lon": 18.5257736,
+  "matched_name": "Starogard Gdański",
+  "osm_tag": "railway:station",
+  "query_used": "Starogard Gdański",
+  "tag_used": "railway:station"
+ },
+ "Steinhelle": {
+  "distance_km": 3.2,
+  "estimated": true,
+  "lat": 51.3348865,
+  "lon": 8.4781321,
+  "manual_fixup": true,
+  "matched_name": "Steinhelle",
+  "osm_tag": "information:guidepost",
+  "query_used": "Steinhelle",
+  "tag_used": null
+ },
+ "Swarzewo": {
+  "distance_km": 5.7,
+  "estimated": false,
+  "lat": 54.75259,
+  "lon": 18.3824283,
+  "matched_name": "Swarzewo",
+  "osm_tag": "railway:halt",
+  "query_used": "Swarzewo",
+  "tag_used": "railway:halt"
+ },
+ "Szczecin Glowny": {
+  "distance_km": 13.5,
+  "estimated": false,
+  "lat": 53.4182413,
+  "lon": 14.5494069,
+  "matched_name": "Szczecin Główny",
+  "osm_tag": "railway:station",
+  "query_used": "Szczecin Główny",
+  "tag_used": "railway:station"
+ },
+ "Szczecinek": {
+  "distance_km": 19.4,
+  "estimated": false,
+  "lat": 53.6938225,
+  "lon": 16.7055139,
+  "matched_name": "Szczecinek",
+  "osm_tag": "railway:station",
+  "query_used": "Szczecinek",
+  "tag_used": "railway:station"
+ },
+ "Tczew": {
+  "distance_km": 32.3,
+  "estimated": false,
+  "lat": 54.0972478,
+  "lon": 18.7897812,
+  "matched_name": "Tczew",
+  "osm_tag": "railway:station",
+  "query_used": "Tczew",
+  "tag_used": "railway:station"
+ },
+ "Timmendorfer Strand Ratekau": {
+  "distance_km": 0.5,
+  "estimated": true,
+  "lat": 53.9945693,
+  "lon": 10.7631436,
+  "manual_fixup": true,
+  "matched_name": "Timmendorfer Strand, Bahnhof",
+  "osm_tag": "highway:bus_stop",
+  "query_used": "Timmendorfer Strand Bahnhof",
+  "tag_used": null
+ },
+ "Unna": {
+  "distance_km": 28.9,
+  "estimated": false,
+  "lat": 51.5390214,
+  "lon": 7.6922227,
+  "matched_name": "Unna",
+  "osm_tag": "railway:station",
+  "query_used": "Unna Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Unna Hbf": {
+  "distance_km": 28.9,
+  "estimated": false,
+  "lat": 51.5390214,
+  "lon": 7.6922227,
+  "matched_name": "Unna",
+  "osm_tag": "railway:station",
+  "query_used": "Unna Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Unna West": {
+  "distance_km": 27.9,
+  "estimated": false,
+  "lat": 51.5389367,
+  "lon": 7.6764509,
+  "matched_name": "Unna West",
+  "osm_tag": "railway:halt",
+  "query_used": "Unna West",
+  "tag_used": "railway:halt"
+ },
+ "Wanne-Eickel Hbf": {
+  "distance_km": 12.9,
+  "estimated": false,
+  "lat": 51.5312379,
+  "lon": 7.1661165,
+  "matched_name": "Herne-Wanne-Eickel Hbf",
+  "osm_tag": "railway:station",
+  "query_used": "Wanne-Eickel Hauptbahnhof",
+  "tag_used": "railway:station"
+ },
+ "Wengern": {
+  "distance_km": 18.2,
+  "estimated": false,
+  "lat": 51.399528,
+  "lon": 7.3508375,
+  "matched_name": "Wengern Ost",
+  "osm_tag": "railway:halt",
+  "query_used": "Wengern",
+  "tag_used": "railway:halt"
+ },
+ "Wengern Ost": {
+  "distance_km": 18.2,
+  "estimated": false,
+  "lat": 51.399528,
+  "lon": 7.3508375,
+  "matched_name": "Wengern Ost",
+  "osm_tag": "railway:halt",
+  "query_used": "Wengern Ost",
+  "tag_used": "railway:halt"
+ },
+ "Wickede Ruhr": {
+  "distance_km": 42.9,
+  "estimated": false,
+  "lat": 51.4931771,
+  "lon": 7.8700197,
+  "matched_name": "Wickede (Ruhr)",
+  "osm_tag": "railway:station",
+  "query_used": "Wickede (Ruhr) Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Winterberg Westf": {
+  "distance_km": 13.9,
+  "estimated": false,
+  "lat": 51.1990382,
+  "lon": 8.5323923,
+  "matched_name": "Winterberg (Westf)",
+  "osm_tag": "railway:station",
+  "query_used": "Winterberg (Westf) Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Witten Bommern": {
+  "distance_km": 19.8,
+  "estimated": false,
+  "lat": 51.4245556,
+  "lon": 7.3405601,
+  "matched_name": "Witten-Bommern",
+  "osm_tag": "railway:halt",
+  "query_used": "Witten-Bommern",
+  "tag_used": "railway:halt"
+ },
+ "Wladyslawowo": {
+  "distance_km": 8.7,
+  "estimated": false,
+  "lat": 54.7934715,
+  "lon": 18.4019048,
+  "matched_name": "Władysławowo",
+  "osm_tag": "railway:station",
+  "query_used": "Władysławowo",
+  "tag_used": "railway:station"
+ },
+ "Wladyslawowo Port": {
+  "distance_km": 8.4,
+  "estimated": false,
+  "lat": 54.7935583,
+  "lon": 18.4176714,
+  "matched_name": "Władysławowo Port",
+  "osm_tag": "railway:halt",
+  "query_used": "Władysławowo Port",
+  "tag_used": "railway:halt"
+ },
+ "Zeche Nachtigall": {
+  "distance_km": 21.4,
+  "estimated": true,
+  "lat": 51.4294386,
+  "lon": 7.3195795,
+  "matched_name": "Zeche Nachtigall",
+  "osm_tag": "railway:loading_ramp",
+  "query_used": "Zeche Nachtigall Witten",
+  "tag_used": null
+ },
+ "Zelistrzewo": {
+  "distance_km": 5.6,
+  "estimated": false,
+  "lat": 54.674051,
+  "lon": 18.4161141,
+  "matched_name": "Żelistrzewo",
+  "osm_tag": "railway:halt",
+  "query_used": "Żelistrzewo",
+  "tag_used": "railway:halt"
+ },
+ "Zwolle": {
+  "distance_km": 43.9,
+  "estimated": false,
+  "lat": 52.5050086,
+  "lon": 6.0912373,
+  "matched_name": "Zwolle",
+  "osm_tag": "railway:station",
+  "query_used": "Zwolle Station",
+  "tag_used": "railway:station"
+ }
+}

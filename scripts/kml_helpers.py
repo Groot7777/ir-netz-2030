@@ -10,12 +10,15 @@ DARK_MODE_SNIPPET = (
 )
 
 LINE_COLORS = {
-    "RE71": "ff07c1ff",  # Amber/Gold
-    "S10": "ff889600",   # Teal
-    "S3": "ff4ac38b",    # Lime green
-    "S30": "ff205e1b",   # Dunkelgruen
-    "RE17": "ffff6229",  # Skandinavisch Blau
-    "RE30": "ff006fff",  # Niederlaendisch Orange
+    # Per Max-Min-RGB-Distanz-Suche gegen alle 23 bestehenden Linienfarben neu bestimmt,
+    # damit keine Linie (v.a. auf gemeinsam befahrenen Abschnitten im Ruhrgebiet/Ostsee-
+    # Raum) mit einer bestehenden oder anderen neuen Linie verwechselbar ist.
+    "RE71": "ffff0000",  # Reines Blau
+    "S10": "ffff00ee",   # Magenta
+    "S3": "ff87ff00",    # Fruehlingsgruen
+    "S30": "ff2fbfb5",   # Oliv-Tuerkis
+    "RE17": "ff00ff00",  # Reines Gruen
+    "RE30": "ffffff00",  # Cyan
 }
 
 

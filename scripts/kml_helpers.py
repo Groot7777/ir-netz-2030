@@ -10,15 +10,26 @@ DARK_MODE_SNIPPET = (
 )
 
 LINE_COLORS = {
-    # Per Max-Min-RGB-Distanz-Suche gegen alle 23 bestehenden Linienfarben neu bestimmt,
-    # damit keine Linie (v.a. auf gemeinsam befahrenen Abschnitten im Ruhrgebiet/Ostsee-
-    # Raum) mit einer bestehenden oder anderen neuen Linie verwechselbar ist.
+    # Farben der 6 neuen Linien. Per Max-Min-LAB-Distanz-Suche gegen ALLE 29 Linienfarben
+    # des Gesamtnetzes bestimmt (siehe auch EXISTING_LINE_COLOR_OVERRIDES unten), damit
+    # keine zwei Linien im gesamten Projekt mehr verwechselbar sind.
     "RE71": "ffff0000",  # Reines Blau
     "S10": "ffff00ee",   # Magenta
     "S3": "ff87ff00",    # Fruehlingsgruen
     "S30": "ff2fbfb5",   # Oliv-Tuerkis
-    "RE17": "ff00ff00",  # Reines Gruen
-    "RE30": "ffffff00",  # Cyan
+    "RE17": "ffff6600",  # Kraeftiges Blau (urspruengliches Gruen kollidierte mit RE32 -> ersetzt)
+    "RE30": "ffffd426",  # Gelb-Orange (urspruengliches Cyan kollidierte mit RE35 -> ersetzt)
+}
+
+# Bestehende Linien (Style-IDs aus der Baseline-KML), deren Farbe angepasst werden musste,
+# weil sie im Gesamtnetz-Check zu nah an einer anderen Linie lag (LAB-Abstand < 22):
+# RE90/RE25, RB37/RE45, RE90b/RE17(alt), RE46/RE5. Nur diese 4 werden angefasst, alle
+# anderen bestehenden Linienfarben bleiben unveraendert.
+EXISTING_LINE_COLOR_OVERRIDES = {
+    "lineRE90": "ff26ffde",
+    "lineRB37": "ff0000ff",
+    "lineRE90b": "ffb800cc",
+    "lineRE46": "ff3d93cc",
 }
 
 

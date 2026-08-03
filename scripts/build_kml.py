@@ -12,7 +12,7 @@ from display_names import DISPLAY_NAMES
 from descriptions import build_station_blocks, build_line_overview_html
 from assemble_paths import load_routes, simplified_branch_path
 from kml_helpers import (
-    LINE_COLORS, xml_escape, cdata_description, station_lookat,
+    LINE_COLORS, EXISTING_LINE_COLOR_OVERRIDES, xml_escape, cdata_description, station_lookat,
     line_lookat_from_points, coords_kml,
 )
 
@@ -204,6 +204,16 @@ def main():
     body_out = "".join(existing_line_pms) + "".join(new_line_pms) + "".join(all_station_pms)
 
     final_text = header + body_out + footer
+
+    # Farb-Overrides fuer die wenigen bestehenden Linien, die im Gesamtnetz-Farbcheck
+    # zu nah an einer anderen Linie lagen (siehe kml_helpers.EXISTING_LINE_COLOR_OVERRIDES)
+    for style_id, new_color in EXISTING_LINE_COLOR_OVERRIDES.items():
+        pattern = re.compile(
+            r'(<Style id="' + re.escape(style_id) + r'">\s*<LineStyle>\s*<color>)[0-9a-f]{8}(</color>)'
+        )
+        final_text, n = pattern.subn(r'\g<1>' + new_color + r'\g<2>', final_text)
+        if n != 1:
+            raise RuntimeError(f"Farb-Override fuer {style_id} fehlgeschlagen ({n} Treffer)")
 
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:

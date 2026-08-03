@@ -94,7 +94,7 @@
 </Style>
 <Style id="lineRE46">
 <LineStyle>
-<color>ffe16941</color>
+<color>ff3d93cc</color>
 <width>4</width>
 </LineStyle>
 </Style>
@@ -112,13 +112,13 @@
 </Style>
 <Style id="lineRE90">
 <LineStyle>
-<color>ff2d52a0</color>
+<color>ff26ffde</color>
 <width>4</width>
 </LineStyle>
 </Style>
 <Style id="lineRE90b">
 <LineStyle>
-<color>ffa09e5f</color>
+<color>ffb800cc</color>
 <width>4</width>
 </LineStyle>
 </Style>
@@ -136,7 +136,7 @@
 </Style>
 <Style id="lineRB37">
 <LineStyle>
-<color>ff507fff</color>
+<color>ff0000ff</color>
 <width>4</width>
 </LineStyle>
 </Style>
@@ -150,8 +150,8 @@
 <Style id="style_lineS10"><LineStyle><color>ffff00ee</color><width>4</width></LineStyle></Style>
 <Style id="style_lineS3"><LineStyle><color>ff87ff00</color><width>4</width></LineStyle></Style>
 <Style id="style_lineS30"><LineStyle><color>ff2fbfb5</color><width>4</width></LineStyle></Style>
-<Style id="style_lineRE17"><LineStyle><color>ff00ff00</color><width>4</width></LineStyle></Style>
-<Style id="style_lineRE30"><LineStyle><color>ffffff00</color><width>4</width></LineStyle></Style>
+<Style id="style_lineRE17"><LineStyle><color>ffff6600</color><width>4</width></LineStyle></Style>
+<Style id="style_lineRE30"><LineStyle><color>ffffd426</color><width>4</width></LineStyle></Style>
 <Placemark>
 <name>RE2 Düsseldorf-Osnabrück</name>
 <description><![CDATA[<div class="kmldesc"><b>Düsseldorf Hauptbahnhof → Osnabrück Hauptbahnhof</b><br/><br/>Halbstundentakt mit RE9 auf dem Nordast; Anschluss ICE-Sprinter in Essen Hbf<br/><br/><b>Bahnhöfe (7 Halte)</b> — Beispielzeiten eines Musterzugs, zeigt die reale Fahrzeit:<br/><br/><br/>&#8226;&#160;<b>Düsseldorf Hauptbahnhof</b><br/>Beispielzeit: ab 07:02<br/><i>Startbahnhof am Rheinknoten</i><br/>&#8226;&#160;<b>Duisburg Hauptbahnhof</b><br/>Beispielzeit: an 07:15 / ab 07:17<br/><i>Systemhalt Ruhrgebiet</i><br/>&#8226;&#160;<b>Essen Hauptbahnhof</b><br/>Beispielzeit: an 07:28 / ab 07:30<br/><i>Premiumknoten: Umstieg ICE Sprinter</i><br/>&#8226;&#160;<b>Gelsenkirchen Hauptbahnhof</b><br/>Beispielzeit: an 07:39 / ab 07:41<br/><i>Systemhalt Ruhrgebiet</i><br/>&#8226;&#160;<b>Recklinghausen Hauptbahnhof</b><br/>Beispielzeit: an 07:50 / ab 07:52<br/><i>Taktknoten Nordast</i><br/>&#8226;&#160;<b>Münster (Westf) Hauptbahnhof</b><br/>Beispielzeit: an 08:20 / ab 08:24<br/><i>Großer Taktknoten</i><br/>&#8226;&#160;<b>Osnabrück Hauptbahnhof</b><br/>Beispielzeit: an 08:59<br/><i>Endstation, Anschluss Richtung Küste</i></div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>

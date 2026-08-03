@@ -213,35 +213,32 @@ S30 = {
 # ---------------------------------------------------------------------------
 # LINIE RE17: Oesterport - Rostock (transnational DK-DE)
 # ---------------------------------------------------------------------------
-# "Takt (04:04-20:04)"-Spalte liefert direkt xx:MM fuer beide Richtungen.
-# Beispielzuglauf (echte Uhrzeiten) = Spalte F4 (einzige durchgehend gueltige,
-# ohne Stabling-Abbruch): Nord->Sued Oesterport 03:04 -> Rostock 07:43;
-# Sued->Nord Rostock 03:04 -> Oesterport 07:42.
+# Nachreichung des Nutzers (Phase 2: "Der reine Linien-Fahrplan / Musterzuege")
+# ersetzt die urspruenglich unvollstaendige Tabelle. Beide Richtungen mit echten
+# Uhrzeiten direkt aus der PDF-Nachlieferung, keine Interpolation mehr noetig
+# (auch fuer die deutschen Kuestenstationen). "Fehmarnbelttunnel" ist kein Halt
+# (keine Zeiten angegeben), daher nicht als Station aufgenommen.
 
 RE17_STOPS = [
-    # key, hin_an(F4), hin_ab(F4/Takt), rueck_an(F4), rueck_ab(F4/Takt), info
-    #
-    # Die 6 folgenden Stationen (Grossenbrode/Heiligenhafen bis Buetzow) stehen NICHT in der
-    # Fahrplan-Tabelle der PDF (nur in der Infrastruktur-Beschreibung mit Adressen), wurden
-    # aber auf Nutzerwunsch als echte Fahrgasthalte ergaenzt. Zeiten linear/proportional aus
-    # den amtlichen Segment-Distanzen (Kapitel 1 der PDF) in die Zeitluecken der Original-
-    # Tabelle interpoliert (siehe Kommentare je Segment).
-    ("Oesterport", None, "03:04", "07:42", None, "Boulevardbanen TIB10, viergleisig, 25kV/50Hz AC, Takt ab xx:04"),
-    ("Koebenhavn H", "03:16", "03:16", "07:34", "07:34", "Schnellfahrstrecke TIB6, bis 250 km/h, Takt xx:16/xx:34"),
-    ("Ringsted", "03:47", "03:47", "07:01", "07:01", "Sydbanen TIB2, Takt xx:47/xx:01"),
-    ("Nykoebing Falster", "04:37", "04:37", "06:11", "06:11", "Sydbanen, Takt xx:37/xx:11"),
-    ("Roedby", "04:56", "04:56", "05:52", "05:52", "Vor Fehmarnbelttunnel-Neubaustrecke, Takt xx:56/xx:52"),
-    # -- Segment Roedby-Luebeck (interpoliert aus VzG1120/1105/1100-Distanzen) --
-    ("Grossenbrode Heiligenhafen", "05:17", "05:19", "05:31", "05:33", "Neubaustation an K42, Grenze Grossenbrode/Heiligenhafen, VzG1120"),
-    ("Oldenburg in Holstein", "05:31", "05:33", "05:18", "05:20", "Bestand/Ausbau, Bahnhofstrasse 22, VzG1105"),
-    ("Scharbeutz", "05:46", "05:48", "05:04", "05:06", "Neubaustation an A1 AS16 Scharbeutz, Bövelstredder"),
-    ("Timmendorfer Strand Ratekau", "05:55", "05:57", "04:56", "04:58", "Neubaustation an L181/A1 AS17, Gemeindegebiet Ratekau"),
-    ("Bad Schwartau", "06:06", "06:07", "04:46", "04:48", "Bestand/Ausbau, Am Bahnhof 1, Beton-Lärmschutztrog VzG1100"),
-    ("Luebeck Hbf", "06:12", "06:12", "04:42", "04:42", "Ausbaustrecke Lübeck-Puttgarden, vor eingleisigem Nadelöhr, Takt xx:12/xx:42"),
-    ("Bad Kleinen", "06:55", "06:55", "03:54", "03:54", "Batteriebetrieb endet/beginnt, Nachladung über Oberleitung VzG1123, Takt xx:55/xx:54"),
-    # -- Segment Bad Kleinen-Rostock (interpoliert aus VzG1123/6446-Distanzen, Summe exakt 48 Min) --
-    ("Buetzow", "07:18", "07:19", "03:29", "03:31", "Systemhalt VzG1123/6446, Ausweichgleis 2 (210m Nutzlänge)"),
-    ("Rostock Hauptbahnhof", "07:43", None, None, "03:04", "Endknoten Hauptstrecke VzG6446, Takt an xx:43/ab xx:04"),
+    # key, hin_an, hin_ab, rueck_an, rueck_ab, info
+    ("Oesterport", None, "07:04", "11:42", None, "Startbahnhof der Linie, dänisches Bahnstromnetz (25 kV AC)"),
+    ("Noerreport", "07:07", "07:09", "11:37", "11:39", "Unterirdischer Mittelbahnsteig, fahrzeugkritische Nutzlänge (225 m)"),
+    ("Koebenhavn H", "07:12", "07:16", "11:30", "11:34", "Zentraler dänischer Systemknoten"),
+    ("Koege Nord", "07:31", "07:33", "11:13", "11:15", "Fernbahnbahnsteige der dänischen Schnellfahrstrecke"),
+    ("Ringsted", "07:45", "07:47", "10:59", "11:01", "Verknüpfungspunkt zur Sydbanen"),
+    ("Naestved", "08:03", "08:05", "10:41", "10:43", "Regionaler Knotenpunkt"),
+    ("Vordingborg", "08:18", "08:20", "10:26", "10:28", "Zulaufstation vor der Storstrømsbrücke"),
+    ("Nykoebing Falster", "08:35", "08:37", "10:09", "10:11", "Letzter dänischer Festlandsknoten"),
+    ("Roedby", "08:54", "08:56", "09:50", "09:52", "Grenzbahnhof vor der Ostsee-Querung (Fehmarnbelttunnel, Systemwechsel 25kV DK/15kV DE)"),
+    ("Grossenbrode Heiligenhafen", "09:13", "09:15", "09:31", "09:33", "Neubaustation direkt an der Kreisstraße 42 (K42) im Bereich Mittelhof"),
+    ("Oldenburg in Holstein", "09:23", "09:25", "09:21", "09:23", "Historischer Standort im Osten der Stadt, Bahnhofstraße 22"),
+    ("Scharbeutz", "09:39", "09:41", "09:05", "09:07", "Nördlich der Straße Bövelstredder, direkt an der Ostseite der A1"),
+    ("Timmendorfer Strand Ratekau", "09:47", "09:49", "08:57", "08:59", "An der Landesstraße 181 (Bäderstraße) auf Höhe der Autobahn-AS 17"),
+    ("Bad Schwartau", "09:56", "09:58", "08:48", "08:50", "Am Bahnhof 1, im neu errichteten Lärmschutztrog der Ausbaustrecke"),
+    ("Luebeck Hbf", "10:04", "10:12", "08:34", "08:42", "Großknoten, Beginn/Ende der nicht elektrifizierten, eingleisigen Akkustrecke"),
+    ("Bad Kleinen", "10:52", "10:55", "07:51", "07:54", "Netzknoten, Ende/Beginn der Akkulücke, ab hier wieder dauerhaft Oberleitung"),
+    ("Buetzow", "11:17", "11:19", "07:27", "07:29", "Regionaler Verknüpfungspunkt im mecklenburgischen Netz"),
+    ("Rostock Hauptbahnhof", "11:43", None, None, "07:04", "Endstation, Übergang zur S-Bahn Rostock und zum Ostsee-Regionalnetz"),
 ]
 
 RE17 = {

@@ -113,6 +113,10 @@ DISPLAY_NAMES = {
     # --- RE17 Oesterport-Rostock: Daenemark/Deutschland ---
     "Oesterport": "Østerport",
     "Koebenhavn H": "København H",
+    "Noerreport": "Nørreport",
+    "Koege Nord": "Køge Nord",
+    "Naestved": "Næstved",
+    "Vordingborg": "Vordingborg",
     "Ringsted": "Ringsted",
     "Nykoebing Falster": "Nykøbing Falster",
     "Roedby": "Rødby",

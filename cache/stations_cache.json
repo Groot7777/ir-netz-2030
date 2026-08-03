@@ -590,6 +590,17 @@
   "query_used": "København H",
   "tag_used": "railway:station"
  },
+ "Koege Nord": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 55.4995703,
+  "lon": 12.1726037,
+  "manual_fixup": true,
+  "matched_name": "Køge Nord",
+  "osm_tag": "railway:station",
+  "query_used": "manual",
+  "tag_used": "railway:station"
+ },
  "Kuznica": {
   "distance_km": 8.3,
   "estimated": false,
@@ -680,14 +691,37 @@
   "query_used": "Mülheim-Styrum",
   "tag_used": "railway:station"
  },
- "Nykoebing Falster": {
-  "distance_km": 62.2,
+ "Naestved": {
+  "distance_km": 0.1,
   "estimated": false,
-  "lat": 55.9217621,
-  "lon": 11.6730476,
-  "matched_name": "Nykøbing Sjælland Station",
+  "lat": 55.2311888,
+  "lon": 11.7670814,
+  "manual_fixup": true,
+  "matched_name": "Næstved",
   "osm_tag": "railway:station",
-  "query_used": "Nykøbing Falster Station",
+  "query_used": "manual",
+  "tag_used": "railway:station"
+ },
+ "Noerreport": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 55.6838484,
+  "lon": 12.5727632,
+  "manual_fixup": true,
+  "matched_name": "Nørreport",
+  "osm_tag": "railway:station",
+  "query_used": "manual",
+  "tag_used": "railway:station"
+ },
+ "Nykoebing Falster": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 54.7668891,
+  "lon": 11.877834,
+  "manual_fixup": true,
+  "matched_name": "Nykøbing F",
+  "osm_tag": "railway:station",
+  "query_used": "manual",
   "tag_used": "railway:station"
  },
  "Oesterport": {
@@ -966,6 +1000,17 @@
   "osm_tag": "railway:halt",
   "query_used": "Unna West",
   "tag_used": "railway:halt"
+ },
+ "Vordingborg": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 55.0118034,
+  "lon": 11.89923,
+  "manual_fixup": true,
+  "matched_name": "Vordingborg",
+  "osm_tag": "railway:station",
+  "query_used": "manual",
+  "tag_used": "railway:station"
  },
  "Wanne-Eickel Hbf": {
   "distance_km": 12.9,

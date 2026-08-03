@@ -28,7 +28,8 @@ def scan(path):
         # Ausnahmewoerter maskieren
         masked = chunk
         for w in SAFE_WORDS:
-            masked = masked.replace(w, "\x00" * len(w))
+            for variant in (w, w.lower(), w.capitalize()):
+                masked = masked.replace(variant, "\x00" * len(variant))
         for pat in PATTERNS:
             for m in re.finditer(pat, masked):
                 start = max(0, m.start() - 25)

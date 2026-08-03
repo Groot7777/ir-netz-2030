@@ -278,8 +278,8 @@ RE30_STAMM_HIN = [
     ("Holzwickede", "10:46", "10:47", "DB-Strecke 2840"),
 ]
 
-RE30_SCHWERTE_HIN = ("Schwerte Ruhr", "10:55", None, "Richtungswechsel und Fluegelung, 8 Min Halt in Doppeltraktion (~210m)")
-RE30_SCHWERTE_RUECK = ("Schwerte Ruhr", None, "08:24", "Zusammenfuehrung Fluegelaeste und Richtungswechsel")
+RE30_SCHWERTE_HIN = ("Schwerte Ruhr", "10:55", None, "Richtungswechsel und Flügelung, 8 Min Halt in Doppeltraktion (~210m)")
+RE30_SCHWERTE_RUECK = ("Schwerte Ruhr", None, "08:24", "Zusammenführung Flügeläste und Richtungswechsel")
 
 RE30_STAMM_RUECK = [
     ("Holzwickede", "08:31", "08:32", "DB-Strecke 2840"),

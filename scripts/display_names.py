@@ -85,7 +85,7 @@ DISPLAY_NAMES = {
     "Bochum-Kohlenstrasse": "Bochum-Kohlenstraße",
     "Bochum-Stahlhausen": "Bochum-Stahlhausen",
     "Witten Hbf": "Witten Hbf",
-    "Wengern": "Wengern",
+    "Wengern": "Wengern Ost",  # identischer Knoten wie S3/S30 "Wengern Ost" (Verknuepfung S10, laut PDF)
     "Hagen-Vorhalle": "Hagen-Vorhalle",
     "Schwerte Ruhr": "Schwerte (Ruhr)",
     "Holzwickede": "Holzwickede",
@@ -137,7 +137,7 @@ DISPLAY_NAMES = {
     "Muenster Westf Hbf": "Münster (Westf) Hauptbahnhof",
     "Drensteinfurt": "Drensteinfurt",
     "Hamm Westf Hbf": "Hamm (Westf) Hbf",
-    "Unna": "Unna",
+    "Unna": "Unna Hbf",  # identische Station wie S10 "Unna Hbf"
     "Froendenberg": "Fröndenberg",
     "Wickede Ruhr": "Wickede (Ruhr)",
     "Arnsberg Westf": "Arnsberg (Westf)",

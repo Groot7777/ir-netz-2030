@@ -73,14 +73,15 @@
   "tag_used": null
  },
  "Bochum West": {
-  "distance_km": 6.2,
+  "distance_km": 0.1,
   "estimated": false,
-  "lat": 51.4785335,
-  "lon": 7.2232341,
-  "matched_name": "Bochum Hauptbahnhof",
-  "osm_tag": "railway:station",
+  "lat": 51.4815762,
+  "lon": 7.2111833,
+  "manual_fixup": true,
+  "matched_name": "Bochum West",
+  "osm_tag": "railway:halt",
   "query_used": "Bochum West",
-  "tag_used": "railway:station"
+  "tag_used": "railway:halt"
  },
  "Bochum-Bermuda3eck": {
   "distance_km": 6.5,
@@ -488,13 +489,14 @@
   "tag_used": null
  },
  "Hattingen Ruhr": {
-  "distance_km": 21.1,
+  "distance_km": 0.1,
   "estimated": false,
-  "lat": 51.4355898,
-  "lon": 7.3293869,
-  "matched_name": "Witten Hbf",
+  "lat": 51.4008893,
+  "lon": 7.1692053,
+  "manual_fixup": true,
+  "matched_name": "Hattingen (Ruhr)",
   "osm_tag": "railway:station",
-  "query_used": "Hattingen (Ruhr) Bahnhof",
+  "query_used": "Hattingen (Ruhr) Hauptbahnhof",
   "tag_used": "railway:station"
  },
  "Haus Kemnade": {

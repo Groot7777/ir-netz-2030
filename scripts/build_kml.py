@@ -121,59 +121,97 @@ def patch_existing_station(baseline_text, display_name, new_blocks):
     return baseline_text[:start] + new_block_text + baseline_text[end:]
 
 
+PLACEMARK_RE = re.compile(r"<Placemark>.*?</Placemark>\n?", re.DOTALL)
+NAME_IN_PLACEMARK_RE = re.compile(r"<name>(.*?)</name>")
+
+
 def main():
     with open(BASELINE, encoding="utf-8") as f:
         baseline_text = f.read()
 
     routes = load_routes()
-    station_blocks = build_station_blocks()
+    station_blocks_by_key = build_station_blocks()
 
-    all_keys = sorted(station_blocks.keys(), key=lambda k: sort_key_umlaut(DISPLAY_NAMES[k]))
-
-    new_station_xml_parts = []
-    patched = 0
-    created = 0
-    for key in all_keys:
+    # Mehrere ASCII-Keys koennen auf denselben Anzeigenamen zeigen (identische reale
+    # Station, z.B. "Unna"/"Unna Hbf" oder "Wengern"/"Wengern Ost") -> zusammenfuehren,
+    # damit nicht zwei Placemarks am selben Punkt entstehen. Repraesentativer Key pro
+    # Anzeigename = der erste in ALL_LINES-Reihenfolge angetroffene.
+    station_blocks = {}  # display_name -> Bloecke
+    repr_key_for_display = {}  # display_name -> ein ASCII-Key (fuer Koordinate/is_preexisting)
+    for key, blocks in station_blocks_by_key.items():
         disp = DISPLAY_NAMES[key]
-        blocks = station_blocks[key]
+        station_blocks.setdefault(disp, []).extend(blocks)
+        repr_key_for_display.setdefault(disp, key)
+
+    all_display_names = sorted(station_blocks.keys(), key=sort_key_umlaut)
+
+    # 1. Alle bestehenden Stationen patchen (Text bleibt sonst unveraendert)
+    patched = 0
+    for disp in all_display_names:
+        key = repr_key_for_display[disp]
         if ast.is_preexisting(key):
-            baseline_text = patch_existing_station(baseline_text, disp, blocks)
+            baseline_text = patch_existing_station(baseline_text, disp, station_blocks[disp])
             patched += 1
-        else:
-            lat, lon = ast.get_coord(key)
-            new_station_xml_parts.append(build_new_station_placemark(disp, lat, lon, blocks))
-            created += 1
 
-    print(f"{patched} bestehende Stationen gepatcht, {created} neue Stationen erstellt")
+    # 2. Kopf (bis zum ersten Placemark) von den Placemarks trennen
+    first_pm_idx = baseline_text.index("<Placemark>")
+    header = baseline_text[:first_pm_idx]
+    rest = baseline_text[first_pm_idx:]
+    tail_match = re.search(r"</Document>\s*</kml>\s*$", rest)
+    if not tail_match:
+        raise RuntimeError("Kein </Document></kml>-Abschluss gefunden")
+    body = rest[:tail_match.start()]
+    footer = rest[tail_match.start():]
 
-    # Styles fuer die 6 neuen Linien
+    existing_placemarks = PLACEMARK_RE.findall(body)
+    existing_line_pms = [p for p in existing_placemarks if "<LineString" in p or "<MultiGeometry" in p]
+    existing_station_pms = [p for p in existing_placemarks if "<Point>" in p]
+    assert len(existing_line_pms) + len(existing_station_pms) == len(existing_placemarks)
+
+    # 3. Neue Linien-Placemarks + Styles bauen
     style_defs = []
-    line_placemark_parts = []
+    new_line_pms = []
     for line in ld.ALL_LINES:
         style_id, placemark_xml = build_line_placemark(line, routes)
         color = LINE_COLORS[line["number"]]
         style_defs.append(f'<Style id="{style_id}"><LineStyle><color>{color}</color><width>4</width></LineStyle></Style>\n')
-        line_placemark_parts.append(placemark_xml)
+        new_line_pms.append(placemark_xml)
+    header = header.rstrip() + "\n" + "".join(style_defs)
 
-    # Neue Styles direkt nach dem letzten bestehenden </Style> vor dem ersten Placemark einfuegen
-    style_insert_point = baseline_text.index("<Placemark>")
-    baseline_text = (
-        baseline_text[:style_insert_point]
-        + "".join(style_defs)
-        + baseline_text[style_insert_point:]
-    )
+    # 4. Neue Stations-Placemarks bauen
+    new_station_pms_by_name = {}
+    created = 0
+    for disp in all_display_names:
+        key = repr_key_for_display[disp]
+        if not ast.is_preexisting(key):
+            lat, lon = ast.get_coord(key)
+            new_station_pms_by_name[disp] = build_new_station_placemark(disp, lat, lon, station_blocks[disp])
+            created += 1
 
-    new_content = "".join(line_placemark_parts) + "".join(new_station_xml_parts)
+    print(f"{patched} bestehende Stationen gepatcht, {created} neue Stationen erstellt")
 
-    final_text = baseline_text.replace("</Document>\n</kml>", new_content + "</Document>\n</kml>")
-    if final_text == baseline_text:
-        raise RuntimeError("Einfuegepunkt </Document></kml> nicht gefunden!")
+    # 5. Alle Stations-Placemarks (bestehend, jetzt gepatcht + neu) global alphabetisch sortieren
+    all_station_pms = list(existing_station_pms)
+    for name, pm in new_station_pms_by_name.items():
+        all_station_pms.append(pm)
+
+    def name_of(pm):
+        m = NAME_IN_PLACEMARK_RE.search(pm)
+        return m.group(1) if m else ""
+
+    all_station_pms.sort(key=lambda pm: sort_key_umlaut(name_of(pm)))
+
+    body_out = "".join(existing_line_pms) + "".join(new_line_pms) + "".join(all_station_pms)
+
+    final_text = header + body_out + footer
 
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         f.write(final_text)
 
     print(f"Geschrieben: {OUTPUT}")
+    print(f"Linien: {len(existing_line_pms)} bestehend + {len(new_line_pms)} neu; "
+          f"Stationen: {len(all_station_pms)} gesamt")
 
     # XML-Wohlgeformtheit pruefen
     ET.parse(OUTPUT)

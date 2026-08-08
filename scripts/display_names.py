@@ -156,6 +156,41 @@ DISPLAY_NAMES = {
     "Wuppertal Hauptbahnhof": "Wuppertal Hauptbahnhof",
     "Wuppertal-Vohwinkel": "Wuppertal-Vohwinkel",
     "Duesseldorf Hauptbahnhof": "Düsseldorf Hauptbahnhof",
+
+    # --- RE39 Erfurt Hbf-Passau Hbf ---
+    "Erfurt Hbf": "Erfurt Hauptbahnhof",
+    "Bamberg": "Bamberg",
+    "Forchheim Oberfr": "Forchheim (Oberfr)",
+    "Erlangen": "Erlangen",
+    "Fuerth Bay Hbf": "Fürth (Bay) Hbf",
+    "Nuernberg Hbf": "Nürnberg Hauptbahnhof",
+    "Neumarkt Oberpf": "Neumarkt (Oberpf)",
+    "Regensburg Hbf": "Regensburg Hbf",
+    "Straubing": "Straubing",
+    "Plattling": "Plattling",
+    "Vilshofen Niederbay": "Vilshofen (Niederbay)",
+    "Passau Hbf": "Passau Hbf",
+
+    # --- RE57 Mulhouse-Ville-Passau Hbf ---
+    "Mulhouse-Ville": "Mulhouse-Ville",
+    "Muellheim Baden": "Müllheim (Baden)",
+    "Bad Krozingen": "Bad Krozingen",
+    "Freiburg Breisgau Hbf": "Freiburg (Breisgau) Hbf",
+    "Titisee": "Titisee",
+    "Neustadt Schwarzw": "Neustadt (Schwarzw)",
+    "Donaueschingen": "Donaueschingen",
+    "Immendingen": "Immendingen",
+    "Tuttlingen": "Tuttlingen",
+    "Sigmaringen": "Sigmaringen",
+    "Aulendorf": "Aulendorf",
+    "Kisslegg": "Kißlegg",
+    "Memmingen": "Memmingen",
+    "Buchloe": "Buchloe",
+    "Kaufering": "Kaufering",
+    "Muenchen-Pasing": "München-Pasing",
+    "Muenchen Ost": "München Ost",
+    "Muenchen Flughafen": "München Flughafen",
+    "Landshut Bay Hbf": "Landshut (Bay) Hbf",
 }
 
 # Liniennamen / Richtungs- und Beschreibungstexte, die NICHT ueber Stationskeys

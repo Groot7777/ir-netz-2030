@@ -19,6 +19,8 @@ LINE_COLORS = {
     "S30": "ff2fbfb5",   # Oliv-Tuerkis
     "RE17": "ffff6600",  # Kraeftiges Blau (urspruengliches Gruen kollidierte mit RE32 -> ersetzt)
     "RE30": "ffffd426",  # Gelb-Orange (urspruengliches Cyan kollidierte mit RE35 -> ersetzt)
+    "RE39": "ffbfff00",  # Tuerkisgruen
+    "RE57": "ff683dcc",  # Beeren-Rotviolett
 }
 
 # Bestehende Linien (Style-IDs aus der Baseline-KML), deren Farbe angepasst werden musste,

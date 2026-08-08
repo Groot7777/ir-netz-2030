@@ -30,6 +30,16 @@
   "query_used": "Bad Bentheim Bahnhof",
   "tag_used": "railway:station"
  },
+ "Bad Krozingen": {
+  "distance_km": 16.6,
+  "estimated": false,
+  "lat": 47.919666,
+  "lon": 7.6975988,
+  "matched_name": "Bad Krozingen",
+  "osm_tag": "railway:station",
+  "query_used": "Bad Krozingen Bahnhof",
+  "tag_used": "railway:station"
+ },
  "Bad Schwartau": {
   "distance_km": 0.3,
   "estimated": false,
@@ -164,6 +174,17 @@
   "query_used": "Brandenburg Hauptbahnhof",
   "tag_used": "railway:station"
  },
+ "Buchloe": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 48.0332558,
+  "lon": 10.7161158,
+  "manual_fixup": true,
+  "matched_name": "Buchloe",
+  "osm_tag": "railway:station",
+  "query_used": "manual_fix",
+  "tag_used": "railway:station"
+ },
  "Buetzow": {
   "distance_km": 6.6,
   "estimated": false,
@@ -214,6 +235,16 @@
   "osm_tag": "railway:halt",
   "query_used": "Dahlerbrück",
   "tag_used": "railway:halt"
+ },
+ "Donaueschingen": {
+  "distance_km": 12.2,
+  "estimated": false,
+  "lat": 47.931787,
+  "lon": 8.4573456,
+  "matched_name": "Bräunlingen Bahnhof",
+  "osm_tag": "railway:station",
+  "query_used": "Donaueschingen Bahnhof",
+  "tag_used": "railway:station"
  },
  "Dortmund-Brackel": {
   "distance_km": 19.0,
@@ -296,6 +327,16 @@
   "query_used": "Drensteinfurt",
   "tag_used": null
  },
+ "Erlangen": {
+  "distance_km": 7.1,
+  "estimated": false,
+  "lat": 49.5960693,
+  "lon": 11.0015908,
+  "matched_name": "Erlangen",
+  "osm_tag": "railway:station",
+  "query_used": "Erlangen Bahnhof",
+  "tag_used": "railway:station"
+ },
  "Essen West": {
   "distance_km": 14.7,
   "estimated": false,
@@ -376,6 +417,26 @@
   "query_used": "Essen-Steele Ost",
   "tag_used": "railway:halt"
  },
+ "Forchheim Oberfr": {
+  "distance_km": 13.2,
+  "estimated": false,
+  "lat": 49.7169143,
+  "lon": 11.0700855,
+  "matched_name": "Forchheim (Oberfr)",
+  "osm_tag": "railway:station",
+  "query_used": "Forchheim (Oberfr) Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Freiburg Breisgau Hbf": {
+  "distance_km": 30.3,
+  "estimated": false,
+  "lat": 47.9977308,
+  "lon": 7.8412948,
+  "matched_name": "Freiburg (Breisgau) Hauptbahnhof",
+  "osm_tag": "railway:station",
+  "query_used": "Freiburg (Breisgau) Hauptbahnhof",
+  "tag_used": "railway:station"
+ },
  "Froendenberg": {
   "distance_km": 0.1,
   "estimated": false,
@@ -386,6 +447,16 @@
   "osm_tag": "railway:station",
   "query_used": "Froendenberg",
   "tag_used": null
+ },
+ "Fuerth Bay Hbf": {
+  "distance_km": 16.4,
+  "estimated": false,
+  "lat": 49.4703063,
+  "lon": 10.9912982,
+  "matched_name": "Fürth Hauptbahnhof",
+  "osm_tag": "railway:station",
+  "query_used": "Fürth (Bay) Hauptbahnhof",
+  "tag_used": "railway:station"
  },
  "Gdansk Glowny": {
   "distance_km": 2.2,
@@ -560,6 +631,16 @@
   "query_used": "Holzwickede",
   "tag_used": "railway:station"
  },
+ "Immendingen": {
+  "distance_km": 20.2,
+  "estimated": false,
+  "lat": 47.9364338,
+  "lon": 8.7293273,
+  "matched_name": "Immendingen",
+  "osm_tag": "railway:station",
+  "query_used": "Immendingen Bahnhof",
+  "tag_used": "railway:station"
+ },
  "Jastarnia": {
   "distance_km": 14.7,
   "estimated": false,
@@ -579,6 +660,26 @@
   "osm_tag": "railway:halt",
   "query_used": "Jurata",
   "tag_used": "railway:halt"
+ },
+ "Kaufering": {
+  "distance_km": 52.7,
+  "estimated": false,
+  "lat": 48.0812007,
+  "lon": 10.8548739,
+  "matched_name": "Kaufering",
+  "osm_tag": "railway:station",
+  "query_used": "Kaufering Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Kisslegg": {
+  "distance_km": 26.5,
+  "estimated": false,
+  "lat": 47.7935805,
+  "lon": 9.8817723,
+  "matched_name": "Kißlegg",
+  "osm_tag": "railway:station",
+  "query_used": "Kißlegg Bahnhof",
+  "tag_used": "railway:station"
  },
  "Koebenhavn H": {
   "distance_km": 0.9,
@@ -609,6 +710,16 @@
   "matched_name": "Kuźnica (Hel)",
   "osm_tag": "railway:station",
   "query_used": "Kuźnica",
+  "tag_used": "railway:station"
+ },
+ "Landshut Bay Hbf": {
+  "distance_km": 27.4,
+  "estimated": false,
+  "lat": 48.5475468,
+  "lon": 12.1360812,
+  "matched_name": "Landshut (Bay) Hbf",
+  "osm_tag": "railway:station",
+  "query_used": "Landshut (Bay) Hauptbahnhof",
   "tag_used": "railway:station"
  },
  "Leeuwarden": {
@@ -691,6 +802,57 @@
   "query_used": "Mülheim-Styrum",
   "tag_used": "railway:station"
  },
+ "Muellheim Baden": {
+  "distance_km": 8.7,
+  "estimated": false,
+  "lat": 47.810102,
+  "lon": 7.5995606,
+  "matched_name": "Müllheim im Markgräflerland",
+  "osm_tag": "railway:station",
+  "query_used": "Müllheim (Baden) Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Muenchen Flughafen": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 48.3537694,
+  "lon": 11.7861263,
+  "manual_fixup": true,
+  "matched_name": "München Flughafen Terminal",
+  "osm_tag": "railway:station",
+  "query_used": "manual_fix",
+  "tag_used": "railway:station"
+ },
+ "Muenchen Ost": {
+  "distance_km": 2.5,
+  "estimated": false,
+  "lat": 48.1277214,
+  "lon": 11.6055187,
+  "matched_name": "München Ost",
+  "osm_tag": "railway:station",
+  "query_used": "München Ost Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Muenchen-Pasing": {
+  "distance_km": 3.4,
+  "estimated": false,
+  "lat": 48.1415328,
+  "lon": 11.5556199,
+  "matched_name": "München Hbf Gleis 27-36, Starnberger Bahnhof",
+  "osm_tag": "railway:station",
+  "query_used": "München-Pasing Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Mulhouse-Ville": {
+  "distance_km": 16.8,
+  "estimated": false,
+  "lat": 47.7421497,
+  "lon": 7.3431347,
+  "matched_name": "Mulhouse-Ville",
+  "osm_tag": "railway:station",
+  "query_used": "Mulhouse-Ville",
+  "tag_used": "railway:station"
+ },
  "Naestved": {
   "distance_km": 0.1,
   "estimated": false,
@@ -700,6 +862,26 @@
   "matched_name": "Næstved",
   "osm_tag": "railway:station",
   "query_used": "manual",
+  "tag_used": "railway:station"
+ },
+ "Neumarkt Oberpf": {
+  "distance_km": 44.5,
+  "estimated": false,
+  "lat": 49.2733225,
+  "lon": 11.4566709,
+  "matched_name": "Neumarkt (Oberpf)",
+  "osm_tag": "railway:station",
+  "query_used": "Neumarkt (Oberpf) Bahnhof",
+  "tag_used": "railway:station"
+ },
+ "Neustadt Schwarzw": {
+  "distance_km": 6.7,
+  "estimated": false,
+  "lat": 47.9102867,
+  "lon": 8.2108276,
+  "matched_name": "Neustadt (Schwarzwald)",
+  "osm_tag": "railway:station",
+  "query_used": "Neustadt (Schwarzwald) Bahnhof",
   "tag_used": "railway:station"
  },
  "Noerreport": {
@@ -745,6 +927,26 @@
   "query_used": "Bahnhofstraße 22 Oldenburg in Holstein",
   "tag_used": "railway:station"
  },
+ "Passau Hbf": {
+  "distance_km": 75.0,
+  "estimated": true,
+  "lat": 48.5738323,
+  "lon": 13.4488914,
+  "matched_name": "Passau Hauptbahnhof",
+  "osm_tag": "railway:platform",
+  "query_used": "Passau Hauptbahnhof",
+  "tag_used": null
+ },
+ "Plattling": {
+  "distance_km": 27.1,
+  "estimated": false,
+  "lat": 48.7794821,
+  "lon": 12.8640159,
+  "matched_name": "Plattling",
+  "osm_tag": "railway:station",
+  "query_used": "Plattling Bahnhof",
+  "tag_used": "railway:station"
+ },
  "Puck": {
   "distance_km": 2.7,
   "estimated": false,
@@ -763,6 +965,16 @@
   "matched_name": "Reda",
   "osm_tag": "railway:station",
   "query_used": "Reda",
+  "tag_used": "railway:station"
+ },
+ "Regensburg Hbf": {
+  "distance_km": 37.2,
+  "estimated": false,
+  "lat": 49.0122056,
+  "lon": 12.0997326,
+  "matched_name": "Regensburg Hauptbahnhof",
+  "osm_tag": "railway:station",
+  "query_used": "Regensburg Hauptbahnhof",
   "tag_used": "railway:station"
  },
  "Rheine": {
@@ -888,6 +1100,16 @@
   "query_used": "Siedlinghausen",
   "tag_used": null
  },
+ "Sigmaringen": {
+  "distance_km": 24.2,
+  "estimated": false,
+  "lat": 48.0997857,
+  "lon": 9.2356121,
+  "matched_name": "Sigmaringen Hanfertal",
+  "osm_tag": "railway:station",
+  "query_used": "Sigmaringen Bahnhof",
+  "tag_used": "railway:station"
+ },
  "Silbach": {
   "distance_km": 0.38,
   "estimated": true,
@@ -919,6 +1141,17 @@
   "osm_tag": "information:guidepost",
   "query_used": "Steinhelle",
   "tag_used": null
+ },
+ "Straubing": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 48.8768797,
+  "lon": 12.5749261,
+  "manual_fixup": true,
+  "matched_name": "Straubing",
+  "osm_tag": "railway:station",
+  "query_used": "manual_fix",
+  "tag_used": "railway:station"
  },
  "Swarzewo": {
   "distance_km": 5.7,
@@ -971,6 +1204,27 @@
   "query_used": "Timmendorfer Strand Bahnhof",
   "tag_used": null
  },
+ "Titisee": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 47.903354,
+  "lon": 8.1555716,
+  "manual_fixup": true,
+  "matched_name": "Titisee",
+  "osm_tag": "railway:station",
+  "query_used": "manual_fix",
+  "tag_used": "railway:station"
+ },
+ "Tuttlingen": {
+  "distance_km": 15.3,
+  "estimated": false,
+  "lat": 47.9804516,
+  "lon": 8.7991287,
+  "matched_name": "Tuttlingen",
+  "osm_tag": "railway:station",
+  "query_used": "Tuttlingen Bahnhof",
+  "tag_used": "railway:station"
+ },
  "Unna": {
   "distance_km": 28.9,
   "estimated": false,
@@ -1000,6 +1254,17 @@
   "osm_tag": "railway:halt",
   "query_used": "Unna West",
   "tag_used": "railway:halt"
+ },
+ "Vilshofen Niederbay": {
+  "distance_km": 0.1,
+  "estimated": false,
+  "lat": 48.6295721,
+  "lon": 13.1909545,
+  "manual_fixup": true,
+  "matched_name": "Vilshofen (Niederbay)",
+  "osm_tag": "railway:station",
+  "query_used": "manual_fix",
+  "tag_used": "railway:station"
  },
  "Vordingborg": {
   "distance_km": 0.1,

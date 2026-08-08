@@ -374,7 +374,81 @@ RE30 = {
     ],
 }
 
-ALL_LINES = [RE71, S10, S3, S30, RE17, RE30]
+# ---------------------------------------------------------------------------
+# LINIE RE39: Erfurt Hbf - Passau Hbf (Thueringen-Bayern-Magistrale)
+# ---------------------------------------------------------------------------
+# Beide Richtungen mit echten Uhrzeiten direkt aus PDF Abschnitt 4 (Reinetrassen/
+# Musterzug), keine Interpolation noetig.
+
+RE39_STOPS = [
+    # key, hin_an, hin_ab, rueck_an, rueck_ab, info
+    ("Erfurt Hbf", None, "07:10", "10:39", None, "Start; Einlauf SFS VDE 8.1 (30-Min-Taktversatz zu RE28 ab :40)"),
+    ("Bamberg", "07:55", "07:58", "09:51", "09:54", "Auslauf SFS VDE 8.1, Systemknoten Oberfranken"),
+    ("Forchheim Oberfr", "08:09", "08:11", "09:38", "09:40", "Ausbaustrecke Nürnberg-Bamberg, 210m Nutzlänge"),
+    ("Erlangen", "08:19", "08:21", "09:28", "09:30", "Ausbaustrecke Nürnberg-Bamberg, Systemhalt Mittelfranken"),
+    ("Fuerth Bay Hbf", "08:29", "08:31", "09:18", "09:20", "Mittelfränkischer Knoten"),
+    ("Nuernberg Hbf", "08:37", "08:41", "09:08", "09:12", "Zentraler Knoten Mittelfranken, direkte umstiegfreie Durchbindung"),
+    ("Neumarkt Oberpf", "09:00", "09:02", "08:47", "08:49", "Bahnstrecke Nürnberg-Regensburg, Systemhalt Oberpfalz"),
+    ("Regensburg Hbf", "09:35", "09:39", "08:10", "08:14", "Systemknoten Oberpfalz, direkte Durchbindung"),
+    ("Straubing", "10:00", "10:02", "07:47", "07:49", "Bahnstrecke Regensburg-Passau, Systemhalt Niederbayern"),
+    ("Plattling", "10:15", "10:17", "07:32", "07:34", "Systemknoten Donau-Magistrale"),
+    ("Vilshofen Niederbay", "10:33", "10:35", "07:14", "07:16", "Bahnstrecke Regensburg-Passau, Systemhalt Niederbayern"),
+    ("Passau Hbf", "10:49", None, None, "07:00", "Endstation, Grenzknoten Österreich"),
+]
+
+RE39 = {
+    "number": "RE39",
+    "route_name": "Erfurt Hbf-Passau Hbf",
+    "description": "Regional-Express-Magistrale Thüringen-Bayern. Stadler KISS (6- oder 8-teilig, 200 km/h, ETCS Level 2, Nutzlänge max. 210m), durchgehend elektrifiziert mit 15kV/16,7Hz AC. 30-Minuten-Taktversatz zur Linie RE28 (Leipzig-Würzburg) auf der Schnellfahrstrecke VDE 8.1. Alle Halte mit mindestens 210m Nutzlänge, keine Bahnsteig-Engpässe.",
+    "kind": "linear",
+    "branches": [
+        {"branch_id": "main", "stops": RE39_STOPS, "line_label": "RE39"},
+    ],
+}
+
+# ---------------------------------------------------------------------------
+# LINIE RE57: Mulhouse-Ville - Passau Hbf (transkontinentale Magistrale FR-DE)
+# ---------------------------------------------------------------------------
+# Beide Richtungen mit echten Uhrzeiten direkt aus PDF Abschnitt 4 (Reinetrassen/
+# Musterzug 07:00 Uhr). Richtungswechsel (Kopfmachen) in Freiburg (Breisgau) Hbf
+# und Muenchen Flughafen aendern NICHT den Fahrweg (kein eigener Ast).
+
+RE57_STOPS = [
+    # key, hin_an, hin_ab, rueck_an, rueck_ab, info
+    ("Mulhouse-Ville", None, "07:00", "14:53", None, "Start, Systemwechsel Rheinbrücke (25kV FR/15kV DE)"),
+    ("Muellheim Baden", "07:18", "07:20", "14:32", "14:34", "Rheintalbahn, Anschluss"),
+    ("Bad Krozingen", "07:28", "07:29", "14:23", "14:24", "Rheintalbahn, Systemhalt"),
+    ("Freiburg Breisgau Hbf", "07:41", "07:47", "14:05", "14:11", "Richtungswechsel Kopfmachen 6 Min, Übergang Rheintal/Höllental"),
+    ("Titisee", "08:25", "08:27", "13:31", "13:33", "Steilstrecke Höllentalbahn (57 Promille)"),
+    ("Neustadt Schwarzw", "08:34", "08:36", "13:22", "13:24", "Höllentalbahn Ost"),
+    ("Donaueschingen", "09:08", "09:10", "12:48", "12:50", "Systemwechsel Oberleitung/Akku-Modus (BEMU)"),
+    ("Immendingen", "09:21", "09:22", "12:36", "12:37", "Verknüpfung Schwarzwaldbahn/Donaubahn"),
+    ("Tuttlingen", "09:31", "09:33", "12:25", "12:27", "Knotenpunkt Donaubahn/Gäubahn"),
+    ("Sigmaringen", "10:07", "10:10", "11:48", "11:51", "Akku-Schnelllade-Insel, 3 Min Halt"),
+    ("Aulendorf", "10:45", "10:48", "11:10", "11:13", "Akku-Schnelllade-Insel, Knoten Südbahn"),
+    ("Kisslegg", "11:11", "11:12", "10:46", "10:47", "Kritischer Engpass: 170m Nutzlänge, passgenau für 6-Tlg. KISS B (156m)"),
+    ("Memmingen", "11:34", "11:36", "10:22", "10:24", "Ende/Beginn Akku-Abschnitt, Wechsel auf Oberleitung"),
+    ("Buchloe", "12:05", "12:07", "09:51", "09:53", "Knoten Allgäubahn"),
+    ("Kaufering", "12:15", "12:16", "09:42", "09:43", "Systemhalt Allgäubahn"),
+    ("Muenchen-Pasing", "12:38", "12:40", "09:18", "09:20", "Westlicher Einlauf Metropolregion München"),
+    ("Muenchen Ost", "12:52", "12:54", "09:04", "09:06", "Korrespondenzknoten Metropolregion München"),
+    ("Muenchen Flughafen", "13:19", "13:25", "08:33", "08:39", "Richtungswechsel Kopfmachen 6 Min, fliegender Personalwechsel"),
+    ("Landshut Bay Hbf", "13:49", "13:51", "08:07", "08:09", "Einfädelung Neufahrner Kurve"),
+    ("Plattling", "14:28", "14:30", "07:28", "07:30", "Knoten Donau-Magistrale"),
+    ("Passau Hbf", "14:59", None, None, "07:00", "Endstation, östlicher Endpunkt/Grenzknoten Österreich"),
+]
+
+RE57 = {
+    "number": "RE57",
+    "route_name": "Mulhouse-Ville-Passau Hbf",
+    "description": "Transkontinentale Regional-Express-Magistrale. Stadler KISS B (6-teiliger Batterie-Wechselstrom-Triebzug, Nutzlänge 156m, 200 km/h). Systemwechsel 25kV/50Hz (Frankreich) auf 15kV/16,7Hz (Deutschland) an der Rheinbrücke Neuenburg. Akkubetrieb Donaueschingen-Memmingen (ca. 135km ohne durchgehende Oberleitung, Lade-Inseln in Sigmaringen und Aulendorf). Kritischer Engpass Kißlegg (170m Nutzlänge, passgenau für 6-teilige KISS B).",
+    "kind": "linear",
+    "branches": [
+        {"branch_id": "main", "stops": RE57_STOPS, "line_label": "RE57"},
+    ],
+}
+
+ALL_LINES = [RE71, S10, S3, S30, RE17, RE30, RE39, RE57]
 
 if __name__ == "__main__":
     for line in ALL_LINES:

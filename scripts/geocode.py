@@ -33,6 +33,14 @@ REGION = {
     "muensterland": (51.9, 7.6),
     "sauerland": (51.25, 8.35),
     "bergisches_land": (51.25, 7.15),
+    "franconia": (49.6, 11.1),
+    "bavaria_danube": (48.95, 12.6),
+    "alsace_baden": (47.85, 7.5),
+    "black_forest": (47.9, 8.3),
+    "swabia_danube": (47.95, 9.0),
+    "allgaeu": (47.9, 10.2),
+    "munich": (48.15, 11.6),
+    "lower_bavaria": (48.6, 12.5),
 }
 
 # key -> (query_text, region, osm_tag_preference[list], is_fictional_new_build)
@@ -149,6 +157,36 @@ STATION_QUERIES = {
     "Siedlinghausen": ("Siedlinghausen Bahnhof", "sauerland", ["railway:station", "railway:halt"], False),
     "Silbach": ("Silbach Bahnhof", "sauerland", ["railway:station", "railway:halt"], False),
     "Winterberg Westf": ("Winterberg (Westf) Bahnhof", "sauerland", ["railway:station"], False),
+
+    # --- RE39 Erfurt Hbf-Passau Hbf ---
+    "Forchheim Oberfr": ("Forchheim (Oberfr) Bahnhof", "franconia", ["railway:station"], False),
+    "Erlangen": ("Erlangen Bahnhof", "franconia", ["railway:station"], False),
+    "Fuerth Bay Hbf": ("Fürth (Bay) Hauptbahnhof", "franconia", ["railway:station"], False),
+    "Neumarkt Oberpf": ("Neumarkt (Oberpf) Bahnhof", "franconia", ["railway:station"], False),
+    "Regensburg Hbf": ("Regensburg Hauptbahnhof", "bavaria_danube", ["railway:station"], False),
+    "Straubing": ("Straubing Bahnhof", "bavaria_danube", ["railway:station"], False),
+    "Plattling": ("Plattling Bahnhof", "bavaria_danube", ["railway:station"], False),
+    "Vilshofen Niederbay": ("Vilshofen (Niederbay) Bahnhof", "bavaria_danube", ["railway:station"], False),
+    "Passau Hbf": ("Passau Hauptbahnhof", "bavaria_danube", ["railway:station"], False),
+
+    # --- RE57 Mulhouse-Ville-Passau Hbf ---
+    "Mulhouse-Ville": ("Mulhouse-Ville", "alsace_baden", ["railway:station"], False),
+    "Muellheim Baden": ("Müllheim (Baden) Bahnhof", "alsace_baden", ["railway:station"], False),
+    "Bad Krozingen": ("Bad Krozingen Bahnhof", "alsace_baden", ["railway:station"], False),
+    "Freiburg Breisgau Hbf": ("Freiburg (Breisgau) Hauptbahnhof", "alsace_baden", ["railway:station"], False),
+    "Titisee": ("Titisee Bahnhof", "black_forest", ["railway:station"], False),
+    "Neustadt Schwarzw": ("Neustadt (Schwarzwald) Bahnhof", "black_forest", ["railway:station"], False),
+    "Donaueschingen": ("Donaueschingen Bahnhof", "black_forest", ["railway:station"], False),
+    "Immendingen": ("Immendingen Bahnhof", "swabia_danube", ["railway:station"], False),
+    "Tuttlingen": ("Tuttlingen Bahnhof", "swabia_danube", ["railway:station"], False),
+    "Sigmaringen": ("Sigmaringen Bahnhof", "swabia_danube", ["railway:station"], False),
+    "Kisslegg": ("Kißlegg Bahnhof", "allgaeu", ["railway:station"], False),
+    "Buchloe": ("Buchloe Bahnhof", "allgaeu", ["railway:station"], False),
+    "Kaufering": ("Kaufering Bahnhof", "allgaeu", ["railway:station"], False),
+    "Muenchen-Pasing": ("München-Pasing Bahnhof", "munich", ["railway:station"], False),
+    "Muenchen Ost": ("München Ost Bahnhof", "munich", ["railway:station"], False),
+    "Muenchen Flughafen": ("München Flughafen Bahnhof", "munich", ["railway:station"], False),
+    "Landshut Bay Hbf": ("Landshut (Bay) Hauptbahnhof", "lower_bavaria", ["railway:station"], False),
 }
 
 

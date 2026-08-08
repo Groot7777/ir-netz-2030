@@ -834,13 +834,14 @@
   "tag_used": "railway:station"
  },
  "Muenchen-Pasing": {
-  "distance_km": 3.4,
+  "distance_km": 0.1,
   "estimated": false,
-  "lat": 48.1415328,
-  "lon": 11.5556199,
-  "matched_name": "München Hbf Gleis 27-36, Starnberger Bahnhof",
+  "lat": 48.1499561,
+  "lon": 11.4617667,
+  "manual_fixup": true,
+  "matched_name": "München-Pasing",
   "osm_tag": "railway:station",
-  "query_used": "München-Pasing Bahnhof",
+  "query_used": "manual_fix",
   "tag_used": "railway:station"
  },
  "Mulhouse-Ville": {

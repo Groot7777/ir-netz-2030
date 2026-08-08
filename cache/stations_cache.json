@@ -237,13 +237,14 @@
   "tag_used": "railway:halt"
  },
  "Donaueschingen": {
-  "distance_km": 12.2,
+  "distance_km": 0.1,
   "estimated": false,
-  "lat": 47.931787,
-  "lon": 8.4573456,
-  "matched_name": "Bräunlingen Bahnhof",
+  "lat": 47.9479723,
+  "lon": 8.4987559,
+  "manual_fixup": true,
+  "matched_name": "Donaueschingen",
   "osm_tag": "railway:station",
-  "query_used": "Donaueschingen Bahnhof",
+  "query_used": "manual_fix",
   "tag_used": "railway:station"
  },
  "Dortmund-Brackel": {
@@ -1102,13 +1103,14 @@
   "tag_used": null
  },
  "Sigmaringen": {
-  "distance_km": 24.2,
+  "distance_km": 0.1,
   "estimated": false,
-  "lat": 48.0997857,
-  "lon": 9.2356121,
-  "matched_name": "Sigmaringen Hanfertal",
+  "lat": 48.0871132,
+  "lon": 9.2219876,
+  "manual_fixup": true,
+  "matched_name": "Sigmaringen",
   "osm_tag": "railway:station",
-  "query_used": "Sigmaringen Bahnhof",
+  "query_used": "manual_fix",
   "tag_used": "railway:station"
  },
  "Silbach": {

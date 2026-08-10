@@ -151,6 +151,8 @@ CSS = """
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; }
 body { display: flex; background: #ffffff; color: #1a1a1a; overflow: hidden; }
+/* dvh beruecksichtigt die ein- und ausfahrende Browserleiste auf dem Handy */
+@supports (height: 100dvh) { body { height: 100dvh; } }
 
 #seitenleiste {
   width: 310px; flex: 0 0 310px; height: 100%; overflow-y: auto;
@@ -170,11 +172,22 @@ body { display: flex; background: #ffffff; color: #1a1a1a; overflow: hidden; }
 #treffer li:hover { background: #e8e8e8; }
 #treffer li .zeilen { color: #777; font-size: 11px; }
 
-#infofeld { display: none; margin-top: 14px; padding: 10px;
-            border: 1px solid #d8d8d8; border-radius: 6px; background: #fff; }
-#infofeld .titel { font-weight: 700; font-size: 13.5px; margin-bottom: 7px; }
-#infofeld .zeile { display: flex; align-items: center; gap: 7px; font-size: 12px; padding: 2px 0; }
-#infofeld .schliessen { float: right; cursor: pointer; color: #999; font-size: 15px; line-height: 1; }
+/* Infofeld schwebt ueber der Karte, damit es auch dann sichtbar ist,
+   wenn die Seitenleiste auf schmalen Bildschirmen eingeklappt ist. */
+#infofeld {
+  display: none; position: absolute; left: 12px; bottom: 12px; z-index: 5;
+  max-width: 290px; padding: 11px 12px; background: #fff;
+  border: 1px solid #d0d0d0; border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(0,0,0,.16);
+  /* Knotenbahnhoefe fuehren bis zu sechs Linien - dann lieber scrollen */
+  max-height: 45vh; overflow-y: auto;
+}
+#infofeld .titel { font-weight: 700; font-size: 14px; margin-bottom: 8px; padding-right: 22px; }
+#infofeld .zeile { display: flex; align-items: center; gap: 8px; font-size: 12.5px; padding: 3px 0; }
+#infofeld .schliessen {
+  position: absolute; top: 4px; right: 8px; cursor: pointer; color: #888;
+  font-size: 22px; line-height: 1; padding: 2px 6px;
+}
 
 .legende { list-style: none; margin: 0; padding: 0; }
 .legende li { display: flex; align-items: baseline; gap: 8px; padding: 3px 4px;
@@ -190,15 +203,31 @@ body { display: flex; background: #ffffff; color: #1a1a1a; overflow: hidden; }
          cursor: grab; touch-action: none; }
 #karte.greift { cursor: grabbing; }
 
-#bedienung { position: absolute; top: 12px; right: 12px; display: flex; gap: 5px; }
+#bedienung { position: absolute; top: 12px; right: 12px; display: flex; gap: 6px; z-index: 4; }
 #bedienung button {
-  width: 32px; height: 32px; font-size: 16px; cursor: pointer;
-  border: 1px solid #ccc; background: #fff; border-radius: 5px; color: #333;
+  width: 40px; height: 40px; font-size: 18px; cursor: pointer;
+  border: 1px solid #ccc; background: #fff; border-radius: 7px; color: #333;
+  -webkit-tap-highlight-color: transparent;
 }
 #bedienung button:hover { background: #f0f0f0; }
-#bedienung button.weit { width: auto; padding: 0 11px; font-size: 12px; }
-#hinweis { position: absolute; bottom: 12px; left: 12px; font-size: 11.5px;
-           color: #777; background: rgba(255,255,255,.88); padding: 5px 9px; border-radius: 4px; }
+#bedienung button.weit { width: auto; padding: 0 13px; font-size: 13px; }
+
+#menuKnopf {
+  display: none; position: absolute; top: 12px; left: 12px; z-index: 6;
+  width: 40px; height: 40px; font-size: 19px; cursor: pointer;
+  border: 1px solid #ccc; background: #fff; border-radius: 7px; color: #333;
+  -webkit-tap-highlight-color: transparent;
+}
+#hintergrund {
+  display: none; position: fixed; inset: 0; z-index: 8; background: rgba(0,0,0,.35);
+}
+#hintergrund.sichtbar { display: block; }
+
+#hinweis { position: absolute; bottom: 12px; right: 12px; font-size: 11.5px;
+           color: #777; background: rgba(255,255,255,.88); padding: 5px 9px;
+           border-radius: 4px; pointer-events: none; }
+#hinweis .nurBreit { display: inline; }
+#hinweis .nurSchmal { display: none; }
 
 /* --- Kartenelemente --- */
 #laender path { fill: #e6e6e4; stroke: #ffffff; stroke-width: 1.6; }
@@ -238,6 +267,38 @@ body { display: flex; background: #ffffff; color: #1a1a1a; overflow: hidden; }
 #karte.abgeblendet .badge { opacity: .12; }
 #karte.abgeblendet .badge.hervor { opacity: 1; }
 #karte.abgeblendet .halte, #karte.abgeblendet .beschriftung { opacity: .22; }
+
+/* --- Schmale Bildschirme: Seitenleiste wird zum ausklappbaren Panel ------ */
+@media (max-width: 820px) {
+  #seitenleiste {
+    position: fixed; top: 0; left: 0; bottom: 0; z-index: 9;
+    width: 84%; max-width: 330px; flex-basis: auto;
+    transform: translateX(-102%); transition: transform .22s ease;
+    box-shadow: 2px 0 16px rgba(0,0,0,.18);
+    padding-top: 56px;
+    -webkit-overflow-scrolling: touch;
+  }
+  #seitenleiste.offen { transform: translateX(0); }
+  #seitenleiste .schliessenPanel {
+    display: block; position: absolute; top: 10px; right: 12px;
+    font-size: 26px; line-height: 1; color: #888; cursor: pointer; padding: 2px 8px;
+  }
+  #menuKnopf { display: block; }
+  #kartenbereich { width: 100%; }
+
+  /* groessere Treffer- und Bedienflaechen fuer den Finger */
+  #suche { padding: 11px 11px; font-size: 16px; }   /* 16px verhindert das Auto-Zoom in iOS */
+  #treffer li { padding: 11px 9px; font-size: 14px; }
+  .legende li { padding: 8px 5px; font-size: 13.5px; }
+  .legende .nummer { flex-basis: 46px; font-size: 11.5px; padding: 3px 4px; }
+
+  #infofeld { left: 10px; right: 10px; bottom: 10px; max-width: none; }
+  #hinweis { left: 10px; right: auto; bottom: auto; top: 62px; font-size: 11px; }
+  #hinweis .nurBreit { display: none; }
+  #hinweis .nurSchmal { display: inline; }
+}
+
+.schliessenPanel { display: none; }
 """
 
 
@@ -279,18 +340,18 @@ JS = """
   }
 
   // Bildschirmkoordinaten -> viewBox-Koordinaten (Zentrierung durch "meet" beachten)
-  function zeigerImSvg(e) {
+  function zuViewBox(clientX, clientY) {
     var r = svg.getBoundingClientRect();
     var s = einpassung();
     return {
-      x: (e.clientX - r.left - (r.width - daten.breite * s) / 2) / s,
-      y: (e.clientY - r.top - (r.height - daten.hoehe * s) / 2) / s
+      x: (clientX - r.left - (r.width - daten.breite * s) / 2) / s,
+      y: (clientY - r.top - (r.height - daten.hoehe * s) / 2) / s
     };
   }
 
   svg.addEventListener("wheel", function (e) {
     e.preventDefault();
-    var pt = zeigerImSvg(e);
+    var pt = zuViewBox(e.clientX, e.clientY);
     var neu = Math.min(MAX_K, Math.max(MIN_K, k * Math.exp(-e.deltaY * 0.0016)));
     // Der Punkt unter dem Cursor bleibt beim Zoomen an Ort und Stelle
     tx = pt.x - (pt.x - tx) * (neu / k);
@@ -299,24 +360,106 @@ JS = """
     anwenden();
   }, { passive: false });
 
+  // --- Ziehen, Zwei-Finger-Zoom und Doppeltipp ------------------------------
+  // Alle Zeiger werden mitgefuehrt: ein Zeiger verschiebt, zwei Zeiger zoomen
+  // und verschieben gleichzeitig (wie auf einer Kartenapp gewohnt).
+  var zeiger = new Map();
   var zieht = false, startX = 0, startY = 0, startTx = 0, startTy = 0, bewegt = false;
+  var kneifen = null;   // {abstand, inhaltX, inhaltY, k}
+
+  function zeigerListe() {
+    var l = [];
+    zeiger.forEach(function (v) { l.push(v); });
+    return l;
+  }
+
+  function panStart(p) {
+    zieht = true;
+    startX = p.x; startY = p.y; startTx = tx; startTy = ty;
+  }
+
+  function kneifStart() {
+    var l = zeigerListe();
+    var mitteBild = zuViewBox((l[0].x + l[1].x) / 2, (l[0].y + l[1].y) / 2);
+    kneifen = {
+      abstand: Math.hypot(l[0].x - l[1].x, l[0].y - l[1].y) || 1,
+      // Punkt im Karteninhalt, der unter der Fingermitte liegt und dort bleiben soll
+      inhaltX: (mitteBild.x - tx) / k,
+      inhaltY: (mitteBild.y - ty) / k,
+      k: k
+    };
+    zieht = false;
+  }
+
   svg.addEventListener("pointerdown", function (e) {
-    zieht = true; bewegt = false;
-    startX = e.clientX; startY = e.clientY; startTx = tx; startTy = ty;
-    svg.classList.add("greift");
     svg.setPointerCapture(e.pointerId);
+    zeiger.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    bewegt = false;
+    if (zeiger.size === 1) {
+      panStart({ x: e.clientX, y: e.clientY });
+      svg.classList.add("greift");
+    } else if (zeiger.size === 2) {
+      kneifStart();
+    }
   });
+
   svg.addEventListener("pointermove", function (e) {
+    if (!zeiger.has(e.pointerId)) return;
+    zeiger.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+    if (zeiger.size >= 2 && kneifen) {
+      var l = zeigerListe();
+      var abstand = Math.hypot(l[0].x - l[1].x, l[0].y - l[1].y) || 1;
+      var neu = Math.min(MAX_K, Math.max(MIN_K, kneifen.k * (abstand / kneifen.abstand)));
+      var mitte = zuViewBox((l[0].x + l[1].x) / 2, (l[0].y + l[1].y) / 2);
+      k = neu;
+      tx = mitte.x - kneifen.inhaltX * k;
+      ty = mitte.y - kneifen.inhaltY * k;
+      bewegt = true;
+      anwenden();
+      return;
+    }
+
     if (!zieht) return;
     var dx = e.clientX - startX, dy = e.clientY - startY;
-    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) bewegt = true;
+    if (Math.abs(dx) > 4 || Math.abs(dy) > 4) bewegt = true;
     var s = einpassung();
     tx = startTx + dx / s; ty = startTy + dy / s;
     anwenden();
   });
-  function zieheEnde() { zieht = false; svg.classList.remove("greift"); }
-  svg.addEventListener("pointerup", zieheEnde);
-  svg.addEventListener("pointercancel", zieheEnde);
+
+  function zeigerEnde(e) {
+    zeiger.delete(e.pointerId);
+    if (zeiger.size < 2) kneifen = null;
+    if (zeiger.size === 1) {
+      // ein Finger bleibt liegen: von dort aus normal weiterschieben
+      panStart(zeigerListe()[0]);
+    } else if (zeiger.size === 0) {
+      zieht = false;
+      svg.classList.remove("greift");
+    }
+  }
+  svg.addEventListener("pointerup", zeigerEnde);
+  svg.addEventListener("pointercancel", zeigerEnde);
+
+  // Doppeltipp bzw. Doppelklick vergroessert um den getippten Punkt
+  var letzterTipp = 0, letzterTippX = 0, letzterTippY = 0;
+  svg.addEventListener("pointerup", function (e) {
+    var jetzt = Date.now();
+    var nah = Math.abs(e.clientX - letzterTippX) < 34 && Math.abs(e.clientY - letzterTippY) < 34;
+    if (jetzt - letzterTipp < 320 && nah && !bewegt) {
+      var pt = zuViewBox(e.clientX, e.clientY);
+      var neu = Math.min(MAX_K, k * 2);
+      tx = pt.x - (pt.x - tx) * (neu / k);
+      ty = pt.y - (pt.y - ty) * (neu / k);
+      k = neu;
+      anwenden();
+      bewegt = true;          // den folgenden Klick nicht als Auswahl werten
+      letzterTipp = 0;
+      return;
+    }
+    letzterTipp = jetzt; letzterTippX = e.clientX; letzterTippY = e.clientY;
+  });
 
   // Der Mittelpunkt der sichtbaren Flaeche liegt bei "meet" immer auf der
   // Mitte der viewBox - deshalb genuegt diese Rechnung fuer beide Achsen.
@@ -434,6 +577,7 @@ JS = """
       li.onclick = function () {
         springeZu(h.x, h.y);
         zeigeHalt(id);
+        panelSchliessen();     // auf dem Handy gibt das die Karte wieder frei
       };
       treffer.appendChild(li);
     });
@@ -447,8 +591,25 @@ JS = """
     li.addEventListener("click", function () {
       fixiert = (fixiert === id) ? null : id;
       if (fixiert) hervorheben(fixiert); else zuruecksetzenHervorhebung();
+      panelSchliessen();     // sonst verdeckt das Panel die hervorgehobene Linie
     });
   });
+
+  // --- Ausklappbare Seitenleiste auf schmalen Bildschirmen -----------------
+  var seitenleiste = document.getElementById("seitenleiste");
+  var hintergrund = document.getElementById("hintergrund");
+
+  function panelOeffnen() {
+    seitenleiste.classList.add("offen");
+    hintergrund.classList.add("sichtbar");
+  }
+  function panelSchliessen() {
+    seitenleiste.classList.remove("offen");
+    hintergrund.classList.remove("sichtbar");
+  }
+  document.getElementById("menuKnopf").onclick = panelOeffnen;
+  document.getElementById("panelZu").onclick = panelSchliessen;
+  hintergrund.onclick = panelSchliessen;
 
   // --- Bedienknoepfe --------------------------------------------------------
   document.getElementById("zoomEin").onclick = function () {
@@ -533,6 +694,7 @@ def build_html(data, layout):
 </head>
 <body>
 <aside id="seitenleiste">
+  <span class="schliessenPanel" id="panelZu" role="button" aria-label="Menü schließen">×</span>
   <h1>RE-Netz 2030</h1>
   <div class="untertitel">{n_lines} Linien · {n_stops} Halte · Deutschland und Nachbarländer</div>
 
@@ -540,21 +702,25 @@ def build_html(data, layout):
   <input id="suche" type="text" placeholder="Name eingeben …" autocomplete="off">
   <ul id="treffer"></ul>
 
-  <div id="infofeld"></div>
-
   <h2>Linien</h2>
   <ul class="legende">{"".join(legende_html)}</ul>
 </aside>
+<div id="hintergrund"></div>
 
 <div id="kartenbereich">
+  <button id="menuKnopf" aria-label="Menü öffnen">☰</button>
   {svg}
   <div id="bedienung">
-    <button id="zoomEin" title="Vergrößern">+</button>
-    <button id="zoomAus" title="Verkleinern">−</button>
-    <button id="zuruecksetzen" class="weit" title="Gesamtansicht">Gesamt</button>
+    <button id="zoomEin" aria-label="Vergrößern">+</button>
+    <button id="zoomAus" aria-label="Verkleinern">−</button>
+    <button id="zuruecksetzen" class="weit" aria-label="Gesamtansicht">Gesamt</button>
   </div>
-  <div id="hinweis">Mausrad zum Zoomen · Ziehen zum Verschieben · Linie anklicken zum Festhalten
-    · Haltestellennamen erscheinen beim Hineinzoomen</div>
+  <div id="infofeld"></div>
+  <div id="hinweis">
+    <span class="nurBreit">Mausrad zum Zoomen · Ziehen zum Verschieben · Linie anklicken zum
+      Festhalten · Haltestellennamen erscheinen beim Hineinzoomen</span>
+    <span class="nurSchmal">Zwei Finger zum Zoomen · Namen erscheinen beim Hineinzoomen</span>
+  </div>
 </div>
 
 <script>{js}</script>

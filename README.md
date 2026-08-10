@@ -11,11 +11,26 @@ ohne externe Abhängigkeiten zur Laufzeit.
 ## Karte ansehen
 
 `netzkarte.html` im Browser öffnen. Kein Server, kein Build-Schritt nötig.
+Funktioniert auf Rechner und Handy.
+
+**Am Rechner**
 
 - **Zoom** per Mausrad (zentriert auf den Cursor), **Verschieben** per Ziehen
 - **Hovern** über eine Linie hebt sie hervor und blendet die übrigen ab;
   **Klick** hält die Hervorhebung fest
-- **Klick auf einen Halt** zeigt Name und die dort verkehrenden Linien
+- **Doppelklick** vergrößert um den angeklickten Punkt
+
+**Auf dem Handy**
+
+- **Zwei Finger** zum Zoomen, **ein Finger** zum Verschieben,
+  **Doppeltipp** vergrößert
+- Die Seitenleiste mit Suche und Legende klappt über den **☰-Knopf** aus und
+  schließt sich nach der Auswahl wieder
+- Das Infofeld liegt als Karte über der Karte, nicht in der Seitenleiste
+
+**Überall**
+
+- **Klick/Tipp auf einen Halt** zeigt Name und die dort verkehrenden Linien
 - **Suchfeld** springt zu einem Halt (findet sowohl „Köln Hauptbahnhof" als
   auch „Köln Hbf")
 - Haltestellennamen erscheinen gestaffelt beim Hineinzoomen: erst

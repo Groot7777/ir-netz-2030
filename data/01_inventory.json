@@ -1,0 +1,535 @@
+{
+  "input_file": "data/input/RENetz_2030_v3.kml",
+  "summary": {
+    "total_placemarks": 497,
+    "geometry_type_counts": {
+      "LineString": 28,
+      "Point": 466,
+      "MultiGeometry_LineString": 3,
+      "MultiGeometry_Point": 0
+    },
+    "n_line_placemarks": 31,
+    "n_point_placemarks": 466,
+    "n_styles_total": 32,
+    "n_line_styles": 31,
+    "n_unused_line_styles": 0,
+    "n_distinct_point_names": 466,
+    "n_duplicate_point_names": 0
+  },
+  "folder_structure": {
+    "has_folders": false,
+    "folder_paths_used": []
+  },
+  "line_placemarks": [
+    {
+      "name": "RE2 Düsseldorf-Osnabrück",
+      "style_url": "lineRE2",
+      "hex_color": "#dc143c",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 224
+    },
+    {
+      "name": "RE5 Arnhem-Frankfurt",
+      "style_url": "lineRE5",
+      "hex_color": "#1e90ff",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 738
+    },
+    {
+      "name": "RE7 Frankfurt-Bremen",
+      "style_url": "lineRE7",
+      "hex_color": "#ffd700",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 537
+    },
+    {
+      "name": "RE9 Bremerhaven-Dortmund",
+      "style_url": "lineRE9",
+      "hex_color": "#3cb371",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 379
+    },
+    {
+      "name": "RE11 Frankfurt(Oder)-Leipzig",
+      "style_url": "lineRE11",
+      "hex_color": "#ff8c00",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 340
+    },
+    {
+      "name": "RE14 Eindhoven-Saarbrücken",
+      "style_url": "lineRE14",
+      "hex_color": "#8a2be2",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 964
+    },
+    {
+      "name": "RE17 Dortmund-Wilhelmshaven",
+      "style_url": "lineRE17",
+      "hex_color": "#008080",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 305
+    },
+    {
+      "name": "RE24 Zwickau-Kassel",
+      "style_url": "lineRE24",
+      "hex_color": "#ff69b4",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 661
+    },
+    {
+      "name": "RE25 Cuxhaven-Magdeburg",
+      "style_url": "lineRE25",
+      "hex_color": "#8b4513",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 474
+    },
+    {
+      "name": "RE28 Leipzig-Würzburg",
+      "style_url": "lineRE28",
+      "hex_color": "#4682b4",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 420
+    },
+    {
+      "name": "RE32 Kassel-Wilhelmshöhe-Roermond",
+      "style_url": "lineRE32",
+      "hex_color": "#7fff00",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 526
+    },
+    {
+      "name": "RE35 Zwickau-Warnemünde (Regionaltakt)",
+      "style_url": "lineRE35",
+      "hex_color": "#40e0d0",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 795
+    },
+    {
+      "name": "RE35X Zwickau-Warnemünde (System-Express)",
+      "style_url": "lineRE35X",
+      "hex_color": "#ff1493",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 786
+    },
+    {
+      "name": "RE40 Essen-Frankfurt",
+      "style_url": "lineRE40",
+      "hex_color": "#808000",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 676
+    },
+    {
+      "name": "RE45 Cottbus-Travemünde",
+      "style_url": "lineRE45",
+      "hex_color": "#ff6347",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 533
+    },
+    {
+      "name": "RE46 Esbjerg-Berlin Südkreuz",
+      "style_url": "lineRE46",
+      "hex_color": "#cc933d",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 877
+    },
+    {
+      "name": "RE77 Fredericia-Berlin Ostbahnhof",
+      "style_url": "lineRE77",
+      "hex_color": "#da70d6",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 537
+    },
+    {
+      "name": "RE80 Chur-Saarbrücken",
+      "style_url": "lineRE80",
+      "hex_color": "#32cd32",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 965
+    },
+    {
+      "name": "RE90 Saarbrücken-Düsseldorf",
+      "style_url": "lineRE90",
+      "hex_color": "#deff26",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 1053
+    },
+    {
+      "name": "RE90b Kiel/Schönberger Strand-Groningen/Norddeich Mole",
+      "style_url": "lineRE90b",
+      "hex_color": "#cc00b8",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": true,
+      "n_linestring_segments": 4,
+      "n_coordinate_points": 480
+    },
+    {
+      "name": "RE91 Sassnitz/Ostseebad Binz-Bremerhaven",
+      "style_url": "lineRE91",
+      "hex_color": "#f0e68c",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": true,
+      "n_linestring_segments": 3,
+      "n_coordinate_points": 545
+    },
+    {
+      "name": "RE94 Plzeň-Zürich",
+      "style_url": "lineRE94",
+      "hex_color": "#4b0082",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 1375
+    },
+    {
+      "name": "RB37 Arnhem Centraal-Bochum Hbf",
+      "style_url": "lineRB37",
+      "hex_color": "#ff0000",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 562
+    },
+    {
+      "name": "RE71 Brandenburg Hbf-Hel",
+      "style_url": "style_lineRE71",
+      "hex_color": "#0000ff",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 689
+    },
+    {
+      "name": "S10 Ringbahn Ruhrgebiet",
+      "style_url": "style_lineS10",
+      "hex_color": "#ee00ff",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 393
+    },
+    {
+      "name": "S3 Essen Hbf-Hattingen Mitte",
+      "style_url": "style_lineS3",
+      "hex_color": "#00ff87",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 69
+    },
+    {
+      "name": "S30 Essen Hbf-Lüdenscheid Hbf",
+      "style_url": "style_lineS30",
+      "hex_color": "#b5bf2f",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 220
+    },
+    {
+      "name": "RE17 Østerport-Rostock",
+      "style_url": "style_lineRE17",
+      "hex_color": "#0066ff",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 484
+    },
+    {
+      "name": "RE30 Leeuwarden-Winterberg/Düsseldorf",
+      "style_url": "style_lineRE30",
+      "hex_color": "#26d4ff",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": true,
+      "n_linestring_segments": 2,
+      "n_coordinate_points": 748
+    },
+    {
+      "name": "RE39 Erfurt Hbf-Passau Hbf",
+      "style_url": "style_lineRE39",
+      "hex_color": "#00ffbf",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 492
+    },
+    {
+      "name": "RE57 Mulhouse-Ville-Passau Hbf",
+      "style_url": "style_lineRE57",
+      "hex_color": "#cc3d68",
+      "width": 4.0,
+      "folder_path": [],
+      "is_multigeometry": false,
+      "n_linestring_segments": 1,
+      "n_coordinate_points": 964
+    }
+  ],
+  "unused_line_styles": [],
+  "duplicate_point_names_sample": [],
+  "bounding_box": {
+    "min_lon": 5.4795265,
+    "max_lon": 18.8051182,
+    "min_lat": 46.8535563,
+    "max_lat": 55.692878
+  },
+  "styles": {
+    "lineRE2": {
+      "type": "LineStyle",
+      "kml_color": "ff3c14dc",
+      "hex_color": "#dc143c",
+      "width": 4.0
+    },
+    "lineRE5": {
+      "type": "LineStyle",
+      "kml_color": "ffff901e",
+      "hex_color": "#1e90ff",
+      "width": 4.0
+    },
+    "lineRE7": {
+      "type": "LineStyle",
+      "kml_color": "ff00d7ff",
+      "hex_color": "#ffd700",
+      "width": 4.0
+    },
+    "lineRE9": {
+      "type": "LineStyle",
+      "kml_color": "ff71b33c",
+      "hex_color": "#3cb371",
+      "width": 4.0
+    },
+    "lineRE11": {
+      "type": "LineStyle",
+      "kml_color": "ff008cff",
+      "hex_color": "#ff8c00",
+      "width": 4.0
+    },
+    "lineRE14": {
+      "type": "LineStyle",
+      "kml_color": "ffe22b8a",
+      "hex_color": "#8a2be2",
+      "width": 4.0
+    },
+    "lineRE17": {
+      "type": "LineStyle",
+      "kml_color": "ff808000",
+      "hex_color": "#008080",
+      "width": 4.0
+    },
+    "lineRE24": {
+      "type": "LineStyle",
+      "kml_color": "ffb469ff",
+      "hex_color": "#ff69b4",
+      "width": 4.0
+    },
+    "lineRE25": {
+      "type": "LineStyle",
+      "kml_color": "ff13458b",
+      "hex_color": "#8b4513",
+      "width": 4.0
+    },
+    "lineRE28": {
+      "type": "LineStyle",
+      "kml_color": "ffb48246",
+      "hex_color": "#4682b4",
+      "width": 4.0
+    },
+    "lineRE32": {
+      "type": "LineStyle",
+      "kml_color": "ff00ff7f",
+      "hex_color": "#7fff00",
+      "width": 4.0
+    },
+    "lineRE35": {
+      "type": "LineStyle",
+      "kml_color": "ffd0e040",
+      "hex_color": "#40e0d0",
+      "width": 4.0
+    },
+    "lineRE35X": {
+      "type": "LineStyle",
+      "kml_color": "ff9314ff",
+      "hex_color": "#ff1493",
+      "width": 4.0
+    },
+    "lineRE40": {
+      "type": "LineStyle",
+      "kml_color": "ff008080",
+      "hex_color": "#808000",
+      "width": 4.0
+    },
+    "lineRE45": {
+      "type": "LineStyle",
+      "kml_color": "ff4763ff",
+      "hex_color": "#ff6347",
+      "width": 4.0
+    },
+    "lineRE46": {
+      "type": "LineStyle",
+      "kml_color": "ff3d93cc",
+      "hex_color": "#cc933d",
+      "width": 4.0
+    },
+    "lineRE77": {
+      "type": "LineStyle",
+      "kml_color": "ffd670da",
+      "hex_color": "#da70d6",
+      "width": 4.0
+    },
+    "lineRE80": {
+      "type": "LineStyle",
+      "kml_color": "ff32cd32",
+      "hex_color": "#32cd32",
+      "width": 4.0
+    },
+    "lineRE90": {
+      "type": "LineStyle",
+      "kml_color": "ff26ffde",
+      "hex_color": "#deff26",
+      "width": 4.0
+    },
+    "lineRE90b": {
+      "type": "LineStyle",
+      "kml_color": "ffb800cc",
+      "hex_color": "#cc00b8",
+      "width": 4.0
+    },
+    "lineRE91": {
+      "type": "LineStyle",
+      "kml_color": "ff8ce6f0",
+      "hex_color": "#f0e68c",
+      "width": 4.0
+    },
+    "lineRE94": {
+      "type": "LineStyle",
+      "kml_color": "ff82004b",
+      "hex_color": "#4b0082",
+      "width": 4.0
+    },
+    "lineRB37": {
+      "type": "LineStyle",
+      "kml_color": "ff0000ff",
+      "hex_color": "#ff0000",
+      "width": 4.0
+    },
+    "stationPinNoLabel": {
+      "type": "IconStyle",
+      "icon_href": "https://maps.google.com/mapfiles/kml/shapes/rail.png"
+    },
+    "style_lineRE71": {
+      "type": "LineStyle",
+      "kml_color": "ffff0000",
+      "hex_color": "#0000ff",
+      "width": 4.0
+    },
+    "style_lineS10": {
+      "type": "LineStyle",
+      "kml_color": "ffff00ee",
+      "hex_color": "#ee00ff",
+      "width": 4.0
+    },
+    "style_lineS3": {
+      "type": "LineStyle",
+      "kml_color": "ff87ff00",
+      "hex_color": "#00ff87",
+      "width": 4.0
+    },
+    "style_lineS30": {
+      "type": "LineStyle",
+      "kml_color": "ff2fbfb5",
+      "hex_color": "#b5bf2f",
+      "width": 4.0
+    },
+    "style_lineRE17": {
+      "type": "LineStyle",
+      "kml_color": "ffff6600",
+      "hex_color": "#0066ff",
+      "width": 4.0
+    },
+    "style_lineRE30": {
+      "type": "LineStyle",
+      "kml_color": "ffffd426",
+      "hex_color": "#26d4ff",
+      "width": 4.0
+    },
+    "style_lineRE39": {
+      "type": "LineStyle",
+      "kml_color": "ffbfff00",
+      "hex_color": "#00ffbf",
+      "width": 4.0
+    },
+    "style_lineRE57": {
+      "type": "LineStyle",
+      "kml_color": "ff683dcc",
+      "hex_color": "#cc3d68",
+      "width": 4.0
+    }
+  }
+}

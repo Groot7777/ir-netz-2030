@@ -2,7 +2,7 @@
   "meta": {
     "dedup_threshold_m": 150.0,
     "snap_warn_threshold_m": 400.0,
-    "projection_for_snapping": "+proj=aeqd +lat_0=51.60698417333339 +lon_0=9.65772252021505 +units=m +ellps=WGS84"
+    "projection_for_snapping": "+proj=aeqd +lat_0=51.607826731828006 +lon_0=9.657095454838705 +units=m +ellps=WGS84"
   },
   "stops": [
     {
@@ -1889,8 +1889,8 @@
       "stop_id": "koblenz_hauptbahnhof",
       "name": "Koblenz Hauptbahnhof",
       "alt_names": [],
-      "lon": 7.8834854,
-      "lat": 49.9688103,
+      "lon": 7.5919,
+      "lat": 50.3606,
       "n_lines": 1
     },
     {
@@ -3773,8 +3773,8 @@
           "bonn_hauptbahnhof",
           "remagen",
           "andernach",
-          "bingen_rhein_hbf",
           "koblenz_hauptbahnhof",
+          "bingen_rhein_hbf",
           "boppard_hbf",
           "oberwesel",
           "ingelheim",
@@ -4396,7 +4396,6 @@
       "sequences": [
         [
           "arnhem_centraal",
-          "arnhem_zuid",
           "elst",
           "nijmegen",
           "cuijk",
@@ -4407,6 +4406,7 @@
           "venlo",
           "kaldenkirchen",
           "breyell",
+          "arnhem_zuid",
           "duelken",
           "nijmegen_lent",
           "nijmegen_heyendaal",
@@ -4496,6 +4496,7 @@
           "dortmund_oespel",
           "dortmund_kley",
           "bochum_langendreer",
+          "bochum_langendreer_west",
           "bochum_bermuda3eck",
           "bochum_west",
           "bochum_hamme",
@@ -4519,7 +4520,6 @@
           "bochum_kohlenstrasse",
           "bochum_stahlhausen",
           "bochum_hauptbahnhof",
-          "bochum_langendreer_west",
           "witten_hbf",
           "wengern_ost",
           "hagen_vorhalle",
@@ -4940,7 +4940,7 @@
     },
     {
       "stop_a": "andernach",
-      "stop_b": "bingen_rhein_hbf",
+      "stop_b": "koblenz_hauptbahnhof",
       "lines": [
         "lineRE5"
       ],
@@ -4957,8 +4957,8 @@
       "is_junction_edge": false
     },
     {
-      "stop_a": "boppard_hbf",
-      "stop_b": "koblenz_hauptbahnhof",
+      "stop_a": "bingen_rhein_hbf",
+      "stop_b": "boppard_hbf",
       "lines": [
         "lineRE5"
       ],
@@ -6393,9 +6393,10 @@
       "stop_a": "bochum_hauptbahnhof",
       "stop_b": "witten_hbf",
       "lines": [
-        "lineRE40"
+        "lineRE40",
+        "style_lineS10"
       ],
-      "n_lines": 1,
+      "n_lines": 2,
       "is_junction_edge": false
     },
     {
@@ -7875,15 +7876,6 @@
     },
     {
       "stop_a": "arnhem_centraal",
-      "stop_b": "arnhem_zuid",
-      "lines": [
-        "lineRB37"
-      ],
-      "n_lines": 1,
-      "is_junction_edge": false
-    },
-    {
-      "stop_a": "arnhem_zuid",
       "stop_b": "elst",
       "lines": [
         "lineRB37"
@@ -7973,7 +7965,16 @@
       "is_junction_edge": false
     },
     {
-      "stop_a": "breyell",
+      "stop_a": "arnhem_zuid",
+      "stop_b": "breyell",
+      "lines": [
+        "lineRB37"
+      ],
+      "n_lines": 1,
+      "is_junction_edge": false
+    },
+    {
+      "stop_a": "arnhem_zuid",
       "stop_b": "duelken",
       "lines": [
         "lineRB37"
@@ -8473,8 +8474,17 @@
       "is_junction_edge": false
     },
     {
+      "stop_a": "bochum_langendreer",
+      "stop_b": "bochum_langendreer_west",
+      "lines": [
+        "style_lineS10"
+      ],
+      "n_lines": 1,
+      "is_junction_edge": false
+    },
+    {
       "stop_a": "bochum_bermuda3eck",
-      "stop_b": "bochum_langendreer",
+      "stop_b": "bochum_langendreer_west",
       "lines": [
         "style_lineS10"
       ],
@@ -8666,24 +8676,6 @@
     {
       "stop_a": "bochum_hauptbahnhof",
       "stop_b": "bochum_stahlhausen",
-      "lines": [
-        "style_lineS10"
-      ],
-      "n_lines": 1,
-      "is_junction_edge": false
-    },
-    {
-      "stop_a": "bochum_hauptbahnhof",
-      "stop_b": "bochum_langendreer_west",
-      "lines": [
-        "style_lineS10"
-      ],
-      "n_lines": 1,
-      "is_junction_edge": false
-    },
-    {
-      "stop_a": "bochum_langendreer_west",
-      "stop_b": "witten_hbf",
       "lines": [
         "style_lineS10"
       ],
@@ -9508,8 +9500,8 @@
   ],
   "stats": {
     "n_stops": 465,
-    "n_edges": 524,
-    "n_real_edges": 523,
+    "n_edges": 523,
+    "n_real_edges": 522,
     "n_junction_edges": 1,
     "n_junction_nodes": 1,
     "n_lines": 31,
@@ -9997,12 +9989,6 @@
       }
     ],
     "n_snap_warnings": 0,
-    "suspicious_coordinate_pairs": [
-      {
-        "a": "Bingen (Rhein) Hbf",
-        "b": "Koblenz Hauptbahnhof",
-        "dist_m": 0.0
-      }
-    ]
+    "suspicious_coordinate_pairs": []
   }
 }

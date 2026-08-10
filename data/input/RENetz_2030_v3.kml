@@ -2112,9 +2112,9 @@
 <Placemark>
 <name>Koblenz Hauptbahnhof</name>
 <description><![CDATA[<div class="kmldesc"><b>RE5</b> Arnhem-Frankfurt<br/>Richtung Frankfurt (Main) Hbf: an xx:18 / ab xx:22<br/>Richtung Arnhem Centraal: an xx:42 / ab xx:45<br/><i>Taktknoten, Stadtmitte entfällt</i></div><style>@media (prefers-color-scheme: dark) {html,body,.kmldesc{background:#1b1b1b !important;color:#e8e8e8 !important;}.kmldesc a{color:#8ab4f8 !important;}}</style>]]></description>
-<LookAt><longitude>7.8834854</longitude><latitude>49.9688103</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
+<LookAt><longitude>7.5919</longitude><latitude>50.3606</latitude><altitude>0</altitude><heading>0</heading><tilt>0</tilt><range>2500</range><altitudeMode>clampToGround</altitudeMode></LookAt>
 <styleUrl>#stationPinNoLabel</styleUrl>
-<Point><coordinates>7.8834854,49.9688103,0</coordinates></Point>
+<Point><coordinates>7.5919,50.3606,0</coordinates></Point>
 </Placemark>
 <Placemark>
 <name>Köln Hauptbahnhof</name>

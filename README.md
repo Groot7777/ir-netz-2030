@@ -71,7 +71,18 @@ python3 scripts/04_bundling.py --debug-edge essen_hauptbahnhof essen_steele
 
 # Testrender einzelner Linien, zur Kontrolle der Bündelung
 python3 scripts/04b_test_render.py RE40 S10 S3 S30 --center "Essen-Steele" --span 200 --zoom 6
+
+# Unabhängige geometrische Abstandsprüfung der fertigen Linien
+python3 scripts/04c_pruefe_abstaende.py
+
+# Und zu jedem Befund die Ursache (geteilte Kante? eigener Korridor? Knotenfächer?)
+python3 scripts/04d_ursachen.py
 ```
+
+Die Prüfung in Phase 4 vergleicht nur Linien, die sich eine Kante teilen.
+`04c` misst dagegen rein geometrisch: Es tastet jede Linie alle 3 px ab und
+meldet jeden Abschnitt über 25 px, auf dem zwei Linien einander näher als eine
+Linienbreite kommen. `04d` klassifiziert diese Befunde nach Ursache.
 
 ## Aufbau der Phasen
 
@@ -211,9 +222,40 @@ verbleibenden Linien rücken zusammen und werden neu zentriert.
 - **Zwei verschiedene Linien heißen RE17** (Dortmund–Wilhelmshaven und
   Østerport–Rostock). Als stabile Linien-ID dient deshalb die `styleUrl`, nicht
   die Liniennummer.
-- **Korrigierter Koordinatenfehler:** `Koblenz Hauptbahnhof` hatte in der
-  Quell-KML exakt die Koordinaten von `Bingen (Rhein) Hbf`. Korrigiert in
-  `data/input/RENetz_2030_v3.kml` auf 7.5919 / 50.3606.
+- **Korrigierte Koordinatenfehler.** Fünf Halte lagen in der Quell-KML an der
+  falschen Stelle; alle fünf sind in `data/input/RENetz_2030_v3.kml` korrigiert:
+
+  | Halt | KML | korrigiert | Fehler |
+  |---|---|---|---|
+  | Koblenz Hauptbahnhof | 7.8835 / 49.9688 | 7.5919 / 50.3606 | hatte exakt die Koordinaten von Bingen |
+  | Essen-Horst | 6.9893 / 51.4375 | 7.1028 / 51.4312 | 8 km zu weit westlich |
+  | Essen West | 7.0886 / 51.4442 | 6.9800 / 51.4542 | 7 km zu weit östlich, mitten im Steele-Korridor |
+  | Bredstedt | 9.8242 / 53.9903 | 8.9699 / 54.6212 | 90 km zu weit südöstlich |
+  | Dülken | 6.0145 / 51.9434 | 6.3363 / 51.2530 | lag in den Niederlanden bei Nijmegen |
+
+  Phase 2 sucht solche Fälle inzwischen selbst: Ist der Weg über einen Halt
+  mehr als `UMWEG_FAKTOR` mal so lang wie die Luftlinie seiner beiden Nachbarn,
+  wird er als Verdachtsfall gemeldet.
+
+- **Zurückgespulte Linienzüge.** Mehrere LineStrings befahren denselben
+  Abschnitt mehrfach hin und zurück — die RE5 fährt die Rheinstrecke
+  Koblenz–Bingen dreimal, die RB37 verdoppelt fast ihre halbe Länge. Solche
+  Doppelungen legen die Linie zwangsläufig auf sich selbst und auf ihre
+  Nachbarn; kein Bündelungsalgorithmus kann das nachträglich trennen.
+  `kml_common.entwirre_segment()` entfernt sie beim Einlesen — aber nur, wenn
+  die verbleibende Geometrie den entfernten Teil ohnehin abdeckt. Echte
+  Schleifen wie die Achterschleife der S10 bleiben dadurch erhalten.
+
+- **Rechtwinklige Platzhalter.** In den drei S-Bahn-Linien stecken im Raum
+  Essen/Bochum 17 Stützpunkte auf glatten 0,01-Grad-Koordinaten, die
+  kastenförmige Umwege quer durch die Nachbarlinien beschreiben. Sie werden
+  beim Einlesen verworfen (`entferne_rasterpunkte`); echte Trassenpunkte
+  treffen dieses Raster praktisch nie — 17 von 18811 im gesamten Netz.
+
+- **Unbrauchbare Kantentrassen.** Legt die Trasse zwischen zwei benachbarten
+  Halten mehr als das 2,5-fache der Luftlinie zurück (S3/S30 fahren zwischen
+  Essen-Steele Ost und Essen-Horst 13,5 km für 1,6 km Luftlinie), verbindet
+  Phase 4 die beiden Halte direkt.
 - Halte liegen **nicht** exakt auf den Stützpunkten der LineStrings; sie werden
   per linearem Referenzieren auf die Strecke projiziert.
 - Die Reihenfolge der Halte entlang einer Linie stammt aus der Geometrie, die
@@ -222,7 +264,7 @@ verbleibenden Linien rücken zusammen und werden neu zentriert.
 ## Verzeichnisse
 
 ```
-data/input/     Quell-KML (mit korrigierter Koblenz-Koordinate) und NRW-Referenz-PDF
+data/input/     Quell-KML (mit korrigierten Koordinaten) und NRW-Referenz-PDF
 data/           Zwischenstände der Phasen als JSON
 data/naturalearth/  Heruntergeladene Natural-Earth-Daten
 scripts/        Die Phasen-Skripte und das gemeinsame Modul kml_common.py

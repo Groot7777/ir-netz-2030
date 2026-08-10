@@ -27,6 +27,7 @@ from kml_common import (
     LINE_CODE_RE,
     assign_stops_to_segments,
     dedupe_stops,
+    haversine_m,
     parse_kml,
 )
 
@@ -37,6 +38,7 @@ DEDUP_THRESHOLD_M = 150.0          # Halte unter diesem Abstand gelten als derse
 SNAP_WARN_THRESHOLD_M = 400.0      # ab hier Warnung: Halt liegt ungewoehnlich weit von seiner Linie
 SEGMENT_TIE_TOLERANCE_M = 50.0     # mehrere Segmente gelten als "gleich nah", wenn sie sich um weniger als das unterscheiden
 ENDPOINT_SNAP_TOLERANCE_M = 60.0   # Halt gilt als der Segment-Endpunkt selbst, wenn er naeher als das dran liegt
+UMWEG_FAKTOR = 2.5                 # ab diesem Verhaeltnis Weg/Luftlinie gilt ein Halt als verdaechtig
 
 
 
@@ -226,6 +228,34 @@ def main():
     single_line_stops = sorted(
         [stop_by_id[sid]["name"] for sid, lset in stop_line_count.items() if len(lset) == 1]
     )
+
+    # --- Verdacht auf fehlplatzierte Halte ----------------------------------
+    # Ein Halt an der falschen Stelle faellt dadurch auf, dass die Linie einen
+    # grossen Umweg machen muss: Der Weg ueber ihn ist viel laenger als die
+    # Luftlinie zwischen seinen beiden Nachbarhalten. So flog "Essen-Horst"
+    # auf, das in der Quell-KML 6 km westlich seiner echten Lage stand.
+    umwege = []
+    for ln in lines_raw:
+        for seq in line_sequences[ln["line_id"]]:
+            for vorher, halt, nachher in zip(seq, seq[1:], seq[2:]):
+                a, b, c = stop_by_id[vorher], stop_by_id[halt], stop_by_id[nachher]
+                direkt = haversine_m(a["lon"], a["lat"], c["lon"], c["lat"])
+                ueber = (haversine_m(a["lon"], a["lat"], b["lon"], b["lat"])
+                         + haversine_m(b["lon"], b["lat"], c["lon"], c["lat"]))
+                if direkt > 500 and ueber > UMWEG_FAKTOR * direkt and ueber - direkt > 4000:
+                    umwege.append((ln["code"], b["name"], a["name"], c["name"],
+                                   ueber / 1000, direkt / 1000))
+    umwege.sort(key=lambda u: -(u[4] - u[5]))
+    if umwege:
+        print(f"\nVERDACHT AUF FEHLPLATZIERTE HALTE ({len(umwege)}): Der Weg ueber diesen "
+              f"Halt ist deutlich laenger als die Luftlinie seiner Nachbarn:")
+        gesehen = set()
+        for code, halt, vor, nach, ueber, direkt in umwege:
+            if halt in gesehen:
+                continue
+            gesehen.add(halt)
+            print(f"  {halt}: {code} faehrt {vor} -> {halt} -> {nach} "
+                  f"= {ueber:.1f} km statt {direkt:.1f} km Luftlinie")
 
     # unbediente Halte (kamen in keiner description-Linienliste vor bzw. konnten nicht gesnappt werden)
     served_stop_ids = set(stop_line_count.keys())

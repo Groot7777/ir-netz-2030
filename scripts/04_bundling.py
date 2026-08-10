@@ -72,7 +72,8 @@ SLOT_TRANSITION_PX = 11.0
 # freie Strecke und die Linien kommen sich dort naeher als einen Spurabstand.
 RAMPEN_ANTEIL = 0.22
 CHAIKIN_ITERATIONS = 1               # Glaettung NACH dem Versatz
-MITER_LIMIT = 2.5                    # Begrenzung der Gehrung an spitzen Ecken
+MITER_LIMIT = 2.5                    # Begrenzung der Gehrung an spitzen Ecken (Faktor)
+MAX_GEHRUNG_PX = 3.0                 # und zusaetzlich absolut, damit aeussere Spuren keine Zacken werfen
 
 SEGMENT_TIE_TOLERANCE_M = 50.0       # identisch zu Phase 2
 
@@ -83,6 +84,17 @@ SEGMENT_TIE_TOLERANCE_M = 50.0       # identisch zu Phase 2
 # einer Linie liegen, an denen sie aber nicht haelt, werden deshalb als reine
 # Geometrieknoten in ihren Weg eingefuegt. Gezeichnet wird dort kein Halt.
 PASSTHROUGH_TOL_M = 60.0
+# Der Wert oben genuegt nur, wenn beide Linien exakt denselben Streckenverlauf
+# in der KML haben. Zwei Linien auf demselben Korridor weichen aber oft ein paar
+# hundert Meter voneinander ab (getrennte Gleispaare, unterschiedlich
+# digitalisierte Trassen). Im Kartenmassstab ist das weniger als eine
+# Linienbreite - sie laegen uebereinander, ohne je eine Kante zu teilen.
+# Massgeblich ist deshalb der ZEICHNERISCHE Abstand: Alles, was naeher als
+# PASSTHROUGH_BREITEN Linienbreiten an der Strecke liegt, wird als Knoten
+# uebernommen und damit buendelbar.
+PASSTHROUGH_BREITEN = 3.0
+PASSTHROUGH_MAX_M = 400.0            # Obergrenze, damit die Hauptkarte nicht ganze Staedte verschmilzt
+UMWEG_FAKTOR = 2.5                   # ab diesem Verhaeltnis Trassenlaenge/Luftlinie gilt eine Kante als unbrauchbar
 EDGE_DEVIATION_WARN_PX = 12.0        # ab hier: Linien nehmen auf derselben Kante spuerbar andere Wege
 
 # Zweite Kartenseite: Nordrhein-Westfalen ist mit Abstand am dichtesten
@@ -250,8 +262,15 @@ def offset_polyline(pts, offsets, miter_limit=MITER_LIMIT):
                 nx, ny = mx / mlen, my / mlen
                 cos_half = max(nx * n1[0] + ny * n1[1], 1e-6)
                 scale = min(1.0 / cos_half, miter_limit)
-        out.append((pts[i][0] + nx * offsets[i] * scale,
-                    pts[i][1] + ny * offsets[i] * scale))
+        # Zusaetzlich ABSOLUT begrenzen. Der reine Faktor reicht nicht: Bei einer
+        # aeusseren Spur (bis 16 px Versatz) zieht schon der Faktor 2,5 die Ecke
+        # 40 px weit heraus - im Bild eine schmale Zacke quer durch die
+        # Nachbarlinien. Mit der Obergrenze bleibt an spitzen Ecken eine winzige
+        # Kerbe, die die anschliessende Glaettung wegnimmt.
+        versatz = offsets[i] * scale
+        grenze = abs(offsets[i]) + MAX_GEHRUNG_PX
+        versatz = max(-grenze, min(grenze, versatz))
+        out.append((pts[i][0] + nx * versatz, pts[i][1] + ny * versatz))
     return out
 
 
@@ -267,6 +286,42 @@ def chaikin(pts, iterations=1):
         new.append(pts[-1])
         pts = new
     return pts
+
+
+def entdopple_folge(seq):
+    """
+    Mehrfach befahrene Kanten aus einer Knotenfolge entfernen.
+
+    Einige Linienzuege enthalten Spitzkehren: Die S3 faehrt Essen Hbf - Steele -
+    Steele Ost und denselben Weg wieder zurueck, bevor es nach Essen-Horst
+    weitergeht. Gezeichnet wuerde dieser Abschnitt dann zweimal - einmal je
+    Fahrtrichtung und damit auf gespiegelter Spur, also genau auf der Bahn der
+    Nachbarlinie. Jede Kante wird deshalb nur bei ihrer ersten Befahrung
+    gezeichnet; die Folge zerfaellt dabei in mehrere Teilwege, die als getrennte
+    Polylinien derselben Linie ausgegeben werden.
+
+    Echte Schleifen bleiben unangetastet: Die Achterschleife der S10 beruehrt
+    Bochum Hbf zweimal, benutzt dabei aber jedes Mal andere Kanten.
+    """
+    gesehen = set()
+    teile, aktuell = [], []
+    for a, b in zip(seq, seq[1:]):
+        k = tuple(sorted((a, b)))
+        if k in gesehen:
+            if len(aktuell) >= 2:
+                teile.append(aktuell)
+            aktuell = []
+            continue
+        gesehen.add(k)
+        if aktuell and aktuell[-1] == a:
+            aktuell.append(b)
+        else:
+            if len(aktuell) >= 2:
+                teile.append(aktuell)
+            aktuell = [a, b]
+    if len(aktuell) >= 2:
+        teile.append(aktuell)
+    return teile
 
 
 # --- Aufbau einer Ansicht -----------------------------------------------------
@@ -287,7 +342,17 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
     """
     edge_candidates = defaultdict(list)
     line_branches = {}
+    umwege = []
     bediente_linien = defaultdict(list)   # stop_id -> Linien, die dort tatsaechlich halten
+
+    # Durchfahrt-Toleranz in Metern, abgeleitet aus dem Massstab dieser Ansicht
+    passthrough_tol = min(
+        max(PASSTHROUGH_TOL_M, PASSTHROUGH_BREITEN * LINE_WIDTH_PX / scale_px_per_m),
+        PASSTHROUGH_MAX_M,
+    )
+    if verbose:
+        print(f"    Durchfahrt-Toleranz {passthrough_tol:.0f} m "
+              f"({passthrough_tol * scale_px_per_m:.1f} px)")
 
     stop_pool = (sorted(allowed_stop_ids) if allowed_stop_ids is not None
                  else [s["stop_id"] for s in graph["stops"]])
@@ -312,7 +377,7 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
             s = stop_by_id[sid]
             p = Point(s["px_m"], s["py_m"])
             for seg in ln["segments_proj"]:
-                if seg is not None and seg.distance(p) <= PASSTHROUGH_TOL_M:
+                if seg is not None and seg.distance(p) <= passthrough_tol:
                     knoten_ids.add(sid)
                     break
 
@@ -336,6 +401,17 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                 piece = substring(seg, arc_a, arc_b)
                 if piece.geom_type != "LineString" or len(piece.coords) < 2:
                     continue
+                # Umweg-Notbremse: Legt die KML-Trasse zwischen zwei benachbarten
+                # Halten ein Vielfaches der Luftlinie zurueck, ist sie dort nicht
+                # zu gebrauchen (S3/S30 fahren zwischen Essen-Steele Ost und
+                # Essen-Horst 13,5 km fuer 1,6 km Luftlinie - im Bild eine
+                # Haarnadel quer durch alle Nachbarlinien). Dann wird die Kante
+                # direkt verbunden.
+                a_pt, b_pt = piece.coords[0], piece.coords[-1]
+                luftlinie = math.dist(a_pt, b_pt)
+                if luftlinie > 1.0 and piece.length > UMWEG_FAKTOR * luftlinie:
+                    umwege.append((ln["code"], id_a, id_b, piece.length / luftlinie))
+                    piece = LineString([a_pt, b_pt])
                 pts_px = [to_px(x, y) for x, y in piece.coords]
                 key = tuple(sorted((id_a, id_b)))
                 if (id_a, id_b) != key:
@@ -347,14 +423,32 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                     # nur echte Halte bekommen spaeter einen Marker
                     if sid in eigene_halte and ln["line_id"] not in bediente_linien[sid]:
                         bediente_linien[sid].append(ln["line_id"])
-        line_branches[ln["line_id"]] = branches
+        line_branches[ln["line_id"]] = [teil for br in branches for teil in entdopple_folge(br)]
+
+    if verbose and umwege:
+        print(f"    {len(umwege)} Kanten mit unbrauchbarer Trasse direkt verbunden:")
+        for code, a, b, f in sorted(umwege, key=lambda u: -u[3])[:8]:
+            print(f"      {code}: {a} - {b} ({f:.1f}-facher Umweg)")
 
     # kanonische Geometrie je Kante: die detaillierteste Variante, damit alle
     # Linien des Buendels auf derselben Basislinie liegen
     edge_geom = {}
     deviations = []
     for key, candidates in edge_candidates.items():
-        best_line_id, best_pts = max(candidates, key=lambda c: len(c[1]))
+        # Massgeblich ist zuerst die KUERZESTE Variante: Macht die Trasse einer
+        # Linie auf dieser Kante einen Bogen, den die anderen nicht machen,
+        # zoege die "detaillierteste" Variante das ganze Buendel mit hinaus.
+        # Unter den nahezu gleich langen Varianten gewinnt dann die mit den
+        # meisten Stuetzpunkten, damit keine grob vereinfachte Linie das
+        # Buendel begradigt.
+        laengen = [(lid, pts, LineString(dedup_consecutive(pts)).length
+                    if len(dedup_consecutive(pts)) >= 2 else float("inf"))
+                   for lid, pts in candidates]
+        kuerzeste = min(l for _, _, l in laengen)
+        best_line_id, best_pts, _ = max(
+            (c for c in laengen if c[2] <= kuerzeste * 1.10),
+            key=lambda c: len(c[1]),
+        )
         ref_pts = dedup_consecutive(best_pts)
         if len(ref_pts) < 2:
             continue
@@ -530,7 +624,9 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
             pts, slots, vertex_edge, vertex_pos = [], [], [], []
             for id_a, id_b in zip(seq, seq[1:]):
                 key = tuple(sorted((id_a, id_b)))
-                if key not in edge_geom:
+                if key not in edge_geom or ln["line_id"] not in edge_slots.get(key, {}):
+                    # Kante ohne eigene Geometrie dieser Linie (zwei Knoten praktisch
+                    # am selben Ort) - sie wurde nur von einer anderen Linie angelegt
                     continue
                 # Geometrie in der festgelegten Orientierung der Kante
                 geom = edge_geom[key] if orientierung[key] > 0 else edge_geom[key][::-1]

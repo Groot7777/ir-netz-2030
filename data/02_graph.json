@@ -2,7 +2,7 @@
   "meta": {
     "dedup_threshold_m": 150.0,
     "snap_warn_threshold_m": 400.0,
-    "projection_for_snapping": "+proj=aeqd +lat_0=51.607826731828006 +lon_0=9.657095454838705 +units=m +ellps=WGS84"
+    "projection_for_snapping": "+proj=aeqd +lat_0=51.607706546021554 +lon_0=9.655960798709673 +units=m +ellps=WGS84"
   },
   "stops": [
     {
@@ -529,8 +529,8 @@
       "stop_id": "bredstedt",
       "name": "Bredstedt",
       "alt_names": [],
-      "lon": 9.8242286,
-      "lat": 53.9903222,
+      "lon": 8.9699,
+      "lat": 54.6212,
       "n_lines": 1
     },
     {
@@ -873,8 +873,8 @@
       "stop_id": "duelken",
       "name": "Dülken",
       "alt_names": [],
-      "lon": 6.0144531,
-      "lat": 51.9434452,
+      "lon": 6.3363,
+      "lat": 51.253,
       "n_lines": 1
     },
     {
@@ -1057,8 +1057,8 @@
       "stop_id": "essen_west",
       "name": "Essen West",
       "alt_names": [],
-      "lon": 7.0886147,
-      "lat": 51.4441711,
+      "lon": 6.98,
+      "lat": 51.45417,
       "n_lines": 1
     },
     {
@@ -1105,8 +1105,8 @@
       "stop_id": "essen_horst",
       "name": "Essen-Horst",
       "alt_names": [],
-      "lon": 6.9892897,
-      "lat": 51.4375389,
+      "lon": 7.102771,
+      "lat": 51.431221,
       "n_lines": 2
     },
     {
@@ -3774,9 +3774,9 @@
           "remagen",
           "andernach",
           "koblenz_hauptbahnhof",
-          "bingen_rhein_hbf",
           "boppard_hbf",
           "oberwesel",
+          "bingen_rhein_hbf",
           "ingelheim",
           "mainz_hauptbahnhof",
           "ruesselsheim",
@@ -4396,8 +4396,12 @@
       "sequences": [
         [
           "arnhem_centraal",
+          "arnhem_zuid",
           "elst",
+          "nijmegen_lent",
           "nijmegen",
+          "nijmegen_heyendaal",
+          "mook_molenhoek",
           "cuijk",
           "boxmeer",
           "vierlingsbeek",
@@ -4406,12 +4410,8 @@
           "venlo",
           "kaldenkirchen",
           "breyell",
-          "arnhem_zuid",
-          "duelken",
-          "nijmegen_lent",
-          "nijmegen_heyendaal",
-          "mook_molenhoek",
           "boisheim",
+          "duelken",
           "viersen",
           "moenchengladbach_hauptbahnhof",
           "neuss_hauptbahnhof",
@@ -4627,7 +4627,6 @@
           "hamm_westf_hbf",
           "unna_hbf",
           "holzwickede",
-          "schwerte_ruhr",
           "froendenberg",
           "wickede_ruhr",
           "arnsberg_westf",
@@ -4948,17 +4947,8 @@
       "is_junction_edge": false
     },
     {
-      "stop_a": "bingen_rhein_hbf",
+      "stop_a": "boppard_hbf",
       "stop_b": "koblenz_hauptbahnhof",
-      "lines": [
-        "lineRE5"
-      ],
-      "n_lines": 1,
-      "is_junction_edge": false
-    },
-    {
-      "stop_a": "bingen_rhein_hbf",
-      "stop_b": "boppard_hbf",
       "lines": [
         "lineRE5"
       ],
@@ -4975,8 +4965,17 @@
       "is_junction_edge": false
     },
     {
-      "stop_a": "ingelheim",
+      "stop_a": "bingen_rhein_hbf",
       "stop_b": "oberwesel",
+      "lines": [
+        "lineRE5"
+      ],
+      "n_lines": 1,
+      "is_junction_edge": false
+    },
+    {
+      "stop_a": "bingen_rhein_hbf",
+      "stop_b": "ingelheim",
       "lines": [
         "lineRE5"
       ],
@@ -7876,6 +7875,15 @@
     },
     {
       "stop_a": "arnhem_centraal",
+      "stop_b": "arnhem_zuid",
+      "lines": [
+        "lineRB37"
+      ],
+      "n_lines": 1,
+      "is_junction_edge": false
+    },
+    {
+      "stop_a": "arnhem_zuid",
       "stop_b": "elst",
       "lines": [
         "lineRB37"
@@ -7885,7 +7893,34 @@
     },
     {
       "stop_a": "elst",
-      "stop_b": "nijmegen",
+      "stop_b": "nijmegen_lent",
+      "lines": [
+        "lineRB37"
+      ],
+      "n_lines": 1,
+      "is_junction_edge": false
+    },
+    {
+      "stop_a": "nijmegen",
+      "stop_b": "nijmegen_lent",
+      "lines": [
+        "lineRB37"
+      ],
+      "n_lines": 1,
+      "is_junction_edge": false
+    },
+    {
+      "stop_a": "nijmegen",
+      "stop_b": "nijmegen_heyendaal",
+      "lines": [
+        "lineRB37"
+      ],
+      "n_lines": 1,
+      "is_junction_edge": false
+    },
+    {
+      "stop_a": "mook_molenhoek",
+      "stop_b": "nijmegen_heyendaal",
       "lines": [
         "lineRB37"
       ],
@@ -7894,7 +7929,7 @@
     },
     {
       "stop_a": "cuijk",
-      "stop_b": "nijmegen",
+      "stop_b": "mook_molenhoek",
       "lines": [
         "lineRB37"
       ],
@@ -7965,7 +8000,7 @@
       "is_junction_edge": false
     },
     {
-      "stop_a": "arnhem_zuid",
+      "stop_a": "boisheim",
       "stop_b": "breyell",
       "lines": [
         "lineRB37"
@@ -7974,7 +8009,7 @@
       "is_junction_edge": false
     },
     {
-      "stop_a": "arnhem_zuid",
+      "stop_a": "boisheim",
       "stop_b": "duelken",
       "lines": [
         "lineRB37"
@@ -7984,42 +8019,6 @@
     },
     {
       "stop_a": "duelken",
-      "stop_b": "nijmegen_lent",
-      "lines": [
-        "lineRB37"
-      ],
-      "n_lines": 1,
-      "is_junction_edge": false
-    },
-    {
-      "stop_a": "nijmegen_heyendaal",
-      "stop_b": "nijmegen_lent",
-      "lines": [
-        "lineRB37"
-      ],
-      "n_lines": 1,
-      "is_junction_edge": false
-    },
-    {
-      "stop_a": "mook_molenhoek",
-      "stop_b": "nijmegen_heyendaal",
-      "lines": [
-        "lineRB37"
-      ],
-      "n_lines": 1,
-      "is_junction_edge": false
-    },
-    {
-      "stop_a": "boisheim",
-      "stop_b": "mook_molenhoek",
-      "lines": [
-        "lineRB37"
-      ],
-      "n_lines": 1,
-      "is_junction_edge": false
-    },
-    {
-      "stop_a": "boisheim",
       "stop_b": "viersen",
       "lines": [
         "lineRB37"
@@ -9148,7 +9147,7 @@
     },
     {
       "stop_a": "froendenberg",
-      "stop_b": "schwerte_ruhr",
+      "stop_b": "holzwickede",
       "lines": [
         "style_lineRE30"
       ],
@@ -9988,7 +9987,7 @@
         "dist_m": 0.0
       }
     ],
-    "n_snap_warnings": 0,
+    "n_snap_warnings": 6,
     "suspicious_coordinate_pairs": []
   }
 }

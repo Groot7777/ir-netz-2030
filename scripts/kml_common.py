@@ -42,6 +42,92 @@ def haversine_m(lon1, lat1, lon2, lat2):
     return 2 * r * math.asin(math.sqrt(a))
 
 
+def entferne_rasterpunkte(pts):
+    """
+    Stuetzpunkte entfernen, die exakt auf dem 0,01-Grad-Raster liegen.
+
+    In den drei S-Bahn-Linien stecken im Raum Essen/Bochum rechtwinklige
+    Umwege aus glatten Koordinaten (7,08/51,45 -> 7,07/51,45 -> 7,07/51,46 ...).
+    Sie stammen erkennbar nicht aus einer Trassendigitalisierung, sondern sind
+    von Hand gesetzte Platzhalter - im Bild sind es kastenfoermige Ausbuchtungen
+    quer durch die Nachbarlinien. Echte Trassenpunkte treffen das Raster
+    praktisch nie (17 von 18811 Stuetzpunkten im gesamten Netz).
+    """
+    def raster(v):
+        return abs(v * 100.0 - round(v * 100.0)) < 1e-9
+
+    gefiltert = [p for p in pts if not (raster(p[0]) and raster(p[1]))]
+    return gefiltert if len(gefiltert) >= 2 else pts
+
+
+ENTWIRR_REVISIT_M = 250.0   # ab welcher Naehe zwei Stuetzpunkte als "derselbe Ort" gelten
+ENTWIRR_DECKUNG_M = 450.0   # so nah muss der entfernte Teil an der Restgeometrie liegen
+
+
+def _planar(pts):
+    """Grobe metrische Naeherung (aequirektangular) fuer lokale Abstandsrechnung."""
+    lat0 = sum(p[1] for p in pts) / len(pts)
+    k = math.cos(math.radians(lat0))
+    return [(p[0] * 111320.0 * k, p[1] * 110540.0) for p in pts]
+
+
+def entwirre_segment(pts, revisit_m=ENTWIRR_REVISIT_M, deckung_m=ENTWIRR_DECKUNG_M):
+    """
+    Zurueckgespulte Abschnitte aus einer Polylinie entfernen.
+
+    Manche Linienzuege in der KML befahren denselben Streckenabschnitt mehrfach
+    hin und zurueck (RE5 faehrt die Rheinstrecke Koblenz-Bingen dreimal). Solche
+    Doppelungen legen die Linie im fertigen Bild zwangslaeufig auf sich selbst und
+    auf ihre Nachbarn - kein Buendelungsalgorithmus kann das noch trennen.
+
+    Entfernt wird ein Teilstueck pts[i..j] nur dann, wenn
+      1. Anfang und Ende praktisch am selben Ort liegen (revisit_m) und
+      2. die verbleibende Geometrie das Teilstueck ohnehin abdeckt (deckung_m).
+
+    Bedingung 2 schuetzt echte Schleifen: die Achterschleife der S10 beruehrt
+    Bochum Hbf zweimal, faehrt dazwischen aber ueber Gelsenkirchen und Oberhausen -
+    dieser Bogen wird von der Restgeometrie nicht abgedeckt und bleibt erhalten.
+    """
+    if len(pts) < 4:
+        return pts
+
+    import numpy as np
+    from shapely.geometry import LineString as _LS
+
+    while True:
+        xy = np.array(_planar(pts))
+        n = len(pts)
+        treffer = None
+        for i in range(n - 3):
+            d = np.hypot(xy[i + 3:, 0] - xy[i, 0], xy[i + 3:, 1] - xy[i, 1])
+            kandidaten = np.nonzero(d <= revisit_m)[0]
+            if len(kandidaten) == 0:
+                continue
+            # groesstes j zuerst: moeglichst viel auf einmal entfernen
+            for k in kandidaten[::-1]:
+                j = i + 3 + int(k)
+                rest = pts[:i + 1] + pts[j:]
+                if len(rest) < 2:
+                    continue
+                rest_ls = _LS(_planar_mit(rest, pts))
+                entfernt = _planar_mit(pts[i + 1:j], pts)
+                if max(rest_ls.distance(Point(p)) for p in entfernt) <= deckung_m:
+                    treffer = (i, j, rest)
+                    break
+            if treffer:
+                break
+        if not treffer:
+            return pts
+        pts = treffer[2]
+
+
+def _planar_mit(teil, bezug):
+    """Wie _planar, aber mit dem Breitengrad-Bezug der vollstaendigen Polylinie."""
+    lat0 = sum(p[1] for p in bezug) / len(bezug)
+    k = math.cos(math.radians(lat0))
+    return [(p[0] * 111320.0 * k, p[1] * 110540.0) for p in teil]
+
+
 def normalize_core(name):
     """Namenskern ohne Klammerzusaetze/Bahnhofs-Suffixe, fuer den Aehnlichkeitsvergleich beim Dedup."""
     n = re.sub(r"\([^)]*\)", "", name)
@@ -117,7 +203,7 @@ def parse_kml(input_path):
                 for tok in coords_el.text.split():
                     lon, lat = map(float, tok.split(",")[:2])
                     pts.append((lon, lat))
-                segments.append(pts)
+                segments.append(entwirre_segment(entferne_rasterpunkte(pts)))
             code_match = re.match(r'^(RB\d+|RE\d+X?b?|S\d+)\b', name)
             code = code_match.group(1) if code_match else name.split()[0]
             lines.append({

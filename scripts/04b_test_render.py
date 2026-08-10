@@ -18,17 +18,18 @@ from pathlib import Path
 BUNDLED_PATH = Path("data/04_bundled.json")
 
 
-def build_svg(data, codes, padding=80.0, center_name=None, span=None, zoom=1.0):
-    lines = [l for l in data["lines"] if l["code"] in codes]
+def build_svg(data, codes, padding=80.0, center_name=None, span=None, zoom=1.0, view="inset"):
+    ansicht = data["views"][view]
+    lines = [l for l in ansicht["lines"] if l["code"] in codes]
     if not lines:
         raise SystemExit(f"Keine Linien gefunden fuer: {codes}")
 
     line_ids = {l["line_id"] for l in lines}
-    stops = [s for s in data["stops"] if any(lid in line_ids for lid in s["lines"])]
+    stops = [s for s in ansicht["stops"] if any(lid in line_ids for lid in s["lines"])]
 
     if center_name:
         # Ausschnitt um einen bestimmten Halt herum, um die Buendelung im Detail zu pruefen
-        match = [s for s in data["stops"] if center_name.lower() in s["name"].lower()]
+        match = [s for s in ansicht["stops"] if center_name.lower() in s["name"].lower()]
         if not match:
             raise SystemExit(f"Halt nicht gefunden: {center_name}")
         cx, cy = match[0]["x"], match[0]["y"]
@@ -47,7 +48,7 @@ def build_svg(data, codes, padding=80.0, center_name=None, span=None, zoom=1.0):
     parts = []
 
     # Laenderflaechen als zurueckhaltender Hintergrund
-    for c in data["countries"]:
+    for c in ansicht.get("countries", []):
         d_attr = "".join(
             "M " + " ".join(f"{x:.1f},{y:.1f}" for x, y in ring) + " Z "
             for ring in c["polygons"]
@@ -105,11 +106,12 @@ def main():
     ap.add_argument("--center", help="Halt, um den herum gezoomt wird (Teilstring genuegt)")
     ap.add_argument("--span", type=float, default=400.0, help="Kantenlaenge des Ausschnitts in px")
     ap.add_argument("--zoom", type=float, default=1.0, help="Vergroesserungsfaktor der Darstellung")
+    ap.add_argument("--view", default="inset", choices=["main", "inset"], help="Kartenansicht")
     args = ap.parse_args()
 
     data = json.loads(BUNDLED_PATH.read_text(encoding="utf-8"))
     svg, n_lines, n_stops = build_svg(
-        data, set(args.codes), center_name=args.center, span=args.span, zoom=args.zoom
+        data, set(args.codes), center_name=args.center, span=args.span, zoom=args.zoom, view=args.view
     )
 
     html = (

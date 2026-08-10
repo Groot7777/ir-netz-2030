@@ -252,6 +252,16 @@ verbleibenden Linien rücken zusammen und werden neu zentriert.
   beim Einlesen verworfen (`entferne_rasterpunkte`); echte Trassenpunkte
   treffen dieses Raster praktisch nie — 17 von 18811 im gesamten Netz.
 
+- **Bahnhof neben der Trasse.** Ein Halt liegt in der KML nicht auf den
+  LineStrings, sondern daneben — und jede Linie projiziert ihn auf eine etwas
+  andere Stelle *ihrer* Trasse. In Saarbrücken lagen die Kantenenden dadurch
+  über 2 km auseinander. Phase 4 zieht die Kantenenden eines Knotens deshalb
+  auf einen gemeinsamen Punkt (`knoten_zusammenziehen`, ausgeschlichen über
+  40 px) und setzt den Haltemarker dorthin, wo die **gezeichneten** Linien den
+  Knoten passieren — nicht auf die geografische Position des Halts. Phase 4
+  prüft das anschließend selbst und meldet jeden Marker, der nicht auf einer
+  seiner Linien liegt.
+
 - **Unbrauchbare Kantentrassen.** Legt die Trasse zwischen zwei benachbarten
   Halten mehr als das 2,5-fache der Luftlinie zurück (S3/S30 fahren zwischen
   Essen-Steele Ost und Essen-Horst 13,5 km für 1,6 km Luftlinie), verbindet

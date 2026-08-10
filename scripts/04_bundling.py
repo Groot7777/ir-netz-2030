@@ -74,6 +74,8 @@ RAMPEN_ANTEIL = 0.22
 CHAIKIN_ITERATIONS = 1               # Glaettung NACH dem Versatz
 MITER_LIMIT = 2.5                    # Begrenzung der Gehrung an spitzen Ecken (Faktor)
 MAX_GEHRUNG_PX = 3.0                 # und zusaetzlich absolut, damit aeussere Spuren keine Zacken werfen
+KNOTEN_ZIEHWEITE_PX = 40.0           # auf dieser Laenge werden Kantenenden zum gemeinsamen Knotenpunkt gezogen
+MAX_MARKER_DICKE_PX = 1.5 * LINE_WIDTH_PX   # Obergrenze fuer die halbe Markerdicke an Sternknoten
 
 SEGMENT_TIE_TOLERANCE_M = 50.0       # identisch zu Phase 2
 
@@ -288,6 +290,50 @@ def chaikin(pts, iterations=1):
     return pts
 
 
+def knoten_zusammenziehen(edge_geom, ziehweite_px=KNOTEN_ZIEHWEITE_PX):
+    """
+    Kantenenden an einem Knoten auf einen gemeinsamen Punkt ziehen.
+
+    Ein Bahnhof liegt in der KML nicht auf den Trassen, sondern daneben - und
+    jede Linie projiziert ihn auf eine etwas andere Stelle ihrer eigenen
+    Trasse. In Saarbruecken lagen die Enden zweier Kanten dadurch ueber 2 km
+    auseinander: Die Linien passierten denselben Bahnhof an sichtbar
+    verschiedenen Orten, und kein Haltemarker konnte auf allen liegen.
+
+    Die Korrektur wird ueber die ersten bzw. letzten ziehweite_px der Kante
+    ausgeschlichen, damit die Trasse dahinter unveraendert bleibt und kein Knick
+    entsteht.
+    """
+    ziele = defaultdict(list)
+    for key, geom in edge_geom.items():
+        ziele[key[0]].append(geom[0])
+        ziele[key[1]].append(geom[-1])
+    ziel = {sid: (sum(p[0] for p in ps) / len(ps), sum(p[1] for p in ps) / len(ps))
+            for sid, ps in ziele.items()}
+
+    for key, geom in edge_geom.items():
+        if len(geom) < 2:
+            continue
+        bogen = cumulative_arclen(geom)
+        gesamt = bogen[-1]
+        if gesamt < 1e-9:
+            continue
+        weite = min(ziehweite_px, gesamt * 0.45)
+        neu = list(geom)
+        for sid, idx, abstand in ((key[0], 0, bogen), (key[1], -1, [gesamt - b for b in bogen])):
+            dx = ziel[sid][0] - geom[idx][0]
+            dy = ziel[sid][1] - geom[idx][1]
+            if math.hypot(dx, dy) < 1e-9:
+                continue
+            for i, s in enumerate(abstand):
+                if s >= weite:
+                    continue
+                t = 1.0 - s / weite
+                gewicht = t * t * (3.0 - 2.0 * t)      # Smoothstep, knickfreier Uebergang
+                neu[i] = (neu[i][0] + dx * gewicht, neu[i][1] + dy * gewicht)
+        edge_geom[key] = neu
+
+
 def entdopple_folge(seq):
     """
     Mehrfach befahrene Kanten aus einer Knotenfolge entfernen.
@@ -462,6 +508,8 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                 deviations.append((key, best_line_id, line_id, dev))
         simplified = ref.simplify(SIMPLIFY_TOLERANCE_PX, preserve_topology=False)
         edge_geom[key] = densify(dedup_consecutive(list(simplified.coords)), DENSIFY_MAX_SEG_PX)
+
+    knoten_zusammenziehen(edge_geom)
 
     # --- Kantenorientierung entlang der Korridore festlegen ------------------
     # Die Slots einer Kante werden in deren Orientierung vergeben. Waere die
@@ -752,6 +800,25 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
         edges_by_stop[key[0]].append(key)
         edges_by_stop[key[1]].append(key)
 
+    # Wo passieren die GEZEICHNETEN Linien den Knoten?
+    # Der Marker lag bisher auf der geografischen Position des Halts. Die Linien
+    # folgen aber der Trasse, und ein Halt liegt nicht exakt darauf - je nach
+    # Datenlage ein paar hundert Meter daneben. Im Bild stand der Marker dann
+    # neben seinen eigenen Linien. Massgeblich ist deshalb die versetzte Lage
+    # der Linien am Knoten, die die Abstandspruefung ohnehin schon mitfuehrt.
+    # Bewusst je Kante getrennt: An einem Sternknoten wie Hamburg Hbf laufen
+    # Kanten aus vier Richtungen zusammen. Ueber alle gemittelt ergaebe das
+    # einen Marker, der quer ueber leere Flaeche reicht. Massgeblich ist die
+    # BREITESTE anliegende Kante - dort ist das Buendel wirklich ein Buendel.
+    knotenlagen = defaultdict(dict)   # stop_id -> {kante: {line_id: (x, y)}}
+    for key, geom in edge_geom.items():
+        anfang = kanten_anfang(key)
+        ende = key[1] if anfang == key[0] else key[0]
+        for sid_k, idx in ((anfang, 0), (ende, len(geom) - 1)):
+            lagen_k = versatz_pro_kante.get((key, idx))
+            if lagen_k:
+                knotenlagen[sid_k][key] = dict(lagen_k)
+
     view_line_ids = {l["line_id"] for l in output_lines}
     output_stops = []
     for sid, incident in edges_by_stop.items():
@@ -789,6 +856,36 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
             achse = 0.0
         else:
             achse = math.degrees(math.atan2(sy2, sx2)) / 2.0
+
+        # Marker auf die Mitte des Buendels legen und genau so lang machen,
+        # dass er alle dort verlaufenden Bahnen ueberdeckt - gemessen an der
+        # Markerachse, also quer zur Fahrtrichtung.
+        halb = (n_widest - 1) / 2.0 * SLOT_SPACING_PX
+        halb_dick = 0.0
+        je_kante = knotenlagen.get(sid, {})
+        if je_kante:
+            # Mittelpunkt ueber ALLE anliegenden Kanten: An einem Knoten laufen
+            # die Linien aus verschiedenen Richtungen zusammen, der Marker soll
+            # in ihrer Mitte sitzen und sie alle ueberdecken.
+            alle = [p for lagen_k in je_kante.values() for p in lagen_k.values()]
+            x = sum(p[0] for p in alle) / len(alle)
+            y = sum(p[1] for p in alle) / len(alle)
+            achse_rad = math.radians(achse + 90.0)
+            ax, ay = math.cos(achse_rad), math.sin(achse_rad)
+            # Ausdehnung des Punkthaufens laengs und quer zur Markerachse.
+            # An einem Sternknoten laufen die Zulaeufe nicht alle quer zur
+            # gemittelten Achse - was dort laengs nicht passt, faengt die Dicke
+            # auf. Nur so ueberdeckt der Marker jede Linie, ohne sich zu einer
+            # langen Nadel ueber leere Flaeche zu strecken.
+            halb = min(max(halb, max(abs((p[0] - x) * ax + (p[1] - y) * ay) for p in alle)),
+                       halb + LINE_WIDTH_PX)
+            # Nach oben begrenzt, sonst wird aus einem Sternknoten wie
+            # Hamburg-Harburg ein grosser weisser Klecks: Dort laufen Linien mit
+            # weit aussen liegender Spur aus vier Richtungen ein und passieren
+            # den Knoten zwangslaeufig einige Pixel versetzt.
+            halb_dick = min(max(abs(-(p[0] - x) * ay + (p[1] - y) * ax) for p in alle),
+                            MAX_MARKER_DICKE_PX)
+
         output_stops.append({
             "stop_id": sid,
             "name": s["name"],
@@ -798,8 +895,32 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
             "lines": lines_here,
             "degree": len(incident),
             "bundle_angle_deg": round(achse, 1),
-            "bundle_half_len": round((n_widest - 1) / 2.0 * SLOT_SPACING_PX, 2),
+            "bundle_half_len": round(halb, 2),
+            "bundle_half_thick": round(halb_dick, 2),
         })
+
+    # Selbstpruefung: Sitzt jeder Marker auf seinen Linien?
+    aeste_je_linie = defaultdict(list)
+    for l in output_lines:
+        for br in l["branches"]:
+            if len(br) >= 2:
+                aeste_je_linie[l["line_id"]].append(LineString(br))
+    marker_abweichung = []
+    for st in output_stops:
+        p = Point(st["x"], st["y"])
+        for lid in st["lines"]:
+            d = min((g.distance(p) for g in aeste_je_linie.get(lid, [])), default=None)
+            reichweite = math.hypot(st["bundle_half_len"], st["bundle_half_thick"]) + LINE_WIDTH_PX
+            if d is not None and d > reichweite:
+                marker_abweichung.append((d - reichweite, st["name"], lid))
+    if verbose:
+        if marker_abweichung:
+            marker_abweichung.sort(reverse=True)
+            print(f"    ACHTUNG: {len(marker_abweichung)} Marker liegen nicht auf einer ihrer Linien:")
+            for d, nm, lid in marker_abweichung[:8]:
+                print(f"      {nm} ({lid}): {d:.1f} px daneben")
+        else:
+            print(f"    Alle {len(output_stops)} Marker liegen auf ihren Linien")
 
     if verbose:
         print(f"  Ansicht '{name}': {len(output_lines)} Linien, {len(output_stops)} Halte, "

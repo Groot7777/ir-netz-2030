@@ -140,6 +140,10 @@ def marker_geometry(stop, line_width):
     else:
         length = 2 * half + line_width * 1.5
         thickness = line_width * 1.45
+    # An Sternknoten laufen die Linien nicht alle quer zur Buendelachse ein.
+    # Phase 4 misst deshalb auch, wie weit der Punkthaufen LAENGS der Strecke
+    # streut; der Marker wird entsprechend dicker, damit er jede Linie trifft.
+    thickness = max(thickness, 2 * stop.get("bundle_half_thick", 0.0) + line_width * 1.2)
     # lange Achse steht senkrecht zur Buendelrichtung
     angle = stop["bundle_angle_deg"] + 90.0
     return {

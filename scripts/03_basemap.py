@@ -34,6 +34,13 @@ INVENTORY_PATH = Path("data/01_inventory.json")
 NE_SHP_PATH = Path("data/naturalearth/ne_50m_admin_0_countries.shp")
 NE_BORDER_PATH = Path("data/naturalearth/ne_50m_admin_0_boundary_lines_land.shp")
 NE_STATES_PATH = Path("data/naturalearth/ne_10m_admin_1_states_provinces_lines.shp")
+NE_STATES_POLY_PATH = Path("data/naturalearth/ne_10m_admin_1_states_provinces.shp")
+
+# Bundesland, das die zweite Kartenseite abdeckt. NRW ist mit Abstand am
+# dichtesten befahren; im Netzmassstab ist dort keine lesbare Beschriftung
+# moeglich.
+REGION_LAND = "Germany"
+REGION_NAME = "Nordrhein-Westfalen"
 OUTPUT_PATH = Path("data/03_basemap.json")
 
 TARGET_COUNTRIES = [
@@ -148,6 +155,20 @@ def main():
     print(f"Staatsgrenzen: {len(staatsgrenzen)} Linienzuege")
     print(f"Verwaltungsgrenzen (Bundeslaender u.ae.): {len(bundeslaender)} Linienzuege")
 
+    # --- Flaeche des Bundeslands fuer die zweite Kartenseite ----------------
+    laender_poly = gpd.read_file(NE_STATES_POLY_PATH)
+    spalte_land = "admin" if "admin" in laender_poly.columns else "ADMIN"
+    spalte_name = "name" if "name" in laender_poly.columns else "NAME"
+    region = laender_poly[(laender_poly[spalte_land] == REGION_LAND)
+                          & (laender_poly[spalte_name] == REGION_NAME)]
+    if region.empty:
+        raise SystemExit(f"Region {REGION_NAME} nicht im Datensatz gefunden")
+    region_geom = region.to_crs(PROJECTED_CRS).geometry.iloc[0].simplify(400.0)
+    teile = region_geom.geoms if region_geom.geom_type.startswith("Multi") else [region_geom]
+    region_ringe = [[[round(x, 1), round(y, 1)] for x, y in t.exterior.coords] for t in teile]
+    print(f"Region '{REGION_NAME}': {len(region_ringe)} Teilflaeche(n), "
+          f"{sum(len(r) for r in region_ringe)} Stuetzpunkte")
+
     output = {
         "meta": {
             "projected_crs": PROJECTED_CRS,
@@ -163,6 +184,7 @@ def main():
         "countries": countries,
         "staatsgrenzen": staatsgrenzen,
         "bundeslaender": bundeslaender,
+        "region": {"name": REGION_NAME, "polygons": region_ringe},
     }
 
     OUTPUT_PATH.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")

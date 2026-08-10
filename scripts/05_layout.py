@@ -16,8 +16,12 @@ abgerundeten Badges in Linienfarbe.
 """
 import json
 import math
+import sys
 from collections import defaultdict
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from kml_common import anzeigenamen
 
 BUNDLED_PATH = Path("data/04_bundled.json")
 TEXTMASSE_PATH = Path("data/05a_textmasse.json")
@@ -56,16 +60,13 @@ _WIDE = set("mwMW@")
 _UPPER = set("ABCDEFGHJKLNOPQRSTUVXYZÄÖÜ0123456789")
 
 
-def display_name(name):
-    """
-    Kartenbeschriftung kuerzen.
+# Zuordnung voller Haltename -> Kartenbeschriftung, in main() gefuellt
+ANZEIGE = {}
 
-    Auf Verkehrskarten steht durchweg "Hbf" statt "Hauptbahnhof" - das spart
-    in dichten Bereichen erheblich Platz. Der volle Name bleibt fuer Suche und
-    Infofeld erhalten.
-    """
-    return (name.replace("Hauptbahnhof", "Hbf")
-                .replace("hauptbahnhof", "hbf"))
+
+def display_name(name):
+    """Kartenbeschriftung eines Halts (siehe kml_common.anzeigenamen)."""
+    return ANZEIGE.get(name, name)
 
 
 def text_width(text, font_px, bold=False, art="halt"):
@@ -360,7 +361,7 @@ def layout_view(view, line_width, grid_seed_boxes=None):
 
 
 def main():
-    global GEMESSEN
+    global GEMESSEN, ANZEIGE
     if TEXTMASSE_PATH.exists():
         GEMESSEN = json.loads(TEXTMASSE_PATH.read_text(encoding="utf-8"))
         print(f"{len(GEMESSEN)} im Browser gemessene Textbreiten geladen")
@@ -371,6 +372,11 @@ def main():
     data = json.loads(BUNDLED_PATH.read_text(encoding="utf-8"))
     line_width = data["meta"]["line_width_px"]
     seiten = data["meta"]["seiten"]
+
+    alle_namen = {s["name"] for v in data["views"].values() for s in v["stops"]}
+    ANZEIGE = anzeigenamen(sorted(alle_namen))
+    n_kurz = sum(1 for k, v in ANZEIGE.items() if k != v)
+    print(f"{n_kurz} von {len(ANZEIGE)} Haltenamen fuer die Karte gekuerzt")
 
     # Der Hinweis am markierten Quellbereich der Hauptkarte darf von
     # Haltebeschriftungen nicht ueberdeckt werden.

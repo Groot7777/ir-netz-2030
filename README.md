@@ -107,10 +107,15 @@ nach Kartenposition unterschiedlich breit wirken würden.
    gewählt (die detaillierteste der beteiligten Linien). Behielte jede Linie
    ihre eigene KML-Geometrie, würden die Bahnen des Bündels sichtbar
    auseinanderdriften.
-2. *Kanonische Richtung.* Slots werden entlang einer festen Kantenrichtung
-   vergeben; befährt eine Linie die Kante rückwärts, wird ihr Slot-Vorzeichen
-   gespiegelt. Dadurch liegen alle Linien physisch an derselben Stelle,
-   unabhängig von der Fahrtrichtung.
+2. *Propagierte Kantenorientierung.* Slots werden in der Orientierung einer
+   Kante vergeben; befährt eine Linie sie rückwärts, wird das Vorzeichen
+   gespiegelt. Entscheidend ist, dass die Orientierung **entlang der Korridore
+   propagiert** wird und nicht willkürlich (etwa alphabetisch) festliegt: Sonst
+   spiegelt sich das gesamte Bündel an jedem Knoten, an dem die Orientierung
+   gegen die Fahrtrichtung kippt — die Linien tauschen dort ihre Seite, obwohl
+   sie weiter parallel verlaufen. Stark befahrene Kanten werden zuerst
+   orientiert, damit die in Ringen unvermeidbaren Konflikte auf Nebenkanten
+   landen. Messbar: **124 → 0** Seitenwechsel bei 192 geprüften Übergängen.
 3. *Globale Slot-Reihenfolge.* Alle Linien werden einmal global sortiert; auf
    jeder Kante ordnen sich die dort verkehrenden Linien nach diesem Rang.
    Slots verschieben sich nur dort, wo Linien dazukommen oder abzweigen.
@@ -140,9 +145,17 @@ Beschriftungen am Ende doch überlappen.
 
 **Phase 5 — Darstellung.** Einstufung der Halte, kollisionsfreie Platzierung
 der Namen (acht Himmelsrichtungen in vier Entfernungsstufen, weiter außen mit
-Bezugslinie), Liniennummern-Badges, Legendeneinträge. Halte ohne Platz werden
-auf der Konsole protokolliert statt überlappend gezeichnet — aktuell ist das
-genau einer (Berlin-Ostkreuz).
+Bezugslinie), Liniennummern-Badges, Legendeneinträge. Halte ohne Platz würden
+auf der Konsole protokolliert statt überlappend gezeichnet — aktuell sitzen
+alle 420 bzw. 149 Namen.
+
+Zwei Kürzungen der Beschriftung, beide von Verkehrskarten übernommen:
+„Hauptbahnhof" wird immer zu „Hbf", und Stadtteilbahnhöfe großer Städte
+bekommen das Kürzel der Deutschen Bahn — „Düsseldorf-Bilk" wird zu „D-Bilk",
+„Berlin-Spandau" zu „B-Spandau", „Bochum-Riemke" zu „BO-Riemke". Das betrifft
+111 der 465 Halte und entlastet vor allem das Ruhrgebiet. Nicht gekürzt werden
+der Hauptbahnhof selbst und Namen mit Klammerzusatz: „Frankfurt (Oder)" und
+„Essen (Oldb)" sind eigene Städte, keine Stadtteile.
 
 **Phase 6 — Interaktion.** Baut die fertige HTML-Datei mit eingebettetem SVG,
 CSS und JavaScript. Kein localStorage.
@@ -161,11 +174,19 @@ Haltenamen unbrauchbar (weiße Schrift auf weißem Halo).
 ## Zwei Kartenseiten
 
 Im Ruhrgebiet liegen die Halte im Netzmaßstab nur rund 7 px auseinander —
-lesbare Beschriftung ist dort unmöglich. Die drei S-Bahn-Linien liegen deshalb
-auf einer **eigenen zweiten Kartenseite**, die den Ballungsraum
-bildschirmfüllend und rund viermal so groß zeigt (19 statt 4,8 px/km). Dort
-sind alle 74 Haltenamen kollisionsfrei untergebracht. Auf der Hauptkarte
-markiert ein gestricheltes, anklickbares Rechteck den Bereich.
+lesbare Beschriftung ist dort unmöglich. **Nordrhein-Westfalen** bekommt
+deshalb eine eigene zweite Kartenseite: 149 Halte, 13 Linien, dreifacher
+Maßstab (14,3 statt 4,8 px/km). Die Landesfläche kommt aus Natural Earth
+Admin-1, die Halte werden per Punkt-in-Polygon-Test mit 9 km Puffer
+ausgewählt. Die drei S-Bahn-Linien erscheinen ausschließlich hier. Auf der
+Hauptkarte markiert ein gestricheltes, anklickbares Rechteck den Bereich.
+
+*Grenze des Machbaren:* NRW ist 245 km breit, im Ruhrgebiet stehen die
+Bahnhöfe 2 km auseinander. Beides gleichzeitig lesbar auf einen Bildschirm zu
+bringen, geht rechnerisch nicht — bei einer Zeichenfläche, auf der alle Namen
+kollisionsfrei Platz haben (3900 px), sind sie in der Gesamtansicht zu klein.
+Die Seite zeigt deshalb zunächst die Netzstruktur; die Namen erscheinen beim
+Hineinzoomen, dann aber überlappungsfrei.
 
 Umgeschaltet wird über die Reiter in der Seitenleiste, den ⇄-Knopf oder einen
 Klick auf das gestrichelte Rechteck. Jede Seite hat ihren eigenen Zoomzustand.

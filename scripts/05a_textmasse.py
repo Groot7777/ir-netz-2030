@@ -21,9 +21,9 @@ OUTPUT_PATH = Path("data/05a_textmasse.json")
 FONT_FAMILY = '"Helvetica Neue", Arial, sans-serif'
 
 
-def display_name(name):
-    """Identisch zur Kuerzung in Phase 5."""
-    return name.replace("Hauptbahnhof", "Hbf").replace("hauptbahnhof", "hbf")
+import sys
+sys.path.insert(0, str(Path(__file__).parent))
+from kml_common import anzeigenamen
 
 
 def main():
@@ -32,10 +32,13 @@ def main():
     data = json.loads(BUNDLED_PATH.read_text(encoding="utf-8"))
 
     # Alle vorkommenden Texte je Verwendungsart sammeln
+    alle_namen = {s["name"] for v in data["views"].values() for s in v["stops"]}
+    anzeige = anzeigenamen(sorted(alle_namen))
+
     aufgaben = set()
     for view in data["views"].values():
         for s in view["stops"]:
-            aufgaben.add((display_name(s["name"]), "halt"))
+            aufgaben.add((anzeige[s["name"]], "halt"))
         for line in view["lines"]:
             aufgaben.add((line["code"], "badge"))
     for seite in data["meta"]["seiten"].values():

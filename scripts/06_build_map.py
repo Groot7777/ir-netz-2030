@@ -8,8 +8,9 @@ localStorage.
 
 Die Karte hat zwei Seiten, zwischen denen umgeschaltet wird:
 - "Gesamtnetz": alle RE/RB-Linien in Deutschland und den Nachbarlaendern
-- "Ballungsraum Ruhrgebiet": die S-Bahnen und die dortigen RE-Linien, deutlich
-  groesser, weil die Halte im Netzmassstab nur wenige Pixel auseinanderliegen
+- "Nordrhein-Westfalen": die S-Bahnen und alle dortigen RE/RB-Linien, dreimal
+  so gross, weil die Halte im Ruhrgebiet im Netzmassstab nur wenige Pixel
+  auseinanderliegen
 
 Interaktion: Zoom per Mausrad oder zwei Fingern, Verschieben per Ziehen,
 Doppeltipp vergroessert, Hovern/Antippen hebt eine Linie hervor, Klick auf
@@ -824,7 +825,8 @@ def build_html(data, layout):
     legende_html = []
     for entry in layout["legend"]:
         nur_ruhr = list(seiten_je_linie.get(entry["line_id"], {})) == ["inset"]
-        hinweis = ('<span class="hinweis"> · nur Ruhrgebiet</span>' if nur_ruhr else "")
+        hinweis = (f'<span class="hinweis"> · nur {esc(seiten["inset"]["titel"])}</span>'
+                   if nur_ruhr else "")
         legende_html.append(
             f'<li data-line="{entry["line_id"]}">'
             f'<span class="nummer" style="{farb_variablen(entry["color"])}">'
@@ -855,7 +857,7 @@ def build_html(data, layout):
   <h2>Kartenseite</h2>
   <div id="seitenwahl">
     <button data-seite="main" class="aktiv">{esc(seiten["main"]["titel"])}</button>
-    <button data-seite="inset">Ruhrgebiet ({seiten["inset"]["vergroesserung"]}×)</button>
+    <button data-seite="inset">{esc(seiten["inset"]["titel"])}</button>
   </div>
 
   <h2>Haltestelle suchen</h2>

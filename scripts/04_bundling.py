@@ -37,8 +37,8 @@ from collections import defaultdict
 from pathlib import Path
 
 from pyproj import Transformer
-from shapely.geometry import LineString, Point
-from shapely.ops import substring, transform as shapely_transform
+from shapely.geometry import LineString, Point, Polygon
+from shapely.ops import substring, transform as shapely_transform, unary_union
 
 from kml_common import assign_stops_to_segments, parse_kml
 
@@ -77,15 +77,15 @@ SEGMENT_TIE_TOLERANCE_M = 50.0       # identisch zu Phase 2
 PASSTHROUGH_TOL_M = 60.0
 EDGE_DEVIATION_WARN_PX = 12.0        # ab hier: Linien nehmen auf derselben Kante spuerbar andere Wege
 
-# Ballungsraum-Ausschnitt: Im Ruhrgebiet liegen die Halte im Netzmassstab nur
-# rund 7 px auseinander - dort ist keine lesbare Beschriftung moeglich. Die drei
-# S-Bahn-Linien wandern deshalb komplett auf eine eigene, zweite Kartenseite,
-# die den Ballungsraum bildschirmfuellend zeigt. Auf der Hauptkarte markiert ein
-# gestricheltes Rechteck den Bereich.
-INSET_TITLE = "Ballungsraum Ruhrgebiet"
-INSET_CANVAS_WIDTH = 1450.0          # eigene Zeichenflaeche der zweiten Seite
+# Zweite Kartenseite: Nordrhein-Westfalen ist mit Abstand am dichtesten
+# befahren - im Netzmassstab liegen die Ruhrgebiets-Halte nur rund 7 px
+# auseinander, lesbare Beschriftung ist dort unmoeglich. Die Landesflaeche
+# kommt aus Phase 3; die drei S-Bahn-Linien erscheinen ausschliesslich hier.
+# Auf der Hauptkarte markiert ein gestricheltes Rechteck den Bereich.
+INSET_TITLE = "Nordrhein-Westfalen"
+INSET_CANVAS_WIDTH = 3900.0          # eigene Zeichenflaeche der zweiten Seite
 INSET_MARGIN_PX = 70.0
-INSET_PAD_M = 6000.0                 # Puffer um die S-Bahn-Halte herum (Meter)
+INSET_PAD_M = 9000.0                 # Puffer um die Landesgrenze herum (Meter)
 
 
 # --- Geometrie-Hilfsfunktionen ----------------------------------------------
@@ -351,6 +351,63 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
         simplified = ref.simplify(SIMPLIFY_TOLERANCE_PX, preserve_topology=False)
         edge_geom[key] = densify(dedup_consecutive(list(simplified.coords)), DENSIFY_MAX_SEG_PX)
 
+    # --- Kantenorientierung entlang der Korridore festlegen ------------------
+    # Die Slots einer Kante werden in deren Orientierung vergeben. Waere die
+    # Orientierung willkuerlich (etwa alphabetisch nach Halte-ID), spiegelte
+    # sich das gesamte Buendel an jedem Knoten, an dem die Orientierung gegen
+    # die Fahrtrichtung kippt: Die Linien tauschten dort ihre Seite, obwohl sie
+    # weiter parallel verlaufen. Die Orientierung wird deshalb entlang der
+    # Linienwege propagiert, sodass aufeinanderfolgende Kanten eines Korridors
+    # immer in dieselbe Richtung zeigen.
+    nachbarn = defaultdict(list)
+    for branches in line_branches.values():
+        for seq in branches:
+            vorige = None
+            for id_a, id_b in zip(seq, seq[1:]):
+                key = tuple(sorted((id_a, id_b)))
+                if key not in edge_geom:
+                    vorige = None
+                    continue
+                if vorige is not None:
+                    # id_a ist der gemeinsame Knoten beider Kanten
+                    nachbarn[vorige].append((key, id_a))
+                    nachbarn[key].append((vorige, id_a))
+                vorige = key
+
+    def knotenlage(key, knoten):
+        """+1, wenn der Knoten das zweite Element der Kante ist, sonst -1."""
+        return 1 if key[1] == knoten else -1
+
+    # Ringe im Netz koennen die Bedingung nicht immer erfuellen (die Parität
+    # entlang eines Zyklus kann nicht aufgehen). Damit die unvermeidbaren
+    # Konflikte auf unwichtigen Kanten landen, werden stark befahrene Kanten
+    # zuerst orientiert.
+    def kantengewicht(key):
+        return len({lid for lid, _ in edge_candidates[key]})
+
+    orientierung = {}
+    orient_konflikte = 0
+    for start in sorted(edge_geom, key=lambda k: -kantengewicht(k)):
+        if start in orientierung:
+            continue
+        orientierung[start] = 1
+        warteschlange = [start]
+        while warteschlange:
+            warteschlange.sort(key=lambda k: kantengewicht(k))
+            e1 = warteschlange.pop()
+            for e2, knoten in nachbarn.get(e1, []):
+                # beide Kanten sollen "gleich herum" durch den Knoten zeigen
+                soll = -orientierung[e1] * knotenlage(e1, knoten) * knotenlage(e2, knoten)
+                if e2 not in orientierung:
+                    orientierung[e2] = soll
+                    warteschlange.append(e2)
+                elif orientierung[e2] != soll:
+                    orient_konflikte += 1
+
+    def kanten_anfang(key):
+        """Startknoten der Kante in ihrer festgelegten Orientierung."""
+        return key[0] if orientierung[key] > 0 else key[1]
+
     # globale Linienreihenfolge, aber Slots nur unter den Linien DIESER Ansicht
     view_lines = [ln for ln in sorted(lines_raw, key=natural_sort_key) if ln["line_id"] in line_ids]
     rank_by_line = {ln["line_id"]: i for i, ln in enumerate(view_lines)}
@@ -362,6 +419,35 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
         edge_slots[key] = {lid: (i - (n - 1) / 2.0) for i, lid in enumerate(lines_here)}
 
     max_bundle = max((len(v) for v in edge_slots.values()), default=0)
+
+    # --- Pruefgroesse: tauschen parallel laufende Linien ihre Seite? ---------
+    # Zwei Linien, die zwei aufeinanderfolgende Kanten gemeinsam befahren,
+    # muessen auf beiden Kanten dieselbe Seite zueinander behalten. Jeder
+    # Wechsel ist ein sichtbarer Sprung im Buendel.
+    def seite(key, lid, von_knoten):
+        slot = edge_slots[key][lid]
+        return slot if von_knoten == kanten_anfang(key) else -slot
+
+    seitenwechsel = 0
+    geprueft = 0
+    for branches in line_branches.values():
+        for seq in branches:
+            paare = []
+            for id_a, id_b in zip(seq, seq[1:]):
+                key = tuple(sorted((id_a, id_b)))
+                if key in edge_geom:
+                    paare.append((key, id_a))
+            for (k1, v1), (k2, v2) in zip(paare, paare[1:]):
+                gemeinsam = set(edge_slots[k1]) & set(edge_slots[k2])
+                for a in gemeinsam:
+                    for b in gemeinsam:
+                        if rank_by_line[a] >= rank_by_line[b]:
+                            continue
+                        geprueft += 1
+                        d1 = seite(k1, a, v1) - seite(k1, b, v1)
+                        d2 = seite(k2, a, v2) - seite(k2, b, v2)
+                        if d1 * d2 < 0:
+                            seitenwechsel += 1
 
     # Wege zusammensetzen, Slot-Rampen legen, versetzen, glaetten
     output_lines = []
@@ -376,8 +462,9 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                 key = tuple(sorted((id_a, id_b)))
                 if key not in edge_geom:
                     continue
-                geom = edge_geom[key]
-                forward = (id_a, id_b) == key
+                # Geometrie in der festgelegten Orientierung der Kante
+                geom = edge_geom[key] if orientierung[key] > 0 else edge_geom[key][::-1]
+                forward = (id_a == kanten_anfang(key))
                 seg_pts = geom if forward else geom[::-1]
                 slot = edge_slots[key][ln["line_id"]]
                 slot_signed = slot if forward else -slot
@@ -496,6 +583,9 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
         print(f"  Ansicht '{name}': {len(output_lines)} Linien, {len(output_stops)} Halte, "
               f"{len(edge_geom)} Kanten, groesstes Buendel {max_bundle}, "
               f"{slot_change_count} Slot-Wechsel")
+        print(f"    Seitenwechsel parallel laufender Linien: {seitenwechsel} von {geprueft} "
+              f"geprueften Uebergaengen"
+              + (f", {orient_konflikte} Orientierungskonflikte" if orient_konflikte else ""))
         if deviations:
             print(f"    {len(deviations)} Kanten mit abweichender Streckenfuehrung "
                   f"(> {EDGE_DEVIATION_WARN_PX:.0f} px) - dort gilt die detaillierteste Variante")
@@ -558,15 +648,11 @@ def main(debug_edge=None):
     s_line_ids = {ln["line_id"] for ln in lines_raw if ln["code"].startswith("S")}
     main_line_ids = {ln["line_id"] for ln in lines_raw} - s_line_ids
 
-    # Ausschnittbereich aus der Lage der S-Bahn-Halte ableiten
-    s_stop_ids = set()
-    for g in graph["lines"]:
-        if g["line_id"] in s_line_ids:
-            s_stop_ids.update(sid for seq in g["sequences"] for sid in seq)
-    sx = [stop_by_id[i]["px_m"] for i in s_stop_ids]
-    sy = [stop_by_id[i]["py_m"] for i in s_stop_ids]
-    ix0, ix1 = min(sx) - INSET_PAD_M, max(sx) + INSET_PAD_M
-    iy0, iy1 = min(sy) - INSET_PAD_M, max(sy) + INSET_PAD_M
+    # Bereich der zweiten Seite: die Landesflaeche aus Phase 3, grosszuegig gepuffert
+    region_ringe = basemap["region"]["polygons"]
+    region_flaeche = unary_union([Polygon(r) for r in region_ringe if len(r) >= 4])
+    region_gepuffert = region_flaeche.buffer(INSET_PAD_M)
+    ix0, iy0, ix1, iy1 = region_gepuffert.bounds
 
     inset_scale = (INSET_CANVAS_WIDTH - 2 * INSET_MARGIN_PX) / (ix1 - ix0)
     inset_height = (iy1 - iy0) * inset_scale + 2 * INSET_MARGIN_PX
@@ -576,9 +662,9 @@ def main(debug_edge=None):
         return (INSET_MARGIN_PX + (x - ix0) * inset_scale,
                 INSET_MARGIN_PX + (iy1 - y) * inset_scale)
 
-    # alle Halte im Ausschnittbereich, und alle Linien, die dort mindestens zwei bedienen
+    # alle Halte in der Region, und alle Linien, die dort mindestens zwei bedienen
     inset_stop_ids = {s["stop_id"] for s in graph["stops"]
-                      if ix0 <= s["px_m"] <= ix1 and iy0 <= s["py_m"] <= iy1}
+                      if region_gepuffert.contains(Point(s["px_m"], s["py_m"]))}
     inset_line_ids = set()
     for g in graph["lines"]:
         n_inside = len({sid for seq in g["sequences"] for sid in seq} & inset_stop_ids)
@@ -587,6 +673,7 @@ def main(debug_edge=None):
 
     print(f"Zweite Seite '{INSET_TITLE}': {INSET_CANVAS_WIDTH:.0f} x {inset_height:.0f} px, "
           f"{inset_scale * 1000:.1f} px/km (Hauptkarte {scale * 1000:.1f}), "
+          f"{(ix1 - ix0) / 1000:.0f} x {(iy1 - iy0) / 1000:.0f} km, "
           f"{len(inset_stop_ids)} Halte, {len(inset_line_ids)} Linien")
 
     views = {

@@ -218,6 +218,67 @@ def dedupe_stops(stops_raw, threshold_m=150.0):
     return merged_stops, id_by_raw_index, merges_found, suspicious_pairs
 
 
+# Uebliche Kuerzel der Deutschen Bahn fuer Stadtteilbahnhoefe. Bewusst
+# vorgegeben statt automatisch abgeleitet, weil sich Berlin/Bochum und
+# Dortmund/Duesseldorf sonst um denselben Anfangsbuchstaben streiten.
+STADT_KUERZEL = {
+    "Berlin": "B", "Bochum": "BO", "Bremen": "HB", "Dortmund": "DO",
+    "Duisburg": "DU", "Düsseldorf": "D", "Essen": "E", "Frankfurt": "F",
+    "Gelsenkirchen": "GE", "Hagen": "HA", "Hamburg": "HH", "Hannover": "H",
+    "Köln": "K", "Leipzig": "L", "Mülheim": "MH", "München": "M",
+    "Münster": "MS", "Nürnberg": "N", "Stuttgart": "S", "Wuppertal": "W",
+}
+
+# "Bad Oldesloe" und "Bad Kleinen" sind verschiedene Staedte, kein gemeinsamer
+# Stadtname - solche Praefixe duerfen nicht als Stadt durchgehen.
+KEINE_STADT = {"Bad", "Sankt", "St."}
+
+MIN_HALTE_FUER_KUERZEL = 3
+
+
+def anzeigenamen(namen):
+    """
+    Kartenbeschriftung je Haltename bestimmen.
+
+    Zwei Kuerzungen, beide von Verkehrskarten uebernommen:
+    - "Hauptbahnhof" wird immer zu "Hbf".
+    - Stadtteilbahnhoefe grosser Staedte bekommen das Stadtkuerzel:
+      "Duesseldorf-Bilk" -> "D-Bilk", "Berlin Suedkreuz" -> "B-Suedkreuz".
+      Das spart im Ruhrgebiet und um Duesseldorf herum erheblich Platz.
+
+    Nicht gekuerzt werden der Hauptbahnhof selbst (dort steht der Stadtname
+    ausgeschrieben) und Namen, deren Zusatz in Klammern steht - "Frankfurt
+    (Oder)" und "Essen (Oldb)" sind eigene Staedte, keine Stadtteile.
+    """
+    import re as _re
+    from collections import Counter as _Counter
+
+    def stadt_und_rest(name):
+        m = _re.match(r"^([^-\s]+)[-\s]+(.+)$", name)
+        if not m:
+            return None, None
+        return m.group(1), m.group(2)
+
+    zaehler = _Counter()
+    for name in namen:
+        stadt, rest = stadt_und_rest(name)
+        if stadt and stadt not in KEINE_STADT and not rest.startswith("("):
+            zaehler[stadt] += 1
+
+    ergebnis = {}
+    for name in namen:
+        kurz = name.replace("Hauptbahnhof", "Hbf").replace("hauptbahnhof", "hbf")
+        stadt, rest = stadt_und_rest(name)
+        ist_hbf = kurz.endswith("Hbf")
+        if (stadt and not ist_hbf and stadt in STADT_KUERZEL
+                and stadt not in KEINE_STADT
+                and not rest.startswith("(")
+                and zaehler[stadt] >= MIN_HALTE_FUER_KUERZEL):
+            kurz = f"{STADT_KUERZEL[stadt]}-{rest}"
+        ergebnis[name] = kurz
+    return ergebnis
+
+
 def assign_stops_to_segments(segments_proj, stops_xy, tie_tolerance_m):
     """
     Ordnet Halte den Segmenten einer Linie zu und bestimmt ihre Position entlang

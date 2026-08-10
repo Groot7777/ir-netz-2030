@@ -30,6 +30,10 @@ Funktioniert auf Rechner und Handy.
 
 **Überall**
 
+- **Hell und Dunkel** über den ☾/☀-Knopf. Startwert kommt aus der
+  Systemeinstellung und folgt ihr auch, wenn sie sich während der Sitzung
+  ändert. Da localStorage ausgeschlossen ist, gilt eine manuelle Auswahl nur
+  für die aktuelle Sitzung.
 - **Klick/Tipp auf einen Halt** zeigt Name und die dort verkehrenden Linien
 - **Suchfeld** springt zu einem Halt (findet sowohl „Köln Hauptbahnhof" als
   auch „Köln Hbf")
@@ -112,6 +116,17 @@ auf der Konsole protokolliert statt überlappend gezeichnet.
 
 **Phase 6 — Interaktion.** Baut die fertige HTML-Datei mit eingebettetem SVG,
 CSS und JavaScript. Kein localStorage.
+
+Farben liegen als CSS-Variablen vor: jede Linie trägt ihre Hell- und
+Dunkelfassung als `--c`/`--cd` im `style`-Attribut, das Umschalten ist dadurch
+reines CSS. Ein Drittel der Liniennummern hat eine Helligkeit unter 0,45
+(reines Blau liegt bei 0,11) und wäre auf dunklem Grund kaum zu erkennen —
+für den Dunkelmodus wird deshalb über HSL die Helligkeit angehoben und die
+Sättigung gedeckelt, der Farbton bleibt erhalten.
+
+`color-scheme: light dark` ist wichtig: Ohne diese Angabe invertieren Browser
+wie Brave die Seite selbsttätig und machen dabei die weißen Text-Halos der
+Haltenamen unbrauchbar (weiße Schrift auf weißem Halo).
 
 ## Zwei Ansichten
 

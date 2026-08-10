@@ -13,6 +13,7 @@ Interaktion:
 - Suchfeld springt zu einem Halt
 """
 import argparse
+import colorsys
 import json
 from pathlib import Path
 
@@ -31,6 +32,46 @@ def esc(text):
 
 def polyline(points):
     return " ".join(f"{x},{y}" for x, y in points)
+
+
+def _rgb(hex_color):
+    c = hex_color.lstrip("#")
+    return tuple(int(c[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
+
+
+def helligkeit(hex_color):
+    """Wahrgenommene Helligkeit von 0 bis 1."""
+    r, g, b = _rgb(hex_color)
+    return 0.299 * r + 0.587 * g + 0.114 * b
+
+
+def dunkel_variante(hex_color, min_l=0.58, max_s=0.88):
+    """
+    Linienfarbe fuer den Dunkelmodus aufhellen.
+
+    Ein Drittel der Liniennummern hat eine Helligkeit unter 0,45 (reines Blau
+    liegt bei 0,11) - auf dunklem Grund waeren diese Linien kaum zu erkennen.
+    Farbton bleibt erhalten, nur die Helligkeit wird angehoben und die
+    Saettigung leicht gedeckelt, damit nichts grell wirkt.
+    """
+    r, g, b = _rgb(hex_color)
+    h, l, s = colorsys.rgb_to_hls(r, g, b)
+    l = max(l, min_l)
+    s = min(s, max_s)
+    r, g, b = colorsys.hls_to_rgb(h, l, s)
+    return "#{:02x}{:02x}{:02x}".format(round(r * 255), round(g * 255), round(b * 255))
+
+
+def schrift_auf(hex_color):
+    """Lesbare Schriftfarbe auf einer Flaeche dieser Farbe."""
+    return "#ffffff" if helligkeit(hex_color) < 0.62 else "#1a1a1a"
+
+
+def farb_variablen(hex_color):
+    """style-Attribut mit Farbe fuer hell (--c/--t) und dunkel (--cd/--td)."""
+    dunkel = dunkel_variante(hex_color)
+    return (f"--c:{hex_color};--t:{schrift_auf(hex_color)};"
+            f"--cd:{dunkel};--td:{schrift_auf(dunkel)}")
 
 
 def build_svg(data, layout):
@@ -82,7 +123,7 @@ def build_svg(data, layout):
         for line in view["lines"]:
             for branch in line["branches"]:
                 out.append(f'<polyline class="linie" data-line="{line["line_id"]}" '
-                           f'stroke="{line["color"]}" stroke-width="{lw}" '
+                           f'style="{farb_variablen(line["color"])}" stroke-width="{lw}" '
                            f'points="{polyline(branch)}"/>')
         out.append("</g>")
     for view_name, view in data["views"].items():
@@ -115,11 +156,12 @@ def build_svg(data, layout):
         out.append(f'<g class="badges" data-view="{view_name}">')
         for b in layout["views"][view_name]["badges"]:
             bx, by = b["x"] - b["w"] / 2, b["y"] - b["h"] / 2
-            out.append(f'<g class="badge" data-line="{b["line_id"]}">'
+            out.append(f'<g class="badge" data-line="{b["line_id"]}" '
+                       f'style="{farb_variablen(b["fill"])}">'
                        f'<rect x="{round(bx, 1)}" y="{round(by, 1)}" width="{b["w"]}" '
-                       f'height="{b["h"]}" rx="{b["h"] / 2}" fill="{b["fill"]}"/>'
+                       f'height="{b["h"]}" rx="{b["h"] / 2}"/>'
                        f'<text x="{b["x"]}" y="{round(b["y"] + lmeta["badge_font_px"] * 0.35, 1)}" '
-                       f'font-size="{lmeta["badge_font_px"]}" fill="{b["text_fill"]}">'
+                       f'font-size="{lmeta["badge_font_px"]}">'
                        f'{esc(b["text"])}</text></g>')
         out.append("</g>")
 
@@ -148,36 +190,76 @@ def build_svg(data, layout):
 
 
 CSS = """
+/* Farben liegen als Variablen vor, damit Hell und Dunkel dieselbe Struktur
+   nutzen. color-scheme sagt dem Browser ausserdem, dass die Seite ihren
+   Dunkelmodus selbst regelt - sonst invertiert z.B. Brave/Chromium die Seite
+   automatisch und macht dabei die weissen Text-Halos unbrauchbar. */
+:root {
+  color-scheme: light dark;
+  --panel-bg: #fafafa;   --panel-rand: #d8d8d8;
+  --text: #1a1a1a;       --text-schwach: #666;   --text-leise: #888;
+  --karte-bg: #f4f4f2;
+  --land-fill: #e6e6e4;  --land-rand: #ffffff;   --land-text: #b9b9b5;
+  --halt-fill: #ffffff;  --halt-rand: #2a2a2a;
+  --name-text: #222222;  --name-fett: #000000;   --name-halo: #ffffff;
+  --bezug: #999999;
+  --rahmen-bg: #ffffff;  --rahmen-rand: #b0b0b0; --rahmen-text: #555555;
+  --quelle-rand: #9a9a9a; --quelle-text: #8a8a8a;
+  --knopf-bg: #ffffff;   --knopf-rand: #cccccc;  --knopf-text: #333333;
+  --knopf-hover: #f0f0f0;
+  --feld-bg: #ffffff;    --hover-bg: #e8e8e8;
+  --hinweis-bg: rgba(255,255,255,.88);
+}
+
+[data-thema="dunkel"] {
+  color-scheme: dark;
+  --panel-bg: #171a1f;   --panel-rand: #2a2f36;
+  --text: #e6e8ea;       --text-schwach: #9aa0a8; --text-leise: #7d848d;
+  --karte-bg: #0d0f12;
+  --land-fill: #1e222a;  --land-rand: #0d0f12;   --land-text: #3f4650;
+  --halt-fill: #f2f4f6;  --halt-rand: #0d0f12;
+  --name-text: #dfe3e8;  --name-fett: #ffffff;   --name-halo: #0d0f12;
+  --bezug: #6b7480;
+  --rahmen-bg: #171a1f;  --rahmen-rand: #3a414b; --rahmen-text: #aab2bc;
+  --quelle-rand: #4a525d; --quelle-text: #79818c;
+  --knopf-bg: #1c2026;   --knopf-rand: #333a43;  --knopf-text: #dfe3e8;
+  --knopf-hover: #262c34;
+  --feld-bg: #171a1f;    --hover-bg: #232830;
+  --hinweis-bg: rgba(13,15,18,.88);
+}
+
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; font-family: "Helvetica Neue", Arial, sans-serif; }
-body { display: flex; background: #ffffff; color: #1a1a1a; overflow: hidden; }
+body { display: flex; background: var(--panel-bg); color: var(--text); overflow: hidden; }
 /* dvh beruecksichtigt die ein- und ausfahrende Browserleiste auf dem Handy */
 @supports (height: 100dvh) { body { height: 100dvh; } }
 
 #seitenleiste {
   width: 310px; flex: 0 0 310px; height: 100%; overflow-y: auto;
-  border-right: 1px solid #d8d8d8; padding: 16px 14px; background: #fafafa;
+  border-right: 1px solid var(--panel-rand); padding: 16px 14px; background: var(--panel-bg);
 }
 #seitenleiste h1 { font-size: 17px; margin: 0 0 2px; }
-#seitenleiste .untertitel { font-size: 11.5px; color: #666; margin-bottom: 14px; }
+#seitenleiste .untertitel { font-size: 11.5px; color: var(--text-schwach); margin-bottom: 14px; }
 #seitenleiste h2 {
   font-size: 11px; text-transform: uppercase; letter-spacing: .07em;
-  color: #777; margin: 18px 0 7px; font-weight: 600;
+  color: var(--text-schwach); margin: 18px 0 7px; font-weight: 600;
 }
 
-#suche { width: 100%; padding: 7px 9px; font-size: 13px;
-         border: 1px solid #c8c8c8; border-radius: 5px; background: #fff; }
+#suche {
+  width: 100%; padding: 7px 9px; font-size: 13px; color: var(--text);
+  border: 1px solid var(--panel-rand); border-radius: 5px; background: var(--feld-bg);
+}
 #treffer { list-style: none; margin: 5px 0 0; padding: 0; }
 #treffer li { padding: 5px 7px; font-size: 12.5px; cursor: pointer; border-radius: 4px; }
-#treffer li:hover { background: #e8e8e8; }
-#treffer li .zeilen { color: #777; font-size: 11px; }
+#treffer li:hover { background: var(--hover-bg); }
+#treffer li .zeilen { color: var(--text-schwach); font-size: 11px; }
 
 /* Infofeld schwebt ueber der Karte, damit es auch dann sichtbar ist,
    wenn die Seitenleiste auf schmalen Bildschirmen eingeklappt ist. */
 #infofeld {
   display: none; position: absolute; left: 12px; bottom: 12px; z-index: 5;
-  max-width: 290px; padding: 11px 12px; background: #fff;
-  border: 1px solid #d0d0d0; border-radius: 8px;
+  max-width: 290px; padding: 11px 12px; background: var(--feld-bg);
+  border: 1px solid var(--panel-rand); border-radius: 8px;
   box-shadow: 0 3px 14px rgba(0,0,0,.16);
   /* Knotenbahnhoefe fuehren bis zu sechs Linien - dann lieber scrollen */
   max-height: 45vh; overflow-y: auto;
@@ -185,76 +267,80 @@ body { display: flex; background: #ffffff; color: #1a1a1a; overflow: hidden; }
 #infofeld .titel { font-weight: 700; font-size: 14px; margin-bottom: 8px; padding-right: 22px; }
 #infofeld .zeile { display: flex; align-items: center; gap: 8px; font-size: 12.5px; padding: 3px 0; }
 #infofeld .schliessen {
-  position: absolute; top: 4px; right: 8px; cursor: pointer; color: #888;
+  position: absolute; top: 4px; right: 8px; cursor: pointer; color: var(--text-leise);
   font-size: 22px; line-height: 1; padding: 2px 6px;
 }
 
 .legende { list-style: none; margin: 0; padding: 0; }
 .legende li { display: flex; align-items: baseline; gap: 8px; padding: 3px 4px;
               font-size: 12px; cursor: pointer; border-radius: 4px; }
-.legende li:hover { background: #e8e8e8; }
-.legende .nummer { flex: 0 0 42px; font-weight: 700; font-size: 10.5px; color: #fff;
-                   text-align: center; border-radius: 7px; padding: 2px 3px; }
-.legende .strecke { color: #444; line-height: 1.25; }
-.legende .hinweis { color: #888; font-size: 10.5px; }
+.legende li:hover { background: var(--hover-bg); }
+.legende .nummer { flex: 0 0 42px; font-weight: 700; font-size: 10.5px;
+                   text-align: center; border-radius: 7px; padding: 2px 3px;
+                   background: var(--c); color: var(--t); }
+.legende .strecke { color: var(--text-schwach); line-height: 1.25; }
+.legende .hinweis { color: var(--text-leise); font-size: 10.5px; }
+[data-thema="dunkel"] .legende .nummer { background: var(--cd); color: var(--td); }
 
 #kartenbereich { flex: 1; position: relative; height: 100%; overflow: hidden; }
-#karte { width: 100%; height: 100%; display: block; background: #f4f4f2;
+#karte { width: 100%; height: 100%; display: block; background: var(--karte-bg);
          cursor: grab; touch-action: none; }
 #karte.greift { cursor: grabbing; }
 
 #bedienung { position: absolute; top: 12px; right: 12px; display: flex; gap: 6px; z-index: 4; }
-#bedienung button {
+#bedienung button, #menuKnopf {
   width: 40px; height: 40px; font-size: 18px; cursor: pointer;
-  border: 1px solid #ccc; background: #fff; border-radius: 7px; color: #333;
+  border: 1px solid var(--knopf-rand); background: var(--knopf-bg);
+  border-radius: 7px; color: var(--knopf-text);
   -webkit-tap-highlight-color: transparent;
 }
-#bedienung button:hover { background: #f0f0f0; }
+#bedienung button:hover, #menuKnopf:hover { background: var(--knopf-hover); }
 #bedienung button.weit { width: auto; padding: 0 13px; font-size: 13px; }
 
-#menuKnopf {
-  display: none; position: absolute; top: 12px; left: 12px; z-index: 6;
-  width: 40px; height: 40px; font-size: 19px; cursor: pointer;
-  border: 1px solid #ccc; background: #fff; border-radius: 7px; color: #333;
-  -webkit-tap-highlight-color: transparent;
-}
+#menuKnopf { display: none; position: absolute; top: 12px; left: 12px; z-index: 6; font-size: 19px; }
 #hintergrund {
-  display: none; position: fixed; inset: 0; z-index: 8; background: rgba(0,0,0,.35);
+  display: none; position: fixed; inset: 0; z-index: 8; background: rgba(0,0,0,.45);
 }
 #hintergrund.sichtbar { display: block; }
 
 #hinweis { position: absolute; bottom: 12px; right: 12px; font-size: 11.5px;
-           color: #777; background: rgba(255,255,255,.88); padding: 5px 9px;
+           color: var(--text-schwach); background: var(--hinweis-bg); padding: 5px 9px;
            border-radius: 4px; pointer-events: none; }
 #hinweis .nurBreit { display: inline; }
 #hinweis .nurSchmal { display: none; }
 
 /* --- Kartenelemente --- */
-#laender path { fill: #e6e6e4; stroke: #ffffff; stroke-width: 1.6; }
-#laendernamen text { fill: #b9b9b5; text-anchor: middle; font-weight: 600;
+#laender path { fill: var(--land-fill); stroke: var(--land-rand); stroke-width: 1.6; }
+#laendernamen text { fill: var(--land-text); text-anchor: middle; font-weight: 600;
                      letter-spacing: .12em; pointer-events: none; }
 
-#ausschnitt-quelle rect { fill: none; stroke: #9a9a9a; stroke-width: 2.5; stroke-dasharray: 9 6; }
-#ausschnitt-quelle text { fill: #8a8a8a; text-anchor: middle; pointer-events: none; }
+#ausschnitt-quelle rect { fill: none; stroke: var(--quelle-rand); stroke-width: 2.5;
+                          stroke-dasharray: 9 6; }
+#ausschnitt-quelle text { fill: var(--quelle-text); text-anchor: middle; pointer-events: none; }
 
-#ausschnitt-rahmen rect { fill: #ffffff; stroke: #b0b0b0; stroke-width: 2.5; }
-#ausschnitt-rahmen text { fill: #555; font-weight: 700; pointer-events: none; }
+#ausschnitt-rahmen rect { fill: var(--rahmen-bg); stroke: var(--rahmen-rand); stroke-width: 2.5; }
+#ausschnitt-rahmen text { fill: var(--rahmen-text); font-weight: 700; pointer-events: none; }
 
-.linie { fill: none; stroke-linecap: round; stroke-linejoin: round; transition: opacity .12s; }
+/* Linienfarbe steckt als --c (hell) und --cd (dunkel) im style-Attribut */
+.linie { fill: none; stroke: var(--c); stroke-linecap: round; stroke-linejoin: round;
+         transition: opacity .12s; }
+[data-thema="dunkel"] .linie { stroke: var(--cd); }
 .treffer { fill: none; stroke: transparent; stroke-linecap: round;
            stroke-linejoin: round; pointer-events: stroke; cursor: pointer; }
 
-.halt { fill: #ffffff; stroke: #2a2a2a; stroke-width: 1.3; cursor: pointer; }
+.halt { fill: var(--halt-fill); stroke: var(--halt-rand); stroke-width: 1.3; cursor: pointer; }
 .halt.knoten { stroke-width: 2.1; }
 .halt.hervor { stroke: #d40000; stroke-width: 3; }
 
-.name { fill: #222; pointer-events: none; paint-order: stroke;
-        stroke: #ffffff; stroke-width: 2.6; stroke-linejoin: round; }
-.name.fett { font-weight: 700; fill: #000; stroke-width: 3.4; }
-.bezugslinien line { stroke: #999; stroke-width: .7; pointer-events: none; }
+.name { fill: var(--name-text); pointer-events: none; paint-order: stroke;
+        stroke: var(--name-halo); stroke-width: 2.6; stroke-linejoin: round; }
+.name.fett { font-weight: 700; fill: var(--name-fett); stroke-width: 3.4; }
+.bezugslinien line { stroke: var(--bezug); stroke-width: .7; pointer-events: none; }
 
-.badge text { text-anchor: middle; font-weight: 700; pointer-events: none; }
-.badge rect { pointer-events: none; }
+.badge rect { fill: var(--c); pointer-events: none; }
+.badge text { fill: var(--t); text-anchor: middle; font-weight: 700; pointer-events: none; }
+[data-thema="dunkel"] .badge rect { fill: var(--cd); }
+[data-thema="dunkel"] .badge text { fill: var(--td); }
 
 /* --- Sichtbarkeit nach Zoomstufe: erst Knoten, dann immer mehr Details --- */
 .zoom-0 .beschriftung, .zoom-0 .bezugslinien, .zoom-0 .badges { display: none; }
@@ -274,14 +360,14 @@ body { display: flex; background: #ffffff; color: #1a1a1a; overflow: hidden; }
     position: fixed; top: 0; left: 0; bottom: 0; z-index: 9;
     width: 84%; max-width: 330px; flex-basis: auto;
     transform: translateX(-102%); transition: transform .22s ease;
-    box-shadow: 2px 0 16px rgba(0,0,0,.18);
+    box-shadow: 2px 0 16px rgba(0,0,0,.28);
     padding-top: 56px;
     -webkit-overflow-scrolling: touch;
   }
   #seitenleiste.offen { transform: translateX(0); }
   #seitenleiste .schliessenPanel {
     display: block; position: absolute; top: 10px; right: 12px;
-    font-size: 26px; line-height: 1; color: #888; cursor: pointer; padding: 2px 8px;
+    font-size: 26px; line-height: 1; color: var(--text-leise); cursor: pointer; padding: 2px 8px;
   }
   #menuKnopf { display: block; }
   #kartenbereich { width: 100%; }
@@ -512,9 +598,8 @@ JS = """
     halt.linien.forEach(function (lid) {
       var l = daten.linien[lid];
       if (!l) return;
-      html += '<div class="zeile"><span class="nummer" style="background:' + l.farbe +
-              ';color:' + l.schrift + '">' + entschaerfen(l.code) + "</span><span>" +
-              entschaerfen(l.strecke) + "</span></div>";
+      html += '<div class="zeile"><span class="nummer" style="' + l.vars + '">' +
+              entschaerfen(l.code) + "</span><span>" + entschaerfen(l.strecke) + "</span></div>";
     });
     infofeld.innerHTML = html;
     infofeld.style.display = "block";
@@ -595,6 +680,27 @@ JS = """
     });
   });
 
+  // --- Hell und Dunkel ------------------------------------------------------
+  // Startwert kommt aus der Systemeinstellung. Ohne localStorage kann die
+  // Auswahl nicht gespeichert werden, sie gilt also nur fuer diese Sitzung.
+  var systemDunkel = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+  var themaKnopf = document.getElementById("thema");
+
+  function themaSetzen(dunkel) {
+    document.documentElement.setAttribute("data-thema", dunkel ? "dunkel" : "hell");
+    themaKnopf.textContent = dunkel ? "☀" : "☾";
+    themaKnopf.setAttribute("aria-pressed", dunkel ? "true" : "false");
+  }
+  themaSetzen(!!(systemDunkel && systemDunkel.matches));
+
+  themaKnopf.onclick = function () {
+    themaSetzen(document.documentElement.getAttribute("data-thema") !== "dunkel");
+  };
+  // Aendert das System die Einstellung, zieht die Karte mit
+  if (systemDunkel && systemDunkel.addEventListener) {
+    systemDunkel.addEventListener("change", function (e) { themaSetzen(e.matches); });
+  }
+
   // --- Ausklappbare Seitenleiste auf schmalen Bildschirmen -----------------
   var seitenleiste = document.getElementById("seitenleiste");
   var hintergrund = document.getElementById("hintergrund");
@@ -638,9 +744,9 @@ def build_html(data, layout):
     for entry in layout["legend"]:
         linien_js[entry["line_id"]] = {
             "code": entry["code"],
-            "farbe": entry["color"],
             "strecke": entry["endpoints"],
-            "schrift": "#ffffff" if _dunkel(entry["color"]) else "#1a1a1a",
+            # Farbpaar hell/dunkel; das Infofeld setzt sie als CSS-Variablen
+            "vars": farb_variablen(entry["color"]),
         }
 
     halte_js = {}
@@ -668,12 +774,11 @@ def build_html(data, layout):
 
     legende_html = []
     for entry in layout["legend"]:
-        schrift = "#ffffff" if _dunkel(entry["color"]) else "#1a1a1a"
         hinweis = ('<span class="hinweis"> · nur im Ausschnitt</span>'
                    if entry["in_inset_only"] else "")
         legende_html.append(
             f'<li data-line="{entry["line_id"]}">'
-            f'<span class="nummer" style="background:{entry["color"]};color:{schrift}">'
+            f'<span class="nummer" style="{farb_variablen(entry["color"])}">'
             f'{esc(entry["code"])}</span>'
             f'<span class="strecke">{esc(entry["endpoints"])}{hinweis}</span></li>'
         )
@@ -689,6 +794,7 @@ def build_html(data, layout):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>RE-Netz 2030 — Streckennetz</title>
 <style>{CSS}</style>
 </head>
@@ -711,6 +817,7 @@ def build_html(data, layout):
   <button id="menuKnopf" aria-label="Menü öffnen">☰</button>
   {svg}
   <div id="bedienung">
+    <button id="thema" aria-label="Zwischen hell und dunkel wechseln">☾</button>
     <button id="zoomEin" aria-label="Vergrößern">+</button>
     <button id="zoomAus" aria-label="Verkleinern">−</button>
     <button id="zuruecksetzen" class="weit" aria-label="Gesamtansicht">Gesamt</button>
@@ -727,12 +834,6 @@ def build_html(data, layout):
 </body>
 </html>
 """
-
-
-def _dunkel(hex_color):
-    c = hex_color.lstrip("#")
-    r, g, b = int(c[0:2], 16), int(c[2:4], 16), int(c[4:6], 16)
-    return (0.299 * r + 0.587 * g + 0.114 * b) / 255.0 < 0.62
 
 
 def main():

@@ -49,14 +49,17 @@ neu zu rechnen. Aus dem Projektverzeichnis heraus aufrufen:
 ```bash
 python3 scripts/01_inventory.py    # KML analysieren        -> data/01_inventory.json
 python3 scripts/02_graph.py        # Netzgraph bauen        -> data/02_graph.json
-python3 scripts/03_basemap.py      # Ländergrenzen laden    -> data/03_basemap.json
+python3 scripts/03_basemap.py      # Grenzen laden          -> data/03_basemap.json
 python3 scripts/04_bundling.py     # Linien bündeln         -> data/04_bundled.json
+python3 scripts/05a_textmasse.py   # Textbreiten messen     -> data/05a_textmasse.json
 python3 scripts/05_layout.py       # Beschriftung platzieren-> data/05_layout.json
 python3 scripts/06_build_map.py    # Karte bauen            -> netzkarte.html
 ```
 
-Abhängigkeiten: `shapely`, `pyproj`, `geopandas` (nur für die Skripte, nicht
-für die fertige Karte).
+Abhängigkeiten: `shapely`, `pyproj`, `geopandas`, für Phase 5a zusätzlich
+`playwright` (alles nur für die Skripte, nicht für die fertige Karte).
+Phase 5a ist optional — fehlt die Datei, schätzt Phase 5 die Textbreiten und
+meldet das; die Karte entsteht trotzdem, nur mit etwas mehr Überlappung.
 
 ### Nützliche Zusatzaufrufe
 
@@ -81,6 +84,14 @@ sortiert. Ergebnis: 465 Halte, 523 Kanten, 31 Linien.
 und alle neun Nachbarländer gefiltert, auf die gepufferte Bounding Box
 geclippt, nach **EPSG:3034** projiziert (Lambert-konform, ETRS89-LCC Europe)
 und mit Douglas-Peucker vereinfacht.
+
+Grenzen kommen aus eigenen Liniendatensätzen statt aus den Polygonrändern —
+ein Polygonrand zeichnet auch die Küstenlinie als „Grenze". Staatsgrenzen aus
+`admin_0_boundary_lines_land` (1:50 m), Verwaltungsgrenzen aus
+`admin_1_states_provinces_lines` in **1:10 m**, weil die 1:50-m-Fassung nur
+neun Großstaaten enthält und Deutschland dort fehlt. Frankreich bleibt bei den
+Verwaltungsgrenzen außen vor: Es liegt in diesem Datensatz auf
+Départements-Ebene (299 Segmente) und wäre für eine Netzkarte viel zu unruhig.
 
 *Warum nicht Web Mercator:* Die Karte ist ein statisches SVG, kein
 Kachel-Webmap — der einzige Vorteil von Mercator entfällt. Über die
@@ -107,12 +118,30 @@ nach Kartenposition unterschiedlich breit wirken würden.
    über mehrere Kanten hinweg auf null verschmiert — das Bündel lief dann
    deckungsgleich statt parallel.
 
-Vereinfachen (Douglas-Peucker) vor, Glätten (Chaikin) nach dem Versatz.
+5. *Durchfahrt-Knoten.* Ein Express hält nicht an allen Halten seiner Strecke
+   und hätte dadurch völlig andere Kanten als der Regionalzug daneben — RE35X
+   teilte mit RE35 nur 5 von 24 Kanten, beide lagen deshalb übereinander statt
+   nebeneinander. Halte dicht an der Strecke einer Linie, an denen sie nicht
+   hält, werden als reine Geometrieknoten in ihren Weg eingefügt; gezeichnet
+   wird dort kein Bahnhof. Danach liegen RE35 und RE35X exakt 5,20 px
+   auseinander.
+
+Vereinfachen (Douglas-Peucker) vor, Glätten (Chaikin) nach dem Versatz. Die
+Länge eines Slot-Wechsels ist in Kilometern angegeben, nicht in Pixeln: Die
+beiden Kartenseiten haben sehr verschiedene Maßstäbe (4,8 gegenüber 19 px/km),
+und ein fester Pixelwert ließe die Linien auf der Ruhrgebietsseite dauerhaft
+weben statt kurz zu versetzen.
+
+**Phase 5a — Textbreiten messen.** Rendert alle Haltenamen einmal echt im
+Browser und misst sie mit `getComputedTextLength`. Eine Schätzung aus
+Buchstabenbreiten liegt je nach Name einige Prozent daneben — genug, dass sich
+Beschriftungen am Ende doch überlappen.
 
 **Phase 5 — Darstellung.** Einstufung der Halte, kollisionsfreie Platzierung
 der Namen (acht Himmelsrichtungen in vier Entfernungsstufen, weiter außen mit
 Bezugslinie), Liniennummern-Badges, Legendeneinträge. Halte ohne Platz werden
-auf der Konsole protokolliert statt überlappend gezeichnet.
+auf der Konsole protokolliert statt überlappend gezeichnet — aktuell ist das
+genau einer (Berlin-Ostkreuz).
 
 **Phase 6 — Interaktion.** Baut die fertige HTML-Datei mit eingebettetem SVG,
 CSS und JavaScript. Kein localStorage.
@@ -128,13 +157,19 @@ Sättigung gedeckelt, der Farbton bleibt erhalten.
 wie Brave die Seite selbsttätig und machen dabei die weißen Text-Halos der
 Haltenamen unbrauchbar (weiße Schrift auf weißem Halo).
 
-## Zwei Ansichten
+## Zwei Kartenseiten
 
 Im Ruhrgebiet liegen die Halte im Netzmaßstab nur rund 7 px auseinander —
-lesbare Beschriftung ist dort unmöglich. Die drei S-Bahn-Linien wandern
-deshalb komplett in einen **4,2-fach vergrößerten Ausschnitt**, der im freien
-Südosten der Karte sitzt; der Median-Abstand steigt dort auf 33 px. Auf der
-Hauptkarte markiert ein gestricheltes Rechteck den vergrößerten Bereich.
+lesbare Beschriftung ist dort unmöglich. Die drei S-Bahn-Linien liegen deshalb
+auf einer **eigenen zweiten Kartenseite**, die den Ballungsraum
+bildschirmfüllend und rund viermal so groß zeigt (19 statt 4,8 px/km). Dort
+sind alle 74 Haltenamen kollisionsfrei untergebracht. Auf der Hauptkarte
+markiert ein gestricheltes, anklickbares Rechteck den Bereich.
+
+Umgeschaltet wird über die Reiter in der Seitenleiste, den ⇄-Knopf oder einen
+Klick auf das gestrichelte Rechteck. Jede Seite hat ihren eigenen Zoomzustand.
+Die Suche wechselt bei Bedarf selbsttätig auf die Seite, die den gesuchten
+Halt enthält.
 
 Die Slot-Vergabe erfolgt **pro Ansicht**: Blendet die Hauptkarte die S-Bahnen
 aus, dürfen deren Slots keine Lücken im RE-Bündel hinterlassen — die

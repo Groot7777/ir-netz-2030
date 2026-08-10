@@ -6,11 +6,15 @@ Baut aus den Ergebnissen der Phasen 4 und 5 ein in sich geschlossenes HTML mit
 eingebettetem SVG: keine externen Dateien, kein CDN, kein Build-Schritt, kein
 localStorage.
 
-Interaktion:
-- Zoom per Mausrad (auf den Cursor zentriert), Verschieben per Ziehen
-- Hovern ueber eine Linie hebt sie hervor und blendet die uebrigen ab
-- Klick auf einen Halt zeigt Name und dort verkehrende Linien
-- Suchfeld springt zu einem Halt
+Die Karte hat zwei Seiten, zwischen denen umgeschaltet wird:
+- "Gesamtnetz": alle RE/RB-Linien in Deutschland und den Nachbarlaendern
+- "Ballungsraum Ruhrgebiet": die S-Bahnen und die dortigen RE-Linien, deutlich
+  groesser, weil die Halte im Netzmassstab nur wenige Pixel auseinanderliegen
+
+Interaktion: Zoom per Mausrad oder zwei Fingern, Verschieben per Ziehen,
+Doppeltipp vergroessert, Hovern/Antippen hebt eine Linie hervor, Klick auf
+einen Halt zeigt seine Linien, Suchfeld springt zum Halt. Hell und Dunkel
+lassen sich umschalten.
 """
 import argparse
 import colorsys
@@ -74,118 +78,117 @@ def farb_variablen(hex_color):
             f"--cd:{dunkel};--td:{schrift_auf(dunkel)}")
 
 
-def build_svg(data, layout):
-    """Das komplette SVG als String zusammensetzen."""
+def build_svg(page, data, layout):
+    """Das SVG einer Kartenseite zusammensetzen."""
     meta = data["meta"]
-    W, H = meta["svg_width"], meta["svg_height"]
-    lw = meta["line_width_px"]
-    inset = meta["inset"]
+    seite = meta["seiten"][page]
+    basis = data["basiskarte"][page]
+    view = data["views"][page]
+    lay = layout["views"][page]
     lmeta = layout["meta"]
+    lw = meta["line_width_px"]
+    W, H = seite["breite"], seite["hoehe"]
 
-    out = []
-    out.append(f'<svg id="karte" xmlns="http://www.w3.org/2000/svg" '
-               f'viewBox="0 0 {W} {H}" class="zoom-0">')
+    out = [f'<svg class="karte" id="karte-{page}" data-seite="{page}" '
+           f'data-breite="{W}" data-hoehe="{H}" '
+           f'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">',
+           '<g class="viewport">']
 
-    # Wurzelgruppe, auf die Zoom und Verschiebung angewendet werden
-    out.append('<g id="viewport">')
-
-    # --- Hintergrund: Laenderflaechen ---------------------------------------
-    out.append('<g id="laender">')
-    for c in data["countries"]:
+    # --- Hintergrund: Laenderflaechen und Grenzen ---------------------------
+    out.append('<g class="laender">')
+    for c in basis["countries"]:
         d_attr = "".join("M " + " ".join(f"{x},{y}" for x, y in ring) + " Z "
                          for ring in c["polygons"])
         out.append(f'<path d="{d_attr}"/>')
     out.append("</g>")
-    out.append('<g id="laendernamen">')
-    for c in data["countries"]:
-        out.append(f'<text x="{c["label_x"]}" y="{c["label_y"]}" '
-                   f'font-size="{lmeta["country_font_px"]}">{esc(c["name"])}</text>')
+
+    # Verwaltungsgrenzen unter den Staatsgrenzen, damit diese oben liegen
+    out.append('<g class="bundeslaender">')
+    for weg in basis["bundeslaender"]:
+        out.append(f'<polyline points="{polyline(weg)}"/>')
+    out.append("</g>")
+    out.append('<g class="staatsgrenzen">')
+    for weg in basis["staatsgrenzen"]:
+        out.append(f'<polyline points="{polyline(weg)}"/>')
     out.append("</g>")
 
-    # --- Markierung des vergroesserten Bereichs auf der Hauptkarte ----------
-    sx, sy, sw, sh = inset["source_rect"]
-    out.append(f'<g id="ausschnitt-quelle"><rect x="{sx}" y="{sy}" width="{sw}" height="{sh}"/>'
-               f'<text x="{sx + sw / 2}" y="{sy - 8}" font-size="15">'
-               f'vergrößert siehe Ausschnitt</text></g>')
-
-    # --- Rahmen und Hintergrund des Ausschnitts -----------------------------
-    out.append(f'<g id="ausschnitt-rahmen">'
-               f'<rect x="{inset["x"]}" y="{inset["y"]}" '
-               f'width="{inset["width"]}" height="{inset["height"]}"/>'
-               f'<text x="{inset["x"]}" y="{inset["y"] - 12}" font-size="26">'
-               f'{esc(inset["title"])} · {inset["magnification"]}fach vergrößert</text></g>')
-
-    # --- Linien beider Ansichten --------------------------------------------
-    # Sichtbare Linien und darueber eine unsichtbare, breitere Trefferflaeche,
-    # damit sich die nur 4 px breiten Linien bequem mit der Maus treffen lassen.
-    for view_name, view in data["views"].items():
-        out.append(f'<g class="linien" data-view="{view_name}">')
-        for line in view["lines"]:
-            for branch in line["branches"]:
-                out.append(f'<polyline class="linie" data-line="{line["line_id"]}" '
-                           f'style="{farb_variablen(line["color"])}" stroke-width="{lw}" '
-                           f'points="{polyline(branch)}"/>')
+    if page == "main":
+        out.append('<g class="laendernamen">')
+        for c in basis["countries"]:
+            out.append(f'<text x="{c["label_x"]}" y="{c["label_y"]}" '
+                       f'font-size="{lmeta["country_font_px"]}">{esc(c["name"])}</text>')
         out.append("</g>")
-    for view_name, view in data["views"].items():
-        out.append(f'<g class="linien-treffer" data-view="{view_name}">')
-        for line in view["lines"]:
-            for branch in line["branches"]:
-                out.append(f'<polyline class="treffer" data-line="{line["line_id"]}" '
-                           f'stroke-width="{LINE_HIT_WIDTH}" points="{polyline(branch)}"/>')
-        out.append("</g>")
+
+        # Markierung des Bereichs, den die zweite Seite zeigt - anklickbar
+        sx, sy, sw, sh = seite["quellrechteck"]
+        out.append(f'<g class="quellbereich" data-ziel="inset">'
+                   f'<rect x="{sx}" y="{sy}" width="{sw}" height="{sh}"/>'
+                   f'<text x="{sx + sw / 2}" y="{sy - 8}" font-size="17">'
+                   f'vergrößert siehe {esc(seite["verweis"])}</text></g>')
+
+    # --- Linien --------------------------------------------------------------
+    # Sichtbare Linien, darueber eine unsichtbare breitere Trefferflaeche,
+    # damit sich die nur 4 px breiten Linien bequem treffen lassen.
+    out.append('<g class="linien">')
+    for line in view["lines"]:
+        for branch in line["branches"]:
+            out.append(f'<polyline class="linie" data-line="{line["line_id"]}" '
+                       f'style="{farb_variablen(line["color"])}" stroke-width="{lw}" '
+                       f'points="{polyline(branch)}"/>')
+    out.append("</g>")
+    out.append('<g class="linien-treffer">')
+    for line in view["lines"]:
+        for branch in line["branches"]:
+            out.append(f'<polyline class="treffer" data-line="{line["line_id"]}" '
+                       f'stroke-width="{LINE_HIT_WIDTH}" points="{polyline(branch)}"/>')
+    out.append("</g>")
 
     # --- Haltemarker ---------------------------------------------------------
-    for view_name, view in data["views"].items():
-        markers = {m["stop_id"]: m for m in layout["views"][view_name]["markers"]}
-        out.append(f'<g class="halte" data-view="{view_name}">')
-        for s in view["stops"]:
-            m = markers.get(s["stop_id"])
-            if not m:
-                continue
-            w, h = m["length"], m["thickness"]
-            x0, y0 = s["x"] - w / 2, s["y"] - h / 2
-            cls = "halt knoten" if m["is_node"] else "halt"
-            out.append(f'<rect class="{cls}" data-stop="{s["stop_id"]}" data-view="{view_name}" '
-                       f'x="{round(x0, 1)}" y="{round(y0, 1)}" width="{round(w, 1)}" '
-                       f'height="{round(h, 1)}" rx="{round(h / 2, 2)}" '
-                       f'transform="rotate({m["angle_deg"]} {s["x"]} {s["y"]})"/>')
-        out.append("</g>")
+    markers = {m["stop_id"]: m for m in lay["markers"]}
+    out.append('<g class="halte">')
+    for s in view["stops"]:
+        m = markers.get(s["stop_id"])
+        if not m:
+            continue
+        w, h = m["length"], m["thickness"]
+        x0, y0 = s["x"] - w / 2, s["y"] - h / 2
+        cls = "halt knoten" if m["is_node"] else "halt"
+        out.append(f'<rect class="{cls}" data-stop="{s["stop_id"]}" '
+                   f'x="{round(x0, 1)}" y="{round(y0, 1)}" width="{round(w, 1)}" '
+                   f'height="{round(h, 1)}" rx="{round(h / 2, 2)}" '
+                   f'transform="rotate({m["angle_deg"]} {s["x"]} {s["y"]})"/>')
+    out.append("</g>")
 
     # --- Liniennummern-Badges ------------------------------------------------
-    for view_name in data["views"]:
-        out.append(f'<g class="badges" data-view="{view_name}">')
-        for b in layout["views"][view_name]["badges"]:
-            bx, by = b["x"] - b["w"] / 2, b["y"] - b["h"] / 2
-            out.append(f'<g class="badge" data-line="{b["line_id"]}" '
-                       f'style="{farb_variablen(b["fill"])}">'
-                       f'<rect x="{round(bx, 1)}" y="{round(by, 1)}" width="{b["w"]}" '
-                       f'height="{b["h"]}" rx="{b["h"] / 2}"/>'
-                       f'<text x="{b["x"]}" y="{round(b["y"] + lmeta["badge_font_px"] * 0.35, 1)}" '
-                       f'font-size="{lmeta["badge_font_px"]}">'
-                       f'{esc(b["text"])}</text></g>')
-        out.append("</g>")
+    out.append('<g class="badges">')
+    for b in lay["badges"]:
+        bx, by = b["x"] - b["w"] / 2, b["y"] - b["h"] / 2
+        out.append(f'<g class="badge" data-line="{b["line_id"]}" '
+                   f'style="{farb_variablen(b["fill"])}">'
+                   f'<rect x="{round(bx, 1)}" y="{round(by, 1)}" width="{b["w"]}" '
+                   f'height="{b["h"]}" rx="{b["h"] / 2}"/>'
+                   f'<text x="{b["x"]}" y="{round(b["y"] + lmeta["badge_font_px"] * 0.35, 1)}" '
+                   f'font-size="{lmeta["badge_font_px"]}">{esc(b["text"])}</text></g>')
+    out.append("</g>")
 
     # --- Bezugslinien und Beschriftungen ------------------------------------
-    for view_name, view in data["views"].items():
-        stops = {s["stop_id"]: s for s in view["stops"]}
-        lay = layout["views"][view_name]
-        out.append(f'<g class="bezugslinien" data-view="{view_name}">')
-        for lb in lay["labels"]:
-            if "leader" in lb:
-                s = stops[lb["stop_id"]]
-                out.append(f'<line x1="{s["x"]}" y1="{s["y"]}" '
-                           f'x2="{lb["leader"][0]}" y2="{lb["leader"][1]}"/>')
-        out.append("</g>")
-        out.append(f'<g class="beschriftung" data-view="{view_name}">')
-        for lb in lay["labels"]:
-            cls = f'name tier{lb["tier"]}' + (" fett" if lb["bold"] else "")
-            out.append(f'<text class="{cls}" data-stop="{lb["stop_id"]}" x="{lb["x"]}" y="{lb["y"]}" '
-                       f'font-size="{lb["font_px"]}" text-anchor="{lb["anchor"]}">'
-                       f'{esc(lb["text"])}</text>')
-        out.append("</g>")
+    stops = {s["stop_id"]: s for s in view["stops"]}
+    out.append('<g class="bezugslinien">')
+    for lb in lay["labels"]:
+        if "leader" in lb:
+            s = stops[lb["stop_id"]]
+            out.append(f'<line x1="{s["x"]}" y1="{s["y"]}" '
+                       f'x2="{lb["leader"][0]}" y2="{lb["leader"][1]}"/>')
+    out.append("</g>")
+    out.append('<g class="beschriftung">')
+    for lb in lay["labels"]:
+        cls = f'name tier{lb["tier"]}' + (" fett" if lb["bold"] else "")
+        out.append(f'<text class="{cls}" data-stop="{lb["stop_id"]}" x="{lb["x"]}" y="{lb["y"]}" '
+                   f'font-size="{lb["font_px"]}" text-anchor="{lb["anchor"]}">'
+                   f'{esc(lb["text"])}</text>')
+    out.append("</g>")
 
-    out.append("</g>")   # viewport
-    out.append("</svg>")
+    out.append("</g></svg>")
     return "".join(out)
 
 
@@ -199,14 +202,14 @@ CSS = """
   --panel-bg: #fafafa;   --panel-rand: #d8d8d8;
   --text: #1a1a1a;       --text-schwach: #666;   --text-leise: #888;
   --karte-bg: #f4f4f2;
-  --land-fill: #e6e6e4;  --land-rand: #ffffff;   --land-text: #b9b9b5;
+  --land-fill: #e6e6e4;  --land-text: #b9b9b5;
+  --grenze-staat: #b0b0a8; --grenze-land: #d2d2cb;
   --halt-fill: #ffffff;  --halt-rand: #2a2a2a;
   --name-text: #222222;  --name-fett: #000000;   --name-halo: #ffffff;
   --bezug: #999999;
-  --rahmen-bg: #ffffff;  --rahmen-rand: #b0b0b0; --rahmen-text: #555555;
   --quelle-rand: #9a9a9a; --quelle-text: #8a8a8a;
   --knopf-bg: #ffffff;   --knopf-rand: #cccccc;  --knopf-text: #333333;
-  --knopf-hover: #f0f0f0;
+  --knopf-hover: #f0f0f0; --knopf-aktiv: #e2e2e2;
   --feld-bg: #ffffff;    --hover-bg: #e8e8e8;
   --hinweis-bg: rgba(255,255,255,.88);
 }
@@ -216,14 +219,14 @@ CSS = """
   --panel-bg: #171a1f;   --panel-rand: #2a2f36;
   --text: #e6e8ea;       --text-schwach: #9aa0a8; --text-leise: #7d848d;
   --karte-bg: #0d0f12;
-  --land-fill: #1e222a;  --land-rand: #0d0f12;   --land-text: #3f4650;
+  --land-fill: #1e222a;  --land-text: #3f4650;
+  --grenze-staat: #49515d; --grenze-land: #2b313a;
   --halt-fill: #f2f4f6;  --halt-rand: #0d0f12;
   --name-text: #dfe3e8;  --name-fett: #ffffff;   --name-halo: #0d0f12;
   --bezug: #6b7480;
-  --rahmen-bg: #171a1f;  --rahmen-rand: #3a414b; --rahmen-text: #aab2bc;
   --quelle-rand: #4a525d; --quelle-text: #79818c;
   --knopf-bg: #1c2026;   --knopf-rand: #333a43;  --knopf-text: #dfe3e8;
-  --knopf-hover: #262c34;
+  --knopf-hover: #262c34; --knopf-aktiv: #313944;
   --feld-bg: #171a1f;    --hover-bg: #232830;
   --hinweis-bg: rgba(13,15,18,.88);
 }
@@ -245,6 +248,13 @@ body { display: flex; background: var(--panel-bg); color: var(--text); overflow:
   color: var(--text-schwach); margin: 18px 0 7px; font-weight: 600;
 }
 
+#seitenwahl { display: flex; gap: 5px; margin-bottom: 4px; }
+#seitenwahl button {
+  flex: 1; padding: 8px 6px; font-size: 12px; cursor: pointer; color: var(--knopf-text);
+  border: 1px solid var(--knopf-rand); background: var(--knopf-bg); border-radius: 6px;
+}
+#seitenwahl button.aktiv { background: var(--knopf-aktiv); font-weight: 700; }
+
 #suche {
   width: 100%; padding: 7px 9px; font-size: 13px; color: var(--text);
   border: 1px solid var(--panel-rand); border-radius: 5px; background: var(--feld-bg);
@@ -261,7 +271,6 @@ body { display: flex; background: var(--panel-bg); color: var(--text); overflow:
   max-width: 290px; padding: 11px 12px; background: var(--feld-bg);
   border: 1px solid var(--panel-rand); border-radius: 8px;
   box-shadow: 0 3px 14px rgba(0,0,0,.16);
-  /* Knotenbahnhoefe fuehren bis zu sechs Linien - dann lieber scrollen */
   max-height: 45vh; overflow-y: auto;
 }
 #infofeld .titel { font-weight: 700; font-size: 14px; margin-bottom: 8px; padding-right: 22px; }
@@ -275,32 +284,32 @@ body { display: flex; background: var(--panel-bg); color: var(--text); overflow:
 .legende li { display: flex; align-items: baseline; gap: 8px; padding: 3px 4px;
               font-size: 12px; cursor: pointer; border-radius: 4px; }
 .legende li:hover { background: var(--hover-bg); }
-.legende .nummer { flex: 0 0 42px; font-weight: 700; font-size: 10.5px;
-                   text-align: center; border-radius: 7px; padding: 2px 3px;
-                   background: var(--c); color: var(--t); }
+.nummer { flex: 0 0 42px; font-weight: 700; font-size: 10.5px;
+          text-align: center; border-radius: 7px; padding: 2px 3px;
+          background: var(--c); color: var(--t); }
 .legende .strecke { color: var(--text-schwach); line-height: 1.25; }
 .legende .hinweis { color: var(--text-leise); font-size: 10.5px; }
-[data-thema="dunkel"] .legende .nummer { background: var(--cd); color: var(--td); }
+[data-thema="dunkel"] .nummer { background: var(--cd); color: var(--td); }
 
 #kartenbereich { flex: 1; position: relative; height: 100%; overflow: hidden; }
-#karte { width: 100%; height: 100%; display: block; background: var(--karte-bg);
+.karte { display: none; width: 100%; height: 100%; background: var(--karte-bg);
          cursor: grab; touch-action: none; }
-#karte.greift { cursor: grabbing; }
+.karte.aktiv { display: block; }
+.karte.greift { cursor: grabbing; }
 
 #bedienung { position: absolute; top: 12px; right: 12px; display: flex; gap: 6px; z-index: 4; }
 #bedienung button, #menuKnopf {
-  width: 40px; height: 40px; font-size: 18px; cursor: pointer;
+  height: 40px; min-width: 40px; font-size: 18px; cursor: pointer;
   border: 1px solid var(--knopf-rand); background: var(--knopf-bg);
   border-radius: 7px; color: var(--knopf-text);
   -webkit-tap-highlight-color: transparent;
 }
 #bedienung button:hover, #menuKnopf:hover { background: var(--knopf-hover); }
-#bedienung button.weit { width: auto; padding: 0 13px; font-size: 13px; }
+#bedienung button.weit { padding: 0 13px; font-size: 13px; }
 
-#menuKnopf { display: none; position: absolute; top: 12px; left: 12px; z-index: 6; font-size: 19px; }
-#hintergrund {
-  display: none; position: fixed; inset: 0; z-index: 8; background: rgba(0,0,0,.45);
-}
+#menuKnopf { display: none; position: absolute; top: 12px; left: 12px; z-index: 6;
+             width: 40px; font-size: 19px; }
+#hintergrund { display: none; position: fixed; inset: 0; z-index: 8; background: rgba(0,0,0,.45); }
 #hintergrund.sichtbar { display: block; }
 
 #hinweis { position: absolute; bottom: 12px; right: 12px; font-size: 11.5px;
@@ -310,16 +319,19 @@ body { display: flex; background: var(--panel-bg); color: var(--text); overflow:
 #hinweis .nurSchmal { display: none; }
 
 /* --- Kartenelemente --- */
-#laender path { fill: var(--land-fill); stroke: var(--land-rand); stroke-width: 1.6; }
-#laendernamen text { fill: var(--land-text); text-anchor: middle; font-weight: 600;
+/* Kein Rand an den Flaechen: Kuestenlinien entstehen aus dem Farbunterschied
+   zum Hintergrund, Landgrenzen kommen aus den eigenen Grenzdatensaetzen. */
+.laender path { fill: var(--land-fill); stroke: none; }
+.bundeslaender polyline { fill: none; stroke: var(--grenze-land); stroke-width: 1.1; }
+.staatsgrenzen polyline { fill: none; stroke: var(--grenze-staat); stroke-width: 1.9; }
+.laendernamen text { fill: var(--land-text); text-anchor: middle; font-weight: 600;
                      letter-spacing: .12em; pointer-events: none; }
 
-#ausschnitt-quelle rect { fill: none; stroke: var(--quelle-rand); stroke-width: 2.5;
-                          stroke-dasharray: 9 6; }
-#ausschnitt-quelle text { fill: var(--quelle-text); text-anchor: middle; pointer-events: none; }
-
-#ausschnitt-rahmen rect { fill: var(--rahmen-bg); stroke: var(--rahmen-rand); stroke-width: 2.5; }
-#ausschnitt-rahmen text { fill: var(--rahmen-text); font-weight: 700; pointer-events: none; }
+.quellbereich { cursor: pointer; }
+.quellbereich rect { fill: none; stroke: var(--quelle-rand); stroke-width: 2.5;
+                     stroke-dasharray: 9 6; }
+.quellbereich text { fill: var(--quelle-text); text-anchor: middle; font-weight: 700;
+                     pointer-events: none; }
 
 /* Linienfarbe steckt als --c (hell) und --cd (dunkel) im style-Attribut */
 .linie { fill: none; stroke: var(--c); stroke-linecap: round; stroke-linejoin: round;
@@ -342,17 +354,22 @@ body { display: flex; background: var(--panel-bg); color: var(--text); overflow:
 [data-thema="dunkel"] .badge rect { fill: var(--cd); }
 [data-thema="dunkel"] .badge text { fill: var(--td); }
 
-/* --- Sichtbarkeit nach Zoomstufe: erst Knoten, dann immer mehr Details --- */
+/* --- Sichtbarkeit nach Zoomstufe --------------------------------------- */
+/* In der Gesamtansicht waeren 465 Namen ohnehin nicht lesbar, deshalb
+   erscheinen sie gestaffelt: erst Knotenbahnhoefe, dann Umsteigehalte, zuletzt
+   alle uebrigen. Die Ruhrgebietsseite ist die Detailseite und zeigt von
+   Anfang an alles - dafuer ist sie da. */
 .zoom-0 .beschriftung, .zoom-0 .bezugslinien, .zoom-0 .badges { display: none; }
-.zoom-1 .tier1, .zoom-1 .tier2 { display: none; }
-.zoom-2 .tier2 { display: none; }
+.karte[data-seite="main"].zoom-1 .tier1,
+.karte[data-seite="main"].zoom-1 .tier2 { display: none; }
+.karte[data-seite="main"].zoom-2 .tier2 { display: none; }
 
 /* --- Hervorhebung einer Linie --- */
-#karte.abgeblendet .linie { opacity: .12; }
-#karte.abgeblendet .linie.hervor { opacity: 1; }
-#karte.abgeblendet .badge { opacity: .12; }
-#karte.abgeblendet .badge.hervor { opacity: 1; }
-#karte.abgeblendet .halte, #karte.abgeblendet .beschriftung { opacity: .22; }
+.karte.abgeblendet .linie { opacity: .12; }
+.karte.abgeblendet .linie.hervor { opacity: 1; }
+.karte.abgeblendet .badge { opacity: .12; }
+.karte.abgeblendet .badge.hervor { opacity: 1; }
+.karte.abgeblendet .halte, .karte.abgeblendet .beschriftung { opacity: .22; }
 
 /* --- Schmale Bildschirme: Seitenleiste wird zum ausklappbaren Panel ------ */
 @media (max-width: 820px) {
@@ -382,6 +399,7 @@ body { display: flex; background: var(--panel-bg); color: var(--text); overflow:
   #hinweis { left: 10px; right: auto; bottom: auto; top: 62px; font-size: 11px; }
   #hinweis .nurBreit { display: none; }
   #hinweis .nurSchmal { display: inline; }
+  #bedienung button.weit { display: none; }   /* Platz sparen, Gesamtansicht liegt im Panel */
 }
 
 .schliessenPanel { display: none; }
@@ -393,202 +411,236 @@ JS = """
   "use strict";
 
   var daten = __DATEN__;
-  var svg = document.getElementById("karte");
-  var viewport = document.getElementById("viewport");
-  var kartenbereich = document.getElementById("kartenbereich");
 
-  // --- Zoom und Verschiebung ------------------------------------------------
-  // k = Massstab, tx/ty = Verschiebung, beides in viewBox-Einheiten und als
-  // transform auf der Wurzelgruppe. Das SVG selbst behaelt seine viewBox.
-  var k = 1, tx = 0, ty = 0;
-  var MIN_K = 0.5, MAX_K = 40;
-
-  // Das SVG passt seine viewBox mit "meet" in das Element ein. Dieser Faktor
-  // rechnet zwischen Bildschirm-Pixeln und viewBox-Einheiten um.
-  function einpassung() {
-    var r = svg.getBoundingClientRect();
-    return Math.min(r.width / daten.breite, r.height / daten.hoehe);
+  function entschaerfen(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  function anwenden() {
-    viewport.setAttribute("transform", "translate(" + tx + "," + ty + ") scale(" + k + ")");
-    // Wie gross erscheint eine viewBox-Einheit tatsaechlich auf dem Bildschirm?
-    var wirksam = k * einpassung();
-    var stufe = wirksam < 0.42 ? 0 : wirksam < 0.72 ? 1 : wirksam < 1.15 ? 2 : 3;
-    svg.classList.remove("zoom-0", "zoom-1", "zoom-2", "zoom-3");
-    svg.classList.add("zoom-" + stufe);
-  }
+  // --- Eine Kartenseite mit Zoom und Verschiebung ausstatten ----------------
+  // Jede Seite hat ihre eigene Zeichenflaeche und ihren eigenen Zoomzustand.
+  function karteEinrichten(svg) {
+    var breite = parseFloat(svg.dataset.breite);
+    var hoehe = parseFloat(svg.dataset.hoehe);
+    var viewport = svg.querySelector(".viewport");
+    var k = 1, tx = 0, ty = 0;
+    var MIN_K = 0.5, MAX_K = 40;
 
-  function gesamtansicht() {
-    // Bei k=1 zeigt die viewBox bereits das gesamte Netz.
-    k = 1; tx = 0; ty = 0;
-    anwenden();
-  }
-
-  // Bildschirmkoordinaten -> viewBox-Koordinaten (Zentrierung durch "meet" beachten)
-  function zuViewBox(clientX, clientY) {
-    var r = svg.getBoundingClientRect();
-    var s = einpassung();
-    return {
-      x: (clientX - r.left - (r.width - daten.breite * s) / 2) / s,
-      y: (clientY - r.top - (r.height - daten.hoehe * s) / 2) / s
-    };
-  }
-
-  svg.addEventListener("wheel", function (e) {
-    e.preventDefault();
-    var pt = zuViewBox(e.clientX, e.clientY);
-    var neu = Math.min(MAX_K, Math.max(MIN_K, k * Math.exp(-e.deltaY * 0.0016)));
-    // Der Punkt unter dem Cursor bleibt beim Zoomen an Ort und Stelle
-    tx = pt.x - (pt.x - tx) * (neu / k);
-    ty = pt.y - (pt.y - ty) * (neu / k);
-    k = neu;
-    anwenden();
-  }, { passive: false });
-
-  // --- Ziehen, Zwei-Finger-Zoom und Doppeltipp ------------------------------
-  // Alle Zeiger werden mitgefuehrt: ein Zeiger verschiebt, zwei Zeiger zoomen
-  // und verschieben gleichzeitig (wie auf einer Kartenapp gewohnt).
-  var zeiger = new Map();
-  var zieht = false, startX = 0, startY = 0, startTx = 0, startTy = 0, bewegt = false;
-  var kneifen = null;   // {abstand, inhaltX, inhaltY, k}
-
-  function zeigerListe() {
-    var l = [];
-    zeiger.forEach(function (v) { l.push(v); });
-    return l;
-  }
-
-  function panStart(p) {
-    zieht = true;
-    startX = p.x; startY = p.y; startTx = tx; startTy = ty;
-  }
-
-  function kneifStart() {
-    var l = zeigerListe();
-    var mitteBild = zuViewBox((l[0].x + l[1].x) / 2, (l[0].y + l[1].y) / 2);
-    kneifen = {
-      abstand: Math.hypot(l[0].x - l[1].x, l[0].y - l[1].y) || 1,
-      // Punkt im Karteninhalt, der unter der Fingermitte liegt und dort bleiben soll
-      inhaltX: (mitteBild.x - tx) / k,
-      inhaltY: (mitteBild.y - ty) / k,
-      k: k
-    };
-    zieht = false;
-  }
-
-  svg.addEventListener("pointerdown", function (e) {
-    svg.setPointerCapture(e.pointerId);
-    zeiger.set(e.pointerId, { x: e.clientX, y: e.clientY });
-    bewegt = false;
-    if (zeiger.size === 1) {
-      panStart({ x: e.clientX, y: e.clientY });
-      svg.classList.add("greift");
-    } else if (zeiger.size === 2) {
-      kneifStart();
-    }
-  });
-
-  svg.addEventListener("pointermove", function (e) {
-    if (!zeiger.has(e.pointerId)) return;
-    zeiger.set(e.pointerId, { x: e.clientX, y: e.clientY });
-
-    if (zeiger.size >= 2 && kneifen) {
-      var l = zeigerListe();
-      var abstand = Math.hypot(l[0].x - l[1].x, l[0].y - l[1].y) || 1;
-      var neu = Math.min(MAX_K, Math.max(MIN_K, kneifen.k * (abstand / kneifen.abstand)));
-      var mitte = zuViewBox((l[0].x + l[1].x) / 2, (l[0].y + l[1].y) / 2);
-      k = neu;
-      tx = mitte.x - kneifen.inhaltX * k;
-      ty = mitte.y - kneifen.inhaltY * k;
-      bewegt = true;
-      anwenden();
-      return;
+    // Das SVG passt seine viewBox mit "meet" in das Element ein. Dieser Faktor
+    // rechnet zwischen Bildschirm-Pixeln und viewBox-Einheiten um.
+    function einpassung() {
+      var r = svg.getBoundingClientRect();
+      if (!r.width || !r.height) return 1;
+      return Math.min(r.width / breite, r.height / hoehe);
     }
 
-    if (!zieht) return;
-    var dx = e.clientX - startX, dy = e.clientY - startY;
-    if (Math.abs(dx) > 4 || Math.abs(dy) > 4) bewegt = true;
-    var s = einpassung();
-    tx = startTx + dx / s; ty = startTy + dy / s;
-    anwenden();
-  });
-
-  function zeigerEnde(e) {
-    zeiger.delete(e.pointerId);
-    if (zeiger.size < 2) kneifen = null;
-    if (zeiger.size === 1) {
-      // ein Finger bleibt liegen: von dort aus normal weiterschieben
-      panStart(zeigerListe()[0]);
-    } else if (zeiger.size === 0) {
-      zieht = false;
-      svg.classList.remove("greift");
+    function anwenden() {
+      viewport.setAttribute("transform", "translate(" + tx + "," + ty + ") scale(" + k + ")");
+      var wirksam = k * einpassung();
+      var stufe = wirksam < 0.42 ? 0 : wirksam < 0.72 ? 1 : wirksam < 1.15 ? 2 : 3;
+      svg.classList.remove("zoom-0", "zoom-1", "zoom-2", "zoom-3");
+      svg.classList.add("zoom-" + stufe);
     }
-  }
-  svg.addEventListener("pointerup", zeigerEnde);
-  svg.addEventListener("pointercancel", zeigerEnde);
 
-  // Doppeltipp bzw. Doppelklick vergroessert um den getippten Punkt
-  var letzterTipp = 0, letzterTippX = 0, letzterTippY = 0;
-  svg.addEventListener("pointerup", function (e) {
-    var jetzt = Date.now();
-    var nah = Math.abs(e.clientX - letzterTippX) < 34 && Math.abs(e.clientY - letzterTippY) < 34;
-    if (jetzt - letzterTipp < 320 && nah && !bewegt) {
+    function gesamtansicht() { k = 1; tx = 0; ty = 0; anwenden(); }
+
+    // Bildschirmkoordinaten -> viewBox-Koordinaten (Zentrierung durch "meet" beachten)
+    function zuViewBox(clientX, clientY) {
+      var r = svg.getBoundingClientRect();
+      var s = einpassung();
+      return {
+        x: (clientX - r.left - (r.width - breite * s) / 2) / s,
+        y: (clientY - r.top - (r.height - hoehe * s) / 2) / s
+      };
+    }
+
+    svg.addEventListener("wheel", function (e) {
+      e.preventDefault();
       var pt = zuViewBox(e.clientX, e.clientY);
-      var neu = Math.min(MAX_K, k * 2);
+      var neu = Math.min(MAX_K, Math.max(MIN_K, k * Math.exp(-e.deltaY * 0.0016)));
       tx = pt.x - (pt.x - tx) * (neu / k);
       ty = pt.y - (pt.y - ty) * (neu / k);
       k = neu;
       anwenden();
-      bewegt = true;          // den folgenden Klick nicht als Auswahl werten
-      letzterTipp = 0;
-      return;
+    }, { passive: false });
+
+    // Ziehen, Zwei-Finger-Zoom und Doppeltipp: alle Zeiger werden mitgefuehrt,
+    // ein Zeiger verschiebt, zwei zoomen und verschieben um ihren Mittelpunkt.
+    var zeiger = new Map();
+    var zieht = false, startX = 0, startY = 0, startTx = 0, startTy = 0;
+    var bewegt = false, kneifen = null;
+
+    function zeigerListe() {
+      var l = [];
+      zeiger.forEach(function (v) { l.push(v); });
+      return l;
     }
-    letzterTipp = jetzt; letzterTippX = e.clientX; letzterTippY = e.clientY;
+    function panStart(p) { zieht = true; startX = p.x; startY = p.y; startTx = tx; startTy = ty; }
+    function kneifStart() {
+      var l = zeigerListe();
+      var mitte = zuViewBox((l[0].x + l[1].x) / 2, (l[0].y + l[1].y) / 2);
+      kneifen = {
+        abstand: Math.hypot(l[0].x - l[1].x, l[0].y - l[1].y) || 1,
+        inhaltX: (mitte.x - tx) / k, inhaltY: (mitte.y - ty) / k, k: k
+      };
+      zieht = false;
+    }
+
+    svg.addEventListener("pointerdown", function (e) {
+      svg.setPointerCapture(e.pointerId);
+      zeiger.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      bewegt = false;
+      if (zeiger.size === 1) { panStart({ x: e.clientX, y: e.clientY }); svg.classList.add("greift"); }
+      else if (zeiger.size === 2) { kneifStart(); }
+    });
+
+    svg.addEventListener("pointermove", function (e) {
+      if (!zeiger.has(e.pointerId)) return;
+      zeiger.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (zeiger.size >= 2 && kneifen) {
+        var l = zeigerListe();
+        var abstand = Math.hypot(l[0].x - l[1].x, l[0].y - l[1].y) || 1;
+        k = Math.min(MAX_K, Math.max(MIN_K, kneifen.k * (abstand / kneifen.abstand)));
+        var mitte = zuViewBox((l[0].x + l[1].x) / 2, (l[0].y + l[1].y) / 2);
+        tx = mitte.x - kneifen.inhaltX * k;
+        ty = mitte.y - kneifen.inhaltY * k;
+        bewegt = true;
+        anwenden();
+        return;
+      }
+      if (!zieht) return;
+      var dx = e.clientX - startX, dy = e.clientY - startY;
+      if (Math.abs(dx) > 4 || Math.abs(dy) > 4) bewegt = true;
+      var s = einpassung();
+      tx = startTx + dx / s; ty = startTy + dy / s;
+      anwenden();
+    });
+
+    function zeigerEnde(e) {
+      zeiger.delete(e.pointerId);
+      if (zeiger.size < 2) kneifen = null;
+      if (zeiger.size === 1) panStart(zeigerListe()[0]);
+      else if (zeiger.size === 0) { zieht = false; svg.classList.remove("greift"); }
+    }
+    svg.addEventListener("pointerup", zeigerEnde);
+    svg.addEventListener("pointercancel", zeigerEnde);
+
+    var letzterTipp = 0, letzterX = 0, letzterY = 0;
+    svg.addEventListener("pointerup", function (e) {
+      var jetzt = Date.now();
+      var nah = Math.abs(e.clientX - letzterX) < 34 && Math.abs(e.clientY - letzterY) < 34;
+      if (jetzt - letzterTipp < 320 && nah && !bewegt) {
+        var pt = zuViewBox(e.clientX, e.clientY);
+        var neu = Math.min(MAX_K, k * 2);
+        tx = pt.x - (pt.x - tx) * (neu / k);
+        ty = pt.y - (pt.y - ty) * (neu / k);
+        k = neu;
+        anwenden();
+        bewegt = true;
+        letzterTipp = 0;
+        return;
+      }
+      letzterTipp = jetzt; letzterX = e.clientX; letzterY = e.clientY;
+    });
+
+    svg.addEventListener("click", function (e) {
+      if (bewegt) return;
+      var ziel = e.target.closest("[data-ziel]");
+      if (ziel) { seiteWechseln(ziel.getAttribute("data-ziel")); return; }
+      var h = e.target.closest("[data-stop]");
+      if (h) { zeigeHalt(h.getAttribute("data-stop")); return; }
+      var l = e.target.closest("[data-line]");
+      if (l) { linieFesthalten(l.getAttribute("data-line")); return; }
+      fixiert = null;
+      hervorhebungLoesen();
+    });
+
+    svg.addEventListener("mouseover", function (e) {
+      var t = e.target.closest("[data-line]");
+      if (t && !fixiert) hervorheben(t.getAttribute("data-line"));
+    });
+    svg.addEventListener("mouseout", function (e) {
+      if (e.target.closest("[data-line]")) hervorhebungLoesen();
+    });
+
+    // Der Mittelpunkt der sichtbaren Flaeche liegt bei "meet" immer auf der
+    // Mitte der viewBox - deshalb genuegt diese Rechnung fuer beide Achsen.
+    function springeZu(x, y) {
+      var ziel = 1.35 / einpassung();
+      k = Math.min(MAX_K, Math.max(k, ziel));
+      tx = breite / 2 - x * k;
+      ty = hoehe / 2 - y * k;
+      anwenden();
+    }
+
+    function zoomStufe(faktor) {
+      k = Math.min(MAX_K, Math.max(MIN_K, k * faktor));
+      anwenden();
+    }
+
+    return { svg: svg, springeZu: springeZu, gesamtansicht: gesamtansicht,
+             zoomStufe: zoomStufe, anwenden: anwenden };
+  }
+
+  var karten = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".karte"), function (svg) {
+    karten[svg.dataset.seite] = karteEinrichten(svg);
   });
 
-  // Der Mittelpunkt der sichtbaren Flaeche liegt bei "meet" immer auf der
-  // Mitte der viewBox - deshalb genuegt diese Rechnung fuer beide Achsen.
-  function springeZu(x, y) {
-    var ziel = 1.35 / einpassung();          // so weit, dass alle Namen sichtbar sind
-    k = Math.min(MAX_K, Math.max(k, ziel));
-    tx = daten.breite / 2 - x * k;
-    ty = daten.hoehe / 2 - y * k;
-    anwenden();
+  // --- Seitenwechsel --------------------------------------------------------
+  var aktiv = "main";
+
+  function seiteWechseln(name) {
+    if (!karten[name]) return;
+    aktiv = name;
+    Object.keys(karten).forEach(function (n) {
+      karten[n].svg.classList.toggle("aktiv", n === name);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("#seitenwahl button"), function (b) {
+      b.classList.toggle("aktiv", b.dataset.seite === name);
+    });
+    // Erst nach dem Einblenden ist die Groesse bekannt, dann Zoomstufe neu setzen
+    karten[name].anwenden();
+    panelSchliessen();
   }
 
   // --- Linien hervorheben ---------------------------------------------------
   var fixiert = null;
 
   function hervorheben(lineId) {
-    var alle = svg.querySelectorAll(".linie, .badge");
-    for (var i = 0; i < alle.length; i++) {
-      alle[i].classList.toggle("hervor", alle[i].getAttribute("data-line") === lineId);
-    }
-    svg.classList.add("abgeblendet");
-    var eintraege = document.querySelectorAll(".legende li");
-    for (var j = 0; j < eintraege.length; j++) {
-      eintraege[j].style.background = eintraege[j].getAttribute("data-line") === lineId ? "#e0e0e0" : "";
-    }
+    Array.prototype.forEach.call(document.querySelectorAll(".linie, .badge"), function (el) {
+      el.classList.toggle("hervor", el.getAttribute("data-line") === lineId);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".karte"), function (s) {
+      s.classList.add("abgeblendet");
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".legende li"), function (li) {
+      li.style.background = li.getAttribute("data-line") === lineId ? "var(--hover-bg)" : "";
+    });
   }
 
-  function zuruecksetzenHervorhebung() {
+  function hervorhebungLoesen() {
     if (fixiert) return;
-    svg.classList.remove("abgeblendet");
-    var eintraege = document.querySelectorAll(".legende li");
-    for (var j = 0; j < eintraege.length; j++) eintraege[j].style.background = "";
+    Array.prototype.forEach.call(document.querySelectorAll(".karte"), function (s) {
+      s.classList.remove("abgeblendet");
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".legende li"), function (li) {
+      li.style.background = "";
+    });
   }
 
-  svg.addEventListener("mouseover", function (e) {
-    var t = e.target.closest("[data-line]");
-    if (t && !fixiert) hervorheben(t.getAttribute("data-line"));
-  });
-  svg.addEventListener("mouseout", function (e) {
-    if (e.target.closest("[data-line]")) zuruecksetzenHervorhebung();
-  });
+  function linieFesthalten(id) {
+    fixiert = (fixiert === id) ? null : id;
+    if (fixiert) hervorheben(fixiert); else hervorhebungLoesen();
+  }
 
-  // --- Halt anklicken -------------------------------------------------------
+  // --- Halt anzeigen --------------------------------------------------------
   var infofeld = document.getElementById("infofeld");
+
+  function markiereHalt(stopId) {
+    Array.prototype.forEach.call(document.querySelectorAll(".halt"), function (el) {
+      el.classList.toggle("hervor", stopId !== null && el.getAttribute("data-stop") === stopId);
+    });
+  }
 
   function zeigeHalt(stopId) {
     var halt = daten.halte[stopId];
@@ -610,35 +662,19 @@ JS = """
     markiereHalt(stopId);
   }
 
-  function markiereHalt(stopId) {
-    var alle = svg.querySelectorAll(".halt");
-    for (var i = 0; i < alle.length; i++) {
-      alle[i].classList.toggle("hervor", stopId !== null && alle[i].getAttribute("data-stop") === stopId);
-    }
+  function zuHalt(stopId) {
+    var halt = daten.halte[stopId];
+    if (!halt) return;
+    // Auf der aktuellen Seite bleiben, wenn der Halt dort vorkommt
+    var seite = halt.orte[aktiv] ? aktiv : Object.keys(halt.orte)[0];
+    if (seite !== aktiv) seiteWechseln(seite);
+    karten[seite].springeZu(halt.orte[seite][0], halt.orte[seite][1]);
+    zeigeHalt(stopId);
   }
-
-  svg.addEventListener("click", function (e) {
-    if (bewegt) return;
-    var h = e.target.closest("[data-stop]");
-    if (h) { zeigeHalt(h.getAttribute("data-stop")); return; }
-    var l = e.target.closest("[data-line]");
-    if (l) {
-      var id = l.getAttribute("data-line");
-      fixiert = (fixiert === id) ? null : id;
-      if (fixiert) hervorheben(fixiert); else zuruecksetzenHervorhebung();
-      return;
-    }
-    fixiert = null;
-    zuruecksetzenHervorhebung();
-  });
 
   // --- Suche ----------------------------------------------------------------
   var suche = document.getElementById("suche");
   var treffer = document.getElementById("treffer");
-
-  function entschaerfen(s) {
-    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  }
 
   suche.addEventListener("input", function () {
     var q = suche.value.trim().toLowerCase();
@@ -659,24 +695,24 @@ JS = """
         return daten.linien[lid] ? daten.linien[lid].code : "";
       }).join(", ");
       li.innerHTML = entschaerfen(h.name) + '<br><span class="zeilen">' + entschaerfen(codes) + "</span>";
-      li.onclick = function () {
-        springeZu(h.x, h.y);
-        zeigeHalt(id);
-        panelSchliessen();     // auf dem Handy gibt das die Karte wieder frei
-      };
+      li.onclick = function () { zuHalt(id); };
       treffer.appendChild(li);
     });
   });
 
   // --- Legende --------------------------------------------------------------
-  document.querySelectorAll(".legende li").forEach(function (li) {
+  Array.prototype.forEach.call(document.querySelectorAll(".legende li"), function (li) {
     var id = li.getAttribute("data-line");
     li.addEventListener("mouseenter", function () { if (!fixiert) hervorheben(id); });
-    li.addEventListener("mouseleave", zuruecksetzenHervorhebung);
+    li.addEventListener("mouseleave", hervorhebungLoesen);
     li.addEventListener("click", function () {
-      fixiert = (fixiert === id) ? null : id;
-      if (fixiert) hervorheben(fixiert); else zuruecksetzenHervorhebung();
-      panelSchliessen();     // sonst verdeckt das Panel die hervorgehobene Linie
+      linieFesthalten(id);
+      // liegt die Linie nur auf der anderen Seite, dorthin wechseln
+      if (fixiert && daten.linien[id] && !daten.linien[id].seiten[aktiv]) {
+        var ziel = Object.keys(daten.linien[id].seiten)[0];
+        if (ziel) seiteWechseln(ziel);
+      }
+      panelSchliessen();
     });
   });
 
@@ -692,11 +728,9 @@ JS = """
     themaKnopf.setAttribute("aria-pressed", dunkel ? "true" : "false");
   }
   themaSetzen(!!(systemDunkel && systemDunkel.matches));
-
   themaKnopf.onclick = function () {
     themaSetzen(document.documentElement.getAttribute("data-thema") !== "dunkel");
   };
-  // Aendert das System die Einstellung, zieht die Karte mit
   if (systemDunkel && systemDunkel.addEventListener) {
     systemDunkel.addEventListener("change", function (e) { themaSetzen(e.matches); });
   }
@@ -717,65 +751,80 @@ JS = """
   document.getElementById("panelZu").onclick = panelSchliessen;
   hintergrund.onclick = panelSchliessen;
 
+  Array.prototype.forEach.call(document.querySelectorAll("#seitenwahl button"), function (b) {
+    b.onclick = function () { seiteWechseln(b.dataset.seite); };
+  });
+
   // --- Bedienknoepfe --------------------------------------------------------
-  document.getElementById("zoomEin").onclick = function () {
-    k = Math.min(MAX_K, k * 1.45); anwenden();
-  };
-  document.getElementById("zoomAus").onclick = function () {
-    k = Math.max(MIN_K, k / 1.45); anwenden();
-  };
+  document.getElementById("zoomEin").onclick = function () { karten[aktiv].zoomStufe(1.45); };
+  document.getElementById("zoomAus").onclick = function () { karten[aktiv].zoomStufe(1 / 1.45); };
   document.getElementById("zuruecksetzen").onclick = function () {
-    fixiert = null; zuruecksetzenHervorhebung();
-    infofeld.style.display = "none"; markiereHalt(null);
-    gesamtansicht();
+    fixiert = null;
+    hervorhebungLoesen();
+    infofeld.style.display = "none";
+    markiereHalt(null);
+    karten[aktiv].gesamtansicht();
+  };
+  document.getElementById("seiteUm").onclick = function () {
+    seiteWechseln(aktiv === "main" ? "inset" : "main");
   };
 
-  window.addEventListener("resize", anwenden);
-  gesamtansicht();
+  window.addEventListener("resize", function () {
+    Object.keys(karten).forEach(function (n) { karten[n].anwenden(); });
+  });
+
+  seiteWechseln("main");
+  karten.main.gesamtansicht();
 })();
 """
 
 
 def build_html(data, layout):
     meta = data["meta"]
+    seiten = meta["seiten"]
 
-    # Kompakte Daten fuer die Interaktion (Suche, Infofeld, Legende)
+    # Auf welchen Seiten kommt eine Linie vor?
+    seiten_je_linie = {}
+    for name, view in data["views"].items():
+        for line in view["lines"]:
+            seiten_je_linie.setdefault(line["line_id"], {})[name] = True
+
     linien_js = {}
     for entry in layout["legend"]:
         linien_js[entry["line_id"]] = {
             "code": entry["code"],
             "strecke": entry["endpoints"],
-            # Farbpaar hell/dunkel; das Infofeld setzt sie als CSS-Variablen
+            # Farbpaar hell/dunkel; Infofeld und Legende setzen sie als CSS-Variablen
             "vars": farb_variablen(entry["color"]),
+            "seiten": seiten_je_linie.get(entry["line_id"], {}),
         }
 
+    # Halte mit ihren Koordinaten je Seite; die Linienliste ist die Vereinigung
+    # beider Seiten, damit z.B. Essen Hbf auch seine S-Bahnen zeigt.
     halte_js = {}
-    for view_name, view in data["views"].items():
+    for name, view in data["views"].items():
         for s in view["stops"]:
-            # Ein Halt kann in beiden Ansichten vorkommen; die Hauptkarte gewinnt,
-            # damit die Suche dorthin springt, wo der Halt im Gesamtnetz liegt.
-            if s["stop_id"] in halte_js and view_name != "main":
-                continue
-            halte_js[s["stop_id"]] = {
+            eintrag = halte_js.setdefault(s["stop_id"], {
                 "name": s["name"],
-                # zusaetzlich die gekuerzte Form, damit die Suche auch auf "Hbf" anspringt
                 "kurz": s["name"].replace("Hauptbahnhof", "Hbf"),
-                "x": s["x"],
-                "y": s["y"],
-                "linien": s["lines"],
-            }
+                "linien": [],
+                "orte": {},
+            })
+            eintrag["orte"][name] = [s["x"], s["y"]]
+            for lid in s["lines"]:
+                if lid not in eintrag["linien"]:
+                    eintrag["linien"].append(lid)
 
-    js_daten = {
-        "breite": meta["svg_width"],
-        "hoehe": meta["svg_height"],
-        "linien": linien_js,
-        "halte": halte_js,
-    }
+    rang = {e["line_id"]: i for i, e in enumerate(layout["legend"])}
+    for eintrag in halte_js.values():
+        eintrag["linien"].sort(key=lambda lid: rang.get(lid, 999))
+
+    js_daten = {"linien": linien_js, "halte": halte_js}
 
     legende_html = []
     for entry in layout["legend"]:
-        hinweis = ('<span class="hinweis"> · nur im Ausschnitt</span>'
-                   if entry["in_inset_only"] else "")
+        nur_ruhr = list(seiten_je_linie.get(entry["line_id"], {})) == ["inset"]
+        hinweis = ('<span class="hinweis"> · nur Ruhrgebiet</span>' if nur_ruhr else "")
         legende_html.append(
             f'<li data-line="{entry["line_id"]}">'
             f'<span class="nummer" style="{farb_variablen(entry["color"])}">'
@@ -785,8 +834,7 @@ def build_html(data, layout):
 
     n_lines = len(layout["legend"])
     n_stops = len(halte_js)
-
-    svg = build_svg(data, layout)
+    svgs = "".join(build_svg(name, data, layout) for name in ("main", "inset"))
     js = JS.replace("__DATEN__", json.dumps(js_daten, ensure_ascii=False, separators=(",", ":")))
 
     return f"""<!doctype html>
@@ -804,6 +852,12 @@ def build_html(data, layout):
   <h1>RE-Netz 2030</h1>
   <div class="untertitel">{n_lines} Linien · {n_stops} Halte · Deutschland und Nachbarländer</div>
 
+  <h2>Kartenseite</h2>
+  <div id="seitenwahl">
+    <button data-seite="main" class="aktiv">{esc(seiten["main"]["titel"])}</button>
+    <button data-seite="inset">Ruhrgebiet ({seiten["inset"]["vergroesserung"]}×)</button>
+  </div>
+
   <h2>Haltestelle suchen</h2>
   <input id="suche" type="text" placeholder="Name eingeben …" autocomplete="off">
   <ul id="treffer"></ul>
@@ -815,8 +869,9 @@ def build_html(data, layout):
 
 <div id="kartenbereich">
   <button id="menuKnopf" aria-label="Menü öffnen">☰</button>
-  {svg}
+  {svgs}
   <div id="bedienung">
+    <button id="seiteUm" aria-label="Kartenseite wechseln">⇄</button>
     <button id="thema" aria-label="Zwischen hell und dunkel wechseln">☾</button>
     <button id="zoomEin" aria-label="Vergrößern">+</button>
     <button id="zoomAus" aria-label="Verkleinern">−</button>

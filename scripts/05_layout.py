@@ -20,7 +20,12 @@ from collections import defaultdict
 from pathlib import Path
 
 BUNDLED_PATH = Path("data/04_bundled.json")
+TEXTMASSE_PATH = Path("data/05a_textmasse.json")
 OUTPUT_PATH = Path("data/05_layout.json")
+
+# Im Browser gemessene Textbreiten je 1 px Schriftgroesse (siehe 05a_textmasse.py).
+# Fehlt die Datei, greift die Schaetzung weiter unten.
+GEMESSEN = {}
 
 # --- Schriftgroessen und Marker (in Karten-Pixeln) --------------------------
 LABEL_FONT_PX = 9.0            # normaler Haltename
@@ -63,8 +68,23 @@ def display_name(name):
                 .replace("hauptbahnhof", "hbf"))
 
 
+def text_width(text, font_px, bold=False, art="halt"):
+    """
+    Textbreite bestimmen.
+
+    Bevorzugt die im Browser gemessenen Werte aus Phase 5a; nur wenn die Datei
+    fehlt, wird geschaetzt. Die Schaetzung liegt je nach Name einige Prozent
+    daneben - genug, dass sich Beschriftungen am Ende doch ueberlappen.
+    """
+    schluessel = ("halt_fett|" if (art == "halt" and bold) else art + "|") + text
+    gemessen = GEMESSEN.get(schluessel)
+    if gemessen is not None:
+        return gemessen * font_px
+    return estimate_text_width(text, font_px, bold)
+
+
 def estimate_text_width(text, font_px, bold=False):
-    """Textbreite abschaetzen, ohne Font-Engine."""
+    """Textbreite abschaetzen, ohne Font-Engine (Rueckfallebene)."""
     total = 0.0
     for ch in text:
         if ch in _NARROW:
@@ -255,7 +275,7 @@ def layout_view(view, line_width, grid_seed_boxes=None):
         is_node = m["is_node"]
         font = NODE_FONT_PX if is_node else LABEL_FONT_PX
         text = display_name(s["name"])
-        text_w = estimate_text_width(text, font, bold=is_node)
+        text_w = text_width(text, font, bold=is_node, art="halt")
         text_h = font * 1.02
         ex, ey = marker_extent(m)
 
@@ -296,7 +316,7 @@ def layout_view(view, line_width, grid_seed_boxes=None):
     badges = []
     for line in view["lines"]:
         text = line["code"]
-        bw = estimate_text_width(text, BADGE_FONT_PX, bold=True) + 2 * BADGE_PAD_X
+        bw = text_width(text, BADGE_FONT_PX, bold=True, art="badge") + 2 * BADGE_PAD_X
         text_fill = "#ffffff" if luminance(line["color"]) < 0.62 else "#1a1a1a"
         for branch in line["branches"]:
             total = polyline_length(branch)
@@ -340,19 +360,24 @@ def layout_view(view, line_width, grid_seed_boxes=None):
 
 
 def main():
+    global GEMESSEN
+    if TEXTMASSE_PATH.exists():
+        GEMESSEN = json.loads(TEXTMASSE_PATH.read_text(encoding="utf-8"))
+        print(f"{len(GEMESSEN)} im Browser gemessene Textbreiten geladen")
+    else:
+        print(f"WARNUNG: {TEXTMASSE_PATH} fehlt - Textbreiten werden geschaetzt. "
+              f"Fuer eine sauberere Beschriftung zuerst 05a_textmasse.py laufen lassen.")
+
     data = json.loads(BUNDLED_PATH.read_text(encoding="utf-8"))
     line_width = data["meta"]["line_width_px"]
-    inset = data["meta"]["inset"]
+    seiten = data["meta"]["seiten"]
 
-    # Ausschnittrahmen samt Titel und der Hinweis am markierten Quellbereich
-    # duerfen von Beschriftungen der Hauptkarte nicht ueberdeckt werden.
-    sx, sy, sw, _sh = inset["source_rect"]
-    hint_w = estimate_text_width("vergrößert siehe Ausschnitt", 15.0)
-    seed = [
-        (inset["x"] - 6, inset["y"] - 34, inset["x"] + inset["width"] + 6,
-         inset["y"] + inset["height"] + 6),
-        (sx + sw / 2 - hint_w / 2 - 3, sy - 24, sx + sw / 2 + hint_w / 2 + 3, sy - 2),
-    ]
+    # Der Hinweis am markierten Quellbereich der Hauptkarte darf von
+    # Haltebeschriftungen nicht ueberdeckt werden.
+    sx, sy, sw, _sh = seiten["main"]["quellrechteck"]
+    hinweis = "vergrößert siehe " + seiten["main"]["verweis"]
+    hint_w = text_width(hinweis, 17.0, bold=True, art="hinweis")
+    seed = [(sx + sw / 2 - hint_w / 2 - 4, sy - 26, sx + sw / 2 + hint_w / 2 + 4, sy - 2)]
 
     result = {"views": {}}
     for name, view in data["views"].items():

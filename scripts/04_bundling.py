@@ -37,7 +37,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from pyproj import Transformer
-from shapely.geometry import LineString
+from shapely.geometry import LineString, Point
 from shapely.ops import substring, transform as shapely_transform
 
 from kml_common import assign_stops_to_segments, parse_kml
@@ -57,22 +57,34 @@ SLOT_SPACING_PX = 1.3 * LINE_WIDTH_PX  # Abstand zwischen zwei Bahnen im Buendel
 
 SIMPLIFY_TOLERANCE_PX = 1.2          # Douglas-Peucker VOR dem Versatz
 DENSIFY_MAX_SEG_PX = 5.0             # lange Segmente unterteilen, damit Rampen greifen koennen
-SLOT_TRANSITION_PX = 20.0            # Obergrenze fuer die Laenge eines Slot-Wechsels
+# Obergrenze fuer die Laenge eines Slot-Wechsels, angegeben in Kilometern
+# statt Pixeln: Die beiden Kartenseiten haben sehr verschiedene Massstaebe
+# (4,8 gegenueber 19 px/km). Ein fester Pixelwert waere auf der
+# Ruhrgebietsseite laenger als der halbe Halteabstand und liesse die Linien
+# dort dauerhaft weben statt kurz zu versetzen.
+SLOT_TRANSITION_KM = 4.0
 CHAIKIN_ITERATIONS = 1               # Glaettung NACH dem Versatz
 MITER_LIMIT = 2.5                    # Begrenzung der Gehrung an spitzen Ecken
 
 SEGMENT_TIE_TOLERANCE_M = 50.0       # identisch zu Phase 2
+
+# Durchfahrt-Knoten: Ein Express haelt nicht an allen Halten seiner Strecke und
+# haette dadurch voellig andere Kanten als der Regionalzug daneben - beide
+# koennten nicht gebuendelt werden und wuerden sich gegenseitig verdecken
+# (RE35X teilt mit RE35 nur 5 von 24 Kanten). Halte, die dicht an der Strecke
+# einer Linie liegen, an denen sie aber nicht haelt, werden deshalb als reine
+# Geometrieknoten in ihren Weg eingefuegt. Gezeichnet wird dort kein Halt.
+PASSTHROUGH_TOL_M = 60.0
 EDGE_DEVIATION_WARN_PX = 12.0        # ab hier: Linien nehmen auf derselben Kante spuerbar andere Wege
 
 # Ballungsraum-Ausschnitt: Im Ruhrgebiet liegen die Halte im Netzmassstab nur
 # rund 7 px auseinander - dort ist keine lesbare Beschriftung moeglich. Die drei
-# S-Bahn-Linien wandern deshalb komplett in einen vergroesserten Ausschnitt, der
-# im freien Suedosten der Hauptkarte sitzt (dort ist ein Block von 1500 x 1900 px
-# ohne Netzelemente).
+# S-Bahn-Linien wandern deshalb komplett auf eine eigene, zweite Kartenseite,
+# die den Ballungsraum bildschirmfuellend zeigt. Auf der Hauptkarte markiert ein
+# gestricheltes Rechteck den Bereich.
 INSET_TITLE = "Ballungsraum Ruhrgebiet"
-INSET_X = 2760.0                     # Position des Ausschnittrahmens in Hauptkarten-Pixeln
-INSET_Y = 2560.0
-INSET_WIDTH_PX = 1380.0
+INSET_CANVAS_WIDTH = 1450.0          # eigene Zeichenflaeche der zweiten Seite
+INSET_MARGIN_PX = 70.0
 INSET_PAD_M = 6000.0                 # Puffer um die S-Bahn-Halte herum (Meter)
 
 
@@ -169,8 +181,10 @@ def ramp_slots(pts, slots, max_transition_px):
         boundary = 0.5 * (s[i1] + s[j0])
         len_before = s[i1] - s[i0]
         len_after = s[j1] - s[j0]
-        # 45 % je Seite: benachbarte Rampen koennen sich dadurch nie ueberlappen
-        w = min(max_transition_px / 2.0, len_before * 0.45, len_after * 0.45)
+        # Hoechstens 32 % je Seite: benachbarte Rampen koennen sich dadurch nie
+        # ueberlappen, und der Slot-Wechsel bleibt ein kurzer Versatz statt
+        # eines Webens ueber die halbe Kante.
+        w = min(max_transition_px / 2.0, len_before * 0.32, len_after * 0.32)
         if w <= 1e-6:
             continue
         for idx in range(i0, j1 + 1):
@@ -237,7 +251,7 @@ def chaikin(pts, iterations=1):
 # --- Aufbau einer Ansicht -----------------------------------------------------
 
 def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
-               allowed_stop_ids=None, debug_edge=None, verbose=True):
+               scale_px_per_m, allowed_stop_ids=None, debug_edge=None, verbose=True):
     """
     Berechnet Buendelgeometrie fuer eine Kartenansicht.
 
@@ -250,19 +264,41 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
     allowed_stop_ids: Beschraenkung auf einen Kartenausschnitt (None = alle)
     to_px:            Abbildung EPSG:3034-Meter -> Pixel dieser Ansicht
     """
+    # Rampenlaenge aus dem Massstab dieser Ansicht ableiten
+    transition_px = SLOT_TRANSITION_KM * 1000.0 * scale_px_per_m
+
     edge_candidates = defaultdict(list)
     line_branches = {}
+    bediente_linien = defaultdict(list)   # stop_id -> Linien, die dort tatsaechlich halten
+
+    stop_pool = (sorted(allowed_stop_ids) if allowed_stop_ids is not None
+                 else [s["stop_id"] for s in graph["stops"]])
 
     for ln in lines_raw:
         if ln["line_id"] not in line_ids:
             continue
         graph_line = next(g for g in graph["lines"] if g["line_id"] == ln["line_id"])
-        candidate_ids = {sid for seq in graph_line["sequences"] for sid in seq}
+        eigene_halte = {sid for seq in graph_line["sequences"] for sid in seq}
         if allowed_stop_ids is not None:
-            candidate_ids &= allowed_stop_ids
-        if len(candidate_ids) < 2:
+            eigene_halte &= allowed_stop_ids
+        if len(eigene_halte) < 2:
             continue
-        stops_xy = [(sid, stop_by_id[sid]["px_m"], stop_by_id[sid]["py_m"]) for sid in candidate_ids]
+
+        # Halte an der Strecke, an denen diese Linie nicht haelt, als reine
+        # Geometrieknoten aufnehmen - sonst kann ein Express nicht neben dem
+        # Regionalzug gebuendelt werden (siehe Kommentar bei PASSTHROUGH_TOL_M).
+        knoten_ids = set(eigene_halte)
+        for sid in stop_pool:
+            if sid in knoten_ids:
+                continue
+            s = stop_by_id[sid]
+            p = Point(s["px_m"], s["py_m"])
+            for seg in ln["segments_proj"]:
+                if seg is not None and seg.distance(p) <= PASSTHROUGH_TOL_M:
+                    knoten_ids.add(sid)
+                    break
+
+        stops_xy = [(sid, stop_by_id[sid]["px_m"], stop_by_id[sid]["py_m"]) for sid in knoten_ids]
 
         assigned, _ = assign_stops_to_segments(ln["segments_proj"], stops_xy, SEGMENT_TIE_TOLERANCE_M)
 
@@ -289,6 +325,10 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                 edge_candidates[key].append((ln["line_id"], pts_px))
             if len(seq_ids) >= 2:
                 branches.append(seq_ids)
+                for sid in seq_ids:
+                    # nur echte Halte bekommen spaeter einen Marker
+                    if sid in eigene_halte and ln["line_id"] not in bediente_linien[sid]:
+                        bediente_linien[sid].append(ln["line_id"])
         line_branches[ln["line_id"]] = branches
 
     # kanonische Geometrie je Kante: die detaillierteste Variante, damit alle
@@ -360,7 +400,7 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
             if len(clean_pts) < 2:
                 continue
 
-            smoothed = ramp_slots(clean_pts, clean_slots, SLOT_TRANSITION_PX)
+            smoothed = ramp_slots(clean_pts, clean_slots, transition_px)
             offsets = [s * SLOT_SPACING_PX for s in smoothed]
             offset_pts = offset_polyline(clean_pts, offsets)
 
@@ -406,21 +446,40 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
     view_line_ids = {l["line_id"] for l in output_lines}
     output_stops = []
     for sid, incident in edges_by_stop.items():
-        s = stop_by_id[sid]
-        lines_here = sorted({lid for key in incident for lid in edge_slots.get(key, {})},
-                            key=lambda lid: rank_by_line[lid])
-        lines_here = [lid for lid in lines_here if lid in view_line_ids]
+        # Nur Halte, an denen wirklich eine Linie haelt. Durchfahrt-Knoten
+        # teilen zwar die Kanten, bekommen aber keinen Bahnhofsmarker.
+        lines_here = [lid for lid in bediente_linien.get(sid, []) if lid in view_line_ids]
         if not lines_here:
             continue
+        lines_here.sort(key=lambda lid: rank_by_line[lid])
+        s = stop_by_id[sid]
         x, y = to_px(s["px_m"], s["py_m"])
-        widest = max(incident, key=lambda k: len(edge_slots.get(k, {})))
-        n_widest = max(len(edge_slots.get(widest, {})), 1)
-        geom = edge_geom[widest]
-        if widest[0] == sid:
-            dx, dy = geom[1][0] - geom[0][0], geom[1][1] - geom[0][1]
+        n_widest = max((len(edge_slots.get(k, {})) for k in incident), default=1)
+
+        # Ausrichtung des Markers: Durchgangsrichtung der Strecke, gemittelt
+        # ueber ALLE anliegenden Kanten. Nur die breiteste Kante zu nehmen
+        # laesst benachbarte Marker in verschiedenen Winkeln stehen, wodurch
+        # sie sich an Knoten sichtbar ueberkreuzen. Gemittelt wird ueber den
+        # doppelten Winkel, weil eine Strecke keine Richtung hat: eine Kante
+        # nach Osten und eine nach Westen beschreiben dieselbe Achse.
+        sx2 = sy2 = 0.0
+        for key in incident:
+            geom = edge_geom[key]
+            if key[0] == sid:
+                dx, dy = geom[1][0] - geom[0][0], geom[1][1] - geom[0][1]
+            else:
+                dx, dy = geom[-1][0] - geom[-2][0], geom[-1][1] - geom[-2][1]
+            laenge = math.hypot(dx, dy)
+            if laenge < 1e-9:
+                continue
+            winkel2 = 2 * math.atan2(dy, dx)
+            gewicht = len(edge_slots.get(key, {})) or 1
+            sx2 += gewicht * math.cos(winkel2)
+            sy2 += gewicht * math.sin(winkel2)
+        if abs(sx2) < 1e-12 and abs(sy2) < 1e-12:
+            achse = 0.0
         else:
-            dx, dy = geom[-1][0] - geom[-2][0], geom[-1][1] - geom[-2][1]
-        # Endhalt der Linie? (kommt nur in einer Kante vor)
+            achse = math.degrees(math.atan2(sy2, sx2)) / 2.0
         output_stops.append({
             "stop_id": sid,
             "name": s["name"],
@@ -429,7 +488,7 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
             "n_lines": len(lines_here),
             "lines": lines_here,
             "degree": len(incident),
-            "bundle_angle_deg": round(math.degrees(math.atan2(dy, dx)), 1),
+            "bundle_angle_deg": round(achse, 1),
             "bundle_half_len": round((n_widest - 1) / 2.0 * SLOT_SPACING_PX, 2),
         })
 
@@ -509,12 +568,13 @@ def main(debug_edge=None):
     ix0, ix1 = min(sx) - INSET_PAD_M, max(sx) + INSET_PAD_M
     iy0, iy1 = min(sy) - INSET_PAD_M, max(sy) + INSET_PAD_M
 
-    inset_scale = INSET_WIDTH_PX / (ix1 - ix0)
-    inset_height = (iy1 - iy0) * inset_scale
+    inset_scale = (INSET_CANVAS_WIDTH - 2 * INSET_MARGIN_PX) / (ix1 - ix0)
+    inset_height = (iy1 - iy0) * inset_scale + 2 * INSET_MARGIN_PX
 
     def to_px_inset(x, y):
-        """EPSG:3034-Meter -> Pixel im Ausschnittrahmen (bereits an seine Position verschoben)."""
-        return (INSET_X + (x - ix0) * inset_scale, INSET_Y + (iy1 - y) * inset_scale)
+        """EPSG:3034-Meter -> Pixel der zweiten Kartenseite (eigene Zeichenflaeche)."""
+        return (INSET_MARGIN_PX + (x - ix0) * inset_scale,
+                INSET_MARGIN_PX + (iy1 - y) * inset_scale)
 
     # alle Halte im Ausschnittbereich, und alle Linien, die dort mindestens zwei bedienen
     inset_stop_ids = {s["stop_id"] for s in graph["stops"]
@@ -525,51 +585,75 @@ def main(debug_edge=None):
         if n_inside >= 2:
             inset_line_ids.add(g["line_id"])
 
-    print(f"Ausschnitt Ballungsraum: {INSET_WIDTH_PX:.0f} x {inset_height:.0f} px bei "
-          f"({INSET_X:.0f},{INSET_Y:.0f}), Vergroesserung {inset_scale / scale:.1f}x, "
+    print(f"Zweite Seite '{INSET_TITLE}': {INSET_CANVAS_WIDTH:.0f} x {inset_height:.0f} px, "
+          f"{inset_scale * 1000:.1f} px/km (Hauptkarte {scale * 1000:.1f}), "
           f"{len(inset_stop_ids)} Halte, {len(inset_line_ids)} Linien")
 
     views = {
         "main": build_view("main", "Gesamtnetz", lines_raw, graph, stop_by_id,
-                           main_line_ids, to_px, debug_edge=debug_edge),
+                           main_line_ids, to_px, scale, debug_edge=debug_edge),
         "inset": build_view("inset", INSET_TITLE, lines_raw, graph, stop_by_id,
-                            inset_line_ids, to_px_inset,
+                            inset_line_ids, to_px_inset, inset_scale,
                             allowed_stop_ids=inset_stop_ids, debug_edge=debug_edge),
     }
 
-    # Laenderflaechen in Pixelkoordinaten der Hauptkarte
-    countries_px = []
-    for c in basemap["countries"]:
-        polys = [[[round(v, 1) for v in to_px(x, y)] for x, y in ring] for ring in c["polygons"]]
-        lx, ly = to_px(c["label_x"], c["label_y"])
-        countries_px.append({"name": c["name"], "label_x": round(lx, 1),
-                             "label_y": round(ly, 1), "polygons": polys})
+    def basiskarte(transform, mit_namen=True):
+        """Laenderflaechen und Grenzlinien in die Pixel einer Ansicht umrechnen."""
+        laender = []
+        for c in basemap["countries"]:
+            polys = [[[round(v, 1) for v in transform(x, y)] for x, y in ring]
+                     for ring in c["polygons"]]
+            eintrag = {"name": c["name"], "polygons": polys}
+            if mit_namen:
+                lx, ly = transform(c["label_x"], c["label_y"])
+                eintrag["label_x"] = round(lx, 1)
+                eintrag["label_y"] = round(ly, 1)
+            laender.append(eintrag)
 
-    # Rechteck auf der Hauptkarte, das den vergroesserten Bereich markiert
+        def wege(schluessel):
+            return [[[round(v, 1) for v in transform(x, y)] for x, y in weg]
+                    for weg in basemap.get(schluessel, [])]
+
+        return {
+            "countries": laender,
+            "staatsgrenzen": wege("staatsgrenzen"),
+            "bundeslaender": wege("bundeslaender"),
+        }
+
+    # Rechteck auf der Hauptkarte, das den Bereich der zweiten Seite markiert
     src_x0, src_y0 = to_px(ix0, iy1)
     src_x1, src_y1 = to_px(ix1, iy0)
 
     output = {
         "meta": {
-            "svg_width": SVG_WIDTH,
-            "svg_height": round(svg_height, 1),
-            "scale_px_per_m": scale,
             "projected_crs": PROJECTED_CRS,
             "line_width_px": LINE_WIDTH_PX,
             "slot_spacing_px": SLOT_SPACING_PX,
             "simplify_tolerance_px": SIMPLIFY_TOLERANCE_PX,
-            "slot_transition_px": SLOT_TRANSITION_PX,
+            "slot_transition_km": SLOT_TRANSITION_KM,
             "chaikin_iterations": CHAIKIN_ITERATIONS,
-            "inset": {
-                "title": INSET_TITLE,
-                "x": INSET_X, "y": INSET_Y,
-                "width": INSET_WIDTH_PX, "height": round(inset_height, 1),
-                "magnification": round(inset_scale / scale, 2),
-                "source_rect": [round(src_x0, 1), round(src_y0, 1),
-                                round(src_x1 - src_x0, 1), round(src_y1 - src_y0, 1)],
+            # Jede Ansicht ist eine eigene Kartenseite mit eigener Zeichenflaeche
+            "seiten": {
+                "main": {
+                    "titel": "Gesamtnetz",
+                    "breite": SVG_WIDTH, "hoehe": round(svg_height, 1),
+                    "scale_px_per_m": scale,
+                    "quellrechteck": [round(src_x0, 1), round(src_y0, 1),
+                                      round(src_x1 - src_x0, 1), round(src_y1 - src_y0, 1)],
+                    "verweis": INSET_TITLE,
+                },
+                "inset": {
+                    "titel": INSET_TITLE,
+                    "breite": INSET_CANVAS_WIDTH, "hoehe": round(inset_height, 1),
+                    "scale_px_per_m": inset_scale,
+                    "vergroesserung": round(inset_scale / scale, 1),
+                },
             },
         },
-        "countries": countries_px,
+        "basiskarte": {
+            "main": basiskarte(to_px),
+            "inset": basiskarte(to_px_inset, mit_namen=False),
+        },
         "views": views,
     }
 

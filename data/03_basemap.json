@@ -14,7 +14,7 @@
   },
   "countries": [
     {
-      "name": "Switzerland",
+      "name": "Schweiz",
       "label_x": 3867447.5796628622,
       "label_y": 2242652.6940783,
       "polygons": [
@@ -695,7 +695,7 @@
       ]
     },
     {
-      "name": "Poland",
+      "name": "Polen",
       "label_x": 4507352.125622521,
       "label_y": 2854543.5871498454,
       "polygons": [
@@ -1436,7 +1436,7 @@
       ]
     },
     {
-      "name": "Netherlands",
+      "name": "Niederlande",
       "label_x": 3713444.604751535,
       "label_y": 2839801.304931378,
       "polygons": [
@@ -2253,7 +2253,7 @@
       ]
     },
     {
-      "name": "Luxembourg",
+      "name": "Luxemburg",
       "label_x": 3726854.94277327,
       "label_y": 2567358.8796138163,
       "polygons": [
@@ -2426,7 +2426,7 @@
       ]
     },
     {
-      "name": "Germany",
+      "name": "Deutschland",
       "label_x": 4024710.193949907,
       "label_y": 2698209.573933644,
       "polygons": [
@@ -4565,7 +4565,7 @@
       ]
     },
     {
-      "name": "France",
+      "name": "Frankreich",
       "label_x": 3676316.117782607,
       "label_y": 2338240.9954571696,
       "polygons": [
@@ -5186,7 +5186,7 @@
       ]
     },
     {
-      "name": "Denmark",
+      "name": "Dänemark",
       "label_x": 4002058.940445564,
       "label_y": 3219345.8469179794,
       "polygons": [
@@ -6327,7 +6327,7 @@
       ]
     },
     {
-      "name": "Czechia",
+      "name": "Tschechien",
       "label_x": 4370020.042339124,
       "label_y": 2570325.980540746,
       "polygons": [
@@ -7240,7 +7240,7 @@
       ]
     },
     {
-      "name": "Belgium",
+      "name": "Belgien",
       "label_x": 3660915.021394217,
       "label_y": 2655971.7493110187,
       "polygons": [
@@ -7705,7 +7705,7 @@
       ]
     },
     {
-      "name": "Austria",
+      "name": "Österreich",
       "label_x": 4298748.865710227,
       "label_y": 2334718.546283382,
       "polygons": [

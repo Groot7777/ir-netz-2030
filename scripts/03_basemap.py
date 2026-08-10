@@ -60,8 +60,9 @@ def main():
           f"lat [{padded_box.bounds[1]:.2f}, {padded_box.bounds[3]:.2f}]")
 
     gdf = gpd.read_file(NE_SHP_PATH)
-    gdf = gdf[gdf["ADMIN"].isin(TARGET_COUNTRIES)][["ADMIN", "geometry"]].copy()
-    print(f"Laender aus Natural Earth geladen: {sorted(gdf['ADMIN'].tolist())}")
+    # NAME_DE liefert die deutschen Laendernamen direkt mit, die Karte ist deutsch beschriftet
+    gdf = gdf[gdf["ADMIN"].isin(TARGET_COUNTRIES)][["ADMIN", "NAME_DE", "geometry"]].copy()
+    print(f"Laender aus Natural Earth geladen: {sorted(gdf['NAME_DE'].tolist())}")
 
     # Auf die gepufferte Bounding Box clippen (noch in EPSG:4326)
     gdf["geometry"] = gdf.geometry.intersection(padded_box)
@@ -91,7 +92,7 @@ def main():
         else:
             polygons = [list(p.exterior.coords) for p in geom.geoms]
         countries.append({
-            "name": row["ADMIN"],
+            "name": row["NAME_DE"],
             "label_x": centroid.x,
             "label_y": centroid.y,
             "polygons": polygons,  # Liste von Ringen, je Ring Liste von (x,y) in Metern (EPSG:3034)

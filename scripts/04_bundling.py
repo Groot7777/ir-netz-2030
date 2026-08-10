@@ -8,27 +8,31 @@ nebeneinander laufen. Kernpunkte der Umsetzung:
 1. GEMEINSAME KANTENGEOMETRIE. Fuer jede Kante wird EINE kanonische Polylinie
    gewaehlt (die detaillierteste der beteiligten Linien). Alle Linien des
    Buendels benutzen dieselbe Basisgeometrie - nur so laufen sie wirklich
-   parallel. Wuerde jede Linie ihre eigene KML-Geometrie behalten, wuerden die
-   Bahnen des Buendels sichtbar auseinanderdriften.
+   parallel.
 
-2. KANONISCHE RICHTUNG. Die Slots werden entlang einer festen Kantenrichtung
-   (stop_a -> stop_b, alphabetisch sortiert) vergeben. Befaehrt eine Linie die
-   Kante rueckwaerts, wird ihr Slot-Vorzeichen gespiegelt - dadurch liegen alle
-   Linien physisch an derselben Stelle, unabhaengig von der Fahrtrichtung.
+2. PROPAGIERTE KANTENORIENTIERUNG. Slots werden in der Orientierung einer
+   Kante vergeben. Diese Orientierung wird entlang der Korridore propagiert und
+   liegt nicht willkuerlich (etwa alphabetisch) fest: Sonst spiegelt sich das
+   gesamte Buendel an jedem Knoten, an dem die Orientierung gegen die
+   Fahrtrichtung kippt, und die Linien tauschen dort ihre Seite.
 
-3. GLOBALE SLOT-REIHENFOLGE. Alle Linien werden einmal global sortiert
-   (Liniennummer). Auf jeder Kante werden die dort verkehrenden Linien nach
-   diesem globalen Rang angeordnet. Dadurch bleibt die Reihenfolge im Buendel
-   ueber aufeinanderfolgende Kanten stabil; Slots verschieben sich nur dort,
-   wo Linien dazukommen oder abzweigen.
+3. STABILE SPUREN. Die Slots werden NICHT je Kante neu auf die Streckenmitte
+   zentriert. Sonst ruecken alle Linien seitwaerts, sobald irgendwo eine Linie
+   dazukommt oder abzweigt - obwohl sie unveraendert parallel weiterlaufen.
+   Stattdessen behaelt jede Linie ihre Spur, und eine Kante wird nur so weit
+   verschoben, dass moeglichst viele gemeinsame Linien darauf stehenbleiben.
 
-4. WEICHE SLOT-UEBERGAENGE. Wo eine Linie den Slot wechselt (Abzweig), wird
-   der Wechsel als Rampe ausgefuehrt statt als Sprung. Die Rampenlaenge richtet
-   sich nach der Laenge der angrenzenden Kanten - ein festes Glaettungsfenster
-   wuerde im dichten Netz die Slots ueber mehrere Kanten hinweg wegmitteln.
+4. SPURWECHSEL NUR AM BAHNHOF. Wo eine Linie die Spur wechselt, geschieht das
+   als kurze Rampe unmittelbar am Knoten - dort verdeckt sie der weisse
+   Haltemarker. Die Rampe wird an den echten Kantengrenzen gemessen und auf
+   RAMPEN_ANTEIL je Seite begrenzt, damit sie nie auf freie Strecke reicht.
 
 5. VEREINFACHEN VOR, GLAETTEN NACH dem Versatz (Douglas-Peucker bzw. Chaikin),
    damit das Buendel nicht ausfranst.
+
+Das Skript prueft sein eigenes Ergebnis und meldet: Seitenwechsel parallel
+laufender Linien, groesster Seitenversatz und den kleinsten Abstand zweier
+Linien auf freier Strecke.
 """
 import json
 import math
@@ -57,12 +61,16 @@ SLOT_SPACING_PX = 1.3 * LINE_WIDTH_PX  # Abstand zwischen zwei Bahnen im Buendel
 
 SIMPLIFY_TOLERANCE_PX = 1.2          # Douglas-Peucker VOR dem Versatz
 DENSIFY_MAX_SEG_PX = 5.0             # lange Segmente unterteilen, damit Rampen greifen koennen
-# Obergrenze fuer die Laenge eines Slot-Wechsels, angegeben in Kilometern
-# statt Pixeln: Die beiden Kartenseiten haben sehr verschiedene Massstaebe
-# (4,8 gegenueber 19 px/km). Ein fester Pixelwert waere auf der
-# Ruhrgebietsseite laenger als der halbe Halteabstand und liesse die Linien
-# dort dauerhaft weben statt kurz zu versetzen.
-SLOT_TRANSITION_KM = 4.0
+# Ein Spurwechsel soll kurz und am Bahnhof passieren - dort verdeckt ihn der
+# weisse Haltemarker, wie auf gedruckten Verkehrskarten. Deshalb in Pixeln
+# (Markergroesse ist in beiden Ansichten gleich); zusaetzlich begrenzt
+# ramp_slots die Rampe auf 32 % der angrenzenden Kanten, damit sie auf kurzen
+# Kanten nicht ueber die halbe Strecke laeuft.
+SLOT_TRANSITION_PX = 11.0
+# Anteil einer Kante, den ein Spurwechsel hoechstens einnehmen darf (je Seite).
+# Muss zur Pruefzone weiter unten passen, sonst reicht eine Rampe auf die
+# freie Strecke und die Linien kommen sich dort naeher als einen Spurabstand.
+RAMPEN_ANTEIL = 0.22
 CHAIKIN_ITERATIONS = 1               # Glaettung NACH dem Versatz
 MITER_LIMIT = 2.5                    # Begrenzung der Gehrung an spitzen Ecken
 
@@ -147,7 +155,7 @@ def densify(pts, max_seg_px):
     return out
 
 
-def ramp_slots(pts, slots, max_transition_px):
+def ramp_slots(pts, slots, max_transition_px, kanten_grenzen=None):
     """
     Slot-Wechsel als begrenzte Rampe ausfuehren statt als Sprung.
 
@@ -181,10 +189,23 @@ def ramp_slots(pts, slots, max_transition_px):
         boundary = 0.5 * (s[i1] + s[j0])
         len_before = s[i1] - s[i0]
         len_after = s[j1] - s[j0]
-        # Hoechstens 32 % je Seite: benachbarte Rampen koennen sich dadurch nie
-        # ueberlappen, und der Slot-Wechsel bleibt ein kurzer Versatz statt
-        # eines Webens ueber die halbe Kante.
-        w = min(max_transition_px / 2.0, len_before * 0.32, len_after * 0.32)
+        # Hoechstens RAMPEN_ANTEIL je Seite. Das begrenzt den Spurwechsel auf
+        # die unmittelbare Bahnhofsumgebung: Auf freier Strecke liegen die
+        # Linien dadurch garantiert im vollen Spurabstand nebeneinander, und
+        # benachbarte Rampen koennen sich nie ueberlappen.
+        w = min(max_transition_px / 2.0,
+                len_before * RAMPEN_ANTEIL, len_after * RAMPEN_ANTEIL)
+
+        # Zusaetzlich an den ANGRENZENDEN KANTEN messen, nicht nur am Abschnitt
+        # gleichen Slots: Der kann sich ueber mehrere Kanten erstrecken, dann
+        # reichte die Rampe trotz der Begrenzung weit auf die freie Strecke.
+        if kanten_grenzen:
+            vorher = max((g for g in kanten_grenzen if g < boundary - 1e-6),
+                         default=s[i0])
+            nachher = min((g for g in kanten_grenzen if g > boundary + 1e-6),
+                          default=s[j1])
+            w = min(w, (boundary - vorher) * RAMPEN_ANTEIL,
+                    (nachher - boundary) * RAMPEN_ANTEIL)
         if w <= 1e-6:
             continue
         for idx in range(i0, j1 + 1):
@@ -264,9 +285,6 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
     allowed_stop_ids: Beschraenkung auf einen Kartenausschnitt (None = alle)
     to_px:            Abbildung EPSG:3034-Meter -> Pixel dieser Ansicht
     """
-    # Rampenlaenge aus dem Massstab dieser Ansicht ableiten
-    transition_px = SLOT_TRANSITION_KM * 1000.0 * scale_px_per_m
-
     edge_candidates = defaultdict(list)
     line_branches = {}
     bediente_linien = defaultdict(list)   # stop_id -> Linien, die dort tatsaechlich halten
@@ -412,13 +430,64 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
     view_lines = [ln for ln in sorted(lines_raw, key=natural_sort_key) if ln["line_id"] in line_ids]
     rank_by_line = {ln["line_id"]: i for i, ln in enumerate(view_lines)}
 
-    edge_slots = {}
+    # --- Slots vergeben: die Spur bleibt entlang des Korridors stehen --------
+    # Bewusst NICHT je Kante neu auf die Streckenmitte zentriert. Sonst ruecken
+    # alle Linien eines Buendels seitwaerts, sobald irgendwo eine Linie
+    # dazukommt oder abzweigt - obwohl sie unveraendert parallel weiterlaufen.
+    # Genau das sieht als Weben aus. Stattdessen behaelt jede Linie ihre Spur;
+    # die Kante wird nur so weit verschoben, dass moeglichst viele gemeinsame
+    # Linien exakt auf ihrer bisherigen Spur bleiben.
+    edge_lines = {}
     for key in edge_geom:
-        lines_here = sorted({lid for lid, _ in edge_candidates[key]}, key=lambda lid: rank_by_line[lid])
-        n = len(lines_here)
-        edge_slots[key] = {lid: (i - (n - 1) / 2.0) for i, lid in enumerate(lines_here)}
+        edge_lines[key] = sorted({lid for lid, _ in edge_candidates[key]},
+                                 key=lambda lid: rank_by_line[lid])
+
+    edge_slots = {}
+
+    def wunsch_verschiebungen(kante):
+        """Gewuenschte Verschiebung je bereits vergebener Nachbarkante."""
+        wuensche = []
+        for nachbar, _knoten in nachbarn.get(kante, []):
+            if nachbar not in edge_slots:
+                continue
+            for lid in edge_lines[kante]:
+                if lid in edge_slots[nachbar]:
+                    wuensche.append(edge_slots[nachbar][lid] - edge_lines[kante].index(lid))
+        return wuensche
+
+    offen = set(edge_geom)
+    while offen:
+        # mit der am staerksten befahrenen Kante beginnen
+        start = max(offen, key=lambda k: (len(edge_lines[k]), -sum(k[0] < k[1] for _ in "x")))
+        n = len(edge_lines[start])
+        edge_slots[start] = {lid: i - (n - 1) / 2.0 for i, lid in enumerate(edge_lines[start])}
+        offen.discard(start)
+
+        # Rand der bereits vergebenen Flaeche schrittweise erweitern; immer die
+        # Kante zuerst, die die meisten Linien mit dem Vergebenen teilt
+        while True:
+            rand = [k for k in offen
+                    if any(nb in edge_slots for nb, _ in nachbarn.get(k, []))]
+            if not rand:
+                break
+            naechste = max(rand, key=lambda k: (len(wunsch_verschiebungen(k)), len(edge_lines[k])))
+            wuensche = wunsch_verschiebungen(naechste)
+            if wuensche:
+                # haeufigster Wunsch: so bleiben die meisten Linien exakt auf ihrer Spur
+                haeufigkeit = defaultdict(int)
+                for w in wuensche:
+                    haeufigkeit[w] += 1
+                verschiebung = max(sorted(haeufigkeit), key=lambda w: (haeufigkeit[w], -abs(w)))
+            else:
+                n2 = len(edge_lines[naechste])
+                verschiebung = -(n2 - 1) / 2.0
+            edge_slots[naechste] = {lid: i + verschiebung
+                                    for i, lid in enumerate(edge_lines[naechste])}
+            offen.discard(naechste)
 
     max_bundle = max((len(v) for v in edge_slots.values()), default=0)
+    max_versatz = max((abs(s) for slots in edge_slots.values() for s in slots.values()),
+                      default=0.0)
 
     # --- Pruefgroesse: tauschen parallel laufende Linien ihre Seite? ---------
     # Zwei Linien, die zwei aufeinanderfolgende Kanten gemeinsam befahren,
@@ -453,11 +522,12 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
     output_lines = []
     slot_change_count = 0
     debug_points = []
+    versatz_pro_kante = defaultdict(dict)
 
     for ln in view_lines:
         branch_paths = []
         for seq in line_branches.get(ln["line_id"], []):
-            pts, slots, vertex_edge = [], [], []
+            pts, slots, vertex_edge, vertex_pos = [], [], [], []
             for id_a, id_b in zip(seq, seq[1:]):
                 key = tuple(sorted((id_a, id_b)))
                 if key not in edge_geom:
@@ -474,22 +544,41 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                 pts.extend(seg_pts[start:])
                 slots.extend([slot_signed] * len(seg_pts[start:]))
                 vertex_edge.extend([key] * len(seg_pts[start:]))
+                # Index innerhalb der Kante, immer in kanonischer Zaehlrichtung,
+                # damit sich die Stuetzpunkte verschiedener Linien vergleichen lassen
+                n_seg = len(seg_pts)
+                lauf = range(start, n_seg) if forward else range(n_seg - 1 - start, -1, -1)
+                vertex_pos.extend(lauf)
 
             if len(pts) < 2:
                 continue
 
-            clean_pts, clean_slots, clean_edges = [], [], []
-            for p, s, e in zip(pts, slots, vertex_edge):
+            clean_pts, clean_slots, clean_edges, clean_pos = [], [], [], []
+            for p, s, e, ip in zip(pts, slots, vertex_edge, vertex_pos):
                 if not clean_pts or abs(p[0] - clean_pts[-1][0]) > 1e-6 or abs(p[1] - clean_pts[-1][1]) > 1e-6:
                     clean_pts.append(p)
                     clean_slots.append(s)
                     clean_edges.append(e)
+                    clean_pos.append(ip)
             if len(clean_pts) < 2:
                 continue
 
-            smoothed = ramp_slots(clean_pts, clean_slots, transition_px)
+            # Arclaengen der Kantenwechsel, damit die Rampe an den echten
+            # Kantengrenzen gemessen wird
+            bogen = cumulative_arclen(clean_pts)
+            kanten_grenzen = [bogen[0]]
+            for i in range(1, len(clean_edges)):
+                if clean_edges[i] != clean_edges[i - 1]:
+                    kanten_grenzen.append(bogen[i])
+            kanten_grenzen.append(bogen[-1])
+
+            smoothed = ramp_slots(clean_pts, clean_slots, SLOT_TRANSITION_PX, kanten_grenzen)
             offsets = [s * SLOT_SPACING_PX for s in smoothed]
             offset_pts = offset_polyline(clean_pts, offsets)
+
+            # fuer die Abstandspruefung: versetzte Lage je Kante und Stuetzpunkt
+            for e, ip, op in zip(clean_edges, clean_pos, offset_pts):
+                versatz_pro_kante[(e, ip)][ln["line_id"]] = op
 
             if debug_edge:
                 idx = [i for i, e in enumerate(clean_edges) if e == debug_edge]
@@ -513,6 +602,43 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
             "rank": rank_by_line[ln["line_id"]],
             "branches": branch_paths,
         })
+
+    # --- Pruefung: liegen alle Linien einer Kante wirklich nebeneinander? ----
+    # Fuer jede Kante mit mindestens zwei Linien wird an jedem Stuetzpunkt der
+    # Abstand aller Linienpaare gemessen. Weniger als eine Linienbreite heisst
+    # sichtbare Ueberlappung.
+    # Ein Spurwechsel unmittelbar am Bahnhof ist zulaessig und ueblich - dort
+    # verdeckt ihn der weisse Haltemarker. Geprueft wird deshalb die freie
+    # Strecke: der mittlere Teil jeder Kante, ohne die Bereiche an den Enden.
+    rand_anteil = RAMPEN_ANTEIL
+    ueberlappungen = []
+    min_abstand_gesamt = float("inf")
+    for (kante, ip), lagen in versatz_pro_kante.items():
+        if len(lagen) < 2:
+            continue
+        n_pts = len(edge_geom[kante])
+        if n_pts > 2:
+            rel = ip / (n_pts - 1)
+            am_bahnhof = rel < rand_anteil or rel > 1.0 - rand_anteil
+        else:
+            am_bahnhof = True          # zwei Stuetzpunkte sind reine Endpunkte
+        ids = sorted(lagen, key=lambda lid: rank_by_line[lid])
+        for i in range(len(ids)):
+            for j in range(i + 1, len(ids)):
+                pa, pb = lagen[ids[i]], lagen[ids[j]]
+                d = math.hypot(pa[0] - pb[0], pa[1] - pb[1])
+                if am_bahnhof:
+                    continue
+                min_abstand_gesamt = min(min_abstand_gesamt, d)
+                if d < LINE_WIDTH_PX:
+                    ueberlappungen.append((kante, ids[i], ids[j], d))
+
+    # je Kantenpaar nur den schlimmsten Fall melden
+    schlimmste = {}
+    for kante, a, b, d in ueberlappungen:
+        schluessel = (kante, a, b)
+        if schluessel not in schlimmste or d < schlimmste[schluessel]:
+            schlimmste[schluessel] = d
 
     if debug_points:
         print(f"  [debug/{name}] paarweise Abstaende:")
@@ -586,6 +712,20 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
         print(f"    Seitenwechsel parallel laufender Linien: {seitenwechsel} von {geprueft} "
               f"geprueften Uebergaengen"
               + (f", {orient_konflikte} Orientierungskonflikte" if orient_konflikte else ""))
+        print(f"    Groesster Seitenversatz: {max_versatz:.1f} Spuren "
+              f"({max_versatz * SLOT_SPACING_PX:.0f} px von der Streckenmitte)")
+        if schlimmste:
+            print(f"    UEBERLAPPUNG auf {len(schlimmste)} Linienpaaren "
+                  f"(Abstand < {LINE_WIDTH_PX:.0f} px Linienbreite):")
+            code = {l["line_id"]: l["code"] for l in view_lines}
+            for (kante, a, b), d in sorted(schlimmste.items(), key=lambda kv: kv[1])[:10]:
+                n_a = stop_by_id[kante[0]]["name"]
+                n_b = stop_by_id[kante[1]]["name"]
+                print(f"      {code.get(a, a):6s} / {code.get(b, b):6s} "
+                      f"{n_a[:24]:24s} - {n_b[:24]:24s} {d:5.2f} px")
+        else:
+            print(f"    Keine Ueberlappung: kleinster Abstand zweier Linien "
+                  f"{min_abstand_gesamt:.2f} px bei {LINE_WIDTH_PX:.0f} px Linienbreite")
         if deviations:
             print(f"    {len(deviations)} Kanten mit abweichender Streckenfuehrung "
                   f"(> {EDGE_DEVIATION_WARN_PX:.0f} px) - dort gilt die detaillierteste Variante")
@@ -717,7 +857,7 @@ def main(debug_edge=None):
             "line_width_px": LINE_WIDTH_PX,
             "slot_spacing_px": SLOT_SPACING_PX,
             "simplify_tolerance_px": SIMPLIFY_TOLERANCE_PX,
-            "slot_transition_km": SLOT_TRANSITION_KM,
+            "slot_transition_px": SLOT_TRANSITION_PX,
             "chaikin_iterations": CHAIKIN_ITERATIONS,
             # Jede Ansicht ist eine eigene Kartenseite mit eigener Zeichenflaeche
             "seiten": {

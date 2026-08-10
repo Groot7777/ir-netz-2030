@@ -116,14 +116,20 @@ nach Kartenposition unterschiedlich breit wirken würden.
    sie weiter parallel verlaufen. Stark befahrene Kanten werden zuerst
    orientiert, damit die in Ringen unvermeidbaren Konflikte auf Nebenkanten
    landen. Messbar: **124 → 0** Seitenwechsel bei 192 geprüften Übergängen.
-3. *Globale Slot-Reihenfolge.* Alle Linien werden einmal global sortiert; auf
-   jeder Kante ordnen sich die dort verkehrenden Linien nach diesem Rang.
-   Slots verschieben sich nur dort, wo Linien dazukommen oder abzweigen.
-4. *Längenadaptive Slot-Rampen.* Ein Slot-Wechsel wird als Rampe ausgeführt,
-   deren Länge sich nach den angrenzenden Kanten richtet (höchstens 45 % je
-   Seite). Ein festes Glättungsfenster hatte die Slots im dichten Ruhrgebiet
-   über mehrere Kanten hinweg auf null verschmiert — das Bündel lief dann
-   deckungsgleich statt parallel.
+3. *Stabile Spuren.* Alle Linien werden einmal global sortiert; auf jeder
+   Kante ordnen sich die dort verkehrenden Linien nach diesem Rang. Die Slots
+   werden dabei **nicht** je Kante neu auf die Streckenmitte zentriert — sonst
+   rücken alle Linien eines Bündels seitwärts, sobald irgendwo eine Linie
+   dazukommt oder abzweigt, obwohl sie unverändert parallel weiterlaufen.
+   Stattdessen behält jede Linie ihre Spur, und eine Kante wird nur so weit
+   verschoben, dass möglichst viele gemeinsame Linien darauf stehenbleiben.
+   Das senkte die Zahl der Spurwechsel von 109 auf 14.
+4. *Spurwechsel nur am Bahnhof.* Wo eine Linie die Spur wechselt, geschieht
+   das als kurze Rampe unmittelbar am Knoten — dort verdeckt sie der weiße
+   Haltemarker, wie auf gedruckten Verkehrskarten. Die Rampe wird an den
+   echten Kantengrenzen gemessen (nicht an den Abschnitten gleichen Slots, die
+   sich über mehrere Kanten erstrecken können) und auf 22 % je Seite begrenzt,
+   damit sie nie auf freie Strecke reicht.
 5. *Durchfahrt-Knoten.* Ein Express hält nicht an allen Halten seiner Strecke
    und hätte dadurch völlig andere Kanten als der Regionalzug daneben — RE35X
    teilte mit RE35 nur 5 von 24 Kanten, beide lagen deshalb übereinander statt
@@ -132,11 +138,14 @@ nach Kartenposition unterschiedlich breit wirken würden.
    wird dort kein Bahnhof. Danach liegen RE35 und RE35X exakt 5,20 px
    auseinander.
 
-Vereinfachen (Douglas-Peucker) vor, Glätten (Chaikin) nach dem Versatz. Die
-Länge eines Slot-Wechsels ist in Kilometern angegeben, nicht in Pixeln: Die
-beiden Kartenseiten haben sehr verschiedene Maßstäbe (4,8 gegenüber 19 px/km),
-und ein fester Pixelwert ließe die Linien auf der Ruhrgebietsseite dauerhaft
-weben statt kurz zu versetzen.
+Vereinfachen (Douglas-Peucker) vor, Glätten (Chaikin) nach dem Versatz.
+
+**Das Skript prüft sein eigenes Ergebnis** und meldet für jede Ansicht:
+Seitenwechsel parallel laufender Linien, größten Seitenversatz und den
+kleinsten Abstand zweier Linien auf freier Strecke. Aktueller Stand: null
+Seitenwechsel bei 192 bzw. 86 geprüften Übergängen, und der kleinste Abstand
+zweier Linien beträgt auf beiden Seiten exakt 5,20 px — den vollen
+Spurabstand bei 4 px Linienbreite, also nirgends eine Überlappung.
 
 **Phase 5a — Textbreiten messen.** Rendert alle Haltenamen einmal echt im
 Browser und misst sie mit `getComputedTextLength`. Eine Schätzung aus

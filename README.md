@@ -3,7 +3,9 @@
 Erzeugt aus einer KML-Datei mit 31 Zuglinien eine interaktive Netzkarte im Stil
 des NRW-Regionalverkehrsplans: farbige Linienbündel, Halte als weiße Kapseln
 quer über das Bündel, Knotenbahnhöfe als Stadion mit fettem Namen,
-Liniennummern in abgerundeten Badges, Ländergrenzen als hellgraue Flächen.
+Liniennummern in abgerundeten Badges, Länderflächen mit Staats- und
+Bundeslandgrenzen im Hintergrund. Zwei Kartenseiten, Hell- und Dunkelmodus,
+bedienbar auf Rechner und Handy.
 
 **Endprodukt:** `netzkarte.html` — eine einzelne, in sich geschlossene Datei
 ohne externe Abhängigkeiten zur Laufzeit.
@@ -99,7 +101,7 @@ Kachel-Webmap — der einzige Vorteil von Mercator entfällt. Über die
 gestreckt als der Südrand, wodurch die in Pixeln berechneten Bündelabstände je
 nach Kartenposition unterschiedlich breit wirken würden.
 
-**Phase 4 — Bündelung.** Der kritische Teil. Vier Kernpunkte:
+**Phase 4 — Bündelung.** Der kritische Teil. Fünf Kernpunkte:
 
 1. *Gemeinsame Kantengeometrie.* Pro Kante wird **eine** kanonische Polylinie
    gewählt (die detaillierteste der beteiligten Linien). Behielte jede Linie
@@ -117,7 +119,6 @@ nach Kartenposition unterschiedlich breit wirken würden.
    Seite). Ein festes Glättungsfenster hatte die Slots im dichten Ruhrgebiet
    über mehrere Kanten hinweg auf null verschmiert — das Bündel lief dann
    deckungsgleich statt parallel.
-
 5. *Durchfahrt-Knoten.* Ein Express hält nicht an allen Halten seiner Strecke
    und hätte dadurch völlig andere Kanten als der Regionalzug daneben — RE35X
    teilte mit RE35 nur 5 von 24 Kanten, beide lagen deshalb übereinander statt

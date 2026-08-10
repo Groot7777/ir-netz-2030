@@ -20,7 +20,11 @@ lassen sich umschalten.
 import argparse
 import colorsys
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from kml_common import anzeigenamen
 
 BUNDLED_PATH = Path("data/04_bundled.json")
 LAYOUT_PATH = Path("data/05_layout.json")
@@ -802,12 +806,17 @@ def build_html(data, layout):
 
     # Halte mit ihren Koordinaten je Seite; die Linienliste ist die Vereinigung
     # beider Seiten, damit z.B. Essen Hbf auch seine S-Bahnen zeigt.
+    # Kartenbeschriftung mitgeben, damit die Suche auch auf das anspringt, was
+    # auf der Karte steht ("E-Steele", "D-Bilk") und nicht nur auf den vollen Namen
+    alle_namen = {s["name"] for v in data["views"].values() for s in v["stops"]}
+    anzeige = anzeigenamen(sorted(alle_namen))
+
     halte_js = {}
     for name, view in data["views"].items():
         for s in view["stops"]:
             eintrag = halte_js.setdefault(s["stop_id"], {
                 "name": s["name"],
-                "kurz": s["name"].replace("Hauptbahnhof", "Hbf"),
+                "kurz": anzeige.get(s["name"], s["name"]),
                 "linien": [],
                 "orte": {},
             })

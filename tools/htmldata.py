@@ -50,3 +50,21 @@ def replace_lines_dict(html_text, data):
     new_json = dump_lines_json(data)
     new_line = m.group(1) + new_json + m.group(3)
     return html_text[: m.start()] + new_line + html_text[m.end() :]
+
+
+def extract_const(html_text, var_name):
+    """Liest schreibgeschützt eine beliebige andere 'const NAME = {...};'
+    (oder '[...]') Zeile aus der App, z.B. STATION_COORDS/STATION_REGIONS.
+    Anders als die LINES-Funktionen oben nur zum Lesen gedacht — diese
+    Konstanten werden vom Solver nicht zurückgeschrieben."""
+    pattern = re.compile(
+        r"^const " + re.escape(var_name) + r" = (\{.*\}|\[.*\]);\s*$",
+        re.MULTILINE,
+    )
+    matches = list(pattern.finditer(html_text))
+    if len(matches) != 1:
+        raise ValueError(
+            f"Erwartet genau 1 Treffer für 'const {var_name} = ...;', "
+            f"gefunden: {len(matches)}"
+        )
+    return json.loads(matches[0].group(1))

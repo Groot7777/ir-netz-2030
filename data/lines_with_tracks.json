@@ -1,0 +1,9683 @@
+{
+  "RB37_A": {
+    "cars": 4,
+    "coupled": false,
+    "dest": "Bochum Hbf",
+    "extraTrips": [
+      {
+        "dep": "04:09",
+        "from": "Wuppertal Hbf"
+      },
+      {
+        "dep": "03:46",
+        "from": "Venlo"
+      },
+      {
+        "dep": "23:31",
+        "to": "Wuppertal Hbf"
+      },
+      {
+        "dep": "00:31",
+        "to": "Mönchengladbach Hbf"
+      }
+    ],
+    "name": "RB37",
+    "rolling": "Internationale RE-Garnitur, Fahrzeugtyp gemäß Streckenkonzept (KML-Kurzfassung)",
+    "stops": [
+      {
+        "name": "Arnhem Centraal",
+        "off": 0,
+        "track": "4b"
+      },
+      {
+        "dep": 5,
+        "name": "Arnhem Zuid",
+        "off": 4,
+        "track": "1"
+      },
+      {
+        "dep": 10,
+        "name": "Elst",
+        "off": 9,
+        "track": "3"
+      },
+      {
+        "dep": 16,
+        "name": "Nijmegen Lent",
+        "off": 15,
+        "track": "2"
+      },
+      {
+        "dep": 22,
+        "name": "Nijmegen",
+        "off": 20,
+        "track": "3b"
+      },
+      {
+        "dep": 26,
+        "name": "Nijmegen Heyendaal",
+        "off": 25,
+        "track": "2"
+      },
+      {
+        "dep": 32,
+        "name": "Mook-Molenhoek",
+        "off": 31,
+        "track": "1"
+      },
+      {
+        "dep": 38,
+        "name": "Cuijk",
+        "off": 37,
+        "track": "1"
+      },
+      {
+        "dep": 46,
+        "name": "Boxmeer",
+        "off": 45,
+        "track": "2"
+      },
+      {
+        "dep": 52,
+        "name": "Vierlingsbeek",
+        "off": 51,
+        "track": "2"
+      },
+      {
+        "dep": 59,
+        "name": "Venray",
+        "off": 58,
+        "track": "OSM88811169"
+      },
+      {
+        "dep": 68,
+        "name": "Blerick",
+        "off": 67,
+        "track": "3"
+      },
+      {
+        "dep": 75,
+        "name": "Venlo",
+        "off": 72,
+        "track": "4a"
+      },
+      {
+        "dep": 81,
+        "name": "Kaldenkirchen",
+        "off": 80,
+        "track": "1"
+      },
+      {
+        "dep": 85,
+        "name": "Breyell",
+        "off": 84,
+        "track": "1"
+      },
+      {
+        "dep": 88,
+        "name": "Boisheim",
+        "off": 87,
+        "track": "1"
+      },
+      {
+        "dep": 92,
+        "name": "Dülken",
+        "off": 91,
+        "track": "1"
+      },
+      {
+        "dep": 98,
+        "name": "Viersen",
+        "off": 97,
+        "track": "5"
+      },
+      {
+        "dep": 108,
+        "name": "Mönchengladbach Hbf",
+        "off": 106,
+        "track": "3"
+      },
+      {
+        "dep": 120,
+        "name": "Neuss Hbf",
+        "off": 119,
+        "track": "1"
+      },
+      {
+        "dep": 129,
+        "name": "Düsseldorf-Bilk",
+        "off": 128,
+        "track": "1"
+      },
+      {
+        "dep": 135,
+        "name": "Düsseldorf Hbf",
+        "off": 132,
+        "track": "5"
+      },
+      {
+        "dep": 151,
+        "name": "Wuppertal-Vohwinkel",
+        "off": 150,
+        "track": "11"
+      },
+      {
+        "dep": 158,
+        "name": "Wuppertal Hbf",
+        "off": 156,
+        "track": "4"
+      },
+      {
+        "dep": 163,
+        "name": "Wuppertal-Oberbarmen",
+        "off": 162,
+        "track": "5"
+      },
+      {
+        "dep": 168,
+        "name": "Schwelm",
+        "off": 167,
+        "track": "1"
+      },
+      {
+        "dep": 179,
+        "name": "Hagen Hbf",
+        "off": 177,
+        "track": "9"
+      },
+      {
+        "dep": 186,
+        "name": "Wetter (Ruhr)",
+        "off": 185,
+        "track": "2"
+      },
+      {
+        "dep": 193,
+        "name": "Witten Hbf",
+        "off": 192,
+        "track": "2"
+      },
+      {
+        "dep": 201,
+        "name": "Bochum-Langendreer",
+        "off": 200,
+        "track": "1"
+      },
+      {
+        "name": "Bochum Hbf",
+        "off": 205,
+        "track": "8"
+      }
+    ],
+    "takt": {
+      "end": "22:31",
+      "interval": 30,
+      "note": "Regeltakt Halbstundentakt (xx:17/xx:47) versetzt zu RE13/RE14",
+      "start": "03:31"
+    }
+  },
+  "RB37_B": {
+    "cars": 4,
+    "coupled": false,
+    "dest": "Arnhem Centraal",
+    "extraTrips": [
+      {
+        "dep": "03:43",
+        "from": "Mönchengladbach Hbf"
+      },
+      {
+        "dep": "03:18",
+        "from": "Venlo"
+      },
+      {
+        "dep": "23:04",
+        "to": "Nijmegen"
+      },
+      {
+        "dep": "00:04",
+        "to": "Mönchengladbach Hbf"
+      }
+    ],
+    "name": "RB37",
+    "rolling": "4-teiliger Stadler KISS Doppelstock, ~105m",
+    "stops": [
+      {
+        "name": "Bochum Hbf",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 5,
+        "name": "Bochum-Langendreer",
+        "off": 4,
+        "track": "2"
+      },
+      {
+        "dep": 12,
+        "name": "Witten Hbf",
+        "off": 11,
+        "track": "1"
+      },
+      {
+        "dep": 19,
+        "name": "Wetter (Ruhr)",
+        "off": 18,
+        "track": "1"
+      },
+      {
+        "dep": 28,
+        "name": "Hagen Hbf",
+        "off": 26,
+        "track": "11"
+      },
+      {
+        "dep": 38,
+        "name": "Schwelm",
+        "off": 37,
+        "track": "2"
+      },
+      {
+        "dep": 43,
+        "name": "Wuppertal-Oberbarmen",
+        "off": 42,
+        "track": "6"
+      },
+      {
+        "dep": 50,
+        "name": "Wuppertal Hbf",
+        "off": 48,
+        "track": "5"
+      },
+      {
+        "dep": 56,
+        "name": "Wuppertal-Vohwinkel",
+        "off": 55,
+        "track": "12"
+      },
+      {
+        "dep": 72,
+        "name": "Düsseldorf Hbf",
+        "off": 69,
+        "track": "4"
+      },
+      {
+        "dep": 76,
+        "name": "Düsseldorf-Bilk",
+        "off": 75,
+        "track": "2"
+      },
+      {
+        "dep": 85,
+        "name": "Neuss Hbf",
+        "off": 84,
+        "track": "2"
+      },
+      {
+        "dep": 99,
+        "name": "Mönchengladbach Hbf",
+        "off": 96,
+        "track": "7"
+      },
+      {
+        "dep": 109,
+        "name": "Viersen",
+        "off": 108,
+        "track": "6"
+      },
+      {
+        "dep": 115,
+        "name": "Dülken",
+        "off": 114,
+        "track": "2"
+      },
+      {
+        "dep": 119,
+        "name": "Boisheim",
+        "off": 118,
+        "track": "1"
+      },
+      {
+        "dep": 122,
+        "name": "Breyell",
+        "off": 121,
+        "track": "2"
+      },
+      {
+        "dep": 126,
+        "name": "Kaldenkirchen",
+        "off": 125,
+        "track": "2"
+      },
+      {
+        "dep": 134,
+        "name": "Venlo",
+        "off": 130,
+        "track": "4b"
+      },
+      {
+        "dep": 138,
+        "name": "Blerick",
+        "off": 137,
+        "track": "4"
+      },
+      {
+        "dep": 147,
+        "name": "Venray",
+        "off": 146,
+        "track": "3"
+      },
+      {
+        "dep": 154,
+        "name": "Vierlingsbeek",
+        "off": 153,
+        "track": "1"
+      },
+      {
+        "dep": 160,
+        "name": "Boxmeer",
+        "off": 159,
+        "track": "3"
+      },
+      {
+        "dep": 168,
+        "name": "Cuijk",
+        "off": 167,
+        "track": "3"
+      },
+      {
+        "dep": 174,
+        "name": "Mook-Molenhoek",
+        "off": 173,
+        "track": "2"
+      },
+      {
+        "dep": 180,
+        "name": "Nijmegen Heyendaal",
+        "off": 179,
+        "track": "1"
+      },
+      {
+        "dep": 185,
+        "name": "Nijmegen",
+        "off": 183,
+        "track": "35"
+      },
+      {
+        "dep": 190,
+        "name": "Nijmegen Lent",
+        "off": 189,
+        "track": "1"
+      },
+      {
+        "dep": 196,
+        "name": "Elst",
+        "off": 195,
+        "track": "2"
+      },
+      {
+        "dep": 201,
+        "name": "Arnhem Zuid",
+        "off": 200,
+        "track": "2"
+      },
+      {
+        "name": "Arnhem Centraal",
+        "off": 205,
+        "track": "6b"
+      }
+    ],
+    "takt": {
+      "end": "22:04",
+      "interval": 30,
+      "note": "Regeltakt Halbstundentakt (xx:17/xx:47) versetzt zu RE13/RE14",
+      "start": "03:04"
+    }
+  },
+  "RE11_A": {
+    "cars": 7,
+    "coupled": false,
+    "dest": "Leipzig Hbf",
+    "extraTrips": [
+      {
+        "dep": "04:29",
+        "from": "Lutherstadt Wittenberg Hbf"
+      },
+      {
+        "dep": "22:52",
+        "to": "Lutherstadt Wittenberg Hbf"
+      }
+    ],
+    "name": "RE11",
+    "rolling": "7-teiliger Stadler KISS Doppelstock, 200 km/h",
+    "stops": [
+      {
+        "name": "Frankfurt (Oder)",
+        "off": 0,
+        "track": "6"
+      },
+      {
+        "dep": 17,
+        "name": "Fürstenwalde (Spree)",
+        "off": 15,
+        "track": "1"
+      },
+      {
+        "dep": 30,
+        "name": "Erkner",
+        "off": 29,
+        "track": "1"
+      },
+      {
+        "dep": 44,
+        "name": "Berlin-Ostkreuz",
+        "off": 42,
+        "track": "1"
+      },
+      {
+        "dep": 50,
+        "name": "Berlin Ostbahnhof",
+        "off": 48,
+        "track": "8"
+      },
+      {
+        "dep": 55,
+        "name": "Berlin Alexanderplatz",
+        "off": 54,
+        "track": "3"
+      },
+      {
+        "dep": 60,
+        "name": "Berlin Friedrichstraße",
+        "off": 59,
+        "track": "5"
+      },
+      {
+        "dep": 66,
+        "name": "Berlin Hbf",
+        "off": 63,
+        "track": "5"
+      },
+      {
+        "dep": 73,
+        "name": "Berlin Zoologischer Garten",
+        "off": 71,
+        "track": "1"
+      },
+      {
+        "dep": 78,
+        "name": "Berlin-Charlottenburg",
+        "off": 77,
+        "track": "3"
+      },
+      {
+        "dep": 89,
+        "name": "Berlin-Wannsee",
+        "off": 88,
+        "track": "6"
+      },
+      {
+        "dep": 99,
+        "name": "Potsdam Hbf",
+        "off": 96,
+        "track": "3"
+      },
+      {
+        "dep": 117,
+        "name": "Ludwigsfelde",
+        "off": 116,
+        "track": "3"
+      },
+      {
+        "dep": 137,
+        "name": "Jüterbog",
+        "off": 135,
+        "track": "4"
+      },
+      {
+        "dep": 157,
+        "name": "Lutherstadt Wittenberg Hbf",
+        "off": 155,
+        "track": "4"
+      },
+      {
+        "name": "Leipzig Hbf",
+        "off": 192,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "21:52",
+      "interval": 60,
+      "note": "Halbstundentakt mit RE1 auf Frankfurt(Oder)–Potsdam",
+      "start": "02:52"
+    }
+  },
+  "RE11_B": {
+    "cars": 7,
+    "coupled": false,
+    "dest": "Frankfurt (Oder)",
+    "extraTrips": [
+      {
+        "dep": "04:32",
+        "from": "Potsdam Hbf"
+      },
+      {
+        "dep": "23:56",
+        "to": "Berlin-Ostkreuz"
+      }
+    ],
+    "name": "RE11",
+    "rolling": "7-teiliger Stadler KISS Doppelstock, 200 km/h",
+    "stops": [
+      {
+        "name": "Leipzig Hbf",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 37,
+        "name": "Lutherstadt Wittenberg Hbf",
+        "off": 35,
+        "track": "3"
+      },
+      {
+        "dep": 57,
+        "name": "Jüterbog",
+        "off": 55,
+        "track": "2"
+      },
+      {
+        "dep": 76,
+        "name": "Ludwigsfelde",
+        "off": 75,
+        "track": "3"
+      },
+      {
+        "dep": 96,
+        "name": "Potsdam Hbf",
+        "off": 93,
+        "track": "4"
+      },
+      {
+        "dep": 104,
+        "name": "Berlin-Wannsee",
+        "off": 103,
+        "track": "8"
+      },
+      {
+        "dep": 115,
+        "name": "Berlin-Charlottenburg",
+        "off": 114,
+        "track": "1"
+      },
+      {
+        "dep": 121,
+        "name": "Berlin Zoologischer Garten",
+        "off": 119,
+        "track": "2"
+      },
+      {
+        "dep": 129,
+        "name": "Berlin Hbf",
+        "off": 126,
+        "track": "6"
+      },
+      {
+        "dep": 133,
+        "name": "Berlin Friedrichstraße",
+        "off": 132,
+        "track": "6"
+      },
+      {
+        "dep": 138,
+        "name": "Berlin Alexanderplatz",
+        "off": 137,
+        "track": "4"
+      },
+      {
+        "dep": 144,
+        "name": "Berlin Ostbahnhof",
+        "off": 142,
+        "track": "9"
+      },
+      {
+        "dep": 150,
+        "name": "Berlin-Ostkreuz",
+        "off": 148,
+        "track": "2"
+      },
+      {
+        "dep": 163,
+        "name": "Erkner",
+        "off": 162,
+        "track": "2"
+      },
+      {
+        "dep": 177,
+        "name": "Fürstenwalde (Spree)",
+        "off": 175,
+        "track": "2"
+      },
+      {
+        "name": "Frankfurt (Oder)",
+        "off": 192,
+        "track": "5"
+      }
+    ],
+    "takt": {
+      "end": "22:56",
+      "interval": 60,
+      "note": "Halbstundentakt mit RE1 auf Potsdam–Frankfurt(Oder)",
+      "start": "03:56"
+    }
+  },
+  "RE14_A": {
+    "cars": 5,
+    "coupled": false,
+    "dest": "Saarbrücken Hbf",
+    "name": "RE14",
+    "rolling": "5-teiliger Stadler KISS MS (Mehrsystem), ~130m",
+    "stops": [
+      {
+        "name": "Eindhoven",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 38,
+        "name": "Venlo",
+        "off": 33,
+        "track": "1b"
+      },
+      {
+        "dep": 54,
+        "name": "Viersen",
+        "off": 52,
+        "track": "2"
+      },
+      {
+        "dep": 65,
+        "name": "Mönchengladbach Hbf",
+        "off": 62,
+        "track": "9"
+      },
+      {
+        "dep": 81,
+        "name": "Grevenbroich",
+        "off": 80,
+        "track": "1"
+      },
+      {
+        "dep": 92,
+        "name": "Rommerskirchen",
+        "off": 91,
+        "track": "1"
+      },
+      {
+        "dep": 108,
+        "name": "Köln-Ehrenfeld",
+        "off": 106,
+        "track": "1"
+      },
+      {
+        "dep": 117,
+        "name": "Köln Süd",
+        "off": 114,
+        "track": "4"
+      },
+      {
+        "dep": 144,
+        "name": "Euskirchen",
+        "off": 142,
+        "track": "46"
+      },
+      {
+        "dep": 160,
+        "name": "Kall",
+        "off": 159,
+        "track": "1"
+      },
+      {
+        "dep": 208,
+        "name": "Gerolstein",
+        "off": 205,
+        "track": "2"
+      },
+      {
+        "dep": 234,
+        "name": "Erdorf",
+        "off": 233,
+        "track": "1"
+      },
+      {
+        "dep": 269,
+        "name": "Trier Hbf",
+        "off": 264,
+        "track": "10 Nord"
+      },
+      {
+        "dep": 300,
+        "name": "Merzig (Saar)",
+        "off": 299,
+        "track": "1"
+      },
+      {
+        "dep": 314,
+        "name": "Saarlouis Hbf",
+        "off": 312,
+        "track": "1"
+      },
+      {
+        "dep": 323,
+        "name": "Völklingen",
+        "off": 322,
+        "track": "2"
+      },
+      {
+        "name": "Saarbrücken Hbf",
+        "off": 331,
+        "track": "8"
+      }
+    ],
+    "takt": {
+      "end": "18:58",
+      "interval": 60,
+      "note": "Spätfahrten 19:58–22:58 sowie 23:58, Frühfahrten ab Trier/Gerolstein/Köln Süd/Mönchengladbach",
+      "start": "04:58"
+    }
+  },
+  "RE14_B": {
+    "cars": 5,
+    "coupled": false,
+    "dest": "Eindhoven",
+    "name": "RE14",
+    "rolling": "5-teiliger Stadler KISS MS (Mehrsystem), ~130m",
+    "stops": [
+      {
+        "name": "Saarbrücken Hbf",
+        "off": 0,
+        "track": "14"
+      },
+      {
+        "dep": 9,
+        "name": "Völklingen",
+        "off": 8,
+        "track": "3"
+      },
+      {
+        "dep": 19,
+        "name": "Saarlouis Hbf",
+        "off": 17,
+        "track": "2"
+      },
+      {
+        "dep": 32,
+        "name": "Merzig (Saar)",
+        "off": 31,
+        "track": "2"
+      },
+      {
+        "dep": 67,
+        "name": "Trier Hbf",
+        "off": 62,
+        "track": "13"
+      },
+      {
+        "dep": 98,
+        "name": "Erdorf",
+        "off": 97,
+        "track": "2;3"
+      },
+      {
+        "dep": 126,
+        "name": "Gerolstein",
+        "off": 123,
+        "track": "3"
+      },
+      {
+        "dep": 172,
+        "name": "Kall",
+        "off": 171,
+        "track": "2"
+      },
+      {
+        "dep": 189,
+        "name": "Euskirchen",
+        "off": 187,
+        "track": "2"
+      },
+      {
+        "dep": 219,
+        "name": "Köln Süd",
+        "off": 216,
+        "track": "3"
+      },
+      {
+        "dep": 225,
+        "name": "Köln-Ehrenfeld",
+        "off": 223,
+        "track": "2"
+      },
+      {
+        "dep": 240,
+        "name": "Rommerskirchen",
+        "off": 239,
+        "track": "3"
+      },
+      {
+        "dep": 251,
+        "name": "Grevenbroich",
+        "off": 250,
+        "track": "2"
+      },
+      {
+        "dep": 269,
+        "name": "Mönchengladbach Hbf",
+        "off": 266,
+        "track": "8"
+      },
+      {
+        "dep": 279,
+        "name": "Viersen",
+        "off": 277,
+        "track": "3"
+      },
+      {
+        "dep": 298,
+        "name": "Venlo",
+        "off": 293,
+        "track": "6"
+      },
+      {
+        "name": "Eindhoven",
+        "off": 331,
+        "track": "4"
+      }
+    ],
+    "takt": {
+      "end": "19:34",
+      "interval": 60,
+      "note": "Spätfahrten 20:34–23:34 sowie 00:34, Frühfahrten ab Köln Süd/Euskirchen/Gerolstein/Trier",
+      "start": "04:34"
+    }
+  },
+  "RE17DW_A": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Wilhelmshaven",
+    "name": "RE17",
+    "rolling": "6-teiliger Stadler KISS, 200 km/h, ~156m",
+    "stops": [
+      {
+        "name": "Dortmund Hbf",
+        "off": 0,
+        "track": "5"
+      },
+      {
+        "dep": 9,
+        "name": "Kamen",
+        "off": 8,
+        "track": "4"
+      },
+      {
+        "dep": 22,
+        "name": "Hamm (Westf) Hbf",
+        "off": 19,
+        "track": "2"
+      },
+      {
+        "dep": 39,
+        "name": "Rheda-Wiedenbrück",
+        "off": 38,
+        "track": "1"
+      },
+      {
+        "dep": 46,
+        "name": "Gütersloh Hbf",
+        "off": 45,
+        "track": "1"
+      },
+      {
+        "dep": 58,
+        "name": "Bielefeld Hbf",
+        "off": 55,
+        "track": "8"
+      },
+      {
+        "dep": 69,
+        "name": "Herford",
+        "off": 67,
+        "track": "1"
+      },
+      {
+        "dep": 80,
+        "name": "Bünde (Westf)",
+        "off": 79,
+        "track": "2"
+      },
+      {
+        "dep": 107,
+        "name": "Osnabrück Hbf",
+        "off": 101,
+        "track": "1"
+      },
+      {
+        "dep": 120,
+        "name": "Bramsche",
+        "off": 119,
+        "track": "1"
+      },
+      {
+        "dep": 140,
+        "name": "Essen (Oldb)",
+        "off": 139,
+        "track": "1"
+      },
+      {
+        "dep": 152,
+        "name": "Cloppenburg",
+        "off": 151,
+        "track": "1"
+      },
+      {
+        "dep": 180,
+        "name": "Oldenburg (Oldb) Hbf",
+        "off": 176,
+        "track": "1"
+      },
+      {
+        "dep": 202,
+        "name": "Varel (Oldb)",
+        "off": 201,
+        "track": "1"
+      },
+      {
+        "dep": 213,
+        "name": "Sande",
+        "off": 212,
+        "track": "1"
+      },
+      {
+        "name": "Wilhelmshaven",
+        "off": 219,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "20:30",
+      "interval": 60,
+      "note": "Frühfahrt ab 03:30, Spätfahrten 21:30–23:30 sowie 00:30; Anschluss RE9 in Osnabrück",
+      "start": "04:30"
+    }
+  },
+  "RE17DW_B": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Dortmund Hbf",
+    "name": "RE17",
+    "rolling": "6-teiliger Stadler KISS, 200 km/h, ~156m",
+    "stops": [
+      {
+        "name": "Wilhelmshaven",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 7,
+        "name": "Sande",
+        "off": 6,
+        "track": "2"
+      },
+      {
+        "dep": 18,
+        "name": "Varel (Oldb)",
+        "off": 17,
+        "track": "2"
+      },
+      {
+        "dep": 43,
+        "name": "Oldenburg (Oldb) Hbf",
+        "off": 39,
+        "track": "5"
+      },
+      {
+        "dep": 68,
+        "name": "Cloppenburg",
+        "off": 67,
+        "track": "2"
+      },
+      {
+        "dep": 80,
+        "name": "Essen (Oldb)",
+        "off": 79,
+        "track": "2"
+      },
+      {
+        "dep": 100,
+        "name": "Bramsche",
+        "off": 99,
+        "track": "2"
+      },
+      {
+        "dep": 118,
+        "name": "Osnabrück Hbf",
+        "off": 112,
+        "track": "11"
+      },
+      {
+        "dep": 140,
+        "name": "Bünde (Westf)",
+        "off": 139,
+        "track": "3"
+      },
+      {
+        "dep": 152,
+        "name": "Herford",
+        "off": 150,
+        "track": "2"
+      },
+      {
+        "dep": 164,
+        "name": "Bielefeld Hbf",
+        "off": 161,
+        "track": "5"
+      },
+      {
+        "dep": 174,
+        "name": "Gütersloh Hbf",
+        "off": 173,
+        "track": "2"
+      },
+      {
+        "dep": 181,
+        "name": "Rheda-Wiedenbrück",
+        "off": 180,
+        "track": "7"
+      },
+      {
+        "dep": 200,
+        "name": "Hamm (Westf) Hbf",
+        "off": 197,
+        "track": "10"
+      },
+      {
+        "dep": 210,
+        "name": "Kamen",
+        "off": 209,
+        "track": "1"
+      },
+      {
+        "name": "Dortmund Hbf",
+        "off": 219,
+        "track": "2"
+      }
+    ],
+    "takt": {
+      "end": "20:20",
+      "interval": 60,
+      "note": "Frühfahrt ab 03:20, Spätfahrten 21:20–23:20 sowie 00:20; Anschluss RE9 in Osnabrück",
+      "start": "04:20"
+    }
+  },
+  "RE17OR_N": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Østerport",
+    "name": "RE17",
+    "rolling": "8-teiliger KISS B (BEMU), 200 km/h",
+    "stops": [
+      {
+        "name": "Rostock Hbf",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 25,
+        "name": "Bützow",
+        "off": 23,
+        "track": "1"
+      },
+      {
+        "dep": 50,
+        "name": "Bad Kleinen",
+        "off": 47,
+        "track": "1"
+      },
+      {
+        "dep": 98,
+        "name": "Lübeck Hbf",
+        "off": 90,
+        "track": "1"
+      },
+      {
+        "dep": 106,
+        "name": "Bad Schwartau",
+        "off": 104,
+        "track": "1"
+      },
+      {
+        "dep": 115,
+        "name": "Timmendorfer Strand/Ratekau",
+        "off": 113,
+        "track": "2"
+      },
+      {
+        "dep": 123,
+        "name": "Scharbeutz",
+        "off": 121,
+        "track": "2"
+      },
+      {
+        "dep": 139,
+        "name": "Oldenburg (Holst)",
+        "off": 137,
+        "track": "2"
+      },
+      {
+        "dep": 149,
+        "name": "Großenbrode/Heiligenhafen",
+        "off": 147,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 168,
+        "name": "Rødby",
+        "off": 166,
+        "track": "1"
+      },
+      {
+        "dep": 187,
+        "name": "Nykøbing F.",
+        "off": 185,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 204,
+        "name": "Vordingborg",
+        "off": 202,
+        "track": "1"
+      },
+      {
+        "dep": 219,
+        "name": "Næstved",
+        "off": 217,
+        "track": "1"
+      },
+      {
+        "dep": 237,
+        "name": "Ringsted",
+        "off": 235,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 251,
+        "name": "Køge Nord",
+        "off": 249,
+        "track": "7"
+      },
+      {
+        "dep": 270,
+        "name": "København H",
+        "off": 266,
+        "track": "3;4"
+      },
+      {
+        "dep": 275,
+        "name": "Nørreport",
+        "off": 273,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "name": "Østerport",
+        "off": 278,
+        "track": "12"
+      }
+    ],
+    "takt": {
+      "end": "23:00",
+      "interval": 60,
+      "start": "04:00"
+    }
+  },
+  "RE17OR_S": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Rostock Hbf",
+    "name": "RE17",
+    "rolling": "8-teiliger KISS B (BEMU), 200 km/h",
+    "stops": [
+      {
+        "name": "Østerport",
+        "off": 0,
+        "track": "1;2"
+      },
+      {
+        "dep": 5,
+        "name": "Nørreport",
+        "off": 3,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 12,
+        "name": "København H",
+        "off": 8,
+        "track": "3;4"
+      },
+      {
+        "dep": 29,
+        "name": "Køge Nord",
+        "off": 27,
+        "track": "4"
+      },
+      {
+        "dep": 43,
+        "name": "Ringsted",
+        "off": 41,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 61,
+        "name": "Næstved",
+        "off": 59,
+        "track": "1"
+      },
+      {
+        "dep": 76,
+        "name": "Vordingborg",
+        "off": 74,
+        "track": "1"
+      },
+      {
+        "dep": 93,
+        "name": "Nykøbing F.",
+        "off": 91,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 112,
+        "name": "Rødby",
+        "off": 110,
+        "track": "4"
+      },
+      {
+        "dep": 131,
+        "name": "Großenbrode/Heiligenhafen",
+        "off": 129,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 141,
+        "name": "Oldenburg (Holst)",
+        "off": 139,
+        "track": "2"
+      },
+      {
+        "dep": 157,
+        "name": "Scharbeutz",
+        "off": 155,
+        "track": "1"
+      },
+      {
+        "dep": 165,
+        "name": "Timmendorfer Strand/Ratekau",
+        "off": 163,
+        "track": "1"
+      },
+      {
+        "dep": 174,
+        "name": "Bad Schwartau",
+        "off": 172,
+        "track": "2"
+      },
+      {
+        "dep": 188,
+        "name": "Lübeck Hbf",
+        "off": 180,
+        "track": "2"
+      },
+      {
+        "dep": 231,
+        "name": "Bad Kleinen",
+        "off": 228,
+        "track": "4"
+      },
+      {
+        "dep": 255,
+        "name": "Bützow",
+        "off": 253,
+        "track": "2"
+      },
+      {
+        "name": "Rostock Hbf",
+        "off": 279,
+        "track": "2"
+      }
+    ],
+    "takt": {
+      "end": "23:10",
+      "interval": 60,
+      "start": "04:10"
+    }
+  },
+  "RE24_N": {
+    "cars": 5,
+    "coupled": false,
+    "dest": "Kassel Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:46",
+        "from": "Erfurt Hbf"
+      },
+      {
+        "dep": "04:06",
+        "from": "Leipzig Hbf (tief)"
+      },
+      {
+        "dep": "00:00",
+        "to": "Erfurt Hbf"
+      }
+    ],
+    "name": "RE24",
+    "rolling": "5-teiliger KISS, 200 km/h",
+    "stops": [
+      {
+        "name": "Zwickau Hbf",
+        "off": 0,
+        "track": "8"
+      },
+      {
+        "dep": 16,
+        "name": "Gößnitz",
+        "off": 15,
+        "track": "2b"
+      },
+      {
+        "dep": 26,
+        "name": "Altenburg",
+        "off": 25,
+        "track": "4"
+      },
+      {
+        "dep": 40,
+        "name": "Neukieritzsch",
+        "off": 39,
+        "track": "1"
+      },
+      {
+        "dep": 46,
+        "name": "Böhlen (b Leipzig)",
+        "off": 45,
+        "track": "1"
+      },
+      {
+        "dep": 54,
+        "name": "Leipzig-Connewitz",
+        "off": 53,
+        "track": "1"
+      },
+      {
+        "dep": 58,
+        "name": "Leipzig MDR",
+        "off": 57,
+        "track": "1"
+      },
+      {
+        "dep": 66,
+        "name": "Leipzig Hbf (tief)",
+        "off": 62,
+        "track": "8a"
+      },
+      {
+        "dep": 106,
+        "name": "Erfurt Hbf",
+        "off": 103,
+        "track": "6"
+      },
+      {
+        "dep": 119,
+        "name": "Gotha",
+        "off": 118,
+        "track": "1"
+      },
+      {
+        "dep": 135,
+        "name": "Eisenach",
+        "off": 133,
+        "track": "1"
+      },
+      {
+        "dep": 158,
+        "name": "Bebra",
+        "off": 156,
+        "track": "5"
+      },
+      {
+        "dep": 177,
+        "name": "Melsungen",
+        "off": 176,
+        "track": "1"
+      },
+      {
+        "dep": 198,
+        "name": "Kassel-Wilhelmshöhe",
+        "off": 194,
+        "track": "7"
+      },
+      {
+        "name": "Kassel Hbf",
+        "off": 205,
+        "track": "13"
+      }
+    ],
+    "takt": {
+      "end": "23:00",
+      "interval": 60,
+      "start": "04:00"
+    }
+  },
+  "RE24_S": {
+    "cars": 5,
+    "coupled": false,
+    "dest": "Zwickau Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:56",
+        "from": "Leipzig Hbf (tief)"
+      },
+      {
+        "dep": "04:15",
+        "from": "Erfurt Hbf"
+      },
+      {
+        "dep": "23:36",
+        "to": "Leipzig Hbf (tief)"
+      }
+    ],
+    "name": "RE24",
+    "rolling": "5-teiliger KISS, 200 km/h",
+    "stops": [
+      {
+        "name": "Kassel Hbf",
+        "off": 0,
+        "track": "7"
+      },
+      {
+        "dep": 11,
+        "name": "Kassel-Wilhelmshöhe",
+        "off": 7,
+        "track": "1"
+      },
+      {
+        "dep": 26,
+        "name": "Melsungen",
+        "off": 25,
+        "track": "2"
+      },
+      {
+        "dep": 46,
+        "name": "Bebra",
+        "off": 44,
+        "track": "3"
+      },
+      {
+        "dep": 69,
+        "name": "Eisenach",
+        "off": 67,
+        "track": "2"
+      },
+      {
+        "dep": 84,
+        "name": "Gotha",
+        "off": 83,
+        "track": "2"
+      },
+      {
+        "dep": 99,
+        "name": "Erfurt Hbf",
+        "off": 96,
+        "track": "7"
+      },
+      {
+        "dep": 140,
+        "name": "Leipzig Hbf (tief)",
+        "off": 136,
+        "track": "1"
+      },
+      {
+        "dep": 145,
+        "name": "Leipzig MDR",
+        "off": 144,
+        "track": "2"
+      },
+      {
+        "dep": 149,
+        "name": "Leipzig-Connewitz",
+        "off": 148,
+        "track": "2"
+      },
+      {
+        "dep": 157,
+        "name": "Böhlen (b Leipzig)",
+        "off": 156,
+        "track": "2"
+      },
+      {
+        "dep": 163,
+        "name": "Neukieritzsch",
+        "off": 162,
+        "track": "2"
+      },
+      {
+        "dep": 177,
+        "name": "Altenburg",
+        "off": 176,
+        "track": "1"
+      },
+      {
+        "dep": 187,
+        "name": "Gößnitz",
+        "off": 186,
+        "track": "Gl 02"
+      },
+      {
+        "name": "Zwickau Hbf",
+        "off": 204,
+        "track": "6"
+      }
+    ],
+    "takt": {
+      "end": "22:36",
+      "interval": 60,
+      "start": "03:36"
+    }
+  },
+  "RE25_A": {
+    "cars": 5,
+    "coupled": false,
+    "dest": "Magdeburg Hbf",
+    "name": "RE25",
+    "rolling": "5-teiliger Stadler KISS B (Akkutriebzug), 200 km/h, ~130m",
+    "stops": [
+      {
+        "name": "Cuxhaven",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 47,
+        "name": "Stade",
+        "off": 45,
+        "track": "3"
+      },
+      {
+        "dep": 62,
+        "name": "Buxtehude",
+        "off": 60,
+        "track": "3"
+      },
+      {
+        "dep": 81,
+        "name": "Hamburg-Harburg",
+        "off": 76,
+        "track": "3"
+      },
+      {
+        "dep": 95,
+        "name": "Buchholz (Nordheide)",
+        "off": 93,
+        "track": "11"
+      },
+      {
+        "dep": 129,
+        "name": "Soltau (Han) Hbf",
+        "off": 125,
+        "track": "1"
+      },
+      {
+        "dep": 148,
+        "name": "Walsrode",
+        "off": 145,
+        "track": "2"
+      },
+      {
+        "dep": 176,
+        "name": "Langenhagen Mitte",
+        "off": 174,
+        "track": "4"
+      },
+      {
+        "dep": 187,
+        "name": "Hannover Hbf",
+        "off": 183,
+        "track": "7"
+      },
+      {
+        "dep": 196,
+        "name": "Hannover Messe/Laatzen",
+        "off": 194,
+        "track": "10"
+      },
+      {
+        "dep": 211,
+        "name": "Hildesheim Hbf",
+        "off": 209,
+        "track": "1"
+      },
+      {
+        "dep": 236,
+        "name": "Braunschweig Hbf",
+        "off": 233,
+        "track": "1"
+      },
+      {
+        "dep": 255,
+        "name": "Wolfsburg Hbf",
+        "off": 252,
+        "track": "9"
+      },
+      {
+        "dep": 283,
+        "name": "Haldensleben",
+        "off": 281,
+        "track": "1"
+      },
+      {
+        "name": "Magdeburg Hbf",
+        "off": 305,
+        "track": "9"
+      }
+    ],
+    "takt": {
+      "end": "19:40",
+      "interval": 60,
+      "note": "Spätfahrten 20:40–23:40 sowie 00:40; 30-Min-Versatz zu RE5, Akkubetrieb Cuxhaven–Stade und Buchholz–Hannover mit OL-Inseln Soltau/Walsrode",
+      "start": "04:40"
+    }
+  },
+  "RE25_B": {
+    "cars": 5,
+    "coupled": false,
+    "dest": "Cuxhaven",
+    "name": "RE25",
+    "rolling": "5-teiliger Stadler KISS B (Akkutriebzug), 200 km/h, ~130m",
+    "stops": [
+      {
+        "name": "Magdeburg Hbf",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 26,
+        "name": "Haldensleben",
+        "off": 24,
+        "track": "2"
+      },
+      {
+        "dep": 55,
+        "name": "Wolfsburg Hbf",
+        "off": 52,
+        "track": "8"
+      },
+      {
+        "dep": 74,
+        "name": "Braunschweig Hbf",
+        "off": 71,
+        "track": "2"
+      },
+      {
+        "dep": 98,
+        "name": "Hildesheim Hbf",
+        "off": 96,
+        "track": "4"
+      },
+      {
+        "dep": 113,
+        "name": "Hannover Messe/Laatzen",
+        "off": 111,
+        "track": "11"
+      },
+      {
+        "dep": 123,
+        "name": "Hannover Hbf",
+        "off": 120,
+        "track": "3"
+      },
+      {
+        "dep": 133,
+        "name": "Langenhagen Mitte",
+        "off": 131,
+        "track": "2"
+      },
+      {
+        "dep": 162,
+        "name": "Walsrode",
+        "off": 159,
+        "track": "3"
+      },
+      {
+        "dep": 182,
+        "name": "Soltau (Han) Hbf",
+        "off": 178,
+        "track": "2"
+      },
+      {
+        "dep": 214,
+        "name": "Buchholz (Nordheide)",
+        "off": 212,
+        "track": "6"
+      },
+      {
+        "dep": 231,
+        "name": "Hamburg-Harburg",
+        "off": 226,
+        "track": "4"
+      },
+      {
+        "dep": 247,
+        "name": "Buxtehude",
+        "off": 245,
+        "track": "3"
+      },
+      {
+        "dep": 262,
+        "name": "Stade",
+        "off": 260,
+        "track": "1"
+      },
+      {
+        "name": "Cuxhaven",
+        "off": 308,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "20:14",
+      "interval": 60,
+      "note": "Spätfahrten 21:14–23:14 sowie 00:14; Akkubetrieb mit OL-Inseln Soltau/Walsrode",
+      "start": "05:14"
+    }
+  },
+  "RE28_N": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Leipzig Hbf (oben)",
+    "extraTrips": [
+      {
+        "dep": "03:30",
+        "from": "Erfurt Hbf"
+      },
+      {
+        "dep": "04:30",
+        "from": "Erfurt Hbf"
+      },
+      {
+        "dep": "00:46",
+        "to": "Erfurt Hbf"
+      }
+    ],
+    "name": "RE28",
+    "rolling": "8-teiliger KISS, 200 km/h",
+    "stops": [
+      {
+        "name": "Würzburg Hbf",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 27,
+        "name": "Schweinfurt Hbf",
+        "off": 25,
+        "track": "3"
+      },
+      {
+        "dep": 55,
+        "name": "Bamberg",
+        "off": 52,
+        "track": "8"
+      },
+      {
+        "dep": 104,
+        "name": "Erfurt Hbf",
+        "off": 100,
+        "track": "5"
+      },
+      {
+        "dep": 139,
+        "name": "Halle (Saale) Hbf",
+        "off": 136,
+        "track": "12"
+      },
+      {
+        "dep": 151,
+        "name": "Flughafen Leipzig/Halle",
+        "off": 149,
+        "track": "1"
+      },
+      {
+        "name": "Leipzig Hbf (oben)",
+        "off": 162,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "23:46",
+      "interval": 60,
+      "start": "03:46"
+    }
+  },
+  "RE28_S": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Würzburg Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:34",
+        "from": "Erfurt Hbf"
+      },
+      {
+        "dep": "00:32",
+        "to": "Erfurt Hbf"
+      }
+    ],
+    "name": "RE28",
+    "rolling": "8-teiliger KISS, 200 km/h",
+    "stops": [
+      {
+        "name": "Leipzig Hbf (oben)",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 13,
+        "name": "Flughafen Leipzig/Halle",
+        "off": 11,
+        "track": "2"
+      },
+      {
+        "dep": 26,
+        "name": "Halle (Saale) Hbf",
+        "off": 23,
+        "track": "13"
+      },
+      {
+        "dep": 62,
+        "name": "Erfurt Hbf",
+        "off": 58,
+        "track": "4"
+      },
+      {
+        "dep": 110,
+        "name": "Bamberg",
+        "off": 107,
+        "track": "2"
+      },
+      {
+        "dep": 137,
+        "name": "Schweinfurt Hbf",
+        "off": 135,
+        "track": "5"
+      },
+      {
+        "name": "Würzburg Hbf",
+        "off": 162,
+        "track": "8"
+      }
+    ],
+    "takt": {
+      "end": "23:32",
+      "interval": 60,
+      "start": "03:32"
+    }
+  },
+  "RE2_A": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Osnabrück Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:09",
+        "from": "Münster (Westf) Hbf"
+      },
+      {
+        "dep": "22:47",
+        "to": "Münster (Westf) Hbf"
+      }
+    ],
+    "name": "RE2",
+    "rolling": "Regional-Express-Zubringergarnitur, 160–200 km/h",
+    "stops": [
+      {
+        "name": "Düsseldorf Hbf",
+        "off": 0,
+        "track": "11"
+      },
+      {
+        "dep": 15,
+        "name": "Duisburg Hbf",
+        "off": 13,
+        "track": "3"
+      },
+      {
+        "dep": 28,
+        "name": "Essen Hbf",
+        "off": 26,
+        "track": "11"
+      },
+      {
+        "dep": 39,
+        "name": "Gelsenkirchen Hbf",
+        "off": 37,
+        "track": "4"
+      },
+      {
+        "dep": 50,
+        "name": "Recklinghausen Hbf",
+        "off": 48,
+        "track": "1"
+      },
+      {
+        "dep": 82,
+        "name": "Münster (Westf) Hbf",
+        "off": 78,
+        "track": "3"
+      },
+      {
+        "name": "Osnabrück Hbf",
+        "off": 117,
+        "track": "12"
+      }
+    ],
+    "takt": {
+      "end": "21:47",
+      "interval": 60,
+      "note": "Halbstundentakt mit RE9 auf Osnabrück–Münster–Recklinghausen",
+      "start": "03:47"
+    }
+  },
+  "RE2_B": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Düsseldorf Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:53",
+        "from": "Münster (Westf) Hbf"
+      },
+      {
+        "dep": "23:15",
+        "to": "Münster (Westf) Hbf"
+      }
+    ],
+    "name": "RE2",
+    "rolling": "Regional-Express-Zubringergarnitur, 160–200 km/h",
+    "stops": [
+      {
+        "name": "Osnabrück Hbf",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 38,
+        "name": "Münster (Westf) Hbf",
+        "off": 34,
+        "track": "9"
+      },
+      {
+        "dep": 71,
+        "name": "Recklinghausen Hbf",
+        "off": 69,
+        "track": "2"
+      },
+      {
+        "dep": 81,
+        "name": "Gelsenkirchen Hbf",
+        "off": 80,
+        "track": "5"
+      },
+      {
+        "dep": 90,
+        "name": "Essen Hbf",
+        "off": 88,
+        "track": "12"
+      },
+      {
+        "dep": 105,
+        "name": "Duisburg Hbf",
+        "off": 103,
+        "track": "4"
+      },
+      {
+        "name": "Düsseldorf Hbf",
+        "off": 118,
+        "track": "12"
+      }
+    ],
+    "takt": {
+      "end": "22:15",
+      "interval": 60,
+      "note": "Halbstundentakt mit RE9 auf Osnabrück–Münster–Recklinghausen",
+      "start": "04:15"
+    }
+  },
+  "RE30_DL": {
+    "cars": 4,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": "Schwerte (Ruhr)",
+      "coupledTo": null,
+      "note": "Fährt solo als Einzeltraktion von Düsseldorf Hbf bis Schwerte (Ruhr). Dort Kupplung mit RE30 aus Winterberg (Westf) zur Doppeltraktion, gemeinsame Weiterfahrt bis Leeuwarden.",
+      "ownCars": 4,
+      "partner": "RE30_WL",
+      "partnerCars": 4,
+      "role": "join"
+    },
+    "dest": "Leeuwarden",
+    "name": "RE30",
+    "rolling": "KISS B Einzeltraktion→Doppeltraktion (Kuppeln Schwerte)",
+    "stops": [
+      {
+        "name": "Düsseldorf Hbf",
+        "off": 0,
+        "track": "19"
+      },
+      {
+        "dep": 16,
+        "name": "Wuppertal-Vohwinkel",
+        "off": 15,
+        "track": "5"
+      },
+      {
+        "dep": 25,
+        "name": "Wuppertal Hbf",
+        "off": 22,
+        "track": "1"
+      },
+      {
+        "dep": 32,
+        "name": "Wuppertal-Oberbarmen",
+        "off": 30,
+        "track": "1"
+      },
+      {
+        "dep": 38,
+        "name": "Schwelm",
+        "off": 37,
+        "track": "3"
+      },
+      {
+        "dep": 51,
+        "name": "Hagen Hbf",
+        "off": 48,
+        "track": "12"
+      },
+      {
+        "dep": 70,
+        "name": "Schwerte (Ruhr)",
+        "off": 61,
+        "track": "3"
+      },
+      {
+        "dep": 78,
+        "name": "Holzwickede",
+        "off": 77,
+        "track": "2"
+      },
+      {
+        "dep": 86,
+        "name": "Unna",
+        "off": 84,
+        "track": "1"
+      },
+      {
+        "dep": 101,
+        "name": "Hamm (Westf) Hbf",
+        "off": 98,
+        "track": "12"
+      },
+      {
+        "dep": 114,
+        "name": "Drensteinfurt",
+        "off": 113,
+        "track": "2"
+      },
+      {
+        "dep": 129,
+        "name": "Münster (Westf) Hbf",
+        "off": 126,
+        "track": "4"
+      },
+      {
+        "dep": 158,
+        "name": "Rheine",
+        "off": 156,
+        "track": "8"
+      },
+      {
+        "dep": 177,
+        "name": "Bad Bentheim",
+        "off": 172,
+        "track": "1"
+      },
+      {
+        "dep": 200,
+        "name": "Hengelo",
+        "off": 198,
+        "track": "2a"
+      },
+      {
+        "dep": 213,
+        "name": "Almelo",
+        "off": 211,
+        "track": "3"
+      },
+      {
+        "dep": 253,
+        "name": "Zwolle",
+        "off": 245,
+        "track": "1b"
+      },
+      {
+        "dep": 270,
+        "name": "Meppel",
+        "off": 268,
+        "track": "2"
+      },
+      {
+        "name": "Leeuwarden",
+        "off": 302,
+        "track": "2"
+      }
+    ],
+    "takt": {
+      "end": "20:09",
+      "interval": 60,
+      "start": "04:09"
+    }
+  },
+  "RE30_LD": {
+    "cars": 4,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": null,
+      "coupledTo": "Schwerte (Ruhr)",
+      "note": "Ab Leeuwarden in Doppeltraktion mit RE30 → Winterberg (Westf) (Zugteil A). Trennung in Schwerte (Ruhr): Zugteil B (dieser Zug) fährt als Einzeltraktion unter Oberleitung weiter ins Rheinland nach Düsseldorf Hbf.",
+      "ownCars": 4,
+      "partner": "RE30_LW",
+      "partnerCars": 4,
+      "role": "split"
+    },
+    "dest": "Düsseldorf Hbf",
+    "name": "RE30",
+    "rolling": "KISS B Doppeltraktion→Einzeltraktion (Flügelung Schwerte)",
+    "stops": [
+      {
+        "name": "Leeuwarden",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 34,
+        "name": "Meppel",
+        "off": 32,
+        "track": "3"
+      },
+      {
+        "dep": 57,
+        "name": "Zwolle",
+        "off": 49,
+        "track": "1a"
+      },
+      {
+        "dep": 91,
+        "name": "Almelo",
+        "off": 89,
+        "track": "3"
+      },
+      {
+        "dep": 104,
+        "name": "Hengelo",
+        "off": 102,
+        "track": "2a"
+      },
+      {
+        "dep": 130,
+        "name": "Bad Bentheim",
+        "off": 125,
+        "track": "2"
+      },
+      {
+        "dep": 146,
+        "name": "Rheine",
+        "off": 144,
+        "track": "2"
+      },
+      {
+        "dep": 176,
+        "name": "Münster (Westf) Hbf",
+        "off": 173,
+        "track": "14"
+      },
+      {
+        "dep": 189,
+        "name": "Drensteinfurt",
+        "off": 188,
+        "track": "2"
+      },
+      {
+        "dep": 204,
+        "name": "Hamm (Westf) Hbf",
+        "off": 201,
+        "track": "13"
+      },
+      {
+        "dep": 218,
+        "name": "Unna",
+        "off": 216,
+        "track": "2"
+      },
+      {
+        "dep": 225,
+        "name": "Holzwickede",
+        "off": 224,
+        "track": "2"
+      },
+      {
+        "dep": 241,
+        "name": "Schwerte (Ruhr)",
+        "off": 233,
+        "track": "4"
+      },
+      {
+        "dep": 254,
+        "name": "Hagen Hbf",
+        "off": 251,
+        "track": "7"
+      },
+      {
+        "dep": 265,
+        "name": "Schwelm",
+        "off": 264,
+        "track": "4"
+      },
+      {
+        "dep": 272,
+        "name": "Wuppertal-Oberbarmen",
+        "off": 270,
+        "track": "2"
+      },
+      {
+        "dep": 280,
+        "name": "Wuppertal Hbf",
+        "off": 277,
+        "track": "4"
+      },
+      {
+        "dep": 287,
+        "name": "Wuppertal-Vohwinkel",
+        "off": 286,
+        "track": "6"
+      },
+      {
+        "name": "Düsseldorf Hbf",
+        "off": 302,
+        "track": "20"
+      }
+    ],
+    "takt": {
+      "end": "19:46",
+      "interval": 60,
+      "start": "03:46"
+    }
+  },
+  "RE30_LW": {
+    "cars": 4,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": null,
+      "coupledTo": "Schwerte (Ruhr)",
+      "note": "Ab Leeuwarden in Doppeltraktion mit RE30 → Düsseldorf Hbf (Zugteil B). Trennung in Schwerte (Ruhr): Zugteil A (dieser Zug) fährt als Einzeltraktion im Akkubetrieb weiter ins Sauerland nach Winterberg (Westf).",
+      "ownCars": 4,
+      "partner": "RE30_LD",
+      "partnerCars": 4,
+      "role": "split"
+    },
+    "dest": "Winterberg (Westf)",
+    "name": "RE30",
+    "rolling": "KISS B Doppeltraktion→Einzeltraktion (Flügelung Schwerte)",
+    "stops": [
+      {
+        "name": "Leeuwarden",
+        "off": 0,
+        "track": "4"
+      },
+      {
+        "dep": 34,
+        "name": "Meppel",
+        "off": 32,
+        "track": "2"
+      },
+      {
+        "dep": 57,
+        "name": "Zwolle",
+        "off": 49,
+        "track": "14"
+      },
+      {
+        "dep": 91,
+        "name": "Almelo",
+        "off": 89,
+        "track": "3"
+      },
+      {
+        "dep": 104,
+        "name": "Hengelo",
+        "off": 102,
+        "track": "2a"
+      },
+      {
+        "dep": 130,
+        "name": "Bad Bentheim",
+        "off": 125,
+        "track": "3"
+      },
+      {
+        "dep": 146,
+        "name": "Rheine",
+        "off": 144,
+        "track": "3"
+      },
+      {
+        "dep": 176,
+        "name": "Münster (Westf) Hbf",
+        "off": 173,
+        "track": "17"
+      },
+      {
+        "dep": 189,
+        "name": "Drensteinfurt",
+        "off": 188,
+        "track": "2"
+      },
+      {
+        "dep": 204,
+        "name": "Hamm (Westf) Hbf",
+        "off": 201,
+        "track": "3"
+      },
+      {
+        "dep": 218,
+        "name": "Unna",
+        "off": 216,
+        "track": "4"
+      },
+      {
+        "dep": 225,
+        "name": "Holzwickede",
+        "off": 224,
+        "track": "2"
+      },
+      {
+        "dep": 241,
+        "name": "Schwerte (Ruhr)",
+        "off": 233,
+        "track": "3"
+      },
+      {
+        "dep": 252,
+        "name": "Fröndenberg",
+        "off": 250,
+        "track": "12"
+      },
+      {
+        "dep": 260,
+        "name": "Wickede (Ruhr)",
+        "off": 259,
+        "track": "1"
+      },
+      {
+        "dep": 276,
+        "name": "Arnsberg (Westf)",
+        "off": 274,
+        "track": "1"
+      },
+      {
+        "dep": 297,
+        "name": "Bestwig",
+        "off": 295,
+        "track": "2"
+      },
+      {
+        "dep": 306,
+        "name": "Bigge",
+        "off": 305,
+        "track": "1"
+      },
+      {
+        "dep": 312,
+        "name": "Steinhelle",
+        "off": 311,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 321,
+        "name": "Siedlinghausen",
+        "off": 319,
+        "track": "2"
+      },
+      {
+        "dep": 329,
+        "name": "Silbach",
+        "off": 328,
+        "track": "1"
+      },
+      {
+        "name": "Winterberg (Westf)",
+        "off": 337,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "19:46",
+      "interval": 60,
+      "start": "03:46"
+    }
+  },
+  "RE30_WL": {
+    "cars": 4,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": "Schwerte (Ruhr)",
+      "coupledTo": null,
+      "note": "Fährt solo als Einzeltraktion von Winterberg (Westf) bis Schwerte (Ruhr). Dort Kupplung mit RE30 aus Düsseldorf Hbf zur Doppeltraktion, gemeinsame Weiterfahrt bis Leeuwarden.",
+      "ownCars": 4,
+      "partner": "RE30_DL",
+      "partnerCars": 4,
+      "role": "join"
+    },
+    "dest": "Leeuwarden",
+    "name": "RE30",
+    "rolling": "KISS B Einzeltraktion→Doppeltraktion (Kuppeln Schwerte)",
+    "stops": [
+      {
+        "name": "Winterberg (Westf)",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 9,
+        "name": "Silbach",
+        "off": 8,
+        "track": "1"
+      },
+      {
+        "dep": 18,
+        "name": "Siedlinghausen",
+        "off": 16,
+        "track": "1"
+      },
+      {
+        "dep": 26,
+        "name": "Steinhelle",
+        "off": 25,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 32,
+        "name": "Bigge",
+        "off": 31,
+        "track": "2"
+      },
+      {
+        "dep": 42,
+        "name": "Bestwig",
+        "off": 40,
+        "track": "1"
+      },
+      {
+        "dep": 63,
+        "name": "Arnsberg (Westf)",
+        "off": 61,
+        "track": "2"
+      },
+      {
+        "dep": 78,
+        "name": "Wickede (Ruhr)",
+        "off": 77,
+        "track": "2"
+      },
+      {
+        "dep": 87,
+        "name": "Fröndenberg",
+        "off": 85,
+        "track": "13"
+      },
+      {
+        "dep": 105,
+        "name": "Schwerte (Ruhr)",
+        "off": 96,
+        "track": "4"
+      },
+      {
+        "dep": 113,
+        "name": "Holzwickede",
+        "off": 112,
+        "track": "2"
+      },
+      {
+        "dep": 121,
+        "name": "Unna",
+        "off": 119,
+        "track": "18"
+      },
+      {
+        "dep": 136,
+        "name": "Hamm (Westf) Hbf",
+        "off": 133,
+        "track": "4"
+      },
+      {
+        "dep": 149,
+        "name": "Drensteinfurt",
+        "off": 148,
+        "track": "2"
+      },
+      {
+        "dep": 164,
+        "name": "Münster (Westf) Hbf",
+        "off": 161,
+        "track": "8"
+      },
+      {
+        "dep": 193,
+        "name": "Rheine",
+        "off": 191,
+        "track": "4"
+      },
+      {
+        "dep": 212,
+        "name": "Bad Bentheim",
+        "off": 207,
+        "track": "1"
+      },
+      {
+        "dep": 235,
+        "name": "Hengelo",
+        "off": 233,
+        "track": "2a"
+      },
+      {
+        "dep": 248,
+        "name": "Almelo",
+        "off": 246,
+        "track": "3"
+      },
+      {
+        "dep": 288,
+        "name": "Zwolle",
+        "off": 280,
+        "track": "10"
+      },
+      {
+        "dep": 305,
+        "name": "Meppel",
+        "off": 303,
+        "track": "3"
+      },
+      {
+        "name": "Leeuwarden",
+        "off": 337,
+        "track": "2"
+      }
+    ],
+    "takt": {
+      "end": "20:34",
+      "interval": 60,
+      "start": "04:34"
+    }
+  },
+  "RE32_N": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Kassel-Wilhelmshöhe",
+    "name": "RE32",
+    "rolling": "8-teiliger KISS B, batterieelektrisch",
+    "stops": [
+      {
+        "name": "Roermond (NL)",
+        "off": 0,
+        "track": "OSM226217544"
+      },
+      {
+        "dep": 25,
+        "name": "Dalheim",
+        "off": 14,
+        "track": "1"
+      },
+      {
+        "dep": 36,
+        "name": "Wegberg",
+        "off": 35,
+        "track": "1"
+      },
+      {
+        "dep": 47,
+        "name": "Rheydt Hbf",
+        "off": 45,
+        "track": "2"
+      },
+      {
+        "dep": 54,
+        "name": "Mönchengladbach Hbf",
+        "off": 51,
+        "track": "4"
+      },
+      {
+        "dep": 69,
+        "name": "Neuss Hbf",
+        "off": 67,
+        "track": "5"
+      },
+      {
+        "dep": 77,
+        "name": "Düsseldorf-Bilk",
+        "off": 76,
+        "track": "3"
+      },
+      {
+        "dep": 86,
+        "name": "Düsseldorf Hbf",
+        "off": 81,
+        "track": "6"
+      },
+      {
+        "dep": 92,
+        "name": "Düsseldorf Flughafen Bf",
+        "off": 91,
+        "track": "6"
+      },
+      {
+        "dep": 107,
+        "name": "Duisburg Hbf",
+        "off": 102,
+        "track": "9"
+      },
+      {
+        "dep": 114,
+        "name": "Mülheim (Ruhr) Hbf",
+        "off": 113,
+        "track": "1"
+      },
+      {
+        "dep": 123,
+        "name": "Essen Hbf",
+        "off": 121,
+        "track": "5"
+      },
+      {
+        "dep": 129,
+        "name": "Wattenscheid Bf",
+        "off": 128,
+        "track": "2"
+      },
+      {
+        "dep": 136,
+        "name": "Bochum Hbf",
+        "off": 134,
+        "track": "2"
+      },
+      {
+        "dep": 149,
+        "name": "Dortmund Hbf",
+        "off": 147,
+        "track": "6"
+      },
+      {
+        "dep": 157,
+        "name": "Kamen",
+        "off": 156,
+        "track": "1"
+      },
+      {
+        "dep": 177,
+        "name": "Hamm (Westf) Hbf",
+        "off": 166,
+        "track": "11"
+      },
+      {
+        "dep": 192,
+        "name": "Soest Bf",
+        "off": 191,
+        "track": "2"
+      },
+      {
+        "dep": 202,
+        "name": "Lippstadt",
+        "off": 201,
+        "track": "1"
+      },
+      {
+        "dep": 218,
+        "name": "Paderborn Hbf",
+        "off": 217,
+        "track": "2"
+      },
+      {
+        "dep": 254,
+        "name": "Warburg (Westf)",
+        "off": 253,
+        "track": "3"
+      },
+      {
+        "dep": 269,
+        "name": "Hofgeismar",
+        "off": 268,
+        "track": "1"
+      },
+      {
+        "name": "Kassel-Wilhelmshöhe",
+        "off": 286,
+        "track": "8"
+      }
+    ],
+    "takt": {
+      "end": "21:31",
+      "interval": 60,
+      "start": "03:31"
+    }
+  },
+  "RE32_S": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Roermond (NL)",
+    "name": "RE32",
+    "rolling": "8-teiliger KISS B, batterieelektrisch",
+    "stops": [
+      {
+        "name": "Kassel-Wilhelmshöhe",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 17,
+        "name": "Hofgeismar",
+        "off": 16,
+        "track": "2"
+      },
+      {
+        "dep": 32,
+        "name": "Warburg (Westf)",
+        "off": 31,
+        "track": "4"
+      },
+      {
+        "dep": 70,
+        "name": "Paderborn Hbf",
+        "off": 68,
+        "track": "3"
+      },
+      {
+        "dep": 83,
+        "name": "Lippstadt",
+        "off": 82,
+        "track": "3"
+      },
+      {
+        "dep": 94,
+        "name": "Soest Bf",
+        "off": 93,
+        "track": "4"
+      },
+      {
+        "dep": 114,
+        "name": "Hamm (Westf) Hbf",
+        "off": 109,
+        "track": "1"
+      },
+      {
+        "dep": 124,
+        "name": "Kamen",
+        "off": 123,
+        "track": "2"
+      },
+      {
+        "dep": 138,
+        "name": "Dortmund Hbf",
+        "off": 136,
+        "track": "7"
+      },
+      {
+        "dep": 150,
+        "name": "Bochum Hbf",
+        "off": 148,
+        "track": "4"
+      },
+      {
+        "dep": 155,
+        "name": "Wattenscheid Bf",
+        "off": 154,
+        "track": "1"
+      },
+      {
+        "dep": 164,
+        "name": "Essen Hbf",
+        "off": 162,
+        "track": "22"
+      },
+      {
+        "dep": 170,
+        "name": "Mülheim (Ruhr) Hbf",
+        "off": 169,
+        "track": "2"
+      },
+      {
+        "dep": 184,
+        "name": "Duisburg Hbf",
+        "off": 176,
+        "track": "5"
+      },
+      {
+        "dep": 193,
+        "name": "Düsseldorf Flughafen Bf",
+        "off": 192,
+        "track": "5"
+      },
+      {
+        "dep": 213,
+        "name": "Düsseldorf Hbf",
+        "off": 201,
+        "track": "7"
+      },
+      {
+        "dep": 218,
+        "name": "Düsseldorf-Bilk",
+        "off": 217,
+        "track": "4"
+      },
+      {
+        "dep": 228,
+        "name": "Neuss Hbf",
+        "off": 226,
+        "track": "6"
+      },
+      {
+        "dep": 244,
+        "name": "Mönchengladbach Hbf",
+        "off": 241,
+        "track": "5"
+      },
+      {
+        "dep": 250,
+        "name": "Rheydt Hbf",
+        "off": 248,
+        "track": "3"
+      },
+      {
+        "dep": 260,
+        "name": "Wegberg",
+        "off": 259,
+        "track": "1"
+      },
+      {
+        "dep": 272,
+        "name": "Dalheim",
+        "off": 271,
+        "track": "1"
+      },
+      {
+        "name": "Roermond (NL)",
+        "off": 286,
+        "track": "OSM226217544"
+      }
+    ],
+    "takt": {
+      "end": "21:16",
+      "interval": 60,
+      "start": "03:16"
+    }
+  },
+  "RE35X_N": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Zwickau Hbf",
+    "extraTrips": [
+      {
+        "dep": "04:19",
+        "from": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "04:02",
+        "from": "Stralsund Hbf"
+      },
+      {
+        "dep": "20:58",
+        "to": "Chemnitz Hbf"
+      },
+      {
+        "dep": "21:58",
+        "to": "Dresden Hbf"
+      },
+      {
+        "dep": "22:58",
+        "to": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "00:58",
+        "to": "Stralsund Hbf"
+      }
+    ],
+    "name": "RE35X",
+    "rolling": "8-teiliger KISS (System-Express), 200 km/h",
+    "stops": [
+      {
+        "name": "Warnemünde",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 14,
+        "name": "Rostock Hbf",
+        "off": 10,
+        "track": "4"
+      },
+      {
+        "dep": 64,
+        "name": "Stralsund Hbf",
+        "off": 58,
+        "track": "3"
+      },
+      {
+        "dep": 86,
+        "name": "Greifswald",
+        "off": 84,
+        "track": "1"
+      },
+      {
+        "dep": 124,
+        "name": "Pasewalk",
+        "off": 122,
+        "track": "1"
+      },
+      {
+        "dep": 171,
+        "name": "Eberswalde Hbf",
+        "off": 169,
+        "track": "3"
+      },
+      {
+        "dep": 193,
+        "name": "Berlin Gesundbrunnen",
+        "off": 191,
+        "track": "5"
+      },
+      {
+        "dep": 201,
+        "name": "Berlin Hbf (tief)",
+        "off": 198,
+        "track": "1"
+      },
+      {
+        "dep": 208,
+        "name": "Berlin Südkreuz",
+        "off": 206,
+        "track": "3"
+      },
+      {
+        "dep": 276,
+        "name": "Dresden-Neustadt",
+        "off": 274,
+        "track": "5"
+      },
+      {
+        "dep": 286,
+        "name": "Dresden Hbf",
+        "off": 282,
+        "track": "10"
+      },
+      {
+        "dep": 310,
+        "name": "Freiberg (Sachs)",
+        "off": 308,
+        "track": "2"
+      },
+      {
+        "dep": 338,
+        "name": "Chemnitz Hbf",
+        "off": 334,
+        "track": "13"
+      },
+      {
+        "name": "Zwickau Hbf",
+        "off": 360,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "19:58",
+      "interval": 60,
+      "start": "03:58"
+    }
+  },
+  "RE35X_S": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Warnemünde",
+    "extraTrips": [
+      {
+        "dep": "02:53",
+        "from": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "03:29",
+        "from": "Dresden Hbf"
+      },
+      {
+        "dep": "03:53",
+        "from": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "20:11",
+        "to": "Stralsund Hbf"
+      },
+      {
+        "dep": "21:11",
+        "to": "Pasewalk"
+      },
+      {
+        "dep": "22:11",
+        "to": "Eberswalde Hbf"
+      },
+      {
+        "dep": "23:11",
+        "to": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "00:11",
+        "to": "Dresden Hbf"
+      }
+    ],
+    "name": "RE35X",
+    "rolling": "8-teiliger KISS (System-Express), 200 km/h",
+    "stops": [
+      {
+        "name": "Zwickau Hbf",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 26,
+        "name": "Chemnitz Hbf",
+        "off": 22,
+        "track": "14"
+      },
+      {
+        "dep": 52,
+        "name": "Freiberg (Sachs)",
+        "off": 50,
+        "track": "1"
+      },
+      {
+        "dep": 78,
+        "name": "Dresden Hbf",
+        "off": 74,
+        "track": "11"
+      },
+      {
+        "dep": 86,
+        "name": "Dresden-Neustadt",
+        "off": 84,
+        "track": "6"
+      },
+      {
+        "dep": 154,
+        "name": "Berlin Südkreuz",
+        "off": 152,
+        "track": "4"
+      },
+      {
+        "dep": 162,
+        "name": "Berlin Hbf (tief)",
+        "off": 159,
+        "track": "2"
+      },
+      {
+        "dep": 169,
+        "name": "Berlin Gesundbrunnen",
+        "off": 167,
+        "track": "6"
+      },
+      {
+        "dep": 191,
+        "name": "Eberswalde Hbf",
+        "off": 189,
+        "track": "4"
+      },
+      {
+        "dep": 238,
+        "name": "Pasewalk",
+        "off": 236,
+        "track": "2"
+      },
+      {
+        "dep": 276,
+        "name": "Greifswald",
+        "off": 274,
+        "track": "2"
+      },
+      {
+        "dep": 302,
+        "name": "Stralsund Hbf",
+        "off": 296,
+        "track": "4"
+      },
+      {
+        "dep": 350,
+        "name": "Rostock Hbf",
+        "off": 346,
+        "track": "8"
+      },
+      {
+        "name": "Warnemünde",
+        "off": 360,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "19:11",
+      "interval": 60,
+      "start": "03:11"
+    }
+  },
+  "RE35_N": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Zwickau Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:43",
+        "from": "Bernau (b Berlin)"
+      },
+      {
+        "dep": "04:06",
+        "from": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "00:15",
+        "to": "Stralsund Hbf"
+      }
+    ],
+    "name": "RE35",
+    "rolling": "6-teiliger KISS (Regionaltakt), 200 km/h",
+    "stops": [
+      {
+        "name": "Warnemünde",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 14,
+        "name": "Rostock Hbf",
+        "off": 10,
+        "track": "3"
+      },
+      {
+        "dep": 38,
+        "name": "Ribnitz-Damgarten West",
+        "off": 36,
+        "track": "1"
+      },
+      {
+        "dep": 72,
+        "name": "Stralsund Hbf",
+        "off": 66,
+        "track": "3"
+      },
+      {
+        "dep": 94,
+        "name": "Greifswald",
+        "off": 92,
+        "track": "1"
+      },
+      {
+        "dep": 107,
+        "name": "Züssow",
+        "off": 106,
+        "track": "1"
+      },
+      {
+        "dep": 120,
+        "name": "Anklam",
+        "off": 119,
+        "track": "1"
+      },
+      {
+        "dep": 140,
+        "name": "Pasewalk",
+        "off": 138,
+        "track": "4b"
+      },
+      {
+        "dep": 160,
+        "name": "Prenzlau",
+        "off": 159,
+        "track": "1"
+      },
+      {
+        "dep": 180,
+        "name": "Angermünde",
+        "off": 178,
+        "track": "2"
+      },
+      {
+        "dep": 196,
+        "name": "Eberswalde Hbf",
+        "off": 194,
+        "track": "2"
+      },
+      {
+        "dep": 209,
+        "name": "Bernau (b Berlin)",
+        "off": 208,
+        "track": "1"
+      },
+      {
+        "dep": 223,
+        "name": "Berlin Gesundbrunnen",
+        "off": 221,
+        "track": "1"
+      },
+      {
+        "dep": 231,
+        "name": "Berlin Hbf (tief)",
+        "off": 228,
+        "track": "3"
+      },
+      {
+        "dep": 238,
+        "name": "Berlin Südkreuz",
+        "off": 236,
+        "track": "1"
+      },
+      {
+        "dep": 256,
+        "name": "Zossen",
+        "off": 255,
+        "track": "3"
+      },
+      {
+        "dep": 286,
+        "name": "Elsterwerda",
+        "off": 284,
+        "track": "1"
+      },
+      {
+        "dep": 324,
+        "name": "Dresden-Neustadt",
+        "off": 322,
+        "track": "1"
+      },
+      {
+        "dep": 334,
+        "name": "Dresden Hbf",
+        "off": 330,
+        "track": "4"
+      },
+      {
+        "dep": 344,
+        "name": "Freital Hbf",
+        "off": 343,
+        "track": "3"
+      },
+      {
+        "dep": 366,
+        "name": "Freiberg (Sachs)",
+        "off": 364,
+        "track": "3"
+      },
+      {
+        "dep": 387,
+        "name": "Flöha",
+        "off": 386,
+        "track": "2"
+      },
+      {
+        "dep": 400,
+        "name": "Chemnitz Hbf",
+        "off": 396,
+        "track": "7"
+      },
+      {
+        "dep": 424,
+        "name": "Glauchau (Sachs)",
+        "off": 422,
+        "track": "4"
+      },
+      {
+        "name": "Zwickau Hbf",
+        "off": 436,
+        "track": "7"
+      }
+    ],
+    "takt": {
+      "end": "16:15",
+      "interval": 60,
+      "start": "03:15"
+    }
+  },
+  "RE35_S": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Warnemünde",
+    "extraTrips": [
+      {
+        "dep": "03:16",
+        "from": "Stralsund Hbf"
+      },
+      {
+        "dep": "05:37",
+        "from": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "03:54",
+        "from": "Dresden Hbf"
+      },
+      {
+        "dep": "20:12",
+        "to": "Pasewalk"
+      },
+      {
+        "dep": "21:12",
+        "to": "Stralsund Hbf"
+      },
+      {
+        "dep": "22:12",
+        "to": "Berlin Gesundbrunnen"
+      },
+      {
+        "dep": "23:12",
+        "to": "Berlin Südkreuz"
+      },
+      {
+        "dep": "00:12",
+        "to": "Dresden Hbf"
+      }
+    ],
+    "name": "RE35",
+    "rolling": "6-teiliger KISS (Regionaltakt), 200 km/h",
+    "stops": [
+      {
+        "name": "Zwickau Hbf",
+        "off": 0,
+        "track": "5"
+      },
+      {
+        "dep": 14,
+        "name": "Glauchau (Sachs)",
+        "off": 12,
+        "track": "5"
+      },
+      {
+        "dep": 40,
+        "name": "Chemnitz Hbf",
+        "off": 36,
+        "track": "8"
+      },
+      {
+        "dep": 50,
+        "name": "Flöha",
+        "off": 49,
+        "track": "5"
+      },
+      {
+        "dep": 72,
+        "name": "Freiberg (Sachs)",
+        "off": 70,
+        "track": "3"
+      },
+      {
+        "dep": 93,
+        "name": "Freital Hbf",
+        "off": 92,
+        "track": "3"
+      },
+      {
+        "dep": 106,
+        "name": "Dresden Hbf",
+        "off": 102,
+        "track": "5"
+      },
+      {
+        "dep": 114,
+        "name": "Dresden-Neustadt",
+        "off": 112,
+        "track": "2"
+      },
+      {
+        "dep": 152,
+        "name": "Elsterwerda",
+        "off": 150,
+        "track": "3"
+      },
+      {
+        "dep": 181,
+        "name": "Zossen",
+        "off": 180,
+        "track": "2"
+      },
+      {
+        "dep": 200,
+        "name": "Berlin Südkreuz",
+        "off": 198,
+        "track": "2"
+      },
+      {
+        "dep": 208,
+        "name": "Berlin Hbf (tief)",
+        "off": 205,
+        "track": "4"
+      },
+      {
+        "dep": 215,
+        "name": "Berlin Gesundbrunnen",
+        "off": 213,
+        "track": "2"
+      },
+      {
+        "dep": 228,
+        "name": "Bernau (b Berlin)",
+        "off": 227,
+        "track": "2"
+      },
+      {
+        "dep": 242,
+        "name": "Eberswalde Hbf",
+        "off": 240,
+        "track": "5"
+      },
+      {
+        "dep": 258,
+        "name": "Angermünde",
+        "off": 256,
+        "track": "4"
+      },
+      {
+        "dep": 277,
+        "name": "Prenzlau",
+        "off": 276,
+        "track": "2"
+      },
+      {
+        "dep": 298,
+        "name": "Pasewalk",
+        "off": 296,
+        "track": "4a"
+      },
+      {
+        "dep": 317,
+        "name": "Anklam",
+        "off": 316,
+        "track": "2"
+      },
+      {
+        "dep": 330,
+        "name": "Züssow",
+        "off": 329,
+        "track": "2"
+      },
+      {
+        "dep": 344,
+        "name": "Greifswald",
+        "off": 342,
+        "track": "2"
+      },
+      {
+        "dep": 370,
+        "name": "Stralsund Hbf",
+        "off": 364,
+        "track": "4"
+      },
+      {
+        "dep": 400,
+        "name": "Ribnitz-Damgarten West",
+        "off": 398,
+        "track": "2"
+      },
+      {
+        "dep": 426,
+        "name": "Rostock Hbf",
+        "off": 422,
+        "track": "7"
+      },
+      {
+        "name": "Warnemünde",
+        "off": 436,
+        "track": "4"
+      }
+    ],
+    "takt": {
+      "end": "19:12",
+      "interval": 60,
+      "start": "04:12"
+    }
+  },
+  "RE39_N": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Erfurt Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:05",
+        "from": "Regensburg Hbf"
+      },
+      {
+        "dep": "03:45",
+        "from": "Bamberg"
+      },
+      {
+        "dep": "21:51",
+        "to": "Bamberg"
+      },
+      {
+        "dep": "22:51",
+        "to": "Nürnberg Hbf"
+      },
+      {
+        "dep": "23:51",
+        "to": "Nürnberg Hbf"
+      }
+    ],
+    "name": "RE39",
+    "rolling": "8-teiliger KISS, 200 km/h",
+    "stops": [
+      {
+        "name": "Passau Hbf",
+        "off": 0,
+        "track": "1a"
+      },
+      {
+        "dep": 16,
+        "name": "Vilshofen (Niederbay)",
+        "off": 14,
+        "track": "1"
+      },
+      {
+        "dep": 34,
+        "name": "Plattling",
+        "off": 32,
+        "track": "6"
+      },
+      {
+        "dep": 49,
+        "name": "Straubing",
+        "off": 47,
+        "track": "4"
+      },
+      {
+        "dep": 74,
+        "name": "Regensburg Hbf",
+        "off": 70,
+        "track": "1"
+      },
+      {
+        "dep": 109,
+        "name": "Neumarkt (Oberpf)",
+        "off": 107,
+        "track": "5"
+      },
+      {
+        "dep": 132,
+        "name": "Nürnberg Hbf",
+        "off": 128,
+        "track": "18"
+      },
+      {
+        "dep": 140,
+        "name": "Fürth (Bay) Hbf",
+        "off": 138,
+        "track": "6"
+      },
+      {
+        "dep": 150,
+        "name": "Erlangen",
+        "off": 148,
+        "track": "4"
+      },
+      {
+        "dep": 160,
+        "name": "Forchheim (Oberfr)",
+        "off": 158,
+        "track": "7"
+      },
+      {
+        "dep": 174,
+        "name": "Bamberg",
+        "off": 171,
+        "track": "6"
+      },
+      {
+        "name": "Erfurt Hbf",
+        "off": 219,
+        "track": "10"
+      }
+    ],
+    "takt": {
+      "end": "20:51",
+      "interval": 60,
+      "start": "02:51"
+    }
+  },
+  "RE39_S": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Passau Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:35",
+        "from": "Regensburg Hbf"
+      },
+      {
+        "dep": "03:37",
+        "from": "Nürnberg Hbf"
+      },
+      {
+        "dep": "22:06",
+        "to": "Regensburg Hbf"
+      },
+      {
+        "dep": "23:06",
+        "to": "Neumarkt (Oberpf)"
+      },
+      {
+        "dep": "00:06",
+        "to": "Nürnberg Hbf"
+      }
+    ],
+    "name": "RE39",
+    "rolling": "8-teiliger KISS, 200 km/h",
+    "stops": [
+      {
+        "name": "Erfurt Hbf",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 48,
+        "name": "Bamberg",
+        "off": 45,
+        "track": "3"
+      },
+      {
+        "dep": 61,
+        "name": "Forchheim (Oberfr)",
+        "off": 59,
+        "track": "1"
+      },
+      {
+        "dep": 71,
+        "name": "Erlangen",
+        "off": 69,
+        "track": "1"
+      },
+      {
+        "dep": 81,
+        "name": "Fürth (Bay) Hbf",
+        "off": 79,
+        "track": "7"
+      },
+      {
+        "dep": 91,
+        "name": "Nürnberg Hbf",
+        "off": 87,
+        "track": "19"
+      },
+      {
+        "dep": 112,
+        "name": "Neumarkt (Oberpf)",
+        "off": 110,
+        "track": "1"
+      },
+      {
+        "dep": 149,
+        "name": "Regensburg Hbf",
+        "off": 145,
+        "track": "8"
+      },
+      {
+        "dep": 172,
+        "name": "Straubing",
+        "off": 170,
+        "track": "5"
+      },
+      {
+        "dep": 187,
+        "name": "Plattling",
+        "off": 185,
+        "track": "8"
+      },
+      {
+        "dep": 205,
+        "name": "Vilshofen (Niederbay)",
+        "off": 203,
+        "track": "2"
+      },
+      {
+        "name": "Passau Hbf",
+        "off": 219,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "21:06",
+      "interval": 60,
+      "start": "03:06"
+    }
+  },
+  "RE40_N": {
+    "cars": 5,
+    "coupled": false,
+    "dest": "Essen Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:59",
+        "from": "Hagen Hbf"
+      },
+      {
+        "dep": "04:59",
+        "from": "Hagen Hbf"
+      },
+      {
+        "dep": "04:32",
+        "from": "Siegen Hbf"
+      },
+      {
+        "dep": "23:45",
+        "to": "Siegen Hbf"
+      },
+      {
+        "dep": "00:45",
+        "to": "Wetzlar"
+      },
+      {
+        "dep": "22:45",
+        "to": "Hagen Hbf"
+      }
+    ],
+    "name": "RE40",
+    "rolling": "5-teiliger KISS, 160 km/h",
+    "stops": [
+      {
+        "name": "Frankfurt (Main) Hbf",
+        "off": 0,
+        "track": "23"
+      },
+      {
+        "dep": 24,
+        "name": "Friedberg (Hess)",
+        "off": 22,
+        "track": "1a"
+      },
+      {
+        "dep": 53,
+        "name": "Wetzlar",
+        "off": 51,
+        "track": "4"
+      },
+      {
+        "dep": 72,
+        "name": "Herborn (Dillkr)",
+        "off": 71,
+        "track": "2"
+      },
+      {
+        "dep": 81,
+        "name": "Dillenburg",
+        "off": 79,
+        "track": "4"
+      },
+      {
+        "dep": 89,
+        "name": "Haiger",
+        "off": 88,
+        "track": "2"
+      },
+      {
+        "dep": 107,
+        "name": "Siegen Hbf",
+        "off": 102,
+        "track": "2"
+      },
+      {
+        "dep": 116,
+        "name": "Kreuztal",
+        "off": 115,
+        "track": "2"
+      },
+      {
+        "dep": 145,
+        "name": "Finnentrop",
+        "off": 144,
+        "track": "1"
+      },
+      {
+        "dep": 155,
+        "name": "Plettenberg",
+        "off": 154,
+        "track": "1"
+      },
+      {
+        "dep": 163,
+        "name": "Werdohl",
+        "off": 162,
+        "track": "3"
+      },
+      {
+        "dep": 172,
+        "name": "Altena (Westf)",
+        "off": 171,
+        "track": "1"
+      },
+      {
+        "dep": 182,
+        "name": "Letmathe",
+        "off": 181,
+        "track": "1"
+      },
+      {
+        "dep": 197,
+        "name": "Hagen Hbf",
+        "off": 194,
+        "track": "15"
+      },
+      {
+        "dep": 206,
+        "name": "Wetter (Ruhr)",
+        "off": 205,
+        "track": "2"
+      },
+      {
+        "dep": 214,
+        "name": "Witten Hbf",
+        "off": 213,
+        "track": "3"
+      },
+      {
+        "dep": 225,
+        "name": "Bochum Hbf",
+        "off": 223,
+        "track": "1"
+      },
+      {
+        "dep": 231,
+        "name": "Bochum-Höntrop",
+        "off": 230,
+        "track": "1"
+      },
+      {
+        "dep": 238,
+        "name": "Essen-Steele",
+        "off": 237,
+        "track": "102"
+      },
+      {
+        "name": "Essen Hbf",
+        "off": 243,
+        "track": "7"
+      }
+    ],
+    "takt": {
+      "end": "21:45",
+      "interval": 60,
+      "start": "03:45"
+    }
+  },
+  "RE40_S": {
+    "cars": 5,
+    "coupled": false,
+    "dest": "Frankfurt (Main) Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:22",
+        "from": "Wetzlar"
+      },
+      {
+        "dep": "03:33",
+        "from": "Siegen Hbf"
+      },
+      {
+        "dep": "04:33",
+        "from": "Siegen Hbf"
+      },
+      {
+        "dep": "00:12",
+        "to": "Siegen Hbf"
+      },
+      {
+        "dep": "23:12",
+        "to": "Wetzlar"
+      }
+    ],
+    "name": "RE40",
+    "rolling": "5-teiliger KISS, 160 km/h",
+    "stops": [
+      {
+        "name": "Essen Hbf",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 6,
+        "name": "Essen-Steele",
+        "off": 5,
+        "track": "104"
+      },
+      {
+        "dep": 13,
+        "name": "Bochum-Höntrop",
+        "off": 12,
+        "track": "2"
+      },
+      {
+        "dep": 20,
+        "name": "Bochum Hbf",
+        "off": 18,
+        "track": "1"
+      },
+      {
+        "dep": 30,
+        "name": "Witten Hbf",
+        "off": 29,
+        "track": "4"
+      },
+      {
+        "dep": 38,
+        "name": "Wetter (Ruhr)",
+        "off": 37,
+        "track": "1"
+      },
+      {
+        "dep": 49,
+        "name": "Hagen Hbf",
+        "off": 46,
+        "track": "18"
+      },
+      {
+        "dep": 62,
+        "name": "Letmathe",
+        "off": 61,
+        "track": "2"
+      },
+      {
+        "dep": 72,
+        "name": "Altena (Westf)",
+        "off": 71,
+        "track": "2"
+      },
+      {
+        "dep": 81,
+        "name": "Werdohl",
+        "off": 80,
+        "track": "2"
+      },
+      {
+        "dep": 89,
+        "name": "Plettenberg",
+        "off": 88,
+        "track": "2"
+      },
+      {
+        "dep": 99,
+        "name": "Finnentrop",
+        "off": 98,
+        "track": "4"
+      },
+      {
+        "dep": 128,
+        "name": "Kreuztal",
+        "off": 127,
+        "track": "1"
+      },
+      {
+        "dep": 141,
+        "name": "Siegen Hbf",
+        "off": 136,
+        "track": "4"
+      },
+      {
+        "dep": 155,
+        "name": "Haiger",
+        "off": 154,
+        "track": "3"
+      },
+      {
+        "dep": 164,
+        "name": "Dillenburg",
+        "off": 162,
+        "track": "5"
+      },
+      {
+        "dep": 172,
+        "name": "Herborn (Dillkr)",
+        "off": 171,
+        "track": "3"
+      },
+      {
+        "dep": 192,
+        "name": "Wetzlar",
+        "off": 190,
+        "track": "3"
+      },
+      {
+        "dep": 221,
+        "name": "Friedberg (Hess)",
+        "off": 219,
+        "track": "11"
+      },
+      {
+        "name": "Frankfurt (Main) Hbf",
+        "off": 243,
+        "track": "24"
+      }
+    ],
+    "takt": {
+      "end": "22:12",
+      "interval": 60,
+      "start": "03:12"
+    }
+  },
+  "RE45_N": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Travemünde Strand",
+    "extraTrips": [
+      {
+        "dep": "03:49",
+        "from": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "22:14",
+        "to": "Uelzen"
+      },
+      {
+        "dep": "23:14",
+        "to": "Stendal Hbf"
+      },
+      {
+        "dep": "00:14",
+        "to": "Berlin Hbf (tief)"
+      }
+    ],
+    "name": "RE45",
+    "rolling": "6-teiliger KISS Doppelstock (Akku-Hybrid), 200 km/h",
+    "stops": [
+      {
+        "name": "Cottbus Hbf",
+        "off": 0,
+        "track": "7"
+      },
+      {
+        "dep": 30,
+        "name": "Lübben (Spreewald)",
+        "off": 28,
+        "track": "2"
+      },
+      {
+        "dep": 50,
+        "name": "Königs Wusterhausen",
+        "off": 48,
+        "track": "2"
+      },
+      {
+        "dep": 66,
+        "name": "Flughafen BER",
+        "off": 62,
+        "track": "3"
+      },
+      {
+        "dep": 83,
+        "name": "Berlin Südkreuz",
+        "off": 81,
+        "track": "11"
+      },
+      {
+        "dep": 88,
+        "name": "Potsdamer Platz",
+        "off": 87,
+        "track": "11"
+      },
+      {
+        "dep": 95,
+        "name": "Berlin Hbf (tief)",
+        "off": 92,
+        "track": "5"
+      },
+      {
+        "dep": 108,
+        "name": "Berlin-Spandau",
+        "off": 106,
+        "track": "1"
+      },
+      {
+        "dep": 142,
+        "name": "Stendal Hbf",
+        "off": 138,
+        "track": "5"
+      },
+      {
+        "dep": 170,
+        "name": "Salzwedel",
+        "off": 168,
+        "track": "1"
+      },
+      {
+        "dep": 199,
+        "name": "Uelzen",
+        "off": 195,
+        "track": "304"
+      },
+      {
+        "dep": 217,
+        "name": "Lüneburg",
+        "off": 215,
+        "track": "6"
+      },
+      {
+        "dep": 237,
+        "name": "Hamburg-Harburg",
+        "off": 235,
+        "track": "11"
+      },
+      {
+        "dep": 248,
+        "name": "Hamburg-Elbbrücken",
+        "off": 244,
+        "track": "fiktiv-1"
+      },
+      {
+        "dep": 278,
+        "name": "Bad Oldesloe",
+        "off": 276,
+        "track": "4"
+      },
+      {
+        "dep": 298,
+        "name": "Lübeck Hbf",
+        "off": 294,
+        "track": "6"
+      },
+      {
+        "dep": 315,
+        "name": "Lübeck-Travemünde Hafen",
+        "off": 314,
+        "track": "1"
+      },
+      {
+        "name": "Travemünde Strand",
+        "off": 320,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "21:14",
+      "interval": 60,
+      "start": "03:14"
+    }
+  },
+  "RE45_S": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Cottbus Hbf",
+    "extraTrips": [
+      {
+        "dep": "02:52",
+        "from": "Berlin Hbf (tief)"
+      },
+      {
+        "dep": "03:06",
+        "from": "Stendal Hbf"
+      },
+      {
+        "dep": "03:08",
+        "from": "Uelzen"
+      },
+      {
+        "dep": "22:02",
+        "to": "Hamburg-Elbbrücken"
+      },
+      {
+        "dep": "23:02",
+        "to": "Uelzen"
+      },
+      {
+        "dep": "00:02",
+        "to": "Stendal Hbf"
+      }
+    ],
+    "name": "RE45",
+    "rolling": "6-teiliger KISS Doppelstock (Akku-Hybrid), 200 km/h",
+    "stops": [
+      {
+        "name": "Travemünde Strand",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 6,
+        "name": "Lübeck-Travemünde Hafen",
+        "off": 5,
+        "track": "1"
+      },
+      {
+        "dep": 28,
+        "name": "Lübeck Hbf",
+        "off": 21,
+        "track": "7"
+      },
+      {
+        "dep": 46,
+        "name": "Bad Oldesloe",
+        "off": 44,
+        "track": "3"
+      },
+      {
+        "dep": 78,
+        "name": "Hamburg-Elbbrücken",
+        "off": 74,
+        "track": "fiktiv-2"
+      },
+      {
+        "dep": 87,
+        "name": "Hamburg-Harburg",
+        "off": 85,
+        "track": "12"
+      },
+      {
+        "dep": 107,
+        "name": "Lüneburg",
+        "off": 105,
+        "track": "3"
+      },
+      {
+        "dep": 128,
+        "name": "Uelzen",
+        "off": 124,
+        "track": "302"
+      },
+      {
+        "dep": 154,
+        "name": "Salzwedel",
+        "off": 152,
+        "track": "4"
+      },
+      {
+        "dep": 184,
+        "name": "Stendal Hbf",
+        "off": 180,
+        "track": "7"
+      },
+      {
+        "dep": 216,
+        "name": "Berlin-Spandau",
+        "off": 214,
+        "track": "2"
+      },
+      {
+        "dep": 230,
+        "name": "Berlin Hbf (tief)",
+        "off": 227,
+        "track": "6"
+      },
+      {
+        "dep": 241,
+        "name": "Berlin Südkreuz",
+        "off": 239,
+        "track": "12"
+      },
+      {
+        "dep": 260,
+        "name": "Flughafen BER",
+        "off": 256,
+        "track": "4"
+      },
+      {
+        "dep": 274,
+        "name": "Königs Wusterhausen",
+        "off": 272,
+        "track": "1"
+      },
+      {
+        "dep": 294,
+        "name": "Lübben (Spreewald)",
+        "off": 292,
+        "track": "1"
+      },
+      {
+        "name": "Cottbus Hbf",
+        "off": 322,
+        "track": "10"
+      }
+    ],
+    "takt": {
+      "end": "19:02",
+      "interval": 60,
+      "start": "04:02"
+    }
+  },
+  "RE46_A": {
+    "cars": 4,
+    "coupled": false,
+    "coupledSection": {
+      "extraCars": 4,
+      "from": "Lübeck Hbf",
+      "note": "Ab Lübeck Hbf kuppelt ein zweiter 4-teiliger KISS B an — ab hier fährt der Zug als 210 m lange Doppeltraktion weiter bis Berlin Südkreuz. Beide Zugteile haben dasselbe Fahrtziel (keine Flügelung, reine Kapazitätsverstärkung).",
+      "to": null
+    },
+    "dest": "Berlin Südkreuz",
+    "extraTrips": [
+      {
+        "dep": "03:57",
+        "from": "Berlin-Spandau"
+      },
+      {
+        "dep": "05:01",
+        "from": "Wittenberge"
+      },
+      {
+        "dep": "03:40",
+        "from": "Lübeck Hbf"
+      },
+      {
+        "dep": "03:23",
+        "from": "Kiel Hbf"
+      },
+      {
+        "dep": "04:01",
+        "from": "Husum"
+      },
+      {
+        "dep": "20:08",
+        "to": "Wittenberge"
+      },
+      {
+        "dep": "21:08",
+        "to": "Büchen"
+      },
+      {
+        "dep": "22:08",
+        "to": "Lübeck Hbf"
+      },
+      {
+        "dep": "23:08",
+        "to": "Kiel Hbf"
+      },
+      {
+        "dep": "00:08",
+        "to": "Husum"
+      }
+    ],
+    "name": "RE46",
+    "rolling": "4-teiliger Stadler KISS B, 200 km/h",
+    "stops": [
+      {
+        "name": "Esbjerg",
+        "off": 0,
+        "track": "OSM846252126"
+      },
+      {
+        "dep": 12,
+        "name": "Bramming",
+        "off": 10,
+        "track": "2;3"
+      },
+      {
+        "dep": 30,
+        "name": "Ribe",
+        "off": 28,
+        "track": "2"
+      },
+      {
+        "dep": 62,
+        "name": "Tønder",
+        "off": 60,
+        "track": "1"
+      },
+      {
+        "dep": 80,
+        "name": "Niebüll",
+        "off": 78,
+        "track": "1"
+      },
+      {
+        "dep": 99,
+        "name": "Bredstedt",
+        "off": 97,
+        "track": "1"
+      },
+      {
+        "dep": 113,
+        "name": "Husum",
+        "off": 110,
+        "track": "1"
+      },
+      {
+        "dep": 132,
+        "name": "Jübek",
+        "off": 130,
+        "track": "2"
+      },
+      {
+        "dep": 141,
+        "name": "Schleswig",
+        "off": 139,
+        "track": "3"
+      },
+      {
+        "dep": 160,
+        "name": "Rendsburg",
+        "off": 158,
+        "track": "3"
+      },
+      {
+        "dep": 195,
+        "name": "Kiel Hbf",
+        "off": 188,
+        "track": "2b"
+      },
+      {
+        "dep": 224,
+        "name": "Plön",
+        "off": 222,
+        "track": "1"
+      },
+      {
+        "dep": 241,
+        "name": "Eutin",
+        "off": 239,
+        "track": "2"
+      },
+      {
+        "dep": 272,
+        "name": "Lübeck Hbf",
+        "off": 265,
+        "track": "4"
+      },
+      {
+        "dep": 301,
+        "name": "Büchen",
+        "off": 299,
+        "track": "22"
+      },
+      {
+        "dep": 322,
+        "name": "Hagenow Land",
+        "off": 320,
+        "track": "2"
+      },
+      {
+        "dep": 356,
+        "name": "Wittenberge",
+        "off": 353,
+        "track": "1"
+      },
+      {
+        "dep": 382,
+        "name": "Neustadt (Dosse)",
+        "off": 380,
+        "track": "1"
+      },
+      {
+        "dep": 412,
+        "name": "Berlin-Spandau",
+        "off": 409,
+        "track": "3"
+      },
+      {
+        "dep": 425,
+        "name": "Berlin Hbf",
+        "off": 422,
+        "track": "1"
+      },
+      {
+        "dep": 430,
+        "name": "Berlin Potsdamer Platz",
+        "off": 428,
+        "track": "1"
+      },
+      {
+        "name": "Berlin Südkreuz",
+        "off": 435,
+        "track": "5"
+      }
+    ],
+    "takt": {
+      "end": "19:08",
+      "interval": 60,
+      "note": "Zugstärkung in Lübeck Hbf; Treppen-Kaskade bei Früh-/Spätfahrten",
+      "start": "03:08"
+    }
+  },
+  "RE46_B": {
+    "cars": 4,
+    "coupled": false,
+    "coupledSection": {
+      "extraCars": 4,
+      "from": null,
+      "note": "Fährt ab Berlin Südkreuz als 210 m lange Doppeltraktion (2x 4-teilig). In Lübeck Hbf trennt sich ein 4-teiliger Zugteil ab (Rückführung); dieser Zugteil fährt solo weiter nach Esbjerg.",
+      "to": "Lübeck Hbf"
+    },
+    "dest": "Esbjerg",
+    "extraTrips": [
+      {
+        "dep": "03:02",
+        "from": "Husum"
+      },
+      {
+        "dep": "03:12",
+        "from": "Rendsburg"
+      },
+      {
+        "dep": "03:44",
+        "from": "Kiel Hbf"
+      },
+      {
+        "dep": "03:27",
+        "from": "Lübeck Hbf"
+      },
+      {
+        "dep": "02:59",
+        "from": "Wittenberge"
+      },
+      {
+        "dep": "19:37",
+        "to": "Niebüll"
+      },
+      {
+        "dep": "21:37",
+        "to": "Kiel Hbf"
+      },
+      {
+        "dep": "23:37",
+        "to": "Büchen"
+      },
+      {
+        "dep": "00:37",
+        "to": "Wittenberge"
+      }
+    ],
+    "name": "RE46",
+    "rolling": "4-teiliger Stadler KISS B, 200 km/h",
+    "stops": [
+      {
+        "name": "Berlin Südkreuz",
+        "off": 0,
+        "track": "6"
+      },
+      {
+        "dep": 7,
+        "name": "Berlin Potsdamer Platz",
+        "off": 5,
+        "track": "2"
+      },
+      {
+        "dep": 13,
+        "name": "Berlin Hbf",
+        "off": 10,
+        "track": "2"
+      },
+      {
+        "dep": 26,
+        "name": "Berlin-Spandau",
+        "off": 23,
+        "track": "4"
+      },
+      {
+        "dep": 55,
+        "name": "Neustadt (Dosse)",
+        "off": 53,
+        "track": "2"
+      },
+      {
+        "dep": 82,
+        "name": "Wittenberge",
+        "off": 79,
+        "track": "5"
+      },
+      {
+        "dep": 115,
+        "name": "Hagenow Land",
+        "off": 113,
+        "track": "3"
+      },
+      {
+        "dep": 136,
+        "name": "Büchen",
+        "off": 134,
+        "track": "4"
+      },
+      {
+        "dep": 170,
+        "name": "Lübeck Hbf",
+        "off": 163,
+        "track": "5"
+      },
+      {
+        "dep": 196,
+        "name": "Eutin",
+        "off": 194,
+        "track": "1"
+      },
+      {
+        "dep": 213,
+        "name": "Plön",
+        "off": 211,
+        "track": "2"
+      },
+      {
+        "dep": 247,
+        "name": "Kiel Hbf",
+        "off": 240,
+        "track": "6a"
+      },
+      {
+        "dep": 277,
+        "name": "Rendsburg",
+        "off": 275,
+        "track": "4"
+      },
+      {
+        "dep": 296,
+        "name": "Schleswig",
+        "off": 294,
+        "track": "1"
+      },
+      {
+        "dep": 305,
+        "name": "Jübek",
+        "off": 303,
+        "track": "1"
+      },
+      {
+        "dep": 325,
+        "name": "Husum",
+        "off": 322,
+        "track": "3"
+      },
+      {
+        "dep": 338,
+        "name": "Bredstedt",
+        "off": 336,
+        "track": "2"
+      },
+      {
+        "dep": 357,
+        "name": "Niebüll",
+        "off": 355,
+        "track": "2"
+      },
+      {
+        "dep": 375,
+        "name": "Tønder",
+        "off": 373,
+        "track": "1"
+      },
+      {
+        "dep": 407,
+        "name": "Ribe",
+        "off": 405,
+        "track": "1"
+      },
+      {
+        "dep": 425,
+        "name": "Bramming",
+        "off": 423,
+        "track": "1"
+      },
+      {
+        "name": "Esbjerg",
+        "off": 435,
+        "track": "OSM846252125"
+      }
+    ],
+    "takt": {
+      "end": "18:37",
+      "interval": 60,
+      "note": "Flügelung in Lübeck Hbf; Treppen-Kaskade bei Früh-/Spätfahrten",
+      "start": "03:37"
+    }
+  },
+  "RE57_A": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Passau Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:07",
+        "from": "Sigmaringen"
+      },
+      {
+        "dep": "03:07",
+        "from": "Donaueschingen"
+      },
+      {
+        "dep": "03:33",
+        "from": "Memmingen"
+      },
+      {
+        "dep": "03:44",
+        "from": "Freiburg (Breisgau) Hbf"
+      },
+      {
+        "dep": "03:51",
+        "from": "München Ost"
+      },
+      {
+        "dep": "18:57",
+        "to": "Landshut (Bay) Hbf"
+      },
+      {
+        "dep": "19:57",
+        "to": "München-Pasing"
+      },
+      {
+        "dep": "20:57",
+        "to": "Memmingen"
+      },
+      {
+        "dep": "21:57",
+        "to": "Aulendorf"
+      },
+      {
+        "dep": "22:57",
+        "to": "Sigmaringen"
+      },
+      {
+        "dep": "23:57",
+        "to": "Donaueschingen"
+      }
+    ],
+    "name": "RE57",
+    "rolling": "6-teiliger KISS B, batterieelektrisch, 200 km/h",
+    "stops": [
+      {
+        "name": "Mulhouse-Ville",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 20,
+        "name": "Müllheim (Baden)",
+        "off": 18,
+        "track": "3"
+      },
+      {
+        "dep": 29,
+        "name": "Bad Krozingen",
+        "off": 28,
+        "track": "1"
+      },
+      {
+        "dep": 47,
+        "name": "Freiburg (Breisgau) Hbf",
+        "off": 41,
+        "track": "8"
+      },
+      {
+        "dep": 87,
+        "name": "Titisee",
+        "off": 85,
+        "track": "4"
+      },
+      {
+        "dep": 96,
+        "name": "Neustadt (Schwarzw)",
+        "off": 94,
+        "track": "1"
+      },
+      {
+        "dep": 130,
+        "name": "Donaueschingen",
+        "off": 128,
+        "track": "5"
+      },
+      {
+        "dep": 142,
+        "name": "Immendingen",
+        "off": 141,
+        "track": "1"
+      },
+      {
+        "dep": 153,
+        "name": "Tuttlingen",
+        "off": 151,
+        "track": "2"
+      },
+      {
+        "dep": 190,
+        "name": "Sigmaringen",
+        "off": 187,
+        "track": "2"
+      },
+      {
+        "dep": 228,
+        "name": "Aulendorf",
+        "off": 225,
+        "track": "1"
+      },
+      {
+        "dep": 252,
+        "name": "Kißlegg",
+        "off": 251,
+        "track": "1"
+      },
+      {
+        "dep": 276,
+        "name": "Memmingen",
+        "off": 274,
+        "track": "4"
+      },
+      {
+        "dep": 307,
+        "name": "Buchloe",
+        "off": 305,
+        "track": "1"
+      },
+      {
+        "dep": 316,
+        "name": "Kaufering",
+        "off": 315,
+        "track": "4"
+      },
+      {
+        "dep": 340,
+        "name": "München-Pasing",
+        "off": 338,
+        "track": "5"
+      },
+      {
+        "dep": 354,
+        "name": "München Ost",
+        "off": 352,
+        "track": "1"
+      },
+      {
+        "dep": 385,
+        "name": "München Flughafen",
+        "off": 379,
+        "track": "1"
+      },
+      {
+        "dep": 411,
+        "name": "Landshut (Bay) Hbf",
+        "off": 409,
+        "track": "8"
+      },
+      {
+        "dep": 450,
+        "name": "Plattling",
+        "off": 448,
+        "track": "1"
+      },
+      {
+        "name": "Passau Hbf",
+        "off": 479,
+        "track": "2"
+      }
+    ],
+    "takt": {
+      "end": "17:57",
+      "interval": 60,
+      "start": "02:57"
+    }
+  },
+  "RE57_B": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Mulhouse-Ville",
+    "extraTrips": [
+      {
+        "dep": "03:06",
+        "from": "Donaueschingen"
+      },
+      {
+        "dep": "03:06",
+        "from": "Sigmaringen"
+      },
+      {
+        "dep": "03:17",
+        "from": "Freiburg (Breisgau) Hbf"
+      },
+      {
+        "dep": "03:19",
+        "from": "Aulendorf"
+      },
+      {
+        "dep": "03:24",
+        "from": "München-Pasing"
+      },
+      {
+        "dep": "03:30",
+        "from": "Memmingen"
+      },
+      {
+        "dep": "03:45",
+        "from": "München Flughafen"
+      },
+      {
+        "dep": "19:06",
+        "to": "Freiburg (Breisgau) Hbf"
+      },
+      {
+        "dep": "20:06",
+        "to": "Donaueschingen"
+      },
+      {
+        "dep": "21:06",
+        "to": "Sigmaringen"
+      },
+      {
+        "dep": "22:06",
+        "to": "Aulendorf"
+      },
+      {
+        "dep": "23:06",
+        "to": "Memmingen"
+      },
+      {
+        "dep": "00:06",
+        "to": "München Ost"
+      }
+    ],
+    "name": "RE57",
+    "rolling": "6-teiliger KISS B, batterieelektrisch, 200 km/h",
+    "stops": [
+      {
+        "name": "Passau Hbf",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 30,
+        "name": "Plattling",
+        "off": 28,
+        "track": "5"
+      },
+      {
+        "dep": 69,
+        "name": "Landshut (Bay) Hbf",
+        "off": 67,
+        "track": "7"
+      },
+      {
+        "dep": 99,
+        "name": "München Flughafen",
+        "off": 93,
+        "track": "2"
+      },
+      {
+        "dep": 126,
+        "name": "München Ost",
+        "off": 124,
+        "track": "2"
+      },
+      {
+        "dep": 140,
+        "name": "München-Pasing",
+        "off": 138,
+        "track": "6"
+      },
+      {
+        "dep": 163,
+        "name": "Kaufering",
+        "off": 162,
+        "track": "1"
+      },
+      {
+        "dep": 173,
+        "name": "Buchloe",
+        "off": 171,
+        "track": "2"
+      },
+      {
+        "dep": 204,
+        "name": "Memmingen",
+        "off": 202,
+        "track": "1"
+      },
+      {
+        "dep": 227,
+        "name": "Kißlegg",
+        "off": 226,
+        "track": "1"
+      },
+      {
+        "dep": 253,
+        "name": "Aulendorf",
+        "off": 250,
+        "track": "2"
+      },
+      {
+        "dep": 291,
+        "name": "Sigmaringen",
+        "off": 288,
+        "track": "4"
+      },
+      {
+        "dep": 327,
+        "name": "Tuttlingen",
+        "off": 325,
+        "track": "3"
+      },
+      {
+        "dep": 337,
+        "name": "Immendingen",
+        "off": 336,
+        "track": "2"
+      },
+      {
+        "dep": 350,
+        "name": "Donaueschingen",
+        "off": 348,
+        "track": "1"
+      },
+      {
+        "dep": 384,
+        "name": "Neustadt (Schwarzw)",
+        "off": 382,
+        "track": "1"
+      },
+      {
+        "dep": 393,
+        "name": "Titisee",
+        "off": 391,
+        "track": "2"
+      },
+      {
+        "dep": 431,
+        "name": "Freiburg (Breisgau) Hbf",
+        "off": 425,
+        "track": "6"
+      },
+      {
+        "dep": 444,
+        "name": "Bad Krozingen",
+        "off": 443,
+        "track": "2"
+      },
+      {
+        "dep": 454,
+        "name": "Müllheim (Baden)",
+        "off": 452,
+        "track": "4"
+      },
+      {
+        "name": "Mulhouse-Ville",
+        "off": 473,
+        "track": "8"
+      }
+    ],
+    "takt": {
+      "end": "18:06",
+      "interval": 60,
+      "start": "03:06"
+    }
+  },
+  "RE5_A": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Frankfurt (Main) Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:25",
+        "from": "Mainz Hbf"
+      },
+      {
+        "dep": "03:19",
+        "from": "Koblenz Hbf"
+      },
+      {
+        "dep": "04:19",
+        "from": "Koblenz Hbf"
+      },
+      {
+        "dep": "04:18",
+        "from": "Köln Hbf"
+      },
+      {
+        "dep": "04:18",
+        "from": "Duisburg Hbf"
+      },
+      {
+        "dep": "00:11",
+        "to": "Köln Hbf"
+      },
+      {
+        "dep": "23:11",
+        "to": "Koblenz Hbf"
+      },
+      {
+        "dep": "01:11",
+        "to": "Duisburg Hbf"
+      },
+      {
+        "dep": "22:11",
+        "to": "Mainz Hbf"
+      }
+    ],
+    "name": "RE5",
+    "rolling": "8-teiliger Stadler KISS (XXL-Doppelstock), 160/200 km/h",
+    "stops": [
+      {
+        "name": "Arnhem Centraal",
+        "off": 0,
+        "track": "6a"
+      },
+      {
+        "dep": 9,
+        "name": "Zevenaar",
+        "off": 8,
+        "track": "3"
+      },
+      {
+        "dep": 22,
+        "name": "Emmerich",
+        "off": 19,
+        "track": "3"
+      },
+      {
+        "dep": 31,
+        "name": "Empel-Rees",
+        "off": 30,
+        "track": "2"
+      },
+      {
+        "dep": 44,
+        "name": "Wesel",
+        "off": 42,
+        "track": "2"
+      },
+      {
+        "dep": 53,
+        "name": "Dinslaken",
+        "off": 52,
+        "track": "1"
+      },
+      {
+        "dep": 63,
+        "name": "Oberhausen Hbf",
+        "off": 61,
+        "track": "14"
+      },
+      {
+        "dep": 71,
+        "name": "Duisburg Hbf",
+        "off": 69,
+        "track": "6"
+      },
+      {
+        "dep": 81,
+        "name": "Düsseldorf Flughafen",
+        "off": 80,
+        "track": "6"
+      },
+      {
+        "dep": 92,
+        "name": "Düsseldorf Hbf",
+        "off": 89,
+        "track": "17"
+      },
+      {
+        "dep": 100,
+        "name": "Düsseldorf-Benrath",
+        "off": 99,
+        "track": "1"
+      },
+      {
+        "dep": 111,
+        "name": "Leverkusen Mitte",
+        "off": 110,
+        "track": "5"
+      },
+      {
+        "dep": 122,
+        "name": "Köln Messe/Deutz",
+        "off": 120,
+        "track": "9"
+      },
+      {
+        "dep": 129,
+        "name": "Köln Hbf",
+        "off": 126,
+        "track": "11"
+      },
+      {
+        "dep": 139,
+        "name": "Brühl",
+        "off": 138,
+        "track": "3"
+      },
+      {
+        "dep": 151,
+        "name": "Bonn Hbf",
+        "off": 149,
+        "track": "4"
+      },
+      {
+        "dep": 163,
+        "name": "Remagen",
+        "off": 162,
+        "track": "4"
+      },
+      {
+        "dep": 176,
+        "name": "Andernach",
+        "off": 175,
+        "track": "2"
+      },
+      {
+        "dep": 190,
+        "name": "Koblenz Hbf",
+        "off": 186,
+        "track": "2"
+      },
+      {
+        "dep": 204,
+        "name": "Boppard Hbf",
+        "off": 203,
+        "track": "2"
+      },
+      {
+        "dep": 217,
+        "name": "Oberwesel",
+        "off": 216,
+        "track": "1"
+      },
+      {
+        "dep": 231,
+        "name": "Bingen (Rhein) Hbf",
+        "off": 230,
+        "track": "202"
+      },
+      {
+        "dep": 241,
+        "name": "Ingelheim",
+        "off": 240,
+        "track": "1"
+      },
+      {
+        "dep": 256,
+        "name": "Mainz Hbf",
+        "off": 254,
+        "track": "6"
+      },
+      {
+        "dep": 268,
+        "name": "Rüsselsheim",
+        "off": 267,
+        "track": "2"
+      },
+      {
+        "dep": 279,
+        "name": "Frankfurt Flughafen Regiobf",
+        "off": 277,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "name": "Frankfurt (Main) Hbf",
+        "off": 289,
+        "track": "103"
+      }
+    ],
+    "takt": {
+      "end": "21:11",
+      "interval": 60,
+      "note": "Frühfahrten ab Koblenz/Köln/Mainz/Duisburg, letzte Vollfahrt 21:11, Spätfahrten bis 22:11",
+      "start": "04:11"
+    }
+  },
+  "RE5_B": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Arnhem Centraal",
+    "extraTrips": [
+      {
+        "dep": "03:23",
+        "from": "Düsseldorf Hbf"
+      },
+      {
+        "dep": "04:23",
+        "from": "Düsseldorf Hbf"
+      },
+      {
+        "dep": "04:45",
+        "from": "Köln Hbf"
+      },
+      {
+        "dep": "03:37",
+        "from": "Mainz Hbf"
+      },
+      {
+        "dep": "00:00",
+        "to": "Koblenz Hbf"
+      },
+      {
+        "dep": "23:00",
+        "to": "Köln Hbf"
+      },
+      {
+        "dep": "22:00",
+        "to": "Wesel"
+      }
+    ],
+    "name": "RE5",
+    "rolling": "8-teiliger Stadler KISS (XXL-Doppelstock), 160/200 km/h",
+    "stops": [
+      {
+        "name": "Frankfurt (Main) Hbf",
+        "off": 0,
+        "track": "104"
+      },
+      {
+        "dep": 12,
+        "name": "Frankfurt Flughafen Regiobf",
+        "off": 10,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 22,
+        "name": "Rüsselsheim",
+        "off": 21,
+        "track": "3"
+      },
+      {
+        "dep": 37,
+        "name": "Mainz Hbf",
+        "off": 35,
+        "track": "8"
+      },
+      {
+        "dep": 50,
+        "name": "Ingelheim",
+        "off": 49,
+        "track": "2"
+      },
+      {
+        "dep": 61,
+        "name": "Bingen (Rhein) Hbf",
+        "off": 60,
+        "track": "203"
+      },
+      {
+        "dep": 75,
+        "name": "Oberwesel",
+        "off": 74,
+        "track": "2"
+      },
+      {
+        "dep": 88,
+        "name": "Boppard Hbf",
+        "off": 87,
+        "track": "3"
+      },
+      {
+        "dep": 105,
+        "name": "Koblenz Hbf",
+        "off": 102,
+        "track": "3"
+      },
+      {
+        "dep": 117,
+        "name": "Andernach",
+        "off": 116,
+        "track": "3"
+      },
+      {
+        "dep": 130,
+        "name": "Remagen",
+        "off": 129,
+        "track": "5"
+      },
+      {
+        "dep": 143,
+        "name": "Bonn Hbf",
+        "off": 141,
+        "track": "1"
+      },
+      {
+        "dep": 154,
+        "name": "Brühl",
+        "off": 153,
+        "track": "1"
+      },
+      {
+        "dep": 165,
+        "name": "Köln Hbf",
+        "off": 162,
+        "track": "10"
+      },
+      {
+        "dep": 171,
+        "name": "Köln Messe/Deutz",
+        "off": 169,
+        "track": "10"
+      },
+      {
+        "dep": 182,
+        "name": "Leverkusen Mitte",
+        "off": 181,
+        "track": "3"
+      },
+      {
+        "dep": 193,
+        "name": "Düsseldorf-Benrath",
+        "off": 192,
+        "track": "2"
+      },
+      {
+        "dep": 203,
+        "name": "Düsseldorf Hbf",
+        "off": 200,
+        "track": "18"
+      },
+      {
+        "dep": 213,
+        "name": "Düsseldorf Flughafen",
+        "off": 211,
+        "track": "5"
+      },
+      {
+        "dep": 220,
+        "name": "Duisburg Hbf",
+        "off": 218,
+        "track": "8"
+      },
+      {
+        "dep": 228,
+        "name": "Oberhausen Hbf",
+        "off": 226,
+        "track": "13"
+      },
+      {
+        "dep": 237,
+        "name": "Dinslaken",
+        "off": 236,
+        "track": "2"
+      },
+      {
+        "dep": 247,
+        "name": "Wesel",
+        "off": 245,
+        "track": "3"
+      },
+      {
+        "dep": 259,
+        "name": "Empel-Rees",
+        "off": 258,
+        "track": "4"
+      },
+      {
+        "dep": 270,
+        "name": "Emmerich",
+        "off": 267,
+        "track": "4"
+      },
+      {
+        "dep": 281,
+        "name": "Zevenaar",
+        "off": 280,
+        "track": "3"
+      },
+      {
+        "name": "Arnhem Centraal",
+        "off": 289,
+        "track": "4a"
+      }
+    ],
+    "takt": {
+      "end": "21:00",
+      "interval": 60,
+      "note": "Spätfahrten alle als Kurzläufer (bis Koblenz/Köln/Wesel)",
+      "start": "04:00"
+    }
+  },
+  "RE71_A": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Hel",
+    "name": "RE71",
+    "rolling": "5+3-Verband (8-teilig, ~210m) Brandenburg–Gdynia Gł., ab dort solo 3-teiliger KISS bis Hel",
+    "stops": [
+      {
+        "name": "Brandenburg Hbf",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 22,
+        "name": "Potsdam Hbf",
+        "off": 20,
+        "track": "1"
+      },
+      {
+        "dep": 32,
+        "name": "Berlin-Wannsee",
+        "off": 30,
+        "track": "8"
+      },
+      {
+        "dep": 53,
+        "name": "Berlin Hbf",
+        "off": 47,
+        "track": "3"
+      },
+      {
+        "dep": 59,
+        "name": "Berlin Potsdamer Platz",
+        "off": 57,
+        "track": "3"
+      },
+      {
+        "dep": 82,
+        "name": "Flughafen BER",
+        "off": 79,
+        "track": "1"
+      },
+      {
+        "dep": 114,
+        "name": "Bernau (b Berlin)",
+        "off": 112,
+        "track": "4"
+      },
+      {
+        "dep": 130,
+        "name": "Eberswalde Hbf",
+        "off": 128,
+        "track": "3"
+      },
+      {
+        "dep": 145,
+        "name": "Angermünde",
+        "off": 143,
+        "track": "3"
+      },
+      {
+        "dep": 187,
+        "name": "Pasewalk",
+        "off": 180,
+        "track": "1"
+      },
+      {
+        "dep": 222,
+        "name": "Szczecin Główny",
+        "off": 217,
+        "track": "3;5"
+      },
+      {
+        "dep": 253,
+        "name": "Runowo Pomorskie",
+        "off": 252,
+        "track": "OSM376226305"
+      },
+      {
+        "dep": 295,
+        "name": "Szczecinek",
+        "off": 293,
+        "track": "2;6"
+      },
+      {
+        "dep": 332,
+        "name": "Chojnice",
+        "off": 330,
+        "track": "12"
+      },
+      {
+        "dep": 373,
+        "name": "Starogard Gdański",
+        "off": 372,
+        "track": "3;5"
+      },
+      {
+        "dep": 396,
+        "name": "Tczew",
+        "off": 388,
+        "track": "10"
+      },
+      {
+        "dep": 419,
+        "name": "Gdańsk Główny",
+        "off": 416,
+        "track": "2;4"
+      },
+      {
+        "dep": 427,
+        "name": "Gdańsk Wrzeszcz",
+        "off": 425,
+        "track": "501;502"
+      },
+      {
+        "dep": 431,
+        "name": "Gdańsk Zaspa",
+        "off": 430,
+        "track": "501;502"
+      },
+      {
+        "dep": 444,
+        "name": "Gdynia Wzgórze Św. Maksymiliana",
+        "off": 443,
+        "track": "101"
+      },
+      {
+        "dep": 460,
+        "name": "Gdynia Główna",
+        "off": 447,
+        "track": "OSM168198055"
+      },
+      {
+        "dep": 467,
+        "name": "Gdynia Chylonia",
+        "off": 466,
+        "track": "1;2"
+      },
+      {
+        "dep": 472,
+        "name": "Rumia Janowo",
+        "off": 471,
+        "track": "501;502"
+      },
+      {
+        "dep": 476,
+        "name": "Rumia",
+        "off": 475,
+        "track": "5"
+      },
+      {
+        "dep": 482,
+        "name": "Reda",
+        "off": 480,
+        "track": "2"
+      },
+      {
+        "dep": 490,
+        "name": "Mrzezino",
+        "off": 489,
+        "track": "1;2"
+      },
+      {
+        "dep": 496,
+        "name": "Żelistrzewo",
+        "off": 495,
+        "track": "1"
+      },
+      {
+        "dep": 502,
+        "name": "Puck",
+        "off": 501,
+        "track": "1;2"
+      },
+      {
+        "dep": 508,
+        "name": "Swarzewo",
+        "off": 507,
+        "track": "1"
+      },
+      {
+        "dep": 515,
+        "name": "Władysławowo",
+        "off": 513,
+        "track": "1;3"
+      },
+      {
+        "dep": 519,
+        "name": "Władysławowo Port",
+        "off": 518,
+        "track": "1"
+      },
+      {
+        "dep": 525,
+        "name": "Chałupy",
+        "off": 524,
+        "track": "1"
+      },
+      {
+        "dep": 532,
+        "name": "Kuźnica",
+        "off": 531,
+        "track": "1;3"
+      },
+      {
+        "dep": 540,
+        "name": "Jastarnia",
+        "off": 539,
+        "track": "1;3"
+      },
+      {
+        "dep": 546,
+        "name": "Jurata",
+        "off": 545,
+        "track": "1"
+      },
+      {
+        "name": "Hel",
+        "off": 553,
+        "track": "3;5"
+      }
+    ],
+    "takt": {
+      "end": "06:50",
+      "interval": 60,
+      "note": "Gesamtfahrzeit 9h13min; Kopfmachen Pasewalk (7 Min.) und Tczew (8 Min.); Flügelung in Gdynia Gł. (13 Min.) — 5-Teiler verbleibt dort, 3-Teiler fährt solo weiter nach Hel",
+      "start": "06:50"
+    }
+  },
+  "RE71_B": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Brandenburg Hbf",
+    "name": "RE71",
+    "rolling": "Solo 3-teiliger KISS Hel–Gdynia Gł., dort Kupplung zum 5+3-Verband (~210m) bis Brandenburg · Rückrichtung symmetrisch angenommen (keine PDF-Tabelle für diese Richtung)",
+    "stops": [
+      {
+        "name": "Hel",
+        "off": 0,
+        "track": "3;5"
+      },
+      {
+        "dep": 8,
+        "name": "Jurata",
+        "off": 7,
+        "track": "1"
+      },
+      {
+        "dep": 14,
+        "name": "Jastarnia",
+        "off": 13,
+        "track": "1;3"
+      },
+      {
+        "dep": 22,
+        "name": "Kuźnica",
+        "off": 21,
+        "track": "1;3"
+      },
+      {
+        "dep": 29,
+        "name": "Chałupy",
+        "off": 28,
+        "track": "1"
+      },
+      {
+        "dep": 35,
+        "name": "Władysławowo Port",
+        "off": 34,
+        "track": "1"
+      },
+      {
+        "dep": 40,
+        "name": "Władysławowo",
+        "off": 38,
+        "track": "1;3"
+      },
+      {
+        "dep": 46,
+        "name": "Swarzewo",
+        "off": 45,
+        "track": "1"
+      },
+      {
+        "dep": 52,
+        "name": "Puck",
+        "off": 51,
+        "track": "1;2"
+      },
+      {
+        "dep": 58,
+        "name": "Żelistrzewo",
+        "off": 57,
+        "track": "1"
+      },
+      {
+        "dep": 64,
+        "name": "Mrzezino",
+        "off": 63,
+        "track": "1;2"
+      },
+      {
+        "dep": 73,
+        "name": "Reda",
+        "off": 71,
+        "track": "2"
+      },
+      {
+        "dep": 78,
+        "name": "Rumia",
+        "off": 77,
+        "track": "1;2"
+      },
+      {
+        "dep": 82,
+        "name": "Rumia Janowo",
+        "off": 81,
+        "track": "501;502"
+      },
+      {
+        "dep": 87,
+        "name": "Gdynia Chylonia",
+        "off": 86,
+        "track": "1;2"
+      },
+      {
+        "dep": 106,
+        "name": "Gdynia Główna",
+        "off": 93,
+        "track": "OSM168198055"
+      },
+      {
+        "dep": 110,
+        "name": "Gdynia Wzgórze Św. Maksymiliana",
+        "off": 109,
+        "track": "101"
+      },
+      {
+        "dep": 123,
+        "name": "Gdańsk Zaspa",
+        "off": 122,
+        "track": "501;502"
+      },
+      {
+        "dep": 128,
+        "name": "Gdańsk Wrzeszcz",
+        "off": 126,
+        "track": "2;4"
+      },
+      {
+        "dep": 137,
+        "name": "Gdańsk Główny",
+        "off": 134,
+        "track": "1;3"
+      },
+      {
+        "dep": 165,
+        "name": "Tczew",
+        "off": 157,
+        "track": "6;8"
+      },
+      {
+        "dep": 181,
+        "name": "Starogard Gdański",
+        "off": 180,
+        "track": "3;5"
+      },
+      {
+        "dep": 223,
+        "name": "Chojnice",
+        "off": 221,
+        "track": "12"
+      },
+      {
+        "dep": 260,
+        "name": "Szczecinek",
+        "off": 258,
+        "track": "7"
+      },
+      {
+        "dep": 301,
+        "name": "Runowo Pomorskie",
+        "off": 300,
+        "track": "OSM376225390"
+      },
+      {
+        "dep": 336,
+        "name": "Szczecin Główny",
+        "off": 331,
+        "track": "3;5"
+      },
+      {
+        "dep": 373,
+        "name": "Pasewalk",
+        "off": 366,
+        "track": "2"
+      },
+      {
+        "dep": 410,
+        "name": "Angermünde",
+        "off": 408,
+        "track": "5"
+      },
+      {
+        "dep": 425,
+        "name": "Eberswalde Hbf",
+        "off": 423,
+        "track": "4"
+      },
+      {
+        "dep": 441,
+        "name": "Bernau (b Berlin)",
+        "off": 439,
+        "track": "5"
+      },
+      {
+        "dep": 474,
+        "name": "Flughafen BER",
+        "off": 471,
+        "track": "2"
+      },
+      {
+        "dep": 496,
+        "name": "Berlin Potsdamer Platz",
+        "off": 494,
+        "track": "4"
+      },
+      {
+        "dep": 506,
+        "name": "Berlin Hbf",
+        "off": 500,
+        "track": "4"
+      },
+      {
+        "dep": 523,
+        "name": "Berlin-Wannsee",
+        "off": 521,
+        "track": "5"
+      },
+      {
+        "dep": 533,
+        "name": "Potsdam Hbf",
+        "off": 531,
+        "track": "2"
+      },
+      {
+        "name": "Brandenburg Hbf",
+        "off": 553,
+        "track": "4"
+      }
+    ],
+    "takt": {
+      "end": "06:57",
+      "interval": 60,
+      "note": "Gesamtfahrzeit 9h13min (symmetrisch angenommen); Kupplung in Gdynia Gł. zum 5+3-Verband; Kopfmachen Tczew und Pasewalk",
+      "start": "06:57"
+    }
+  },
+  "RE77_A": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Berlin Ostbahnhof",
+    "extraTrips": [
+      {
+        "dep": "03:41",
+        "from": "Wittenberge"
+      },
+      {
+        "dep": "03:14",
+        "from": "Hamburg Hbf"
+      },
+      {
+        "dep": "03:19",
+        "from": "Neumünster"
+      },
+      {
+        "dep": "03:05",
+        "from": "Flensburg"
+      },
+      {
+        "dep": "04:05",
+        "from": "Flensburg"
+      },
+      {
+        "dep": "21:29",
+        "to": "Hamburg Hbf"
+      },
+      {
+        "dep": "00:29",
+        "to": "Neumünster"
+      }
+    ],
+    "name": "RE77",
+    "rolling": "6-teiliger Stadler KISS MS (Mehrsystem, Doppelstock), ~156m",
+    "stops": [
+      {
+        "name": "Fredericia",
+        "off": 0,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 16,
+        "name": "Kolding",
+        "off": 14,
+        "track": "1"
+      },
+      {
+        "dep": 26,
+        "name": "Lunderskov",
+        "off": 25,
+        "track": "OSM169817851"
+      },
+      {
+        "dep": 32,
+        "name": "Vamdrup",
+        "off": 31,
+        "track": "2"
+      },
+      {
+        "dep": 47,
+        "name": "Vojens",
+        "off": 46,
+        "track": "1"
+      },
+      {
+        "dep": 73,
+        "name": "Padborg",
+        "off": 71,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 96,
+        "name": "Flensburg",
+        "off": 86,
+        "track": "4"
+      },
+      {
+        "dep": 113,
+        "name": "Jübek",
+        "off": 112,
+        "track": "2"
+      },
+      {
+        "dep": 124,
+        "name": "Schleswig",
+        "off": 122,
+        "track": "3"
+      },
+      {
+        "dep": 144,
+        "name": "Rendsburg",
+        "off": 142,
+        "track": "1"
+      },
+      {
+        "dep": 170,
+        "name": "Neumünster",
+        "off": 167,
+        "track": "3"
+      },
+      {
+        "dep": 195,
+        "name": "Elmshorn",
+        "off": 193,
+        "track": "3"
+      },
+      {
+        "dep": 215,
+        "name": "Hamburg Dammtor",
+        "off": 213,
+        "track": "1"
+      },
+      {
+        "dep": 225,
+        "name": "Hamburg Hbf",
+        "off": 220,
+        "track": "1"
+      },
+      {
+        "dep": 252,
+        "name": "Büchen",
+        "off": 250,
+        "track": "22"
+      },
+      {
+        "dep": 272,
+        "name": "Hagenow Land",
+        "off": 271,
+        "track": "2"
+      },
+      {
+        "dep": 312,
+        "name": "Wittenberge",
+        "off": 310,
+        "track": "2"
+      },
+      {
+        "dep": 348,
+        "name": "Berlin-Spandau",
+        "off": 346,
+        "track": "5"
+      },
+      {
+        "dep": 363,
+        "name": "Berlin Hbf",
+        "off": 360,
+        "track": "7"
+      },
+      {
+        "dep": 367,
+        "name": "Berlin Friedrichstraße",
+        "off": 366,
+        "track": "11"
+      },
+      {
+        "dep": 372,
+        "name": "Berlin Alexanderplatz",
+        "off": 371,
+        "track": "1"
+      },
+      {
+        "name": "Berlin Ostbahnhof",
+        "off": 376,
+        "track": "10"
+      }
+    ],
+    "takt": {
+      "end": "19:29",
+      "interval": 60,
+      "start": "03:29"
+    }
+  },
+  "RE77_B": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Fredericia",
+    "extraTrips": [
+      {
+        "dep": "03:21",
+        "from": "Wittenberge"
+      },
+      {
+        "dep": "03:52",
+        "from": "Hamburg Hbf"
+      },
+      {
+        "dep": "03:45",
+        "from": "Neumünster"
+      },
+      {
+        "dep": "23:15",
+        "to": "Hamburg Hbf"
+      },
+      {
+        "dep": "00:15",
+        "to": "Wittenberge"
+      },
+      {
+        "dep": "01:15",
+        "to": "Wittenberge"
+      }
+    ],
+    "name": "RE77",
+    "rolling": "6-teiliger Stadler KISS MS (Mehrsystem, Doppelstock), ~156m",
+    "stops": [
+      {
+        "name": "Berlin Ostbahnhof",
+        "off": 0,
+        "track": "11"
+      },
+      {
+        "dep": 5,
+        "name": "Berlin Alexanderplatz",
+        "off": 4,
+        "track": "2"
+      },
+      {
+        "dep": 10,
+        "name": "Berlin Friedrichstraße",
+        "off": 9,
+        "track": "12"
+      },
+      {
+        "dep": 16,
+        "name": "Berlin Hbf",
+        "off": 13,
+        "track": "8"
+      },
+      {
+        "dep": 30,
+        "name": "Berlin-Spandau",
+        "off": 28,
+        "track": "6"
+      },
+      {
+        "dep": 66,
+        "name": "Wittenberge",
+        "off": 64,
+        "track": "3"
+      },
+      {
+        "dep": 105,
+        "name": "Hagenow Land",
+        "off": 104,
+        "track": "3"
+      },
+      {
+        "dep": 126,
+        "name": "Büchen",
+        "off": 124,
+        "track": "4"
+      },
+      {
+        "dep": 157,
+        "name": "Hamburg Hbf",
+        "off": 151,
+        "track": "2"
+      },
+      {
+        "dep": 164,
+        "name": "Hamburg Dammtor",
+        "off": 162,
+        "track": "2"
+      },
+      {
+        "dep": 184,
+        "name": "Elmshorn",
+        "off": 182,
+        "track": "1"
+      },
+      {
+        "dep": 210,
+        "name": "Neumünster",
+        "off": 207,
+        "track": "4"
+      },
+      {
+        "dep": 235,
+        "name": "Rendsburg",
+        "off": 233,
+        "track": "2"
+      },
+      {
+        "dep": 255,
+        "name": "Schleswig",
+        "off": 253,
+        "track": "1"
+      },
+      {
+        "dep": 265,
+        "name": "Jübek",
+        "off": 264,
+        "track": "1"
+      },
+      {
+        "dep": 291,
+        "name": "Flensburg",
+        "off": 281,
+        "track": "5"
+      },
+      {
+        "dep": 306,
+        "name": "Padborg",
+        "off": 304,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 331,
+        "name": "Vojens",
+        "off": 330,
+        "track": "2; 3"
+      },
+      {
+        "dep": 346,
+        "name": "Vamdrup",
+        "off": 345,
+        "track": "1"
+      },
+      {
+        "dep": 352,
+        "name": "Lunderskov",
+        "off": 351,
+        "track": "OSM169817852"
+      },
+      {
+        "dep": 363,
+        "name": "Kolding",
+        "off": 361,
+        "track": "1"
+      },
+      {
+        "name": "Fredericia",
+        "off": 377,
+        "track": "1 (geschätzt)"
+      }
+    ],
+    "takt": {
+      "end": "19:15",
+      "interval": 60,
+      "start": "03:15"
+    }
+  },
+  "RE7_A": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Bremen Hbf",
+    "name": "RE7",
+    "rolling": "8-teiliger Stadler KISS MS (Mehrsystem), 200 km/h",
+    "stops": [
+      {
+        "name": "Frankfurt (Main) Hbf",
+        "off": 0,
+        "track": "101"
+      },
+      {
+        "dep": 13,
+        "name": "Offenbach (Main) Hbf",
+        "off": 12,
+        "track": "4"
+      },
+      {
+        "dep": 26,
+        "name": "Hanau Hbf",
+        "off": 24,
+        "track": "1"
+      },
+      {
+        "dep": 43,
+        "name": "Gelnhausen",
+        "off": 42,
+        "track": "1"
+      },
+      {
+        "dep": 54,
+        "name": "Wächtersbach",
+        "off": 53,
+        "track": "2"
+      },
+      {
+        "dep": 73,
+        "name": "Schlüchtern",
+        "off": 72,
+        "track": "1"
+      },
+      {
+        "dep": 95,
+        "name": "Fulda",
+        "off": 92,
+        "track": "8"
+      },
+      {
+        "dep": 129,
+        "name": "Kassel-Wilhelmshöhe",
+        "off": 126,
+        "track": "3"
+      },
+      {
+        "dep": 151,
+        "name": "Göttingen",
+        "off": 149,
+        "track": "6"
+      },
+      {
+        "dep": 183,
+        "name": "Hannover-Messe/Laatzen",
+        "off": 182,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 197,
+        "name": "Hannover Hbf",
+        "off": 192,
+        "track": "1"
+      },
+      {
+        "dep": 210,
+        "name": "Wunstorf",
+        "off": 209,
+        "track": "4"
+      },
+      {
+        "dep": 229,
+        "name": "Nienburg (Weser)",
+        "off": 228,
+        "track": "5"
+      },
+      {
+        "dep": 245,
+        "name": "Verden (Aller)",
+        "off": 244,
+        "track": "1"
+      },
+      {
+        "name": "Bremen Hbf",
+        "off": 265,
+        "track": "8"
+      }
+    ],
+    "takt": {
+      "end": "19:35",
+      "interval": 60,
+      "note": "Frühfahrt ab 03:35, Spätfahrten 20:35–23:35 sowie 01:35",
+      "start": "04:35"
+    }
+  },
+  "RE7_B": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Frankfurt (Main) Hbf",
+    "name": "RE7",
+    "rolling": "8-teiliger Stadler KISS MS (Mehrsystem), 200 km/h",
+    "stops": [
+      {
+        "name": "Bremen Hbf",
+        "off": 0,
+        "track": "9"
+      },
+      {
+        "dep": 21,
+        "name": "Verden (Aller)",
+        "off": 20,
+        "track": "3"
+      },
+      {
+        "dep": 37,
+        "name": "Nienburg (Weser)",
+        "off": 36,
+        "track": "6"
+      },
+      {
+        "dep": 56,
+        "name": "Wunstorf",
+        "off": 55,
+        "track": "7"
+      },
+      {
+        "dep": 73,
+        "name": "Hannover Hbf",
+        "off": 68,
+        "track": "2"
+      },
+      {
+        "dep": 83,
+        "name": "Hannover-Messe/Laatzen",
+        "off": 82,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 116,
+        "name": "Göttingen",
+        "off": 114,
+        "track": "7"
+      },
+      {
+        "dep": 139,
+        "name": "Kassel-Wilhelmshöhe",
+        "off": 136,
+        "track": "4"
+      },
+      {
+        "dep": 173,
+        "name": "Fulda",
+        "off": 170,
+        "track": "9"
+      },
+      {
+        "dep": 193,
+        "name": "Schlüchtern",
+        "off": 192,
+        "track": "2"
+      },
+      {
+        "dep": 212,
+        "name": "Wächtersbach",
+        "off": 211,
+        "track": "3"
+      },
+      {
+        "dep": 223,
+        "name": "Gelnhausen",
+        "off": 222,
+        "track": "2"
+      },
+      {
+        "dep": 241,
+        "name": "Hanau Hbf",
+        "off": 239,
+        "track": "2"
+      },
+      {
+        "dep": 253,
+        "name": "Offenbach (Main) Hbf",
+        "off": 252,
+        "track": "1"
+      },
+      {
+        "name": "Frankfurt (Main) Hbf",
+        "off": 265,
+        "track": "102"
+      }
+    ],
+    "takt": {
+      "end": "19:00",
+      "interval": 60,
+      "note": "Spätfahrten 20:00–23:00 sowie 01:00",
+      "start": "04:00"
+    }
+  },
+  "RE80_A": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Saarbrücken Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:09",
+        "from": "Kaiserslautern Hbf"
+      },
+      {
+        "dep": "03:21",
+        "from": "Mannheim Hbf"
+      },
+      {
+        "dep": "03:27",
+        "from": "Stuttgart Hbf (tief)"
+      },
+      {
+        "dep": "03:40",
+        "from": "Ulm Hbf"
+      },
+      {
+        "dep": "03:11",
+        "from": "Lindau-Reutin"
+      },
+      {
+        "dep": "03:09",
+        "from": "Buchs SG"
+      },
+      {
+        "dep": "19:27",
+        "to": "Buchs SG"
+      },
+      {
+        "dep": "20:27",
+        "to": "Lindau-Reutin"
+      },
+      {
+        "dep": "21:27",
+        "to": "Ulm Hbf"
+      },
+      {
+        "dep": "22:27",
+        "to": "Stuttgart Hbf (tief)"
+      },
+      {
+        "dep": "23:27",
+        "to": "Mannheim Hbf"
+      },
+      {
+        "dep": "00:27",
+        "to": "Kaiserslautern Hbf"
+      }
+    ],
+    "name": "RE80",
+    "rolling": "8-teiliger Stadler KISS B Doppelstock, ~210m, Akkubetrieb Memmingen–Neu-Ulm",
+    "stops": [
+      {
+        "name": "Chur",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 11,
+        "name": "Landquart",
+        "off": 9,
+        "track": "8"
+      },
+      {
+        "dep": 22,
+        "name": "Sargans",
+        "off": 20,
+        "track": "F"
+      },
+      {
+        "dep": 42,
+        "name": "Buchs SG",
+        "off": 36,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 63,
+        "name": "Feldkirch",
+        "off": 57,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 81,
+        "name": "Dornbirn",
+        "off": 79,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 94,
+        "name": "Bregenz",
+        "off": 92,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 104,
+        "name": "Lindau-Reutin",
+        "off": 101,
+        "track": "24"
+      },
+      {
+        "dep": 132,
+        "name": "Kißlegg",
+        "off": 130,
+        "track": "2"
+      },
+      {
+        "dep": 155,
+        "name": "Memmingen",
+        "off": 153,
+        "track": "2"
+      },
+      {
+        "dep": 184,
+        "name": "Neu-Ulm",
+        "off": 182,
+        "track": "2"
+      },
+      {
+        "dep": 193,
+        "name": "Ulm Hbf",
+        "off": 188,
+        "track": "25"
+      },
+      {
+        "dep": 206,
+        "name": "Merklingen",
+        "off": 204,
+        "track": "1"
+      },
+      {
+        "dep": 227,
+        "name": "Stuttgart Flughafen",
+        "off": 225,
+        "track": "1"
+      },
+      {
+        "dep": 240,
+        "name": "Stuttgart Hbf (tief)",
+        "off": 235,
+        "track": "101"
+      },
+      {
+        "dep": 279,
+        "name": "Heidelberg Hbf",
+        "off": 277,
+        "track": "10"
+      },
+      {
+        "dep": 294,
+        "name": "Mannheim Hbf",
+        "off": 291,
+        "track": "11"
+      },
+      {
+        "dep": 301,
+        "name": "Ludwigshafen (Rhein) Hbf",
+        "off": 299,
+        "track": "9"
+      },
+      {
+        "dep": 321,
+        "name": "Neustadt (Weinstraße) Hbf",
+        "off": 319,
+        "track": "1"
+      },
+      {
+        "dep": 342,
+        "name": "Kaiserslautern Hbf",
+        "off": 339,
+        "track": "8"
+      },
+      {
+        "dep": 354,
+        "name": "Landstuhl",
+        "off": 352,
+        "track": "2"
+      },
+      {
+        "dep": 370,
+        "name": "Homburg (Saar) Hbf",
+        "off": 367,
+        "track": "5"
+      },
+      {
+        "dep": 384,
+        "name": "Neunkirchen (Saar) Hbf",
+        "off": 382,
+        "track": "2"
+      },
+      {
+        "name": "Saarbrücken Hbf",
+        "off": 393,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "18:27",
+      "interval": 60,
+      "note": "Treppen-Kaskade: 6 Frühzüge mit versetztem Startbahnhof, 6 Spätzüge mit versetztem Endbahnhof",
+      "start": "03:27"
+    }
+  },
+  "RE80_B": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Chur",
+    "extraTrips": [
+      {
+        "dep": "03:36",
+        "from": "Buchs SG"
+      },
+      {
+        "dep": "03:52",
+        "from": "Lindau-Reutin"
+      },
+      {
+        "dep": "03:25",
+        "from": "Ulm Hbf"
+      },
+      {
+        "dep": "03:38",
+        "from": "Stuttgart Hbf (tief)"
+      },
+      {
+        "dep": "03:42",
+        "from": "Mannheim Hbf"
+      },
+      {
+        "dep": "03:54",
+        "from": "Kaiserslautern Hbf"
+      },
+      {
+        "dep": "20:00",
+        "to": "Buchs SG"
+      },
+      {
+        "dep": "21:00",
+        "to": "Lindau-Reutin"
+      },
+      {
+        "dep": "22:00",
+        "to": "Ulm Hbf"
+      },
+      {
+        "dep": "23:00",
+        "to": "Stuttgart Hbf (tief)"
+      },
+      {
+        "dep": "00:00",
+        "to": "Mannheim Hbf"
+      },
+      {
+        "dep": "01:00",
+        "to": "Kaiserslautern Hbf"
+      }
+    ],
+    "name": "RE80",
+    "rolling": "8-teiliger Stadler KISS B Doppelstock, ~210m, Akkubetrieb Neu-Ulm–Memmingen",
+    "stops": [
+      {
+        "name": "Saarbrücken Hbf",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 11,
+        "name": "Neunkirchen (Saar) Hbf",
+        "off": 9,
+        "track": "3"
+      },
+      {
+        "dep": 26,
+        "name": "Homburg (Saar) Hbf",
+        "off": 23,
+        "track": "6"
+      },
+      {
+        "dep": 41,
+        "name": "Landstuhl",
+        "off": 39,
+        "track": "3"
+      },
+      {
+        "dep": 54,
+        "name": "Kaiserslautern Hbf",
+        "off": 51,
+        "track": "10"
+      },
+      {
+        "dep": 74,
+        "name": "Neustadt (Weinstraße) Hbf",
+        "off": 72,
+        "track": "4"
+      },
+      {
+        "dep": 94,
+        "name": "Ludwigshafen (Rhein) Hbf",
+        "off": 92,
+        "track": "10"
+      },
+      {
+        "dep": 102,
+        "name": "Mannheim Hbf",
+        "off": 99,
+        "track": "12"
+      },
+      {
+        "dep": 116,
+        "name": "Heidelberg Hbf",
+        "off": 114,
+        "track": "1"
+      },
+      {
+        "dep": 158,
+        "name": "Stuttgart Hbf (tief)",
+        "off": 153,
+        "track": "102"
+      },
+      {
+        "dep": 168,
+        "name": "Stuttgart Flughafen",
+        "off": 166,
+        "track": "2"
+      },
+      {
+        "dep": 189,
+        "name": "Merklingen",
+        "off": 187,
+        "track": "4"
+      },
+      {
+        "dep": 205,
+        "name": "Ulm Hbf",
+        "off": 200,
+        "track": "4"
+      },
+      {
+        "dep": 211,
+        "name": "Neu-Ulm",
+        "off": 209,
+        "track": "3"
+      },
+      {
+        "dep": 240,
+        "name": "Memmingen",
+        "off": 238,
+        "track": "3"
+      },
+      {
+        "dep": 263,
+        "name": "Kißlegg",
+        "off": 261,
+        "track": "3"
+      },
+      {
+        "dep": 292,
+        "name": "Lindau-Reutin",
+        "off": 289,
+        "track": "23"
+      },
+      {
+        "dep": 301,
+        "name": "Bregenz",
+        "off": 299,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 314,
+        "name": "Dornbirn",
+        "off": 312,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 336,
+        "name": "Feldkirch",
+        "off": 330,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 357,
+        "name": "Buchs SG",
+        "off": 351,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 373,
+        "name": "Sargans",
+        "off": 371,
+        "track": "F"
+      },
+      {
+        "dep": 384,
+        "name": "Landquart",
+        "off": 382,
+        "track": "8"
+      },
+      {
+        "name": "Chur",
+        "off": 393,
+        "track": "2"
+      }
+    ],
+    "takt": {
+      "end": "19:00",
+      "interval": 60,
+      "note": "Treppen-Kaskade: 6 Frühzüge mit versetztem Startbahnhof, 6 Spätzüge mit versetztem Endbahnhof",
+      "start": "04:00"
+    }
+  },
+  "RE90_A": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Düsseldorf Hbf",
+    "extraTrips": [
+      {
+        "dep": "04:06",
+        "from": "Aachen Hbf"
+      },
+      {
+        "dep": "03:38",
+        "from": "Liège-Guillemins"
+      },
+      {
+        "dep": "03:15",
+        "from": "Ettelbruck"
+      },
+      {
+        "dep": "03:51",
+        "from": "Luxembourg"
+      },
+      {
+        "dep": "03:21",
+        "from": "Thionville"
+      },
+      {
+        "dep": "03:55",
+        "from": "Metz-Ville"
+      },
+      {
+        "dep": "20:00",
+        "to": "Aachen Hbf"
+      },
+      {
+        "dep": "21:00",
+        "to": "Liège-Guillemins"
+      },
+      {
+        "dep": "22:00",
+        "to": "Ettelbruck"
+      },
+      {
+        "dep": "23:00",
+        "to": "Luxembourg"
+      },
+      {
+        "dep": "00:00",
+        "to": "Thionville"
+      },
+      {
+        "dep": "01:00",
+        "to": "Metz-Ville"
+      }
+    ],
+    "name": "RE90",
+    "rolling": "6-teiliger Stadler KISS Drei-System-Sonderbau, ~156m, Kopfmachen in Liège-Guillemins",
+    "stops": [
+      {
+        "name": "Saarbrücken Hbf",
+        "off": 0,
+        "track": "11"
+      },
+      {
+        "dep": 11,
+        "name": "Forbach",
+        "off": 9,
+        "track": "2;4"
+      },
+      {
+        "dep": 23,
+        "name": "Béning",
+        "off": 21,
+        "track": "4"
+      },
+      {
+        "dep": 35,
+        "name": "Saint-Avold",
+        "off": 33,
+        "track": "2"
+      },
+      {
+        "dep": 55,
+        "name": "Metz-Ville",
+        "off": 53,
+        "track": "8;9"
+      },
+      {
+        "dep": 68,
+        "name": "Hagondange",
+        "off": 66,
+        "track": "A"
+      },
+      {
+        "dep": 81,
+        "name": "Thionville",
+        "off": 79,
+        "track": "E;F"
+      },
+      {
+        "dep": 96,
+        "name": "Bettembourg",
+        "off": 94,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 111,
+        "name": "Luxembourg",
+        "off": 106,
+        "track": "OSM854863908"
+      },
+      {
+        "dep": 135,
+        "name": "Ettelbruck",
+        "off": 133,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 218,
+        "name": "Liège-Guillemins",
+        "off": 214,
+        "track": "8;9"
+      },
+      {
+        "dep": 246,
+        "name": "Aachen Hbf",
+        "off": 241,
+        "track": "1"
+      },
+      {
+        "dep": 261,
+        "name": "Herzogenrath",
+        "off": 259,
+        "track": "2"
+      },
+      {
+        "dep": 270,
+        "name": "Geilenkirchen",
+        "off": 268,
+        "track": "1"
+      },
+      {
+        "dep": 284,
+        "name": "Erkelenz",
+        "off": 282,
+        "track": "1"
+      },
+      {
+        "dep": 292,
+        "name": "Rheydt Hbf",
+        "off": 290,
+        "track": "4"
+      },
+      {
+        "dep": 297,
+        "name": "Mönchengladbach Hbf",
+        "off": 295,
+        "track": "6"
+      },
+      {
+        "dep": 312,
+        "name": "Neuss Hbf",
+        "off": 310,
+        "track": "7"
+      },
+      {
+        "dep": 320,
+        "name": "Düsseldorf-Bilk",
+        "off": 318,
+        "track": "1"
+      },
+      {
+        "name": "Düsseldorf Hbf",
+        "off": 324,
+        "track": "13"
+      }
+    ],
+    "takt": {
+      "end": "19:00",
+      "interval": 60,
+      "note": "Treppen-Kaskade: 6 Frühzüge mit versetztem Startbahnhof, 6 Spätzüge mit versetztem Endbahnhof (Umlaufsymmetrie 01:15-02:30 Uhr)",
+      "start": "04:00"
+    }
+  },
+  "RE90_B": {
+    "cars": 6,
+    "coupled": false,
+    "dest": "Saarbrücken Hbf",
+    "extraTrips": [
+      {
+        "dep": "02:35",
+        "from": "Metz-Ville"
+      },
+      {
+        "dep": "02:42",
+        "from": "Luxembourg"
+      },
+      {
+        "dep": "03:13",
+        "from": "Ettelbruck"
+      },
+      {
+        "dep": "02:49",
+        "from": "Liège-Guillemins"
+      },
+      {
+        "dep": "03:24",
+        "from": "Aachen Hbf"
+      },
+      {
+        "dep": "03:29",
+        "from": "Mönchengladbach Hbf"
+      },
+      {
+        "dep": "19:02",
+        "to": "Metz-Ville"
+      },
+      {
+        "dep": "20:02",
+        "to": "Luxembourg"
+      },
+      {
+        "dep": "21:02",
+        "to": "Ettelbruck"
+      },
+      {
+        "dep": "22:02",
+        "to": "Liège-Guillemins"
+      },
+      {
+        "dep": "23:02",
+        "to": "Aachen Hbf"
+      },
+      {
+        "dep": "00:02",
+        "to": "Mönchengladbach Hbf"
+      }
+    ],
+    "name": "RE90",
+    "rolling": "6-teiliger Stadler KISS Drei-System-Sonderbau, ~156m, Kopfmachen in Liège-Guillemins",
+    "stops": [
+      {
+        "name": "Düsseldorf Hbf",
+        "off": 0,
+        "track": "14"
+      },
+      {
+        "dep": 6,
+        "name": "Düsseldorf-Bilk",
+        "off": 4,
+        "track": "2"
+      },
+      {
+        "dep": 14,
+        "name": "Neuss Hbf",
+        "off": 12,
+        "track": "8"
+      },
+      {
+        "dep": 29,
+        "name": "Mönchengladbach Hbf",
+        "off": 27,
+        "track": "2"
+      },
+      {
+        "dep": 34,
+        "name": "Rheydt Hbf",
+        "off": 32,
+        "track": "1"
+      },
+      {
+        "dep": 42,
+        "name": "Erkelenz",
+        "off": 40,
+        "track": "2"
+      },
+      {
+        "dep": 56,
+        "name": "Geilenkirchen",
+        "off": 54,
+        "track": "2"
+      },
+      {
+        "dep": 65,
+        "name": "Herzogenrath",
+        "off": 63,
+        "track": "3"
+      },
+      {
+        "dep": 82,
+        "name": "Aachen Hbf",
+        "off": 77,
+        "track": "2"
+      },
+      {
+        "dep": 109,
+        "name": "Liège-Guillemins",
+        "off": 105,
+        "track": "6;7"
+      },
+      {
+        "dep": 193,
+        "name": "Ettelbruck",
+        "off": 191,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 220,
+        "name": "Luxembourg",
+        "off": 215,
+        "track": "OSM854863909"
+      },
+      {
+        "dep": 232,
+        "name": "Bettembourg",
+        "off": 230,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 247,
+        "name": "Thionville",
+        "off": 245,
+        "track": "E;F"
+      },
+      {
+        "dep": 260,
+        "name": "Hagondange",
+        "off": 258,
+        "track": "D;E"
+      },
+      {
+        "dep": 273,
+        "name": "Metz-Ville",
+        "off": 271,
+        "track": "OSM711357564"
+      },
+      {
+        "dep": 293,
+        "name": "Saint-Avold",
+        "off": 291,
+        "track": "1"
+      },
+      {
+        "dep": 305,
+        "name": "Béning",
+        "off": 303,
+        "track": "2;3"
+      },
+      {
+        "dep": 317,
+        "name": "Forbach",
+        "off": 315,
+        "track": "1"
+      },
+      {
+        "name": "Saarbrücken Hbf",
+        "off": 326,
+        "track": "6"
+      }
+    ],
+    "takt": {
+      "end": "18:02",
+      "interval": 60,
+      "note": "Treppen-Kaskade: 6 Frühzüge mit versetztem Startbahnhof, 6 Spätzüge mit versetztem Endbahnhof (Umlaufsymmetrie 00:31-01:46 Uhr)",
+      "start": "03:02"
+    }
+  },
+  "RE90b_GS": {
+    "cars": 3,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": "Leer (Ostfriesl)",
+      "coupledTo": "Kiel Hbf",
+      "note": "Fährt solo als 3-teiliger Akkuzug von Groningen bis Leer (Ostfriesl). Dort Kupplung mit RE90b aus Norddeich Mole zum 236m-Verband bis Kiel Hbf — dort erneute Trennung: dieser Zugteil fährt solo weiter nach Schönberger Strand, der Stammzug endet in Kiel.",
+      "ownCars": 3,
+      "partner": "RE90b_NK",
+      "partnerCars": 6,
+      "role": "join"
+    },
+    "dest": "Schönberger Strand",
+    "name": "RE90b",
+    "rolling": "3-teiliger Stadler KISS B (Akkuzug, ~80m)",
+    "stops": [
+      {
+        "name": "Groningen",
+        "off": 0,
+        "track": "2"
+      },
+      {
+        "dep": 11,
+        "name": "Hoogezand-Sappemeer",
+        "off": 10,
+        "track": "1"
+      },
+      {
+        "dep": 23,
+        "name": "Scheemda",
+        "off": 22,
+        "track": "2"
+      },
+      {
+        "dep": 29,
+        "name": "Winschoten",
+        "off": 28,
+        "track": "1"
+      },
+      {
+        "dep": 39,
+        "name": "Bad Nieuweschans",
+        "off": 38,
+        "track": "2"
+      },
+      {
+        "dep": 45,
+        "name": "Weener",
+        "off": 44,
+        "track": "1"
+      },
+      {
+        "dep": 57,
+        "name": "Leer (Ostfriesl)",
+        "off": 54,
+        "track": "1"
+      },
+      {
+        "dep": 95,
+        "name": "Oldenburg (Oldb) Hbf",
+        "off": 93,
+        "track": "3"
+      },
+      {
+        "dep": 126,
+        "name": "Bremen Hbf",
+        "off": 123,
+        "track": "1"
+      },
+      {
+        "dep": 146,
+        "name": "Rotenburg (Wümme)",
+        "off": 145,
+        "track": "4"
+      },
+      {
+        "dep": 162,
+        "name": "Buchholz (Nordheide)",
+        "off": 161,
+        "track": "1"
+      },
+      {
+        "dep": 178,
+        "name": "Hamburg-Harburg",
+        "off": 175,
+        "track": "3"
+      },
+      {
+        "dep": 186,
+        "name": "Hamburg-Elbbrücken",
+        "off": 183,
+        "track": "fiktiv-1"
+      },
+      {
+        "dep": 210,
+        "name": "Elmshorn",
+        "off": 208,
+        "track": "2"
+      },
+      {
+        "dep": 235,
+        "name": "Neumünster",
+        "off": 233,
+        "track": "3"
+      },
+      {
+        "dep": 265,
+        "name": "Kiel Hbf",
+        "off": 254,
+        "track": "5"
+      },
+      {
+        "dep": 273,
+        "name": "Schönkirchen",
+        "off": 272,
+        "track": "1"
+      },
+      {
+        "dep": 281,
+        "name": "Probsteierhagen",
+        "off": 280,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 289,
+        "name": "Schönberg (Holstein)",
+        "off": 288,
+        "track": "2"
+      },
+      {
+        "name": "Schönberger Strand",
+        "off": 296,
+        "track": "OSM34993318"
+      }
+    ],
+    "takt": {
+      "end": "20:39",
+      "interval": 60,
+      "note": "Zweistufige Flügelung: Kupplung/Trennung Kiel Hbf UND Leer (Ostfriesl) — siehe coupling-Feld",
+      "start": "04:39"
+    }
+  },
+  "RE90b_KN": {
+    "cars": 6,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": null,
+      "coupledTo": "Leer (Ostfriesl)",
+      "note": "Startet in Kiel Hbf gekuppelt mit dem aus Schönberger Strand ankommenden Akkuzugteil (RE90b nach Groningen) zum 236m-Verband. Trennung in Leer (Ostfriesl): dieser 6-teilige Stammzug fährt solo weiter über Emden Hbf (Kopfmachen) nach Norddeich Mole.",
+      "ownCars": 6,
+      "partner": "RE90b_SG",
+      "partnerCars": 3,
+      "role": "split"
+    },
+    "dest": "Norddeich Mole",
+    "name": "RE90b",
+    "rolling": "6-teiliger Stadler KISS Stammzug, ~156m",
+    "stops": [
+      {
+        "name": "Kiel Hbf",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 21,
+        "name": "Neumünster",
+        "off": 19,
+        "track": "4"
+      },
+      {
+        "dep": 45,
+        "name": "Elmshorn",
+        "off": 43,
+        "track": "3"
+      },
+      {
+        "dep": 70,
+        "name": "Hamburg-Elbbrücken",
+        "off": 67,
+        "track": "fiktiv-2"
+      },
+      {
+        "dep": 81,
+        "name": "Hamburg-Harburg",
+        "off": 78,
+        "track": "4"
+      },
+      {
+        "dep": 94,
+        "name": "Buchholz (Nordheide)",
+        "off": 93,
+        "track": "1"
+      },
+      {
+        "dep": 111,
+        "name": "Rotenburg (Wümme)",
+        "off": 109,
+        "track": "5"
+      },
+      {
+        "dep": 133,
+        "name": "Bremen Hbf",
+        "off": 130,
+        "track": "2"
+      },
+      {
+        "dep": 162,
+        "name": "Oldenburg (Oldb) Hbf",
+        "off": 160,
+        "track": "4"
+      },
+      {
+        "dep": 206,
+        "name": "Leer (Ostfriesl)",
+        "off": 198,
+        "track": "2"
+      },
+      {
+        "dep": 226,
+        "name": "Emden Hbf",
+        "off": 223,
+        "track": "2"
+      },
+      {
+        "dep": 245,
+        "name": "Norden",
+        "off": 244,
+        "track": "1"
+      },
+      {
+        "dep": 251,
+        "name": "Norddeich",
+        "off": 250,
+        "track": "1"
+      },
+      {
+        "name": "Norddeich Mole",
+        "off": 254,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "20:07",
+      "interval": 60,
+      "note": "Zweistufige Flügelung: Kupplung/Trennung Kiel Hbf UND Leer (Ostfriesl) — siehe coupling-Feld",
+      "start": "04:07"
+    }
+  },
+  "RE90b_NK": {
+    "cars": 6,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": "Leer (Ostfriesl)",
+      "coupledTo": null,
+      "note": "Fährt solo als 6-teiliger Stammzug von Norddeich Mole (nach Kopfmachen in Emden Hbf) bis Leer (Ostfriesl). Dort Kupplung mit RE90b aus Groningen zum 236m-Verband. Endet in Kiel Hbf (Wende) — der andere Zugteil fährt dort solo weiter nach Schönberger Strand.",
+      "ownCars": 6,
+      "partner": "RE90b_GS",
+      "partnerCars": 3,
+      "role": "join"
+    },
+    "dest": "Kiel Hbf",
+    "name": "RE90b",
+    "rolling": "6-teiliger Stadler KISS Stammzug, ~156m",
+    "stops": [
+      {
+        "name": "Norddeich Mole",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 3,
+        "name": "Norddeich",
+        "off": 2,
+        "track": "2"
+      },
+      {
+        "dep": 9,
+        "name": "Norden",
+        "off": 8,
+        "track": "3"
+      },
+      {
+        "dep": 31,
+        "name": "Emden Hbf",
+        "off": 28,
+        "track": "3"
+      },
+      {
+        "dep": 65,
+        "name": "Leer (Ostfriesl)",
+        "off": 49,
+        "track": "4"
+      },
+      {
+        "dep": 103,
+        "name": "Oldenburg (Oldb) Hbf",
+        "off": 101,
+        "track": "3"
+      },
+      {
+        "dep": 134,
+        "name": "Bremen Hbf",
+        "off": 131,
+        "track": "3"
+      },
+      {
+        "dep": 154,
+        "name": "Rotenburg (Wümme)",
+        "off": 153,
+        "track": "6"
+      },
+      {
+        "dep": 170,
+        "name": "Buchholz (Nordheide)",
+        "off": 169,
+        "track": "1"
+      },
+      {
+        "dep": 186,
+        "name": "Hamburg-Harburg",
+        "off": 183,
+        "track": "1"
+      },
+      {
+        "dep": 194,
+        "name": "Hamburg-Elbbrücken",
+        "off": 191,
+        "track": "fiktiv-3"
+      },
+      {
+        "dep": 218,
+        "name": "Elmshorn",
+        "off": 216,
+        "track": "1"
+      },
+      {
+        "dep": 243,
+        "name": "Neumünster",
+        "off": 241,
+        "track": "5"
+      },
+      {
+        "name": "Kiel Hbf",
+        "off": 262,
+        "track": "3"
+      }
+    ],
+    "takt": {
+      "end": "20:44",
+      "interval": 60,
+      "note": "Zweistufige Flügelung: Kupplung/Trennung Kiel Hbf UND Leer (Ostfriesl) — siehe coupling-Feld",
+      "start": "04:44"
+    }
+  },
+  "RE90b_SG": {
+    "cars": 3,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": "Kiel Hbf",
+      "coupledTo": "Leer (Ostfriesl)",
+      "note": "Ab Kiel Hbf gekuppelt mit RE90b Richtung Norddeich Mole (dort eigener Zugursprung) zum 236m-Verband. Trennung in Leer (Ostfriesl): dieser Zugteil fährt solo als 3-teiliger Akkuzug unter niederländischem 1,5 kV DC weiter nach Groningen. Vor Kiel Hbf fährt dieser Teil bereits solo ab Schönberger Strand.",
+      "ownCars": 3,
+      "partner": "RE90b_KN",
+      "partnerCars": 6,
+      "role": "split"
+    },
+    "dest": "Groningen",
+    "name": "RE90b",
+    "rolling": "3-teiliger Stadler KISS B (Akkuzug, ~80m)",
+    "stops": [
+      {
+        "name": "Schönberger Strand",
+        "off": 0,
+        "track": "OSM34993318"
+      },
+      {
+        "dep": 8,
+        "name": "Schönberg (Holstein)",
+        "off": 7,
+        "track": "2"
+      },
+      {
+        "dep": 16,
+        "name": "Probsteierhagen",
+        "off": 15,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "dep": 24,
+        "name": "Schönkirchen",
+        "off": 23,
+        "track": "2"
+      },
+      {
+        "dep": 43,
+        "name": "Kiel Hbf",
+        "off": 32,
+        "track": "4"
+      },
+      {
+        "dep": 64,
+        "name": "Neumünster",
+        "off": 62,
+        "track": "6"
+      },
+      {
+        "dep": 88,
+        "name": "Elmshorn",
+        "off": 86,
+        "track": "2"
+      },
+      {
+        "dep": 113,
+        "name": "Hamburg-Elbbrücken",
+        "off": 110,
+        "track": "fiktiv-4"
+      },
+      {
+        "dep": 124,
+        "name": "Hamburg-Harburg",
+        "off": 121,
+        "track": "2"
+      },
+      {
+        "dep": 137,
+        "name": "Buchholz (Nordheide)",
+        "off": 136,
+        "track": "1"
+      },
+      {
+        "dep": 154,
+        "name": "Rotenburg (Wümme)",
+        "off": 152,
+        "track": "4"
+      },
+      {
+        "dep": 176,
+        "name": "Bremen Hbf",
+        "off": 173,
+        "track": "7"
+      },
+      {
+        "dep": 205,
+        "name": "Oldenburg (Oldb) Hbf",
+        "off": 203,
+        "track": "4"
+      },
+      {
+        "dep": 247,
+        "name": "Leer (Ostfriesl)",
+        "off": 241,
+        "track": "1"
+      },
+      {
+        "dep": 257,
+        "name": "Weener",
+        "off": 256,
+        "track": "1"
+      },
+      {
+        "dep": 263,
+        "name": "Bad Nieuweschans",
+        "off": 262,
+        "track": "1"
+      },
+      {
+        "dep": 273,
+        "name": "Winschoten",
+        "off": 272,
+        "track": "2"
+      },
+      {
+        "dep": 279,
+        "name": "Scheemda",
+        "off": 278,
+        "track": "1"
+      },
+      {
+        "dep": 291,
+        "name": "Hoogezand-Sappemeer",
+        "off": 290,
+        "track": "2"
+      },
+      {
+        "name": "Groningen",
+        "off": 302,
+        "track": "3"
+      }
+    ],
+    "takt": {
+      "end": "20:07",
+      "interval": 60,
+      "note": "Zweistufige Flügelung: Kupplung/Trennung Kiel Hbf UND Leer (Ostfriesl) — siehe coupling-Feld",
+      "start": "04:07"
+    }
+  },
+  "RE91_BO": {
+    "cars": 3,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": null,
+      "coupledTo": "Bergen auf Rügen",
+      "note": "Fährt als 156m-Doppeltraktion gemeinsam mit RE91 nach Sassnitz von Bremerhaven-Lehe bis Bergen auf Rügen. Trennung dort: dieser Zugteil fährt solo weiter nach Ostseebad Binz.",
+      "ownCars": 3,
+      "partner": "RE91_BS",
+      "partnerCars": 3,
+      "role": "split"
+    },
+    "dest": "Ostseebad Binz",
+    "name": "RE91",
+    "rolling": "3-teiliger Stadler KISS B (Akkuzug, ~80m), ab Bergen auf Rügen Doppeltraktion (156m)",
+    "stops": [
+      {
+        "name": "Bremerhaven-Lehe",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 7,
+        "name": "Bremerhaven Hbf",
+        "off": 5,
+        "track": "3"
+      },
+      {
+        "dep": 39,
+        "name": "Bremervörde",
+        "off": 37,
+        "track": "2;4"
+      },
+      {
+        "dep": 76,
+        "name": "Buxtehude",
+        "off": 70,
+        "track": "4"
+      },
+      {
+        "dep": 93,
+        "name": "Hamburg-Harburg",
+        "off": 90,
+        "track": "11"
+      },
+      {
+        "dep": 104,
+        "name": "Hamburg-Elbbrücken",
+        "off": 101,
+        "track": "fiktiv-1"
+      },
+      {
+        "dep": 130,
+        "name": "Büchen",
+        "off": 124,
+        "track": "1"
+      },
+      {
+        "dep": 152,
+        "name": "Hagenow Land",
+        "off": 149,
+        "track": "2"
+      },
+      {
+        "dep": 170,
+        "name": "Schwerin Hbf",
+        "off": 167,
+        "track": "2"
+      },
+      {
+        "dep": 186,
+        "name": "Bad Kleinen",
+        "off": 184,
+        "track": "1"
+      },
+      {
+        "dep": 223,
+        "name": "Rostock Hbf",
+        "off": 217,
+        "track": "5"
+      },
+      {
+        "dep": 234,
+        "name": "Rövershagen",
+        "off": 233,
+        "track": "1"
+      },
+      {
+        "dep": 260,
+        "name": "Velgast",
+        "off": 259,
+        "track": "1"
+      },
+      {
+        "dep": 279,
+        "name": "Stralsund Hbf",
+        "off": 276,
+        "track": "1"
+      },
+      {
+        "dep": 309,
+        "name": "Bergen auf Rügen",
+        "off": 299,
+        "track": "2"
+      },
+      {
+        "name": "Ostseebad Binz",
+        "off": 324,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "20:51",
+      "interval": 60,
+      "note": "Frühfahrten ab 03:04, Spätfahrten bis 00:51",
+      "start": "04:51"
+    }
+  },
+  "RE91_BS": {
+    "cars": 3,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": null,
+      "coupledTo": "Bergen auf Rügen",
+      "note": "Fährt als 156m-Doppeltraktion gemeinsam mit RE91 nach Ostseebad Binz von Bremerhaven-Lehe bis Bergen auf Rügen. Trennung dort: dieser Zugteil fährt solo weiter nach Sassnitz.",
+      "ownCars": 3,
+      "partner": "RE91_BO",
+      "partnerCars": 3,
+      "role": "split"
+    },
+    "dest": "Sassnitz",
+    "name": "RE91",
+    "rolling": "3-teiliger Stadler KISS B (Akkuzug, ~80m), ab Bergen auf Rügen Doppeltraktion (156m)",
+    "stops": [
+      {
+        "name": "Bremerhaven-Lehe",
+        "off": 0,
+        "track": "4"
+      },
+      {
+        "dep": 7,
+        "name": "Bremerhaven Hbf",
+        "off": 5,
+        "track": "2"
+      },
+      {
+        "dep": 39,
+        "name": "Bremervörde",
+        "off": 37,
+        "track": "OSM229426901"
+      },
+      {
+        "dep": 76,
+        "name": "Buxtehude",
+        "off": 70,
+        "track": "1"
+      },
+      {
+        "dep": 93,
+        "name": "Hamburg-Harburg",
+        "off": 90,
+        "track": "12"
+      },
+      {
+        "dep": 104,
+        "name": "Hamburg-Elbbrücken",
+        "off": 101,
+        "track": "fiktiv-2"
+      },
+      {
+        "dep": 130,
+        "name": "Büchen",
+        "off": 124,
+        "track": "22"
+      },
+      {
+        "dep": 152,
+        "name": "Hagenow Land",
+        "off": 149,
+        "track": "3"
+      },
+      {
+        "dep": 170,
+        "name": "Schwerin Hbf",
+        "off": 167,
+        "track": "1"
+      },
+      {
+        "dep": 186,
+        "name": "Bad Kleinen",
+        "off": 184,
+        "track": "4"
+      },
+      {
+        "dep": 223,
+        "name": "Rostock Hbf",
+        "off": 217,
+        "track": "10"
+      },
+      {
+        "dep": 234,
+        "name": "Rövershagen",
+        "off": 233,
+        "track": "2"
+      },
+      {
+        "dep": 260,
+        "name": "Velgast",
+        "off": 259,
+        "track": "2"
+      },
+      {
+        "dep": 279,
+        "name": "Stralsund Hbf",
+        "off": 276,
+        "track": "2"
+      },
+      {
+        "dep": 309,
+        "name": "Bergen auf Rügen",
+        "off": 299,
+        "track": "3"
+      },
+      {
+        "name": "Sassnitz",
+        "off": 329,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "20:51",
+      "interval": 60,
+      "note": "Frühfahrten ab 03:04, Spätfahrten bis 00:51",
+      "start": "04:51"
+    }
+  },
+  "RE91_OB": {
+    "cars": 3,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": "Bergen auf Rügen",
+      "coupledTo": null,
+      "note": "Fährt solo ab Ostseebad Binz bis Bergen auf Rügen. Dort Kupplung mit RE91 aus Sassnitz zur 156m-Doppeltraktion, gemeinsame Weiterfahrt bis Bremerhaven-Lehe.",
+      "ownCars": 3,
+      "partner": "RE91_SB",
+      "partnerCars": 3,
+      "role": "join"
+    },
+    "dest": "Bremerhaven-Lehe",
+    "name": "RE91",
+    "rolling": "3-teiliger Stadler KISS B (Akkuzug, ~80m), ab Bergen auf Rügen Doppeltraktion (156m)",
+    "stops": [
+      {
+        "name": "Ostseebad Binz",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 25,
+        "name": "Bergen auf Rügen",
+        "off": 15,
+        "track": "2"
+      },
+      {
+        "dep": 48,
+        "name": "Stralsund Hbf",
+        "off": 45,
+        "track": "5"
+      },
+      {
+        "dep": 65,
+        "name": "Velgast",
+        "off": 64,
+        "track": "1"
+      },
+      {
+        "dep": 91,
+        "name": "Rövershagen",
+        "off": 90,
+        "track": "1"
+      },
+      {
+        "dep": 107,
+        "name": "Rostock Hbf",
+        "off": 101,
+        "track": "11"
+      },
+      {
+        "dep": 140,
+        "name": "Bad Kleinen",
+        "off": 138,
+        "track": "1"
+      },
+      {
+        "dep": 156,
+        "name": "Schwerin Hbf",
+        "off": 153,
+        "track": "3"
+      },
+      {
+        "dep": 174,
+        "name": "Hagenow Land",
+        "off": 171,
+        "track": "2"
+      },
+      {
+        "dep": 200,
+        "name": "Büchen",
+        "off": 193,
+        "track": "4"
+      },
+      {
+        "dep": 223,
+        "name": "Hamburg-Elbbrücken",
+        "off": 220,
+        "track": "fiktiv-3"
+      },
+      {
+        "dep": 234,
+        "name": "Hamburg-Harburg",
+        "off": 231,
+        "track": "5"
+      },
+      {
+        "dep": 254,
+        "name": "Buxtehude",
+        "off": 248,
+        "track": "2"
+      },
+      {
+        "dep": 287,
+        "name": "Bremervörde",
+        "off": 285,
+        "track": "2;4"
+      },
+      {
+        "dep": 319,
+        "name": "Bremerhaven Hbf",
+        "off": 317,
+        "track": "4"
+      },
+      {
+        "name": "Bremerhaven-Lehe",
+        "off": 324,
+        "track": "3"
+      }
+    ],
+    "takt": {
+      "end": "21:07",
+      "interval": 60,
+      "note": "Frühfahrten 04:07 sowie weitere Kaskaden-Frühstarts, Spätfahrten bis 01:07",
+      "start": "05:07"
+    }
+  },
+  "RE91_SB": {
+    "cars": 3,
+    "coupled": false,
+    "coupling": {
+      "coupledFrom": "Bergen auf Rügen",
+      "coupledTo": null,
+      "note": "Fährt solo ab Sassnitz bis Bergen auf Rügen. Dort Kupplung mit RE91 aus Ostseebad Binz zur 156m-Doppeltraktion, gemeinsame Weiterfahrt (u.a. Kopfmachen Rostock Hbf, SFS ab Hagenow Land) bis Bremerhaven-Lehe. In Buxtehude wird zusätzlich der hintere Wagenteil abgehängt (kein Fahrgastziel, nur Fahrzeugumlauf) — für die Fahrgastreise ohne Bedeutung.",
+      "ownCars": 3,
+      "partner": "RE91_OB",
+      "partnerCars": 3,
+      "role": "join"
+    },
+    "dest": "Bremerhaven-Lehe",
+    "name": "RE91",
+    "rolling": "3-teiliger Stadler KISS B (Akkuzug, ~80m), ab Bergen auf Rügen Doppeltraktion (156m)",
+    "stops": [
+      {
+        "name": "Sassnitz",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 30,
+        "name": "Bergen auf Rügen",
+        "off": 20,
+        "track": "3"
+      },
+      {
+        "dep": 53,
+        "name": "Stralsund Hbf",
+        "off": 50,
+        "track": "6"
+      },
+      {
+        "dep": 70,
+        "name": "Velgast",
+        "off": 69,
+        "track": "2"
+      },
+      {
+        "dep": 96,
+        "name": "Rövershagen",
+        "off": 95,
+        "track": "2"
+      },
+      {
+        "dep": 112,
+        "name": "Rostock Hbf",
+        "off": 106,
+        "track": "9"
+      },
+      {
+        "dep": 145,
+        "name": "Bad Kleinen",
+        "off": 143,
+        "track": "4"
+      },
+      {
+        "dep": 161,
+        "name": "Schwerin Hbf",
+        "off": 158,
+        "track": "4"
+      },
+      {
+        "dep": 179,
+        "name": "Hagenow Land",
+        "off": 176,
+        "track": "3"
+      },
+      {
+        "dep": 205,
+        "name": "Büchen",
+        "off": 198,
+        "track": "1"
+      },
+      {
+        "dep": 228,
+        "name": "Hamburg-Elbbrücken",
+        "off": 225,
+        "track": "fiktiv-4"
+      },
+      {
+        "dep": 239,
+        "name": "Hamburg-Harburg",
+        "off": 236,
+        "track": "6"
+      },
+      {
+        "dep": 259,
+        "name": "Buxtehude",
+        "off": 253,
+        "track": "4"
+      },
+      {
+        "dep": 292,
+        "name": "Bremervörde",
+        "off": 290,
+        "track": "OSM229426901"
+      },
+      {
+        "dep": 324,
+        "name": "Bremerhaven Hbf",
+        "off": 322,
+        "track": "5"
+      },
+      {
+        "name": "Bremerhaven-Lehe",
+        "off": 329,
+        "track": "4"
+      }
+    ],
+    "takt": {
+      "end": "21:02",
+      "interval": 60,
+      "note": "Frühfahrten 04:02 sowie weitere Kaskaden-Frühstarts, Spätfahrten bis 01:02",
+      "start": "05:02"
+    }
+  },
+  "RE94_A": {
+    "cars": 7,
+    "coupled": false,
+    "dest": "Zürich HB",
+    "name": "RE94",
+    "rolling": "7-teiliger Doppelstock-Akkuhybrid Stadler KISS B, 200 km/h, 3x Systemwechsel",
+    "stops": [
+      {
+        "name": "Plzeň hlavní nádraží",
+        "off": 0,
+        "track": "12"
+      },
+      {
+        "dep": 26,
+        "name": "Stříbro",
+        "off": 25,
+        "track": "2"
+      },
+      {
+        "dep": 61,
+        "name": "Mariánské Lázně",
+        "off": 60,
+        "track": "1"
+      },
+      {
+        "dep": 87,
+        "name": "Cheb",
+        "off": 80,
+        "track": "1"
+      },
+      {
+        "dep": 114,
+        "name": "Marktredwitz",
+        "off": 107,
+        "track": "2"
+      },
+      {
+        "dep": 156,
+        "name": "Pegnitz",
+        "off": 149,
+        "track": "1"
+      },
+      {
+        "dep": 198,
+        "name": "Nürnberg Hbf",
+        "off": 192,
+        "track": "20"
+      },
+      {
+        "dep": 212,
+        "name": "Allersberg (Rothsee)",
+        "off": 211,
+        "track": "1"
+      },
+      {
+        "dep": 255,
+        "name": "Ingolstadt Hbf",
+        "off": 245,
+        "track": "6"
+      },
+      {
+        "dep": 314,
+        "name": "Augsburg Hbf",
+        "off": 297,
+        "track": "10"
+      },
+      {
+        "dep": 331,
+        "name": "Dinkelscherben",
+        "off": 330,
+        "track": "1"
+      },
+      {
+        "dep": 352,
+        "name": "Günzburg",
+        "off": 350,
+        "track": "1"
+      },
+      {
+        "dep": 369,
+        "name": "Neu-Ulm",
+        "off": 368,
+        "track": "1"
+      },
+      {
+        "dep": 376,
+        "name": "Ulm Hbf",
+        "off": 373,
+        "track": "27"
+      },
+      {
+        "dep": 388,
+        "name": "Laupheim West",
+        "off": 387,
+        "track": "1"
+      },
+      {
+        "dep": 397,
+        "name": "Biberach (Riß)",
+        "off": 396,
+        "track": "1"
+      },
+      {
+        "dep": 413,
+        "name": "Aulendorf",
+        "off": 412,
+        "track": "2"
+      },
+      {
+        "dep": 426,
+        "name": "Ravensburg",
+        "off": 425,
+        "track": "2"
+      },
+      {
+        "name": "Meckenbeuren",
+        "off": 433,
+        "track": "1"
+      },
+      {
+        "dep": 446,
+        "name": "Friedrichshafen Stadt",
+        "off": 441,
+        "track": "4"
+      },
+      {
+        "dep": 492,
+        "name": "Radolfzell",
+        "off": 488,
+        "track": "2"
+      },
+      {
+        "dep": 498,
+        "name": "Allensbach",
+        "off": 497,
+        "track": "1"
+      },
+      {
+        "dep": 503,
+        "name": "Konstanz-Petershausen",
+        "off": 502,
+        "track": "1"
+      },
+      {
+        "dep": 515,
+        "name": "Konstanz",
+        "off": 505,
+        "track": "1"
+      },
+      {
+        "dep": 518,
+        "name": "Kreuzlingen",
+        "off": 517,
+        "track": "1"
+      },
+      {
+        "dep": 541,
+        "name": "Weinfelden",
+        "off": 539,
+        "track": "5"
+      },
+      {
+        "dep": 554,
+        "name": "Frauenfeld",
+        "off": 552,
+        "track": "1"
+      },
+      {
+        "dep": 567,
+        "name": "Winterthur",
+        "off": 565,
+        "track": "1"
+      },
+      {
+        "dep": 581,
+        "name": "Zürich Flughafen",
+        "off": 580,
+        "track": "3;4"
+      },
+      {
+        "name": "Zürich HB",
+        "off": 592,
+        "track": "OSM129783417"
+      }
+    ],
+    "takt": {
+      "end": "22:52",
+      "interval": 60,
+      "note": "Reisezeit 9h52min; HPC-Ladestopps Marktredwitz/Pegnitz; Durchfahrt ohne Halt in Markdorf, Salem, Überlingen Therme, Reichenau (Bahnsteig <185m)",
+      "start": "04:52"
+    }
+  },
+  "RE94_B": {
+    "cars": 7,
+    "coupled": false,
+    "dest": "Plzeň hlavní nádraží",
+    "name": "RE94",
+    "rolling": "7-teiliger Doppelstock-Akkuhybrid Stadler KISS B, 200 km/h, 3x Systemwechsel",
+    "stops": [
+      {
+        "name": "Zürich HB",
+        "off": 0,
+        "track": "OSM129783417"
+      },
+      {
+        "dep": 12,
+        "name": "Zürich Flughafen",
+        "off": 11,
+        "track": "1;2"
+      },
+      {
+        "dep": 27,
+        "name": "Winterthur",
+        "off": 25,
+        "track": "1"
+      },
+      {
+        "dep": 40,
+        "name": "Frauenfeld",
+        "off": 38,
+        "track": "1"
+      },
+      {
+        "dep": 53,
+        "name": "Weinfelden",
+        "off": 51,
+        "track": "5"
+      },
+      {
+        "dep": 75,
+        "name": "Kreuzlingen",
+        "off": 74,
+        "track": "1"
+      },
+      {
+        "dep": 87,
+        "name": "Konstanz",
+        "off": 77,
+        "track": "2"
+      },
+      {
+        "dep": 90,
+        "name": "Konstanz-Petershausen",
+        "off": 89,
+        "track": "2"
+      },
+      {
+        "dep": 95,
+        "name": "Allensbach",
+        "off": 94,
+        "track": "2"
+      },
+      {
+        "dep": 104,
+        "name": "Radolfzell",
+        "off": 100,
+        "track": "3"
+      },
+      {
+        "dep": 151,
+        "name": "Friedrichshafen Stadt",
+        "off": 146,
+        "track": "5"
+      },
+      {
+        "dep": 159,
+        "name": "Meckenbeuren",
+        "off": 158,
+        "track": "2"
+      },
+      {
+        "dep": 167,
+        "name": "Ravensburg",
+        "off": 166,
+        "track": "3"
+      },
+      {
+        "dep": 180,
+        "name": "Aulendorf",
+        "off": 179,
+        "track": "3"
+      },
+      {
+        "dep": 196,
+        "name": "Biberach (Riß)",
+        "off": 195,
+        "track": "2"
+      },
+      {
+        "dep": 205,
+        "name": "Laupheim West",
+        "off": 204,
+        "track": "2"
+      },
+      {
+        "dep": 219,
+        "name": "Ulm Hbf",
+        "off": 216,
+        "track": "7"
+      },
+      {
+        "dep": 224,
+        "name": "Neu-Ulm",
+        "off": 223,
+        "track": "4"
+      },
+      {
+        "dep": 242,
+        "name": "Günzburg",
+        "off": 240,
+        "track": "4"
+      },
+      {
+        "dep": 262,
+        "name": "Dinkelscherben",
+        "off": 261,
+        "track": "2"
+      },
+      {
+        "dep": 295,
+        "name": "Augsburg Hbf",
+        "off": 278,
+        "track": "12"
+      },
+      {
+        "dep": 347,
+        "name": "Ingolstadt Hbf",
+        "off": 337,
+        "track": "7"
+      },
+      {
+        "dep": 381,
+        "name": "Allersberg (Rothsee)",
+        "off": 380,
+        "track": "4"
+      },
+      {
+        "dep": 400,
+        "name": "Nürnberg Hbf",
+        "off": 394,
+        "track": "21"
+      },
+      {
+        "dep": 443,
+        "name": "Pegnitz",
+        "off": 436,
+        "track": "2"
+      },
+      {
+        "dep": 485,
+        "name": "Marktredwitz",
+        "off": 478,
+        "track": "3"
+      },
+      {
+        "dep": 512,
+        "name": "Cheb",
+        "off": 505,
+        "track": "1"
+      },
+      {
+        "dep": 532,
+        "name": "Mariánské Lázně",
+        "off": 531,
+        "track": "2"
+      },
+      {
+        "dep": 567,
+        "name": "Stříbro",
+        "off": 566,
+        "track": "2"
+      },
+      {
+        "name": "Plzeň hlavní nádraží",
+        "off": 592,
+        "track": "2"
+      }
+    ],
+    "takt": {
+      "end": "22:16",
+      "interval": 60,
+      "note": "Reisezeit 9h52min; HPC-Ladestopps Pegnitz/Marktredwitz; Durchfahrt ohne Halt in Reichenau, Überlingen Therme, Salem, Markdorf (Bahnsteig <185m)",
+      "start": "04:16"
+    }
+  },
+  "RE9_A": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Dortmund Hbf",
+    "extraTrips": [
+      {
+        "dep": "03:26",
+        "from": "Osnabrück Hbf"
+      },
+      {
+        "dep": "22:26",
+        "to": "Osnabrück Hbf"
+      }
+    ],
+    "name": "RE9",
+    "rolling": "8-teiliger Stadler KISS, 200 km/h",
+    "stops": [
+      {
+        "name": "Bremerhaven-Lehe",
+        "off": 0,
+        "track": "3"
+      },
+      {
+        "dep": 55,
+        "name": "Bremen Hbf",
+        "off": 50,
+        "track": "10"
+      },
+      {
+        "dep": 120,
+        "name": "Osnabrück Hbf",
+        "off": 114,
+        "track": "13"
+      },
+      {
+        "dep": 158,
+        "name": "Münster (Westf) Hbf",
+        "off": 154,
+        "track": "12"
+      },
+      {
+        "dep": 189,
+        "name": "Recklinghausen Hbf",
+        "off": 187,
+        "track": "2"
+      },
+      {
+        "dep": 206,
+        "name": "Bochum Hbf",
+        "off": 204,
+        "track": "3"
+      },
+      {
+        "name": "Dortmund Hbf",
+        "off": 214,
+        "track": "21"
+      }
+    ],
+    "takt": {
+      "end": "22:26",
+      "interval": 60,
+      "note": "6-Minuten-Kurzwende in Osnabrück Hbf",
+      "start": "03:26"
+    }
+  },
+  "RE9_B": {
+    "cars": 8,
+    "coupled": false,
+    "dest": "Bremerhaven-Lehe",
+    "extraTrips": [
+      {
+        "dep": "03:40",
+        "from": "Osnabrück Hbf"
+      },
+      {
+        "dep": "00:00",
+        "to": "Osnabrück Hbf"
+      }
+    ],
+    "name": "RE9",
+    "rolling": "8-teiliger Stadler KISS, 200 km/h",
+    "stops": [
+      {
+        "name": "Dortmund Hbf",
+        "off": 0,
+        "track": "23"
+      },
+      {
+        "dep": 10,
+        "name": "Bochum Hbf",
+        "off": 8,
+        "track": "5"
+      },
+      {
+        "dep": 27,
+        "name": "Recklinghausen Hbf",
+        "off": 25,
+        "track": "4"
+      },
+      {
+        "dep": 60,
+        "name": "Münster (Westf) Hbf",
+        "off": 56,
+        "track": "2"
+      },
+      {
+        "dep": 100,
+        "name": "Osnabrück Hbf",
+        "off": 94,
+        "track": "14"
+      },
+      {
+        "dep": 164,
+        "name": "Bremen Hbf",
+        "off": 159,
+        "track": "5"
+      },
+      {
+        "name": "Bremerhaven-Lehe",
+        "off": 214,
+        "track": "4"
+      }
+    ],
+    "takt": {
+      "end": "23:00",
+      "interval": 60,
+      "note": "6-Minuten-Kurzwende in Osnabrück Hbf",
+      "start": "04:00"
+    }
+  },
+  "S10_A": {
+    "cars": 6,
+    "coupled": true,
+    "dest": "Unna Hbf (gegen Uhrzeigersinn)",
+    "name": "S10 Außenring",
+    "rolling": "Stadler FLIRT 3 XL Doppeltraktion, 24/7",
+    "stops": [
+      {
+        "name": "Unna Hbf",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "name": "Holzwickede",
+        "off": 6,
+        "track": "4"
+      },
+      {
+        "dep": 14,
+        "name": "Schwerte (Ruhr)",
+        "off": 13,
+        "track": "2"
+      },
+      {
+        "name": "Hagen-Vorhalle",
+        "off": 22,
+        "track": "1"
+      },
+      {
+        "name": "Wengern",
+        "off": 26,
+        "track": "1"
+      },
+      {
+        "dep": 32,
+        "name": "Witten Hbf",
+        "off": 31,
+        "track": "2"
+      },
+      {
+        "name": "Bochum-Langendreer",
+        "off": 37,
+        "track": "1"
+      },
+      {
+        "name": "Bochum-Langendreer West",
+        "off": 39,
+        "track": "1"
+      },
+      {
+        "dep": 44,
+        "name": "Bochum Hbf",
+        "off": 42,
+        "track": "7"
+      },
+      {
+        "name": "Bochum-Stahlhausen",
+        "off": 47,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Bochum-Kohlenstraße",
+        "off": 50,
+        "track": "OSM242367804"
+      },
+      {
+        "name": "Essen-Höntrop",
+        "off": 53,
+        "track": "1"
+      },
+      {
+        "name": "Essen-Eiberg",
+        "off": 55,
+        "track": "2"
+      },
+      {
+        "name": "Essen-Steele Ost",
+        "off": 58,
+        "track": "2"
+      },
+      {
+        "name": "Essen-Steele",
+        "off": 60,
+        "track": "101"
+      },
+      {
+        "dep": 66,
+        "name": "Essen Hbf",
+        "off": 64,
+        "track": "8"
+      },
+      {
+        "name": "Essen West",
+        "off": 69,
+        "track": "1"
+      },
+      {
+        "name": "Essen-Frohnhausen",
+        "off": 71,
+        "track": "1"
+      },
+      {
+        "dep": 75,
+        "name": "Mülheim (Ruhr) Hbf",
+        "off": 74,
+        "track": "6"
+      },
+      {
+        "name": "Mülheim West",
+        "off": 77,
+        "track": "1"
+      },
+      {
+        "name": "Mülheim-Styrum",
+        "off": 79,
+        "track": "1"
+      },
+      {
+        "dep": 84,
+        "name": "Oberhausen Hbf",
+        "off": 83,
+        "track": "15"
+      },
+      {
+        "name": "Essen-Dellwig Ost",
+        "off": 88,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Essen-Borbeck",
+        "off": 91,
+        "track": "1"
+      },
+      {
+        "name": "Essen-Altenessen",
+        "off": 95,
+        "track": "2"
+      },
+      {
+        "name": "Gelsenkirchen-Zollverein Nord",
+        "off": 98,
+        "track": "1"
+      },
+      {
+        "dep": 103,
+        "name": "Gelsenkirchen Hbf",
+        "off": 102,
+        "track": "6"
+      },
+      {
+        "dep": 108,
+        "name": "Wanne-Eickel Hbf",
+        "off": 107,
+        "track": "1"
+      },
+      {
+        "name": "Bochum-Riemke",
+        "off": 113,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Bochum-Hamme",
+        "off": 116,
+        "track": "1"
+      },
+      {
+        "name": "Bochum West",
+        "off": 118,
+        "track": "1"
+      },
+      {
+        "dep": 121,
+        "name": "Bochum-Bermuda3eck",
+        "off": 120,
+        "track": "OSM350949587"
+      },
+      {
+        "dep": 125,
+        "name": "Bochum Hbf",
+        "off": 123,
+        "track": "8"
+      },
+      {
+        "name": "Bochum-Langendreer West",
+        "off": 128,
+        "track": "2"
+      },
+      {
+        "name": "Bochum-Langendreer",
+        "off": 130,
+        "track": "2"
+      },
+      {
+        "name": "Dortmund-Kley",
+        "off": 133,
+        "track": "2"
+      },
+      {
+        "name": "Dortmund-Oespel",
+        "off": 135,
+        "track": "2"
+      },
+      {
+        "name": "Dortmund-Universität",
+        "off": 137,
+        "track": "1"
+      },
+      {
+        "name": "Dortmund-Dorstfeld Süd",
+        "off": 139,
+        "track": "2"
+      },
+      {
+        "name": "Dortmund-Dorstfeld",
+        "off": 141,
+        "track": "6"
+      },
+      {
+        "dep": 146,
+        "name": "Dortmund Hbf",
+        "off": 144,
+        "track": "4"
+      },
+      {
+        "name": "Dortmund-Brackel",
+        "off": 151,
+        "track": "1"
+      },
+      {
+        "name": "Dortmund-Wickede",
+        "off": 154,
+        "track": "2"
+      },
+      {
+        "name": "Massen",
+        "off": 157,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Unna West",
+        "off": 160,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Unna Hbf",
+        "off": 162,
+        "track": "2"
+      }
+    ],
+    "takt": {
+      "end": "07:00",
+      "interval": 10,
+      "note": "10-Min-Takt 06-21 Uhr, 20-Min 04-06/21-24 Uhr, 30-Min 00-04 Uhr",
+      "start": "07:00"
+    }
+  },
+  "S10_I": {
+    "cars": 6,
+    "coupled": true,
+    "dest": "Unna Hbf (im Uhrzeigersinn)",
+    "name": "S10 Innenring",
+    "rolling": "Stadler FLIRT 3 XL Doppeltraktion, 24/7",
+    "stops": [
+      {
+        "name": "Unna Hbf",
+        "off": 0,
+        "track": "4"
+      },
+      {
+        "name": "Unna West",
+        "off": 2,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Massen",
+        "off": 5,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Dortmund-Wickede",
+        "off": 8,
+        "track": "2"
+      },
+      {
+        "name": "Dortmund-Brackel",
+        "off": 11,
+        "track": "2"
+      },
+      {
+        "dep": 18,
+        "name": "Dortmund Hbf",
+        "off": 16,
+        "track": "3"
+      },
+      {
+        "name": "Dortmund-Dorstfeld",
+        "off": 21,
+        "track": "3"
+      },
+      {
+        "name": "Dortmund-Dorstfeld Süd",
+        "off": 23,
+        "track": "1"
+      },
+      {
+        "name": "Dortmund-Universität",
+        "off": 25,
+        "track": "2"
+      },
+      {
+        "name": "Dortmund-Oespel",
+        "off": 27,
+        "track": "1"
+      },
+      {
+        "name": "Dortmund-Kley",
+        "off": 29,
+        "track": "1"
+      },
+      {
+        "name": "Bochum-Langendreer",
+        "off": 32,
+        "track": "1"
+      },
+      {
+        "name": "Bochum-Langendreer West",
+        "off": 34,
+        "track": "1"
+      },
+      {
+        "dep": 39,
+        "name": "Bochum Hbf",
+        "off": 37,
+        "track": "6"
+      },
+      {
+        "dep": 42,
+        "name": "Bochum-Bermuda3eck",
+        "off": 41,
+        "track": "OSM350949587"
+      },
+      {
+        "name": "Bochum West",
+        "off": 44,
+        "track": "1"
+      },
+      {
+        "name": "Bochum-Hamme",
+        "off": 46,
+        "track": "1"
+      },
+      {
+        "name": "Bochum-Riemke",
+        "off": 49,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 54,
+        "name": "Wanne-Eickel Hbf",
+        "off": 53,
+        "track": "2"
+      },
+      {
+        "dep": 59,
+        "name": "Gelsenkirchen Hbf",
+        "off": 58,
+        "track": "7"
+      },
+      {
+        "name": "Gelsenkirchen-Zollverein Nord",
+        "off": 63,
+        "track": "2"
+      },
+      {
+        "name": "Essen-Altenessen",
+        "off": 66,
+        "track": "1"
+      },
+      {
+        "name": "Essen-Borbeck",
+        "off": 70,
+        "track": "2"
+      },
+      {
+        "name": "Essen-Dellwig Ost",
+        "off": 73,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 78,
+        "name": "Oberhausen Hbf",
+        "off": 77,
+        "track": "16"
+      },
+      {
+        "name": "Mülheim-Styrum",
+        "off": 82,
+        "track": "1"
+      },
+      {
+        "name": "Mülheim West",
+        "off": 84,
+        "track": "2"
+      },
+      {
+        "dep": 87,
+        "name": "Mülheim (Ruhr) Hbf",
+        "off": 86,
+        "track": "5"
+      },
+      {
+        "name": "Essen-Frohnhausen",
+        "off": 90,
+        "track": "2"
+      },
+      {
+        "name": "Essen West",
+        "off": 92,
+        "track": "2"
+      },
+      {
+        "dep": 97,
+        "name": "Essen Hbf",
+        "off": 95,
+        "track": "21"
+      },
+      {
+        "name": "Essen-Steele",
+        "off": 101,
+        "track": "103"
+      },
+      {
+        "name": "Essen-Steele Ost",
+        "off": 103,
+        "track": "4"
+      },
+      {
+        "name": "Essen-Eiberg",
+        "off": 106,
+        "track": "1"
+      },
+      {
+        "name": "Essen-Höntrop",
+        "off": 108,
+        "track": "2"
+      },
+      {
+        "name": "Bochum-Kohlenstraße",
+        "off": 111,
+        "track": "OSM242367804"
+      },
+      {
+        "name": "Bochum-Stahlhausen",
+        "off": 114,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 119,
+        "name": "Bochum Hbf",
+        "off": 117,
+        "track": "7"
+      },
+      {
+        "name": "Bochum-Langendreer West",
+        "off": 122,
+        "track": "2"
+      },
+      {
+        "name": "Bochum-Langendreer",
+        "off": 124,
+        "track": "2"
+      },
+      {
+        "dep": 130,
+        "name": "Witten Hbf",
+        "off": 129,
+        "track": "1"
+      },
+      {
+        "name": "Wengern",
+        "off": 135,
+        "track": "1"
+      },
+      {
+        "name": "Hagen-Vorhalle",
+        "off": 139,
+        "track": "2"
+      },
+      {
+        "dep": 148,
+        "name": "Schwerte (Ruhr)",
+        "off": 147,
+        "track": "1"
+      },
+      {
+        "name": "Holzwickede",
+        "off": 155,
+        "track": "5"
+      },
+      {
+        "name": "Unna Hbf",
+        "off": 161,
+        "track": "18"
+      }
+    ],
+    "takt": {
+      "end": "07:00",
+      "interval": 10,
+      "note": "10-Min-Takt 06-21 Uhr, 20-Min 04-06/21-24 Uhr, 30-Min 00-04 Uhr",
+      "start": "07:00"
+    }
+  },
+  "S30_N": {
+    "cars": 6,
+    "coupled": true,
+    "dest": "Essen Hbf",
+    "name": "S30",
+    "rolling": "Stadler FLIRT 3 XL Doppeltraktion",
+    "stops": [
+      {
+        "name": "Lüdenscheid Hbf",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 8,
+        "name": "Schalksmühle",
+        "off": 7,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Dahlerbrück",
+        "off": 12,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Rummenohl",
+        "off": 16,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Dahl",
+        "off": 21,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 33,
+        "name": "Hagen Hbf",
+        "off": 31,
+        "track": "13"
+      },
+      {
+        "name": "Hagen-Vorhalle",
+        "off": 37,
+        "track": "1"
+      },
+      {
+        "name": "Wengern Ost",
+        "off": 42,
+        "track": "OSM31364458"
+      },
+      {
+        "dep": 47,
+        "name": "Witten Bommern",
+        "off": 46,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "name": "Zeche Nachtigall",
+        "off": 50,
+        "track": "OSM421169907"
+      },
+      {
+        "name": "Ruine Hardenstein",
+        "off": 53,
+        "track": "OSM421566810"
+      },
+      {
+        "dep": 58,
+        "name": "Herbede",
+        "off": 57,
+        "track": "OSM421169900"
+      },
+      {
+        "name": "Haus Kemnade",
+        "off": 62,
+        "track": "OSM421169897"
+      },
+      {
+        "name": "Blankenstein Burg",
+        "off": 65,
+        "track": "OSM573273029"
+      },
+      {
+        "name": "Heinrichshütte",
+        "off": 68,
+        "track": "OSM229930400"
+      },
+      {
+        "dep": 72,
+        "name": "Hattingen (Ruhr)",
+        "off": 71,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 76,
+        "name": "Bochum-Dahlhausen",
+        "off": 75,
+        "track": "1"
+      },
+      {
+        "name": "Essen-Horst",
+        "off": 80,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 84,
+        "name": "Essen-Steele Ost",
+        "off": 83,
+        "track": "2"
+      },
+      {
+        "name": "Essen-Steele",
+        "off": 86,
+        "track": "102"
+      },
+      {
+        "name": "Essen Hbf",
+        "off": 90,
+        "track": "9"
+      }
+    ],
+    "takt": {
+      "end": "07:00",
+      "interval": 30,
+      "note": "Halbstundentakt Essen–Hagen (überlagert mit S3), Einzeltakt Hagen–Lüdenscheid",
+      "start": "07:00"
+    }
+  },
+  "S30_S": {
+    "cars": 6,
+    "coupled": true,
+    "dest": "Lüdenscheid Hbf",
+    "name": "S30",
+    "rolling": "Stadler FLIRT 3 XL Doppeltraktion",
+    "stops": [
+      {
+        "name": "Essen Hbf",
+        "off": 0,
+        "track": "10"
+      },
+      {
+        "name": "Essen-Steele",
+        "off": 4,
+        "track": "104"
+      },
+      {
+        "dep": 7,
+        "name": "Essen-Steele Ost",
+        "off": 6,
+        "track": "4"
+      },
+      {
+        "name": "Essen-Horst",
+        "off": 10,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 15,
+        "name": "Bochum-Dahlhausen",
+        "off": 14,
+        "track": "2"
+      },
+      {
+        "dep": 19,
+        "name": "Hattingen (Ruhr)",
+        "off": 18,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Heinrichshütte",
+        "off": 21,
+        "track": "OSM229930400"
+      },
+      {
+        "name": "Blankenstein Burg",
+        "off": 24,
+        "track": "OSM573273029"
+      },
+      {
+        "name": "Haus Kemnade",
+        "off": 27,
+        "track": "OSM421169897"
+      },
+      {
+        "dep": 32,
+        "name": "Herbede",
+        "off": 31,
+        "track": "OSM421169900"
+      },
+      {
+        "name": "Ruine Hardenstein",
+        "off": 35,
+        "track": "OSM421566810"
+      },
+      {
+        "name": "Zeche Nachtigall",
+        "off": 38,
+        "track": "OSM421169907"
+      },
+      {
+        "dep": 42,
+        "name": "Witten Bommern",
+        "off": 41,
+        "track": "1 (geschätzt)"
+      },
+      {
+        "name": "Wengern Ost",
+        "off": 46,
+        "track": "OSM31364458"
+      },
+      {
+        "name": "Hagen-Vorhalle",
+        "off": 51,
+        "track": "2"
+      },
+      {
+        "dep": 57,
+        "name": "Hagen Hbf",
+        "off": 55,
+        "track": "14"
+      },
+      {
+        "name": "Dahl",
+        "off": 65,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Rummenohl",
+        "off": 70,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Dahlerbrück",
+        "off": 74,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 79,
+        "name": "Schalksmühle",
+        "off": 78,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Lüdenscheid Hbf",
+        "off": 86,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "07:05",
+      "interval": 30,
+      "note": "Halbstundentakt Essen–Hagen (überlagert mit S3 zu effektiv 15-Min-Trunk), Einzeltakt Hagen–Lüdenscheid; Frühverstärker ab 03:35 (Essen), letzte Fahrt 00:50",
+      "start": "07:05"
+    }
+  },
+  "S3_N": {
+    "cars": 6,
+    "coupled": true,
+    "dest": "Essen Hbf",
+    "name": "S3",
+    "rolling": "Stadler FLIRT 3 XL Doppeltraktion",
+    "stops": [
+      {
+        "name": "Hattingen Mitte",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "dep": 4,
+        "name": "Hattingen (Ruhr)",
+        "off": 3,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 8,
+        "name": "Bochum-Dahlhausen",
+        "off": 7,
+        "track": "3"
+      },
+      {
+        "name": "Essen-Horst",
+        "off": 12,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 16,
+        "name": "Essen-Steele Ost",
+        "off": 15,
+        "track": "2"
+      },
+      {
+        "name": "Essen-Steele",
+        "off": 18,
+        "track": "101"
+      },
+      {
+        "name": "Essen Hbf",
+        "off": 22,
+        "track": "6"
+      }
+    ],
+    "takt": {
+      "end": "07:29",
+      "interval": 30,
+      "note": "Halbstundentakt, 15 Min versetzt zu S30 → effektiv 15-Min-Trunk Essen–Hattingen",
+      "start": "07:29"
+    }
+  },
+  "S3_S": {
+    "cars": 6,
+    "coupled": true,
+    "dest": "Hattingen Mitte",
+    "name": "S3",
+    "rolling": "Stadler FLIRT 3 XL Doppeltraktion",
+    "stops": [
+      {
+        "name": "Essen Hbf",
+        "off": 0,
+        "track": "1"
+      },
+      {
+        "name": "Essen-Steele",
+        "off": 4,
+        "track": "103"
+      },
+      {
+        "dep": 7,
+        "name": "Essen-Steele Ost",
+        "off": 6,
+        "track": "4"
+      },
+      {
+        "name": "Essen-Horst",
+        "off": 10,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "dep": 15,
+        "name": "Bochum-Dahlhausen",
+        "off": 14,
+        "track": "1"
+      },
+      {
+        "dep": 19,
+        "name": "Hattingen (Ruhr)",
+        "off": 18,
+        "track": "fiktiv-Ausbau"
+      },
+      {
+        "name": "Hattingen Mitte",
+        "off": 22,
+        "track": "1"
+      }
+    ],
+    "takt": {
+      "end": "07:30",
+      "interval": 30,
+      "note": "Halbstundentakt, 15 Min versetzt zu S30 → effektiv 15-Min-Trunk Essen–Hattingen",
+      "start": "07:30"
+    }
+  }
+}

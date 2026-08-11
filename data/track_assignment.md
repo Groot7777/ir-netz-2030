@@ -80,8 +80,8 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis.
 | Landstuhl | RE80 | RE80_A | 2 | 210 m | +20 m | amtlich |
 | Landstuhl | RE80 | RE80_B | 3 | 210 m | +20 m | amtlich |
 | Rövershagen | RE91 | RE91_BO | 1 | 160 m | +20 m | amtlich |
-| Rövershagen | RE91 | RE91_BS | 2 | 160 m | +20 m | amtlich |
-| Rövershagen | RE91 | RE91_OB | 1 | 160 m | +20 m | amtlich |
+| Rövershagen | RE91 | RE91_BS | 1 | 160 m | +20 m | amtlich |
+| Rövershagen | RE91 | RE91_OB | 2 | 160 m | +20 m | amtlich |
 | Rövershagen | RE91 | RE91_SB | 2 | 160 m | +20 m | amtlich |
 | Hengelo | RE30 | RE30_DL | 2a | 210 m | +19 m | osm |
 | Hengelo | RE30 | RE30_LD | 2a | 210 m | +19 m | osm |
@@ -89,8 +89,8 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis.
 | Hengelo | RE30 | RE30_WL | 2a | 210 m | +19 m | osm |
 | Rotenburg (Wümme) | RE90b | RE90b_GS | 4 | 236 m | +16 m | amtlich |
 | Rotenburg (Wümme) | RE90b | RE90b_KN | 5 | 236 m | +16 m | amtlich |
-| Rotenburg (Wümme) | RE90b | RE90b_NK | 6 | 236 m | +16 m | amtlich |
-| Rotenburg (Wümme) | RE90b | RE90b_SG | 4 | 236 m | +16 m | amtlich |
+| Rotenburg (Wümme) | RE90b | RE90b_NK | 4 | 236 m | +16 m | amtlich |
+| Rotenburg (Wümme) | RE90b | RE90b_SG | 5 | 236 m | +16 m | amtlich |
 | Hagen-Vorhalle | S10 Außenring | S10_A | 1 | 156 m | +16 m | amtlich |
 | Hagen-Vorhalle | S10 Innenring | S10_I | 2 | 156 m | +16 m | amtlich |
 | Hagen-Vorhalle | S30 | S30_N | 1 | 156 m | +16 m | amtlich |

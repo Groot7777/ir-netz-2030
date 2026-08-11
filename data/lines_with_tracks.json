@@ -923,7 +923,7 @@
         "dep": 22,
         "name": "Hamm (Westf) Hbf",
         "off": 19,
-        "track": "2"
+        "track": "11"
       },
       {
         "dep": 39,
@@ -1098,7 +1098,7 @@
         "dep": 200,
         "name": "Hamm (Westf) Hbf",
         "off": 197,
-        "track": "10"
+        "track": "1"
       },
       {
         "dep": 210,
@@ -1619,7 +1619,7 @@
         "dep": 81,
         "name": "Hamburg-Harburg",
         "off": 76,
-        "track": "3"
+        "track": "5"
       },
       {
         "dep": 95,
@@ -1770,13 +1770,13 @@
         "dep": 231,
         "name": "Hamburg-Harburg",
         "off": 226,
-        "track": "4"
+        "track": "6"
       },
       {
         "dep": 247,
         "name": "Buxtehude",
         "off": 245,
-        "track": "3"
+        "track": "2"
       },
       {
         "dep": 262,
@@ -1979,7 +1979,7 @@
         "dep": 82,
         "name": "Münster (Westf) Hbf",
         "off": 78,
-        "track": "3"
+        "track": "12"
       },
       {
         "name": "Osnabrück Hbf",
@@ -2020,7 +2020,7 @@
         "dep": 38,
         "name": "Münster (Westf) Hbf",
         "off": 34,
-        "track": "9"
+        "track": "2"
       },
       {
         "dep": 71,
@@ -2348,19 +2348,19 @@
       {
         "name": "Leeuwarden",
         "off": 0,
-        "track": "4"
+        "track": "3"
       },
       {
         "dep": 34,
         "name": "Meppel",
         "off": 32,
-        "track": "2"
+        "track": "3"
       },
       {
         "dep": 57,
         "name": "Zwolle",
         "off": 49,
-        "track": "14"
+        "track": "1a"
       },
       {
         "dep": 91,
@@ -2378,19 +2378,19 @@
         "dep": 130,
         "name": "Bad Bentheim",
         "off": 125,
-        "track": "3"
+        "track": "2"
       },
       {
         "dep": 146,
         "name": "Rheine",
         "off": 144,
-        "track": "3"
+        "track": "2"
       },
       {
         "dep": 176,
         "name": "Münster (Westf) Hbf",
         "off": 173,
-        "track": "17"
+        "track": "14"
       },
       {
         "dep": 189,
@@ -2402,13 +2402,13 @@
         "dep": 204,
         "name": "Hamm (Westf) Hbf",
         "off": 201,
-        "track": "3"
+        "track": "13"
       },
       {
         "dep": 218,
         "name": "Unna",
         "off": 216,
-        "track": "4"
+        "track": "2"
       },
       {
         "dep": 225,
@@ -2420,7 +2420,7 @@
         "dep": 241,
         "name": "Schwerte (Ruhr)",
         "off": 233,
-        "track": "3"
+        "track": "4"
       },
       {
         "dep": 252,
@@ -2555,7 +2555,7 @@
         "dep": 105,
         "name": "Schwerte (Ruhr)",
         "off": 96,
-        "track": "4"
+        "track": "3"
       },
       {
         "dep": 113,
@@ -2567,13 +2567,13 @@
         "dep": 121,
         "name": "Unna",
         "off": 119,
-        "track": "18"
+        "track": "1"
       },
       {
         "dep": 136,
         "name": "Hamm (Westf) Hbf",
         "off": 133,
-        "track": "4"
+        "track": "12"
       },
       {
         "dep": 149,
@@ -2585,13 +2585,13 @@
         "dep": 164,
         "name": "Münster (Westf) Hbf",
         "off": 161,
-        "track": "8"
+        "track": "4"
       },
       {
         "dep": 193,
         "name": "Rheine",
         "off": 191,
-        "track": "4"
+        "track": "8"
       },
       {
         "dep": 212,
@@ -2615,13 +2615,13 @@
         "dep": 288,
         "name": "Zwolle",
         "off": 280,
-        "track": "10"
+        "track": "1b"
       },
       {
         "dep": 305,
         "name": "Meppel",
         "off": 303,
-        "track": "3"
+        "track": "2"
       },
       {
         "name": "Leeuwarden",
@@ -2741,7 +2741,7 @@
         "dep": 177,
         "name": "Hamm (Westf) Hbf",
         "off": 166,
-        "track": "11"
+        "track": "3"
       },
       {
         "dep": 192,
@@ -2831,7 +2831,7 @@
         "dep": 114,
         "name": "Hamm (Westf) Hbf",
         "off": 109,
-        "track": "1"
+        "track": "4"
       },
       {
         "dep": 124,
@@ -3217,7 +3217,7 @@
         "dep": 14,
         "name": "Rostock Hbf",
         "off": 10,
-        "track": "3"
+        "track": "11"
       },
       {
         "dep": 38,
@@ -3229,7 +3229,7 @@
         "dep": 72,
         "name": "Stralsund Hbf",
         "off": 66,
-        "track": "3"
+        "track": "5"
       },
       {
         "dep": 94,
@@ -3533,7 +3533,7 @@
         "dep": 370,
         "name": "Stralsund Hbf",
         "off": 364,
-        "track": "4"
+        "track": "6"
       },
       {
         "dep": 400,
@@ -3545,7 +3545,7 @@
         "dep": 426,
         "name": "Rostock Hbf",
         "off": 422,
-        "track": "7"
+        "track": "9"
       },
       {
         "name": "Warnemünde",
@@ -4183,7 +4183,7 @@
         "dep": 237,
         "name": "Hamburg-Harburg",
         "off": 235,
-        "track": "11"
+        "track": "1"
       },
       {
         "dep": 248,
@@ -4287,7 +4287,7 @@
         "dep": 87,
         "name": "Hamburg-Harburg",
         "off": 85,
-        "track": "12"
+        "track": "2"
       },
       {
         "dep": 107,
@@ -6095,13 +6095,13 @@
         "dep": 170,
         "name": "Neumünster",
         "off": 167,
-        "track": "3"
+        "track": "5"
       },
       {
         "dep": 195,
         "name": "Elmshorn",
         "off": 193,
-        "track": "3"
+        "track": "1"
       },
       {
         "dep": 215,
@@ -6119,7 +6119,7 @@
         "dep": 252,
         "name": "Büchen",
         "off": 250,
-        "track": "22"
+        "track": "4"
       },
       {
         "dep": 272,
@@ -6247,7 +6247,7 @@
         "dep": 126,
         "name": "Büchen",
         "off": 124,
-        "track": "4"
+        "track": "1"
       },
       {
         "dep": 157,
@@ -6265,13 +6265,13 @@
         "dep": 184,
         "name": "Elmshorn",
         "off": 182,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 210,
         "name": "Neumünster",
         "off": 207,
-        "track": "4"
+        "track": "6"
       },
       {
         "dep": 235,
@@ -6432,7 +6432,7 @@
       {
         "name": "Bremen Hbf",
         "off": 265,
-        "track": "8"
+        "track": "3"
       }
     ],
     "takt": {
@@ -6452,7 +6452,7 @@
       {
         "name": "Bremen Hbf",
         "off": 0,
-        "track": "9"
+        "track": "7"
       },
       {
         "dep": 21,
@@ -7616,7 +7616,7 @@
         "dep": 65,
         "name": "Leer (Ostfriesl)",
         "off": 49,
-        "track": "4"
+        "track": "1"
       },
       {
         "dep": 103,
@@ -7628,13 +7628,13 @@
         "dep": 134,
         "name": "Bremen Hbf",
         "off": 131,
-        "track": "3"
+        "track": "1"
       },
       {
         "dep": 154,
         "name": "Rotenburg (Wümme)",
         "off": 153,
-        "track": "6"
+        "track": "4"
       },
       {
         "dep": 170,
@@ -7646,30 +7646,30 @@
         "dep": 186,
         "name": "Hamburg-Harburg",
         "off": 183,
-        "track": "1"
+        "track": "3"
       },
       {
         "dep": 194,
         "name": "Hamburg-Elbbrücken",
         "off": 191,
-        "track": "fiktiv-3"
+        "track": "fiktiv-1"
       },
       {
         "dep": 218,
         "name": "Elmshorn",
         "off": 216,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 243,
         "name": "Neumünster",
         "off": 241,
-        "track": "5"
+        "track": "3"
       },
       {
         "name": "Kiel Hbf",
         "off": 262,
-        "track": "3"
+        "track": "5"
       }
     ],
     "takt": {
@@ -7722,31 +7722,31 @@
         "dep": 43,
         "name": "Kiel Hbf",
         "off": 32,
-        "track": "4"
+        "track": "1"
       },
       {
         "dep": 64,
         "name": "Neumünster",
         "off": 62,
-        "track": "6"
+        "track": "4"
       },
       {
         "dep": 88,
         "name": "Elmshorn",
         "off": 86,
-        "track": "2"
+        "track": "3"
       },
       {
         "dep": 113,
         "name": "Hamburg-Elbbrücken",
         "off": 110,
-        "track": "fiktiv-4"
+        "track": "fiktiv-2"
       },
       {
         "dep": 124,
         "name": "Hamburg-Harburg",
         "off": 121,
-        "track": "2"
+        "track": "4"
       },
       {
         "dep": 137,
@@ -7758,13 +7758,13 @@
         "dep": 154,
         "name": "Rotenburg (Wümme)",
         "off": 152,
-        "track": "4"
+        "track": "5"
       },
       {
         "dep": 176,
         "name": "Bremen Hbf",
         "off": 173,
-        "track": "7"
+        "track": "2"
       },
       {
         "dep": 205,
@@ -7776,7 +7776,7 @@
         "dep": 247,
         "name": "Leer (Ostfriesl)",
         "off": 241,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 257,
@@ -7870,7 +7870,7 @@
         "dep": 104,
         "name": "Hamburg-Elbbrücken",
         "off": 101,
-        "track": "fiktiv-1"
+        "track": "fiktiv-3"
       },
       {
         "dep": 130,
@@ -7958,91 +7958,91 @@
       {
         "name": "Bremerhaven-Lehe",
         "off": 0,
-        "track": "4"
+        "track": "3"
       },
       {
         "dep": 7,
         "name": "Bremerhaven Hbf",
         "off": 5,
-        "track": "2"
+        "track": "3"
       },
       {
         "dep": 39,
         "name": "Bremervörde",
         "off": 37,
-        "track": "2"
+        "track": "2;4"
       },
       {
         "dep": 76,
         "name": "Buxtehude",
         "off": 70,
-        "track": "1"
+        "track": "4"
       },
       {
         "dep": 93,
         "name": "Hamburg-Harburg",
         "off": 90,
-        "track": "12"
+        "track": "11"
       },
       {
         "dep": 104,
         "name": "Hamburg-Elbbrücken",
         "off": 101,
-        "track": "fiktiv-2"
+        "track": "fiktiv-3"
       },
       {
         "dep": 130,
         "name": "Büchen",
         "off": 124,
-        "track": "22"
+        "track": "1"
       },
       {
         "dep": 152,
         "name": "Hagenow Land",
         "off": 149,
-        "track": "3"
+        "track": "2"
       },
       {
         "dep": 170,
         "name": "Schwerin Hbf",
         "off": 167,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 186,
         "name": "Bad Kleinen",
         "off": 184,
-        "track": "4"
+        "track": "1"
       },
       {
         "dep": 223,
         "name": "Rostock Hbf",
         "off": 217,
-        "track": "10"
+        "track": "5"
       },
       {
         "dep": 234,
         "name": "Rövershagen",
         "off": 233,
-        "track": "2"
+        "track": "1"
       },
       {
         "dep": 260,
         "name": "Velgast",
         "off": 259,
-        "track": "2"
+        "track": "1"
       },
       {
         "dep": 279,
         "name": "Stralsund Hbf",
         "off": 276,
-        "track": "2"
+        "track": "1"
       },
       {
         "dep": 309,
         "name": "Bergen auf Rügen",
         "off": 299,
-        "track": "3"
+        "track": "2"
       },
       {
         "name": "Sassnitz",
@@ -8082,90 +8082,90 @@
         "dep": 25,
         "name": "Bergen auf Rügen",
         "off": 15,
-        "track": "2"
+        "track": "3"
       },
       {
         "dep": 48,
         "name": "Stralsund Hbf",
         "off": 45,
-        "track": "5"
+        "track": "2"
       },
       {
         "dep": 65,
         "name": "Velgast",
         "off": 64,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 91,
         "name": "Rövershagen",
         "off": 90,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 107,
         "name": "Rostock Hbf",
         "off": 101,
-        "track": "11"
+        "track": "10"
       },
       {
         "dep": 140,
         "name": "Bad Kleinen",
         "off": 138,
-        "track": "1"
+        "track": "4"
       },
       {
         "dep": 156,
         "name": "Schwerin Hbf",
         "off": 153,
-        "track": "3"
+        "track": "1"
       },
       {
         "dep": 174,
         "name": "Hagenow Land",
         "off": 171,
-        "track": "2"
+        "track": "3"
       },
       {
         "dep": 200,
         "name": "Büchen",
         "off": 193,
-        "track": "4"
+        "track": "22"
       },
       {
         "dep": 223,
         "name": "Hamburg-Elbbrücken",
         "off": 220,
-        "track": "fiktiv-3"
+        "track": "fiktiv-4"
       },
       {
         "dep": 234,
         "name": "Hamburg-Harburg",
         "off": 231,
-        "track": "5"
+        "track": "12"
       },
       {
         "dep": 254,
         "name": "Buxtehude",
         "off": 248,
-        "track": "2"
+        "track": "1"
       },
       {
         "dep": 287,
         "name": "Bremervörde",
         "off": 285,
-        "track": "2;4"
+        "track": "2"
       },
       {
         "dep": 319,
         "name": "Bremerhaven Hbf",
         "off": 317,
-        "track": "4"
+        "track": "2"
       },
       {
         "name": "Bremerhaven-Lehe",
         "off": 324,
-        "track": "3"
+        "track": "4"
       }
     ],
     "takt": {
@@ -8206,7 +8206,7 @@
         "dep": 53,
         "name": "Stralsund Hbf",
         "off": 50,
-        "track": "6"
+        "track": "2"
       },
       {
         "dep": 70,
@@ -8224,7 +8224,7 @@
         "dep": 112,
         "name": "Rostock Hbf",
         "off": 106,
-        "track": "9"
+        "track": "10"
       },
       {
         "dep": 145,
@@ -8236,7 +8236,7 @@
         "dep": 161,
         "name": "Schwerin Hbf",
         "off": 158,
-        "track": "4"
+        "track": "1"
       },
       {
         "dep": 179,
@@ -8248,7 +8248,7 @@
         "dep": 205,
         "name": "Büchen",
         "off": 198,
-        "track": "1"
+        "track": "22"
       },
       {
         "dep": 228,
@@ -8260,13 +8260,13 @@
         "dep": 239,
         "name": "Hamburg-Harburg",
         "off": 236,
-        "track": "6"
+        "track": "12"
       },
       {
         "dep": 259,
         "name": "Buxtehude",
         "off": 253,
-        "track": "4"
+        "track": "1"
       },
       {
         "dep": 292,
@@ -8278,7 +8278,7 @@
         "dep": 324,
         "name": "Bremerhaven Hbf",
         "off": 322,
-        "track": "5"
+        "track": "2"
       },
       {
         "name": "Bremerhaven-Lehe",
@@ -8704,7 +8704,7 @@
         "dep": 55,
         "name": "Bremen Hbf",
         "off": 50,
-        "track": "10"
+        "track": "8"
       },
       {
         "dep": 120,
@@ -8716,7 +8716,7 @@
         "dep": 158,
         "name": "Münster (Westf) Hbf",
         "off": 154,
-        "track": "12"
+        "track": "17"
       },
       {
         "dep": 189,
@@ -8781,7 +8781,7 @@
         "dep": 60,
         "name": "Münster (Westf) Hbf",
         "off": 56,
-        "track": "2"
+        "track": "8"
       },
       {
         "dep": 100,
@@ -8793,7 +8793,7 @@
         "dep": 164,
         "name": "Bremen Hbf",
         "off": 159,
-        "track": "5"
+        "track": "9"
       },
       {
         "name": "Bremerhaven-Lehe",

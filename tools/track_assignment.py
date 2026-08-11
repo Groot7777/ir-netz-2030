@@ -31,6 +31,15 @@ Algorithmus je Station:
     teilung, damit nicht alles auf einem Gleis landet), bei Gleichstand
     das kürzeste ausreichende (kein unnötig langes Gleis verschwenden).
 
+Gekuppelte Flügelzug-Partner (coupling.partner, z.B. RE91_BO+RE91_BS von
+Bremerhaven-Lehe bis Bergen auf Rügen) sind auf dem gemeinsamen Abschnitt
+EIN physischer Zug — sie werden zu EINEM Besuch zusammengeführt und
+bekommen zwangsläufig dasselbe Gleis (ein Zug kann nicht auf zwei Gleisen
+gleichzeitig stehen). Ohne das würde die Lastverteilung sie fälschlich auf
+unterschiedliche Gleise verteilen. coupledSection (reine Kapazitäts-
+verstärkung ohne eigenen Linienpartner) ist davon nicht betroffen — die
+Zuglänge ist dort schon in derselben Variante enthalten, kein Duplikat.
+
 Nutzung:
     python3 tools/track_assignment.py --out data/track_assignment.json
 """
@@ -41,7 +50,23 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from lengths import car_length, extra_cars_per_stop  # noqa: E402
+from lengths import car_length, extra_cars_per_stop, stop_index  # noqa: E402
+
+
+def coupled_window(v, data):
+    """(start_idx, end_idx, partner_key), wenn v.coupling einen echten
+    Partner referenziert, der auch als eigene Variante existiert — sonst
+    None. start/end sind die Halt-Indizes von v, auf denen der Zug mit dem
+    Partner gemeinsam fährt (coupledFrom/coupledTo, wie in lengths.py)."""
+    cp = v.get("coupling")
+    if not cp or not cp.get("partner") or cp["partner"] not in data:
+        return None
+    sl = v["stops"]
+    a = stop_index(v, cp["coupledFrom"]) if cp.get("coupledFrom") else 0
+    b = stop_index(v, cp["coupledTo"]) if cp.get("coupledTo") else len(sl) - 1
+    if a is None or b is None:
+        return None
+    return (a, b, cp["partner"])
 
 
 def dedup_max(tracks):
@@ -235,14 +260,38 @@ def main():
     stations = sorted({s["name"] for v in data.values() for s in v["stops"]})
     station_tracks = build_station_tracks(stations, manual, dbinfrago, osm)
 
+    # Gekuppelte Flügelzug-Partner an jedem Halt im gemeinsamen Abschnitt zu
+    # EINEM Besuch (= einem physischen Zug = einem Gleis) zusammenführen.
+    windows = {k: coupled_window(v, data) for k, v in data.items()}
+    members_by_group = collections.defaultdict(list)  # group_key -> [(k, i)]
+    for k, v in data.items():
+        win = windows[k]
+        for i, s in enumerate(v["stops"]):
+            if win and win[0] <= i <= win[1]:
+                gk = (s["name"], frozenset({k, win[2]}))
+            else:
+                gk = (k, i)
+            members_by_group[gk].append((k, i))
+
     visits_by_station = collections.defaultdict(list)
+    group_station = {}
+    group_required_length = {}
+    group_members_detail = collections.defaultdict(list)  # group_key -> [{variant, idx, line, required_length}]
     for k, v in data.items():
         extra = extra_cars_per_stop(v)
+        win = windows[k]
         for i, s in enumerate(v["stops"]):
             length = car_length(v["cars"]) + (car_length(extra[i]) if extra[i] else 0)
-            visits_by_station[s["name"]].append(
-                {"key": f"{k}@{i}", "variant": k, "idx": i, "line": v["name"], "required_length": length}
+            gk = (s["name"], frozenset({k, win[2]})) if (win and win[0] <= i <= win[1]) else (k, i)
+            group_members_detail[gk].append(
+                {"variant": k, "idx": i, "line": v["name"], "required_length": length}
             )
+            if gk not in group_station:
+                group_station[gk] = s["name"]
+                group_required_length[gk] = length
+                visits_by_station[s["name"]].append({"key": gk, "required_length": length})
+            else:
+                group_required_length[gk] = max(group_required_length[gk], length)
 
     result = {}
     n_by_severity = collections.Counter()
@@ -251,16 +300,19 @@ def main():
         info = station_tracks[st]
         assignment, resolved_tracks = assign_station(visits, info["tracks"], info["source"])
         rows = []
-        for v in visits:
-            a = assignment[v["key"]]
-            n_by_severity[a["severity"]] += 1
-            rows.append(
-                {
-                    "variant": v["variant"], "idx": v["idx"], "line": v["line"],
-                    "required_length_m": v["required_length"], "track": a["track"],
-                    "severity": a["severity"], "overhang_m": a["overhang_m"],
-                }
-            )
+        for gk, a in assignment.items():
+            if group_station[gk] != st:
+                continue
+            for m in group_members_detail[gk]:
+                n_by_severity[a["severity"]] += 1
+                rows.append(
+                    {
+                        "variant": m["variant"], "idx": m["idx"], "line": m["line"],
+                        "required_length_m": m["required_length"], "track": a["track"],
+                        "severity": a["severity"], "overhang_m": a["overhang_m"],
+                    }
+                )
+        rows.sort(key=lambda r: (r["variant"], r["idx"]))
         n_by_source[info["source"]] += 1
         result[st] = {
             "source": info["source"],

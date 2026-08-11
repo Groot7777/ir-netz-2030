@@ -827,7 +827,7 @@
         "overhang_m": -160.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3",
+        "track": "2",
         "variant": "RE30_LW"
       },
       {
@@ -891,7 +891,7 @@
         "overhang_m": -50.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "4",
+        "track": "1",
         "variant": "RE91_BS"
       },
       {
@@ -900,7 +900,7 @@
         "overhang_m": -50.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "1",
+        "track": "4",
         "variant": "RE91_OB"
       },
       {
@@ -1214,7 +1214,7 @@
         "overhang_m": -191.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "3",
+        "track": "2",
         "variant": "RE91_BS"
       },
       {
@@ -1223,7 +1223,7 @@
         "overhang_m": -191.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "2",
+        "track": "3",
         "variant": "RE91_OB"
       },
       {
@@ -3636,19 +3636,19 @@
       {
         "idx": 14,
         "line": "RE7",
-        "overhang_m": -206.0,
+        "overhang_m": -166.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "8",
+        "track": "3",
         "variant": "RE7_A"
       },
       {
         "idx": 0,
         "line": "RE7",
-        "overhang_m": -210.0,
+        "overhang_m": -206.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "9",
+        "track": "7",
         "variant": "RE7_B"
       },
       {
@@ -3672,37 +3672,37 @@
       {
         "idx": 6,
         "line": "RE90b",
-        "overhang_m": -140.0,
+        "overhang_m": -82.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "3",
+        "track": "1",
         "variant": "RE90b_NK"
       },
       {
         "idx": 11,
         "line": "RE90b",
-        "overhang_m": -180.0,
+        "overhang_m": -140.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "7",
+        "track": "2",
         "variant": "RE90b_SG"
       },
       {
         "idx": 1,
         "line": "RE9",
-        "overhang_m": -210.0,
+        "overhang_m": -206.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "10",
+        "track": "8",
         "variant": "RE9_A"
       },
       {
         "idx": 5,
         "line": "RE9",
-        "overhang_m": -239.0,
+        "overhang_m": -210.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "5",
+        "track": "9",
         "variant": "RE9_B"
       }
     ],
@@ -3760,10 +3760,10 @@
       {
         "idx": 1,
         "line": "RE91",
-        "overhang_m": -60.0,
+        "overhang_m": -51.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "2",
+        "track": "3",
         "variant": "RE91_BS"
       },
       {
@@ -3772,7 +3772,7 @@
         "overhang_m": -60.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "4",
+        "track": "2",
         "variant": "RE91_OB"
       },
       {
@@ -3781,7 +3781,7 @@
         "overhang_m": -60.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "5",
+        "track": "2",
         "variant": "RE91_SB"
       }
     ],
@@ -3822,7 +3822,7 @@
         "overhang_m": -10.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "4",
+        "track": "3",
         "variant": "RE91_BS"
       },
       {
@@ -3831,7 +3831,7 @@
         "overhang_m": -10.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "3",
+        "track": "4",
         "variant": "RE91_OB"
       },
       {
@@ -3888,19 +3888,19 @@
       {
         "idx": 2,
         "line": "RE91",
-        "overhang_m": -33.4,
+        "overhang_m": -7.7,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "2",
+        "track": "2;4",
         "variant": "RE91_BS"
       },
       {
         "idx": 13,
         "line": "RE91",
-        "overhang_m": -7.7,
+        "overhang_m": -33.4,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "2;4",
+        "track": "2",
         "variant": "RE91_OB"
       },
       {
@@ -4172,10 +4172,10 @@
       {
         "idx": 12,
         "line": "RE25",
-        "overhang_m": -21.0,
+        "overhang_m": -175.0,
         "required_length_m": 130,
         "severity": "ok",
-        "track": "3",
+        "track": "2",
         "variant": "RE25_B"
       },
       {
@@ -4190,28 +4190,28 @@
       {
         "idx": 3,
         "line": "RE91",
-        "overhang_m": -113.0,
+        "overhang_m": -5.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "1",
+        "track": "4",
         "variant": "RE91_BS"
       },
       {
         "idx": 12,
         "line": "RE91",
-        "overhang_m": -145.0,
+        "overhang_m": -113.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "2",
+        "track": "1",
         "variant": "RE91_OB"
       },
       {
         "idx": 12,
         "line": "RE91",
-        "overhang_m": -5.0,
+        "overhang_m": -113.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "4",
+        "track": "1",
         "variant": "RE91_SB"
       }
     ],
@@ -4332,19 +4332,19 @@
       {
         "idx": 14,
         "line": "RE77",
-        "overhang_m": -69.0,
+        "overhang_m": -197.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "22",
+        "track": "4",
         "variant": "RE77_A"
       },
       {
         "idx": 7,
         "line": "RE77",
-        "overhang_m": -197.0,
+        "overhang_m": -265.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "4",
+        "track": "1",
         "variant": "RE77_B"
       },
       {
@@ -4359,28 +4359,28 @@
       {
         "idx": 6,
         "line": "RE91",
-        "overhang_m": -65.0,
+        "overhang_m": -261.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "22",
+        "track": "1",
         "variant": "RE91_BS"
       },
       {
         "idx": 9,
         "line": "RE91",
-        "overhang_m": -193.0,
+        "overhang_m": -65.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "4",
+        "track": "22",
         "variant": "RE91_OB"
       },
       {
         "idx": 9,
         "line": "RE91",
-        "overhang_m": -261.0,
+        "overhang_m": -65.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "1",
+        "track": "22",
         "variant": "RE91_SB"
       }
     ],
@@ -6501,19 +6501,19 @@
       {
         "idx": 11,
         "line": "RE77",
-        "overhang_m": -149.0,
+        "overhang_m": -197.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "3",
+        "track": "1",
         "variant": "RE77_A"
       },
       {
         "idx": 10,
         "line": "RE77",
-        "overhang_m": -197.0,
+        "overhang_m": -149.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE77_B"
       },
       {
@@ -6537,10 +6537,10 @@
       {
         "idx": 11,
         "line": "RE90b",
-        "overhang_m": -117.0,
+        "overhang_m": -69.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE90b_NK"
       },
       {
@@ -6549,7 +6549,7 @@
         "overhang_m": -69.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "2",
+        "track": "3",
         "variant": "RE90b_SG"
       }
     ],
@@ -10343,7 +10343,7 @@
         "overhang_m": -40.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "3",
+        "track": "2",
         "variant": "RE91_BS"
       },
       {
@@ -10352,7 +10352,7 @@
         "overhang_m": -40.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "2",
+        "track": "3",
         "variant": "RE91_OB"
       },
       {
@@ -10727,7 +10727,7 @@
         "overhang_m": -84,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "fiktiv-3",
+        "track": "fiktiv-1",
         "variant": "RE90b_NK"
       },
       {
@@ -10736,7 +10736,7 @@
         "overhang_m": -84,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "fiktiv-4",
+        "track": "fiktiv-2",
         "variant": "RE90b_SG"
       },
       {
@@ -10745,7 +10745,7 @@
         "overhang_m": -160,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "fiktiv-1",
+        "track": "fiktiv-3",
         "variant": "RE91_BO"
       },
       {
@@ -10754,7 +10754,7 @@
         "overhang_m": -160,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "fiktiv-2",
+        "track": "fiktiv-3",
         "variant": "RE91_BS"
       },
       {
@@ -10763,7 +10763,7 @@
         "overhang_m": -160,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "fiktiv-3",
+        "track": "fiktiv-4",
         "variant": "RE91_OB"
       },
       {
@@ -10801,37 +10801,37 @@
       {
         "idx": 3,
         "line": "RE25",
-        "overhang_m": -313.0,
+        "overhang_m": -362.0,
         "required_length_m": 130,
         "severity": "ok",
-        "track": "3",
+        "track": "5",
         "variant": "RE25_A"
       },
       {
         "idx": 11,
         "line": "RE25",
-        "overhang_m": -325.0,
+        "overhang_m": -362.0,
         "required_length_m": 130,
         "severity": "ok",
-        "track": "4",
+        "track": "6",
         "variant": "RE25_B"
       },
       {
         "idx": 12,
         "line": "RE45",
-        "overhang_m": -42.0,
+        "overhang_m": -307.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "11",
+        "track": "1",
         "variant": "RE45_N"
       },
       {
         "idx": 5,
         "line": "RE45",
-        "overhang_m": -42.0,
+        "overhang_m": -307.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "12",
+        "track": "2",
         "variant": "RE45_S"
       },
       {
@@ -10855,19 +10855,19 @@
       {
         "idx": 9,
         "line": "RE90b",
-        "overhang_m": -227.0,
+        "overhang_m": -207.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "1",
+        "track": "3",
         "variant": "RE90b_NK"
       },
       {
         "idx": 8,
         "line": "RE90b",
-        "overhang_m": -227.0,
+        "overhang_m": -219.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "2",
+        "track": "4",
         "variant": "RE90b_SG"
       },
       {
@@ -10885,25 +10885,25 @@
         "overhang_m": -38.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "12",
+        "track": "11",
         "variant": "RE91_BS"
       },
       {
         "idx": 11,
         "line": "RE91",
-        "overhang_m": -332.0,
+        "overhang_m": -38.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "5",
+        "track": "12",
         "variant": "RE91_OB"
       },
       {
         "idx": 11,
         "line": "RE91",
-        "overhang_m": -332.0,
+        "overhang_m": -38.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "6",
+        "track": "12",
         "variant": "RE91_SB"
       }
     ],
@@ -10948,19 +10948,19 @@
       {
         "idx": 2,
         "line": "RE17",
-        "overhang_m": -246.0,
+        "overhang_m": -240.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "2",
+        "track": "11",
         "variant": "RE17DW_A"
       },
       {
         "idx": 13,
         "line": "RE17",
-        "overhang_m": -261.0,
+        "overhang_m": -246.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "10",
+        "track": "1",
         "variant": "RE17DW_B"
       },
       {
@@ -10984,37 +10984,37 @@
       {
         "idx": 9,
         "line": "RE30",
-        "overhang_m": -150.0,
+        "overhang_m": -10.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3",
+        "track": "13",
         "variant": "RE30_LW"
       },
       {
         "idx": 12,
         "line": "RE30",
-        "overhang_m": -150.0,
+        "overhang_m": -10.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "4",
+        "track": "12",
         "variant": "RE30_WL"
       },
       {
         "idx": 16,
         "line": "RE32",
-        "overhang_m": -186.0,
+        "overhang_m": -150.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "11",
+        "track": "3",
         "variant": "RE32_N"
       },
       {
         "idx": 6,
         "line": "RE32",
-        "overhang_m": -192.0,
+        "overhang_m": -150.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1",
+        "track": "4",
         "variant": "RE32_S"
       }
     ],
@@ -12800,19 +12800,19 @@
       {
         "idx": 13,
         "line": "RE90b",
-        "overhang_m": -151.0,
+        "overhang_m": -4.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "3",
+        "track": "5",
         "variant": "RE90b_NK"
       },
       {
         "idx": 4,
         "line": "RE90b",
-        "overhang_m": -152.0,
+        "overhang_m": -31.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "4",
+        "track": "1",
         "variant": "RE90b_SG"
       }
     ],
@@ -13736,7 +13736,7 @@
         "overhang_m": -64.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "4",
+        "track": "1",
         "variant": "RE90b_NK"
       },
       {
@@ -13745,7 +13745,7 @@
         "overhang_m": -64.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE90b_SG"
       }
     ],
@@ -13788,10 +13788,10 @@
       {
         "idx": 0,
         "line": "RE30",
-        "overhang_m": -104.8,
+        "overhang_m": -88.4,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "4",
+        "track": "3",
         "variant": "RE30_LW"
       },
       {
@@ -15466,19 +15466,19 @@
       {
         "idx": 1,
         "line": "RE30",
-        "overhang_m": -196.0,
+        "overhang_m": -196.2,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "2",
+        "track": "3",
         "variant": "RE30_LW"
       },
       {
         "idx": 20,
         "line": "RE30",
-        "overhang_m": -196.2,
+        "overhang_m": -196.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3",
+        "track": "2",
         "variant": "RE30_WL"
       }
     ],
@@ -16293,19 +16293,19 @@
       {
         "idx": 5,
         "line": "RE2",
-        "overhang_m": -276.0,
+        "overhang_m": -254.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "3",
+        "track": "12",
         "variant": "RE2_A"
       },
       {
         "idx": 1,
         "line": "RE2",
-        "overhang_m": -284.0,
+        "overhang_m": -276.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "9",
+        "track": "2",
         "variant": "RE2_B"
       },
       {
@@ -16332,34 +16332,34 @@
         "overhang_m": -88.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "17",
+        "track": "14",
         "variant": "RE30_LW"
       },
       {
         "idx": 14,
         "line": "RE30",
-        "overhang_m": -137.0,
+        "overhang_m": -80.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "8",
+        "track": "4",
         "variant": "RE30_WL"
       },
       {
         "idx": 3,
         "line": "RE9",
-        "overhang_m": -200.0,
+        "overhang_m": -88.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "12",
+        "track": "17",
         "variant": "RE9_A"
       },
       {
         "idx": 3,
         "line": "RE9",
-        "overhang_m": -222.0,
+        "overhang_m": -137.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "2",
+        "track": "8",
         "variant": "RE9_B"
       }
     ],
@@ -16549,19 +16549,19 @@
       {
         "idx": 10,
         "line": "RE77",
-        "overhang_m": -226.0,
+        "overhang_m": -289.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "3",
+        "track": "5",
         "variant": "RE77_A"
       },
       {
         "idx": 11,
         "line": "RE77",
-        "overhang_m": -226.0,
+        "overhang_m": -289.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "4",
+        "track": "6",
         "variant": "RE77_B"
       },
       {
@@ -16585,19 +16585,19 @@
       {
         "idx": 12,
         "line": "RE90b",
-        "overhang_m": -209.0,
+        "overhang_m": -146.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "5",
+        "track": "3",
         "variant": "RE90b_NK"
       },
       {
         "idx": 5,
         "line": "RE90b",
-        "overhang_m": -209.0,
+        "overhang_m": -146.0,
         "required_length_m": 236,
         "severity": "ok",
-        "track": "6",
+        "track": "4",
         "variant": "RE90b_SG"
       }
     ],
@@ -19034,16 +19034,16 @@
         "overhang_m": -195.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3",
+        "track": "2",
         "variant": "RE30_LW"
       },
       {
         "idx": 15,
         "line": "RE30",
-        "overhang_m": -195.0,
+        "overhang_m": -96.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "4",
+        "track": "8",
         "variant": "RE30_WL"
       }
     ],
@@ -19332,19 +19332,19 @@
       {
         "idx": 1,
         "line": "RE35",
-        "overhang_m": -216.0,
+        "overhang_m": -41.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "3",
+        "track": "11",
         "variant": "RE35_N"
       },
       {
         "idx": 23,
         "line": "RE35",
-        "overhang_m": -224.0,
+        "overhang_m": -146.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "7",
+        "track": "9",
         "variant": "RE35_S"
       },
       {
@@ -19359,10 +19359,10 @@
       {
         "idx": 10,
         "line": "RE91",
-        "overhang_m": -37.0,
+        "overhang_m": -3.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "10",
+        "track": "5",
         "variant": "RE91_BS"
       },
       {
@@ -19371,16 +19371,16 @@
         "overhang_m": -37.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "11",
+        "track": "10",
         "variant": "RE91_OB"
       },
       {
         "idx": 5,
         "line": "RE91",
-        "overhang_m": -142.0,
+        "overhang_m": -37.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "9",
+        "track": "10",
         "variant": "RE91_SB"
       }
     ],
@@ -19458,7 +19458,7 @@
         "overhang_m": 16.0,
         "required_length_m": 236,
         "severity": "gering",
-        "track": "6",
+        "track": "4",
         "variant": "RE90b_NK"
       },
       {
@@ -19467,7 +19467,7 @@
         "overhang_m": 16.0,
         "required_length_m": 236,
         "severity": "gering",
-        "track": "4",
+        "track": "5",
         "variant": "RE90b_SG"
       }
     ],
@@ -19681,7 +19681,7 @@
         "overhang_m": 20.0,
         "required_length_m": 160,
         "severity": "gering",
-        "track": "2",
+        "track": "1",
         "variant": "RE91_BS"
       },
       {
@@ -19690,7 +19690,7 @@
         "overhang_m": 20.0,
         "required_length_m": 160,
         "severity": "gering",
-        "track": "1",
+        "track": "2",
         "variant": "RE91_OB"
       },
       {
@@ -20437,28 +20437,28 @@
       {
         "idx": 8,
         "line": "RE91",
-        "overhang_m": -209.0,
+        "overhang_m": -208.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE91_BS"
       },
       {
         "idx": 7,
         "line": "RE91",
-        "overhang_m": -219.0,
+        "overhang_m": -209.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "3",
+        "track": "1",
         "variant": "RE91_OB"
       },
       {
         "idx": 7,
         "line": "RE91",
-        "overhang_m": -219.0,
+        "overhang_m": -209.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "4",
+        "track": "1",
         "variant": "RE91_SB"
       }
     ],
@@ -20508,7 +20508,7 @@
         "overhang_m": -1.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3",
+        "track": "4",
         "variant": "RE30_LW"
       },
       {
@@ -20517,7 +20517,7 @@
         "overhang_m": -1.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "4",
+        "track": "3",
         "variant": "RE30_WL"
       },
       {
@@ -21067,19 +21067,19 @@
       {
         "idx": 3,
         "line": "RE35",
-        "overhang_m": -174.0,
+        "overhang_m": -231.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "3",
+        "track": "5",
         "variant": "RE35_N"
       },
       {
         "idx": 21,
         "line": "RE35",
-        "overhang_m": -184.0,
+        "overhang_m": -231.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "4",
+        "track": "6",
         "variant": "RE35_S"
       },
       {
@@ -21097,25 +21097,25 @@
         "overhang_m": -182.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "2",
+        "track": "1",
         "variant": "RE91_BS"
       },
       {
         "idx": 2,
         "line": "RE91",
-        "overhang_m": -227.0,
+        "overhang_m": -182.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "5",
+        "track": "2",
         "variant": "RE91_OB"
       },
       {
         "idx": 2,
         "line": "RE91",
-        "overhang_m": -227.0,
+        "overhang_m": -182.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "6",
+        "track": "2",
         "variant": "RE91_SB"
       }
     ],
@@ -21988,7 +21988,7 @@
         "overhang_m": -10.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "4",
+        "track": "2",
         "variant": "RE30_LW"
       },
       {
@@ -21997,7 +21997,7 @@
         "overhang_m": -10.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "18",
+        "track": "1",
         "variant": "RE30_WL"
       }
     ],
@@ -22209,19 +22209,19 @@
       {
         "idx": 12,
         "line": "RE91",
-        "overhang_m": -210.0,
+        "overhang_m": -25.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "2",
+        "track": "1",
         "variant": "RE91_BS"
       },
       {
         "idx": 3,
         "line": "RE91",
-        "overhang_m": -25.0,
+        "overhang_m": -210.0,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE91_OB"
       },
       {
@@ -24237,19 +24237,19 @@
       {
         "idx": 2,
         "line": "RE30",
-        "overhang_m": -88.8,
+        "overhang_m": -84.5,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "14",
+        "track": "1a",
         "variant": "RE30_LW"
       },
       {
         "idx": 19,
         "line": "RE30",
-        "overhang_m": -100.6,
+        "overhang_m": -37.1,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "10",
+        "track": "1b",
         "variant": "RE30_WL"
       }
     ],

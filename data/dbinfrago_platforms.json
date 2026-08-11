@@ -1,0 +1,1207 @@
+{
+  "Bad Kleinen": {
+    "max_length_m": 210.0,
+    "source_slug": "Bad-Kleinen-12675404",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "55 cm",
+        "length_m": 210.0
+      },
+      {
+        "gleis": "2",
+        "height": "55 cm",
+        "length_m": 140.0
+      },
+      {
+        "gleis": "3",
+        "height": "55 cm",
+        "length_m": 140.0
+      },
+      {
+        "gleis": "4",
+        "height": "55 cm",
+        "length_m": 210.0
+      }
+    ]
+  },
+  "Berlin Hbf": {
+    "max_length_m": 430.0,
+    "source_slug": "Berlin-Hauptbahnhof-12669788",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "7",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "11",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "12",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "13",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "14",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "15",
+        "height": "96 cm",
+        "length_m": 152.0
+      },
+      {
+        "gleis": "16",
+        "height": "96 cm",
+        "length_m": 152.0
+      },
+      {
+        "gleis": "22",
+        "height": "96 cm",
+        "length_m": 80.0
+      }
+    ]
+  },
+  "Berlin Hbf (tief)": {
+    "max_length_m": 430.0,
+    "source_slug": "Berlin-Hauptbahnhof-12669788",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "7",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "11",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "12",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "13",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "14",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "15",
+        "height": "96 cm",
+        "length_m": 152.0
+      },
+      {
+        "gleis": "16",
+        "height": "96 cm",
+        "length_m": 152.0
+      },
+      {
+        "gleis": "22",
+        "height": "96 cm",
+        "length_m": 80.0
+      }
+    ]
+  },
+  "Berlin Südkreuz": {
+    "max_length_m": 406.0,
+    "source_slug": "Berlin-Suedkreuz-12668128",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "96 cm",
+        "length_m": 160.0
+      },
+      {
+        "gleis": "2",
+        "height": "96 cm",
+        "length_m": 160.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "7",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "11",
+        "height": "96 cm",
+        "length_m": 183.0
+      },
+      {
+        "gleis": "12",
+        "height": "96 cm",
+        "length_m": 183.0
+      }
+    ]
+  },
+  "Berlin-Spandau": {
+    "max_length_m": 406.0,
+    "source_slug": "Berlin-Spandau-12668216",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "103 cm",
+        "length_m": 165.0
+      },
+      {
+        "gleis": "2",
+        "height": "103 cm",
+        "length_m": 165.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 406.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 406.0
+      }
+    ]
+  },
+  "Bochum Hbf": {
+    "max_length_m": 430.0,
+    "source_slug": "Bochum-Hbf-12675848",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 142.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 227.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 351.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 343.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "7",
+        "height": "96 cm",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "8",
+        "height": "96 cm",
+        "length_m": 180.0
+      }
+    ]
+  },
+  "Chemnitz Hbf": {
+    "max_length_m": 220.0,
+    "source_slug": "Chemnitz-Hbf-12673382",
+    "tracks": [
+      {
+        "gleis": "5",
+        "height": "55 cm",
+        "length_m": 163.0
+      },
+      {
+        "gleis": "6",
+        "height": "55 cm",
+        "length_m": 163.0
+      },
+      {
+        "gleis": "7",
+        "height": "55 cm",
+        "length_m": 156.0
+      },
+      {
+        "gleis": "8",
+        "height": "55 cm",
+        "length_m": 156.0
+      },
+      {
+        "gleis": "9",
+        "height": "55 cm",
+        "length_m": 172.0
+      },
+      {
+        "gleis": "10",
+        "height": "55 cm",
+        "length_m": 220.0
+      },
+      {
+        "gleis": "11",
+        "height": "76 cm",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "12",
+        "height": "76 cm",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "13",
+        "height": "76 cm",
+        "length_m": 216.0
+      },
+      {
+        "gleis": "14",
+        "height": "76 cm",
+        "length_m": 216.0
+      }
+    ]
+  },
+  "Duisburg Hbf": {
+    "max_length_m": 620.0,
+    "source_slug": "Duisburg-Hbf-12667688",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 421.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 421.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 417.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 417.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 370.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 370.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 4.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 376.0
+      },
+      {
+        "gleis": "9",
+        "height": "76 cm",
+        "length_m": 0.0
+      },
+      {
+        "gleis": "9",
+        "height": "76 cm",
+        "length_m": 322.0
+      },
+      {
+        "gleis": "10",
+        "height": "76 cm",
+        "length_m": 620.0
+      },
+      {
+        "gleis": "10",
+        "height": "76 cm",
+        "length_m": 620.0
+      },
+      {
+        "gleis": "11",
+        "height": "76 cm",
+        "length_m": 620.0
+      },
+      {
+        "gleis": "11",
+        "height": "76 cm",
+        "length_m": 620.0
+      },
+      {
+        "gleis": "12",
+        "height": "76 cm",
+        "length_m": 505.0
+      },
+      {
+        "gleis": "13",
+        "height": "76 cm",
+        "length_m": 505.0
+      }
+    ]
+  },
+  "Düsseldorf Hbf": {
+    "max_length_m": 479.0,
+    "source_slug": "Duesseldorf-Hbf-12668428",
+    "tracks": [
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 421.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 419.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 279.0
+      },
+      {
+        "gleis": "7",
+        "height": "76 cm",
+        "length_m": 373.0
+      },
+      {
+        "gleis": "9",
+        "height": "76 cm",
+        "length_m": 436.0
+      },
+      {
+        "gleis": "10",
+        "height": "76 cm",
+        "length_m": 479.0
+      },
+      {
+        "gleis": "11",
+        "height": "96 cm",
+        "length_m": 168.0
+      },
+      {
+        "gleis": "12",
+        "height": "96 cm",
+        "length_m": 168.0
+      },
+      {
+        "gleis": "13",
+        "height": "96 cm",
+        "length_m": 168.0
+      },
+      {
+        "gleis": "14",
+        "height": "96 cm",
+        "length_m": 168.0
+      },
+      {
+        "gleis": "15",
+        "height": "76 cm",
+        "length_m": 458.0
+      },
+      {
+        "gleis": "16",
+        "height": "76 cm",
+        "length_m": 458.0
+      },
+      {
+        "gleis": "17",
+        "height": "76 cm",
+        "length_m": 412.0
+      },
+      {
+        "gleis": "18",
+        "height": "76 cm",
+        "length_m": 415.0
+      },
+      {
+        "gleis": "19",
+        "height": "76 cm",
+        "length_m": 428.0
+      },
+      {
+        "gleis": "20",
+        "height": "76 cm",
+        "length_m": 428.0
+      }
+    ]
+  },
+  "Eberswalde Hbf": {
+    "max_length_m": 320.0,
+    "source_slug": "Eberswalde-Hbf-12668622",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 60.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 176.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 176.0
+      }
+    ]
+  },
+  "Erfurt Hbf": {
+    "max_length_m": 554.0,
+    "source_slug": "Erfurt-Hbf-12677056",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 420.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 420.0
+      },
+      {
+        "gleis": "3",
+        "height": "55 cm",
+        "length_m": 554.0
+      },
+      {
+        "gleis": "4",
+        "height": "55 cm",
+        "length_m": 215.0
+      },
+      {
+        "gleis": "5",
+        "height": "55 cm",
+        "length_m": 213.0
+      },
+      {
+        "gleis": "6",
+        "height": "55 cm",
+        "length_m": 184.0
+      },
+      {
+        "gleis": "7",
+        "height": "55 cm",
+        "length_m": 184.0
+      },
+      {
+        "gleis": "8",
+        "height": "55 cm",
+        "length_m": 552.0
+      },
+      {
+        "gleis": "9",
+        "height": "76 cm",
+        "length_m": 421.0
+      },
+      {
+        "gleis": "10",
+        "height": "76 cm",
+        "length_m": 419.0
+      }
+    ]
+  },
+  "Freiberg (Sachs)": {
+    "max_length_m": 220.0,
+    "source_slug": "Freiberg-Sachs--12668092",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "55 cm",
+        "length_m": 220.0
+      },
+      {
+        "gleis": "2",
+        "height": "55 cm",
+        "length_m": 213.0
+      },
+      {
+        "gleis": "3",
+        "height": "55 cm",
+        "length_m": 170.0
+      },
+      {
+        "gleis": "3",
+        "height": "55 cm",
+        "length_m": 170.0
+      },
+      {
+        "gleis": "4",
+        "height": "55 cm",
+        "length_m": 120.0
+      }
+    ]
+  },
+  "Hagenow Land": {
+    "max_length_m": 200.0,
+    "source_slug": "Hagenow-Land-12675542",
+    "tracks": [
+      {
+        "gleis": "2",
+        "height": "55 cm",
+        "length_m": 200.0
+      },
+      {
+        "gleis": "3",
+        "height": "55 cm",
+        "length_m": 200.0
+      },
+      {
+        "gleis": "1b",
+        "height": "55 cm",
+        "length_m": 105.0
+      },
+      {
+        "gleis": "1a",
+        "height": "55 cm",
+        "length_m": 105.0
+      }
+    ]
+  },
+  "Hamburg-Elbbrücken": {
+    "max_length_m": 210.0,
+    "source_slug": "Elbbruecken-12671036",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "96 cm",
+        "length_m": 210.0
+      },
+      {
+        "gleis": "2",
+        "height": "96 cm",
+        "length_m": 210.0
+      }
+    ]
+  },
+  "Hamburg-Harburg": {
+    "max_length_m": 492.0,
+    "source_slug": "Hamburg-Harburg-12668078",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 463.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 463.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 443.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 455.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 492.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 492.0
+      },
+      {
+        "gleis": "11",
+        "height": "96 cm",
+        "length_m": 198.0
+      },
+      {
+        "gleis": "12",
+        "height": "96 cm",
+        "length_m": 198.0
+      }
+    ]
+  },
+  "Kassel-Wilhelmshöhe": {
+    "max_length_m": 428.0,
+    "source_slug": "Kassel-Wilhelmshoehe-12672286",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 420.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 415.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 415.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 415.0
+      },
+      {
+        "gleis": "7",
+        "height": "55 cm",
+        "length_m": 416.0
+      },
+      {
+        "gleis": "8",
+        "height": "55 cm",
+        "length_m": 409.0
+      },
+      {
+        "gleis": "9",
+        "height": "55 cm",
+        "length_m": 425.0
+      },
+      {
+        "gleis": "10",
+        "height": "55 cm",
+        "length_m": 428.0
+      }
+    ]
+  },
+  "Kiel Hbf": {
+    "max_length_m": 388.0,
+    "source_slug": "Kiel-Hbf-12673586",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 267.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 387.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 388.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 240.0
+      },
+      {
+        "gleis": "2b",
+        "height": "76 cm",
+        "length_m": 111.0
+      },
+      {
+        "gleis": "2a",
+        "height": "76 cm",
+        "length_m": 150.0
+      },
+      {
+        "gleis": "6a",
+        "height": "76 cm",
+        "length_m": 130.0
+      },
+      {
+        "gleis": "6b",
+        "height": "76 cm",
+        "length_m": 101.0
+      }
+    ]
+  },
+  "Lübeck Hbf": {
+    "max_length_m": 320.0,
+    "source_slug": "Luebeck-Hbf-12670852",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "7",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 320.0
+      },
+      {
+        "gleis": "9",
+        "height": "76 cm",
+        "length_m": 320.0
+      }
+    ]
+  },
+  "Münster (Westf) Hbf": {
+    "max_length_m": 440.0,
+    "source_slug": "Muenster-Westf-Hbf-12668946",
+    "tracks": [
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 432.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 432.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 290.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 347.0
+      },
+      {
+        "gleis": "9",
+        "height": "76 cm",
+        "length_m": 440.0
+      },
+      {
+        "gleis": "11",
+        "height": "76 cm",
+        "length_m": 120.0
+      },
+      {
+        "gleis": "12",
+        "height": "76 cm",
+        "length_m": 410.0
+      },
+      {
+        "gleis": "14",
+        "height": "76 cm",
+        "length_m": 298.0
+      },
+      {
+        "gleis": "17",
+        "height": "76 cm",
+        "length_m": 298.0
+      }
+    ]
+  },
+  "Neuss Hbf": {
+    "max_length_m": 387.0,
+    "source_slug": "Neuss-Hbf-12668648",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 385.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 385.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 387.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 387.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 350.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 350.0
+      },
+      {
+        "gleis": "7",
+        "height": "76 cm",
+        "length_m": 352.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 352.0
+      }
+    ]
+  },
+  "Oldenburg (Oldb) Hbf": {
+    "max_length_m": 364.0,
+    "source_slug": "Oldenburg-Oldb-Hbf-12668824",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "38 cm",
+        "length_m": 189.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 364.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 364.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 228.0
+      },
+      {
+        "gleis": "6",
+        "height": "76 cm",
+        "length_m": 228.0
+      },
+      {
+        "gleis": "7",
+        "height": "76 cm",
+        "length_m": 228.0
+      },
+      {
+        "gleis": "8",
+        "height": "76 cm",
+        "length_m": 228.0
+      }
+    ]
+  },
+  "Osnabrück Hbf": {
+    "max_length_m": 393.0,
+    "source_slug": "Osnabrueck-Hbf-12668138",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 251.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 393.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 393.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 393.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 393.0
+      },
+      {
+        "gleis": "11",
+        "height": "76 cm",
+        "length_m": 311.0
+      },
+      {
+        "gleis": "12",
+        "height": "76 cm",
+        "length_m": 311.0
+      },
+      {
+        "gleis": "13",
+        "height": "76 cm",
+        "length_m": 232.0
+      },
+      {
+        "gleis": "14",
+        "height": "76 cm",
+        "length_m": 232.0
+      }
+    ]
+  },
+  "Pasewalk": {
+    "max_length_m": 333.0,
+    "source_slug": "Pasewalk-12677978",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "55 cm",
+        "length_m": 330.0
+      },
+      {
+        "gleis": "2",
+        "height": "55 cm",
+        "length_m": 333.0
+      },
+      {
+        "gleis": "3",
+        "height": "55 cm",
+        "length_m": 105.0
+      },
+      {
+        "gleis": "4a",
+        "height": "55 cm",
+        "length_m": 163.0
+      },
+      {
+        "gleis": "4b",
+        "height": "55 cm",
+        "length_m": 162.0
+      }
+    ]
+  },
+  "Plattling": {
+    "max_length_m": 370.0,
+    "source_slug": "Plattling-12671320",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "38 cm",
+        "length_m": 300.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 355.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 370.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 370.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 344.0
+      },
+      {
+        "gleis": "6",
+        "height": "38 cm",
+        "length_m": 220.0
+      },
+      {
+        "gleis": "8",
+        "height": "38 cm",
+        "length_m": 220.0
+      }
+    ]
+  },
+  "Zwickau Hbf": {
+    "max_length_m": 306.0,
+    "source_slug": "Zwickau-Sachs-Hbf-12677206",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "55 cm",
+        "length_m": 303.0
+      },
+      {
+        "gleis": "2",
+        "height": "55 cm",
+        "length_m": 303.0
+      },
+      {
+        "gleis": "3",
+        "height": "55 cm",
+        "length_m": 306.0
+      },
+      {
+        "gleis": "4",
+        "height": "55 cm",
+        "length_m": 306.0
+      },
+      {
+        "gleis": "5",
+        "height": "38 cm",
+        "length_m": 165.0
+      },
+      {
+        "gleis": "6",
+        "height": "38 cm",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "7",
+        "height": "38 cm",
+        "length_m": 157.0
+      },
+      {
+        "gleis": "8",
+        "height": "38 cm",
+        "length_m": 170.0
+      }
+    ]
+  }
+}

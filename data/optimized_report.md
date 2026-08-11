@@ -42,88 +42,88 @@
 
 | Von | Nach | Linien | Ist-Abfahrten (mod 60) | Lücken | Ideal | ⌀Abw. |
 |---|---|---|---|---|---|---|
-| Dortmund Hbf | Bochum Hbf | 2 | RE9:00, RE32:02 | [2, 58] | 30.0 | 28.0 |
-| Mönchengladbach Hbf | Viersen | 2 | RB37:00, RE14:03 | [3, 57] | 30.0 | 27.0 |
+| Schwelm | Hagen Hbf | 2 | RE30:47, RB37:49 | [2, 58] | 30.0 | 28.0 |
+| Hagen Hbf | Wetter (Ruhr) | 2 | RB37:00, RE40:02 | [2, 58] | 30.0 | 28.0 |
+| Jübek | Schleswig | 2 | RE46:20, RE77:22 | [2, 58] | 30.0 | 28.0 |
+| Wuppertal-Oberbarmen | Schwelm | 2 | RE30:41, RB37:44 | [3, 57] | 30.0 | 27.0 |
+| Schleswig | Jübek | 2 | RE77:30, RE46:33 | [3, 57] | 30.0 | 27.0 |
+| Wetter (Ruhr) | Witten Hbf | 2 | RB37:07, RE40:11 | [4, 56] | 30.0 | 26.0 |
+| Hamburg-Harburg | Buxtehude | 2 | RE91:01, RE25:05 | [4, 56] | 30.0 | 26.0 |
 | Bamberg | Erfurt Hbf | 2 | RE28:41, RE39:45 | [4, 56] | 30.0 | 26.0 |
-| Schwerte (Ruhr) | Holzwickede | 2 | S10 Innenring:28, RE30:32 | [4, 56] | 30.0 | 26.0 |
-| Schleswig | Rendsburg | 2 | RE77:32, RE46:36 | [4, 56] | 30.0 | 26.0 |
-| Rendsburg | Schleswig | 2 | RE46:07, RE77:11 | [4, 56] | 30.0 | 26.0 |
-| Wetter (Ruhr) | Hagen Hbf | 2 | RE40:35, RB37:40 | [5, 55] | 30.0 | 25.0 |
-| Hamburg-Harburg | Buxtehude | 2 | RE91:00, RE25:05 | [5, 55] | 30.0 | 25.0 |
+| Schleswig | Rendsburg | 2 | RE46:29, RE77:33 | [4, 56] | 30.0 | 26.0 |
+| Rendsburg | Schleswig | 2 | RE77:10, RE46:14 | [4, 56] | 30.0 | 26.0 |
+| Wuppertal Hbf | Wuppertal-Oberbarmen | 2 | RE30:34, RB37:39 | [5, 55] | 30.0 | 25.0 |
+| Bochum-Langendreer | Witten Hbf | 2 | S10 Innenring:04, RB37:09 | [5, 55] | 30.0 | 25.0 |
 | Bochum Hbf | Dortmund Hbf | 2 | RE32:47, RE9:52 | [5, 55] | 30.0 | 25.0 |
-| Schleswig | Jübek | 2 | RE46:26, RE77:31 | [5, 55] | 30.0 | 25.0 |
+| Dresden-Neustadt | Dresden Hbf | 2 | RE35X:34, RE35:39 | [5, 55] | 30.0 | 25.0 |
 | Bochum-Langendreer | Bochum-Langendreer West | 2 | S10 Innenring:32, S10 Außenring:37 | [5, 55] | 30.0 | 25.0 |
 | Bochum-Langendreer West | Bochum Hbf | 2 | S10 Innenring:34, S10 Außenring:39 | [5, 55] | 30.0 | 25.0 |
-| Düsseldorf Hbf | Wuppertal-Vohwinkel | 2 | RB37:16, RE30:22 | [6, 54] | 30.0 | 24.0 |
-| Wuppertal-Vohwinkel | Wuppertal Hbf | 2 | RB37:32, RE30:38 | [6, 54] | 30.0 | 24.0 |
-| Witten Hbf | Wetter (Ruhr) | 2 | RE40:27, RB37:33 | [6, 54] | 30.0 | 24.0 |
-| Warnemünde | Rostock Hbf | 2 | RE35:04, RE35X:58 | [54, 6] | 30.0 | 24.0 |
-| Dresden-Neustadt | Dresden Hbf | 2 | RE35:28, RE35X:34 | [6, 54] | 30.0 | 24.0 |
-| Jübek | Schleswig | 2 | RE77:21, RE46:27 | [6, 54] | 30.0 | 24.0 |
+| Essen-Steele Ost | Essen-Horst | 2 | S3:07, S30:12 | [5, 55] | 30.0 | 25.0 |
+| Essen-Horst | Bochum-Dahlhausen | 2 | S3:10, S30:15 | [5, 55] | 30.0 | 25.0 |
+| Bochum-Dahlhausen | Hattingen (Ruhr) | 2 | S3:15, S30:20 | [5, 55] | 30.0 | 25.0 |
 | Bochum Hbf | Bochum-Langendreer West | 2 | S10 Außenring:05, S10 Innenring:59 | [54, 6] | 30.0 | 24.0 |
-| Bochum-Langendreer West | Bochum-Langendreer | 2 | S10 Innenring:02, S10 Außenring:08 | [6, 54] | 30.0 | 24.0 |
 
 ## Symmetrie je Linie (2·Symmetrieminute mod 60 an gemeinsamen Halten)
 
 | Linie | n Halte | ⌀ 2σ | Spannweite |
 |---|---|---|---|
-| RE32 | 23 | 1.9 | 15 |
+| RE32 | 23 | 33.9 | 15 |
 | RE57 | 21 | 60.0 | 7 |
 | RE5 | 27 | 1.5 | 4 |
-| S30 | 21 | 46.3 | 4 |
+| S30 | 21 | 33.3 | 4 |
 | RE2 | 7 | 59.4 | 3 |
 | RE24 | 15 | 58.5 | 3 |
 | RE25 | 15 | 0.9 | 3 |
-| RE45 | 17 | 59.8 | 3 |
-| RE90 | 20 | 25.9 | 3 |
-| RB37 | 31 | 47.1 | 2 |
+| RE45 | 17 | 37.8 | 3 |
+| RE90 | 20 | 26.9 | 3 |
+| RB37 | 31 | 30.1 | 2 |
 | RE14 | 17 | 3.1 | 2 |
 | RE77 | 22 | 0.6 | 1 |
-| RE11 | 16 | 48.0 | 0 |
+| RE11 | 16 | 0.0 | 0 |
 | RE28 | 7 | 0.0 | 0 |
-| RE35 | 25 | 32.0 | 0 |
+| RE35 | 25 | 43.0 | 0 |
 | RE35X | 14 | 9.0 | 0 |
 | RE39 | 12 | 36.0 | 0 |
 | RE40 | 20 | 0.0 | 0 |
 | RE46 | 22 | 0.0 | 0 |
 | RE7 | 15 | 0.0 | 0 |
-| RE71 | 36 | 13.0 | 0 |
+| RE71 | 36 | 0.0 | 0 |
 | RE80 | 24 | 0.0 | 0 |
 | RE9 | 7 | 0.0 | 0 |
 | RE94 | 30 | 0.0 | 0 |
-| S3 | 7 | 43.0 | 0 |
+| S3 | 7 | 51.0 | 0 |
 
 ## Fahrzeugbedarf — heute vs. differenziertes Wendemodell (RE/RB ≥70, S-Bahn ≥20, +1 Reserve)
 
 | Linie | T | Fahrzeit A/B | heute | neu | Δ | Wende A/B |
 |---|---|---|---|---|---|---|
-| RB37 | 30 | 205/205 | 15 | 20 | +5 | 80/80 |
+| RB37 | 30 | 205/205 | 14 | 20 | +6 | 80/80 |
 | RE11 | 60 | 192/192 | 8 | 10 | +2 | 78/78 |
 | RE14 | 60 | 331/331 | 12 | 15 | +3 | 89/89 |
 | RE2 | 60 | 117/118 | 5 | 8 | +3 | 92/93 |
 | RE24 | 60 | 205/204 | 7 | 11 | +4 | 95/96 |
 | RE25 | 60 | 305/308 | 11 | 14 | +3 | 83/84 |
 | RE28 | 60 | 162/162 | 6 | 9 | +3 | 78/78 |
-| RE32 | 60 | 286/286 | 10 | 13 | +3 | 74/74 |
+| RE32 | 60 | 286/286 | 11 | 13 | +2 | 74/74 |
 | RE35 | 60 | 436/436 | 16 | 18 | +2 | 74/74 |
 | RE35X | 60 | 360/360 | 13 | 16 | +3 | 90/90 |
 | RE39 | 60 | 219/219 | 8 | 11 | +3 | 81/81 |
 | RE40 | 60 | 243/243 | 9 | 12 | +3 | 87/87 |
-| RE45 | 60 | 320/322 | 11 | 15 | +4 | 99/99 |
+| RE45 | 60 | 320/322 | 12 | 15 | +3 | 99/99 |
 | RE46 | 60 | 435/435 | 15 | 18 | +3 | 75/75 |
 | RE5 | 60 | 289/289 | 10 | 13 | +3 | 71/71 |
 | RE57 | 60 | 479/473 | 17 | 20 | +3 | 94/94 |
 | RE7 | 60 | 265/265 | 9 | 13 | +4 | 95/95 |
-| RE71 | 60 | 553/553 | 19 | 22 | +3 | 77/77 |
+| RE71 | 60 | 553/553 | 20 | 22 | +2 | 77/77 |
 | RE77 | 60 | 376/377 | 14 | 16 | +2 | 73/74 |
 | RE80 | 60 | 393/393 | 14 | 17 | +3 | 87/87 |
 | RE9 | 60 | 214/214 | 8 | 11 | +3 | 86/86 |
 | RE90 | 60 | 324/326 | 12 | 15 | +3 | 95/95 |
 | RE94 | 60 | 592/592 | 21 | 24 | +3 | 98/98 |
-| S3 | 30 | 22/22 | 3 | 4 | +1 | 23/23 |
+| S3 | 30 | 22/22 | 2 | 4 | +2 | 23/23 |
 | S30 | 30 | 90/86 | 7 | 9 | +2 | 32/32 |
 
-**Summe: 280 → 354 (+74)**
+**Summe: 281 → 354 (+73)**
 
 ## Abstellbedarf an Endbahnhöfen (Top 15)
 

@@ -112,23 +112,23 @@ def render_markdown(conflicts, sdo_tolerance_m):
         f"- **{len(by_sev['ok'])} unauffällig**\n"
         f"- **{len(by_sev['keine_daten'])} ohne Bahnsteigdaten** (manuell zu prüfen)\n"
     )
+    n_amtlich_total = sum(1 for c in conflicts if c["confidence"] == "amtlich")
+    n_osm_only = sum(1 for c in conflicts if c["confidence"] in ("hoch", "niedrig"))
     L.append(
-        "> **Befund zur Datenqualität:** Für die 25 wichtigsten Knotenbahnhöfe "
-        "wurden die OSM-Werte gegen die amtliche DB InfraGO-Nettobaulänge "
-        "geprüft (tools/dbinfrago_platforms.py). Ergebnis: **24 von 25 zuvor "
-        "als 'kritisch' gemeldeten Fällen waren falscher Alarm** — OSM erfasst "
-        "an großen, komplexen Bahnhöfen (Köln, Düsseldorf, Erfurt, Mainz Hbf "
-        "u.a.) die echten Fernbahnsteige teils gar nicht, sondern findet nur "
-        "vereinzelte, unpassende Objekte (z.B. Straßenbahn-Haltestellen) in "
-        "der Nähe. **Nur Hamburg-Elbbrücken (210 statt benötigter 236 m für "
-        "die RE90b-Doppeltraktion) ist mit amtlichen Daten ein echter, wenn "
-        "auch knapper Grenzfall.** Für alle Stationen ohne amtliche Prüfung "
-        "gilt weiterhin: OSM-Konfidenz 'niedrig' ist mit hoher Wahrschein-"
-        "lichkeit eine Datenlücke, kein echtes Bahnsteigproblem — auch 'hohe' "
-        "OSM-Konfidenz war in den geprüften Stichproben nicht durchgehend "
-        "verlässlich (z.B. Mainz Hbf: 10 OSM-Treffer, dennoch nur 83 m statt "
-        "amtlich 210+ m). Bei jedem Kritisch-Fund ohne amtliche Bestätigung "
-        "vor einer Maßnahme gegenprüfen.\n"
+        f"> **Befund zur Datenqualität:** Für {n_amtlich_total} deutsche Stationen liegt "
+        f"jetzt die amtliche DB InfraGO-Nettobaulänge vor (tools/dbinfrago_platforms.py, "
+        f"gleisscharf in data/dbinfrago_platforms.json), für {n_osm_only} weitere "
+        f"(v.a. die 101 ausländischen Stationen sowie einzelne kleine deutsche Halte "
+        f"ohne dbinfrago-Eintrag) nur die unsichere OSM-Schätzung. Mit amtlichen Daten "
+        f"bleiben **nur noch {len(kritisch_amtlich)} echte Kritisch-Fälle** übrig — "
+        f"überwiegend kleine S-Bahn-Halte (S10-Ring, S30), deren Bahnsteige nie für "
+        f"6-teilige Züge gebaut wurden. Das ist jetzt eher eine Entscheidung über "
+        f"Zuglänge/Kurzzug-Einsatz an diesen Halten als ein Datenproblem. Für "
+        f"Stationen ohne amtliche Bestätigung gilt weiterhin: OSM-Konfidenz "
+        f"'niedrig' ist meist eine Datenlücke, kein echtes Bahnsteigproblem — "
+        f"auch 'hohe' OSM-Konfidenz war in Stichproben nicht durchgehend verlässlich "
+        f"(z.B. Mainz Hbf: 10 OSM-Treffer, dennoch nur 83 statt amtlich 210+ m). "
+        f"Vor jeder Maßnahme ohne amtliche Bestätigung gegenprüfen.\n"
     )
 
     L.append("## Kritisch — fiktive RE-Netz-2030-Planung\n")

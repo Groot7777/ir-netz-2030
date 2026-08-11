@@ -78,10 +78,24 @@ def build_station_tracks(stations, manual, dbinfrago, osm):
         o = osm.get(st)
         if o and o.get("platforms"):
             tracks = []
+            # Viele OSM-Bahnsteigobjekte (v.a. im Ausland/an kleinen Halten)
+            # haben kein 'ref'-Tag, also keine erfasste Gleisnummer. Statt der
+            # internen OSM-Objekt-ID (unleserlich, z.B. "OSM421169907") eine
+            # schlichte fortlaufende Nummer vergeben — kollisionsfrei zu
+            # echten, an derselben Station vorhandenen ref-Nummern.
+            used_refs = {p["ref"] for p in o["platforms"] if p.get("ref")}
+            synth = 1
             for p in o["platforms"]:
                 if not p["plausible"]:
                     continue
-                label = p["ref"] or f"OSM{p['osm_id']}"
+                if p["ref"]:
+                    label = p["ref"]
+                else:
+                    while str(synth) in used_refs:
+                        synth += 1
+                    label = str(synth)
+                    used_refs.add(label)
+                    synth += 1
                 tracks.append((label, p["length_m"]))
             if tracks:
                 out[st] = {"source": "osm", "tracks": dedup_max(tracks)}

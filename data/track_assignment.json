@@ -207,7 +207,7 @@
         "length_m": 54.9
       },
       {
-        "gleis": "OSM222291363",
+        "gleis": "1",
         "length_m": 38.1
       }
     ],
@@ -545,7 +545,7 @@
         "length_m": 25.0
       },
       {
-        "gleis": "OSM872905212",
+        "gleis": "1",
         "length_m": 25.0
       },
       {
@@ -553,7 +553,7 @@
         "length_m": 25.0
       },
       {
-        "gleis": "OSM872905216",
+        "gleis": "2",
         "length_m": 25.0
       },
       {
@@ -569,7 +569,7 @@
         "length_m": 25.0
       },
       {
-        "gleis": "OSM872905201",
+        "gleis": "4",
         "length_m": 24.9
       },
       {
@@ -577,7 +577,7 @@
         "length_m": 24.9
       },
       {
-        "gleis": "OSM1107673750",
+        "gleis": "5",
         "length_m": 18.9
       }
     ],
@@ -2642,7 +2642,7 @@
         "overhang_m": 3.2,
         "required_length_m": 156,
         "severity": "gering",
-        "track": "OSM573273029",
+        "track": "1",
         "variant": "S30_N"
       },
       {
@@ -2651,13 +2651,13 @@
         "overhang_m": 3.2,
         "required_length_m": 156,
         "severity": "gering",
-        "track": "OSM573273029",
+        "track": "1",
         "variant": "S30_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM573273029",
+        "gleis": "1",
         "length_m": 152.8
       }
     ],
@@ -2888,7 +2888,7 @@
         "overhang_m": 28.0,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM350949587",
+        "track": "1",
         "variant": "S10_A"
       },
       {
@@ -2897,13 +2897,13 @@
         "overhang_m": 28.0,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM350949587",
+        "track": "1",
         "variant": "S10_I"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM350949587",
+        "gleis": "1",
         "length_m": 128.0
       }
     ],
@@ -3034,7 +3034,7 @@
         "overhang_m": 121.9,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM242367804",
+        "track": "1",
         "variant": "S10_A"
       },
       {
@@ -3043,25 +3043,25 @@
         "overhang_m": 121.9,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM242367804",
+        "track": "1",
         "variant": "S10_I"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM242367804",
+        "gleis": "1",
         "length_m": 34.1
       },
       {
-        "gleis": "OSM240029449",
+        "gleis": "2",
         "length_m": 33.0
       },
       {
-        "gleis": "OSM240030138",
+        "gleis": "3",
         "length_m": 27.8
       },
       {
-        "gleis": "OSM242367805",
+        "gleis": "4",
         "length_m": 24.7
       }
     ],
@@ -3891,7 +3891,7 @@
         "overhang_m": -33.4,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "OSM229426901",
+        "track": "2",
         "variant": "RE91_BS"
       },
       {
@@ -3909,13 +3909,13 @@
         "overhang_m": -33.4,
         "required_length_m": 160,
         "severity": "ok",
-        "track": "OSM229426901",
+        "track": "2",
         "variant": "RE91_SB"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM229426901",
+        "gleis": "2",
         "length_m": 193.4
       },
       {
@@ -3927,11 +3927,11 @@
         "length_m": 116.0
       },
       {
-        "gleis": "OSM1243406238",
+        "gleis": "3",
         "length_m": 32.9
       },
       {
-        "gleis": "OSM1243406239",
+        "gleis": "4",
         "length_m": 18.6
       }
     ],
@@ -4662,23 +4662,23 @@
         "length_m": 154.5
       },
       {
-        "gleis": "OSM1089750011",
+        "gleis": "1",
         "length_m": 107.2
       },
       {
-        "gleis": "OSM1089750017",
+        "gleis": "3",
         "length_m": 77.6
       },
       {
-        "gleis": "OSM1089750018",
+        "gleis": "4",
         "length_m": 73.9
       },
       {
-        "gleis": "OSM1089750014",
+        "gleis": "5",
         "length_m": 43.6
       },
       {
-        "gleis": "OSM1089750027",
+        "gleis": "6",
         "length_m": 34.2
       }
     ],
@@ -7027,7 +7027,7 @@
         "overhang_m": -252.5,
         "required_length_m": 105,
         "severity": "ok",
-        "track": "OSM846252126",
+        "track": "2",
         "variant": "RE46_A"
       },
       {
@@ -7036,17 +7036,17 @@
         "overhang_m": -270.0,
         "required_length_m": 105,
         "severity": "ok",
-        "track": "OSM846252125",
+        "track": "1",
         "variant": "RE46_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM846252125",
+        "gleis": "1",
         "length_m": 375.0
       },
       {
-        "gleis": "OSM846252126",
+        "gleis": "2",
         "length_m": 357.5
       }
     ],
@@ -8437,7 +8437,7 @@
         "length_m": 61.1
       },
       {
-        "gleis": "OSM765554387",
+        "gleis": "2",
         "length_m": 44.7
       },
       {
@@ -8994,31 +8994,31 @@
         "length_m": 120.4
       },
       {
-        "gleis": "OSM161973162",
+        "gleis": "1",
         "length_m": 93.1
       },
       {
-        "gleis": "OSM1155101674",
+        "gleis": "2",
         "length_m": 63.0
       },
       {
-        "gleis": "OSM1155101673",
+        "gleis": "3",
         "length_m": 61.8
       },
       {
-        "gleis": "OSM1274956795",
+        "gleis": "4",
         "length_m": 60.4
       },
       {
-        "gleis": "OSM925599044",
+        "gleis": "5",
         "length_m": 57.4
       },
       {
-        "gleis": "OSM925599045",
+        "gleis": "6",
         "length_m": 56.9
       },
       {
-        "gleis": "OSM124921574",
+        "gleis": "7",
         "length_m": 56.2
       },
       {
@@ -9026,15 +9026,15 @@
         "length_m": 48.6
       },
       {
-        "gleis": "OSM923203618",
+        "gleis": "8",
         "length_m": 48.2
       },
       {
-        "gleis": "OSM923203619",
+        "gleis": "9",
         "length_m": 47.8
       },
       {
-        "gleis": "OSM499358865",
+        "gleis": "10",
         "length_m": 17.3
       }
     ],
@@ -9075,7 +9075,7 @@
         "length_m": 200.2
       },
       {
-        "gleis": "OSM859051108",
+        "gleis": "1",
         "length_m": 55.7
       },
       {
@@ -9083,7 +9083,7 @@
         "length_m": 55.6
       },
       {
-        "gleis": "OSM859051109",
+        "gleis": "2",
         "length_m": 55.0
       },
       {
@@ -9128,19 +9128,19 @@
         "length_m": 205.7
       },
       {
-        "gleis": "OSM1344076821",
+        "gleis": "1",
         "length_m": 50.3
       },
       {
-        "gleis": "OSM1344428513",
+        "gleis": "2",
         "length_m": 50.1
       },
       {
-        "gleis": "OSM1344428514",
+        "gleis": "3",
         "length_m": 49.9
       },
       {
-        "gleis": "OSM1344076822",
+        "gleis": "4",
         "length_m": 49.0
       }
     ],
@@ -9181,31 +9181,31 @@
         "length_m": 203.9
       },
       {
-        "gleis": "OSM167287152",
+        "gleis": "1",
         "length_m": 27.5
       },
       {
-        "gleis": "OSM167160119",
+        "gleis": "2",
         "length_m": 25.4
       },
       {
-        "gleis": "OSM171491965",
+        "gleis": "4",
         "length_m": 23.3
       },
       {
-        "gleis": "OSM168184224",
+        "gleis": "5",
         "length_m": 21.3
       },
       {
-        "gleis": "OSM170477271",
+        "gleis": "6",
         "length_m": 21.2
       },
       {
-        "gleis": "OSM171491972",
+        "gleis": "7",
         "length_m": 18.2
       },
       {
-        "gleis": "OSM171491973",
+        "gleis": "8",
         "length_m": 16.0
       }
     ],
@@ -9219,7 +9219,7 @@
         "overhang_m": 178.3,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "OSM168198055",
+        "track": "1",
         "variant": "RE71_A"
       },
       {
@@ -9228,37 +9228,37 @@
         "overhang_m": 178.3,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "OSM168198055",
+        "track": "1",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM168198055",
+        "gleis": "1",
         "length_m": 31.7
       },
       {
-        "gleis": "OSM167155701",
+        "gleis": "2",
         "length_m": 30.9
       },
       {
-        "gleis": "OSM201177846",
+        "gleis": "3",
         "length_m": 30.1
       },
       {
-        "gleis": "OSM167155700",
+        "gleis": "4",
         "length_m": 26.7
       },
       {
-        "gleis": "OSM168198057",
+        "gleis": "5",
         "length_m": 21.5
       },
       {
-        "gleis": "OSM201177871",
+        "gleis": "6",
         "length_m": 16.0
       },
       {
-        "gleis": "OSM167088313",
+        "gleis": "7",
         "length_m": 15.9
       }
     ],
@@ -9295,15 +9295,15 @@
         "length_m": 154.9
       },
       {
-        "gleis": "OSM171451353",
+        "gleis": "1",
         "length_m": 28.3
       },
       {
-        "gleis": "OSM171451354",
+        "gleis": "2",
         "length_m": 19.1
       },
       {
-        "gleis": "OSM168073621",
+        "gleis": "3",
         "length_m": 18.9
       }
     ],
@@ -9765,7 +9765,7 @@
         "length_m": 227.4
       },
       {
-        "gleis": "OSM95786879",
+        "gleis": "8",
         "length_m": 221.3
       },
       {
@@ -9777,39 +9777,39 @@
         "length_m": 211.2
       },
       {
-        "gleis": "OSM1066911648",
+        "gleis": "9",
         "length_m": 78.9
       },
       {
-        "gleis": "OSM1066911649",
+        "gleis": "10",
         "length_m": 77.8
       },
       {
-        "gleis": "OSM1066259007",
+        "gleis": "11",
         "length_m": 77.6
       },
       {
-        "gleis": "OSM1066259008",
+        "gleis": "12",
         "length_m": 77.6
       },
       {
-        "gleis": "OSM1066917270",
+        "gleis": "13",
         "length_m": 67.0
       },
       {
-        "gleis": "OSM1066917269",
+        "gleis": "14",
         "length_m": 64.9
       },
       {
-        "gleis": "OSM777977888",
+        "gleis": "15",
         "length_m": 45.3
       },
       {
-        "gleis": "OSM915582650",
+        "gleis": "16",
         "length_m": 37.8
       },
       {
-        "gleis": "OSM915582651",
+        "gleis": "17",
         "length_m": 37.8
       },
       {
@@ -9837,7 +9837,7 @@
         "length_m": 28.0
       },
       {
-        "gleis": "OSM527146119",
+        "gleis": "18",
         "length_m": 26.7
       },
       {
@@ -9865,11 +9865,11 @@
         "length_m": 18.5
       },
       {
-        "gleis": "OSM1004985225",
+        "gleis": "19",
         "length_m": 17.9
       },
       {
-        "gleis": "OSM1004985226",
+        "gleis": "20",
         "length_m": 16.6
       }
     ],
@@ -11392,7 +11392,7 @@
         "overhang_m": 6.2,
         "required_length_m": 156,
         "severity": "gering",
-        "track": "OSM421169897",
+        "track": "1",
         "variant": "S30_N"
       },
       {
@@ -11401,13 +11401,13 @@
         "overhang_m": 6.2,
         "required_length_m": 156,
         "severity": "gering",
-        "track": "OSM421169897",
+        "track": "1",
         "variant": "S30_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM421169897",
+        "gleis": "1",
         "length_m": 149.8
       }
     ],
@@ -11482,7 +11482,7 @@
         "overhang_m": 4.5,
         "required_length_m": 156,
         "severity": "gering",
-        "track": "OSM229930400",
+        "track": "1",
         "variant": "S30_N"
       },
       {
@@ -11491,25 +11491,25 @@
         "overhang_m": 4.5,
         "required_length_m": 156,
         "severity": "gering",
-        "track": "OSM229930400",
+        "track": "1",
         "variant": "S30_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM229930400",
+        "gleis": "1",
         "length_m": 151.5
       },
       {
-        "gleis": "OSM301778307",
+        "gleis": "2",
         "length_m": 18.7
       },
       {
-        "gleis": "OSM301778311",
+        "gleis": "3",
         "length_m": 18.1
       },
       {
-        "gleis": "OSM301778305",
+        "gleis": "4",
         "length_m": 16.3
       }
     ],
@@ -11605,7 +11605,7 @@
         "length_m": 152.7
       },
       {
-        "gleis": "OSM622499567",
+        "gleis": "1",
         "length_m": 109.4
       },
       {
@@ -11627,7 +11627,7 @@
         "overhang_m": 81.9,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM421169900",
+        "track": "1",
         "variant": "S30_N"
       },
       {
@@ -11636,13 +11636,13 @@
         "overhang_m": 81.9,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM421169900",
+        "track": "1",
         "variant": "S30_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM421169900",
+        "gleis": "1",
         "length_m": 74.1
       }
     ],
@@ -12999,7 +12999,7 @@
         "length_m": 327.5
       },
       {
-        "gleis": "OSM59484125",
+        "gleis": "2",
         "length_m": 71.7
       }
     ],
@@ -13450,11 +13450,11 @@
         "length_m": 202.9
       },
       {
-        "gleis": "OSM765870790",
+        "gleis": "1",
         "length_m": 44.4
       },
       {
-        "gleis": "OSM768697997",
+        "gleis": "2",
         "length_m": 44.4
       }
     ],
@@ -13830,95 +13830,95 @@
         "length_m": 150.7
       },
       {
-        "gleis": "OSM877829155",
+        "gleis": "5",
         "length_m": 85.7
       },
       {
-        "gleis": "OSM1019816650",
+        "gleis": "6",
         "length_m": 61.1
       },
       {
-        "gleis": "OSM901969820",
+        "gleis": "7",
         "length_m": 46.3
       },
       {
-        "gleis": "OSM902000871",
+        "gleis": "9",
         "length_m": 41.4
       },
       {
-        "gleis": "OSM902000870",
+        "gleis": "10",
         "length_m": 39.9
       },
       {
-        "gleis": "OSM901969818",
+        "gleis": "11",
         "length_m": 35.3
       },
       {
-        "gleis": "OSM432595306",
+        "gleis": "12",
         "length_m": 30.3
       },
       {
-        "gleis": "OSM432595308",
+        "gleis": "13",
         "length_m": 30.3
       },
       {
-        "gleis": "OSM432595309",
+        "gleis": "14",
         "length_m": 30.3
       },
       {
-        "gleis": "OSM432595310",
+        "gleis": "15",
         "length_m": 30.3
       },
       {
-        "gleis": "OSM432595311",
+        "gleis": "16",
         "length_m": 30.3
       },
       {
-        "gleis": "OSM432595318",
+        "gleis": "17",
         "length_m": 30.3
       },
       {
-        "gleis": "OSM432595319",
+        "gleis": "18",
         "length_m": 30.3
       },
       {
-        "gleis": "OSM432595305",
+        "gleis": "19",
         "length_m": 28.6
       },
       {
-        "gleis": "OSM692316833",
+        "gleis": "20",
         "length_m": 26.5
       },
       {
-        "gleis": "OSM432595307",
+        "gleis": "21",
         "length_m": 26.1
       },
       {
-        "gleis": "OSM432595316",
+        "gleis": "22",
         "length_m": 24.2
       },
       {
-        "gleis": "OSM432595312",
+        "gleis": "23",
         "length_m": 23.7
       },
       {
-        "gleis": "OSM432595315",
+        "gleis": "24",
         "length_m": 21.5
       },
       {
-        "gleis": "OSM432595304",
+        "gleis": "25",
         "length_m": 21.1
       },
       {
-        "gleis": "OSM1044507544",
+        "gleis": "26",
         "length_m": 21.1
       },
       {
-        "gleis": "OSM543145660",
+        "gleis": "27",
         "length_m": 16.1
       },
       {
-        "gleis": "OSM543145661",
+        "gleis": "28",
         "length_m": 15.8
       }
     ],
@@ -14524,19 +14524,19 @@
         "length_m": 392.5
       },
       {
-        "gleis": "OSM1214996457",
+        "gleis": "2",
         "length_m": 67.0
       },
       {
-        "gleis": "OSM1214981310",
+        "gleis": "3",
         "length_m": 66.4
       },
       {
-        "gleis": "OSM1214981309",
+        "gleis": "4",
         "length_m": 44.2
       },
       {
-        "gleis": "OSM1214997774",
+        "gleis": "5",
         "length_m": 44.0
       }
     ],
@@ -14656,7 +14656,7 @@
         "overhang_m": -45.6,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "OSM169817851",
+        "track": "2",
         "variant": "RE77_A"
       },
       {
@@ -14665,17 +14665,17 @@
         "overhang_m": -111.7,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "OSM169817852",
+        "track": "1",
         "variant": "RE77_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM169817852",
+        "gleis": "1",
         "length_m": 267.7
       },
       {
-        "gleis": "OSM169817851",
+        "gleis": "2",
         "length_m": 201.6
       }
     ],
@@ -14738,7 +14738,7 @@
         "overhang_m": 101.6,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM854863908",
+        "track": "1",
         "variant": "RE90_A"
       },
       {
@@ -14747,25 +14747,25 @@
         "overhang_m": 101.6,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM854863909",
+        "track": "2",
         "variant": "RE90_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM854863908",
+        "gleis": "1",
         "length_m": 54.4
       },
       {
-        "gleis": "OSM854863909",
+        "gleis": "2",
         "length_m": 54.4
       },
       {
-        "gleis": "OSM854856928",
+        "gleis": "3",
         "length_m": 52.2
       },
       {
-        "gleis": "OSM854856929",
+        "gleis": "4",
         "length_m": 52.2
       }
     ],
@@ -15234,7 +15234,7 @@
         "length_m": 277.6
       },
       {
-        "gleis": "OSM242001300",
+        "gleis": "3",
         "length_m": 95.8
       }
     ],
@@ -15585,7 +15585,7 @@
         "overhang_m": -13.9,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "OSM711357564",
+        "track": "8",
         "variant": "RE90_B"
       }
     ],
@@ -15595,15 +15595,15 @@
         "length_m": 416.7
       },
       {
-        "gleis": "OSM711363180",
+        "gleis": "1",
         "length_m": 256.4
       },
       {
-        "gleis": "OSM1019044004",
+        "gleis": "2",
         "length_m": 242.1
       },
       {
-        "gleis": "OSM1019044001",
+        "gleis": "3",
         "length_m": 241.9
       },
       {
@@ -15611,7 +15611,7 @@
         "length_m": 227.5
       },
       {
-        "gleis": "OSM1019043984",
+        "gleis": "6",
         "length_m": 223.4
       },
       {
@@ -15619,7 +15619,7 @@
         "length_m": 211.0
       },
       {
-        "gleis": "OSM1019043988",
+        "gleis": "7",
         "length_m": 204.0
       },
       {
@@ -15627,7 +15627,7 @@
         "length_m": 183.5
       },
       {
-        "gleis": "OSM711357564",
+        "gleis": "8",
         "length_m": 169.9
       },
       {
@@ -15635,55 +15635,55 @@
         "length_m": 159.4
       },
       {
-        "gleis": "OSM310517484",
+        "gleis": "9",
         "length_m": 80.5
       },
       {
-        "gleis": "OSM310517483",
+        "gleis": "10",
         "length_m": 78.9
       },
       {
-        "gleis": "OSM310517485",
+        "gleis": "11",
         "length_m": 75.4
       },
       {
-        "gleis": "OSM310517482",
+        "gleis": "12",
         "length_m": 74.1
       },
       {
-        "gleis": "OSM476309070",
+        "gleis": "13",
         "length_m": 60.4
       },
       {
-        "gleis": "OSM310517486",
+        "gleis": "14",
         "length_m": 46.6
       },
       {
-        "gleis": "OSM711363181",
+        "gleis": "15",
         "length_m": 31.0
       },
       {
-        "gleis": "OSM253190218",
+        "gleis": "16",
         "length_m": 24.1
       },
       {
-        "gleis": "OSM253190216",
+        "gleis": "17",
         "length_m": 23.8
       },
       {
-        "gleis": "OSM253190211",
+        "gleis": "18",
         "length_m": 18.1
       },
       {
-        "gleis": "OSM253190214",
+        "gleis": "19",
         "length_m": 18.1
       },
       {
-        "gleis": "OSM254816985",
+        "gleis": "20",
         "length_m": 17.1
       },
       {
-        "gleis": "OSM254816987",
+        "gleis": "21",
         "length_m": 17.1
       }
     ],
@@ -15798,27 +15798,27 @@
         "length_m": 99.6
       },
       {
-        "gleis": "OSM1363358641",
+        "gleis": "2",
         "length_m": 71.1
       },
       {
-        "gleis": "OSM474667329",
+        "gleis": "3",
         "length_m": 67.5
       },
       {
-        "gleis": "OSM474667332",
+        "gleis": "4",
         "length_m": 60.2
       },
       {
-        "gleis": "OSM1167316072",
+        "gleis": "5",
         "length_m": 22.1
       },
       {
-        "gleis": "OSM1164838558",
+        "gleis": "6",
         "length_m": 21.8
       },
       {
-        "gleis": "OSM474667362",
+        "gleis": "7",
         "length_m": 21.3
       }
     ],
@@ -17145,7 +17145,7 @@
         "length_m": 285.8
       },
       {
-        "gleis": "OSM1089414878",
+        "gleis": "3",
         "length_m": 21.9
       }
     ],
@@ -17211,11 +17211,11 @@
         "length_m": 330.8
       },
       {
-        "gleis": "OSM247971769",
+        "gleis": "2",
         "length_m": 88.1
       },
       {
-        "gleis": "OSM196092600",
+        "gleis": "3",
         "length_m": 19.5
       }
     ],
@@ -18331,31 +18331,31 @@
         "length_m": 120.2
       },
       {
-        "gleis": "OSM1064543439",
+        "gleis": "13",
         "length_m": 84.1
       },
       {
-        "gleis": "OSM1064543438",
+        "gleis": "14",
         "length_m": 80.3
       },
       {
-        "gleis": "OSM1064543441",
+        "gleis": "15",
         "length_m": 78.5
       },
       {
-        "gleis": "OSM1185551611",
+        "gleis": "16",
         "length_m": 75.9
       },
       {
-        "gleis": "OSM369322705",
+        "gleis": "17",
         "length_m": 63.8
       },
       {
-        "gleis": "OSM1132764124",
+        "gleis": "18",
         "length_m": 59.1
       },
       {
-        "gleis": "OSM1120378992",
+        "gleis": "19",
         "length_m": 44.9
       },
       {
@@ -18363,11 +18363,11 @@
         "length_m": 42.6
       },
       {
-        "gleis": "OSM369387248",
+        "gleis": "20",
         "length_m": 40.2
       },
       {
-        "gleis": "OSM332361606",
+        "gleis": "21",
         "length_m": 37.8
       },
       {
@@ -18375,7 +18375,7 @@
         "length_m": 35.7
       },
       {
-        "gleis": "OSM881311210",
+        "gleis": "22",
         "length_m": 26.3
       }
     ],
@@ -19237,7 +19237,7 @@
         "overhang_m": 187.7,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "OSM226217544",
+        "track": "1",
         "variant": "RE32_N"
       },
       {
@@ -19246,13 +19246,13 @@
         "overhang_m": 187.7,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "OSM226217544",
+        "track": "1",
         "variant": "RE32_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM226217544",
+        "gleis": "1",
         "length_m": 22.3
       }
     ],
@@ -19495,7 +19495,7 @@
         "overhang_m": 74.0,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM421566810",
+        "track": "1",
         "variant": "S30_N"
       },
       {
@@ -19504,13 +19504,13 @@
         "overhang_m": 74.0,
         "required_length_m": 156,
         "severity": "kritisch",
-        "track": "OSM421566810",
+        "track": "1",
         "variant": "S30_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM421566810",
+        "gleis": "1",
         "length_m": 82.0
       }
     ],
@@ -19547,7 +19547,7 @@
         "length_m": 274.2
       },
       {
-        "gleis": "OSM597427829",
+        "gleis": "1",
         "length_m": 18.7
       }
     ],
@@ -19580,23 +19580,23 @@
         "length_m": 224.0
       },
       {
-        "gleis": "OSM1020037104",
+        "gleis": "1",
         "length_m": 78.5
       },
       {
-        "gleis": "OSM1020037103",
+        "gleis": "2",
         "length_m": 77.0
       },
       {
-        "gleis": "OSM1106909736",
+        "gleis": "3",
         "length_m": 58.9
       },
       {
-        "gleis": "OSM1106909735",
+        "gleis": "4",
         "length_m": 57.9
       },
       {
-        "gleis": "OSM1106909742",
+        "gleis": "5",
         "length_m": 49.2
       }
     ],
@@ -19639,7 +19639,7 @@
         "overhang_m": -137.5,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "OSM376226305",
+        "track": "2",
         "variant": "RE71_A"
       },
       {
@@ -19648,17 +19648,17 @@
         "overhang_m": -226.2,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "OSM376225390",
+        "track": "1",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM376225390",
+        "gleis": "1",
         "length_m": 436.2
       },
       {
-        "gleis": "OSM376226305",
+        "gleis": "2",
         "length_m": 347.5
       }
     ],
@@ -20608,7 +20608,7 @@
         "overhang_m": -99.0,
         "required_length_m": 80,
         "severity": "ok",
-        "track": "OSM34993318",
+        "track": "1",
         "variant": "RE90b_GS"
       },
       {
@@ -20617,13 +20617,13 @@
         "overhang_m": -99.0,
         "required_length_m": 80,
         "severity": "ok",
-        "track": "OSM34993318",
+        "track": "1",
         "variant": "RE90b_SG"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM34993318",
+        "gleis": "1",
         "length_m": 179.0
       }
     ],
@@ -21451,7 +21451,7 @@
         "length_m": 46.5
       },
       {
-        "gleis": "OSM1110632487",
+        "gleis": "1",
         "length_m": 46.2
       },
       {
@@ -21512,7 +21512,7 @@
         "length_m": 187.1
       },
       {
-        "gleis": "OSM430983037",
+        "gleis": "1",
         "length_m": 50.2
       }
     ],
@@ -22317,7 +22317,7 @@
         "overhang_m": -97.6,
         "required_length_m": 105,
         "severity": "ok",
-        "track": "OSM88811169",
+        "track": "1",
         "variant": "RB37_A"
       },
       {
@@ -22340,7 +22340,7 @@
         "length_m": 203.5
       },
       {
-        "gleis": "OSM88811169",
+        "gleis": "1",
         "length_m": 202.6
       }
     ],
@@ -22584,7 +22584,7 @@
         "length_m": 334.0
       },
       {
-        "gleis": "OSM819209423",
+        "gleis": "2",
         "length_m": 16.2
       }
     ],
@@ -22982,7 +22982,7 @@
         "overhang_m": -33.7,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "OSM31364458",
+        "track": "1",
         "variant": "S30_N"
       },
       {
@@ -22991,29 +22991,29 @@
         "overhang_m": -33.7,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "OSM31364458",
+        "track": "1",
         "variant": "S30_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM31364458",
+        "gleis": "1",
         "length_m": 189.7
       },
       {
-        "gleis": "OSM237717069",
+        "gleis": "2",
         "length_m": 30.1
       },
       {
-        "gleis": "OSM237716522",
+        "gleis": "3",
         "length_m": 25.2
       },
       {
-        "gleis": "OSM237723141",
+        "gleis": "4",
         "length_m": 18.5
       },
       {
-        "gleis": "OSM237722851",
+        "gleis": "5",
         "length_m": 15.3
       }
     ],
@@ -23294,11 +23294,11 @@
         "length_m": 191.3
       },
       {
-        "gleis": "OSM461749111",
+        "gleis": "3",
         "length_m": 70.8
       },
       {
-        "gleis": "OSM461747355",
+        "gleis": "4",
         "length_m": 35.8
       }
     ],
@@ -24006,7 +24006,7 @@
         "overhang_m": 6.2,
         "required_length_m": 156,
         "severity": "gering",
-        "track": "OSM421169907",
+        "track": "1",
         "variant": "S30_N"
       },
       {
@@ -24015,25 +24015,25 @@
         "overhang_m": 6.2,
         "required_length_m": 156,
         "severity": "gering",
-        "track": "OSM421169907",
+        "track": "1",
         "variant": "S30_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM421169907",
+        "gleis": "1",
         "length_m": 149.8
       },
       {
-        "gleis": "OSM1018301973",
+        "gleis": "2",
         "length_m": 49.3
       },
       {
-        "gleis": "OSM422682822",
+        "gleis": "3",
         "length_m": 39.5
       },
       {
-        "gleis": "OSM422728622",
+        "gleis": "4",
         "length_m": 28.4
       }
     ],
@@ -24074,11 +24074,11 @@
         "length_m": 166.5
       },
       {
-        "gleis": "OSM628519446",
+        "gleis": "4",
         "length_m": 30.0
       },
       {
-        "gleis": "OSM628519447",
+        "gleis": "5",
         "length_m": 22.9
       }
     ],
@@ -24307,7 +24307,7 @@
         "length_m": 104.6
       },
       {
-        "gleis": "OSM549112314",
+        "gleis": "1",
         "length_m": 63.0
       }
     ],
@@ -24344,11 +24344,11 @@
         "length_m": 398.9
       },
       {
-        "gleis": "OSM89216362",
+        "gleis": "1",
         "length_m": 47.6
       },
       {
-        "gleis": "OSM89216360",
+        "gleis": "2",
         "length_m": 47.4
       },
       {
@@ -24386,7 +24386,7 @@
         "overhang_m": 108.1,
         "required_length_m": 184,
         "severity": "kritisch",
-        "track": "OSM129783417",
+        "track": "1",
         "variant": "RE94_A"
       },
       {
@@ -24395,29 +24395,29 @@
         "overhang_m": 108.1,
         "required_length_m": 184,
         "severity": "kritisch",
-        "track": "OSM129783417",
+        "track": "1",
         "variant": "RE94_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "OSM129783417",
+        "gleis": "1",
         "length_m": 75.9
       },
       {
-        "gleis": "OSM129783415",
+        "gleis": "2",
         "length_m": 75.8
       },
       {
-        "gleis": "OSM170028729",
+        "gleis": "4",
         "length_m": 74.6
       },
       {
-        "gleis": "OSM170028730",
+        "gleis": "5",
         "length_m": 74.1
       },
       {
-        "gleis": "OSM92831731",
+        "gleis": "6",
         "length_m": 56.0
       },
       {
@@ -24433,19 +24433,19 @@
         "length_m": 49.2
       },
       {
-        "gleis": "OSM524415675",
+        "gleis": "7",
         "length_m": 48.3
       },
       {
-        "gleis": "OSM524415676",
+        "gleis": "8",
         "length_m": 48.3
       },
       {
-        "gleis": "OSM92831727",
+        "gleis": "9",
         "length_m": 48.0
       },
       {
-        "gleis": "OSM218984858",
+        "gleis": "10",
         "length_m": 48.0
       },
       {
@@ -24453,39 +24453,39 @@
         "length_m": 45.8
       },
       {
-        "gleis": "OSM524586776",
+        "gleis": "11",
         "length_m": 43.0
       },
       {
-        "gleis": "OSM503589432",
+        "gleis": "12",
         "length_m": 42.6
       },
       {
-        "gleis": "OSM700325634",
+        "gleis": "13",
         "length_m": 42.4
       },
       {
-        "gleis": "OSM501215131",
+        "gleis": "14",
         "length_m": 42.1
       },
       {
-        "gleis": "OSM218984855",
+        "gleis": "15",
         "length_m": 40.8
       },
       {
-        "gleis": "OSM501215135",
+        "gleis": "16",
         "length_m": 40.7
       },
       {
-        "gleis": "OSM524586775",
+        "gleis": "17",
         "length_m": 40.0
       },
       {
-        "gleis": "OSM217574332",
+        "gleis": "18",
         "length_m": 37.4
       },
       {
-        "gleis": "OSM217574333",
+        "gleis": "19",
         "length_m": 36.2
       },
       {
@@ -24575,7 +24575,7 @@
         "length_m": 192.3
       },
       {
-        "gleis": "OSM766403677",
+        "gleis": "1",
         "length_m": 44.8
       }
     ],

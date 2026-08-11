@@ -87,7 +87,7 @@
         "dep": 59,
         "name": "Venray",
         "off": 58,
-        "track": "OSM88811169"
+        "track": "1"
       },
       {
         "dep": 68,
@@ -2645,7 +2645,7 @@
       {
         "name": "Roermond (NL)",
         "off": 0,
-        "track": "OSM226217544"
+        "track": "1"
       },
       {
         "dep": 25,
@@ -2926,7 +2926,7 @@
       {
         "name": "Roermond (NL)",
         "off": 286,
-        "track": "OSM226217544"
+        "track": "1"
       }
     ],
     "takt": {
@@ -4419,7 +4419,7 @@
       {
         "name": "Esbjerg",
         "off": 0,
-        "track": "OSM846252126"
+        "track": "2"
       },
       {
         "dep": 12,
@@ -4733,7 +4733,7 @@
       {
         "name": "Esbjerg",
         "off": 435,
-        "track": "OSM846252125"
+        "track": "1"
       }
     ],
     "takt": {
@@ -5613,7 +5613,7 @@
         "dep": 253,
         "name": "Runowo Pomorskie",
         "off": 252,
-        "track": "OSM376226305"
+        "track": "2"
       },
       {
         "dep": 295,
@@ -5667,7 +5667,7 @@
         "dep": 460,
         "name": "Gdynia Główna",
         "off": 447,
-        "track": "OSM168198055"
+        "track": "1"
       },
       {
         "dep": 467,
@@ -5866,7 +5866,7 @@
         "dep": 106,
         "name": "Gdynia Główna",
         "off": 93,
-        "track": "OSM168198055"
+        "track": "1"
       },
       {
         "dep": 110,
@@ -5920,7 +5920,7 @@
         "dep": 301,
         "name": "Runowo Pomorskie",
         "off": 300,
-        "track": "OSM376225390"
+        "track": "1"
       },
       {
         "dep": 336,
@@ -6047,7 +6047,7 @@
         "dep": 26,
         "name": "Lunderskov",
         "off": 25,
-        "track": "OSM169817851"
+        "track": "2"
       },
       {
         "dep": 32,
@@ -6319,7 +6319,7 @@
         "dep": 352,
         "name": "Lunderskov",
         "off": 351,
-        "track": "OSM169817852"
+        "track": "1"
       },
       {
         "dep": 363,
@@ -7067,7 +7067,7 @@
         "dep": 111,
         "name": "Luxembourg",
         "off": 106,
-        "track": "OSM854863908"
+        "track": "1"
       },
       {
         "dep": 135,
@@ -7268,7 +7268,7 @@
         "dep": 220,
         "name": "Luxembourg",
         "off": 215,
-        "track": "OSM854863909"
+        "track": "2"
       },
       {
         "dep": 232,
@@ -7292,7 +7292,7 @@
         "dep": 273,
         "name": "Metz-Ville",
         "off": 271,
-        "track": "OSM711357564"
+        "track": "8"
       },
       {
         "dep": 293,
@@ -7457,7 +7457,7 @@
       {
         "name": "Schönberger Strand",
         "off": 296,
-        "track": "OSM34993318"
+        "track": "1"
       }
     ],
     "takt": {
@@ -7698,7 +7698,7 @@
       {
         "name": "Schönberger Strand",
         "off": 0,
-        "track": "OSM34993318"
+        "track": "1"
       },
       {
         "dep": 8,
@@ -7970,7 +7970,7 @@
         "dep": 39,
         "name": "Bremervörde",
         "off": 37,
-        "track": "OSM229426901"
+        "track": "2"
       },
       {
         "dep": 76,
@@ -8272,7 +8272,7 @@
         "dep": 292,
         "name": "Bremervörde",
         "off": 290,
-        "track": "OSM229426901"
+        "track": "2"
       },
       {
         "dep": 324,
@@ -8475,7 +8475,7 @@
       {
         "name": "Zürich HB",
         "off": 592,
-        "track": "OSM129783417"
+        "track": "1"
       }
     ],
     "takt": {
@@ -8495,7 +8495,7 @@
       {
         "name": "Zürich HB",
         "off": 0,
-        "track": "OSM129783417"
+        "track": "1"
       },
       {
         "dep": 12,
@@ -8871,7 +8871,7 @@
       {
         "name": "Bochum-Kohlenstraße",
         "off": 50,
-        "track": "OSM242367804"
+        "track": "1"
       },
       {
         "name": "Essen-Höntrop",
@@ -8982,7 +8982,7 @@
         "dep": 121,
         "name": "Bochum-Bermuda3eck",
         "off": 120,
-        "track": "OSM350949587"
+        "track": "1"
       },
       {
         "dep": 125,
@@ -9147,7 +9147,7 @@
         "dep": 42,
         "name": "Bochum-Bermuda3eck",
         "off": 41,
-        "track": "OSM350949587"
+        "track": "1"
       },
       {
         "name": "Bochum West",
@@ -9257,7 +9257,7 @@
       {
         "name": "Bochum-Kohlenstraße",
         "off": 111,
-        "track": "OSM242367804"
+        "track": "1"
       },
       {
         "name": "Bochum-Stahlhausen",
@@ -9367,7 +9367,7 @@
       {
         "name": "Wengern Ost",
         "off": 42,
-        "track": "OSM31364458"
+        "track": "1"
       },
       {
         "dep": 47,
@@ -9378,33 +9378,33 @@
       {
         "name": "Zeche Nachtigall",
         "off": 50,
-        "track": "OSM421169907"
+        "track": "1"
       },
       {
         "name": "Ruine Hardenstein",
         "off": 53,
-        "track": "OSM421566810"
+        "track": "1"
       },
       {
         "dep": 58,
         "name": "Herbede",
         "off": 57,
-        "track": "OSM421169900"
+        "track": "1"
       },
       {
         "name": "Haus Kemnade",
         "off": 62,
-        "track": "OSM421169897"
+        "track": "1"
       },
       {
         "name": "Blankenstein Burg",
         "off": 65,
-        "track": "OSM573273029"
+        "track": "1"
       },
       {
         "name": "Heinrichshütte",
         "off": 68,
-        "track": "OSM229930400"
+        "track": "1"
       },
       {
         "dep": 72,
@@ -9490,33 +9490,33 @@
       {
         "name": "Heinrichshütte",
         "off": 21,
-        "track": "OSM229930400"
+        "track": "1"
       },
       {
         "name": "Blankenstein Burg",
         "off": 24,
-        "track": "OSM573273029"
+        "track": "1"
       },
       {
         "name": "Haus Kemnade",
         "off": 27,
-        "track": "OSM421169897"
+        "track": "1"
       },
       {
         "dep": 32,
         "name": "Herbede",
         "off": 31,
-        "track": "OSM421169900"
+        "track": "1"
       },
       {
         "name": "Ruine Hardenstein",
         "off": 35,
-        "track": "OSM421566810"
+        "track": "1"
       },
       {
         "name": "Zeche Nachtigall",
         "off": 38,
-        "track": "OSM421169907"
+        "track": "1"
       },
       {
         "dep": 42,
@@ -9527,7 +9527,7 @@
       {
         "name": "Wengern Ost",
         "off": 46,
-        "track": "OSM31364458"
+        "track": "1"
       },
       {
         "name": "Hagen-Vorhalle",

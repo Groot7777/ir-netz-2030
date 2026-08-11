@@ -15,6 +15,10 @@ import itertools
 import json
 import math
 import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from lengths import car_length, train_length_per_stop  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -395,15 +399,8 @@ def fleet_requirements(data, wende_re_rb=70, wende_sbahn=20, reserve_per_line=1)
 
 
 # ---------------------------------------------------------------------------
-# G) Abstellbedarf an Endbahnhöfen
+# G) Abstellbedarf an Endbahnhöfen (car_length -> tools/lengths.py)
 # ---------------------------------------------------------------------------
-
-CAR_LENGTH_M = {3: 80, 4: 105, 5: 130, 6: 156, 7: 184, 8: 210}
-
-
-def car_length(n_cars):
-    return CAR_LENGTH_M.get(n_cars, round(n_cars * 26.2))
-
 
 def stabling_demand(data, cleaning_min=80, reserve_per_line=1):
     end = collections.defaultdict(list)
@@ -440,57 +437,6 @@ def stabling_demand(data, cleaning_min=80, reserve_per_line=1):
                 }
             )
     return sorted(out, key=lambda r: (-r["n_lines"], -r["slots"]))
-
-
-# ---------------------------------------------------------------------------
-# H) Zuglänge je Halt (inkl. Kupplung/coupledSection) -> Bahnsteig-Mindestlänge
-# ---------------------------------------------------------------------------
-
-def _stop_index(variant, name):
-    for i, s in enumerate(variant["stops"]):
-        if s["name"] == name:
-            return i
-    return None
-
-
-def train_length_per_stop(data):
-    max_len = collections.defaultdict(int)
-    who = collections.defaultdict(list)
-    for k, v in data.items():
-        sl = v["stops"]
-        n = len(sl)
-        extra_cars = [0] * n
-        cp = v.get("coupling")
-        if cp:
-            a = _stop_index(v, cp["coupledFrom"]) if cp.get("coupledFrom") else 0
-            b = _stop_index(v, cp["coupledTo"]) if cp.get("coupledTo") else n - 1
-            if a is not None and b is not None:
-                for i in range(a, b + 1):
-                    extra_cars[i] = cp["partnerCars"]
-        cs = v.get("coupledSection")
-        if cs:
-            a = _stop_index(v, cs["from"]) if cs.get("from") else 0
-            b = _stop_index(v, cs["to"]) if cs.get("to") else n - 1
-            if a is not None and b is not None:
-                for i in range(a, b + 1):
-                    extra_cars[i] = cs["extraCars"]
-
-        for i, s in enumerate(sl):
-            if extra_cars[i]:
-                length = car_length(v["cars"]) + car_length(extra_cars[i])
-                cars_desc = f"{v['cars']}+{extra_cars[i]}"
-            else:
-                length = car_length(v["cars"])
-                cars_desc = str(v["cars"])
-            if length > max_len[s["name"]]:
-                max_len[s["name"]] = length
-            who[s["name"]].append((v["name"], cars_desc, length))
-
-    out = []
-    for st, L in max_len.items():
-        top = sorted(who[st], key=lambda x: -x[2])[0]
-        out.append({"station": st, "max_length_m": L, "line": top[0], "cars": top[1]})
-    return sorted(out, key=lambda r: -r["max_length_m"])
 
 
 # ---------------------------------------------------------------------------

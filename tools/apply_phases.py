@@ -17,6 +17,9 @@ Nutzung:
 import argparse
 import json
 import pathlib
+import re
+
+TIME_RE = re.compile(r"\b(\d{1,2}):(\d{2})\b")
 
 
 def to_min(hhmm):
@@ -27,6 +30,22 @@ def to_min(hhmm):
 def fmt(total_min):
     total_min %= 1440
     return f"{total_min // 60:02d}:{total_min % 60:02d}"
+
+
+def shift_note_times(note, shift):
+    """Verschiebt jede HH:MM-Uhrzeit in einem takt.note-Freitext um denselben
+    Betrag wie takt.start/end — sonst werden Angaben wie 'Spätfahrten bis
+    00:49' nach der Optimierung falsch, weil sie sich auf die ALTE Phase
+    beziehen. Reine Zeitangaben mit Doppelpunkt (h:mm), keine Prosa-
+    Doppelpunkte, daher \\b-Grenzen und volles Uhrzeit-Muster."""
+    if not note or not shift:
+        return note
+
+    def repl(m):
+        total = int(m.group(1)) * 60 + int(m.group(2))
+        return fmt(total + shift)
+
+    return TIME_RE.sub(repl, note)
 
 
 def minimal_shift(old_phase, new_phase, interval):
@@ -64,6 +83,8 @@ def main():
         shifts[k] = shift
         v["takt"]["start"] = fmt(to_min(v["takt"]["start"]) + shift)
         v["takt"]["end"] = fmt(to_min(v["takt"]["end"]) + shift)
+        if v["takt"].get("note"):
+            v["takt"]["note"] = shift_note_times(v["takt"]["note"], shift)
         for trip in v.get("extraTrips", []):
             if "dep" in trip:
                 trip["dep"] = fmt(to_min(trip["dep"]) + shift)

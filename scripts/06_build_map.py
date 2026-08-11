@@ -95,7 +95,7 @@ def build_svg(page, data, layout):
     W, H = seite["breite"], seite["hoehe"]
 
     out = [f'<svg class="karte" id="karte-{page}" data-seite="{page}" '
-           f'data-breite="{W}" data-hoehe="{H}" '
+           f'data-breite="{W}" data-hoehe="{H}" data-linienbreite="{lw}" '
            f'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">',
            '<g class="viewport">']
 
@@ -106,6 +106,14 @@ def build_svg(page, data, layout):
                          for ring in c["polygons"])
         out.append(f'<path d="{d_attr}"/>')
     out.append("</g>")
+
+    # Auf der Regionalseite die Landesflaeche selbst leicht abgesetzt, damit
+    # erkennbar bleibt, wo Nordrhein-Westfalen aufhoert.
+    if basis.get("region"):
+        out.append('<g class="region">')
+        for ring in basis["region"]["polygons"]:
+            out.append('<path d="M ' + " ".join(f"{x},{y}" for x, y in ring) + ' Z"/>')
+        out.append("</g>")
 
     # Verwaltungsgrenzen unter den Staatsgrenzen, damit diese oben liegen
     out.append('<g class="bundeslaender">')
@@ -207,7 +215,7 @@ CSS = """
   --panel-bg: #fafafa;   --panel-rand: #d8d8d8;
   --text: #1a1a1a;       --text-schwach: #666;   --text-leise: #888;
   --karte-bg: #f4f4f2;
-  --land-fill: #e6e6e4;  --land-text: #b9b9b5;
+  --land-fill: #e6e6e4;  --land-text: #b9b9b5;  --region-fill: #edece7;
   --grenze-staat: #b0b0a8; --grenze-land: #d2d2cb;
   --halt-fill: #ffffff;  --halt-rand: #2a2a2a;
   --name-text: #222222;  --name-fett: #000000;   --name-halo: #ffffff;
@@ -224,7 +232,7 @@ CSS = """
   --panel-bg: #171a1f;   --panel-rand: #2a2f36;
   --text: #e6e8ea;       --text-schwach: #9aa0a8; --text-leise: #7d848d;
   --karte-bg: #0d0f12;
-  --land-fill: #1e222a;  --land-text: #3f4650;
+  --land-fill: #1e222a;  --land-text: #3f4650;  --region-fill: #252a33;
   --grenze-staat: #49515d; --grenze-land: #2b313a;
   --halt-fill: #f2f4f6;  --halt-rand: #0d0f12;
   --name-text: #dfe3e8;  --name-fett: #ffffff;   --name-halo: #0d0f12;
@@ -327,8 +335,9 @@ body { display: flex; background: var(--panel-bg); color: var(--text); overflow:
 /* Kein Rand an den Flaechen: Kuestenlinien entstehen aus dem Farbunterschied
    zum Hintergrund, Landgrenzen kommen aus den eigenen Grenzdatensaetzen. */
 .laender path { fill: var(--land-fill); stroke: none; }
-.bundeslaender polyline { fill: none; stroke: var(--grenze-land); stroke-width: 1.1; }
-.staatsgrenzen polyline { fill: none; stroke: var(--grenze-staat); stroke-width: 1.9; }
+.region path { fill: var(--region-fill); stroke: none; }
+.bundeslaender polyline { fill: none; stroke: var(--grenze-land); stroke-width: var(--gw-land); }
+.staatsgrenzen polyline { fill: none; stroke: var(--grenze-staat); stroke-width: var(--gw-staat); }
 .laendernamen text { fill: var(--land-text); text-anchor: middle; font-weight: 600;
                      letter-spacing: .12em; pointer-events: none; }
 
@@ -339,7 +348,7 @@ body { display: flex; background: var(--panel-bg); color: var(--text); overflow:
                      pointer-events: none; }
 
 /* Linienfarbe steckt als --c (hell) und --cd (dunkel) im style-Attribut */
-.linie { fill: none; stroke: var(--c); stroke-linecap: round; stroke-linejoin: round;
+.linie { fill: none; stroke: var(--c); stroke-width: var(--lw); stroke-linecap: round; stroke-linejoin: round;
          transition: opacity .12s; }
 [data-thema="dunkel"] .linie { stroke: var(--cd); }
 .treffer { fill: none; stroke: transparent; stroke-linecap: round;
@@ -428,7 +437,8 @@ JS = """
     var hoehe = parseFloat(svg.dataset.hoehe);
     var viewport = svg.querySelector(".viewport");
     var k = 1, tx = 0, ty = 0;
-    var MIN_K = 0.5, MAX_K = 40;
+    var MIN_K = 0.5, MAX_K = 40, MIN_STRICH = 2.2;
+    var grundbreite = parseFloat(svg.dataset.linienbreite) || 4;
 
     // Das SVG passt seine viewBox mit "meet" in das Element ein. Dieser Faktor
     // rechnet zwischen Bildschirm-Pixeln und viewBox-Einheiten um.
@@ -441,6 +451,14 @@ JS = """
     function anwenden() {
       viewport.setAttribute("transform", "translate(" + tx + "," + ty + ") scale(" + k + ")");
       var wirksam = k * einpassung();
+      // Strichstaerke dem Massstab nachfuehren. Die Regionalseite ist mit
+      // 11000 px rund neunmal so gross wie die Hauptkarte - eine feste Breite
+      // von 4 px waere dort in der Gesamtansicht ein Haarstrich. Gezeichnet
+      // wird deshalb nie duenner als MIN_STRICH Bildschirmpixel; sobald der
+      // Zoom das erlaubt, gilt wieder die normale Breite.
+      svg.style.setProperty("--lw", Math.max(grundbreite, MIN_STRICH / wirksam).toFixed(2));
+      svg.style.setProperty("--gw-land", Math.max(1.1, 0.9 / wirksam).toFixed(2));
+      svg.style.setProperty("--gw-staat", Math.max(1.9, 1.6 / wirksam).toFixed(2));
       var stufe = wirksam < 0.42 ? 0 : wirksam < 0.72 ? 1 : wirksam < 1.15 ? 2 : 3;
       svg.classList.remove("zoom-0", "zoom-1", "zoom-2", "zoom-3");
       svg.classList.add("zoom-" + stufe);

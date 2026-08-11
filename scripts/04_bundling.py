@@ -41,7 +41,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from pyproj import Transformer
-from shapely.geometry import LineString, Point, Polygon
+from shapely.geometry import LineString, Point, Polygon, box
 from shapely.ops import substring, transform as shapely_transform, unary_union
 
 from kml_common import assign_stops_to_segments, parse_kml
@@ -75,7 +75,9 @@ CHAIKIN_ITERATIONS = 1               # Glaettung NACH dem Versatz
 MITER_LIMIT = 2.5                    # Begrenzung der Gehrung an spitzen Ecken (Faktor)
 MAX_GEHRUNG_PX = 3.0                 # und zusaetzlich absolut, damit aeussere Spuren keine Zacken werfen
 KNOTEN_ZIEHWEITE_PX = 40.0           # auf dieser Laenge werden Kantenenden zum gemeinsamen Knotenpunkt gezogen
-MAX_MARKER_DICKE_PX = 1.5 * LINE_WIDTH_PX   # Obergrenze fuer die halbe Markerdicke an Sternknoten
+MAX_MARKER_DICKE_PX = 0.9 * LINE_WIDTH_PX   # Obergrenze fuer die halbe Markerdicke an Sternknoten
+ACHSEN_NACHBARSCHAFT_PX = 26.0       # in diesem Umkreis werden Markerachsen aneinander angeglichen
+ACHSEN_MAX_DREHUNG_GRAD = 30.0       # hoechstens so weit darf ein Marker dabei gedreht werden
 
 SEGMENT_TIE_TOLERANCE_M = 50.0       # identisch zu Phase 2
 
@@ -105,8 +107,13 @@ EDGE_DEVIATION_WARN_PX = 12.0        # ab hier: Linien nehmen auf derselben Kant
 # kommt aus Phase 3; die drei S-Bahn-Linien erscheinen ausschliesslich hier.
 # Auf der Hauptkarte markiert ein gestricheltes Rechteck den Bereich.
 INSET_TITLE = "Nordrhein-Westfalen"
-INSET_CANVAS_WIDTH = 3900.0          # eigene Zeichenflaeche der zweiten Seite
-INSET_MARGIN_PX = 70.0
+# Die zweite Seite hat einen voellig eigenen Massstab. Linien, Schrift und
+# Marker sind auf beiden Seiten gleich gross (in Pixeln); eine groessere
+# Zeichenflaeche zieht deshalb allein die Halte weiter auseinander - genau der
+# Platz, den die Beschriftung im Ruhrgebiet braucht. 11000 px sind rund
+# 42 px/km gegenueber 4,8 px/km auf der Hauptkarte, also knapp neunfach.
+INSET_CANVAS_WIDTH = 11000.0
+INSET_MARGIN_PX = 140.0
 INSET_PAD_M = 9000.0                 # Puffer um die Landesgrenze herum (Meter)
 
 
@@ -290,6 +297,32 @@ def chaikin(pts, iterations=1):
     return pts
 
 
+def marker_mittelpunkt(start, geometrien, schritte=40):
+    """
+    Punkt suchen, der den groessten Abstand zu allen angegebenen Linien
+    minimiert (1-Center-Problem, iterativ genaehert).
+
+    Der Schwerpunkt allein genuegt nicht: Laeuft an einem Knoten eine Linie aus
+    einer ganz anderen Richtung ein, zieht sie den Schwerpunkt zu sich und der
+    Marker rutscht von den uebrigen herunter. Gesucht ist stattdessen der Punkt,
+    der zu ALLEN dort haltenden Linien moeglichst nah liegt.
+    """
+    px, py = start
+    for i in range(schritte):
+        weit = None
+        for g in geometrien:
+            q = g.interpolate(g.project(Point(px, py)))
+            d = math.hypot(q.x - px, q.y - py)
+            if weit is None or d > weit[0]:
+                weit = (d, q.x, q.y)
+        if weit is None or weit[0] < 0.05:
+            break
+        t = 0.5 / (1.0 + i * 0.15)      # abnehmende Schrittweite
+        px += (weit[1] - px) * t
+        py += (weit[2] - py) * t
+    return px, py
+
+
 def knoten_zusammenziehen(edge_geom, ziehweite_px=KNOTEN_ZIEHWEITE_PX):
     """
     Kantenenden an einem Knoten auf einen gemeinsamen Punkt ziehen.
@@ -427,7 +460,8 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                     knoten_ids.add(sid)
                     break
 
-        stops_xy = [(sid, stop_by_id[sid]["px_m"], stop_by_id[sid]["py_m"]) for sid in knoten_ids]
+        stops_xy = [(sid, stop_by_id[sid]["px_m"], stop_by_id[sid]["py_m"])
+                    for sid in sorted(knoten_ids)]
 
         assigned, _ = assign_stops_to_segments(ln["segments_proj"], stops_xy, SEGMENT_TIE_TOLERANCE_M)
 
@@ -547,7 +581,7 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
 
     orientierung = {}
     orient_konflikte = 0
-    for start in sorted(edge_geom, key=lambda k: -kantengewicht(k)):
+    for start in sorted(sorted(edge_geom), key=lambda k: -kantengewicht(k)):
         if start in orientierung:
             continue
         orientierung[start] = 1
@@ -597,10 +631,14 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                     wuensche.append(edge_slots[nachbar][lid] - edge_lines[kante].index(lid))
         return wuensche
 
+    # Bewusst ueber SORTIERTE Listen: Die Reihenfolge, in der gleichwertige
+    # Kanten drankommen, entscheidet ueber die Slot-Vergabe. Ueber eine Menge
+    # iteriert haengt sie am Hash der Halte-IDs und damit an PYTHONHASHSEED -
+    # zwei Laeufe ergaeben dann verschiedene Karten.
     offen = set(edge_geom)
     while offen:
         # mit der am staerksten befahrenen Kante beginnen
-        start = max(offen, key=lambda k: (len(edge_lines[k]), -sum(k[0] < k[1] for _ in "x")))
+        start = max(sorted(offen), key=lambda k: len(edge_lines[k]))
         n = len(edge_lines[start])
         edge_slots[start] = {lid: i - (n - 1) / 2.0 for i, lid in enumerate(edge_lines[start])}
         offen.discard(start)
@@ -608,8 +646,8 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
         # Rand der bereits vergebenen Flaeche schrittweise erweitern; immer die
         # Kante zuerst, die die meisten Linien mit dem Vergebenen teilt
         while True:
-            rand = [k for k in offen
-                    if any(nb in edge_slots for nb, _ in nachbarn.get(k, []))]
+            rand = sorted(k for k in offen
+                          if any(nb in edge_slots for nb, _ in nachbarn.get(k, [])))
             if not rand:
                 break
             naechste = max(rand, key=lambda k: (len(wunsch_verschiebungen(k)), len(edge_lines[k])))
@@ -820,6 +858,12 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
                 knotenlagen[sid_k][key] = dict(lagen_k)
 
     view_line_ids = {l["line_id"] for l in output_lines}
+    aeste_je_linie = defaultdict(list)
+    for l in output_lines:
+        for br in l["branches"]:
+            if len(br) >= 2:
+                aeste_je_linie[l["line_id"]].append(LineString(br))
+
     output_stops = []
     for sid, incident in edges_by_stop.items():
         # Nur Halte, an denen wirklich eine Linie haelt. Durchfahrt-Knoten
@@ -864,25 +908,32 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
         halb_dick = 0.0
         je_kante = knotenlagen.get(sid, {})
         if je_kante:
-            # Mittelpunkt ueber ALLE anliegenden Kanten: An einem Knoten laufen
-            # die Linien aus verschiedenen Richtungen zusammen, der Marker soll
-            # in ihrer Mitte sitzen und sie alle ueberdecken.
             alle = [p for lagen_k in je_kante.values() for p in lagen_k.values()]
             x = sum(p[0] for p in alle) / len(alle)
             y = sum(p[1] for p in alle) / len(alle)
+
+            # Vom Schwerpunkt aus den Punkt suchen, der zu ALLEN hier haltenden
+            # Linien moeglichst nah liegt. Sonst rutscht der Marker von einem
+            # Zulauf herunter, der aus einer anderen Richtung einlaeuft.
+            eigene = []
+            for lid in lines_here:
+                kandidaten = aeste_je_linie.get(lid)
+                if kandidaten:
+                    eigene.append(min(kandidaten, key=lambda g: g.distance(Point(x, y))))
+            if eigene:
+                x, y = marker_mittelpunkt((x, y), eigene)
+                for g in eigene:
+                    q = g.interpolate(g.project(Point(x, y)))
+                    alle.append((q.x, q.y))
+
             achse_rad = math.radians(achse + 90.0)
             ax, ay = math.cos(achse_rad), math.sin(achse_rad)
             # Ausdehnung des Punkthaufens laengs und quer zur Markerachse.
-            # An einem Sternknoten laufen die Zulaeufe nicht alle quer zur
-            # gemittelten Achse - was dort laengs nicht passt, faengt die Dicke
-            # auf. Nur so ueberdeckt der Marker jede Linie, ohne sich zu einer
-            # langen Nadel ueber leere Flaeche zu strecken.
+            # Beides nach oben begrenzt: sonst wird der Marker entweder zur
+            # langen Nadel ueber leere Flaeche oder - an einem Sternknoten wie
+            # Hamburg-Harburg - zu einem grossen weissen Klecks.
             halb = min(max(halb, max(abs((p[0] - x) * ax + (p[1] - y) * ay) for p in alle)),
                        halb + LINE_WIDTH_PX)
-            # Nach oben begrenzt, sonst wird aus einem Sternknoten wie
-            # Hamburg-Harburg ein grosser weisser Klecks: Dort laufen Linien mit
-            # weit aussen liegender Spur aus vier Richtungen ein und passieren
-            # den Knoten zwangslaeufig einige Pixel versetzt.
             halb_dick = min(max(abs(-(p[0] - x) * ay + (p[1] - y) * ax) for p in alle),
                             MAX_MARKER_DICKE_PX)
 
@@ -899,20 +950,53 @@ def build_view(name, title, lines_raw, graph, stop_by_id, line_ids, to_px,
             "bundle_half_thick": round(halb_dick, 2),
         })
 
+    # --- Markerachsen benachbarter Halte angleichen -------------------------
+    # In Ballungsraeumen liegen mehrere Bahnhoefe naeher beieinander als ein
+    # Marker lang ist - in Hamburg sind Hbf und Dammtor 4 px auseinander. Stehen
+    # ihre Marker dann auch noch in ganz verschiedenen Winkeln, wird daraus ein
+    # Knaeuel. Benachbarte Achsen werden deshalb aneinander angeglichen (ueber
+    # den doppelten Winkel, weil eine Strecke keine Richtung hat), begrenzt auf
+    # eine maessige Drehung, damit kein Marker von seinem Buendel rutscht.
+    geglaettet = {}
+    for st in output_stops:
+        sx2 = sy2 = 0.0
+        for nb in output_stops:
+            d = math.hypot(nb["x"] - st["x"], nb["y"] - st["y"])
+            if d > ACHSEN_NACHBARSCHAFT_PX:
+                continue
+            gewicht = (nb["n_lines"] + nb["bundle_half_len"]) * (1.0 - d / ACHSEN_NACHBARSCHAFT_PX)
+            w2 = 2 * math.radians(nb["bundle_angle_deg"])
+            sx2 += gewicht * math.cos(w2)
+            sy2 += gewicht * math.sin(w2)
+        if abs(sx2) < 1e-12 and abs(sy2) < 1e-12:
+            continue
+        ziel = math.degrees(math.atan2(sy2, sx2)) / 2.0
+        delta = (ziel - st["bundle_angle_deg"] + 90.0) % 180.0 - 90.0
+        delta = max(-ACHSEN_MAX_DREHUNG_GRAD, min(ACHSEN_MAX_DREHUNG_GRAD, delta))
+        geglaettet[st["stop_id"]] = round(st["bundle_angle_deg"] + delta, 1)
+    for st in output_stops:
+        if st["stop_id"] in geglaettet:
+            st["bundle_angle_deg"] = geglaettet[st["stop_id"]]
+
     # Selbstpruefung: Sitzt jeder Marker auf seinen Linien?
-    aeste_je_linie = defaultdict(list)
-    for l in output_lines:
-        for br in l["branches"]:
-            if len(br) >= 2:
-                aeste_je_linie[l["line_id"]].append(LineString(br))
+    # Geprueft wird die tatsaechliche Markerflaeche: das gedrehte Rechteck aus
+    # Laenge und Dicke. Nur den Abstand zum Mittelpunkt zu messen waere falsch -
+    # eine Linie am Ende eines langen Markers liegt weit vom Mittelpunkt und
+    # trotzdem sauber darauf.
     marker_abweichung = []
     for st in output_stops:
-        p = Point(st["x"], st["y"])
+        a = math.radians(st["bundle_angle_deg"] + 90.0)
+        ax, ay = math.cos(a), math.sin(a)
+        hl = st["bundle_half_len"] + LINE_WIDTH_PX * 1.3      # wie in Phase 5
+        ht = max(st["bundle_half_thick"] + LINE_WIDTH_PX * 0.6, LINE_WIDTH_PX * 1.05)
+        ecken = [(st["x"] + ax * sl * hl - ay * st_ * ht,
+                  st["y"] + ay * sl * hl + ax * st_ * ht)
+                 for sl, st_ in ((1, 1), (1, -1), (-1, -1), (-1, 1))]
+        flaeche = Polygon(ecken)
         for lid in st["lines"]:
-            d = min((g.distance(p) for g in aeste_je_linie.get(lid, [])), default=None)
-            reichweite = math.hypot(st["bundle_half_len"], st["bundle_half_thick"]) + LINE_WIDTH_PX
-            if d is not None and d > reichweite:
-                marker_abweichung.append((d - reichweite, st["name"], lid))
+            d = min((g.distance(flaeche) for g in aeste_je_linie.get(lid, [])), default=None)
+            if d is not None and d > LINE_WIDTH_PX / 2:
+                marker_abweichung.append((round(d, 1), st["name"], lid))
     if verbose:
         if marker_abweichung:
             marker_abweichung.sort(reverse=True)
@@ -1041,12 +1125,44 @@ def main(debug_edge=None):
                             allowed_stop_ids=inset_stop_ids, debug_edge=debug_edge),
     }
 
-    def basiskarte(transform, mit_namen=True):
-        """Laenderflaechen und Grenzlinien in die Pixel einer Ansicht umrechnen."""
+    def basiskarte(transform, mit_namen=True, fenster=None, mit_region=False):
+        """
+        Laenderflaechen und Grenzlinien in die Pixel einer Ansicht umrechnen.
+
+        fenster: optionales Rechteck in EPSG:3034-Metern. Die zweite Seite zeigt
+        nur Nordrhein-Westfalen und seine unmittelbare Umgebung - ganz Europa
+        mitzuliefern waere dort sinnlos und blaeht die Datei auf. Alles wird
+        deshalb vorher auf dieses Fenster zugeschnitten.
+        """
+        kasten = box(*fenster) if fenster else None
+
+        def ring_zu_px(ring):
+            return [[round(v, 1) for v in transform(x, y)] for x, y in ring]
+
+        def flaechen_zuschneiden(ringe):
+            """Ringe auf das Fenster beschneiden und als Pixelringe zurueckgeben."""
+            if kasten is None:
+                return [ring_zu_px(r) for r in ringe]
+            raus = []
+            for ring in ringe:
+                if len(ring) < 4:
+                    continue
+                poly = Polygon(ring)
+                if not poly.is_valid:
+                    poly = poly.buffer(0)
+                teil = poly.intersection(kasten)
+                if teil.is_empty:
+                    continue
+                for g in (teil.geoms if hasattr(teil, "geoms") else [teil]):
+                    if g.geom_type == "Polygon":
+                        raus.append(ring_zu_px(list(g.exterior.coords)))
+            return raus
+
         laender = []
         for c in basemap["countries"]:
-            polys = [[[round(v, 1) for v in transform(x, y)] for x, y in ring]
-                     for ring in c["polygons"]]
+            polys = flaechen_zuschneiden(c["polygons"])
+            if not polys:
+                continue
             eintrag = {"name": c["name"], "polygons": polys}
             if mit_namen:
                 lx, ly = transform(c["label_x"], c["label_y"])
@@ -1055,14 +1171,32 @@ def main(debug_edge=None):
             laender.append(eintrag)
 
         def wege(schluessel):
-            return [[[round(v, 1) for v in transform(x, y)] for x, y in weg]
-                    for weg in basemap.get(schluessel, [])]
+            raus = []
+            for weg in basemap.get(schluessel, []):
+                if kasten is None:
+                    raus.append(ring_zu_px(weg))
+                    continue
+                if len(weg) < 2:
+                    continue
+                teil = LineString(weg).intersection(kasten)
+                if teil.is_empty:
+                    continue
+                for g in (teil.geoms if hasattr(teil, "geoms") else [teil]):
+                    if g.geom_type == "LineString" and len(g.coords) >= 2:
+                        raus.append(ring_zu_px(list(g.coords)))
+            return raus
 
-        return {
+        ergebnis = {
             "countries": laender,
             "staatsgrenzen": wege("staatsgrenzen"),
             "bundeslaender": wege("bundeslaender"),
         }
+        if mit_region:
+            ergebnis["region"] = {
+                "name": basemap["region"]["name"],
+                "polygons": flaechen_zuschneiden(basemap["region"]["polygons"]),
+            }
+        return ergebnis
 
     # Rechteck auf der Hauptkarte, das den Bereich der zweiten Seite markiert
     src_x0, src_y0 = to_px(ix0, iy1)
@@ -1096,7 +1230,8 @@ def main(debug_edge=None):
         },
         "basiskarte": {
             "main": basiskarte(to_px),
-            "inset": basiskarte(to_px_inset, mit_namen=False),
+            "inset": basiskarte(to_px_inset, mit_namen=False,
+                                fenster=(ix0, iy0, ix1, iy1), mit_region=True),
         },
         "views": views,
     }

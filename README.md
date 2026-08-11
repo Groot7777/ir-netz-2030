@@ -195,18 +195,25 @@ Haltenamen unbrauchbar (weiße Schrift auf weißem Halo).
 
 Im Ruhrgebiet liegen die Halte im Netzmaßstab nur rund 7 px auseinander —
 lesbare Beschriftung ist dort unmöglich. **Nordrhein-Westfalen** bekommt
-deshalb eine eigene zweite Kartenseite: 149 Halte, 13 Linien, dreifacher
-Maßstab (14,3 statt 4,8 px/km). Die Landesfläche kommt aus Natural Earth
-Admin-1, die Halte werden per Punkt-in-Polygon-Test mit 9 km Puffer
-ausgewählt. Die drei S-Bahn-Linien erscheinen ausschließlich hier. Auf der
-Hauptkarte markiert ein gestricheltes, anklickbares Rechteck den Bereich.
+deshalb eine eigene zweite Kartenseite mit einem völlig eigenen Maßstab:
+11000 px Zeichenfläche für 263 km, also **40,8 px/km gegenüber 4,8 px/km** auf
+der Hauptkarte — knapp das Neunfache. Linien, Schrift und Marker sind auf
+beiden Seiten gleich groß (in Pixeln); die größere Fläche zieht deshalb allein
+die Halte auseinander, und genau das ist der Platz, den die Beschriftung im
+Ruhrgebiet braucht. 149 Halte, 13 Linien; die drei S-Bahn-Linien erscheinen
+ausschließlich hier. Auf der Hauptkarte markiert ein gestricheltes,
+anklickbares Rechteck den Bereich.
 
-*Grenze des Machbaren:* NRW ist 245 km breit, im Ruhrgebiet stehen die
-Bahnhöfe 2 km auseinander. Beides gleichzeitig lesbar auf einen Bildschirm zu
-bringen, geht rechnerisch nicht — bei einer Zeichenfläche, auf der alle Namen
-kollisionsfrei Platz haben (3900 px), sind sie in der Gesamtansicht zu klein.
-Die Seite zeigt deshalb zunächst die Netzstruktur; die Namen erscheinen beim
-Hineinzoomen, dann aber überlappungsfrei.
+Der Hintergrund dieser Seite ist auf das Fenster **zugeschnitten**: nur
+Nordrhein-Westfalen und seine unmittelbaren Nachbarn, nicht halb Europa. Die
+Landesfläche selbst ist leicht abgesetzt, damit erkennbar bleibt, wo NRW
+aufhört. Die Halte werden per Punkt-in-Polygon-Test mit 9 km Puffer ausgewählt.
+
+*Strichstärke folgt dem Maßstab:* 4 px breite Linien wären auf 11000 px in der
+Gesamtansicht Haarstriche. Beim Herauszoomen werden Linien und Grenzen deshalb
+fortlaufend dicker gezeichnet, sodass sie nie dünner als gut zwei
+Bildschirmpixel erscheinen; sobald der Zoom es erlaubt, gilt wieder die normale
+Breite. Beschriftung und Marker sind auf diesen Stufen ohnehin ausgeblendet.
 
 Umgeschaltet wird über die Reiter in der Seitenleiste, den ⇄-Knopf oder einen
 Klick auf das gestrichelte Rechteck. Jede Seite hat ihren eigenen Zoomzustand.
@@ -251,6 +258,19 @@ verbleibenden Linien rücken zusammen und werden neu zentriert.
   kastenförmige Umwege quer durch die Nachbarlinien beschreiben. Sie werden
   beim Einlesen verworfen (`entferne_rasterpunkte`); echte Trassenpunkte
   treffen dieses Raster praktisch nie — 17 von 18811 im gesamten Netz.
+
+- **Haltemarker auf dem Bündel.** Der Marker liegt quer über allen Bahnen, die
+  den Halt passieren. Sein Mittelpunkt ist nicht der Schwerpunkt, sondern der
+  Punkt mit dem kleinsten größten Abstand zu allen dort haltenden Linien
+  (1-Center, iterativ genähert) — sonst zieht ein Zulauf aus anderer Richtung
+  den Marker von den übrigen herunter. Länge und Dicke ergeben sich aus der
+  Streuung der Linien am Knoten, beide nach oben begrenzt, damit der Marker
+  weder zur Nadel über leerer Fläche noch zum weißen Klecks wird. In
+  Ballungsräumen, wo Bahnhöfe näher beieinander liegen als ein Marker lang ist
+  (Hamburg Hbf und Dammtor sind 4 px auseinander), werden benachbarte
+  Markerachsen aneinander angeglichen, damit die Gruppe nicht zum Knäuel wird.
+  Phase 4 prüft anschließend für jeden Marker, ob seine Rechteckfläche jede
+  seiner Linien wirklich trifft.
 
 - **Bahnhof neben der Trasse.** Ein Halt liegt in der KML nicht auf den
   LineStrings, sondern daneben — und jede Linie projiziert ihn auf eine etwas

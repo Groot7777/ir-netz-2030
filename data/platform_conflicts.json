@@ -88,17 +88,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Dahl",
-    "required_m": 156,
-    "line": "S30",
-    "cars": "6",
-    "available_m": 52.0,
-    "n_platform_candidates": 1,
-    "confidence": "amtlich",
-    "overhang_m": 104.0,
-    "severity": "kritisch"
-  },
-  {
     "station": "Landquart",
     "required_m": 210,
     "line": "RE80",
@@ -242,17 +231,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Bochum-Riemke",
-    "required_m": 156,
-    "line": "S10 Außenring",
-    "cars": "6",
-    "available_m": 90.0,
-    "n_platform_candidates": 2,
-    "confidence": "amtlich",
-    "overhang_m": 66.0,
-    "severity": "kritisch"
-  },
-  {
     "station": "Gdynia Wzgórze Św. Maksymiliana",
     "required_m": 210,
     "line": "RE71",
@@ -286,50 +264,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Bochum-Stahlhausen",
-    "required_m": 156,
-    "line": "S10 Außenring",
-    "cars": "6",
-    "available_m": 110.0,
-    "n_platform_candidates": 2,
-    "confidence": "amtlich",
-    "overhang_m": 46.0,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Schalksmühle",
-    "required_m": 156,
-    "line": "S30",
-    "cars": "6",
-    "available_m": 110.0,
-    "n_platform_candidates": 2,
-    "confidence": "amtlich",
-    "overhang_m": 46.0,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Dahlerbrück",
-    "required_m": 156,
-    "line": "S30",
-    "cars": "6",
-    "available_m": 110.0,
-    "n_platform_candidates": 1,
-    "confidence": "amtlich",
-    "overhang_m": 46.0,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Rummenohl",
-    "required_m": 156,
-    "line": "S30",
-    "cars": "6",
-    "available_m": 110.0,
-    "n_platform_candidates": 4,
-    "confidence": "amtlich",
-    "overhang_m": 46.0,
-    "severity": "kritisch"
-  },
-  {
     "station": "Bremerhaven-Lehe",
     "required_m": 210,
     "line": "RE9",
@@ -338,61 +272,6 @@
     "n_platform_candidates": 2,
     "confidence": "amtlich",
     "overhang_m": 40.0,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Unna West",
-    "required_m": 156,
-    "line": "S10 Außenring",
-    "cars": "6",
-    "available_m": 119.0,
-    "n_platform_candidates": 1,
-    "confidence": "amtlich",
-    "overhang_m": 37.0,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Hattingen (Ruhr)",
-    "required_m": 156,
-    "line": "S30",
-    "cars": "6",
-    "available_m": 120.0,
-    "n_platform_candidates": 2,
-    "confidence": "amtlich",
-    "overhang_m": 36.0,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Essen-Horst",
-    "required_m": 156,
-    "line": "S30",
-    "cars": "6",
-    "available_m": 120.0,
-    "n_platform_candidates": 2,
-    "confidence": "amtlich",
-    "overhang_m": 36.0,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Massen",
-    "required_m": 156,
-    "line": "S10 Außenring",
-    "cars": "6",
-    "available_m": 121.0,
-    "n_platform_candidates": 2,
-    "confidence": "amtlich",
-    "overhang_m": 35.0,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Essen-Dellwig Ost",
-    "required_m": 156,
-    "line": "S10 Außenring",
-    "cars": "6",
-    "available_m": 124.0,
-    "n_platform_candidates": 1,
-    "confidence": "amtlich",
-    "overhang_m": 32.0,
     "severity": "kritisch"
   },
   {
@@ -811,6 +690,127 @@
     "n_platform_candidates": 2,
     "confidence": "amtlich",
     "overhang_m": -3.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Bochum-Stahlhausen",
+    "required_m": 156,
+    "line": "S10 Außenring",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Essen-Dellwig Ost",
+    "required_m": 156,
+    "line": "S10 Außenring",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Bochum-Riemke",
+    "required_m": 156,
+    "line": "S10 Außenring",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Massen",
+    "required_m": 156,
+    "line": "S10 Außenring",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Unna West",
+    "required_m": 156,
+    "line": "S10 Außenring",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Schalksmühle",
+    "required_m": 156,
+    "line": "S30",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Dahlerbrück",
+    "required_m": 156,
+    "line": "S30",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Rummenohl",
+    "required_m": 156,
+    "line": "S30",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Dahl",
+    "required_m": 156,
+    "line": "S30",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Hattingen (Ruhr)",
+    "required_m": 156,
+    "line": "S30",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
+    "severity": "ok"
+  },
+  {
+    "station": "Essen-Horst",
+    "required_m": 156,
+    "line": "S30",
+    "cars": "6",
+    "available_m": 160,
+    "n_platform_candidates": 1,
+    "confidence": "fiktiv",
+    "overhang_m": -4,
     "severity": "ok"
   },
   {

@@ -8,5 +8,60 @@
       { "gleis": "fiktiv-4", "length_m": 320 }
     ],
     "max_length_m": 320
+  },
+  "Dahl": {
+    "note": "S30-Halt (Stadler FLIRT 3 XL Doppeltraktion, 6-teilig, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 52m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Bochum-Riemke": {
+    "note": "S10-Außenring-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 90m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Bochum-Stahlhausen": {
+    "note": "S10-Außenring-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 110m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Schalksmühle": {
+    "note": "S30-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 110m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Dahlerbrück": {
+    "note": "S30-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 110m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Rummenohl": {
+    "note": "S30-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 110m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Unna West": {
+    "note": "S10-Außenring-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 119m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Hattingen (Ruhr)": {
+    "note": "S30-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 120m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Essen-Horst": {
+    "note": "S30-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 120m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Massen": {
+    "note": "S10-Außenring-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 121m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
+  },
+  "Essen-Dellwig Ost": {
+    "note": "S10-Außenring-Halt (FLIRT 3 XL Doppeltraktion, 156m) — im RE-Netz-2030-Konzept auf 160m ausgebaut (amtlich heute nur 124m).",
+    "tracks": [{ "gleis": "fiktiv-Ausbau", "length_m": 160 }],
+    "max_length_m": 160
   }
 }

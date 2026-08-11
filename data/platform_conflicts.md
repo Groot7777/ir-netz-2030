@@ -3,14 +3,14 @@
 Vergleich der aus Wagenzahl/Kupplung errechneten Zuglänge gegen reale Bahnsteiglängen (DB InfraGO-Nettobaulänge wo vorhanden, sonst OpenStreetMap/Overpass). SDO-Toleranz: 25 m — Überhang bis dahin gilt als unkritisch (Selective Door Opening bzw. bereits eingeplante Bahnsteig-verlängerung), erst darüber als echter Prüffall.
 
 - **0 kritisch, fiktive Planung** (RE-Netz-2030-eigener Ausbau, siehe data/manual_overrides.json)
-- **15 kritisch, amtliche Daten** (DB InfraGO — ernstzunehmender Befund)
+- **4 kritisch, amtliche Daten** (DB InfraGO — ernstzunehmender Befund)
 - **11 kritisch, hohe OSM-Konfidenz** (≥3 unabhängige OSM-Treffer, ungeprüft)
 - **11 kritisch, niedrige OSM-Konfidenz** (<3 Treffer — meist OSM-Lücke statt echtes Problem)
 - **28 gering** (SDO ausreichend)
-- **392 unauffällig**
+- **403 unauffällig**
 - **17 ohne Bahnsteigdaten** (manuell zu prüfen)
 
-> **Befund zur Datenqualität:** Für 345 deutsche Stationen liegt jetzt die amtliche DB InfraGO-Nettobaulänge vor (tools/dbinfrago_platforms.py, gleisscharf in data/dbinfrago_platforms.json), für 128 weitere (v.a. die 101 ausländischen Stationen sowie einzelne kleine deutsche Halte ohne dbinfrago-Eintrag) nur die unsichere OSM-Schätzung. Mit amtlichen Daten bleiben **nur noch 15 echte Kritisch-Fälle** übrig — überwiegend kleine S-Bahn-Halte (S10-Ring, S30), deren Bahnsteige nie für 6-teilige Züge gebaut wurden. Das ist jetzt eher eine Entscheidung über Zuglänge/Kurzzug-Einsatz an diesen Halten als ein Datenproblem. Für Stationen ohne amtliche Bestätigung gilt weiterhin: OSM-Konfidenz 'niedrig' ist meist eine Datenlücke, kein echtes Bahnsteigproblem — auch 'hohe' OSM-Konfidenz war in Stichproben nicht durchgehend verlässlich (z.B. Mainz Hbf: 10 OSM-Treffer, dennoch nur 83 statt amtlich 210+ m). Vor jeder Maßnahme ohne amtliche Bestätigung gegenprüfen.
+> **Befund zur Datenqualität:** Für 334 deutsche Stationen liegt jetzt die amtliche DB InfraGO-Nettobaulänge vor (tools/dbinfrago_platforms.py, gleisscharf in data/dbinfrago_platforms.json), für 128 weitere (v.a. die 101 ausländischen Stationen sowie einzelne kleine deutsche Halte ohne dbinfrago-Eintrag) nur die unsichere OSM-Schätzung. Mit amtlichen Daten bleiben **nur noch 4 echte Kritisch-Fälle** übrig — überwiegend kleine S-Bahn-Halte (S10-Ring, S30), deren Bahnsteige nie für 6-teilige Züge gebaut wurden. Das ist jetzt eher eine Entscheidung über Zuglänge/Kurzzug-Einsatz an diesen Halten als ein Datenproblem. Für Stationen ohne amtliche Bestätigung gilt weiterhin: OSM-Konfidenz 'niedrig' ist meist eine Datenlücke, kein echtes Bahnsteigproblem — auch 'hohe' OSM-Konfidenz war in Stichproben nicht durchgehend verlässlich (z.B. Mainz Hbf: 10 OSM-Treffer, dennoch nur 83 statt amtlich 210+ m). Vor jeder Maßnahme ohne amtliche Bestätigung gegenprüfen.
 
 ## Kritisch — fiktive RE-Netz-2030-Planung
 
@@ -20,21 +20,10 @@ Keine.
 
 | Station | Linie | Wagen | benötigt | verfügbar | Überhang |
 |---|---|---|---|---|---|
-| Dahl | S30 | 6 | 156 m | 52 m | **+104 m** |
 | Dalheim | RE32 | 8 | 210 m | 125 m | **+85 m** |
 | Wegberg | RE32 | 8 | 210 m | 125 m | **+85 m** |
 | Neustadt (Dosse) | RE46 | 4+4 | 210 m | 140 m | **+70 m** |
-| Bochum-Riemke | S10 Außenring | 6 | 156 m | 90 m | **+66 m** |
-| Bochum-Stahlhausen | S10 Außenring | 6 | 156 m | 110 m | **+46 m** |
-| Schalksmühle | S30 | 6 | 156 m | 110 m | **+46 m** |
-| Dahlerbrück | S30 | 6 | 156 m | 110 m | **+46 m** |
-| Rummenohl | S30 | 6 | 156 m | 110 m | **+46 m** |
 | Bremerhaven-Lehe | RE9 | 8 | 210 m | 170 m | **+40 m** |
-| Unna West | S10 Außenring | 6 | 156 m | 119 m | **+37 m** |
-| Hattingen (Ruhr) | S30 | 6 | 156 m | 120 m | **+36 m** |
-| Essen-Horst | S30 | 6 | 156 m | 120 m | **+36 m** |
-| Massen | S10 Außenring | 6 | 156 m | 121 m | **+35 m** |
-| Essen-Dellwig Ost | S10 Außenring | 6 | 156 m | 124 m | **+32 m** |
 
 ## Kritisch — hohe OSM-Konfidenz (ungeprüft)
 

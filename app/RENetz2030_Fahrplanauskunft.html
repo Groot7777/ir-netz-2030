@@ -851,8 +851,12 @@ function generateBaseDepartures(lineDir){
     return [...new Set(out)].sort((a,b)=>a-b);
   }
   if (t.interval && t.start===t.end){
-    // constant interval all day (S3, S30)
-    for(let x=0;x<1440;x+=t.interval) out.push(x);
+    // constant interval all day (S3, S30, RE71) — Phase aus takt.start
+    // ableiten (z.B. S3 "07:15" = 15 Min versetzt zu S30 "07:00", siehe
+    // takt.note), statt sie wie bisher auf 0 zu erzwingen und den in den
+    // Daten deklarierten Versatz stillschweigend zu ignorieren.
+    const phase = toMin(t.start) % t.interval;
+    for(let x=phase;x<1440;x+=t.interval) out.push(x);
     return out;
   }
   // normal daytime hourly/half-hourly window

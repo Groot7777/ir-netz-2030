@@ -44,9 +44,6 @@
 |---|---|---|---|---|---|---|
 | Bochum Hbf | Dortmund Hbf | 2 | RE32:56, RE9:56 | [0, 0] | 30.0 | 30.0 |
 | Berlin Gesundbrunnen | Berlin Hbf (tief) | 2 | RE35X:55, RE35:55 | [0, 0] | 30.0 | 30.0 |
-| Essen-Steele Ost | Essen-Horst | 2 | S30:07, S3:07 | [0, 0] | 30.0 | 30.0 |
-| Essen-Horst | Bochum-Dahlhausen | 2 | S30:10, S3:10 | [0, 0] | 30.0 | 30.0 |
-| Bochum-Dahlhausen | Hattingen (Ruhr) | 2 | S30:15, S3:15 | [0, 0] | 30.0 | 30.0 |
 | Berlin Hbf | Berlin Friedrichstraße | 2 | RE11:41, RE77:42 | [1, 59] | 30.0 | 29.0 |
 | Berlin Friedrichstraße | Berlin Alexanderplatz | 2 | RE11:45, RE77:46 | [1, 59] | 30.0 | 29.0 |
 | Berlin Alexanderplatz | Berlin Ostbahnhof | 2 | RE11:50, RE77:51 | [1, 59] | 30.0 | 29.0 |
@@ -62,6 +59,9 @@
 | Neu-Ulm | Ulm Hbf | 2 | RE80:41, RE94:43 | [2, 58] | 30.0 | 28.0 |
 | Witten Hbf | Wetter (Ruhr) | 2 | RB37:29, RE40:32 | [3, 57] | 30.0 | 27.0 |
 | Mönchengladbach Hbf | Viersen | 2 | RE14:53, RB37:56 | [3, 57] | 30.0 | 27.0 |
+| Ulm Hbf | Neu-Ulm | 2 | RE80:10, RE94:13 | [3, 57] | 30.0 | 27.0 |
+| Viersen | Mönchengladbach Hbf | 2 | RB37:55, RE14:59 | [4, 56] | 30.0 | 26.0 |
+| Hagen Hbf | Wetter (Ruhr) | 2 | RE40:12, RB37:16 | [4, 56] | 30.0 | 26.0 |
 
 ## Symmetrie je Linie (2·Symmetrieminute mod 60 an gemeinsamen Halten)
 
@@ -91,7 +91,7 @@
 | RE80 | 24 | 55.0 | 0 |
 | RE9 | 7 | 0.0 | 0 |
 | RE94 | 30 | 0.0 | 0 |
-| S3 | 7 | 22.0 | 0 |
+| S3 | 7 | 52.0 | 0 |
 
 ## Fahrzeugbedarf — heute vs. differenziertes Wendemodell (RE/RB ≥70, S-Bahn ≥20, +1 Reserve)
 

@@ -35,16 +35,16 @@ def stop_arr(s):
 
 
 def effective_phase(variant):
-    """Bildet generateBaseDepartures() aus der App exakt nach — inkl. des
-    dort vorhandenen Bugs, dass takt.start bei 'note enthält 10-Min-Takt'
-    und bei 'start==end' ignoriert und Phase 0 erzwungen wird (siehe
-    S3/S30/RE71 in der Planungsanalyse). Für den Ist-Report wird bewusst
-    das reale App-Verhalten gemessen, nicht die (falsche) Absicht."""
+    """Bildet generateBaseDepartures() aus der App exakt nach (Stand nach
+    dem Phasen-Bugfix vom 2024: der 'start==end'-Zweig — konstanter Takt
+    rund um die Uhr, z.B. S3/S30/RE71 — leitet seine Phase jetzt aus
+    takt.start ab, statt sie auf 0 zu erzwingen; siehe app/…html,
+    generateBaseDepartures()). Der 10-Min-Takt-Zweig (S10) bleibt bewusst
+    auf Phase 0 verankert — die Bänder sind an echte Uhrzeiten (04/06/21 Uhr)
+    gebunden, keine frei verschiebbare Taktphase."""
     t = variant["takt"]
     interval = t["interval"]
     if t.get("note") and "10-Min-Takt" in t["note"]:
-        return 0, interval
-    if t.get("start") == t.get("end"):
         return 0, interval
     return to_min(t["start"]) % interval, interval
 

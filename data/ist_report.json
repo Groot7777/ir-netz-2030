@@ -1049,78 +1049,6 @@
       "mean_deviation": 30.0
     },
     {
-      "from": "Essen-Steele Ost",
-      "to": "Essen-Horst",
-      "lines": [
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S30",
-          "dep_mod60": 7
-        },
-        {
-          "line": "S3",
-          "dep_mod60": 7
-        }
-      ],
-      "gaps": [
-        0,
-        0
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 30.0
-    },
-    {
-      "from": "Essen-Horst",
-      "to": "Bochum-Dahlhausen",
-      "lines": [
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S30",
-          "dep_mod60": 10
-        },
-        {
-          "line": "S3",
-          "dep_mod60": 10
-        }
-      ],
-      "gaps": [
-        0,
-        0
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 30.0
-    },
-    {
-      "from": "Bochum-Dahlhausen",
-      "to": "Hattingen (Ruhr)",
-      "lines": [
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S30",
-          "dep_mod60": 15
-        },
-        {
-          "line": "S3",
-          "dep_mod60": 15
-        }
-      ],
-      "gaps": [
-        0,
-        0
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 30.0
-    },
-    {
       "from": "Berlin Hbf",
       "to": "Berlin Friedrichstraße",
       "lines": [
@@ -1817,6 +1745,78 @@
       "mean_deviation": 23.0
     },
     {
+      "from": "Hattingen (Ruhr)",
+      "to": "Bochum-Dahlhausen",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 12
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 19
+        }
+      ],
+      "gaps": [
+        7,
+        53
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 23.0
+    },
+    {
+      "from": "Bochum-Dahlhausen",
+      "to": "Essen-Horst",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 16
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 23
+        }
+      ],
+      "gaps": [
+        7,
+        53
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 23.0
+    },
+    {
+      "from": "Essen-Horst",
+      "to": "Essen-Steele Ost",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 20
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 27
+        }
+      ],
+      "gaps": [
+        7,
+        53
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 23.0
+    },
+    {
       "from": "Kamen",
       "to": "Hamm (Westf) Hbf",
       "lines": [
@@ -1855,78 +1855,6 @@
         {
           "line": "RE25",
           "dep_mod60": 53
-        }
-      ],
-      "gaps": [
-        8,
-        52
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 22.0
-    },
-    {
-      "from": "Hattingen (Ruhr)",
-      "to": "Bochum-Dahlhausen",
-      "lines": [
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S3",
-          "dep_mod60": 4
-        },
-        {
-          "line": "S30",
-          "dep_mod60": 12
-        }
-      ],
-      "gaps": [
-        8,
-        52
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 22.0
-    },
-    {
-      "from": "Bochum-Dahlhausen",
-      "to": "Essen-Horst",
-      "lines": [
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S3",
-          "dep_mod60": 8
-        },
-        {
-          "line": "S30",
-          "dep_mod60": 16
-        }
-      ],
-      "gaps": [
-        8,
-        52
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 22.0
-    },
-    {
-      "from": "Essen-Horst",
-      "to": "Essen-Steele Ost",
-      "lines": [
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S3",
-          "dep_mod60": 12
-        },
-        {
-          "line": "S30",
-          "dep_mod60": 20
         }
       ],
       "gaps": [
@@ -2279,6 +2207,78 @@
       "mean_deviation": 16.0
     },
     {
+      "from": "Essen-Steele Ost",
+      "to": "Essen-Horst",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 7
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 22
+        }
+      ],
+      "gaps": [
+        15,
+        45
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 15.0
+    },
+    {
+      "from": "Essen-Horst",
+      "to": "Bochum-Dahlhausen",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 10
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 25
+        }
+      ],
+      "gaps": [
+        15,
+        45
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 15.0
+    },
+    {
+      "from": "Bochum-Dahlhausen",
+      "to": "Hattingen (Ruhr)",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 15
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 30
+        }
+      ],
+      "gaps": [
+        15,
+        45
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 15.0
+    },
+    {
       "from": "Wuppertal Hbf",
       "to": "Wuppertal-Oberbarmen",
       "lines": [
@@ -2349,72 +2349,6 @@
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 14.0
-    },
-    {
-      "from": "Essen Hbf",
-      "to": "Essen-Steele",
-      "lines": [
-        "RE40",
-        "S10 Innenring",
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S30",
-          "dep_mod60": 0
-        },
-        {
-          "line": "S3",
-          "dep_mod60": 0
-        },
-        {
-          "line": "RE40",
-          "dep_mod60": 2
-        },
-        {
-          "line": "S10 Innenring",
-          "dep_mod60": 37
-        }
-      ],
-      "gaps": [
-        0,
-        2,
-        35,
-        23
-      ],
-      "ideal_gap": 15.0,
-      "mean_deviation": 14.0
-    },
-    {
-      "from": "Essen-Steele",
-      "to": "Essen-Steele Ost",
-      "lines": [
-        "S10 Innenring",
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S30",
-          "dep_mod60": 4
-        },
-        {
-          "line": "S3",
-          "dep_mod60": 4
-        },
-        {
-          "line": "S10 Innenring",
-          "dep_mod60": 41
-        }
-      ],
-      "gaps": [
-        0,
-        37,
-        23
-      ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 13.3
     },
     {
       "from": "Bamberg",
@@ -2795,36 +2729,6 @@
       "mean_deviation": 10.0
     },
     {
-      "from": "Essen-Steele Ost",
-      "to": "Essen-Steele",
-      "lines": [
-        "S10 Außenring",
-        "S3",
-        "S30"
-      ],
-      "departures": [
-        {
-          "line": "S3",
-          "dep_mod60": 16
-        },
-        {
-          "line": "S30",
-          "dep_mod60": 24
-        },
-        {
-          "line": "S10 Außenring",
-          "dep_mod60": 58
-        }
-      ],
-      "gaps": [
-        8,
-        34,
-        18
-      ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 9.3
-    },
-    {
       "from": "Memmingen",
       "to": "Kißlegg",
       "lines": [
@@ -2847,6 +2751,36 @@
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 9.0
+    },
+    {
+      "from": "Essen-Steele Ost",
+      "to": "Essen-Steele",
+      "lines": [
+        "S10 Außenring",
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 24
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 31
+        },
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 58
+        }
+      ],
+      "gaps": [
+        7,
+        27,
+        26
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 8.7
     },
     {
       "from": "Mönchengladbach Hbf",
@@ -3049,12 +2983,12 @@
           "dep_mod60": 0
         },
         {
-          "line": "S3",
-          "dep_mod60": 18
-        },
-        {
           "line": "S30",
           "dep_mod60": 26
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 33
         },
         {
           "line": "RE40",
@@ -3062,10 +2996,46 @@
         }
       ],
       "gaps": [
-        18,
-        8,
-        27,
+        26,
+        7,
+        20,
         7
+      ],
+      "ideal_gap": 15.0,
+      "mean_deviation": 8.0
+    },
+    {
+      "from": "Essen Hbf",
+      "to": "Essen-Steele",
+      "lines": [
+        "RE40",
+        "S10 Innenring",
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 2
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 15
+        },
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        2,
+        13,
+        22,
+        23
       ],
       "ideal_gap": 15.0,
       "mean_deviation": 7.5
@@ -3261,6 +3231,36 @@
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 4.0
+    },
+    {
+      "from": "Essen-Steele",
+      "to": "Essen-Steele Ost",
+      "lines": [
+        "S10 Innenring",
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 4
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 19
+        },
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 41
+        }
+      ],
+      "gaps": [
+        15,
+        22,
+        23
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 3.3
     },
     {
       "from": "Hagen Hbf",
@@ -3745,10 +3745,10 @@
       "line": "S3",
       "n_common_stops": 7,
       "sigma2_distribution": {
-        "22": 7
+        "52": 7
       },
       "spread": 0,
-      "mean_sigma2": 22.0
+      "mean_sigma2": 52.0
     },
     {
       "line": "S30",

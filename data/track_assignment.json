@@ -3398,33 +3398,37 @@
       {
         "idx": 1,
         "line": "RE46",
-        "overhang_m": -104.5,
+        "overhang_m": -116.0,
         "required_length_m": 105,
         "severity": "ok",
-        "track": "2;3",
+        "track": "1",
         "variant": "RE46_A"
       },
       {
         "idx": 20,
         "line": "RE46",
-        "overhang_m": -112.7,
+        "overhang_m": -116.0,
         "required_length_m": 105,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE46_B"
       }
     ],
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 217.7
+        "length_m": 221.0
       },
       {
-        "gleis": "2;3",
-        "length_m": 209.5
+        "gleis": "2",
+        "length_m": 221.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 221.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Bramsche": {
     "assignments": [
@@ -4134,29 +4138,37 @@
       {
         "idx": 3,
         "line": "RE80",
-        "overhang_m": 0,
+        "overhang_m": -102,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "2",
         "variant": "RE80_A"
       },
       {
         "idx": 20,
         "line": "RE80",
-        "overhang_m": 0,
+        "overhang_m": -111,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "1",
         "variant": "RE80_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1 (geschätzt)",
-        "length_m": 210
+        "gleis": "2",
+        "length_m": 312
+      },
+      {
+        "gleis": "3/4",
+        "length_m": 422
+      },
+      {
+        "gleis": "1",
+        "length_m": 321
       }
     ],
-    "source": "geschaetzt"
+    "source": "amtlich-ausland"
   },
   "Buxtehude": {
     "assignments": [
@@ -4240,37 +4252,37 @@
       {
         "idx": 2,
         "line": "RE90",
-        "overhang_m": -104.7,
+        "overhang_m": -94.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "4",
+        "track": "Quai 3",
         "variant": "RE90_A"
       },
       {
         "idx": 17,
         "line": "RE90",
-        "overhang_m": -107.6,
+        "overhang_m": -104.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "2;3",
+        "track": "Quai 2",
         "variant": "RE90_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1",
-        "length_m": 292.0
+        "gleis": "Quai 2",
+        "length_m": 260.0
       },
       {
-        "gleis": "2;3",
-        "length_m": 263.6
+        "gleis": "Quai 3",
+        "length_m": 250.0
       },
       {
-        "gleis": "4",
-        "length_m": 260.7
+        "gleis": "Quai 1",
+        "length_m": 280.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Böhlen (b Leipzig)": {
     "assignments": [
@@ -4483,7 +4495,7 @@
       {
         "idx": 31,
         "line": "RE71",
-        "overhang_m": -14.0,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "1",
@@ -4492,7 +4504,7 @@
       {
         "idx": 4,
         "line": "RE71",
-        "overhang_m": -14.0,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "1",
@@ -4502,10 +4514,10 @@
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 224.0
+        "length_m": 225.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Cheb": {
     "assignments": [
@@ -4624,7 +4636,7 @@
       {
         "idx": 13,
         "line": "RE71",
-        "overhang_m": 46.3,
+        "overhang_m": 50.0,
         "required_length_m": 210,
         "severity": "kritisch",
         "track": "12",
@@ -4633,63 +4645,51 @@
       {
         "idx": 22,
         "line": "RE71",
-        "overhang_m": 46.3,
+        "overhang_m": 50.0,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "12",
+        "track": "15",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "12",
-        "length_m": 163.7
-      },
-      {
-        "gleis": "1;3",
-        "length_m": 158.8
-      },
-      {
-        "gleis": "2",
-        "length_m": 158.8
-      },
-      {
-        "gleis": "17;21",
-        "length_m": 155.0
-      },
-      {
-        "gleis": "11;15",
-        "length_m": 154.5
-      },
-      {
         "gleis": "1",
-        "length_m": 107.2
+        "length_m": 148.0
       },
       {
         "gleis": "3",
-        "length_m": 77.6
+        "length_m": 148.0
       },
       {
-        "gleis": "4",
-        "length_m": 73.9
+        "gleis": "2",
+        "length_m": 149.0
       },
       {
-        "gleis": "5",
-        "length_m": 43.6
+        "gleis": "12",
+        "length_m": 160.0
       },
       {
-        "gleis": "6",
-        "length_m": 34.2
+        "gleis": "15",
+        "length_m": 160.0
+      },
+      {
+        "gleis": "11",
+        "length_m": 160.0
+      },
+      {
+        "gleis": "17",
+        "length_m": 160.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Chur": {
     "assignments": [
       {
         "idx": 0,
         "line": "RE80",
-        "overhang_m": -23.8,
+        "overhang_m": -28,
         "required_length_m": 210,
         "severity": "ok",
         "track": "2",
@@ -4698,24 +4698,44 @@
       {
         "idx": 23,
         "line": "RE80",
-        "overhang_m": -23.8,
+        "overhang_m": -44,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "2",
+        "track": "1",
         "variant": "RE80_B"
       }
     ],
     "available_tracks": [
       {
         "gleis": "2",
-        "length_m": 233.8
+        "length_m": 238
       },
       {
         "gleis": "1",
-        "length_m": 153.5
+        "length_m": 254
+      },
+      {
+        "gleis": "9/10",
+        "length_m": 533
+      },
+      {
+        "gleis": "11/12",
+        "length_m": 382
+      },
+      {
+        "gleis": "13/14",
+        "length_m": 181
+      },
+      {
+        "gleis": "4/5",
+        "length_m": 480
+      },
+      {
+        "gleis": "7/8",
+        "length_m": 416
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Cloppenburg": {
     "assignments": [
@@ -7024,16 +7044,16 @@
       {
         "idx": 0,
         "line": "RE46",
-        "overhang_m": -252.5,
+        "overhang_m": -12.0,
         "required_length_m": 105,
         "severity": "ok",
-        "track": "2",
+        "track": "0",
         "variant": "RE46_A"
       },
       {
         "idx": 21,
         "line": "RE46",
-        "overhang_m": -270.0,
+        "overhang_m": -90.0,
         "required_length_m": 105,
         "severity": "ok",
         "track": "1",
@@ -7042,15 +7062,23 @@
     ],
     "available_tracks": [
       {
+        "gleis": "0",
+        "length_m": 117.0
+      },
+      {
         "gleis": "1",
-        "length_m": 375.0
+        "length_m": 195.0
       },
       {
         "gleis": "2",
-        "length_m": 357.5
+        "length_m": 218.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 336.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Essen (Oldb)": {
     "assignments": [
@@ -8078,33 +8106,33 @@
       {
         "idx": 1,
         "line": "RE90",
-        "overhang_m": -193.8,
+        "overhang_m": -189.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "2;4",
+        "track": "Quai 2",
         "variant": "RE90_A"
       },
       {
         "idx": 18,
         "line": "RE90",
-        "overhang_m": -199.6,
+        "overhang_m": -189.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1",
+        "track": "Quai 1",
         "variant": "RE90_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1",
-        "length_m": 355.6
+        "gleis": "Quai 2",
+        "length_m": 345.0
       },
       {
-        "gleis": "2;4",
-        "length_m": 349.8
+        "gleis": "Quai 1",
+        "length_m": 345.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Forchheim (Oberfr)": {
     "assignments": [
@@ -8411,16 +8439,16 @@
       {
         "idx": 26,
         "line": "RE94",
-        "overhang_m": -255.3,
+        "overhang_m": -237,
         "required_length_m": 184,
         "severity": "ok",
-        "track": "1",
+        "track": "2/3",
         "variant": "RE94_A"
       },
       {
         "idx": 3,
         "line": "RE94",
-        "overhang_m": -255.3,
+        "overhang_m": -237,
         "required_length_m": 184,
         "severity": "ok",
         "track": "1",
@@ -8429,60 +8457,88 @@
     ],
     "available_tracks": [
       {
+        "gleis": "2/3",
+        "length_m": 421
+      },
+      {
         "gleis": "1",
-        "length_m": 439.3
-      },
-      {
-        "gleis": "11",
-        "length_m": 61.1
-      },
-      {
-        "gleis": "2",
-        "length_m": 44.7
-      },
-      {
-        "gleis": "B",
-        "length_m": 43.6
-      },
-      {
-        "gleis": "C",
-        "length_m": 43.6
-      },
-      {
-        "gleis": "A",
-        "length_m": 25.1
+        "length_m": 421
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Fredericia": {
     "assignments": [
       {
         "idx": 0,
         "line": "RE77",
-        "overhang_m": 0,
+        "overhang_m": -13.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "32",
         "variant": "RE77_A"
       },
       {
         "idx": 21,
         "line": "RE77",
-        "overhang_m": 0,
+        "overhang_m": -14.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "1",
         "variant": "RE77_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1 (geschätzt)",
-        "length_m": 156
+        "gleis": "2",
+        "length_m": 299.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 170.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 351.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 351.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 317.0
+      },
+      {
+        "gleis": "7",
+        "length_m": 452.0
+      },
+      {
+        "gleis": "16",
+        "length_m": 129.0
+      },
+      {
+        "gleis": "9",
+        "length_m": 348.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 341.0
+      },
+      {
+        "gleis": "31",
+        "length_m": 73.0
+      },
+      {
+        "gleis": "32",
+        "length_m": 169.0
+      },
+      {
+        "gleis": "33",
+        "length_m": 192.0
       }
     ],
-    "source": "geschaetzt"
+    "source": "amtlich-ausland"
   },
   "Freiberg (Sachs)": {
     "assignments": [
@@ -8948,158 +9004,82 @@
       {
         "idx": 16,
         "line": "RE71",
-        "overhang_m": -214.7,
+        "overhang_m": -215.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "2;4",
+        "track": "4",
         "variant": "RE71_A"
       },
       {
         "idx": 19,
         "line": "RE71",
-        "overhang_m": -215.2,
+        "overhang_m": -215.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;3",
+        "track": "2",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;3",
-        "length_m": 425.2
-      },
-      {
-        "gleis": "2;4",
-        "length_m": 424.7
-      },
-      {
-        "gleis": "7;9",
-        "length_m": 205.5
-      },
-      {
-        "gleis": "13;15",
-        "length_m": 200.1
-      },
-      {
-        "gleis": "501;502",
-        "length_m": 200.0
-      },
-      {
-        "gleis": "01",
-        "length_m": 120.8
-      },
-      {
-        "gleis": "02",
-        "length_m": 120.4
-      },
-      {
-        "gleis": "1",
-        "length_m": 93.1
+        "gleis": "4",
+        "length_m": 425.0
       },
       {
         "gleis": "2",
-        "length_m": 63.0
+        "length_m": 425.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 425.0
       },
       {
         "gleis": "3",
-        "length_m": 61.8
-      },
-      {
-        "gleis": "4",
-        "length_m": 60.4
-      },
-      {
-        "gleis": "5",
-        "length_m": 57.4
-      },
-      {
-        "gleis": "6",
-        "length_m": 56.9
-      },
-      {
-        "gleis": "7",
-        "length_m": 56.2
-      },
-      {
-        "gleis": "19;21",
-        "length_m": 48.6
-      },
-      {
-        "gleis": "8",
-        "length_m": 48.2
-      },
-      {
-        "gleis": "9",
-        "length_m": 47.8
-      },
-      {
-        "gleis": "10",
-        "length_m": 17.3
+        "length_m": 425.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Gdańsk Wrzeszcz": {
     "assignments": [
       {
         "idx": 17,
         "line": "RE71",
-        "overhang_m": -4.1,
+        "overhang_m": -141.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "501;502",
+        "track": "4",
         "variant": "RE71_A"
       },
       {
         "idx": 18,
         "line": "RE71",
-        "overhang_m": -228.6,
+        "overhang_m": -202.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "2;4",
+        "track": "2",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "2;4",
-        "length_m": 438.6
-      },
-      {
-        "gleis": "501;502",
-        "length_m": 214.1
-      },
-      {
-        "gleis": "501",
-        "length_m": 200.2
-      },
-      {
-        "gleis": "1",
-        "length_m": 55.7
-      },
-      {
-        "gleis": "02",
-        "length_m": 55.6
+        "gleis": "4",
+        "length_m": 351.0
       },
       {
         "gleis": "2",
-        "length_m": 55.0
+        "length_m": 412.0
       },
       {
-        "gleis": "01",
-        "length_m": 54.0
+        "gleis": "1",
+        "length_m": 426.0
       },
       {
-        "gleis": "2023",
-        "length_m": 50.2
-      },
-      {
-        "gleis": "2022",
-        "length_m": 49.9
+        "gleis": "3",
+        "length_m": 430.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Gdańsk Zaspa": {
     "assignments": [
@@ -9151,118 +9131,94 @@
       {
         "idx": 21,
         "line": "RE71",
-        "overhang_m": -89.6,
+        "overhang_m": -8.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;2",
+        "track": "1",
         "variant": "RE71_A"
       },
       {
         "idx": 14,
         "line": "RE71",
-        "overhang_m": -89.6,
+        "overhang_m": -90.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;2",
+        "track": "2",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;2",
-        "length_m": 299.6
-      },
-      {
-        "gleis": "501;502",
-        "length_m": 206.9
-      },
-      {
-        "gleis": "3",
-        "length_m": 203.9
+        "gleis": "2",
+        "length_m": 300.0
       },
       {
         "gleis": "1",
-        "length_m": 27.5
+        "length_m": 218.0
       },
       {
-        "gleis": "2",
-        "length_m": 25.4
-      },
-      {
-        "gleis": "4",
-        "length_m": 23.3
-      },
-      {
-        "gleis": "5",
-        "length_m": 21.3
-      },
-      {
-        "gleis": "6",
-        "length_m": 21.2
-      },
-      {
-        "gleis": "7",
-        "length_m": 18.2
-      },
-      {
-        "gleis": "8",
-        "length_m": 16.0
+        "gleis": "3",
+        "length_m": 126.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Gdynia Główna": {
     "assignments": [
       {
         "idx": 20,
         "line": "RE71",
-        "overhang_m": 178.3,
+        "overhang_m": -31.0,
         "required_length_m": 210,
-        "severity": "kritisch",
-        "track": "1",
+        "severity": "ok",
+        "track": "2",
         "variant": "RE71_A"
       },
       {
         "idx": 15,
         "line": "RE71",
-        "overhang_m": 178.3,
+        "overhang_m": -189.0,
         "required_length_m": 210,
-        "severity": "kritisch",
-        "track": "1",
+        "severity": "ok",
+        "track": "6",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 31.7
+        "length_m": 189.0
       },
       {
         "gleis": "2",
-        "length_m": 30.9
-      },
-      {
-        "gleis": "3",
-        "length_m": 30.1
+        "length_m": 241.0
       },
       {
         "gleis": "4",
-        "length_m": 26.7
+        "length_m": 418.0
       },
       {
         "gleis": "5",
-        "length_m": 21.5
-      },
-      {
-        "gleis": "6",
-        "length_m": 16.0
+        "length_m": 401.0
       },
       {
         "gleis": "7",
-        "length_m": 15.9
+        "length_m": 408.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 399.0
+      },
+      {
+        "gleis": "9",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 430.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Gdynia Wzgórze Św. Maksymiliana": {
     "assignments": [
@@ -10390,37 +10346,37 @@
       {
         "idx": 5,
         "line": "RE90",
-        "overhang_m": -47.1,
+        "overhang_m": -44.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "A",
+        "track": "Quai V2",
         "variant": "RE90_A"
       },
       {
         "idx": 14,
         "line": "RE90",
-        "overhang_m": -66.0,
+        "overhang_m": -74.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "D;E",
+        "track": "Quai V1/V2BIS",
         "variant": "RE90_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "B;C",
-        "length_m": 260.9
+        "gleis": "Quai V1BIS/V3",
+        "length_m": 254.0
       },
       {
-        "gleis": "D;E",
-        "length_m": 222.0
+        "gleis": "Quai V1/V2BIS",
+        "length_m": 230.0
       },
       {
-        "gleis": "A",
-        "length_m": 203.1
+        "gleis": "Quai V2",
+        "length_m": 200.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Haiger": {
     "assignments": [
@@ -11520,33 +11476,41 @@
       {
         "idx": 35,
         "line": "RE71",
-        "overhang_m": -88.4,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3;5",
+        "track": "3",
         "variant": "RE71_A"
       },
       {
         "idx": 0,
         "line": "RE71",
-        "overhang_m": -88.4,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3;5",
+        "track": "5",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "3;5",
-        "length_m": 298.4
+        "gleis": "1",
+        "length_m": 170.0
       },
       {
-        "gleis": "1;4",
-        "length_m": 169.9
+        "gleis": "4",
+        "length_m": 90.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 225.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Hengelo": {
     "assignments": [
@@ -12221,36 +12185,40 @@
       {
         "idx": 33,
         "line": "RE71",
-        "overhang_m": -14.9,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;3",
+        "track": "1",
         "variant": "RE71_A"
       },
       {
         "idx": 2,
         "line": "RE71",
-        "overhang_m": -14.9,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;3",
+        "track": "3",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;3",
-        "length_m": 224.9
+        "gleis": "1",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 225.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Jurata": {
     "assignments": [
       {
         "idx": 34,
         "line": "RE71",
-        "overhang_m": -13.8,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "1",
@@ -12259,7 +12227,7 @@
       {
         "idx": 1,
         "line": "RE71",
-        "overhang_m": -13.8,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "1",
@@ -12269,10 +12237,10 @@
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 223.8
+        "length_m": 225.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Jübek": {
     "assignments": [
@@ -12977,33 +12945,37 @@
       {
         "idx": 1,
         "line": "RE77",
-        "overhang_m": -171.5,
+        "overhang_m": -94.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE77_A"
       },
       {
         "idx": 20,
         "line": "RE77",
-        "overhang_m": -171.5,
+        "overhang_m": -94.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1",
+        "track": "3",
         "variant": "RE77_B"
       }
     ],
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 327.5
+        "length_m": 301.0
       },
       {
         "gleis": "2",
-        "length_m": 71.7
+        "length_m": 250.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 250.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Konstanz": {
     "assignments": [
@@ -13080,16 +13052,16 @@
       {
         "idx": 24,
         "line": "RE94",
-        "overhang_m": -83.0,
+        "overhang_m": -77,
         "required_length_m": 184,
         "severity": "ok",
-        "track": "1",
+        "track": "2/3",
         "variant": "RE94_A"
       },
       {
         "idx": 5,
         "line": "RE94",
-        "overhang_m": -83.0,
+        "overhang_m": -77,
         "required_length_m": 184,
         "severity": "ok",
         "track": "1",
@@ -13098,11 +13070,15 @@
     ],
     "available_tracks": [
       {
+        "gleis": "2/3",
+        "length_m": 261
+      },
+      {
         "gleis": "1",
-        "length_m": 267.0
+        "length_m": 261
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Kreuztal": {
     "assignments": [
@@ -13146,29 +13122,33 @@
       {
         "idx": 32,
         "line": "RE71",
-        "overhang_m": -15.4,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;3",
+        "track": "1",
         "variant": "RE71_A"
       },
       {
         "idx": 3,
         "line": "RE71",
-        "overhang_m": -15.4,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;3",
+        "track": "3",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;3",
-        "length_m": 225.4
+        "gleis": "1",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 225.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Köln Hbf": {
     "assignments": [
@@ -13428,53 +13408,16 @@
       {
         "idx": 15,
         "line": "RE17",
-        "overhang_m": 7.1,
+        "overhang_m": -63.0,
         "required_length_m": 210,
-        "severity": "gering",
-        "track": "3;4",
+        "severity": "ok",
+        "track": "3",
         "variant": "RE17OR_N"
       },
       {
         "idx": 2,
         "line": "RE17",
-        "overhang_m": 7.1,
-        "required_length_m": 210,
-        "severity": "gering",
-        "track": "3;4",
-        "variant": "RE17OR_S"
-      }
-    ],
-    "available_tracks": [
-      {
-        "gleis": "3;4",
-        "length_m": 202.9
-      },
-      {
-        "gleis": "1",
-        "length_m": 44.4
-      },
-      {
-        "gleis": "2",
-        "length_m": 44.4
-      }
-    ],
-    "source": "osm"
-  },
-  "Køge Nord": {
-    "assignments": [
-      {
-        "idx": 14,
-        "line": "RE17",
-        "overhang_m": -191.5,
-        "required_length_m": 210,
-        "severity": "ok",
-        "track": "7",
-        "variant": "RE17OR_N"
-      },
-      {
-        "idx": 3,
-        "line": "RE17",
-        "overhang_m": -191.5,
+        "overhang_m": -63.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "4",
@@ -13483,60 +13426,141 @@
     ],
     "available_tracks": [
       {
-        "gleis": "6",
-        "length_m": 401.8
+        "gleis": "5",
+        "length_m": 310.0
       },
       {
-        "gleis": "3",
-        "length_m": 401.6
+        "gleis": "6",
+        "length_m": 310.0
       },
       {
         "gleis": "7",
-        "length_m": 401.5
+        "length_m": 347.0
       },
       {
-        "gleis": "4",
-        "length_m": 401.5
-      },
-      {
-        "gleis": "2",
-        "length_m": 180.5
+        "gleis": "8",
+        "length_m": 347.0
       },
       {
         "gleis": "1",
-        "length_m": 179.1
+        "length_m": 311.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 311.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 273.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 273.0
+      },
+      {
+        "gleis": "26",
+        "length_m": 178.0
+      },
+      {
+        "gleis": "9",
+        "length_m": 201.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 201.0
+      },
+      {
+        "gleis": "11",
+        "length_m": 201.0
+      },
+      {
+        "gleis": "12",
+        "length_m": 201.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
+  },
+  "Køge Nord": {
+    "assignments": [
+      {
+        "idx": 14,
+        "line": "RE17",
+        "overhang_m": -190.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "track": "3",
+        "variant": "RE17OR_N"
+      },
+      {
+        "idx": 3,
+        "line": "RE17",
+        "overhang_m": -190.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "track": "4",
+        "variant": "RE17OR_S"
+      }
+    ],
+    "available_tracks": [
+      {
+        "gleis": "3",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "7",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 180.0
+      }
+    ],
+    "source": "amtlich-ausland"
   },
   "Landquart": {
     "assignments": [
       {
         "idx": 1,
         "line": "RE80",
-        "overhang_m": 103.0,
+        "overhang_m": -205,
         "required_length_m": 210,
-        "severity": "kritisch",
-        "track": "8",
+        "severity": "ok",
+        "track": "2/3",
         "variant": "RE80_A"
       },
       {
         "idx": 22,
         "line": "RE80",
-        "overhang_m": 103.0,
+        "overhang_m": -205,
         "required_length_m": 210,
-        "severity": "kritisch",
-        "track": "8",
+        "severity": "ok",
+        "track": "4",
         "variant": "RE80_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "8",
-        "length_m": 107.0
+        "gleis": "2/3",
+        "length_m": 415
+      },
+      {
+        "gleis": "4",
+        "length_m": 415
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Landshut (Bay) Hbf": {
     "assignments": [
@@ -14653,33 +14677,37 @@
       {
         "idx": 2,
         "line": "RE77",
-        "overhang_m": -45.6,
+        "overhang_m": -47.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "2",
+        "track": "1",
         "variant": "RE77_A"
       },
       {
         "idx": 19,
         "line": "RE77",
-        "overhang_m": -111.7,
+        "overhang_m": -114.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE77_B"
       }
     ],
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 267.7
+        "length_m": 203.0
       },
       {
         "gleis": "2",
-        "length_m": 201.6
+        "length_m": 270.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 270.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Lutherstadt Wittenberg Hbf": {
     "assignments": [
@@ -15573,121 +15601,53 @@
       {
         "idx": 4,
         "line": "RE90",
-        "overhang_m": -3.4,
+        "overhang_m": -233.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "8;9",
+        "track": "Quai 9",
         "variant": "RE90_A"
       },
       {
         "idx": 15,
         "line": "RE90",
-        "overhang_m": -13.9,
+        "overhang_m": -254.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "8",
+        "track": "Quai 3",
         "variant": "RE90_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "5",
-        "length_m": 416.7
+        "gleis": "Quai 2",
+        "length_m": 447.0
       },
       {
-        "gleis": "1",
-        "length_m": 256.4
+        "gleis": "Quai 8",
+        "length_m": 418.0
       },
       {
-        "gleis": "2",
-        "length_m": 242.1
+        "gleis": "Quai 4",
+        "length_m": 448.0
       },
       {
-        "gleis": "3",
-        "length_m": 241.9
+        "gleis": "Quai 5",
+        "length_m": 533.0
       },
       {
-        "gleis": "4",
-        "length_m": 227.5
+        "gleis": "Quai 1/A",
+        "length_m": 434.0
       },
       {
-        "gleis": "6",
-        "length_m": 223.4
+        "gleis": "Quai 3",
+        "length_m": 410.0
       },
       {
-        "gleis": "2;3",
-        "length_m": 211.0
-      },
-      {
-        "gleis": "7",
-        "length_m": 204.0
-      },
-      {
-        "gleis": "1;A",
-        "length_m": 183.5
-      },
-      {
-        "gleis": "8",
-        "length_m": 169.9
-      },
-      {
-        "gleis": "8;9",
-        "length_m": 159.4
-      },
-      {
-        "gleis": "9",
-        "length_m": 80.5
-      },
-      {
-        "gleis": "10",
-        "length_m": 78.9
-      },
-      {
-        "gleis": "11",
-        "length_m": 75.4
-      },
-      {
-        "gleis": "12",
-        "length_m": 74.1
-      },
-      {
-        "gleis": "13",
-        "length_m": 60.4
-      },
-      {
-        "gleis": "14",
-        "length_m": 46.6
-      },
-      {
-        "gleis": "15",
-        "length_m": 31.0
-      },
-      {
-        "gleis": "16",
-        "length_m": 24.1
-      },
-      {
-        "gleis": "17",
-        "length_m": 23.8
-      },
-      {
-        "gleis": "18",
-        "length_m": 18.1
-      },
-      {
-        "gleis": "19",
-        "length_m": 18.1
-      },
-      {
-        "gleis": "20",
-        "length_m": 17.1
-      },
-      {
-        "gleis": "21",
-        "length_m": 17.1
+        "gleis": "Quai 9",
+        "length_m": 389.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Mook-Molenhoek": {
     "assignments": [
@@ -15727,102 +15687,66 @@
       {
         "idx": 25,
         "line": "RE71",
-        "overhang_m": 85.2,
+        "overhang_m": 85.0,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "1;2",
+        "track": "2",
         "variant": "RE71_A"
       },
       {
         "idx": 10,
         "line": "RE71",
-        "overhang_m": 85.2,
+        "overhang_m": 85.0,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "1;2",
+        "track": "1",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;2",
-        "length_m": 124.8
+        "gleis": "2",
+        "length_m": 125.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 125.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Mulhouse-Ville": {
     "assignments": [
       {
         "idx": 0,
         "line": "RE57",
-        "overhang_m": -137.1,
+        "overhang_m": -154.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1",
+        "track": "Quai 8",
         "variant": "RE57_A"
       },
       {
         "idx": 20,
         "line": "RE57",
-        "overhang_m": -156.0,
+        "overhang_m": -233.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "8",
+        "track": "Quai V2/V3",
         "variant": "RE57_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "4;5",
-        "length_m": 444.2
+        "gleis": "Quai V2/V3",
+        "length_m": 389.0
       },
       {
-        "gleis": "6;7",
-        "length_m": 423.8
-      },
-      {
-        "gleis": "2;3",
-        "length_m": 400.0
-      },
-      {
-        "gleis": "8",
-        "length_m": 312.0
-      },
-      {
-        "gleis": "1",
-        "length_m": 293.1
-      },
-      {
-        "gleis": "32",
-        "length_m": 99.6
-      },
-      {
-        "gleis": "2",
-        "length_m": 71.1
-      },
-      {
-        "gleis": "3",
-        "length_m": 67.5
-      },
-      {
-        "gleis": "4",
-        "length_m": 60.2
-      },
-      {
-        "gleis": "5",
-        "length_m": 22.1
-      },
-      {
-        "gleis": "6",
-        "length_m": 21.8
-      },
-      {
-        "gleis": "7",
-        "length_m": 21.3
+        "gleis": "Quai 8",
+        "length_m": 310.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Mönchengladbach Hbf": {
     "assignments": [
@@ -17259,36 +17183,52 @@
       {
         "idx": 10,
         "line": "RE17",
-        "overhang_m": 0,
+        "overhang_m": -131.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "2",
         "variant": "RE17OR_N"
       },
       {
         "idx": 7,
         "line": "RE17",
-        "overhang_m": 0,
+        "overhang_m": -131.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "3",
         "variant": "RE17OR_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1 (geschätzt)",
-        "length_m": 210
+        "gleis": "1",
+        "length_m": 344.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 341.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 341.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 350.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 366.0
       }
     ],
-    "source": "geschaetzt"
+    "source": "amtlich-ausland"
   },
   "Næstved": {
     "assignments": [
       {
         "idx": 12,
         "line": "RE17",
-        "overhang_m": -74.4,
+        "overhang_m": -76.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "1",
@@ -17297,49 +17237,77 @@
       {
         "idx": 5,
         "line": "RE17",
-        "overhang_m": -74.4,
+        "overhang_m": -190.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE17OR_S"
       }
     ],
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 284.4
+        "length_m": 286.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 400.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Nørreport": {
     "assignments": [
       {
         "idx": 16,
         "line": "RE17",
-        "overhang_m": 0,
+        "overhang_m": 7.0,
         "required_length_m": 210,
-        "severity": "ok",
-        "track": "1 (geschätzt)",
+        "severity": "gering",
+        "track": "1",
         "variant": "RE17OR_N"
       },
       {
         "idx": 1,
         "line": "RE17",
-        "overhang_m": 0,
+        "overhang_m": 7.0,
         "required_length_m": 210,
-        "severity": "ok",
-        "track": "1 (geschätzt)",
+        "severity": "gering",
+        "track": "2",
         "variant": "RE17OR_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1 (geschätzt)",
-        "length_m": 210
+        "gleis": "1",
+        "length_m": 203.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 203.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 177.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 177.0
       }
     ],
-    "source": "geschaetzt"
+    "source": "amtlich-ausland"
   },
   "Nürnberg Hbf": {
     "assignments": [
@@ -17898,29 +17866,33 @@
       {
         "idx": 5,
         "line": "RE77",
-        "overhang_m": 0,
+        "overhang_m": -152.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "2",
         "variant": "RE77_A"
       },
       {
         "idx": 16,
         "line": "RE77",
-        "overhang_m": 0,
+        "overhang_m": -215.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "1",
         "variant": "RE77_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1 (geschätzt)",
-        "length_m": 156
+        "gleis": "1",
+        "length_m": 371.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 308.0
       }
     ],
-    "source": "geschaetzt"
+    "source": "amtlich-ausland"
   },
   "Paderborn Hbf": {
     "assignments": [
@@ -18600,29 +18572,33 @@
       {
         "idx": 27,
         "line": "RE71",
-        "overhang_m": -14.8,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;2",
+        "track": "2",
         "variant": "RE71_A"
       },
       {
         "idx": 8,
         "line": "RE71",
-        "overhang_m": -14.8,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;2",
+        "track": "1",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;2",
-        "length_m": 224.8
+        "gleis": "2",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 225.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Radolfzell": {
     "assignments": [
@@ -18770,7 +18746,7 @@
       {
         "idx": 24,
         "line": "RE71",
-        "overhang_m": -98.4,
+        "overhang_m": -90.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "2",
@@ -18779,24 +18755,28 @@
       {
         "idx": 11,
         "line": "RE71",
-        "overhang_m": -98.4,
+        "overhang_m": -90.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "2",
+        "track": "1",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
+        "gleis": "3",
+        "length_m": 182.0
+      },
+      {
         "gleis": "2",
-        "length_m": 308.4
+        "length_m": 300.0
       },
       {
         "gleis": "1",
-        "length_m": 182.8
+        "length_m": 300.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Regensburg Hbf": {
     "assignments": [
@@ -19139,7 +19119,7 @@
       {
         "idx": 2,
         "line": "RE46",
-        "overhang_m": -12.9,
+        "overhang_m": -12.0,
         "required_length_m": 105,
         "severity": "ok",
         "track": "2",
@@ -19148,7 +19128,7 @@
       {
         "idx": 19,
         "line": "RE46",
-        "overhang_m": -63.6,
+        "overhang_m": -66.0,
         "required_length_m": 105,
         "severity": "ok",
         "track": "1",
@@ -19158,14 +19138,14 @@
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 168.6
+        "length_m": 171.0
       },
       {
         "gleis": "2",
-        "length_m": 117.9
+        "length_m": 117.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Ribnitz-Damgarten West": {
     "assignments": [
@@ -19205,29 +19185,45 @@
       {
         "idx": 13,
         "line": "RE17",
-        "overhang_m": 0,
+        "overhang_m": -111.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "1",
         "variant": "RE17OR_N"
       },
       {
         "idx": 4,
         "line": "RE17",
-        "overhang_m": 0,
+        "overhang_m": -111.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1 (geschätzt)",
+        "track": "2",
         "variant": "RE17OR_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1 (geschätzt)",
-        "length_m": 210
+        "gleis": "1",
+        "length_m": 321.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 321.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 321.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 321.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 321.0
       }
     ],
-    "source": "geschaetzt"
+    "source": "amtlich-ausland"
   },
   "Roermond (NL)": {
     "assignments": [
@@ -19521,7 +19517,7 @@
       {
         "idx": 23,
         "line": "RE71",
-        "overhang_m": -64.2,
+        "overhang_m": -65.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "5",
@@ -19530,28 +19526,28 @@
       {
         "idx": 12,
         "line": "RE71",
-        "overhang_m": -88.2,
+        "overhang_m": -75.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;2",
+        "track": "2",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;2",
-        "length_m": 298.2
+        "gleis": "5",
+        "length_m": 275.0
       },
       {
-        "gleis": "5",
-        "length_m": 274.2
+        "gleis": "2",
+        "length_m": 285.0
       },
       {
         "gleis": "1",
-        "length_m": 18.7
+        "length_m": 285.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Rumia Janowo": {
     "assignments": [
@@ -19636,33 +19632,41 @@
       {
         "idx": 11,
         "line": "RE71",
-        "overhang_m": -137.5,
+        "overhang_m": -130.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "2",
+        "track": "1",
         "variant": "RE71_A"
       },
       {
         "idx": 24,
         "line": "RE71",
-        "overhang_m": -226.2,
+        "overhang_m": -132.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
+        "gleis": "4",
+        "length_m": 375.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 150.0
+      },
+      {
         "gleis": "1",
-        "length_m": 436.2
+        "length_m": 340.0
       },
       {
         "gleis": "2",
-        "length_m": 347.5
+        "length_m": 342.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Rövershagen": {
     "assignments": [
@@ -19724,33 +19728,41 @@
       {
         "idx": 9,
         "line": "RE17",
-        "overhang_m": -191.1,
+        "overhang_m": -244.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1",
+        "track": "18",
         "variant": "RE17OR_N"
       },
       {
         "idx": 8,
         "line": "RE17",
-        "overhang_m": -191.1,
+        "overhang_m": -244.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "4",
+        "track": "19",
         "variant": "RE17OR_S"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1",
-        "length_m": 401.1
+        "gleis": "11",
+        "length_m": 460.0
       },
       {
-        "gleis": "4",
-        "length_m": 401.1
+        "gleis": "12",
+        "length_m": 460.0
+      },
+      {
+        "gleis": "18",
+        "length_m": 454.0
+      },
+      {
+        "gleis": "19",
+        "length_m": 454.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Rüsselsheim": {
     "assignments": [
@@ -19932,33 +19944,33 @@
       {
         "idx": 3,
         "line": "RE90",
-        "overhang_m": -77.2,
+        "overhang_m": -102.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "2",
+        "track": "Quai V2",
         "variant": "RE90_A"
       },
       {
         "idx": 16,
         "line": "RE90",
-        "overhang_m": -117.8,
+        "overhang_m": -114.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "1",
+        "track": "Quai V1",
         "variant": "RE90_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1",
-        "length_m": 273.8
+        "gleis": "Quai V2",
+        "length_m": 258.0
       },
       {
-        "gleis": "2",
-        "length_m": 233.2
+        "gleis": "Quai V1",
+        "length_m": 270.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Salzwedel": {
     "assignments": [
@@ -20039,61 +20051,45 @@
       {
         "idx": 2,
         "line": "RE80",
-        "overhang_m": 189.5,
+        "overhang_m": -90,
         "required_length_m": 210,
-        "severity": "kritisch",
-        "track": "F",
+        "severity": "ok",
+        "track": "7",
         "variant": "RE80_A"
       },
       {
         "idx": 21,
         "line": "RE80",
-        "overhang_m": 189.5,
+        "overhang_m": -145,
         "required_length_m": 210,
-        "severity": "kritisch",
-        "track": "F",
+        "severity": "ok",
+        "track": "6",
         "variant": "RE80_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "F",
-        "length_m": 20.5
+        "gleis": "3/4",
+        "length_m": 420
       },
       {
-        "gleis": "G",
-        "length_m": 20.1
+        "gleis": "2",
+        "length_m": 436
       },
       {
-        "gleis": "C",
-        "length_m": 19.5
+        "gleis": "7",
+        "length_m": 300
       },
       {
-        "gleis": "D",
-        "length_m": 19.5
+        "gleis": "5",
+        "length_m": 446
       },
       {
-        "gleis": "A",
-        "length_m": 19.5
-      },
-      {
-        "gleis": "H",
-        "length_m": 19.4
-      },
-      {
-        "gleis": "J",
-        "length_m": 18.0
-      },
-      {
-        "gleis": "E",
-        "length_m": 17.0
-      },
-      {
-        "gleis": "B",
-        "length_m": 16.3
+        "gleis": "6",
+        "length_m": 355
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Sassnitz": {
     "assignments": [
@@ -20930,33 +20926,33 @@
       {
         "idx": 14,
         "line": "RE71",
-        "overhang_m": 77.4,
+        "overhang_m": 85.0,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "3;5",
+        "track": "2",
         "variant": "RE71_A"
       },
       {
         "idx": 21,
         "line": "RE71",
-        "overhang_m": 77.4,
+        "overhang_m": 85.0,
         "required_length_m": 210,
         "severity": "kritisch",
-        "track": "3;5",
+        "track": "1",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "3;5",
-        "length_m": 132.6
+        "gleis": "2",
+        "length_m": 125.0
       },
       {
-        "gleis": "1;2",
-        "length_m": 124.9
+        "gleis": "1",
+        "length_m": 125.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Steinhelle": {
     "assignments": [
@@ -21360,7 +21356,7 @@
       {
         "idx": 28,
         "line": "RE71",
-        "overhang_m": 83.9,
+        "overhang_m": 85.0,
         "required_length_m": 210,
         "severity": "kritisch",
         "track": "1",
@@ -21369,7 +21365,7 @@
       {
         "idx": 7,
         "line": "RE71",
-        "overhang_m": 83.9,
+        "overhang_m": 85.0,
         "required_length_m": 210,
         "severity": "kritisch",
         "track": "1",
@@ -21379,119 +21375,83 @@
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 126.1
+        "length_m": 125.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Szczecin Główny": {
     "assignments": [
       {
         "idx": 10,
         "line": "RE71",
-        "overhang_m": -189.2,
+        "overhang_m": -1.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3;5",
+        "track": "8",
         "variant": "RE71_A"
       },
       {
         "idx": 25,
         "line": "RE71",
-        "overhang_m": -189.2,
+        "overhang_m": -1.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "3;5",
+        "track": "10",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "3;5",
-        "length_m": 399.2
+        "gleis": "5",
+        "length_m": 266.0
       },
       {
-        "gleis": "23121",
-        "length_m": 57.1
-      },
-      {
-        "gleis": "23122",
-        "length_m": 56.1
-      },
-      {
-        "gleis": "23123",
-        "length_m": 55.6
-      },
-      {
-        "gleis": "23124",
-        "length_m": 55.1
-      },
-      {
-        "gleis": "22412",
-        "length_m": 52.1
-      },
-      {
-        "gleis": "23011",
-        "length_m": 51.0
-      },
-      {
-        "gleis": "22524",
-        "length_m": 49.1
-      },
-      {
-        "gleis": "22812",
-        "length_m": 47.2
-      },
-      {
-        "gleis": "22813",
-        "length_m": 47.0
-      },
-      {
-        "gleis": "23012",
-        "length_m": 46.5
+        "gleis": "3",
+        "length_m": 370.0
       },
       {
         "gleis": "1",
-        "length_m": 46.2
+        "length_m": 421.0
       },
       {
-        "gleis": "22525",
-        "length_m": 40.7
+        "gleis": "2",
+        "length_m": 421.0
       },
       {
-        "gleis": "22411",
-        "length_m": 37.9
+        "gleis": "4",
+        "length_m": 386.0
       },
       {
-        "gleis": "22523",
-        "length_m": 37.9
+        "gleis": "6",
+        "length_m": 327.0
       },
       {
-        "gleis": "22611",
-        "length_m": 35.1
+        "gleis": "8",
+        "length_m": 211.0
       },
       {
-        "gleis": "22612",
-        "length_m": 32.5
+        "gleis": "10",
+        "length_m": 211.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Szczecinek": {
     "assignments": [
       {
         "idx": 12,
         "line": "RE71",
-        "overhang_m": -112.4,
+        "overhang_m": -111.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "2;6",
+        "track": "6",
         "variant": "RE71_A"
       },
       {
         "idx": 23,
         "line": "RE71",
-        "overhang_m": -217.0,
+        "overhang_m": -150.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "7",
@@ -21501,29 +21461,37 @@
     "available_tracks": [
       {
         "gleis": "7",
-        "length_m": 427.0
+        "length_m": 360.0
       },
       {
-        "gleis": "2;6",
-        "length_m": 322.4
+        "gleis": "9",
+        "length_m": 196.0
       },
       {
-        "gleis": "1;5",
-        "length_m": 187.1
+        "gleis": "5",
+        "length_m": 181.0
       },
       {
         "gleis": "1",
-        "length_m": 50.2
+        "length_m": 187.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 154.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 321.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Tczew": {
     "assignments": [
       {
         "idx": 15,
         "line": "RE71",
-        "overhang_m": -70.9,
+        "overhang_m": -70.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "10",
@@ -21532,61 +21500,73 @@
       {
         "idx": 20,
         "line": "RE71",
-        "overhang_m": -89.3,
+        "overhang_m": -90.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "6;8",
+        "track": "8",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "5;7",
-        "length_m": 419.6
-      },
-      {
-        "gleis": "1;2",
-        "length_m": 411.9
-      },
-      {
-        "gleis": "6;8",
-        "length_m": 299.3
-      },
-      {
         "gleis": "10",
-        "length_m": 280.9
+        "length_m": 280.0
+      },
+      {
+        "gleis": "8",
+        "length_m": 300.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 300.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 412.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 412.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 420.0
+      },
+      {
+        "gleis": "7",
+        "length_m": 420.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Thionville": {
     "assignments": [
       {
         "idx": 6,
         "line": "RE90",
-        "overhang_m": -68.8,
+        "overhang_m": -394.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "E;F",
+        "track": "Quai C/D",
         "variant": "RE90_A"
       },
       {
         "idx": 13,
         "line": "RE90",
-        "overhang_m": -68.8,
+        "overhang_m": -394.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "E;F",
+        "track": "Quai C/D",
         "variant": "RE90_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "E;F",
-        "length_m": 224.8
+        "gleis": "Quai C/D",
+        "length_m": 550.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Timmendorfer Strand/Ratekau": {
     "assignments": [
@@ -21790,7 +21770,7 @@
       {
         "idx": 3,
         "line": "RE46",
-        "overhang_m": 2.6,
+        "overhang_m": 2.0,
         "required_length_m": 105,
         "severity": "gering",
         "track": "1",
@@ -21799,24 +21779,24 @@
       {
         "idx": 18,
         "line": "RE46",
-        "overhang_m": 2.6,
+        "overhang_m": 2.0,
         "required_length_m": 105,
         "severity": "gering",
-        "track": "1",
+        "track": "2",
         "variant": "RE46_B"
       }
     ],
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 102.4
+        "length_m": 103.0
       },
       {
         "gleis": "2",
-        "length_m": 101.3
+        "length_m": 103.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Uelzen": {
     "assignments": [
@@ -22130,7 +22110,7 @@
       {
         "idx": 3,
         "line": "RE77",
-        "overhang_m": -93.0,
+        "overhang_m": -92.0,
         "required_length_m": 156,
         "severity": "ok",
         "track": "2",
@@ -22139,7 +22119,7 @@
       {
         "idx": 18,
         "line": "RE77",
-        "overhang_m": -96.1,
+        "overhang_m": -93.0,
         "required_length_m": 156,
         "severity": "ok",
         "track": "1",
@@ -22148,15 +22128,19 @@
     ],
     "available_tracks": [
       {
+        "gleis": "0",
+        "length_m": 88.0
+      },
+      {
         "gleis": "1",
-        "length_m": 252.1
+        "length_m": 249.0
       },
       {
         "gleis": "2",
-        "length_m": 249.0
+        "length_m": 248.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Varel (Oldb)": {
     "assignments": [
@@ -22529,7 +22513,7 @@
       {
         "idx": 4,
         "line": "RE77",
-        "overhang_m": -83.0,
+        "overhang_m": -79.0,
         "required_length_m": 156,
         "severity": "ok",
         "track": "1",
@@ -22538,31 +22522,39 @@
       {
         "idx": 17,
         "line": "RE77",
-        "overhang_m": -103.1,
+        "overhang_m": -99.0,
         "required_length_m": 156,
         "severity": "ok",
-        "track": "2; 3",
+        "track": "2",
         "variant": "RE77_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "2; 3",
-        "length_m": 259.1
+        "gleis": "0",
+        "length_m": 116.0
       },
       {
         "gleis": "1",
-        "length_m": 239.0
+        "length_m": 235.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 255.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 324.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Vordingborg": {
     "assignments": [
       {
         "idx": 11,
         "line": "RE17",
-        "overhang_m": -124.0,
+        "overhang_m": -120.0,
         "required_length_m": 210,
         "severity": "ok",
         "track": "1",
@@ -22571,24 +22563,28 @@
       {
         "idx": 6,
         "line": "RE17",
-        "overhang_m": -124.0,
+        "overhang_m": -120.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1",
+        "track": "2",
         "variant": "RE17OR_S"
       }
     ],
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 334.0
+        "length_m": 330.0
       },
       {
         "gleis": "2",
-        "length_m": 16.2
+        "length_m": 330.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 330.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Völklingen": {
     "assignments": [
@@ -22917,7 +22913,7 @@
       {
         "idx": 25,
         "line": "RE94",
-        "overhang_m": -150.0,
+        "overhang_m": -152,
         "required_length_m": 184,
         "severity": "ok",
         "track": "5",
@@ -22926,24 +22922,28 @@
       {
         "idx": 4,
         "line": "RE94",
-        "overhang_m": -150.0,
+        "overhang_m": -220,
         "required_length_m": 184,
         "severity": "ok",
-        "track": "5",
+        "track": "1",
         "variant": "RE94_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "5",
-        "length_m": 334.0
+        "gleis": "1",
+        "length_m": 404
       },
       {
-        "gleis": "A",
-        "length_m": 19.8
+        "gleis": "3/4",
+        "length_m": 420
+      },
+      {
+        "gleis": "5",
+        "length_m": 336
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Wengern": {
     "assignments": [
@@ -23342,29 +23342,45 @@
       {
         "idx": 27,
         "line": "RE94",
-        "overhang_m": -0.2,
+        "overhang_m": -156,
         "required_length_m": 184,
         "severity": "ok",
-        "track": "1",
+        "track": "8/9",
         "variant": "RE94_A"
       },
       {
         "idx": 2,
         "line": "RE94",
-        "overhang_m": -0.2,
+        "overhang_m": -230,
         "required_length_m": 184,
         "severity": "ok",
-        "track": "1",
+        "track": "6/7",
         "variant": "RE94_B"
       }
     ],
     "available_tracks": [
       {
+        "gleis": "2/3",
+        "length_m": 424
+      },
+      {
         "gleis": "1",
-        "length_m": 184.2
+        "length_m": 176
+      },
+      {
+        "gleis": "4/5",
+        "length_m": 419
+      },
+      {
+        "gleis": "8/9",
+        "length_m": 340
+      },
+      {
+        "gleis": "6/7",
+        "length_m": 414
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Witten Bommern": {
     "assignments": [
@@ -23945,36 +23961,40 @@
       {
         "idx": 29,
         "line": "RE71",
-        "overhang_m": -43.9,
+        "overhang_m": -15.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;3",
+        "track": "3",
         "variant": "RE71_A"
       },
       {
         "idx": 6,
         "line": "RE71",
-        "overhang_m": -43.9,
+        "overhang_m": -38.0,
         "required_length_m": 210,
         "severity": "ok",
-        "track": "1;3",
+        "track": "1",
         "variant": "RE71_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;3",
-        "length_m": 253.9
+        "gleis": "3",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 248.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Władysławowo Port": {
     "assignments": [
       {
         "idx": 30,
         "line": "RE71",
-        "overhang_m": 85.8,
+        "overhang_m": 85.0,
         "required_length_m": 210,
         "severity": "kritisch",
         "track": "1",
@@ -23983,7 +24003,7 @@
       {
         "idx": 5,
         "line": "RE71",
-        "overhang_m": 85.8,
+        "overhang_m": 85.0,
         "required_length_m": 210,
         "severity": "kritisch",
         "track": "1",
@@ -23993,10 +24013,10 @@
     "available_tracks": [
       {
         "gleis": "1",
-        "length_m": 124.2
+        "length_m": 125.0
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Zeche Nachtigall": {
     "assignments": [
@@ -24318,190 +24338,94 @@
       {
         "idx": 28,
         "line": "RE94",
-        "overhang_m": -214.9,
+        "overhang_m": -290,
         "required_length_m": 184,
         "severity": "ok",
-        "track": "3;4",
+        "track": "3/4",
         "variant": "RE94_A"
       },
       {
         "idx": 1,
         "line": "RE94",
-        "overhang_m": -233.5,
+        "overhang_m": -308,
         "required_length_m": 184,
         "severity": "ok",
-        "track": "1;2",
+        "track": "1/2",
         "variant": "RE94_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1;2",
-        "length_m": 417.5
+        "gleis": "3/4",
+        "length_m": 474
       },
       {
-        "gleis": "3;4",
-        "length_m": 398.9
-      },
-      {
-        "gleis": "1",
-        "length_m": 47.6
-      },
-      {
-        "gleis": "2",
-        "length_m": 47.4
-      },
-      {
-        "gleis": "R",
-        "length_m": 19.0
-      },
-      {
-        "gleis": "A",
-        "length_m": 18.3
-      },
-      {
-        "gleis": "C",
-        "length_m": 18.1
-      },
-      {
-        "gleis": "B",
-        "length_m": 18.0
-      },
-      {
-        "gleis": "T",
-        "length_m": 16.4
-      },
-      {
-        "gleis": "S",
-        "length_m": 16.2
+        "gleis": "1/2",
+        "length_m": 492
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Zürich HB": {
     "assignments": [
       {
         "idx": 29,
         "line": "RE94",
-        "overhang_m": 108.1,
+        "overhang_m": -234,
         "required_length_m": 184,
-        "severity": "kritisch",
-        "track": "1",
+        "severity": "ok",
+        "track": "16/17",
         "variant": "RE94_A"
       },
       {
         "idx": 0,
         "line": "RE94",
-        "overhang_m": 108.1,
+        "overhang_m": -240,
         "required_length_m": 184,
-        "severity": "kritisch",
-        "track": "1",
+        "severity": "ok",
+        "track": "10/11",
         "variant": "RE94_B"
       }
     ],
     "available_tracks": [
       {
-        "gleis": "1",
-        "length_m": 75.9
+        "gleis": "10/11",
+        "length_m": 424
       },
       {
-        "gleis": "2",
-        "length_m": 75.8
+        "gleis": "6/7",
+        "length_m": 428
       },
       {
-        "gleis": "4",
-        "length_m": 74.6
+        "gleis": "8/9",
+        "length_m": 426
       },
       {
-        "gleis": "5",
-        "length_m": 74.1
+        "gleis": "4/5",
+        "length_m": 425
       },
       {
-        "gleis": "6",
-        "length_m": 56.0
+        "gleis": "12/13",
+        "length_m": 433
       },
       {
-        "gleis": "H",
-        "length_m": 53.3
-      },
-      {
-        "gleis": "A, B",
-        "length_m": 52.2
-      },
-      {
-        "gleis": "G",
-        "length_m": 49.2
-      },
-      {
-        "gleis": "7",
-        "length_m": 48.3
-      },
-      {
-        "gleis": "8",
-        "length_m": 48.3
-      },
-      {
-        "gleis": "9",
-        "length_m": 48.0
-      },
-      {
-        "gleis": "10",
-        "length_m": 48.0
-      },
-      {
-        "gleis": "E, F",
-        "length_m": 45.8
-      },
-      {
-        "gleis": "11",
-        "length_m": 43.0
-      },
-      {
-        "gleis": "12",
-        "length_m": 42.6
-      },
-      {
-        "gleis": "13",
-        "length_m": 42.4
-      },
-      {
-        "gleis": "14",
-        "length_m": 42.1
-      },
-      {
-        "gleis": "15",
-        "length_m": 40.8
-      },
-      {
-        "gleis": "16",
-        "length_m": 40.7
-      },
-      {
-        "gleis": "17",
-        "length_m": 40.0
+        "gleis": "16/17",
+        "length_m": 418
       },
       {
         "gleis": "18",
-        "length_m": 37.4
+        "length_m": 426
       },
       {
-        "gleis": "19",
-        "length_m": 36.2
+        "gleis": "14/15",
+        "length_m": 427
       },
       {
-        "gleis": "C",
-        "length_m": 35.2
-      },
-      {
-        "gleis": "D",
-        "length_m": 34.8
-      },
-      {
-        "gleis": "J",
-        "length_m": 22.5
+        "gleis": "3",
+        "length_m": 425
       }
     ],
-    "source": "osm"
+    "source": "amtlich-ausland"
   },
   "Züssow": {
     "assignments": [

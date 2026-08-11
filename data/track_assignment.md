@@ -5,53 +5,45 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis.
 ## Zusammenfassung
 
 - 474 Stationen, 1317 Zuweisungen (Variante×Halt)
-- Quellen: amtlich 341, fiktiv 12, geschaetzt 17, osm 104
-- Konfliktstufen: gering 72, kritisch 44, ok 1201 (ok = passt, gering = ≤25 m Überhang/SDO ausreichend, kritisch = >25 m)
+- Quellen: amtlich 341, amtlich-ausland 57, fiktiv 12, geschaetzt 11, osm 53
+- Konfliktstufen: gering 72, kritisch 36, ok 1209 (ok = passt, gering = ≤25 m Überhang/SDO ausreichend, kritisch = >25 m)
 
 ## Kritisch (>25 m Überhang)
 
 | Station | Linie | Variante | Gleis | benötigt | Überhang | Quelle |
 |---|---|---|---|---|---|---|
-| Sargans | RE80 | RE80_A | F | 210 m | +190 m | osm |
-| Sargans | RE80 | RE80_B | F | 210 m | +190 m | osm |
 | Roermond (NL) | RE32 | RE32_N | 1 | 210 m | +188 m | osm |
 | Roermond (NL) | RE32 | RE32_S | 1 | 210 m | +188 m | osm |
-| Gdynia Główna | RE71 | RE71_A | 1 | 210 m | +178 m | osm |
-| Gdynia Główna | RE71 | RE71_B | 1 | 210 m | +178 m | osm |
 | Bochum-Kohlenstraße | S10 Außenring | S10_A | 1 | 156 m | +122 m | osm |
 | Bochum-Kohlenstraße | S10 Innenring | S10_I | 1 | 156 m | +122 m | osm |
 | Wengern | S10 Außenring | S10_A | 1 | 156 m | +112 m | osm |
 | Wengern | S10 Innenring | S10_I | 1 | 156 m | +112 m | osm |
-| Zürich HB | RE94 | RE94_A | 1 | 184 m | +108 m | osm |
-| Zürich HB | RE94 | RE94_B | 1 | 184 m | +108 m | osm |
-| Landquart | RE80 | RE80_A | 8 | 210 m | +103 m | osm |
-| Landquart | RE80 | RE80_B | 8 | 210 m | +103 m | osm |
 | Luxembourg | RE90 | RE90_A | 1 | 156 m | +102 m | osm |
 | Luxembourg | RE90 | RE90_B | 2 | 156 m | +102 m | osm |
-| Władysławowo Port | RE71 | RE71_A | 1 | 210 m | +86 m | osm |
-| Władysławowo Port | RE71 | RE71_B | 1 | 210 m | +86 m | osm |
 | Żelistrzewo | RE71 | RE71_A | 1 | 210 m | +85 m | osm |
 | Żelistrzewo | RE71 | RE71_B | 1 | 210 m | +85 m | osm |
-| Mrzezino | RE71 | RE71_A | 1;2 | 210 m | +85 m | osm |
-| Mrzezino | RE71 | RE71_B | 1;2 | 210 m | +85 m | osm |
 | Dalheim | RE32 | RE32_N | 1 | 210 m | +85 m | amtlich |
 | Dalheim | RE32 | RE32_S | 1 | 210 m | +85 m | amtlich |
 | Wegberg | RE32 | RE32_N | 1 | 210 m | +85 m | amtlich |
 | Wegberg | RE32 | RE32_S | 1 | 210 m | +85 m | amtlich |
-| Swarzewo | RE71 | RE71_A | 1 | 210 m | +84 m | osm |
-| Swarzewo | RE71 | RE71_B | 1 | 210 m | +84 m | osm |
+| Starogard Gdański | RE71 | RE71_A | 2 | 210 m | +85 m | amtlich-ausland |
+| Starogard Gdański | RE71 | RE71_B | 1 | 210 m | +85 m | amtlich-ausland |
+| Mrzezino | RE71 | RE71_A | 2 | 210 m | +85 m | amtlich-ausland |
+| Mrzezino | RE71 | RE71_B | 1 | 210 m | +85 m | amtlich-ausland |
+| Swarzewo | RE71 | RE71_A | 1 | 210 m | +85 m | amtlich-ausland |
+| Swarzewo | RE71 | RE71_B | 1 | 210 m | +85 m | amtlich-ausland |
+| Władysławowo Port | RE71 | RE71_A | 1 | 210 m | +85 m | amtlich-ausland |
+| Władysławowo Port | RE71 | RE71_B | 1 | 210 m | +85 m | amtlich-ausland |
 | Herbede | S30 | S30_N | 1 | 156 m | +82 m | osm |
 | Herbede | S30 | S30_S | 1 | 156 m | +82 m | osm |
-| Starogard Gdański | RE71 | RE71_A | 3;5 | 210 m | +77 m | osm |
-| Starogard Gdański | RE71 | RE71_B | 3;5 | 210 m | +77 m | osm |
 | Ruine Hardenstein | S30 | S30_N | 1 | 156 m | +74 m | osm |
 | Ruine Hardenstein | S30 | S30_S | 1 | 156 m | +74 m | osm |
 | Neustadt (Dosse) | RE46 | RE46_A | 1 | 210 m | +70 m | amtlich |
 | Neustadt (Dosse) | RE46 | RE46_B | 2 | 210 m | +70 m | amtlich |
 | Gdynia Wzgórze Św. Maksymiliana | RE71 | RE71_A | 101 | 210 m | +55 m | osm |
 | Gdynia Wzgórze Św. Maksymiliana | RE71 | RE71_B | 101 | 210 m | +55 m | osm |
-| Chojnice | RE71 | RE71_A | 12 | 210 m | +46 m | osm |
-| Chojnice | RE71 | RE71_B | 12 | 210 m | +46 m | osm |
+| Chojnice | RE71 | RE71_A | 12 | 210 m | +50 m | amtlich-ausland |
+| Chojnice | RE71 | RE71_B | 15 | 210 m | +50 m | amtlich-ausland |
 | Bremerhaven-Lehe | RE9 | RE9_A | 3 | 210 m | +40 m | amtlich |
 | Bremerhaven-Lehe | RE9 | RE9_B | 4 | 210 m | +40 m | amtlich |
 | Bochum-Bermuda3eck | S10 Außenring | S10_A | 1 | 156 m | +28 m | osm |
@@ -105,8 +97,8 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis.
 | Bochum West | S10 Innenring | S10_I | 1 | 156 m | +12 m | amtlich |
 | Hagenow Land | RE46 | RE46_A | 2 | 210 m | +10 m | amtlich |
 | Hagenow Land | RE46 | RE46_B | 3 | 210 m | +10 m | amtlich |
-| København H | RE17 | RE17OR_N | 3;4 | 210 m | +7 m | osm |
-| København H | RE17 | RE17OR_S | 3;4 | 210 m | +7 m | osm |
+| Nørreport | RE17 | RE17OR_N | 1 | 210 m | +7 m | amtlich-ausland |
+| Nørreport | RE17 | RE17OR_S | 2 | 210 m | +7 m | amtlich-ausland |
 | Zeche Nachtigall | S30 | S30_N | 1 | 156 m | +6 m | osm |
 | Zeche Nachtigall | S30 | S30_S | 1 | 156 m | +6 m | osm |
 | Haus Kemnade | S30 | S30_N | 1 | 156 m | +6 m | osm |
@@ -125,8 +117,8 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis.
 | Gdańsk Zaspa | RE71 | RE71_B | 501;502 | 210 m | +4 m | osm |
 | Blankenstein Burg | S30 | S30_N | 1 | 156 m | +3 m | osm |
 | Blankenstein Burg | S30 | S30_S | 1 | 156 m | +3 m | osm |
-| Tønder | RE46 | RE46_A | 1 | 105 m | +3 m | osm |
-| Tønder | RE46 | RE46_B | 1 | 105 m | +3 m | osm |
+| Tønder | RE46 | RE46_A | 1 | 105 m | +2 m | amtlich-ausland |
+| Tønder | RE46 | RE46_B | 2 | 105 m | +2 m | amtlich-ausland |
 | Dortmund-Brackel | S10 Außenring | S10_A | 1 | 156 m | +2 m | amtlich |
 | Dortmund-Brackel | S10 Innenring | S10_I | 2 | 156 m | +2 m | amtlich |
 | Bochum-Dahlhausen | S30 | S30_N | 1 | 156 m | +2 m | amtlich |
@@ -136,4 +128,4 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis.
 
 ## Stationen mit geschätzten Gleisen (keine Quelle vorhanden)
 
-Bettembourg, Bregenz, Buchs SG, Dornbirn, Ettelbruck, Feldkirch, Frankfurt Flughafen Regiobf, Fredericia, Großenbrode/Heiligenhafen, Hannover-Messe/Laatzen, Nykøbing F., Nørreport, Padborg, Probsteierhagen, Ringsted, Steinhelle, Witten Bommern
+Bettembourg, Bregenz, Dornbirn, Ettelbruck, Feldkirch, Frankfurt Flughafen Regiobf, Großenbrode/Heiligenhafen, Hannover-Messe/Laatzen, Probsteierhagen, Steinhelle, Witten Bommern

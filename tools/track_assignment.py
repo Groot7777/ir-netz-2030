@@ -11,8 +11,11 @@ Algorithmus: längenpassend + Lastverteilung über die verfügbaren Gleise.
 Datenpriorität pro Station (wie schon bei den Bahnsteiglängen etabliert):
   1. data/manual_overrides.json  — fiktive RE-Netz-2030-Planung
   2. data/dbinfrago_platforms.json — amtliche DB InfraGO-Daten (353 dt. Bahnhöfe)
-  3. data/platform_lengths.json  — OSM/Overpass (Ausland + Rest-Lücken)
-  4. Fallback 'geschaetzt': KEINE Quelle vorhanden — ein einzelnes Gleis
+  3. data/foreign_platforms.json — amtliche Auslandsdaten (57 Bahnhöfe: CH/
+     SBB Open Data, PL/PKP PLK, FR/SNCF Réseau Open Data, DK/Banedanmark
+     Netredegørelse — siehe tools/foreign_platforms.py)
+  4. data/platform_lengths.json  — OSM/Overpass (restliches Ausland + Rest-Lücken)
+  5. Fallback 'geschaetzt': KEINE Quelle vorhanden — ein einzelnes Gleis
      wird auf die längste dort tatsächlich benötigte Zuglänge geschätzt
      (nicht auf 0!), klar als 'geschätzt' markiert statt als Fakt
      ausgegeben. 0 wäre sachlich falsch — "keine Daten" heißt nicht
@@ -86,7 +89,7 @@ def dedup_max(tracks):
     return [(label, best[label]) for label in order]
 
 
-def build_station_tracks(stations, manual, dbinfrago, osm):
+def build_station_tracks(stations, manual, dbinfrago, foreign, osm):
     """Verfügbare Gleise je Station, mit Quelle — Prioritätskette wie in
     tools/platform_conflicts.py, hier zusätzlich mit Gleis-LABELN (nicht
     nur der längsten verfügbaren Länge)."""
@@ -99,6 +102,10 @@ def build_station_tracks(stations, manual, dbinfrago, osm):
         d = dbinfrago.get(st)
         if d and d.get("tracks"):
             out[st] = {"source": "amtlich", "tracks": dedup_max([(t["gleis"], t["length_m"]) for t in d["tracks"]])}
+            continue
+        f = foreign.get(st)
+        if f and f.get("tracks"):
+            out[st] = {"source": "amtlich-ausland", "tracks": dedup_max([(t["gleis"], t["length_m"]) for t in f["tracks"]])}
             continue
         o = osm.get(st)
         if o and o.get("platforms"):
@@ -247,6 +254,7 @@ def main():
     ap.add_argument("--data", default="data/lines.json")
     ap.add_argument("--manual-overrides", default="data/manual_overrides.json")
     ap.add_argument("--dbinfrago", default="data/dbinfrago_platforms.json")
+    ap.add_argument("--foreign", default="data/foreign_platforms.json")
     ap.add_argument("--platform-lengths", default="data/platform_lengths.json")
     ap.add_argument("--out", default="data/track_assignment.json")
     ap.add_argument("--md-out", default="data/track_assignment.md")
@@ -255,10 +263,12 @@ def main():
     data = json.loads(pathlib.Path(args.data).read_text(encoding="utf-8"))
     manual = json.loads(pathlib.Path(args.manual_overrides).read_text(encoding="utf-8"))
     dbinfrago = json.loads(pathlib.Path(args.dbinfrago).read_text(encoding="utf-8"))
+    foreign_path = pathlib.Path(args.foreign)
+    foreign = json.loads(foreign_path.read_text(encoding="utf-8")) if foreign_path.exists() else {}
     osm = json.loads(pathlib.Path(args.platform_lengths).read_text(encoding="utf-8"))
 
     stations = sorted({s["name"] for v in data.values() for s in v["stops"]})
-    station_tracks = build_station_tracks(stations, manual, dbinfrago, osm)
+    station_tracks = build_station_tracks(stations, manual, dbinfrago, foreign, osm)
 
     # Gekuppelte Flügelzug-Partner an jedem Halt im gemeinsamen Abschnitt zu
     # EINEM Besuch (= einem physischen Zug = einem Gleis) zusammenführen.

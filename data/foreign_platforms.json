@@ -1,0 +1,1224 @@
+{
+  "Bramming": {
+    "max_length_m": 221.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 221.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 221.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 221.0
+      }
+    ]
+  },
+  "Buchs SG": {
+    "max_length_m": 422,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "2",
+        "length_m": 312
+      },
+      {
+        "gleis": "3/4",
+        "length_m": 422
+      },
+      {
+        "gleis": "1",
+        "length_m": 321
+      }
+    ]
+  },
+  "Béning": {
+    "max_length_m": 280.0,
+    "source": "SNCF Réseau Open Data (ressources.data.sncf.com, Datensatz 'liste-des-quais')",
+    "tracks": [
+      {
+        "gleis": "Quai 2",
+        "length_m": 260.0
+      },
+      {
+        "gleis": "Quai 3",
+        "length_m": 250.0
+      },
+      {
+        "gleis": "Quai 1",
+        "length_m": 280.0
+      }
+    ]
+  },
+  "Chałupy": {
+    "max_length_m": 225.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 225.0
+      }
+    ]
+  },
+  "Chojnice": {
+    "max_length_m": 160.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 148.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 148.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 149.0
+      },
+      {
+        "gleis": "12",
+        "length_m": 160.0
+      },
+      {
+        "gleis": "15",
+        "length_m": 160.0
+      },
+      {
+        "gleis": "11",
+        "length_m": 160.0
+      },
+      {
+        "gleis": "17",
+        "length_m": 160.0
+      }
+    ]
+  },
+  "Chur": {
+    "max_length_m": 533,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "2",
+        "length_m": 238
+      },
+      {
+        "gleis": "1",
+        "length_m": 254
+      },
+      {
+        "gleis": "9/10",
+        "length_m": 533
+      },
+      {
+        "gleis": "11/12",
+        "length_m": 382
+      },
+      {
+        "gleis": "13/14",
+        "length_m": 181
+      },
+      {
+        "gleis": "4/5",
+        "length_m": 480
+      },
+      {
+        "gleis": "7/8",
+        "length_m": 416
+      }
+    ]
+  },
+  "Esbjerg": {
+    "max_length_m": 336.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "0",
+        "length_m": 117.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 195.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 218.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 336.0
+      }
+    ]
+  },
+  "Forbach": {
+    "max_length_m": 345.0,
+    "source": "SNCF Réseau Open Data (ressources.data.sncf.com, Datensatz 'liste-des-quais')",
+    "tracks": [
+      {
+        "gleis": "Quai 2",
+        "length_m": 345.0
+      },
+      {
+        "gleis": "Quai 1",
+        "length_m": 345.0
+      }
+    ]
+  },
+  "Frauenfeld": {
+    "max_length_m": 421,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "2/3",
+        "length_m": 421
+      },
+      {
+        "gleis": "1",
+        "length_m": 421
+      }
+    ]
+  },
+  "Fredericia": {
+    "max_length_m": 452.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "2",
+        "length_m": 299.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 170.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 351.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 351.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 317.0
+      },
+      {
+        "gleis": "7",
+        "length_m": 452.0
+      },
+      {
+        "gleis": "16",
+        "length_m": 129.0
+      },
+      {
+        "gleis": "9",
+        "length_m": 348.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 341.0
+      },
+      {
+        "gleis": "31",
+        "length_m": 73.0
+      },
+      {
+        "gleis": "32",
+        "length_m": 169.0
+      },
+      {
+        "gleis": "33",
+        "length_m": 192.0
+      }
+    ]
+  },
+  "Gdańsk Główny": {
+    "max_length_m": 425.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "4",
+        "length_m": 425.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 425.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 425.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 425.0
+      }
+    ]
+  },
+  "Gdańsk Wrzeszcz": {
+    "max_length_m": 430.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "4",
+        "length_m": 351.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 412.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 426.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 430.0
+      }
+    ]
+  },
+  "Gdynia Chylonia": {
+    "max_length_m": 300.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "2",
+        "length_m": 300.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 218.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 126.0
+      }
+    ]
+  },
+  "Gdynia Główna": {
+    "max_length_m": 430.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 189.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 241.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 418.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 401.0
+      },
+      {
+        "gleis": "7",
+        "length_m": 408.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 399.0
+      },
+      {
+        "gleis": "9",
+        "length_m": 430.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 430.0
+      }
+    ]
+  },
+  "Hagondange": {
+    "max_length_m": 254.0,
+    "source": "SNCF Réseau Open Data (ressources.data.sncf.com, Datensatz 'liste-des-quais')",
+    "tracks": [
+      {
+        "gleis": "Quai V1BIS/V3",
+        "length_m": 254.0
+      },
+      {
+        "gleis": "Quai V1/V2BIS",
+        "length_m": 230.0
+      },
+      {
+        "gleis": "Quai V2",
+        "length_m": 200.0
+      }
+    ]
+  },
+  "Hel": {
+    "max_length_m": 225.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 170.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 90.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 225.0
+      }
+    ]
+  },
+  "Jastarnia": {
+    "max_length_m": 225.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 225.0
+      }
+    ]
+  },
+  "Jurata": {
+    "max_length_m": 225.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 225.0
+      }
+    ]
+  },
+  "Kolding": {
+    "max_length_m": 301.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 301.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 250.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 250.0
+      }
+    ]
+  },
+  "Kreuzlingen": {
+    "max_length_m": 261,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "2/3",
+        "length_m": 261
+      },
+      {
+        "gleis": "1",
+        "length_m": 261
+      }
+    ]
+  },
+  "Kuźnica": {
+    "max_length_m": 225.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 225.0
+      }
+    ]
+  },
+  "København H": {
+    "max_length_m": 347.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "5",
+        "length_m": 310.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 310.0
+      },
+      {
+        "gleis": "7",
+        "length_m": 347.0
+      },
+      {
+        "gleis": "8",
+        "length_m": 347.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 311.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 311.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 273.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 273.0
+      },
+      {
+        "gleis": "26",
+        "length_m": 178.0
+      },
+      {
+        "gleis": "9",
+        "length_m": 201.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 201.0
+      },
+      {
+        "gleis": "11",
+        "length_m": 201.0
+      },
+      {
+        "gleis": "12",
+        "length_m": 201.0
+      }
+    ]
+  },
+  "Køge Nord": {
+    "max_length_m": 400.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "3",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "7",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 180.0
+      }
+    ]
+  },
+  "Landquart": {
+    "max_length_m": 415,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "2/3",
+        "length_m": 415
+      },
+      {
+        "gleis": "4",
+        "length_m": 415
+      }
+    ]
+  },
+  "Lunderskov": {
+    "max_length_m": 270.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 203.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 270.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 270.0
+      }
+    ]
+  },
+  "Metz-Ville": {
+    "max_length_m": 533.0,
+    "source": "SNCF Réseau Open Data (ressources.data.sncf.com, Datensatz 'liste-des-quais')",
+    "tracks": [
+      {
+        "gleis": "Quai 2",
+        "length_m": 447.0
+      },
+      {
+        "gleis": "Quai 8",
+        "length_m": 418.0
+      },
+      {
+        "gleis": "Quai 4",
+        "length_m": 448.0
+      },
+      {
+        "gleis": "Quai 5",
+        "length_m": 533.0
+      },
+      {
+        "gleis": "Quai 1/A",
+        "length_m": 434.0
+      },
+      {
+        "gleis": "Quai 3",
+        "length_m": 410.0
+      },
+      {
+        "gleis": "Quai 9",
+        "length_m": 389.0
+      }
+    ]
+  },
+  "Mrzezino": {
+    "max_length_m": 125.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "2",
+        "length_m": 125.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 125.0
+      }
+    ]
+  },
+  "Mulhouse-Ville": {
+    "max_length_m": 389.0,
+    "source": "SNCF Réseau Open Data (ressources.data.sncf.com, Datensatz 'liste-des-quais')",
+    "tracks": [
+      {
+        "gleis": "Quai V2/V3",
+        "length_m": 389.0
+      },
+      {
+        "gleis": "Quai 8",
+        "length_m": 310.0
+      }
+    ]
+  },
+  "Nykøbing F.": {
+    "max_length_m": 366.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 344.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 341.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 341.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 350.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 366.0
+      }
+    ]
+  },
+  "Næstved": {
+    "max_length_m": 400.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 286.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 400.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 400.0
+      }
+    ]
+  },
+  "Nørreport": {
+    "max_length_m": 203.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 203.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 203.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 177.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 177.0
+      }
+    ]
+  },
+  "Padborg": {
+    "max_length_m": 371.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 371.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 308.0
+      }
+    ]
+  },
+  "Puck": {
+    "max_length_m": 225.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "2",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 225.0
+      }
+    ]
+  },
+  "Reda": {
+    "max_length_m": 300.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "3",
+        "length_m": 182.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 300.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 300.0
+      }
+    ]
+  },
+  "Ribe": {
+    "max_length_m": 171.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 171.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 117.0
+      }
+    ]
+  },
+  "Ringsted": {
+    "max_length_m": 321.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 321.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 321.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 321.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 321.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 321.0
+      }
+    ]
+  },
+  "Rumia": {
+    "max_length_m": 285.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "5",
+        "length_m": 275.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 285.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 285.0
+      }
+    ]
+  },
+  "Runowo Pomorskie": {
+    "max_length_m": 375.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "4",
+        "length_m": 375.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 150.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 340.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 342.0
+      }
+    ]
+  },
+  "Rødby": {
+    "max_length_m": 460.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "11",
+        "length_m": 460.0
+      },
+      {
+        "gleis": "12",
+        "length_m": 460.0
+      },
+      {
+        "gleis": "18",
+        "length_m": 454.0
+      },
+      {
+        "gleis": "19",
+        "length_m": 454.0
+      }
+    ]
+  },
+  "Saint-Avold": {
+    "max_length_m": 270.0,
+    "source": "SNCF Réseau Open Data (ressources.data.sncf.com, Datensatz 'liste-des-quais')",
+    "tracks": [
+      {
+        "gleis": "Quai V2",
+        "length_m": 258.0
+      },
+      {
+        "gleis": "Quai V1",
+        "length_m": 270.0
+      }
+    ]
+  },
+  "Sargans": {
+    "max_length_m": 446,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "3/4",
+        "length_m": 420
+      },
+      {
+        "gleis": "2",
+        "length_m": 436
+      },
+      {
+        "gleis": "7",
+        "length_m": 300
+      },
+      {
+        "gleis": "5",
+        "length_m": 446
+      },
+      {
+        "gleis": "6",
+        "length_m": 355
+      }
+    ]
+  },
+  "Starogard Gdański": {
+    "max_length_m": 125.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "2",
+        "length_m": 125.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 125.0
+      }
+    ]
+  },
+  "Swarzewo": {
+    "max_length_m": 125.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 125.0
+      }
+    ]
+  },
+  "Szczecin Główny": {
+    "max_length_m": 421.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "5",
+        "length_m": 266.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 370.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 421.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 421.0
+      },
+      {
+        "gleis": "4",
+        "length_m": 386.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 327.0
+      },
+      {
+        "gleis": "8",
+        "length_m": 211.0
+      },
+      {
+        "gleis": "10",
+        "length_m": 211.0
+      }
+    ]
+  },
+  "Szczecinek": {
+    "max_length_m": 360.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "7",
+        "length_m": 360.0
+      },
+      {
+        "gleis": "9",
+        "length_m": 196.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 181.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 187.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 154.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 321.0
+      }
+    ]
+  },
+  "Tczew": {
+    "max_length_m": 420.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "10",
+        "length_m": 280.0
+      },
+      {
+        "gleis": "8",
+        "length_m": 300.0
+      },
+      {
+        "gleis": "6",
+        "length_m": 300.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 412.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 412.0
+      },
+      {
+        "gleis": "5",
+        "length_m": 420.0
+      },
+      {
+        "gleis": "7",
+        "length_m": 420.0
+      }
+    ]
+  },
+  "Thionville": {
+    "max_length_m": 550.0,
+    "source": "SNCF Réseau Open Data (ressources.data.sncf.com, Datensatz 'liste-des-quais')",
+    "tracks": [
+      {
+        "gleis": "Quai C/D",
+        "length_m": 550.0
+      }
+    ]
+  },
+  "Tønder": {
+    "max_length_m": 103.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 103.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 103.0
+      }
+    ]
+  },
+  "Vamdrup": {
+    "max_length_m": 249.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "0",
+        "length_m": 88.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 249.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 248.0
+      }
+    ]
+  },
+  "Vojens": {
+    "max_length_m": 324.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "0",
+        "length_m": 116.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 235.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 255.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 324.0
+      }
+    ]
+  },
+  "Vordingborg": {
+    "max_length_m": 330.0,
+    "source": "Banedanmark Netredegørelse 2026, Bilag 3.6 'Perronlængder og -højder'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 330.0
+      },
+      {
+        "gleis": "2",
+        "length_m": 330.0
+      },
+      {
+        "gleis": "3",
+        "length_m": 330.0
+      }
+    ]
+  },
+  "Weinfelden": {
+    "max_length_m": 420,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 404
+      },
+      {
+        "gleis": "3/4",
+        "length_m": 420
+      },
+      {
+        "gleis": "5",
+        "length_m": 336
+      }
+    ]
+  },
+  "Winterthur": {
+    "max_length_m": 424,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "2/3",
+        "length_m": 424
+      },
+      {
+        "gleis": "1",
+        "length_m": 176
+      },
+      {
+        "gleis": "4/5",
+        "length_m": 419
+      },
+      {
+        "gleis": "8/9",
+        "length_m": 340
+      },
+      {
+        "gleis": "6/7",
+        "length_m": 414
+      }
+    ]
+  },
+  "Władysławowo": {
+    "max_length_m": 248.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "3",
+        "length_m": 225.0
+      },
+      {
+        "gleis": "1",
+        "length_m": 248.0
+      }
+    ]
+  },
+  "Władysławowo Port": {
+    "max_length_m": 125.0,
+    "source": "PKP PLK, Regulamin sieci 2025/2026, Anlage 2.18 'Wykaz peronów'",
+    "tracks": [
+      {
+        "gleis": "1",
+        "length_m": 125.0
+      }
+    ]
+  },
+  "Zürich Flughafen": {
+    "max_length_m": 492,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "3/4",
+        "length_m": 474
+      },
+      {
+        "gleis": "1/2",
+        "length_m": 492
+      }
+    ]
+  },
+  "Zürich HB": {
+    "max_length_m": 433,
+    "source": "SBB Open Data (data.sbb.ch, Datensatz 'perron')",
+    "tracks": [
+      {
+        "gleis": "10/11",
+        "length_m": 424
+      },
+      {
+        "gleis": "6/7",
+        "length_m": 428
+      },
+      {
+        "gleis": "8/9",
+        "length_m": 426
+      },
+      {
+        "gleis": "4/5",
+        "length_m": 425
+      },
+      {
+        "gleis": "12/13",
+        "length_m": 433
+      },
+      {
+        "gleis": "16/17",
+        "length_m": 418
+      },
+      {
+        "gleis": "18",
+        "length_m": 426
+      },
+      {
+        "gleis": "14/15",
+        "length_m": 427
+      },
+      {
+        "gleis": "3",
+        "length_m": 425
+      }
+    ]
+  }
+}

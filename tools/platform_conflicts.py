@@ -35,14 +35,16 @@ def classify(required_m, available_m, sdo_tolerance_m):
     return "kritisch", overhang
 
 
-def build_conflicts(train_lengths, platform_lengths, sdo_tolerance_m, overrides=None, manual_overrides=None, min_confident_candidates=3):
+def build_conflicts(train_lengths, platform_lengths, sdo_tolerance_m, overrides=None, manual_overrides=None, foreign=None, min_confident_candidates=3):
     overrides = overrides or {}
     manual_overrides = manual_overrides or {}
+    foreign = foreign or {}
     out = []
     for t in train_lengths:
         station = t["station"]
         manual = manual_overrides.get(station)
         override = overrides.get(station)
+        fgn = foreign.get(station)
         if manual and manual.get("max_length_m") is not None:
             # Projekteigene Planung (RE-Netz 2030) schlägt sowohl OSM als auch
             # die heutige amtliche DB-InfraGO-Lage — z.B. fiktiver Ausbau, der
@@ -58,6 +60,13 @@ def build_conflicts(train_lengths, platform_lengths, sdo_tolerance_m, overrides=
             available = override["max_length_m"]
             n_plausible = len(override.get("tracks") or [])
             confidence = "amtlich"
+        elif fgn and fgn.get("max_length_m") is not None:
+            # Amtliche Auslandsdaten (CH/PL/FR/DK, siehe tools/foreign_
+            # platforms.py) — genauso verlässlich wie DB InfraGO, nur eben
+            # von den jeweiligen ausländischen Infrastrukturbetreibern.
+            available = fgn["max_length_m"]
+            n_plausible = len(fgn.get("tracks") or [])
+            confidence = "amtlich-ausland"
         else:
             pl = platform_lengths.get(station)
             available = pl["best_length_m"] if pl else None
@@ -91,6 +100,7 @@ def render_markdown(conflicts, sdo_tolerance_m):
         by_sev[c["severity"]].append(c)
     kritisch_fiktiv = [c for c in by_sev["kritisch"] if c["confidence"] == "fiktiv"]
     kritisch_amtlich = [c for c in by_sev["kritisch"] if c["confidence"] == "amtlich"]
+    kritisch_ausland = [c for c in by_sev["kritisch"] if c["confidence"] == "amtlich-ausland"]
     kritisch_hoch = [c for c in by_sev["kritisch"] if c["confidence"] == "hoch"]
     kritisch_niedrig = [c for c in by_sev["kritisch"] if c["confidence"] == "niedrig"]
 
@@ -106,6 +116,7 @@ def render_markdown(conflicts, sdo_tolerance_m):
     L.append(
         f"- **{len(kritisch_fiktiv)} kritisch, fiktive Planung** (RE-Netz-2030-eigener Ausbau, siehe data/manual_overrides.json)\n"
         f"- **{len(kritisch_amtlich)} kritisch, amtliche Daten** (DB InfraGO — ernstzunehmender Befund)\n"
+        f"- **{len(kritisch_ausland)} kritisch, amtliche Auslandsdaten** (CH/PL/FR/DK — ernstzunehmender Befund)\n"
         f"- **{len(kritisch_hoch)} kritisch, hohe OSM-Konfidenz** (≥3 unabhängige OSM-Treffer, ungeprüft)\n"
         f"- **{len(kritisch_niedrig)} kritisch, niedrige OSM-Konfidenz** (<3 Treffer — meist OSM-Lücke statt echtes Problem)\n"
         f"- **{len(by_sev['gering'])} gering** (SDO ausreichend)\n"
@@ -149,6 +160,19 @@ def render_markdown(conflicts, sdo_tolerance_m):
         L.append("| Station | Linie | Wagen | benötigt | verfügbar | Überhang |")
         L.append("|---|---|---|---|---|---|")
         for c in kritisch_amtlich:
+            L.append(
+                f"| {c['station']} | {c['line']} | {c['cars']} | {c['required_m']:.0f} m | "
+                f"{c['available_m']:.0f} m | **+{c['overhang_m']:.0f} m** |"
+            )
+    else:
+        L.append("Keine.")
+    L.append("")
+
+    L.append("## Kritisch — amtliche Auslandsdaten (CH/PL/FR/DK)\n")
+    if kritisch_ausland:
+        L.append("| Station | Linie | Wagen | benötigt | verfügbar | Überhang |")
+        L.append("|---|---|---|---|---|---|")
+        for c in kritisch_ausland:
             L.append(
                 f"| {c['station']} | {c['line']} | {c['cars']} | {c['required_m']:.0f} m | "
                 f"{c['available_m']:.0f} m | **+{c['overhang_m']:.0f} m** |"
@@ -223,6 +247,11 @@ def main():
         default="data/manual_overrides.json",
         help="projekteigene Planung (fiktiver Ausbau u.ä.), schlägt alles andere. Leer/fehlend = keine.",
     )
+    ap.add_argument(
+        "--foreign",
+        default="data/foreign_platforms.json",
+        help="amtliche Auslandsdaten CH/PL/FR/DK (tools/foreign_platforms.py). Leer/fehlend = nur OSM fürs Ausland.",
+    )
     ap.add_argument("--sdo-tolerance-m", type=float, default=25.0)
     ap.add_argument("--out", default="data/platform_conflicts.md")
     ap.add_argument("--json-out", default="data/platform_conflicts.json")
@@ -234,10 +263,12 @@ def main():
     overrides = json.loads(overrides_path.read_text(encoding="utf-8")) if overrides_path.exists() else {}
     manual_path = pathlib.Path(args.manual_overrides)
     manual_overrides = json.loads(manual_path.read_text(encoding="utf-8")) if manual_path.exists() else {}
+    foreign_path = pathlib.Path(args.foreign)
+    foreign = json.loads(foreign_path.read_text(encoding="utf-8")) if foreign_path.exists() else {}
 
     conflicts = build_conflicts(
         train_lengths, platform_lengths, args.sdo_tolerance_m,
-        overrides=overrides, manual_overrides=manual_overrides,
+        overrides=overrides, manual_overrides=manual_overrides, foreign=foreign,
     )
 
     pathlib.Path(args.json_out).write_text(

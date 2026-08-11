@@ -1183,13 +1183,13 @@
         "dep": 168,
         "name": "Rødby",
         "off": 166,
-        "track": "1"
+        "track": "18"
       },
       {
         "dep": 187,
         "name": "Nykøbing F.",
         "off": 185,
-        "track": "1 (geschätzt)"
+        "track": "2"
       },
       {
         "dep": 204,
@@ -1207,25 +1207,25 @@
         "dep": 237,
         "name": "Ringsted",
         "off": 235,
-        "track": "1 (geschätzt)"
+        "track": "1"
       },
       {
         "dep": 251,
         "name": "Køge Nord",
         "off": 249,
-        "track": "7"
+        "track": "3"
       },
       {
         "dep": 270,
         "name": "København H",
         "off": 266,
-        "track": "3;4"
+        "track": "3"
       },
       {
         "dep": 275,
         "name": "Nørreport",
         "off": 273,
-        "track": "1 (geschätzt)"
+        "track": "1"
       },
       {
         "name": "Østerport",
@@ -1255,13 +1255,13 @@
         "dep": 5,
         "name": "Nørreport",
         "off": 3,
-        "track": "1 (geschätzt)"
+        "track": "2"
       },
       {
         "dep": 12,
         "name": "København H",
         "off": 8,
-        "track": "3;4"
+        "track": "4"
       },
       {
         "dep": 29,
@@ -1273,31 +1273,31 @@
         "dep": 43,
         "name": "Ringsted",
         "off": 41,
-        "track": "1 (geschätzt)"
+        "track": "2"
       },
       {
         "dep": 61,
         "name": "Næstved",
         "off": 59,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 76,
         "name": "Vordingborg",
         "off": 74,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 93,
         "name": "Nykøbing F.",
         "off": 91,
-        "track": "1 (geschätzt)"
+        "track": "3"
       },
       {
         "dep": 112,
         "name": "Rødby",
         "off": 110,
-        "track": "4"
+        "track": "19"
       },
       {
         "dep": 131,
@@ -4419,13 +4419,13 @@
       {
         "name": "Esbjerg",
         "off": 0,
-        "track": "2"
+        "track": "0"
       },
       {
         "dep": 12,
         "name": "Bramming",
         "off": 10,
-        "track": "2;3"
+        "track": "1"
       },
       {
         "dep": 30,
@@ -4716,7 +4716,7 @@
         "dep": 375,
         "name": "Tønder",
         "off": 373,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 407,
@@ -4728,7 +4728,7 @@
         "dep": 425,
         "name": "Bramming",
         "off": 423,
-        "track": "1"
+        "track": "2"
       },
       {
         "name": "Esbjerg",
@@ -4799,7 +4799,7 @@
       {
         "name": "Mulhouse-Ville",
         "off": 0,
-        "track": "1"
+        "track": "Quai 8"
       },
       {
         "dep": 20,
@@ -5110,7 +5110,7 @@
       {
         "name": "Mulhouse-Ville",
         "off": 473,
-        "track": "8"
+        "track": "Quai V2/V3"
       }
     ],
     "takt": {
@@ -5607,19 +5607,19 @@
         "dep": 222,
         "name": "Szczecin Główny",
         "off": 217,
-        "track": "3;5"
+        "track": "8"
       },
       {
         "dep": 253,
         "name": "Runowo Pomorskie",
         "off": 252,
-        "track": "2"
+        "track": "1"
       },
       {
         "dep": 295,
         "name": "Szczecinek",
         "off": 293,
-        "track": "2;6"
+        "track": "6"
       },
       {
         "dep": 332,
@@ -5631,7 +5631,7 @@
         "dep": 373,
         "name": "Starogard Gdański",
         "off": 372,
-        "track": "3;5"
+        "track": "2"
       },
       {
         "dep": 396,
@@ -5643,13 +5643,13 @@
         "dep": 419,
         "name": "Gdańsk Główny",
         "off": 416,
-        "track": "2;4"
+        "track": "4"
       },
       {
         "dep": 427,
         "name": "Gdańsk Wrzeszcz",
         "off": 425,
-        "track": "501;502"
+        "track": "4"
       },
       {
         "dep": 431,
@@ -5667,13 +5667,13 @@
         "dep": 460,
         "name": "Gdynia Główna",
         "off": 447,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 467,
         "name": "Gdynia Chylonia",
         "off": 466,
-        "track": "1;2"
+        "track": "1"
       },
       {
         "dep": 472,
@@ -5697,7 +5697,7 @@
         "dep": 490,
         "name": "Mrzezino",
         "off": 489,
-        "track": "1;2"
+        "track": "2"
       },
       {
         "dep": 496,
@@ -5709,7 +5709,7 @@
         "dep": 502,
         "name": "Puck",
         "off": 501,
-        "track": "1;2"
+        "track": "2"
       },
       {
         "dep": 508,
@@ -5721,7 +5721,7 @@
         "dep": 515,
         "name": "Władysławowo",
         "off": 513,
-        "track": "1;3"
+        "track": "3"
       },
       {
         "dep": 519,
@@ -5739,13 +5739,13 @@
         "dep": 532,
         "name": "Kuźnica",
         "off": 531,
-        "track": "1;3"
+        "track": "1"
       },
       {
         "dep": 540,
         "name": "Jastarnia",
         "off": 539,
-        "track": "1;3"
+        "track": "1"
       },
       {
         "dep": 546,
@@ -5756,7 +5756,7 @@
       {
         "name": "Hel",
         "off": 553,
-        "track": "3;5"
+        "track": "3"
       }
     ],
     "takt": {
@@ -5776,7 +5776,7 @@
       {
         "name": "Hel",
         "off": 0,
-        "track": "3;5"
+        "track": "5"
       },
       {
         "dep": 8,
@@ -5788,13 +5788,13 @@
         "dep": 14,
         "name": "Jastarnia",
         "off": 13,
-        "track": "1;3"
+        "track": "3"
       },
       {
         "dep": 22,
         "name": "Kuźnica",
         "off": 21,
-        "track": "1;3"
+        "track": "3"
       },
       {
         "dep": 29,
@@ -5812,7 +5812,7 @@
         "dep": 40,
         "name": "Władysławowo",
         "off": 38,
-        "track": "1;3"
+        "track": "1"
       },
       {
         "dep": 46,
@@ -5824,7 +5824,7 @@
         "dep": 52,
         "name": "Puck",
         "off": 51,
-        "track": "1;2"
+        "track": "1"
       },
       {
         "dep": 58,
@@ -5836,19 +5836,19 @@
         "dep": 64,
         "name": "Mrzezino",
         "off": 63,
-        "track": "1;2"
+        "track": "1"
       },
       {
         "dep": 73,
         "name": "Reda",
         "off": 71,
-        "track": "2"
+        "track": "1"
       },
       {
         "dep": 78,
         "name": "Rumia",
         "off": 77,
-        "track": "1;2"
+        "track": "2"
       },
       {
         "dep": 82,
@@ -5860,13 +5860,13 @@
         "dep": 87,
         "name": "Gdynia Chylonia",
         "off": 86,
-        "track": "1;2"
+        "track": "2"
       },
       {
         "dep": 106,
         "name": "Gdynia Główna",
         "off": 93,
-        "track": "1"
+        "track": "6"
       },
       {
         "dep": 110,
@@ -5884,31 +5884,31 @@
         "dep": 128,
         "name": "Gdańsk Wrzeszcz",
         "off": 126,
-        "track": "2;4"
+        "track": "2"
       },
       {
         "dep": 137,
         "name": "Gdańsk Główny",
         "off": 134,
-        "track": "1;3"
+        "track": "2"
       },
       {
         "dep": 165,
         "name": "Tczew",
         "off": 157,
-        "track": "6;8"
+        "track": "8"
       },
       {
         "dep": 181,
         "name": "Starogard Gdański",
         "off": 180,
-        "track": "3;5"
+        "track": "1"
       },
       {
         "dep": 223,
         "name": "Chojnice",
         "off": 221,
-        "track": "12"
+        "track": "15"
       },
       {
         "dep": 260,
@@ -5920,13 +5920,13 @@
         "dep": 301,
         "name": "Runowo Pomorskie",
         "off": 300,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 336,
         "name": "Szczecin Główny",
         "off": 331,
-        "track": "3;5"
+        "track": "10"
       },
       {
         "dep": 373,
@@ -6035,19 +6035,19 @@
       {
         "name": "Fredericia",
         "off": 0,
-        "track": "1 (geschätzt)"
+        "track": "32"
       },
       {
         "dep": 16,
         "name": "Kolding",
         "off": 14,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 26,
         "name": "Lunderskov",
         "off": 25,
-        "track": "2"
+        "track": "1"
       },
       {
         "dep": 32,
@@ -6065,7 +6065,7 @@
         "dep": 73,
         "name": "Padborg",
         "off": 71,
-        "track": "1 (geschätzt)"
+        "track": "2"
       },
       {
         "dep": 96,
@@ -6301,13 +6301,13 @@
         "dep": 306,
         "name": "Padborg",
         "off": 304,
-        "track": "1 (geschätzt)"
+        "track": "1"
       },
       {
         "dep": 331,
         "name": "Vojens",
         "off": 330,
-        "track": "2; 3"
+        "track": "2"
       },
       {
         "dep": 346,
@@ -6319,18 +6319,18 @@
         "dep": 352,
         "name": "Lunderskov",
         "off": 351,
-        "track": "1"
+        "track": "2"
       },
       {
         "dep": 363,
         "name": "Kolding",
         "off": 361,
-        "track": "1"
+        "track": "3"
       },
       {
         "name": "Fredericia",
         "off": 377,
-        "track": "1 (geschätzt)"
+        "track": "1"
       }
     ],
     "takt": {
@@ -6611,19 +6611,19 @@
         "dep": 11,
         "name": "Landquart",
         "off": 9,
-        "track": "8"
+        "track": "2/3"
       },
       {
         "dep": 22,
         "name": "Sargans",
         "off": 20,
-        "track": "F"
+        "track": "7"
       },
       {
         "dep": 42,
         "name": "Buchs SG",
         "off": 36,
-        "track": "1 (geschätzt)"
+        "track": "2"
       },
       {
         "dep": 63,
@@ -6932,24 +6932,24 @@
         "dep": 357,
         "name": "Buchs SG",
         "off": 351,
-        "track": "1 (geschätzt)"
+        "track": "1"
       },
       {
         "dep": 373,
         "name": "Sargans",
         "off": 371,
-        "track": "F"
+        "track": "6"
       },
       {
         "dep": 384,
         "name": "Landquart",
         "off": 382,
-        "track": "8"
+        "track": "4"
       },
       {
         "name": "Chur",
         "off": 393,
-        "track": "2"
+        "track": "1"
       }
     ],
     "takt": {
@@ -7025,37 +7025,37 @@
         "dep": 11,
         "name": "Forbach",
         "off": 9,
-        "track": "2;4"
+        "track": "Quai 2"
       },
       {
         "dep": 23,
         "name": "Béning",
         "off": 21,
-        "track": "4"
+        "track": "Quai 3"
       },
       {
         "dep": 35,
         "name": "Saint-Avold",
         "off": 33,
-        "track": "2"
+        "track": "Quai V2"
       },
       {
         "dep": 55,
         "name": "Metz-Ville",
         "off": 53,
-        "track": "8;9"
+        "track": "Quai 9"
       },
       {
         "dep": 68,
         "name": "Hagondange",
         "off": 66,
-        "track": "A"
+        "track": "Quai V2"
       },
       {
         "dep": 81,
         "name": "Thionville",
         "off": 79,
-        "track": "E;F"
+        "track": "Quai C/D"
       },
       {
         "dep": 96,
@@ -7280,37 +7280,37 @@
         "dep": 247,
         "name": "Thionville",
         "off": 245,
-        "track": "E;F"
+        "track": "Quai C/D"
       },
       {
         "dep": 260,
         "name": "Hagondange",
         "off": 258,
-        "track": "D;E"
+        "track": "Quai V1/V2BIS"
       },
       {
         "dep": 273,
         "name": "Metz-Ville",
         "off": 271,
-        "track": "8"
+        "track": "Quai 3"
       },
       {
         "dep": 293,
         "name": "Saint-Avold",
         "off": 291,
-        "track": "1"
+        "track": "Quai V1"
       },
       {
         "dep": 305,
         "name": "Béning",
         "off": 303,
-        "track": "2;3"
+        "track": "Quai 2"
       },
       {
         "dep": 317,
         "name": "Forbach",
         "off": 315,
-        "track": "1"
+        "track": "Quai 1"
       },
       {
         "name": "Saarbrücken Hbf",
@@ -8446,7 +8446,7 @@
         "dep": 518,
         "name": "Kreuzlingen",
         "off": 517,
-        "track": "1"
+        "track": "2/3"
       },
       {
         "dep": 541,
@@ -8458,24 +8458,24 @@
         "dep": 554,
         "name": "Frauenfeld",
         "off": 552,
-        "track": "1"
+        "track": "2/3"
       },
       {
         "dep": 567,
         "name": "Winterthur",
         "off": 565,
-        "track": "1"
+        "track": "8/9"
       },
       {
         "dep": 581,
         "name": "Zürich Flughafen",
         "off": 580,
-        "track": "3;4"
+        "track": "3/4"
       },
       {
         "name": "Zürich HB",
         "off": 592,
-        "track": "1"
+        "track": "16/17"
       }
     ],
     "takt": {
@@ -8495,19 +8495,19 @@
       {
         "name": "Zürich HB",
         "off": 0,
-        "track": "1"
+        "track": "10/11"
       },
       {
         "dep": 12,
         "name": "Zürich Flughafen",
         "off": 11,
-        "track": "1;2"
+        "track": "1/2"
       },
       {
         "dep": 27,
         "name": "Winterthur",
         "off": 25,
-        "track": "1"
+        "track": "6/7"
       },
       {
         "dep": 40,
@@ -8519,7 +8519,7 @@
         "dep": 53,
         "name": "Weinfelden",
         "off": 51,
-        "track": "5"
+        "track": "1"
       },
       {
         "dep": 75,

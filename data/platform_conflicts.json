@@ -1,16 +1,5 @@
 [
   {
-    "station": "Sargans",
-    "required_m": 210,
-    "line": "RE80",
-    "cars": "8",
-    "available_m": 20.5,
-    "n_platform_candidates": 9,
-    "confidence": "hoch",
-    "overhang_m": 189.5,
-    "severity": "kritisch"
-  },
-  {
     "station": "Roermond (NL)",
     "required_m": 210,
     "line": "RE32",
@@ -19,28 +8,6 @@
     "n_platform_candidates": 1,
     "confidence": "niedrig",
     "overhang_m": 187.7,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Gdynia Główna",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 31.7,
-    "n_platform_candidates": 7,
-    "confidence": "hoch",
-    "overhang_m": 178.3,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Mülheim-Styrum",
-    "required_m": 156,
-    "line": "S10 Außenring",
-    "cars": "6",
-    "available_m": 31.4,
-    "n_platform_candidates": 4,
-    "confidence": "hoch",
-    "overhang_m": 124.6,
     "severity": "kritisch"
   },
   {
@@ -66,39 +33,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Mülheim West",
-    "required_m": 156,
-    "line": "S10 Außenring",
-    "cars": "6",
-    "available_m": 46.7,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": 109.3,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Zürich HB",
-    "required_m": 184,
-    "line": "RE94",
-    "cars": "7",
-    "available_m": 75.9,
-    "n_platform_candidates": 25,
-    "confidence": "hoch",
-    "overhang_m": 108.1,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Landquart",
-    "required_m": 210,
-    "line": "RE80",
-    "cars": "8",
-    "available_m": 107.0,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": 103.0,
-    "severity": "kritisch"
-  },
-  {
     "station": "Luxembourg",
     "required_m": 156,
     "line": "RE90",
@@ -110,28 +44,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Essen-Höntrop",
-    "required_m": 156,
-    "line": "S10 Außenring",
-    "cars": "6",
-    "available_m": 55.4,
-    "n_platform_candidates": 4,
-    "confidence": "hoch",
-    "overhang_m": 100.6,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Władysławowo Port",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 124.2,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": 85.8,
-    "severity": "kritisch"
-  },
-  {
     "station": "Żelistrzewo",
     "required_m": 210,
     "line": "RE71",
@@ -140,17 +52,6 @@
     "n_platform_candidates": 1,
     "confidence": "niedrig",
     "overhang_m": 85.4,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Mrzezino",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 124.8,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": 85.2,
     "severity": "kritisch"
   },
   {
@@ -176,14 +77,47 @@
     "severity": "kritisch"
   },
   {
+    "station": "Starogard Gdański",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 125.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": 85.0,
+    "severity": "kritisch"
+  },
+  {
+    "station": "Mrzezino",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 125.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": 85.0,
+    "severity": "kritisch"
+  },
+  {
     "station": "Swarzewo",
     "required_m": 210,
     "line": "RE71",
     "cars": "8",
-    "available_m": 126.1,
+    "available_m": 125.0,
     "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": 83.9,
+    "confidence": "amtlich-ausland",
+    "overhang_m": 85.0,
+    "severity": "kritisch"
+  },
+  {
+    "station": "Władysławowo Port",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 125.0,
+    "n_platform_candidates": 1,
+    "confidence": "amtlich-ausland",
+    "overhang_m": 85.0,
     "severity": "kritisch"
   },
   {
@@ -195,17 +129,6 @@
     "n_platform_candidates": 1,
     "confidence": "niedrig",
     "overhang_m": 81.9,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Starogard Gdański",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 132.6,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": 77.4,
     "severity": "kritisch"
   },
   {
@@ -242,25 +165,14 @@
     "severity": "kritisch"
   },
   {
-    "station": "München Flughafen",
-    "required_m": 156,
-    "line": "RE57",
-    "cars": "6",
-    "available_m": 105.0,
-    "n_platform_candidates": 4,
-    "confidence": "hoch",
-    "overhang_m": 51.0,
-    "severity": "kritisch"
-  },
-  {
     "station": "Chojnice",
     "required_m": 210,
     "line": "RE71",
     "cars": "8",
-    "available_m": 163.7,
-    "n_platform_candidates": 10,
-    "confidence": "hoch",
-    "overhang_m": 46.3,
+    "available_m": 160.0,
+    "n_platform_candidates": 7,
+    "confidence": "amtlich-ausland",
+    "overhang_m": 50.0,
     "severity": "kritisch"
   },
   {
@@ -473,25 +385,14 @@
     "severity": "gering"
   },
   {
-    "station": "Hattingen Mitte",
-    "required_m": 156,
-    "line": "S3",
-    "cars": "6",
-    "available_m": 147.7,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": 8.3,
-    "severity": "gering"
-  },
-  {
-    "station": "København H",
+    "station": "Nørreport",
     "required_m": 210,
     "line": "RE17",
     "cars": "8",
-    "available_m": 202.9,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": 7.1,
+    "available_m": 203.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich-ausland",
+    "overhang_m": 7.0,
     "severity": "gering"
   },
   {
@@ -514,6 +415,17 @@
     "n_platform_candidates": 1,
     "confidence": "niedrig",
     "overhang_m": 6.2,
+    "severity": "gering"
+  },
+  {
+    "station": "Hattingen Mitte",
+    "required_m": 156,
+    "line": "S3",
+    "cars": "6",
+    "available_m": 150.0,
+    "n_platform_candidates": 1,
+    "confidence": "amtlich",
+    "overhang_m": 6.0,
     "severity": "gering"
   },
   {
@@ -561,17 +473,6 @@
     "severity": "gering"
   },
   {
-    "station": "Tønder",
-    "required_m": 105,
-    "line": "RE46",
-    "cars": "4",
-    "available_m": 102.4,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": 2.6,
-    "severity": "gering"
-  },
-  {
     "station": "Dortmund-Brackel",
     "required_m": 156,
     "line": "S10 Außenring",
@@ -590,6 +491,17 @@
     "available_m": 154.0,
     "n_platform_candidates": 3,
     "confidence": "amtlich",
+    "overhang_m": 2.0,
+    "severity": "gering"
+  },
+  {
+    "station": "Tønder",
+    "required_m": 105,
+    "line": "RE46",
+    "cars": "4",
+    "available_m": 103.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
     "overhang_m": 2.0,
     "severity": "gering"
   },
@@ -635,17 +547,6 @@
     "n_platform_candidates": 8,
     "confidence": "amtlich",
     "overhang_m": 0.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Winterthur",
-    "required_m": 184,
-    "line": "RE94",
-    "cars": "7",
-    "available_m": 184.2,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -0.2,
     "severity": "ok"
   },
   {
@@ -924,6 +825,17 @@
     "severity": "ok"
   },
   {
+    "station": "Mülheim-Styrum",
+    "required_m": 156,
+    "line": "S10 Außenring",
+    "cars": "6",
+    "available_m": 166.0,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich",
+    "overhang_m": -10.0,
+    "severity": "ok"
+  },
+  {
     "station": "Böhlen (b Leipzig)",
     "required_m": 130,
     "line": "RE24",
@@ -1001,28 +913,6 @@
     "severity": "ok"
   },
   {
-    "station": "Neustadt (Weinstraße) Hbf",
-    "required_m": 210,
-    "line": "RE80",
-    "cars": "8",
-    "available_m": 221.9,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -11.9,
-    "severity": "ok"
-  },
-  {
-    "station": "Jurata",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 223.8,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -13.8,
-    "severity": "ok"
-  },
-  {
     "station": "Rumia Janowo",
     "required_m": 210,
     "line": "RE71",
@@ -1031,39 +921,6 @@
     "n_platform_candidates": 6,
     "confidence": "hoch",
     "overhang_m": -14.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Chałupy",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 224.0,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -14.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Puck",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 224.8,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -14.8,
-    "severity": "ok"
-  },
-  {
-    "station": "Jastarnia",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 224.9,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -14.9,
     "severity": "ok"
   },
   {
@@ -1078,7 +935,73 @@
     "severity": "ok"
   },
   {
-    "station": "Essen-Eiberg",
+    "station": "Puck",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 225.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -15.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Chałupy",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 225.0,
+    "n_platform_candidates": 1,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -15.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Kuźnica",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 225.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -15.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Jastarnia",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 225.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -15.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Jurata",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 225.0,
+    "n_platform_candidates": 1,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -15.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Hel",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 225.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -15.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Essen-Höntrop",
     "required_m": 156,
     "line": "S10 Außenring",
     "cars": "6",
@@ -1089,14 +1012,14 @@
     "severity": "ok"
   },
   {
-    "station": "Kuźnica",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 225.4,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -15.4,
+    "station": "Essen-Eiberg",
+    "required_m": 156,
+    "line": "S10 Außenring",
+    "cars": "6",
+    "available_m": 171.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich",
+    "overhang_m": -15.0,
     "severity": "ok"
   },
   {
@@ -1177,14 +1100,14 @@
     "severity": "ok"
   },
   {
-    "station": "Chur",
-    "required_m": 210,
-    "line": "RE80",
-    "cars": "8",
-    "available_m": 233.8,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -23.8,
+    "station": "Mülheim West",
+    "required_m": 156,
+    "line": "S10 Außenring",
+    "cars": "6",
+    "available_m": 180.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich",
+    "overhang_m": -24.0,
     "severity": "ok"
   },
   {
@@ -1419,6 +1342,17 @@
     "severity": "ok"
   },
   {
+    "station": "Władysławowo",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 248.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -38.0,
+    "severity": "ok"
+  },
+  {
     "station": "Altenburg",
     "required_m": 130,
     "line": "RE24",
@@ -1463,17 +1397,6 @@
     "severity": "ok"
   },
   {
-    "station": "Bochum-Höntrop",
-    "required_m": 130,
-    "line": "RE40",
-    "cars": "5",
-    "available_m": 170.6,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": -40.6,
-    "severity": "ok"
-  },
-  {
     "station": "Stuttgart Flughafen",
     "required_m": 210,
     "line": "RE80",
@@ -1485,14 +1408,14 @@
     "severity": "ok"
   },
   {
-    "station": "Władysławowo",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 253.9,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -43.9,
+    "station": "Bochum-Höntrop",
+    "required_m": 130,
+    "line": "RE40",
+    "cars": "5",
+    "available_m": 171.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich",
+    "overhang_m": -41.0,
     "severity": "ok"
   },
   {
@@ -1793,17 +1716,6 @@
     "severity": "ok"
   },
   {
-    "station": "Ribe",
-    "required_m": 105,
-    "line": "RE46",
-    "cars": "4",
-    "available_m": 168.6,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -63.6,
-    "severity": "ok"
-  },
-  {
     "station": "Leer (Ostfriesl)",
     "required_m": 236,
     "line": "RE90b",
@@ -1969,6 +1881,17 @@
     "severity": "ok"
   },
   {
+    "station": "Ribe",
+    "required_m": 105,
+    "line": "RE46",
+    "cars": "4",
+    "available_m": 171.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -66.0,
+    "severity": "ok"
+  },
+  {
     "station": "Boisheim",
     "required_m": 105,
     "line": "RB37",
@@ -1988,17 +1911,6 @@
     "n_platform_candidates": 3,
     "confidence": "amtlich",
     "overhang_m": -68.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Thionville",
-    "required_m": 156,
-    "line": "RE90",
-    "cars": "6",
-    "available_m": 224.8,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -68.8,
     "severity": "ok"
   },
   {
@@ -2090,17 +2002,6 @@
     "severity": "ok"
   },
   {
-    "station": "Næstved",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
-    "available_m": 284.4,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -74.4,
-    "severity": "ok"
-  },
-  {
     "station": "Emmerich",
     "required_m": 210,
     "line": "RE5",
@@ -2108,6 +2009,17 @@
     "available_m": 285.0,
     "n_platform_candidates": 4,
     "confidence": "amtlich",
+    "overhang_m": -75.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Rumia",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 285.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
     "overhang_m": -75.0,
     "severity": "ok"
   },
@@ -2153,6 +2065,17 @@
     "n_platform_candidates": 2,
     "confidence": "amtlich",
     "overhang_m": -76.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Kreuzlingen",
+    "required_m": 184,
+    "line": "RE94",
+    "cars": "7",
+    "available_m": 261,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -77,
     "severity": "ok"
   },
   {
@@ -2222,17 +2145,6 @@
     "severity": "ok"
   },
   {
-    "station": "Kreuzlingen",
-    "required_m": 184,
-    "line": "RE94",
-    "cars": "7",
-    "available_m": 267.0,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -83.0,
-    "severity": "ok"
-  },
-  {
     "station": "Hamburg-Elbbrücken",
     "required_m": 236,
     "line": "RE90b",
@@ -2277,6 +2189,17 @@
     "severity": "ok"
   },
   {
+    "station": "München Flughafen",
+    "required_m": 156,
+    "line": "RE57",
+    "cars": "6",
+    "available_m": 244.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich",
+    "overhang_m": -88.0,
+    "severity": "ok"
+  },
+  {
     "station": "Venlo",
     "required_m": 130,
     "line": "RE14",
@@ -2285,28 +2208,6 @@
     "n_platform_candidates": 4,
     "confidence": "hoch",
     "overhang_m": -88.1,
-    "severity": "ok"
-  },
-  {
-    "station": "Rumia",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 298.2,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": -88.2,
-    "severity": "ok"
-  },
-  {
-    "station": "Hel",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 298.4,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -88.4,
     "severity": "ok"
   },
   {
@@ -2336,10 +2237,21 @@
     "required_m": 210,
     "line": "RE71",
     "cars": "8",
-    "available_m": 299.6,
-    "n_platform_candidates": 10,
-    "confidence": "hoch",
-    "overhang_m": -89.6,
+    "available_m": 300.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -90.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Reda",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 300.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -90.0,
     "severity": "ok"
   },
   {
@@ -2387,6 +2299,17 @@
     "severity": "ok"
   },
   {
+    "station": "Vamdrup",
+    "required_m": 156,
+    "line": "RE77",
+    "cars": "6",
+    "available_m": 249.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -93.0,
+    "severity": "ok"
+  },
+  {
     "station": "Vierlingsbeek",
     "required_m": 105,
     "line": "RB37",
@@ -2431,25 +2354,14 @@
     "severity": "ok"
   },
   {
-    "station": "Vamdrup",
+    "station": "Hagondange",
     "required_m": 156,
-    "line": "RE77",
+    "line": "RE90",
     "cars": "6",
-    "available_m": 252.1,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -96.1,
-    "severity": "ok"
-  },
-  {
-    "station": "Reda",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 308.4,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -98.4,
+    "available_m": 254.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -98.0,
     "severity": "ok"
   },
   {
@@ -2530,17 +2442,6 @@
     "severity": "ok"
   },
   {
-    "station": "Vojens",
-    "required_m": 156,
-    "line": "RE77",
-    "cars": "6",
-    "available_m": 259.1,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -103.1,
-    "severity": "ok"
-  },
-  {
     "station": "Leeuwarden",
     "required_m": 210,
     "line": "RE30",
@@ -2549,17 +2450,6 @@
     "n_platform_candidates": 29,
     "confidence": "hoch",
     "overhang_m": -104.8,
-    "severity": "ok"
-  },
-  {
-    "station": "Hagondange",
-    "required_m": 156,
-    "line": "RE90",
-    "cars": "6",
-    "available_m": 260.9,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": -104.9,
     "severity": "ok"
   },
   {
@@ -2618,6 +2508,17 @@
     "severity": "ok"
   },
   {
+    "station": "Ringsted",
+    "required_m": 210,
+    "line": "RE17",
+    "cars": "8",
+    "available_m": 321.0,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -111.0,
+    "severity": "ok"
+  },
+  {
     "station": "Angermünde",
     "required_m": 210,
     "line": "RE71",
@@ -2626,17 +2527,6 @@
     "n_platform_candidates": 5,
     "confidence": "amtlich",
     "overhang_m": -111.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Lunderskov",
-    "required_m": 156,
-    "line": "RE77",
-    "cars": "6",
-    "available_m": 267.7,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -111.7,
     "severity": "ok"
   },
   {
@@ -2673,17 +2563,6 @@
     "severity": "ok"
   },
   {
-    "station": "Bramming",
-    "required_m": 105,
-    "line": "RE46",
-    "cars": "4",
-    "available_m": 217.7,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -112.7,
-    "severity": "ok"
-  },
-  {
     "station": "Kißlegg",
     "required_m": 210,
     "line": "RE80",
@@ -2692,6 +2571,28 @@
     "n_platform_candidates": 3,
     "confidence": "amtlich",
     "overhang_m": -113.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Lunderskov",
+    "required_m": 156,
+    "line": "RE77",
+    "cars": "6",
+    "available_m": 270.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -114.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Saint-Avold",
+    "required_m": 156,
+    "line": "RE90",
+    "cars": "6",
+    "available_m": 270.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -114.0,
     "severity": "ok"
   },
   {
@@ -2750,6 +2651,17 @@
     "severity": "ok"
   },
   {
+    "station": "Bramming",
+    "required_m": 105,
+    "line": "RE46",
+    "cars": "4",
+    "available_m": 221.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -116.0,
+    "severity": "ok"
+  },
+  {
     "station": "Winschoten",
     "required_m": 80,
     "line": "RE90b",
@@ -2783,14 +2695,14 @@
     "severity": "ok"
   },
   {
-    "station": "Saint-Avold",
-    "required_m": 156,
-    "line": "RE90",
-    "cars": "6",
-    "available_m": 273.8,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -117.8,
+    "station": "Vordingborg",
+    "required_m": 210,
+    "line": "RE17",
+    "cars": "8",
+    "available_m": 330.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -120.0,
     "severity": "ok"
   },
   {
@@ -2816,13 +2728,13 @@
     "severity": "ok"
   },
   {
-    "station": "Vordingborg",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
-    "available_m": 334.0,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
+    "station": "Béning",
+    "required_m": 156,
+    "line": "RE90",
+    "cars": "6",
+    "available_m": 280.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
     "overhang_m": -124.0,
     "severity": "ok"
   },
@@ -2970,17 +2882,6 @@
     "severity": "ok"
   },
   {
-    "station": "Béning",
-    "required_m": 156,
-    "line": "RE90",
-    "cars": "6",
-    "available_m": 292.0,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": -136.0,
-    "severity": "ok"
-  },
-  {
     "station": "Norddeich",
     "required_m": 156,
     "line": "RE90b",
@@ -2989,6 +2890,17 @@
     "n_platform_candidates": 2,
     "confidence": "amtlich",
     "overhang_m": -136.0,
+    "severity": "ok"
+  },
+  {
+    "station": "København H",
+    "required_m": 210,
+    "line": "RE17",
+    "cars": "8",
+    "available_m": 347.0,
+    "n_platform_candidates": 13,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -137.0,
     "severity": "ok"
   },
   {
@@ -3047,6 +2959,17 @@
     "severity": "ok"
   },
   {
+    "station": "Kolding",
+    "required_m": 156,
+    "line": "RE77",
+    "cars": "6",
+    "available_m": 301.0,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -145.0,
+    "severity": "ok"
+  },
+  {
     "station": "Lübben (Spreewald)",
     "required_m": 156,
     "line": "RE45",
@@ -3069,13 +2992,13 @@
     "severity": "ok"
   },
   {
-    "station": "Weinfelden",
-    "required_m": 184,
-    "line": "RE94",
-    "cars": "7",
-    "available_m": 334.0,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
+    "station": "Szczecinek",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 360.0,
+    "n_platform_candidates": 6,
+    "confidence": "amtlich-ausland",
     "overhang_m": -150.0,
     "severity": "ok"
   },
@@ -3146,6 +3069,17 @@
     "severity": "ok"
   },
   {
+    "station": "Nykøbing F.",
+    "required_m": 210,
+    "line": "RE17",
+    "cars": "8",
+    "available_m": 366.0,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -156.0,
+    "severity": "ok"
+  },
+  {
     "station": "Leverkusen Mitte",
     "required_m": 210,
     "line": "RE5",
@@ -3212,6 +3146,17 @@
     "severity": "ok"
   },
   {
+    "station": "Runowo Pomorskie",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 375.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -165.0,
+    "severity": "ok"
+  },
+  {
     "station": "Züssow",
     "required_m": 156,
     "line": "RE35",
@@ -3231,6 +3176,17 @@
     "n_platform_candidates": 2,
     "confidence": "amtlich",
     "overhang_m": -165.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Vojens",
+    "required_m": 156,
+    "line": "RE77",
+    "cars": "6",
+    "available_m": 324.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -168.0,
     "severity": "ok"
   },
   {
@@ -3297,17 +3253,6 @@
     "n_platform_candidates": 5,
     "confidence": "amtlich",
     "overhang_m": -171.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Kolding",
-    "required_m": 156,
-    "line": "RE77",
-    "cars": "6",
-    "available_m": 327.5,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -171.5,
     "severity": "ok"
   },
   {
@@ -3385,6 +3330,17 @@
     "n_platform_candidates": 6,
     "confidence": "amtlich",
     "overhang_m": -177.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Neustadt (Weinstraße) Hbf",
+    "required_m": 210,
+    "line": "RE80",
+    "cars": "8",
+    "available_m": 388.0,
+    "n_platform_candidates": 11,
+    "confidence": "amtlich",
+    "overhang_m": -178.0,
     "severity": "ok"
   },
   {
@@ -3520,14 +3476,36 @@
     "severity": "ok"
   },
   {
-    "station": "Szczecin Główny",
+    "station": "Forbach",
+    "required_m": 156,
+    "line": "RE90",
+    "cars": "6",
+    "available_m": 345.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -189.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Næstved",
     "required_m": 210,
-    "line": "RE71",
+    "line": "RE17",
     "cars": "8",
-    "available_m": 399.2,
-    "n_platform_candidates": 17,
-    "confidence": "hoch",
-    "overhang_m": -189.2,
+    "available_m": 400.0,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -190.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Køge Nord",
+    "required_m": 210,
+    "line": "RE17",
+    "cars": "8",
+    "available_m": 400.0,
+    "n_platform_candidates": 6,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -190.0,
     "severity": "ok"
   },
   {
@@ -3616,28 +3594,6 @@
     "n_platform_candidates": 4,
     "confidence": "amtlich",
     "overhang_m": -191.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Rødby",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
-    "available_m": 401.1,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -191.1,
-    "severity": "ok"
-  },
-  {
-    "station": "Køge Nord",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
-    "available_m": 401.8,
-    "n_platform_candidates": 6,
-    "confidence": "hoch",
-    "overhang_m": -191.8,
     "severity": "ok"
   },
   {
@@ -3817,17 +3773,6 @@
     "severity": "ok"
   },
   {
-    "station": "Forbach",
-    "required_m": 156,
-    "line": "RE90",
-    "cars": "6",
-    "available_m": 355.6,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -199.6,
-    "severity": "ok"
-  },
-  {
     "station": "Bamberg",
     "required_m": 210,
     "line": "RE28",
@@ -3905,6 +3850,17 @@
     "severity": "ok"
   },
   {
+    "station": "Landquart",
+    "required_m": 210,
+    "line": "RE80",
+    "cars": "8",
+    "available_m": 415,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -205,
+    "severity": "ok"
+  },
+  {
     "station": "Immendingen",
     "required_m": 156,
     "line": "RE57",
@@ -3960,17 +3916,6 @@
     "severity": "ok"
   },
   {
-    "station": "Tczew",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 419.6,
-    "n_platform_candidates": 4,
-    "confidence": "hoch",
-    "overhang_m": -209.6,
-    "severity": "ok"
-  },
-  {
     "station": "Halle (Saale) Hbf",
     "required_m": 210,
     "line": "RE28",
@@ -4004,6 +3949,17 @@
     "severity": "ok"
   },
   {
+    "station": "Tczew",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 420.0,
+    "n_platform_candidates": 7,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -210.0,
+    "severity": "ok"
+  },
+  {
     "station": "Velgast",
     "required_m": 160,
     "line": "RE91",
@@ -4022,6 +3978,17 @@
     "available_m": 421.0,
     "n_platform_candidates": 4,
     "confidence": "amtlich",
+    "overhang_m": -211.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Szczecin Główny",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 421.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich-ausland",
     "overhang_m": -211.0,
     "severity": "ok"
   },
@@ -4059,6 +4026,17 @@
     "severity": "ok"
   },
   {
+    "station": "Buchs SG",
+    "required_m": 210,
+    "line": "RE80",
+    "cars": "8",
+    "available_m": 422,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -212,
+    "severity": "ok"
+  },
+  {
     "station": "Bremen Hbf",
     "required_m": 236,
     "line": "RE90b",
@@ -4085,10 +4063,21 @@
     "required_m": 210,
     "line": "RE71",
     "cars": "8",
-    "available_m": 425.2,
-    "n_platform_candidates": 18,
-    "confidence": "hoch",
-    "overhang_m": -215.2,
+    "available_m": 425.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -215.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Padborg",
+    "required_m": 156,
+    "line": "RE77",
+    "cars": "6",
+    "available_m": 371.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -215.0,
     "severity": "ok"
   },
   {
@@ -4100,17 +4089,6 @@
     "n_platform_candidates": 6,
     "confidence": "amtlich",
     "overhang_m": -216.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Szczecinek",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 427.0,
-    "n_platform_candidates": 4,
-    "confidence": "hoch",
-    "overhang_m": -217.0,
     "severity": "ok"
   },
   {
@@ -4187,6 +4165,28 @@
     "available_m": 430.0,
     "n_platform_candidates": 15,
     "confidence": "amtlich",
+    "overhang_m": -220.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Gdańsk Wrzeszcz",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 430.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -220.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Gdynia Główna",
+    "required_m": 210,
+    "line": "RE71",
+    "cars": "8",
+    "available_m": 430.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich-ausland",
     "overhang_m": -220.0,
     "severity": "ok"
   },
@@ -4279,28 +4279,6 @@
     "severity": "ok"
   },
   {
-    "station": "Runowo Pomorskie",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 436.2,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -226.2,
-    "severity": "ok"
-  },
-  {
-    "station": "Gdańsk Wrzeszcz",
-    "required_m": 210,
-    "line": "RE71",
-    "cars": "8",
-    "available_m": 438.6,
-    "n_platform_candidates": 9,
-    "confidence": "hoch",
-    "overhang_m": -228.6,
-    "severity": "ok"
-  },
-  {
     "station": "Münster (Westf) Hbf",
     "required_m": 210,
     "line": "RE30",
@@ -4345,6 +4323,17 @@
     "severity": "ok"
   },
   {
+    "station": "Esbjerg",
+    "required_m": 105,
+    "line": "RE46",
+    "cars": "4",
+    "available_m": 336.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -231.0,
+    "severity": "ok"
+  },
+  {
     "station": "Würzburg Hbf",
     "required_m": 210,
     "line": "RE28",
@@ -4367,14 +4356,14 @@
     "severity": "ok"
   },
   {
-    "station": "Zürich Flughafen",
-    "required_m": 184,
-    "line": "RE94",
-    "cars": "7",
-    "available_m": 417.5,
-    "n_platform_candidates": 10,
-    "confidence": "hoch",
-    "overhang_m": -233.5,
+    "station": "Mulhouse-Ville",
+    "required_m": 156,
+    "line": "RE57",
+    "cars": "6",
+    "available_m": 389.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -233.0,
     "severity": "ok"
   },
   {
@@ -4389,6 +4378,28 @@
     "severity": "ok"
   },
   {
+    "station": "Sargans",
+    "required_m": 210,
+    "line": "RE80",
+    "cars": "8",
+    "available_m": 446,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -236,
+    "severity": "ok"
+  },
+  {
+    "station": "Weinfelden",
+    "required_m": 184,
+    "line": "RE94",
+    "cars": "7",
+    "available_m": 420,
+    "n_platform_candidates": 3,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -236,
+    "severity": "ok"
+  },
+  {
     "station": "Liège-Guillemins",
     "required_m": 156,
     "line": "RE90",
@@ -4400,6 +4411,17 @@
     "severity": "ok"
   },
   {
+    "station": "Frauenfeld",
+    "required_m": 184,
+    "line": "RE94",
+    "cars": "7",
+    "available_m": 421,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -237,
+    "severity": "ok"
+  },
+  {
     "station": "Heidelberg Hbf",
     "required_m": 210,
     "line": "RE80",
@@ -4408,6 +4430,17 @@
     "n_platform_candidates": 9,
     "confidence": "amtlich",
     "overhang_m": -240.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Winterthur",
+    "required_m": 184,
+    "line": "RE94",
+    "cars": "7",
+    "available_m": 424,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -240,
     "severity": "ok"
   },
   {
@@ -4477,6 +4510,17 @@
     "severity": "ok"
   },
   {
+    "station": "Zürich HB",
+    "required_m": 184,
+    "line": "RE94",
+    "cars": "7",
+    "available_m": 433,
+    "n_platform_candidates": 9,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -249,
+    "severity": "ok"
+  },
+  {
     "station": "Gütersloh Hbf",
     "required_m": 156,
     "line": "RE17",
@@ -4507,6 +4551,17 @@
     "n_platform_candidates": 12,
     "confidence": "amtlich",
     "overhang_m": -249.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Rødby",
+    "required_m": 210,
+    "line": "RE17",
+    "cars": "8",
+    "available_m": 460.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -250.0,
     "severity": "ok"
   },
   {
@@ -4598,17 +4653,6 @@
     "severity": "ok"
   },
   {
-    "station": "Frauenfeld",
-    "required_m": 184,
-    "line": "RE94",
-    "cars": "7",
-    "available_m": 439.3,
-    "n_platform_candidates": 6,
-    "confidence": "hoch",
-    "overhang_m": -255.3,
-    "severity": "ok"
-  },
-  {
     "station": "Hamburg-Harburg",
     "required_m": 236,
     "line": "RE90b",
@@ -4639,17 +4683,6 @@
     "n_platform_candidates": 7,
     "confidence": "amtlich",
     "overhang_m": -259.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Metz-Ville",
-    "required_m": 156,
-    "line": "RE90",
-    "cars": "6",
-    "available_m": 416.7,
-    "n_platform_candidates": 25,
-    "confidence": "hoch",
-    "overhang_m": -260.7,
     "severity": "ok"
   },
   {
@@ -4694,17 +4727,6 @@
     "n_platform_candidates": 16,
     "confidence": "amtlich",
     "overhang_m": -269.0,
-    "severity": "ok"
-  },
-  {
-    "station": "Esbjerg",
-    "required_m": 105,
-    "line": "RE46",
-    "cars": "4",
-    "available_m": 375.0,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -270.0,
     "severity": "ok"
   },
   {
@@ -4829,17 +4851,6 @@
     "severity": "ok"
   },
   {
-    "station": "Mulhouse-Ville",
-    "required_m": 156,
-    "line": "RE57",
-    "cars": "6",
-    "available_m": 444.2,
-    "n_platform_candidates": 12,
-    "confidence": "hoch",
-    "overhang_m": -288.2,
-    "severity": "ok"
-  },
-  {
     "station": "Aachen Hbf",
     "required_m": 156,
     "line": "RE90",
@@ -4859,6 +4870,17 @@
     "n_platform_candidates": 6,
     "confidence": "amtlich",
     "overhang_m": -292.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Fredericia",
+    "required_m": 156,
+    "line": "RE77",
+    "cars": "6",
+    "available_m": 452.0,
+    "n_platform_candidates": 12,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -296.0,
     "severity": "ok"
   },
   {
@@ -4906,6 +4928,17 @@
     "severity": "ok"
   },
   {
+    "station": "Zürich Flughafen",
+    "required_m": 184,
+    "line": "RE94",
+    "cars": "7",
+    "available_m": 492,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -308,
+    "severity": "ok"
+  },
+  {
     "station": "Braunschweig Hbf",
     "required_m": 130,
     "line": "RE25",
@@ -4936,6 +4969,17 @@
     "n_platform_candidates": 5,
     "confidence": "amtlich",
     "overhang_m": -315.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Chur",
+    "required_m": 210,
+    "line": "RE80",
+    "cars": "8",
+    "available_m": 533,
+    "n_platform_candidates": 7,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -323,
     "severity": "ok"
   },
   {
@@ -4994,6 +5038,28 @@
     "severity": "ok"
   },
   {
+    "station": "Metz-Ville",
+    "required_m": 156,
+    "line": "RE90",
+    "cars": "6",
+    "available_m": 533.0,
+    "n_platform_candidates": 7,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -377.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Thionville",
+    "required_m": 156,
+    "line": "RE90",
+    "cars": "6",
+    "available_m": 550.0,
+    "n_platform_candidates": 1,
+    "confidence": "amtlich-ausland",
+    "overhang_m": -394.0,
+    "severity": "ok"
+  },
+  {
     "station": "Duisburg Hbf",
     "required_m": 210,
     "line": "RE32",
@@ -5038,39 +5104,6 @@
     "severity": "keine_daten"
   },
   {
-    "station": "Nykøbing F.",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Ringsted",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Nørreport",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
     "station": "Frankfurt Flughafen Regiobf",
     "required_m": 210,
     "line": "RE5",
@@ -5085,17 +5118,6 @@
     "station": "Hannover-Messe/Laatzen",
     "required_m": 210,
     "line": "RE7",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Buchs SG",
-    "required_m": 210,
-    "line": "RE80",
     "cars": "8",
     "available_m": null,
     "n_platform_candidates": 0,
@@ -5130,28 +5152,6 @@
     "required_m": 210,
     "line": "RE80",
     "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Fredericia",
-    "required_m": 156,
-    "line": "RE77",
-    "cars": "6",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Padborg",
-    "required_m": 156,
-    "line": "RE77",
-    "cars": "6",
     "available_m": null,
     "n_platform_candidates": 0,
     "confidence": "niedrig",

@@ -1,0 +1,722 @@
+{
+  "ranked": [
+    {
+      "station": "Düsseldorf Hbf",
+      "score": 66.0
+    },
+    {
+      "station": "Berlin Hbf",
+      "score": 42.0
+    },
+    {
+      "station": "Rostock Hbf",
+      "score": 40.0
+    },
+    {
+      "station": "Hamburg-Harburg",
+      "score": 38.0
+    },
+    {
+      "station": "Berlin Südkreuz",
+      "score": 38.0
+    },
+    {
+      "station": "Essen Hbf",
+      "score": 32.0
+    },
+    {
+      "station": "Bochum Hbf",
+      "score": 31.0
+    },
+    {
+      "station": "Mönchengladbach Hbf",
+      "score": 29.0
+    },
+    {
+      "station": "Hagen Hbf",
+      "score": 26.0
+    },
+    {
+      "station": "Lübeck Hbf",
+      "score": 24.0
+    },
+    {
+      "station": "Duisburg Hbf",
+      "score": 24.0
+    },
+    {
+      "station": "Pasewalk",
+      "score": 24.0
+    },
+    {
+      "station": "Hamm (Westf) Hbf",
+      "score": 22.0
+    },
+    {
+      "station": "Stralsund Hbf",
+      "score": 22.0
+    },
+    {
+      "station": "Berlin-Spandau",
+      "score": 22.0
+    },
+    {
+      "station": "Kassel-Wilhelmshöhe",
+      "score": 20.0
+    },
+    {
+      "station": "Münster (Westf) Hbf",
+      "score": 20.0
+    },
+    {
+      "station": "Eberswalde Hbf",
+      "score": 20.0
+    },
+    {
+      "station": "Bremen Hbf",
+      "score": 20.0
+    },
+    {
+      "station": "Berlin Hbf (tief)",
+      "score": 18.0
+    },
+    {
+      "station": "Hamburg-Elbbrücken",
+      "score": 18.0
+    },
+    {
+      "station": "Büchen",
+      "score": 18.0
+    },
+    {
+      "station": "Osnabrück Hbf",
+      "score": 17.0
+    },
+    {
+      "station": "Erfurt Hbf",
+      "score": 17.0
+    },
+    {
+      "station": "Hagenow Land",
+      "score": 16.0
+    },
+    {
+      "station": "Kiel Hbf",
+      "score": 14.0
+    },
+    {
+      "station": "Saarbrücken Hbf",
+      "score": 12.0
+    },
+    {
+      "station": "Zwickau Hbf",
+      "score": 12.0
+    },
+    {
+      "station": "Frankfurt (Main) Hbf",
+      "score": 12.0
+    },
+    {
+      "station": "Dortmund Hbf",
+      "score": 10.0
+    }
+  ],
+  "theta": {
+    "Essen Hbf": 0,
+    "Dortmund Hbf": 0,
+    "Bochum Hbf": 30,
+    "Berlin Hbf": 0,
+    "Rostock Hbf": 0,
+    "Hamburg-Harburg": 0,
+    "Erfurt Hbf": 0,
+    "Saarbrücken Hbf": 0
+  },
+  "conflicts": [
+    {
+      "station": "Düsseldorf Hbf",
+      "reason": "RE32: Essen Hbf↔Düsseldorf Hbf 37 Min (Abw. 7 vom 30er-Raster)"
+    },
+    {
+      "station": "Berlin Südkreuz",
+      "reason": "RE46: Berlin Hbf↔Berlin Südkreuz 10 Min (Abw. 10 vom 30er-Raster)"
+    },
+    {
+      "station": "Mönchengladbach Hbf",
+      "reason": "RE32: Essen Hbf↔Mönchengladbach Hbf 67 Min (Abw. 7 vom 30er-Raster)"
+    },
+    {
+      "station": "Hagen Hbf",
+      "reason": "RE40: Essen Hbf↔Hagen Hbf 46 Min (Abw. 14 vom 30er-Raster)"
+    },
+    {
+      "station": "Lübeck Hbf",
+      "reason": "θ-Widerspruch über Hamburg-Harburg (RE45)"
+    },
+    {
+      "station": "Duisburg Hbf",
+      "reason": "RE2: Essen Hbf↔Duisburg Hbf 11 Min (Abw. 11 vom 30er-Raster)"
+    },
+    {
+      "station": "Pasewalk",
+      "reason": "RE71: Berlin Hbf↔Pasewalk 127 Min (Abw. 7 vom 30er-Raster)"
+    },
+    {
+      "station": "Hamm (Westf) Hbf",
+      "reason": "RE32: Essen Hbf↔Hamm (Westf) Hbf 43 Min (Abw. 13 vom 30er-Raster)"
+    },
+    {
+      "station": "Stralsund Hbf",
+      "reason": "RE35X: Rostock Hbf↔Stralsund Hbf 44 Min (Abw. 14 vom 30er-Raster)"
+    },
+    {
+      "station": "Berlin-Spandau",
+      "reason": "RE46: Berlin Hbf↔Berlin-Spandau 10 Min (Abw. 10 vom 30er-Raster)"
+    },
+    {
+      "station": "Kassel-Wilhelmshöhe",
+      "reason": "RE32: Essen Hbf↔Kassel-Wilhelmshöhe 163 Min (Abw. 13 vom 30er-Raster)"
+    },
+    {
+      "station": "Münster (Westf) Hbf",
+      "reason": "RE2: Essen Hbf↔Münster (Westf) Hbf 50 Min (Abw. 10 vom 30er-Raster)"
+    },
+    {
+      "station": "Eberswalde Hbf",
+      "reason": "RE71: Berlin Hbf↔Eberswalde Hbf 75 Min (Abw. 15 vom 30er-Raster)"
+    },
+    {
+      "station": "Bremen Hbf",
+      "reason": "RE9: Dortmund Hbf↔Bremen Hbf 159 Min (Abw. 9 vom 30er-Raster)"
+    },
+    {
+      "station": "Berlin Hbf (tief)",
+      "reason": "θ-Widerspruch über Rostock Hbf (RE35)"
+    },
+    {
+      "station": "Hamburg-Elbbrücken",
+      "reason": "RE91: Rostock Hbf↔Hamburg-Elbbrücken 113 Min (Abw. 7 vom 30er-Raster)"
+    },
+    {
+      "station": "Büchen",
+      "reason": "RE77: Berlin Hbf↔Büchen 108 Min (Abw. 12 vom 30er-Raster)"
+    },
+    {
+      "station": "Osnabrück Hbf",
+      "reason": "RE17: Dortmund Hbf↔Osnabrück Hbf 101 Min (Abw. 11 vom 30er-Raster)"
+    },
+    {
+      "station": "Hagenow Land",
+      "reason": "RE46: Berlin Hbf↔Hagenow Land 100 Min (Abw. 10 vom 30er-Raster)"
+    },
+    {
+      "station": "Kiel Hbf",
+      "reason": "RE46: Berlin Hbf↔Kiel Hbf 227 Min (Abw. 13 vom 30er-Raster)"
+    },
+    {
+      "station": "Zwickau Hbf",
+      "reason": "RE35X: Rostock Hbf↔Zwickau Hbf 346 Min (Abw. 14 vom 30er-Raster)"
+    },
+    {
+      "station": "Frankfurt (Main) Hbf",
+      "reason": "RE40: Bochum Hbf↔Frankfurt (Main) Hbf 223 Min (Abw. 13 vom 30er-Raster)"
+    }
+  ],
+  "capacity": {
+    "Düsseldorf Hbf": {
+      "source": "amtlich",
+      "n_tracks": 16,
+      "lengths_m": [
+        479.0,
+        458.0,
+        458.0,
+        436.0,
+        428.0,
+        428.0,
+        421.0,
+        419.0,
+        415.0,
+        412.0,
+        373.0,
+        279.0,
+        168.0,
+        168.0,
+        168.0,
+        168.0
+      ]
+    },
+    "Berlin Hbf": {
+      "source": "amtlich",
+      "n_tracks": 15,
+      "lengths_m": [
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        152.0,
+        152.0,
+        80.0
+      ]
+    },
+    "Rostock Hbf": {
+      "source": "amtlich",
+      "n_tracks": 11,
+      "lengths_m": [
+        380.0,
+        372.0,
+        302.0,
+        302.0,
+        234.0,
+        216.0,
+        216.0,
+        197.0,
+        197.0,
+        163.0,
+        116.0
+      ]
+    },
+    "Hamburg-Harburg": {
+      "source": "amtlich",
+      "n_tracks": 8,
+      "lengths_m": [
+        492.0,
+        492.0,
+        463.0,
+        463.0,
+        455.0,
+        443.0,
+        198.0,
+        198.0
+      ]
+    },
+    "Berlin Südkreuz": {
+      "source": "amtlich",
+      "n_tracks": 10,
+      "lengths_m": [
+        406.0,
+        406.0,
+        406.0,
+        406.0,
+        406.0,
+        406.0,
+        183.0,
+        183.0,
+        160.0,
+        160.0
+      ]
+    },
+    "Essen Hbf": {
+      "source": "amtlich",
+      "n_tracks": 13,
+      "lengths_m": [
+        667.0,
+        482.0,
+        481.0,
+        481.0,
+        445.0,
+        404.0,
+        286.0,
+        280.0,
+        230.0,
+        224.0,
+        209.0,
+        199.0,
+        199.0
+      ]
+    },
+    "Bochum Hbf": {
+      "source": "amtlich",
+      "n_tracks": 8,
+      "lengths_m": [
+        430.0,
+        430.0,
+        351.0,
+        343.0,
+        227.0,
+        180.0,
+        180.0,
+        142.0
+      ]
+    },
+    "Mönchengladbach Hbf": {
+      "source": "amtlich",
+      "n_tracks": 16,
+      "lengths_m": [
+        333.0,
+        210.0,
+        210.0,
+        209.0,
+        190.0,
+        190.0,
+        182.0,
+        152.0,
+        149.0,
+        36.0,
+        34.0,
+        19.0,
+        19.0,
+        12.0,
+        11.0,
+        7.0
+      ]
+    },
+    "Hagen Hbf": {
+      "source": "amtlich",
+      "n_tracks": 16,
+      "lengths_m": [
+        272.0,
+        271.0,
+        271.0,
+        271.0,
+        271.0,
+        255.0,
+        247.0,
+        239.0,
+        239.0,
+        225.0,
+        225.0,
+        224.0,
+        162.0,
+        162.0,
+        162.0,
+        162.0
+      ]
+    },
+    "Lübeck Hbf": {
+      "source": "amtlich",
+      "n_tracks": 8,
+      "lengths_m": [
+        320.0,
+        320.0,
+        320.0,
+        320.0,
+        320.0,
+        320.0,
+        320.0,
+        320.0
+      ]
+    },
+    "Duisburg Hbf": {
+      "source": "amtlich",
+      "n_tracks": 16,
+      "lengths_m": [
+        620.0,
+        620.0,
+        620.0,
+        620.0,
+        505.0,
+        505.0,
+        421.0,
+        421.0,
+        417.0,
+        417.0,
+        376.0,
+        370.0,
+        370.0,
+        322.0,
+        4.0,
+        0.0
+      ]
+    },
+    "Pasewalk": {
+      "source": "amtlich",
+      "n_tracks": 5,
+      "lengths_m": [
+        333.0,
+        330.0,
+        163.0,
+        162.0,
+        105.0
+      ]
+    },
+    "Hamm (Westf) Hbf": {
+      "source": "amtlich",
+      "n_tracks": 12,
+      "lengths_m": [
+        422.0,
+        422.0,
+        421.0,
+        421.0,
+        417.0,
+        402.0,
+        402.0,
+        396.0,
+        360.0,
+        360.0,
+        220.0,
+        220.0
+      ]
+    },
+    "Stralsund Hbf": {
+      "source": "amtlich",
+      "n_tracks": 6,
+      "lengths_m": [
+        387.0,
+        387.0,
+        342.0,
+        342.0,
+        340.0,
+        330.0
+      ]
+    },
+    "Berlin-Spandau": {
+      "source": "amtlich",
+      "n_tracks": 6,
+      "lengths_m": [
+        406.0,
+        406.0,
+        406.0,
+        406.0,
+        165.0,
+        165.0
+      ]
+    },
+    "Kassel-Wilhelmshöhe": {
+      "source": "amtlich",
+      "n_tracks": 8,
+      "lengths_m": [
+        428.0,
+        425.0,
+        420.0,
+        416.0,
+        415.0,
+        415.0,
+        415.0,
+        409.0
+      ]
+    },
+    "Münster (Westf) Hbf": {
+      "source": "amtlich",
+      "n_tracks": 9,
+      "lengths_m": [
+        440.0,
+        432.0,
+        432.0,
+        410.0,
+        347.0,
+        298.0,
+        298.0,
+        290.0,
+        120.0
+      ]
+    },
+    "Eberswalde Hbf": {
+      "source": "amtlich",
+      "n_tracks": 5,
+      "lengths_m": [
+        320.0,
+        320.0,
+        176.0,
+        176.0,
+        60.0
+      ]
+    },
+    "Bremen Hbf": {
+      "source": "amtlich",
+      "n_tracks": 9,
+      "lengths_m": [
+        449.0,
+        449.0,
+        420.0,
+        420.0,
+        416.0,
+        416.0,
+        376.0,
+        376.0,
+        318.0
+      ]
+    },
+    "Berlin Hbf (tief)": {
+      "source": "amtlich",
+      "n_tracks": 15,
+      "lengths_m": [
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        430.0,
+        152.0,
+        152.0,
+        80.0
+      ]
+    },
+    "Hamburg-Elbbrücken": {
+      "source": "fiktiv",
+      "n_tracks": 4,
+      "lengths_m": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    "Büchen": {
+      "source": "amtlich",
+      "n_tracks": 4,
+      "lengths_m": [
+        421.0,
+        353.0,
+        225.0,
+        112.0
+      ]
+    },
+    "Osnabrück Hbf": {
+      "source": "amtlich",
+      "n_tracks": 9,
+      "lengths_m": [
+        393.0,
+        393.0,
+        393.0,
+        393.0,
+        311.0,
+        311.0,
+        251.0,
+        232.0,
+        232.0
+      ]
+    },
+    "Erfurt Hbf": {
+      "source": "amtlich",
+      "n_tracks": 10,
+      "lengths_m": [
+        554.0,
+        552.0,
+        421.0,
+        420.0,
+        420.0,
+        419.0,
+        215.0,
+        213.0,
+        184.0,
+        184.0
+      ]
+    },
+    "Hagenow Land": {
+      "source": "amtlich",
+      "n_tracks": 4,
+      "lengths_m": [
+        200.0,
+        200.0,
+        105.0,
+        105.0
+      ]
+    },
+    "Kiel Hbf": {
+      "source": "amtlich",
+      "n_tracks": 8,
+      "lengths_m": [
+        388.0,
+        387.0,
+        267.0,
+        240.0,
+        150.0,
+        130.0,
+        111.0,
+        101.0
+      ]
+    },
+    "Saarbrücken Hbf": {
+      "source": "amtlich",
+      "n_tracks": 10,
+      "lengths_m": [
+        550.0,
+        415.0,
+        400.0,
+        400.0,
+        323.0,
+        280.0,
+        192.0,
+        190.0,
+        155.0,
+        95.0
+      ]
+    },
+    "Zwickau Hbf": {
+      "source": "amtlich",
+      "n_tracks": 8,
+      "lengths_m": [
+        306.0,
+        306.0,
+        303.0,
+        303.0,
+        180.0,
+        170.0,
+        165.0,
+        157.0
+      ]
+    },
+    "Frankfurt (Main) Hbf": {
+      "source": "amtlich",
+      "n_tracks": 31,
+      "lengths_m": [
+        435.0,
+        434.0,
+        434.0,
+        433.0,
+        433.0,
+        433.0,
+        433.0,
+        433.0,
+        433.0,
+        348.0,
+        348.0,
+        348.0,
+        348.0,
+        330.0,
+        330.0,
+        317.0,
+        317.0,
+        315.0,
+        315.0,
+        313.0,
+        313.0,
+        269.0,
+        231.0,
+        227.0,
+        221.0,
+        219.0,
+        218.0,
+        217.0,
+        217.0,
+        85.0,
+        85.0
+      ]
+    },
+    "Dortmund Hbf": {
+      "source": "amtlich",
+      "n_tracks": 16,
+      "lengths_m": [
+        418.0,
+        417.0,
+        416.0,
+        416.0,
+        416.0,
+        406.0,
+        240.0,
+        231.0,
+        231.0,
+        230.0,
+        210.0,
+        210.0,
+        201.0,
+        197.0,
+        194.0,
+        190.0
+      ]
+    }
+  }
+}

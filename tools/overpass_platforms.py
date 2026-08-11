@@ -111,6 +111,23 @@ def fetch_batch(batch, force=False):
     return None
 
 
+def is_rail_platform(tags):
+    """Schließt Straßenbahn-/Bus-Bahnsteige aus, die an multimodalen Knoten
+    fälschlich mitgefangen werden. Beispiel Köln Hbf: die dortigen KVB-
+    Stadtbahn-Bahnsteige ('Dom/Hbf', 'Breslauer Platz/Hbf') tragen ebenfalls
+    railway=platform, sind aber explizit mit train=no, tram=yes von den
+    DB-Bahnsteigen abgegrenzt — ohne diesen Filter liefert Köln Hbf eine
+    absurd kurze 'Bahnsteiglänge' von 90m aus einer U-Bahn-Haltestelle statt
+    der tatsächlichen, deutlich längeren Fernbahnsteige."""
+    if tags.get("train") == "no":
+        return False
+    if tags.get("railway") == "platform":
+        return True
+    if tags.get("tram") == "yes" or tags.get("bus") == "yes":
+        return False
+    return True
+
+
 def parse_platform_length(tags, geometry):
     raw = tags.get("length")
     if raw:
@@ -158,8 +175,12 @@ def main():
     # Datensatz (nicht nur dem Batch, der es gefunden hat).
     platforms_by_station = {name: [] for name, _, _ in items}
     unmatched = 0
+    n_excluded_nonrail = 0
     for (etype, eid), el in all_elements.items():
         tags = el.get("tags", {})
+        if not is_rail_platform(tags):
+            n_excluded_nonrail += 1
+            continue
         geometry = el.get("geometry")
         if etype == "node":
             lat, lon = el.get("lat"), el.get("lon")
@@ -209,7 +230,8 @@ def main():
     )
     print(
         f"\n{args.out} geschrieben: {n_with_data} Stationen mit plausibler Bahnsteiglänge, "
-        f"{n_without_data} ohne Daten. {unmatched} Objekte ohne Station im Radius verworfen."
+        f"{n_without_data} ohne Daten. {unmatched} Objekte ohne Station im Radius verworfen, "
+        f"{n_excluded_nonrail} als Tram/Bus ausgeschlossen."
     )
 
 

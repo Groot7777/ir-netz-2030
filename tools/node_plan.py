@@ -53,42 +53,62 @@ def pairwise_hub_travel_times(data, candidates):
     return pair_times
 
 
+def circ_dist(a, b, modulus=60):
+    d = abs(a - b) % modulus
+    return min(d, modulus - d)
+
+
 def assign_theta(ranked_names, pair_times, forced, tolerance):
-    """Greedy θ-Zuordnung. forced: {station: theta} wird unangetastet als
-    Startpunkt übernommen (Ruhr-Entscheidung o.ä.), auch wenn die direkte
-    Fahrzeit zwischen zwei forcierten Stationen selbst nicht ideal passt —
-    das ist eine bewusste Nutzerentscheidung, kein Rechenergebnis."""
+    """Greedy θ-Zuordnung, die JEDE Station einordnet — nichts bleibt
+    unzugeordnet. forced: {station: theta} wird unangetastet als
+    Startpunkt übernommen (Ruhr-Entscheidung o.ä.).
+
+    Für jede noch offene Station wird über ALLE Verbindungen zu bereits
+    zugeordneten Nachbarn abgestimmt: für θ∈{0,30} wird die mittlere
+    Abweichung von der durch jede Linie implizierten Idealphase berechnet,
+    die bessere der beiden Stellen gewinnt. Passt die beste Stelle nur
+    grob (Abweichung > tolerance), wird die Station trotzdem zugeordnet,
+    aber als 'halb' statt 'voll' markiert — ein Halbknoten mit
+    Anschlussqualität unter dem Vollknoten-Standard, keine offene Frage
+    mehr. Stationen ganz ohne Verbindung zu einem bereits zugeordneten
+    Nachbarn werden als 'isoliert' markiert (θ=0 mangels Referenz)."""
     sel = dict(forced)
-    conflicts = []
+    detail = {name: {"quality": "voll", "votes": []} for name in forced}
     for name in ranked_names:
         if name in sel:
             continue
-        theta = None
-        reason = None
+        votes = []
         for other, th_other in list(sel.items()):
             p = tuple(sorted((name, other)))
             if p not in pair_times:
                 continue
             for line, tt in pair_times[p]:
                 m = tt % 60
-                dev = min(m, abs(m - 30), 60 - m)
-                if dev > tolerance:
-                    reason = f"{line}: {other}↔{name} {tt} Min (Abw. {dev} vom 30er-Raster)"
-                    break
-                delta = 0 if min(m, 60 - m) < abs(m - 30) else 30
-                want = (th_other + delta) % 60
-                if theta is None:
-                    theta = want
-                elif theta != want:
-                    reason = f"θ-Widerspruch über {other} ({line})"
-                    break
-            if reason:
-                break
-        if reason:
-            conflicts.append({"station": name, "reason": reason})
-        else:
-            sel[name] = theta if theta is not None else 0
-    return sel, conflicts
+                implied = (th_other + m) % 60
+                votes.append({"other": other, "line": line, "tt": tt, "implied": implied})
+
+        if not votes:
+            sel[name] = 0
+            detail[name] = {"quality": "isoliert", "votes": []}
+            continue
+
+        best_theta, best_avg = None, None
+        for cand in (0, 30):
+            total = sum(circ_dist(cand, v["implied"]) for v in votes)
+            avg = total / len(votes)
+            if best_avg is None or avg < best_avg:
+                best_theta, best_avg = cand, avg
+
+        quality = "voll" if best_avg <= tolerance else "halb"
+        sel[name] = best_theta
+        detail[name] = {
+            "quality": quality,
+            "avg_deviation": round(best_avg, 1),
+            "votes": [
+                {**v, "deviation": circ_dist(best_theta, v["implied"])} for v in votes
+            ],
+        }
+    return sel, detail
 
 
 def platform_capacity(station, dbinfrago, manual, osm):
@@ -109,44 +129,59 @@ def platform_capacity(station, dbinfrago, manual, osm):
     return {"source": None, "n_tracks": 0, "lengths_m": []}
 
 
-def render_markdown(ranked, theta, conflicts, capacity, minute_tables, sigma_ref):
+def render_markdown(ranked, theta, detail, capacity, minute_tables, sigma_ref):
     L = []
-    L.append("# Paket 6 — Finale Knotenliste (zur Freigabe)\n")
+    L.append("# Paket 6 — Finale Knotenliste\n")
     L.append(
         f"Symmetrieminute σ = :{sigma_ref:02d} (Schweizer Stil). θ-Werte sind relativ "
         f"zu einem Anker — welche absolute Minute σ=:00 real bekommt, legt erst die "
-        f"spätere Ankerlinie fest.\n"
+        f"spätere Ankerlinie fest. **Jede Station ist zugeordnet** — Konflikte wurden "
+        f"nicht offengelassen, sondern als Halbknoten (beste verfügbare Rasterstelle, "
+        f"geringere Anschlussqualität als ein Vollknoten) aufgelöst.\n"
     )
 
-    L.append("## Zugeordnete Knoten\n")
-    L.append("| # | Station | Score | θ | Gleise | Längste verfügbare Gleise (m) | Quelle |")
-    L.append("|---|---|---|---|---|---|---|")
+    n_voll = sum(1 for d in detail.values() if d["quality"] == "voll")
+    n_halb = sum(1 for d in detail.values() if d["quality"] == "halb")
+    n_iso = sum(1 for d in detail.values() if d["quality"] == "isoliert")
+    L.append(f"- **{n_voll} Vollknoten** (Abweichung ≤ Toleranz)\n- **{n_halb} Halbknoten** (beste Stelle trotz größerer Abweichung)\n- **{n_iso} isoliert** (keine Verbindung zu einem bereits zugeordneten Nachbarn)\n")
+
+    L.append("## Knotenliste\n")
+    L.append("| # | Station | Score | θ | Qualität | ⌀Abw. | Gleise | Längste Gleise (m) | Quelle |")
+    L.append("|---|---|---|---|---|---|---|---|---|")
     for i, (name, score) in enumerate(ranked, 1):
         if name not in theta:
             continue
         cap = capacity[name]
+        d = detail.get(name, {"quality": "voll"})
         top_lengths = ", ".join(f"{l:.0f}" for l in cap["lengths_m"][:6])
         src = cap["source"] or "keine Daten"
-        L.append(f"| {i} | {name} | {score:.1f} | :{theta[name]:02d} | {cap['n_tracks']} | {top_lengths} | {src} |")
+        avg = d.get("avg_deviation")
+        avg_s = f"{avg:.1f}" if avg is not None else "—"
+        q = d["quality"]
+        L.append(
+            f"| {i} | {name} | {score:.1f} | :{theta[name]:02d} | {q} | {avg_s} | "
+            f"{cap['n_tracks']} | {top_lengths} | {src} |"
+        )
     L.append("")
 
-    L.append(f"## Konflikte — {len(conflicts)} Stationen ohne widerspruchsfreie θ-Zuordnung\n")
+    L.append(f"## Halbknoten — {n_halb} Stationen mit größerer Abweichung\n")
     L.append(
-        "Diese Stationen lassen sich nicht widerspruchsfrei in das θ∈{0,30}-Raster "
-        "einfügen (Fahrzeit zu einer bereits zugeordneten Station passt nicht auf "
-        "ein Vielfaches von 30 Min, oder zwei Nachbarn verlangen widersprüchliche θ). "
-        "**Das ist eine Entscheidung, keine Berechnung** — mögliche Auflösungen: "
-        "Halbknoten statt Vollknoten, Fahrzeit-Streckung (Stufe 2), oder bewusst "
-        "kein Taktknoten an dieser Station.\n"
+        "Bestmögliche θ-Stelle gewählt, aber mit spürbarer Restabweichung — Anschlüsse "
+        "dort werden nicht so eng wie an einem Vollknoten. Aufgeführt sind die "
+        "Linien/Nachbarn, die in die Entscheidung eingeflossen sind.\n"
     )
-    if conflicts:
-        L.append("| Station | Score | Konflikt |")
-        L.append("|---|---|---|")
-        score_by_name = dict(ranked)
-        for c in conflicts:
-            L.append(f"| {c['station']} | {score_by_name.get(c['station'], 0):.1f} | {c['reason']} |")
-    else:
-        L.append("Keine.")
+    score_by_name = dict(ranked)
+    for name, d in sorted(
+        ((n, d) for n, d in detail.items() if d["quality"] in ("halb", "isoliert")),
+        key=lambda kv: -score_by_name.get(kv[0], 0),
+    ):
+        if d["quality"] == "isoliert":
+            L.append(f"- **{name}** (Score {score_by_name.get(name,0):.1f}) — isoliert, keine Verbindung zu einem bereits zugeordneten Knoten, θ=:00 mangels Referenz.")
+            continue
+        votes_s = "; ".join(
+            f"{v['line']} {v['other']}↔{name} {v['tt']}min (Abw. {v['deviation']})" for v in d["votes"]
+        )
+        L.append(f"- **{name}** (Score {score_by_name.get(name,0):.1f}, θ=:{theta[name]:02d}, ⌀Abw. {d['avg_deviation']:.1f}): {votes_s}")
     L.append("")
 
     L.append("## Ist-Ankunfts-/Abfahrtsminuten an den zugeordneten Knoten (heute, vor Optimierung)\n")
@@ -156,7 +191,7 @@ def render_markdown(ranked, theta, conflicts, capacity, minute_tables, sigma_ref
         rows = minute_tables[name]
         if not rows:
             continue
-        L.append(f"### {name} (θ=:{theta[name]:02d})\n")
+        L.append(f"### {name} (θ=:{theta[name]:02d}, {detail[name]['quality']})\n")
         L.append("| Linie | T | an | ab |")
         L.append("|---|---|---|---|")
         for r in rows:
@@ -201,7 +236,7 @@ def main():
         forced[st.strip()] = int(th)
 
     pair_times = pairwise_hub_travel_times(data, names)
-    theta, conflicts = assign_theta(names, pair_times, forced, args.tolerance)
+    theta, detail = assign_theta(names, pair_times, forced, args.tolerance)
 
     capacity = {n: platform_capacity(n, dbinfrago, manual, osm) for n in names}
     minute_tables = {n: node_minute_table(data, n) for n in names}
@@ -209,16 +244,19 @@ def main():
     result = {
         "ranked": [{"station": n, "score": s} for n, s in ranked],
         "theta": theta,
-        "conflicts": conflicts,
+        "detail": detail,
         "capacity": capacity,
     }
     pathlib.Path(args.json_out).write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    md = render_markdown(ranked, theta, conflicts, capacity, minute_tables, sigma_ref=0)
+    md = render_markdown(ranked, theta, detail, capacity, minute_tables, sigma_ref=0)
     pathlib.Path(args.out).write_text(md, encoding="utf-8")
 
-    print(f"{len(theta)} Stationen zugeordnet, {len(conflicts)} Konflikte -> {args.out}")
+    n_voll = sum(1 for d in detail.values() if d["quality"] == "voll")
+    n_halb = sum(1 for d in detail.values() if d["quality"] == "halb")
+    n_iso = sum(1 for d in detail.values() if d["quality"] == "isoliert")
+    print(f"{len(theta)} Stationen zugeordnet ({n_voll} voll, {n_halb} halb, {n_iso} isoliert) -> {args.out}")
 
 
 if __name__ == "__main__":

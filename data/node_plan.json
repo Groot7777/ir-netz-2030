@@ -125,102 +125,3132 @@
     "Essen Hbf": 0,
     "Dortmund Hbf": 0,
     "Bochum Hbf": 30,
+    "Düsseldorf Hbf": 30,
     "Berlin Hbf": 0,
     "Rostock Hbf": 0,
     "Hamburg-Harburg": 0,
-    "Erfurt Hbf": 0,
-    "Saarbrücken Hbf": 0
+    "Berlin Südkreuz": 30,
+    "Mönchengladbach Hbf": 0,
+    "Hagen Hbf": 0,
+    "Lübeck Hbf": 30,
+    "Duisburg Hbf": 0,
+    "Pasewalk": 0,
+    "Hamm (Westf) Hbf": 0,
+    "Stralsund Hbf": 0,
+    "Berlin-Spandau": 0,
+    "Kassel-Wilhelmshöhe": 0,
+    "Münster (Westf) Hbf": 0,
+    "Eberswalde Hbf": 0,
+    "Bremen Hbf": 0,
+    "Berlin Hbf (tief)": 30,
+    "Hamburg-Elbbrücken": 0,
+    "Büchen": 30,
+    "Osnabrück Hbf": 30,
+    "Erfurt Hbf": 30,
+    "Hagenow Land": 0,
+    "Kiel Hbf": 0,
+    "Saarbrücken Hbf": 0,
+    "Zwickau Hbf": 0,
+    "Frankfurt (Main) Hbf": 0
   },
-  "conflicts": [
-    {
-      "station": "Düsseldorf Hbf",
-      "reason": "RE32: Essen Hbf↔Düsseldorf Hbf 37 Min (Abw. 7 vom 30er-Raster)"
+  "detail": {
+    "Essen Hbf": {
+      "quality": "voll",
+      "votes": []
     },
-    {
-      "station": "Berlin Südkreuz",
-      "reason": "RE46: Berlin Hbf↔Berlin Südkreuz 10 Min (Abw. 10 vom 30er-Raster)"
+    "Dortmund Hbf": {
+      "quality": "voll",
+      "votes": []
     },
-    {
-      "station": "Mönchengladbach Hbf",
-      "reason": "RE32: Essen Hbf↔Mönchengladbach Hbf 67 Min (Abw. 7 vom 30er-Raster)"
+    "Bochum Hbf": {
+      "quality": "voll",
+      "votes": []
     },
-    {
-      "station": "Hagen Hbf",
-      "reason": "RE40: Essen Hbf↔Hagen Hbf 46 Min (Abw. 14 vom 30er-Raster)"
+    "Düsseldorf Hbf": {
+      "quality": "halb",
+      "avg_deviation": 11.4,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE2",
+          "tt": 26,
+          "implied": 26,
+          "deviation": 4
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE2",
+          "tt": 28,
+          "implied": 28,
+          "deviation": 2
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 35,
+          "implied": 35,
+          "deviation": 5
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 37,
+          "implied": 37,
+          "deviation": 7
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 61,
+          "implied": 1,
+          "deviation": 29
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 63,
+          "implied": 3,
+          "deviation": 27
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RB37",
+          "tt": 70,
+          "implied": 40,
+          "deviation": 10
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RB37",
+          "tt": 69,
+          "implied": 39,
+          "deviation": 9
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 48,
+          "implied": 18,
+          "deviation": 12
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 51,
+          "implied": 21,
+          "deviation": 9
+        }
+      ]
     },
-    {
-      "station": "Lübeck Hbf",
-      "reason": "θ-Widerspruch über Hamburg-Harburg (RE45)"
+    "Berlin Hbf": {
+      "quality": "isoliert",
+      "votes": []
     },
-    {
-      "station": "Duisburg Hbf",
-      "reason": "RE2: Essen Hbf↔Duisburg Hbf 11 Min (Abw. 11 vom 30er-Raster)"
+    "Rostock Hbf": {
+      "quality": "isoliert",
+      "votes": []
     },
-    {
-      "station": "Pasewalk",
-      "reason": "RE71: Berlin Hbf↔Pasewalk 127 Min (Abw. 7 vom 30er-Raster)"
+    "Hamburg-Harburg": {
+      "quality": "voll",
+      "avg_deviation": 4.0,
+      "votes": [
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 124,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 124,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 124,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 124,
+          "implied": 4,
+          "deviation": 4
+        }
+      ]
     },
-    {
-      "station": "Hamm (Westf) Hbf",
-      "reason": "RE32: Essen Hbf↔Hamm (Westf) Hbf 43 Min (Abw. 13 vom 30er-Raster)"
+    "Berlin Südkreuz": {
+      "quality": "halb",
+      "avg_deviation": 13.0,
+      "votes": [
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 10,
+          "implied": 10,
+          "deviation": 20
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 10,
+          "implied": 10,
+          "deviation": 20
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 192,
+          "implied": 12,
+          "deviation": 18
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 192,
+          "implied": 12,
+          "deviation": 18
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 222,
+          "implied": 42,
+          "deviation": 12
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 222,
+          "implied": 42,
+          "deviation": 12
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 152,
+          "implied": 32,
+          "deviation": 2
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 152,
+          "implied": 32,
+          "deviation": 2
+        }
+      ]
     },
-    {
-      "station": "Stralsund Hbf",
-      "reason": "RE35X: Rostock Hbf↔Stralsund Hbf 44 Min (Abw. 14 vom 30er-Raster)"
+    "Mönchengladbach Hbf": {
+      "quality": "halb",
+      "avg_deviation": 8.2,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 67,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 77,
+          "implied": 17,
+          "deviation": 17
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 93,
+          "implied": 33,
+          "deviation": 27
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 103,
+          "implied": 43,
+          "deviation": 17
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RB37",
+          "tt": 97,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RB37",
+          "tt": 96,
+          "implied": 6,
+          "deviation": 6
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 80,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 91,
+          "implied": 1,
+          "deviation": 1
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RB37",
+          "tt": 24,
+          "implied": 54,
+          "deviation": 6
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RB37",
+          "tt": 24,
+          "implied": 54,
+          "deviation": 6
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE32",
+          "tt": 27,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE32",
+          "tt": 28,
+          "implied": 58,
+          "deviation": 2
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE90",
+          "tt": 27,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE90",
+          "tt": 27,
+          "implied": 57,
+          "deviation": 3
+        }
+      ]
     },
-    {
-      "station": "Berlin-Spandau",
-      "reason": "RE46: Berlin Hbf↔Berlin-Spandau 10 Min (Abw. 10 vom 30er-Raster)"
+    "Hagen Hbf": {
+      "quality": "halb",
+      "avg_deviation": 9.1,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE40",
+          "tt": 46,
+          "implied": 46,
+          "deviation": 14
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE40",
+          "tt": 46,
+          "implied": 46,
+          "deviation": 14
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "S30",
+          "tt": 57,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "S30",
+          "tt": 55,
+          "implied": 55,
+          "deviation": 5
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RB37",
+          "tt": 26,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RB37",
+          "tt": 26,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE40",
+          "tt": 26,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE40",
+          "tt": 26,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RB37",
+          "tt": 42,
+          "implied": 12,
+          "deviation": 12
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RB37",
+          "tt": 41,
+          "implied": 11,
+          "deviation": 11
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE30",
+          "tt": 48,
+          "implied": 18,
+          "deviation": 18
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE30",
+          "tt": 48,
+          "implied": 18,
+          "deviation": 18
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RB37",
+          "tt": 69,
+          "implied": 9,
+          "deviation": 9
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RB37",
+          "tt": 68,
+          "implied": 8,
+          "deviation": 8
+        }
+      ]
     },
-    {
-      "station": "Kassel-Wilhelmshöhe",
-      "reason": "RE32: Essen Hbf↔Kassel-Wilhelmshöhe 163 Min (Abw. 13 vom 30er-Raster)"
+    "Lübeck Hbf": {
+      "quality": "halb",
+      "avg_deviation": 14.7,
+      "votes": [
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 150,
+          "implied": 30,
+          "deviation": 0
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 150,
+          "implied": 30,
+          "deviation": 0
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE17",
+          "tt": 90,
+          "implied": 30,
+          "deviation": 0
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE17",
+          "tt": 91,
+          "implied": 31,
+          "deviation": 1
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 57,
+          "implied": 57,
+          "deviation": 27
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 57,
+          "implied": 57,
+          "deviation": 27
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE45",
+          "tt": 211,
+          "implied": 1,
+          "deviation": 29
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE45",
+          "tt": 211,
+          "implied": 1,
+          "deviation": 29
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 163,
+          "implied": 13,
+          "deviation": 17
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 163,
+          "implied": 13,
+          "deviation": 17
+        }
+      ]
     },
-    {
-      "station": "Münster (Westf) Hbf",
-      "reason": "RE2: Essen Hbf↔Münster (Westf) Hbf 50 Min (Abw. 10 vom 30er-Raster)"
+    "Duisburg Hbf": {
+      "quality": "halb",
+      "avg_deviation": 12.6,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE2",
+          "tt": 11,
+          "implied": 11,
+          "deviation": 11
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE2",
+          "tt": 13,
+          "implied": 13,
+          "deviation": 13
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 14,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 12,
+          "implied": 12,
+          "deviation": 12
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 40,
+          "implied": 40,
+          "deviation": 20
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 38,
+          "implied": 38,
+          "deviation": 22
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 27,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 26,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE2",
+          "tt": 13,
+          "implied": 43,
+          "deviation": 17
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE2",
+          "tt": 13,
+          "implied": 43,
+          "deviation": 17
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE32",
+          "tt": 16,
+          "implied": 46,
+          "deviation": 14
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE32",
+          "tt": 17,
+          "implied": 47,
+          "deviation": 13
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE5",
+          "tt": 18,
+          "implied": 48,
+          "deviation": 12
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE5",
+          "tt": 15,
+          "implied": 45,
+          "deviation": 15
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE32",
+          "tt": 48,
+          "implied": 48,
+          "deviation": 12
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE32",
+          "tt": 57,
+          "implied": 57,
+          "deviation": 3
+        }
+      ]
     },
-    {
-      "station": "Eberswalde Hbf",
-      "reason": "RE71: Berlin Hbf↔Eberswalde Hbf 75 Min (Abw. 15 vom 30er-Raster)"
+    "Pasewalk": {
+      "quality": "halb",
+      "avg_deviation": 7.4,
+      "votes": [
+        {
+          "other": "Berlin Hbf",
+          "line": "RE71",
+          "tt": 127,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE71",
+          "tt": 127,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 108,
+          "implied": 48,
+          "deviation": 12
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 108,
+          "implied": 48,
+          "deviation": 12
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 124,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 124,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 82,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 82,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 96,
+          "implied": 6,
+          "deviation": 6
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 96,
+          "implied": 6,
+          "deviation": 6
+        }
+      ]
     },
-    {
-      "station": "Bremen Hbf",
-      "reason": "RE9: Dortmund Hbf↔Bremen Hbf 159 Min (Abw. 9 vom 30er-Raster)"
+    "Hamm (Westf) Hbf": {
+      "quality": "halb",
+      "avg_deviation": 10.2,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 43,
+          "implied": 43,
+          "deviation": 17
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 48,
+          "implied": 48,
+          "deviation": 12
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE17",
+          "tt": 19,
+          "implied": 19,
+          "deviation": 19
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE17",
+          "tt": 19,
+          "implied": 19,
+          "deviation": 19
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 17,
+          "implied": 17,
+          "deviation": 17
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 22,
+          "implied": 22,
+          "deviation": 22
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 30,
+          "implied": 0,
+          "deviation": 0
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 34,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE30",
+          "tt": 98,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE30",
+          "tt": 98,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE32",
+          "tt": 80,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE32",
+          "tt": 87,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE32",
+          "tt": 112,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE32",
+          "tt": 127,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Hagen Hbf",
+          "line": "RE30",
+          "tt": 47,
+          "implied": 47,
+          "deviation": 13
+        },
+        {
+          "other": "Hagen Hbf",
+          "line": "RE30",
+          "tt": 47,
+          "implied": 47,
+          "deviation": 13
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE32",
+          "tt": 59,
+          "implied": 59,
+          "deviation": 1
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE32",
+          "tt": 62,
+          "implied": 2,
+          "deviation": 2
+        }
+      ]
     },
-    {
-      "station": "Berlin Hbf (tief)",
-      "reason": "θ-Widerspruch über Rostock Hbf (RE35)"
+    "Stralsund Hbf": {
+      "quality": "halb",
+      "avg_deviation": 7.4,
+      "votes": [
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 44,
+          "implied": 44,
+          "deviation": 16
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 44,
+          "implied": 44,
+          "deviation": 16
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 52,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 52,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 53,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 53,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 53,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 53,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 183,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 183,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 183,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 183,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 142,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 142,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 164,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 164,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35X",
+          "tt": 58,
+          "implied": 58,
+          "deviation": 2
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35X",
+          "tt": 58,
+          "implied": 58,
+          "deviation": 2
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35",
+          "tt": 66,
+          "implied": 6,
+          "deviation": 6
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35",
+          "tt": 66,
+          "implied": 6,
+          "deviation": 6
+        }
+      ]
     },
-    {
-      "station": "Hamburg-Elbbrücken",
-      "reason": "RE91: Rostock Hbf↔Hamburg-Elbbrücken 113 Min (Abw. 7 vom 30er-Raster)"
+    "Berlin-Spandau": {
+      "quality": "halb",
+      "avg_deviation": 11.4,
+      "votes": [
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 10,
+          "implied": 10,
+          "deviation": 10
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 10,
+          "implied": 10,
+          "deviation": 10
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE77",
+          "tt": 12,
+          "implied": 12,
+          "deviation": 12
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE77",
+          "tt": 12,
+          "implied": 12,
+          "deviation": 12
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 127,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 127,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE45",
+          "tt": 23,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE45",
+          "tt": 23,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 23,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 23,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE45",
+          "tt": 186,
+          "implied": 36,
+          "deviation": 24
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE45",
+          "tt": 186,
+          "implied": 36,
+          "deviation": 24
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE46",
+          "tt": 137,
+          "implied": 47,
+          "deviation": 13
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE46",
+          "tt": 137,
+          "implied": 47,
+          "deviation": 13
+        }
+      ]
     },
-    {
-      "station": "Büchen",
-      "reason": "RE77: Berlin Hbf↔Büchen 108 Min (Abw. 12 vom 30er-Raster)"
+    "Kassel-Wilhelmshöhe": {
+      "quality": "halb",
+      "avg_deviation": 8.9,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 163,
+          "implied": 43,
+          "deviation": 17
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE32",
+          "tt": 162,
+          "implied": 42,
+          "deviation": 18
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 137,
+          "implied": 17,
+          "deviation": 17
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE32",
+          "tt": 136,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 150,
+          "implied": 0,
+          "deviation": 0
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE32",
+          "tt": 148,
+          "implied": 58,
+          "deviation": 2
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE32",
+          "tt": 200,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE32",
+          "tt": 201,
+          "implied": 51,
+          "deviation": 9
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE32",
+          "tt": 232,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE32",
+          "tt": 241,
+          "implied": 1,
+          "deviation": 1
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE32",
+          "tt": 179,
+          "implied": 59,
+          "deviation": 1
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE32",
+          "tt": 176,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Hamm (Westf) Hbf",
+          "line": "RE32",
+          "tt": 109,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Hamm (Westf) Hbf",
+          "line": "RE32",
+          "tt": 109,
+          "implied": 49,
+          "deviation": 11
+        }
+      ]
     },
-    {
-      "station": "Osnabrück Hbf",
-      "reason": "RE17: Dortmund Hbf↔Osnabrück Hbf 101 Min (Abw. 11 vom 30er-Raster)"
+    "Münster (Westf) Hbf": {
+      "quality": "halb",
+      "avg_deviation": 14.9,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE2",
+          "tt": 50,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE2",
+          "tt": 50,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE9",
+          "tt": 56,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE9",
+          "tt": 56,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE9",
+          "tt": 46,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE9",
+          "tt": 46,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE2",
+          "tt": 78,
+          "implied": 48,
+          "deviation": 12
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE2",
+          "tt": 80,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE30",
+          "tt": 126,
+          "implied": 36,
+          "deviation": 24
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE30",
+          "tt": 126,
+          "implied": 36,
+          "deviation": 24
+        },
+        {
+          "other": "Hagen Hbf",
+          "line": "RE30",
+          "tt": 75,
+          "implied": 15,
+          "deviation": 15
+        },
+        {
+          "other": "Hagen Hbf",
+          "line": "RE30",
+          "tt": 75,
+          "implied": 15,
+          "deviation": 15
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE2",
+          "tt": 63,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE2",
+          "tt": 65,
+          "implied": 5,
+          "deviation": 5
+        },
+        {
+          "other": "Hamm (Westf) Hbf",
+          "line": "RE30",
+          "tt": 25,
+          "implied": 25,
+          "deviation": 25
+        },
+        {
+          "other": "Hamm (Westf) Hbf",
+          "line": "RE30",
+          "tt": 25,
+          "implied": 25,
+          "deviation": 25
+        },
+        {
+          "other": "Hamm (Westf) Hbf",
+          "line": "RE30",
+          "tt": 25,
+          "implied": 25,
+          "deviation": 25
+        },
+        {
+          "other": "Hamm (Westf) Hbf",
+          "line": "RE30",
+          "tt": 25,
+          "implied": 25,
+          "deviation": 25
+        }
+      ]
     },
-    {
-      "station": "Hagenow Land",
-      "reason": "RE46: Berlin Hbf↔Hagenow Land 100 Min (Abw. 10 vom 30er-Raster)"
+    "Eberswalde Hbf": {
+      "quality": "halb",
+      "avg_deviation": 10.3,
+      "votes": [
+        {
+          "other": "Berlin Hbf",
+          "line": "RE71",
+          "tt": 75,
+          "implied": 15,
+          "deviation": 15
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE71",
+          "tt": 75,
+          "implied": 15,
+          "deviation": 15
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 155,
+          "implied": 35,
+          "deviation": 25
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 155,
+          "implied": 35,
+          "deviation": 25
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 180,
+          "implied": 0,
+          "deviation": 0
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 180,
+          "implied": 0,
+          "deviation": 0
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 35,
+          "implied": 5,
+          "deviation": 5
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 35,
+          "implied": 5,
+          "deviation": 5
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 40,
+          "implied": 10,
+          "deviation": 10
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 40,
+          "implied": 10,
+          "deviation": 10
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35X",
+          "tt": 45,
+          "implied": 45,
+          "deviation": 15
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35X",
+          "tt": 45,
+          "implied": 45,
+          "deviation": 15
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35",
+          "tt": 54,
+          "implied": 54,
+          "deviation": 6
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35",
+          "tt": 54,
+          "implied": 54,
+          "deviation": 6
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE71",
+          "tt": 50,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE71",
+          "tt": 50,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35X",
+          "tt": 105,
+          "implied": 45,
+          "deviation": 15
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35X",
+          "tt": 105,
+          "implied": 45,
+          "deviation": 15
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35",
+          "tt": 122,
+          "implied": 2,
+          "deviation": 2
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35",
+          "tt": 122,
+          "implied": 2,
+          "deviation": 2
+        }
+      ]
     },
-    {
-      "station": "Kiel Hbf",
-      "reason": "RE46: Berlin Hbf↔Kiel Hbf 227 Min (Abw. 13 vom 30er-Raster)"
+    "Bremen Hbf": {
+      "quality": "halb",
+      "avg_deviation": 13.5,
+      "votes": [
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE9",
+          "tt": 159,
+          "implied": 39,
+          "deviation": 21
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE9",
+          "tt": 159,
+          "implied": 39,
+          "deviation": 21
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE9",
+          "tt": 149,
+          "implied": 59,
+          "deviation": 1
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE9",
+          "tt": 149,
+          "implied": 59,
+          "deviation": 1
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 49,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 49,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 49,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 49,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Kassel-Wilhelmshöhe",
+          "line": "RE7",
+          "tt": 136,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Kassel-Wilhelmshöhe",
+          "line": "RE7",
+          "tt": 136,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Münster (Westf) Hbf",
+          "line": "RE9",
+          "tt": 99,
+          "implied": 39,
+          "deviation": 21
+        },
+        {
+          "other": "Münster (Westf) Hbf",
+          "line": "RE9",
+          "tt": 99,
+          "implied": 39,
+          "deviation": 21
+        }
+      ]
     },
-    {
-      "station": "Zwickau Hbf",
-      "reason": "RE35X: Rostock Hbf↔Zwickau Hbf 346 Min (Abw. 14 vom 30er-Raster)"
+    "Berlin Hbf (tief)": {
+      "quality": "halb",
+      "avg_deviation": 10.1,
+      "votes": [
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 184,
+          "implied": 4,
+          "deviation": 26
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 184,
+          "implied": 4,
+          "deviation": 26
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 214,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 214,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 140,
+          "implied": 20,
+          "deviation": 10
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 140,
+          "implied": 20,
+          "deviation": 10
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 5,
+          "implied": 35,
+          "deviation": 5
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 5,
+          "implied": 35,
+          "deviation": 5
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 5,
+          "implied": 35,
+          "deviation": 5
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 5,
+          "implied": 35,
+          "deviation": 5
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE45",
+          "tt": 9,
+          "implied": 39,
+          "deviation": 9
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE45",
+          "tt": 9,
+          "implied": 39,
+          "deviation": 9
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE45",
+          "tt": 199,
+          "implied": 49,
+          "deviation": 19
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE45",
+          "tt": 199,
+          "implied": 49,
+          "deviation": 19
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35X",
+          "tt": 74,
+          "implied": 14,
+          "deviation": 16
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35X",
+          "tt": 74,
+          "implied": 14,
+          "deviation": 16
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35",
+          "tt": 88,
+          "implied": 28,
+          "deviation": 2
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35",
+          "tt": 88,
+          "implied": 28,
+          "deviation": 2
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35X",
+          "tt": 134,
+          "implied": 14,
+          "deviation": 16
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35X",
+          "tt": 134,
+          "implied": 14,
+          "deviation": 16
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35",
+          "tt": 156,
+          "implied": 36,
+          "deviation": 6
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35",
+          "tt": 156,
+          "implied": 36,
+          "deviation": 6
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE45",
+          "tt": 11,
+          "implied": 11,
+          "deviation": 19
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE45",
+          "tt": 11,
+          "implied": 11,
+          "deviation": 19
+        },
+        {
+          "other": "Eberswalde Hbf",
+          "line": "RE35X",
+          "tt": 27,
+          "implied": 27,
+          "deviation": 3
+        },
+        {
+          "other": "Eberswalde Hbf",
+          "line": "RE35X",
+          "tt": 27,
+          "implied": 27,
+          "deviation": 3
+        },
+        {
+          "other": "Eberswalde Hbf",
+          "line": "RE35",
+          "tt": 32,
+          "implied": 32,
+          "deviation": 2
+        },
+        {
+          "other": "Eberswalde Hbf",
+          "line": "RE35",
+          "tt": 32,
+          "implied": 32,
+          "deviation": 2
+        }
+      ]
     },
-    {
-      "station": "Frankfurt (Main) Hbf",
-      "reason": "RE40: Bochum Hbf↔Frankfurt (Main) Hbf 223 Min (Abw. 13 vom 30er-Raster)"
+    "Hamburg-Elbbrücken": {
+      "quality": "halb",
+      "avg_deviation": 7.5,
+      "votes": [
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 113,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 113,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 113,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 113,
+          "implied": 53,
+          "deviation": 7
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 7,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE45",
+          "tt": 7,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 5,
+          "implied": 5,
+          "deviation": 5
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 8,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 5,
+          "implied": 5,
+          "deviation": 5
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 8,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 8,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 8,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 8,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 8,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE45",
+          "tt": 161,
+          "implied": 11,
+          "deviation": 11
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE45",
+          "tt": 161,
+          "implied": 11,
+          "deviation": 11
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE45",
+          "tt": 46,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE45",
+          "tt": 46,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 172,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 172,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 172,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 172,
+          "implied": 52,
+          "deviation": 8
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE45",
+          "tt": 136,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE45",
+          "tt": 136,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE90b",
+          "tt": 57,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE90b",
+          "tt": 60,
+          "implied": 0,
+          "deviation": 0
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE90b",
+          "tt": 57,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE90b",
+          "tt": 60,
+          "implied": 0,
+          "deviation": 0
+        },
+        {
+          "other": "Berlin Hbf (tief)",
+          "line": "RE45",
+          "tt": 149,
+          "implied": 59,
+          "deviation": 1
+        },
+        {
+          "other": "Berlin Hbf (tief)",
+          "line": "RE45",
+          "tt": 149,
+          "implied": 59,
+          "deviation": 1
+        }
+      ]
+    },
+    "Büchen": {
+      "quality": "halb",
+      "avg_deviation": 10.6,
+      "votes": [
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 121,
+          "implied": 1,
+          "deviation": 29
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 121,
+          "implied": 1,
+          "deviation": 29
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE77",
+          "tt": 108,
+          "implied": 48,
+          "deviation": 18
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE77",
+          "tt": 108,
+          "implied": 48,
+          "deviation": 18
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 87,
+          "implied": 27,
+          "deviation": 3
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 87,
+          "implied": 27,
+          "deviation": 3
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 86,
+          "implied": 26,
+          "deviation": 4
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 86,
+          "implied": 26,
+          "deviation": 4
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 31,
+          "implied": 31,
+          "deviation": 1
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 31,
+          "implied": 31,
+          "deviation": 1
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 31,
+          "implied": 31,
+          "deviation": 1
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 31,
+          "implied": 31,
+          "deviation": 1
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 134,
+          "implied": 44,
+          "deviation": 14
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 134,
+          "implied": 44,
+          "deviation": 14
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE46",
+          "tt": 27,
+          "implied": 57,
+          "deviation": 27
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE46",
+          "tt": 27,
+          "implied": 57,
+          "deviation": 27
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 146,
+          "implied": 26,
+          "deviation": 4
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 146,
+          "implied": 26,
+          "deviation": 4
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 145,
+          "implied": 25,
+          "deviation": 5
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 145,
+          "implied": 25,
+          "deviation": 5
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE46",
+          "tt": 108,
+          "implied": 48,
+          "deviation": 18
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE46",
+          "tt": 108,
+          "implied": 48,
+          "deviation": 18
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE77",
+          "tt": 94,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE77",
+          "tt": 94,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE91",
+          "tt": 20,
+          "implied": 20,
+          "deviation": 10
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE91",
+          "tt": 20,
+          "implied": 20,
+          "deviation": 10
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE91",
+          "tt": 20,
+          "implied": 20,
+          "deviation": 10
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE91",
+          "tt": 20,
+          "implied": 20,
+          "deviation": 10
+        }
+      ]
+    },
+    "Osnabrück Hbf": {
+      "quality": "halb",
+      "avg_deviation": 10.4,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE2",
+          "tt": 89,
+          "implied": 29,
+          "deviation": 1
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE2",
+          "tt": 88,
+          "implied": 28,
+          "deviation": 2
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE17",
+          "tt": 101,
+          "implied": 41,
+          "deviation": 11
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE17",
+          "tt": 101,
+          "implied": 41,
+          "deviation": 11
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE9",
+          "tt": 94,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Dortmund Hbf",
+          "line": "RE9",
+          "tt": 94,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE9",
+          "tt": 84,
+          "implied": 54,
+          "deviation": 24
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE9",
+          "tt": 84,
+          "implied": 54,
+          "deviation": 24
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE2",
+          "tt": 117,
+          "implied": 27,
+          "deviation": 3
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE2",
+          "tt": 118,
+          "implied": 28,
+          "deviation": 2
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE2",
+          "tt": 102,
+          "implied": 42,
+          "deviation": 12
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE2",
+          "tt": 103,
+          "implied": 43,
+          "deviation": 13
+        },
+        {
+          "other": "Hamm (Westf) Hbf",
+          "line": "RE17",
+          "tt": 79,
+          "implied": 19,
+          "deviation": 11
+        },
+        {
+          "other": "Hamm (Westf) Hbf",
+          "line": "RE17",
+          "tt": 79,
+          "implied": 19,
+          "deviation": 11
+        },
+        {
+          "other": "Münster (Westf) Hbf",
+          "line": "RE2",
+          "tt": 35,
+          "implied": 35,
+          "deviation": 5
+        },
+        {
+          "other": "Münster (Westf) Hbf",
+          "line": "RE2",
+          "tt": 34,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Münster (Westf) Hbf",
+          "line": "RE9",
+          "tt": 34,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Münster (Westf) Hbf",
+          "line": "RE9",
+          "tt": 34,
+          "implied": 34,
+          "deviation": 4
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE9",
+          "tt": 59,
+          "implied": 59,
+          "deviation": 29
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE9",
+          "tt": 59,
+          "implied": 59,
+          "deviation": 29
+        }
+      ]
+    },
+    "Erfurt Hbf": {
+      "quality": "voll",
+      "avg_deviation": 3.5,
+      "votes": [
+        {
+          "other": "Kassel-Wilhelmshöhe",
+          "line": "RE24",
+          "tt": 88,
+          "implied": 28,
+          "deviation": 2
+        },
+        {
+          "other": "Kassel-Wilhelmshöhe",
+          "line": "RE24",
+          "tt": 85,
+          "implied": 25,
+          "deviation": 5
+        }
+      ]
+    },
+    "Hagenow Land": {
+      "quality": "halb",
+      "avg_deviation": 12.6,
+      "votes": [
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 100,
+          "implied": 40,
+          "deviation": 20
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 100,
+          "implied": 40,
+          "deviation": 20
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE77",
+          "tt": 88,
+          "implied": 28,
+          "deviation": 28
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE77",
+          "tt": 88,
+          "implied": 28,
+          "deviation": 28
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 65,
+          "implied": 5,
+          "deviation": 5
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 65,
+          "implied": 5,
+          "deviation": 5
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 64,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE91",
+          "tt": 64,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 56,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 56,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 57,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE91",
+          "tt": 57,
+          "implied": 57,
+          "deviation": 3
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 113,
+          "implied": 23,
+          "deviation": 23
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 113,
+          "implied": 23,
+          "deviation": 23
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE46",
+          "tt": 48,
+          "implied": 18,
+          "deviation": 18
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE46",
+          "tt": 48,
+          "implied": 18,
+          "deviation": 18
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 124,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 124,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 123,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE91",
+          "tt": 123,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE46",
+          "tt": 87,
+          "implied": 27,
+          "deviation": 27
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE46",
+          "tt": 87,
+          "implied": 27,
+          "deviation": 27
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE77",
+          "tt": 74,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE77",
+          "tt": 74,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE91",
+          "tt": 45,
+          "implied": 45,
+          "deviation": 15
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE91",
+          "tt": 45,
+          "implied": 45,
+          "deviation": 15
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE91",
+          "tt": 46,
+          "implied": 46,
+          "deviation": 14
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE91",
+          "tt": 46,
+          "implied": 46,
+          "deviation": 14
+        },
+        {
+          "other": "Büchen",
+          "line": "RE46",
+          "tt": 19,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Büchen",
+          "line": "RE46",
+          "tt": 19,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Büchen",
+          "line": "RE77",
+          "tt": 19,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Büchen",
+          "line": "RE77",
+          "tt": 19,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Büchen",
+          "line": "RE91",
+          "tt": 19,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Büchen",
+          "line": "RE91",
+          "tt": 19,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Büchen",
+          "line": "RE91",
+          "tt": 19,
+          "implied": 49,
+          "deviation": 11
+        },
+        {
+          "other": "Büchen",
+          "line": "RE91",
+          "tt": 19,
+          "implied": 49,
+          "deviation": 11
+        }
+      ]
+    },
+    "Kiel Hbf": {
+      "quality": "halb",
+      "avg_deviation": 14.6,
+      "votes": [
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 227,
+          "implied": 47,
+          "deviation": 13
+        },
+        {
+          "other": "Berlin Hbf",
+          "line": "RE46",
+          "tt": 227,
+          "implied": 47,
+          "deviation": 13
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 76,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 78,
+          "implied": 18,
+          "deviation": 18
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 76,
+          "implied": 16,
+          "deviation": 16
+        },
+        {
+          "other": "Hamburg-Harburg",
+          "line": "RE90b",
+          "tt": 78,
+          "implied": 18,
+          "deviation": 18
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 240,
+          "implied": 30,
+          "deviation": 30
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE46",
+          "tt": 240,
+          "implied": 30,
+          "deviation": 30
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE46",
+          "tt": 70,
+          "implied": 40,
+          "deviation": 20
+        },
+        {
+          "other": "Lübeck Hbf",
+          "line": "RE46",
+          "tt": 70,
+          "implied": 40,
+          "deviation": 20
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE46",
+          "tt": 214,
+          "implied": 34,
+          "deviation": 26
+        },
+        {
+          "other": "Berlin-Spandau",
+          "line": "RE46",
+          "tt": 214,
+          "implied": 34,
+          "deviation": 26
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE90b",
+          "tt": 128,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE90b",
+          "tt": 130,
+          "implied": 10,
+          "deviation": 10
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE90b",
+          "tt": 128,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE90b",
+          "tt": 130,
+          "implied": 10,
+          "deviation": 10
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE90b",
+          "tt": 68,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE90b",
+          "tt": 67,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE90b",
+          "tt": 68,
+          "implied": 8,
+          "deviation": 8
+        },
+        {
+          "other": "Hamburg-Elbbrücken",
+          "line": "RE90b",
+          "tt": 67,
+          "implied": 7,
+          "deviation": 7
+        },
+        {
+          "other": "Büchen",
+          "line": "RE46",
+          "tt": 104,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Büchen",
+          "line": "RE46",
+          "tt": 104,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Hagenow Land",
+          "line": "RE46",
+          "tt": 125,
+          "implied": 5,
+          "deviation": 5
+        },
+        {
+          "other": "Hagenow Land",
+          "line": "RE46",
+          "tt": 125,
+          "implied": 5,
+          "deviation": 5
+        }
+      ]
+    },
+    "Saarbrücken Hbf": {
+      "quality": "halb",
+      "avg_deviation": 11.7,
+      "votes": [
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE90",
+          "tt": 324,
+          "implied": 54,
+          "deviation": 6
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE90",
+          "tt": 326,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE14",
+          "tt": 266,
+          "implied": 26,
+          "deviation": 26
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE14",
+          "tt": 266,
+          "implied": 26,
+          "deviation": 26
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE90",
+          "tt": 295,
+          "implied": 55,
+          "deviation": 5
+        },
+        {
+          "other": "Mönchengladbach Hbf",
+          "line": "RE90",
+          "tt": 297,
+          "implied": 57,
+          "deviation": 3
+        }
+      ]
+    },
+    "Zwickau Hbf": {
+      "quality": "halb",
+      "avg_deviation": 6.9,
+      "votes": [
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 346,
+          "implied": 46,
+          "deviation": 14
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35X",
+          "tt": 346,
+          "implied": 46,
+          "deviation": 14
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 422,
+          "implied": 2,
+          "deviation": 2
+        },
+        {
+          "other": "Rostock Hbf",
+          "line": "RE35",
+          "tt": 422,
+          "implied": 2,
+          "deviation": 2
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 152,
+          "implied": 2,
+          "deviation": 2
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35X",
+          "tt": 152,
+          "implied": 2,
+          "deviation": 2
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 198,
+          "implied": 48,
+          "deviation": 12
+        },
+        {
+          "other": "Berlin Südkreuz",
+          "line": "RE35",
+          "tt": 198,
+          "implied": 48,
+          "deviation": 12
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35X",
+          "tt": 236,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35X",
+          "tt": 236,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35",
+          "tt": 296,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Pasewalk",
+          "line": "RE35",
+          "tt": 296,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35X",
+          "tt": 296,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35X",
+          "tt": 296,
+          "implied": 56,
+          "deviation": 4
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35",
+          "tt": 364,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Stralsund Hbf",
+          "line": "RE35",
+          "tt": 364,
+          "implied": 4,
+          "deviation": 4
+        },
+        {
+          "other": "Kassel-Wilhelmshöhe",
+          "line": "RE24",
+          "tt": 194,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Kassel-Wilhelmshöhe",
+          "line": "RE24",
+          "tt": 193,
+          "implied": 13,
+          "deviation": 13
+        },
+        {
+          "other": "Eberswalde Hbf",
+          "line": "RE35X",
+          "tt": 189,
+          "implied": 9,
+          "deviation": 9
+        },
+        {
+          "other": "Eberswalde Hbf",
+          "line": "RE35X",
+          "tt": 189,
+          "implied": 9,
+          "deviation": 9
+        },
+        {
+          "other": "Eberswalde Hbf",
+          "line": "RE35",
+          "tt": 240,
+          "implied": 0,
+          "deviation": 0
+        },
+        {
+          "other": "Eberswalde Hbf",
+          "line": "RE35",
+          "tt": 240,
+          "implied": 0,
+          "deviation": 0
+        },
+        {
+          "other": "Berlin Hbf (tief)",
+          "line": "RE35X",
+          "tt": 159,
+          "implied": 9,
+          "deviation": 9
+        },
+        {
+          "other": "Berlin Hbf (tief)",
+          "line": "RE35X",
+          "tt": 159,
+          "implied": 9,
+          "deviation": 9
+        },
+        {
+          "other": "Berlin Hbf (tief)",
+          "line": "RE35",
+          "tt": 205,
+          "implied": 55,
+          "deviation": 5
+        },
+        {
+          "other": "Berlin Hbf (tief)",
+          "line": "RE35",
+          "tt": 205,
+          "implied": 55,
+          "deviation": 5
+        },
+        {
+          "other": "Erfurt Hbf",
+          "line": "RE24",
+          "tt": 103,
+          "implied": 13,
+          "deviation": 13
+        },
+        {
+          "other": "Erfurt Hbf",
+          "line": "RE24",
+          "tt": 105,
+          "implied": 15,
+          "deviation": 15
+        }
+      ]
+    },
+    "Frankfurt (Main) Hbf": {
+      "quality": "halb",
+      "avg_deviation": 13.5,
+      "votes": [
+        {
+          "other": "Essen Hbf",
+          "line": "RE40",
+          "tt": 243,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Essen Hbf",
+          "line": "RE40",
+          "tt": 243,
+          "implied": 3,
+          "deviation": 3
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE40",
+          "tt": 223,
+          "implied": 13,
+          "deviation": 13
+        },
+        {
+          "other": "Bochum Hbf",
+          "line": "RE40",
+          "tt": 223,
+          "implied": 13,
+          "deviation": 13
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE5",
+          "tt": 197,
+          "implied": 47,
+          "deviation": 13
+        },
+        {
+          "other": "Düsseldorf Hbf",
+          "line": "RE5",
+          "tt": 200,
+          "implied": 50,
+          "deviation": 10
+        },
+        {
+          "other": "Hagen Hbf",
+          "line": "RE40",
+          "tt": 194,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Hagen Hbf",
+          "line": "RE40",
+          "tt": 194,
+          "implied": 14,
+          "deviation": 14
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE5",
+          "tt": 218,
+          "implied": 38,
+          "deviation": 22
+        },
+        {
+          "other": "Duisburg Hbf",
+          "line": "RE5",
+          "tt": 218,
+          "implied": 38,
+          "deviation": 22
+        },
+        {
+          "other": "Kassel-Wilhelmshöhe",
+          "line": "RE7",
+          "tt": 126,
+          "implied": 6,
+          "deviation": 6
+        },
+        {
+          "other": "Kassel-Wilhelmshöhe",
+          "line": "RE7",
+          "tt": 126,
+          "implied": 6,
+          "deviation": 6
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE7",
+          "tt": 265,
+          "implied": 25,
+          "deviation": 25
+        },
+        {
+          "other": "Bremen Hbf",
+          "line": "RE7",
+          "tt": 265,
+          "implied": 25,
+          "deviation": 25
+        }
+      ]
     }
-  ],
+  },
   "capacity": {
     "Düsseldorf Hbf": {
       "source": "amtlich",

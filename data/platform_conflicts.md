@@ -2,20 +2,23 @@
 
 Vergleich der aus Wagenzahl/Kupplung errechneten Zuglänge gegen reale Bahnsteiglängen (DB InfraGO-Nettobaulänge wo vorhanden, sonst OpenStreetMap/Overpass). SDO-Toleranz: 25 m — Überhang bis dahin gilt als unkritisch (Selective Door Opening bzw. bereits eingeplante Bahnsteig-verlängerung), erst darüber als echter Prüffall.
 
-- **1 kritisch, amtliche Daten** (DB InfraGO — ernstzunehmender Befund)
+- **0 kritisch, fiktive Planung** (RE-Netz-2030-eigener Ausbau, siehe data/manual_overrides.json)
+- **0 kritisch, amtliche Daten** (DB InfraGO — ernstzunehmender Befund)
 - **49 kritisch, hohe OSM-Konfidenz** (≥3 unabhängige OSM-Treffer, ungeprüft)
 - **60 kritisch, niedrige OSM-Konfidenz** (<3 Treffer — meist OSM-Lücke statt echtes Problem)
 - **36 gering** (SDO ausreichend)
-- **255 unauffällig**
+- **256 unauffällig**
 - **73 ohne Bahnsteigdaten** (manuell zu prüfen)
 
 > **Befund zur Datenqualität:** Für die 25 wichtigsten Knotenbahnhöfe wurden die OSM-Werte gegen die amtliche DB InfraGO-Nettobaulänge geprüft (tools/dbinfrago_platforms.py). Ergebnis: **24 von 25 zuvor als 'kritisch' gemeldeten Fällen waren falscher Alarm** — OSM erfasst an großen, komplexen Bahnhöfen (Köln, Düsseldorf, Erfurt, Mainz Hbf u.a.) die echten Fernbahnsteige teils gar nicht, sondern findet nur vereinzelte, unpassende Objekte (z.B. Straßenbahn-Haltestellen) in der Nähe. **Nur Hamburg-Elbbrücken (210 statt benötigter 236 m für die RE90b-Doppeltraktion) ist mit amtlichen Daten ein echter, wenn auch knapper Grenzfall.** Für alle Stationen ohne amtliche Prüfung gilt weiterhin: OSM-Konfidenz 'niedrig' ist mit hoher Wahrschein-lichkeit eine Datenlücke, kein echtes Bahnsteigproblem — auch 'hohe' OSM-Konfidenz war in den geprüften Stichproben nicht durchgehend verlässlich (z.B. Mainz Hbf: 10 OSM-Treffer, dennoch nur 83 m statt amtlich 210+ m). Bei jedem Kritisch-Fund ohne amtliche Bestätigung vor einer Maßnahme gegenprüfen.
 
+## Kritisch — fiktive RE-Netz-2030-Planung
+
+Keine.
+
 ## Kritisch — amtliche DB-InfraGO-Daten
 
-| Station | Linie | Wagen | benötigt | verfügbar | Überhang |
-|---|---|---|---|---|---|
-| Hamburg-Elbbrücken | RE90b | 3+6 | 236 m | 210 m | **+26 m** |
+Keine.
 
 ## Kritisch — hohe OSM-Konfidenz (ungeprüft)
 

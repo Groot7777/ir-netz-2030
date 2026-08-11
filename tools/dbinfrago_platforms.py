@@ -1,18 +1,28 @@
 #!/usr/bin/env python3
 """
-Holt Bahnsteig-Nettobaulängen von dbinfrago.com für eine feste Liste
-wichtiger Knotenbahnhöfe, bei denen die OSM/Overpass-Daten unzuverlässig
-oder fehlend waren (siehe data/platform_conflicts.md).
+Holt Bahnsteig-Nettobaulängen von dbinfrago.com für alle deutschen
+Stationen im Netz (Zuordnung Name -> Slug in data/de_station_slugs.json,
+per Abgleich der HTML-Stationssuche mit den Stationsnamen aus der App
+ermittelt — siehe Kommentar unten für die Herleitung).
 
 WICHTIG: dbinfrago.com weist selbst darauf hin, dass die "Nettobaulänge"
 NICHT für die Zugplanung geeignet ist -- maßgeblich ist die "Bahnsteig-
 nutzlänge" (abhängig von Signalstandorten, separat beim Betreiber zu
 erfragen). Die hier geholten Werte sind trotzdem eine sehr viel
-verlässlichere Obergrenze als die OSM-Schätzung und werden als
-"amtliche Obergrenze, keine exakte Nutzlänge" gekennzeichnet.
+verlässlichere Obergrenze als die OSM-Schätzung.
+
+Speichert pro Station ALLE Gleise mit ihrer individuellen Länge (nicht
+nur das Maximum), damit z.B. "Gleis 5: 200m, Gleis 7: 400m" abrufbar
+bleibt für eine spätere gleisscharfe Prüfung.
+
+Cached jede Rohantwort unter data/dbinfrago_cache/<slug>.html, damit ein
+Abbruch mitten im Lauf (346 Stationen, ~10min) ohne Neuabfrage der schon
+erledigten Stationen fortsetzbar ist.
 
 Nutzung:
-    python3 tools/dbinfrago_platforms.py --out data/dbinfrago_platforms.json
+    python3 tools/dbinfrago_platforms.py \
+        --slugs data/de_station_slugs.json \
+        --out data/dbinfrago_platforms.json
 """
 import argparse
 import json
@@ -21,49 +31,28 @@ import re
 import subprocess
 import time
 
-STATIONS = {
-    "Berlin Hbf": "Berlin-Hauptbahnhof-12669788",
-    "Berlin Hbf (tief)": "Berlin-Hauptbahnhof-12669788",
-    "Bochum Hbf": "Bochum-Hbf-12675848",
-    "Lübeck Hbf": "Luebeck-Hbf-12670852",
-    "Duisburg Hbf": "Duisburg-Hbf-12667688",
-    "Kassel-Wilhelmshöhe": "Kassel-Wilhelmshoehe-12672286",
-    "Erfurt Hbf": "Erfurt-Hbf-12677056",
-    "Kiel Hbf": "Kiel-Hbf-12673586",
-    "Neuss Hbf": "Neuss-Hbf-12668648",
-    "Freiberg (Sachs)": "Freiberg-Sachs--12668092",
-    "Chemnitz Hbf": "Chemnitz-Hbf-12673382",
-    "Berlin Südkreuz": "Berlin-Suedkreuz-12668128",
-    "Hamburg-Elbbrücken": "Elbbruecken-12671036",
-    "Hamburg-Harburg": "Hamburg-Harburg-12668078",
-    "Berlin-Spandau": "Berlin-Spandau-12668216",
-    "Münster (Westf) Hbf": "Muenster-Westf-Hbf-12668946",
-    "Osnabrück Hbf": "Osnabrueck-Hbf-12668138",
-    "Pasewalk": "Pasewalk-12677978",
-    "Eberswalde Hbf": "Eberswalde-Hbf-12668622",
-    "Hagenow Land": "Hagenow-Land-12675542",
-    "Zwickau Hbf": "Zwickau-Sachs-Hbf-12677206",
-    "Bad Kleinen": "Bad-Kleinen-12675404",
-    "Plattling": "Plattling-12671320",
-    "Oldenburg (Oldb) Hbf": "Oldenburg-Oldb-Hbf-12668824",
-    # bereits per WebFetch geprüft, hier zur Vollständigkeit mit aufgenommen:
-    "Düsseldorf Hbf": "Duesseldorf-Hbf-12668428",
-}
-
 BASE = "https://www.dbinfrago.com/web/bahnhoefe/leistungen/stationsnutzung/stationshalt/stationsausstattung/"
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+CACHE_DIR = pathlib.Path("data/dbinfrago_cache")
 
-ROW_RE = re.compile(
-    r"Bahnsteigabschnittsmarkierungen\s*\|.*?<p>(.*?)</p>", re.S
-)
+ROW_RE = re.compile(r"Bahnsteigabschnittsmarkierungen\s*\|.*?<p>(.*?)</p>", re.S)
 
 
-def fetch_html(slug):
-    r = subprocess.run(
-        ["curl", "-sS", "-A", UA, "--max-time", "30", BASE + slug],
-        capture_output=True, text=True,
-    )
-    return r.stdout
+def fetch_html(slug, force=False, max_retries=3):
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_path = CACHE_DIR / f"{slug}.html"
+    if cache_path.exists() and not force:
+        return cache_path.read_text(encoding="utf-8", errors="replace")
+    for attempt in range(1, max_retries + 1):
+        r = subprocess.run(
+            ["curl", "-sS", "-A", UA, "--max-time", "30", BASE + slug],
+            capture_output=True, text=True,
+        )
+        if r.stdout and "Nettobaulänge" in r.stdout:
+            cache_path.write_text(r.stdout, encoding="utf-8")
+            return r.stdout
+        time.sleep(3 * attempt)
+    return r.stdout or ""
 
 
 def parse_tracks(html):
@@ -89,28 +78,38 @@ def parse_tracks(html):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--slugs", default="data/de_station_slugs.json")
     ap.add_argument("--out", default="data/dbinfrago_platforms.json")
+    ap.add_argument("--limit", type=int, default=None, help="nur die ersten N Stationen (Test)")
+    ap.add_argument("--force", action="store_true", help="Cache ignorieren, alles neu abfragen")
     args = ap.parse_args()
 
+    stations = json.loads(pathlib.Path(args.slugs).read_text(encoding="utf-8"))
+    items = list(stations.items())
+    if args.limit:
+        items = items[: args.limit]
+
     out = {}
-    for name, slug in STATIONS.items():
-        print(f"  {name} ({slug}) ...")
-        html = fetch_html(slug)
+    n_ok = n_fail = 0
+    for i, (name, slug) in enumerate(items, 1):
+        html = fetch_html(slug, force=args.force)
         tracks = parse_tracks(html)
         if tracks:
             best = max(t["length_m"] for t in tracks)
             out[name] = {"source_slug": slug, "tracks": tracks, "max_length_m": best}
-            print(f"    -> {len(tracks)} Gleise, längster: {best:.0f} m")
+            n_ok += 1
+            print(f"  [{i}/{len(items)}] {name}: {len(tracks)} Gleise, längster {best:.0f} m")
         else:
             out[name] = {"source_slug": slug, "tracks": None, "max_length_m": None}
-            print("    -> KEINE Tabelle gefunden")
-        time.sleep(1.5)
+            n_fail += 1
+            print(f"  [{i}/{len(items)}] {name}: KEINE Tabelle gefunden")
+        if not (CACHE_DIR / f"{slug}.html").exists() or args.force:
+            time.sleep(1.2)
 
     pathlib.Path(args.out).write_text(
         json.dumps(out, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8"
     )
-    n_ok = sum(1 for v in out.values() if v["max_length_m"] is not None)
-    print(f"\n{args.out}: {n_ok}/{len(out)} Stationen mit Daten")
+    print(f"\n{args.out}: {n_ok} mit Daten, {n_fail} ohne Tabelle, von {len(items)} Stationen")
 
 
 if __name__ == "__main__":

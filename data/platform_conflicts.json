@@ -1188,17 +1188,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Hamburg-Elbbrücken",
-    "required_m": 236,
-    "line": "RE90b",
-    "cars": "3+6",
-    "available_m": 210.0,
-    "n_platform_candidates": 2,
-    "confidence": "amtlich",
-    "overhang_m": 26.0,
-    "severity": "kritisch"
-  },
-  {
     "station": "Cloppenburg",
     "required_m": 156,
     "line": "RE17",
@@ -2780,6 +2769,17 @@
     "n_platform_candidates": 1,
     "confidence": "niedrig",
     "overhang_m": -83.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Hamburg-Elbbrücken",
+    "required_m": 236,
+    "line": "RE90b",
+    "cars": "3+6",
+    "available_m": 320,
+    "n_platform_candidates": 4,
+    "confidence": "fiktiv",
+    "overhang_m": -84,
     "severity": "ok"
   },
   {

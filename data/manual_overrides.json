@@ -1,0 +1,12 @@
+{
+  "Hamburg-Elbbrücken": {
+    "note": "Fiktiver Ausbau im RE-Netz-2030-Konzept zur Entlastung des Hamburger Hbf — nicht der heutige Realzustand. 4 neue Bahnsteige à 320 m.",
+    "tracks": [
+      { "gleis": "fiktiv-1", "length_m": 320 },
+      { "gleis": "fiktiv-2", "length_m": 320 },
+      { "gleis": "fiktiv-3", "length_m": 320 },
+      { "gleis": "fiktiv-4", "length_m": 320 }
+    ],
+    "max_length_m": 320
+  }
+}

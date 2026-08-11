@@ -131,11 +131,18 @@ def prepare_corridors(data):
     return corridors
 
 
-def prepare_knot_terms(data, node_plan, base_phase, derived, fixed, prefilter_min=15):
+def prepare_knot_terms(data, node_plan, base_phase, derived, fixed, prefilter_min=15,
+                        protect_stations=None, protect_multiplier=1.0):
     """Für jeden (Variante, Knoten)-Paar mit plausibler Ist-Nähe (<=
     prefilter_min Minuten zur Knotenzeit im Ist-Zustand) ein Objektiv-Element.
     Fixiert VOR der Optimierung, welche Linien an welchem Knoten mitspielen —
-    weiche Variante des b[v,k]-Bindungsgedankens aus der Planung."""
+    weiche Variante des b[v,k]-Bindungsgedankens aus der Planung.
+
+    protect_stations: Stationen, deren Terme mit protect_multiplier zusätzlich
+    hochgewichtet werden — für gezieltes Nachjustieren von Knoten, die in
+    einem vorherigen Lauf schlechter wurden, ohne die übrige Zielfunktion
+    neu zu gewichten."""
+    protect_stations = protect_stations or set()
     theta = node_plan["theta"]
     score_by = {r["station"]: r["score"] for r in node_plan["ranked"]}
     terms = []
@@ -156,14 +163,16 @@ def prepare_knot_terms(data, node_plan, base_phase, derived, fixed, prefilter_mi
             dist0 = min(circ_dist(arr0, th), circ_dist(dep0, th))
             if dist0 > prefilter_min:
                 continue
+            mult = protect_multiplier if st in protect_stations else 1.0
             terms.append(
                 {
                     "key": k,
+                    "station": st,
                     "off_arr": stop_arr(s),
                     "off_dep": stop_dep(s),
                     "T": T,
                     "theta": th,
-                    "weight": w * (score_by.get(st, 1.0) ** 0.5),
+                    "weight": w * (score_by.get(st, 1.0) ** 0.5) * mult,
                 }
             )
     return terms
@@ -341,6 +350,11 @@ def main():
     ap.add_argument("--w-reference", type=float, default=1.0)
     ap.add_argument("--w-symmetry", type=float, default=0.05)
     ap.add_argument("--w-fleet", type=float, default=0.2)
+    ap.add_argument(
+        "--protect", default="",
+        help="Komma-getrennte Stationsnamen, deren Knoten-Terme zusätzlich hochgewichtet werden",
+    )
+    ap.add_argument("--protect-multiplier", type=float, default=4.0)
     args = ap.parse_args()
 
     data = json.loads(pathlib.Path(args.data).read_text(encoding="utf-8"))
@@ -351,7 +365,13 @@ def main():
     T_by_key = {k: v["takt"]["interval"] for k, v in data.items()}
 
     corridors = prepare_corridors(data)
-    knot_terms = prepare_knot_terms(data, node_plan, base_phase, derived, fixed)
+    protect_stations = {s.strip() for s in args.protect.split(",") if s.strip()}
+    knot_terms = prepare_knot_terms(
+        data, node_plan, base_phase, derived, fixed,
+        protect_stations=protect_stations, protect_multiplier=args.protect_multiplier,
+    )
+    if protect_stations:
+        print(f"Geschützte Stationen (×{args.protect_multiplier}): {sorted(protect_stations)}")
     ref_groups = resolve_reference_groups(data)
     symmetry_pairs = prepare_symmetry_pairs(data)
     fleet_lines = prepare_fleet_lines(data)

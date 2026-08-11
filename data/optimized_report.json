@@ -1001,28 +1001,28 @@
   ],
   "corridor_headways": [
     {
-      "from": "Witten Hbf",
-      "to": "Bochum-Langendreer",
+      "from": "Dortmund Hbf",
+      "to": "Bochum Hbf",
       "lines": [
-        "RB37",
-        "S10 Außenring"
+        "RE32",
+        "RE9"
       ],
       "departures": [
         {
-          "line": "RB37",
-          "dep_mod60": 31
+          "line": "RE9",
+          "dep_mod60": 0
         },
         {
-          "line": "S10 Außenring",
-          "dep_mod60": 32
+          "line": "RE32",
+          "dep_mod60": 2
         }
       ],
       "gaps": [
-        1,
-        59
+        2,
+        58
       ],
       "ideal_gap": 30.0,
-      "mean_deviation": 29.0
+      "mean_deviation": 28.0
     },
     {
       "from": "Mönchengladbach Hbf",
@@ -1047,54 +1047,6 @@
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 27.0
-    },
-    {
-      "from": "Berlin Hbf",
-      "to": "Berlin Potsdamer Platz",
-      "lines": [
-        "RE46",
-        "RE71"
-      ],
-      "departures": [
-        {
-          "line": "RE46",
-          "dep_mod60": 3
-        },
-        {
-          "line": "RE71",
-          "dep_mod60": 6
-        }
-      ],
-      "gaps": [
-        3,
-        57
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 27.0
-    },
-    {
-      "from": "Hamburg-Harburg",
-      "to": "Buxtehude",
-      "lines": [
-        "RE25",
-        "RE91"
-      ],
-      "departures": [
-        {
-          "line": "RE91",
-          "dep_mod60": 1
-        },
-        {
-          "line": "RE25",
-          "dep_mod60": 5
-        }
-      ],
-      "gaps": [
-        4,
-        56
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 26.0
     },
     {
       "from": "Bamberg",
@@ -1145,6 +1097,102 @@
       "mean_deviation": 26.0
     },
     {
+      "from": "Schleswig",
+      "to": "Rendsburg",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 32
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 36
+        }
+      ],
+      "gaps": [
+        4,
+        56
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 26.0
+    },
+    {
+      "from": "Rendsburg",
+      "to": "Schleswig",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 7
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 11
+        }
+      ],
+      "gaps": [
+        4,
+        56
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 26.0
+    },
+    {
+      "from": "Wetter (Ruhr)",
+      "to": "Hagen Hbf",
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "departures": [
+        {
+          "line": "RE40",
+          "dep_mod60": 35
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 40
+        }
+      ],
+      "gaps": [
+        5,
+        55
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 25.0
+    },
+    {
+      "from": "Hamburg-Harburg",
+      "to": "Buxtehude",
+      "lines": [
+        "RE25",
+        "RE91"
+      ],
+      "departures": [
+        {
+          "line": "RE91",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE25",
+          "dep_mod60": 5
+        }
+      ],
+      "gaps": [
+        5,
+        55
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 25.0
+    },
+    {
       "from": "Bochum Hbf",
       "to": "Dortmund Hbf",
       "lines": [
@@ -1169,20 +1217,20 @@
       "mean_deviation": 25.0
     },
     {
-      "from": "Dresden-Neustadt",
-      "to": "Dresden Hbf",
+      "from": "Schleswig",
+      "to": "Jübek",
       "lines": [
-        "RE35",
-        "RE35X"
+        "RE46",
+        "RE77"
       ],
       "departures": [
         {
-          "line": "RE35",
-          "dep_mod60": 29
+          "line": "RE46",
+          "dep_mod60": 26
         },
         {
-          "line": "RE35X",
-          "dep_mod60": 34
+          "line": "RE77",
+          "dep_mod60": 31
         }
       ],
       "gaps": [
@@ -1241,20 +1289,140 @@
       "mean_deviation": 25.0
     },
     {
-      "from": "Schwelm",
-      "to": "Hagen Hbf",
+      "from": "Düsseldorf Hbf",
+      "to": "Wuppertal-Vohwinkel",
       "lines": [
         "RB37",
         "RE30"
       ],
       "departures": [
         {
+          "line": "RB37",
+          "dep_mod60": 16
+        },
+        {
           "line": "RE30",
-          "dep_mod60": 0
+          "dep_mod60": 22
+        }
+      ],
+      "gaps": [
+        6,
+        54
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Wuppertal-Vohwinkel",
+      "to": "Wuppertal Hbf",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 32
+        },
+        {
+          "line": "RE30",
+          "dep_mod60": 38
+        }
+      ],
+      "gaps": [
+        6,
+        54
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Witten Hbf",
+      "to": "Wetter (Ruhr)",
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "departures": [
+        {
+          "line": "RE40",
+          "dep_mod60": 27
         },
         {
           "line": "RB37",
-          "dep_mod60": 6
+          "dep_mod60": 33
+        }
+      ],
+      "gaps": [
+        6,
+        54
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Warnemünde",
+      "to": "Rostock Hbf",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 4
+        },
+        {
+          "line": "RE35X",
+          "dep_mod60": 58
+        }
+      ],
+      "gaps": [
+        54,
+        6
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Dresden-Neustadt",
+      "to": "Dresden Hbf",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 28
+        },
+        {
+          "line": "RE35X",
+          "dep_mod60": 34
+        }
+      ],
+      "gaps": [
+        6,
+        54
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Jübek",
+      "to": "Schleswig",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 21
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 27
         }
       ],
       "gaps": [
@@ -1313,73 +1481,25 @@
       "mean_deviation": 24.0
     },
     {
-      "from": "Viersen",
-      "to": "Mönchengladbach Hbf",
+      "from": "Bernau (b Berlin)",
+      "to": "Eberswalde Hbf",
       "lines": [
-        "RB37",
-        "RE14"
+        "RE35",
+        "RE71"
       ],
       "departures": [
         {
-          "line": "RE14",
-          "dep_mod60": 49
+          "line": "RE35",
+          "dep_mod60": 0
         },
         {
-          "line": "RB37",
-          "dep_mod60": 56
+          "line": "RE71",
+          "dep_mod60": 7
         }
       ],
       "gaps": [
         7,
         53
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 23.0
-    },
-    {
-      "from": "Wuppertal-Oberbarmen",
-      "to": "Schwelm",
-      "lines": [
-        "RB37",
-        "RE30"
-      ],
-      "departures": [
-        {
-          "line": "RB37",
-          "dep_mod60": 1
-        },
-        {
-          "line": "RE30",
-          "dep_mod60": 54
-        }
-      ],
-      "gaps": [
-        53,
-        7
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 23.0
-    },
-    {
-      "from": "Warnemünde",
-      "to": "Rostock Hbf",
-      "lines": [
-        "RE35",
-        "RE35X"
-      ],
-      "departures": [
-        {
-          "line": "RE35",
-          "dep_mod60": 5
-        },
-        {
-          "line": "RE35X",
-          "dep_mod60": 58
-        }
-      ],
-      "gaps": [
-        53,
-        7
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 23.0
@@ -1393,44 +1513,20 @@
       ],
       "departures": [
         {
+          "line": "RB37",
+          "dep_mod60": 39
+        },
+        {
           "line": "RE30",
           "dep_mod60": 47
-        },
-        {
-          "line": "RB37",
-          "dep_mod60": 56
         }
       ],
       "gaps": [
-        9,
-        51
+        8,
+        52
       ],
       "ideal_gap": 30.0,
-      "mean_deviation": 21.0
-    },
-    {
-      "from": "Witten Hbf",
-      "to": "Wetter (Ruhr)",
-      "lines": [
-        "RB37",
-        "RE40"
-      ],
-      "departures": [
-        {
-          "line": "RB37",
-          "dep_mod60": 33
-        },
-        {
-          "line": "RE40",
-          "dep_mod60": 42
-        }
-      ],
-      "gaps": [
-        9,
-        51
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 21.0
+      "mean_deviation": 22.0
     },
     {
       "from": "Münster (Westf) Hbf",
@@ -1466,11 +1562,11 @@
       "departures": [
         {
           "line": "RE35X",
-          "dep_mod60": 29
+          "dep_mod60": 47
         },
         {
           "line": "RE35",
-          "dep_mod60": 38
+          "dep_mod60": 56
         }
       ],
       "gaps": [
@@ -1481,44 +1577,20 @@
       "mean_deviation": 21.0
     },
     {
-      "from": "Berlin Potsdamer Platz",
-      "to": "Berlin Hbf",
+      "from": "Eberswalde Hbf",
+      "to": "Angermünde",
       "lines": [
-        "RE46",
+        "RE35",
         "RE71"
       ],
       "departures": [
         {
+          "line": "RE35",
+          "dep_mod60": 14
+        },
+        {
           "line": "RE71",
-          "dep_mod60": 3
-        },
-        {
-          "line": "RE46",
-          "dep_mod60": 54
-        }
-      ],
-      "gaps": [
-        51,
-        9
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 21.0
-    },
-    {
-      "from": "Elmshorn",
-      "to": "Neumünster",
-      "lines": [
-        "RE77",
-        "RE90b"
-      ],
-      "departures": [
-        {
-          "line": "RE90b",
-          "dep_mod60": 10
-        },
-        {
-          "line": "RE77",
-          "dep_mod60": 19
+          "dep_mod60": 23
         }
       ],
       "gaps": [
@@ -1529,20 +1601,44 @@
       "mean_deviation": 21.0
     },
     {
-      "from": "Wetter (Ruhr)",
-      "to": "Hagen Hbf",
+      "from": "Berlin-Spandau",
+      "to": "Berlin Hbf",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 7
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 16
+        }
+      ],
+      "gaps": [
+        9,
+        51
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 21.0
+    },
+    {
+      "from": "Wuppertal-Oberbarmen",
+      "to": "Schwelm",
       "lines": [
         "RB37",
-        "RE40"
+        "RE30"
       ],
       "departures": [
         {
           "line": "RB37",
-          "dep_mod60": 40
+          "dep_mod60": 44
         },
         {
-          "line": "RE40",
-          "dep_mod60": 50
+          "line": "RE30",
+          "dep_mod60": 54
         }
       ],
       "gaps": [
@@ -1601,8 +1697,8 @@
       "mean_deviation": 20.0
     },
     {
-      "from": "Düsseldorf Hbf",
-      "to": "Wuppertal-Vohwinkel",
+      "from": "Schwelm",
+      "to": "Hagen Hbf",
       "lines": [
         "RB37",
         "RE30"
@@ -1610,35 +1706,35 @@
       "departures": [
         {
           "line": "RE30",
-          "dep_mod60": 22
+          "dep_mod60": 0
         },
         {
           "line": "RB37",
-          "dep_mod60": 33
+          "dep_mod60": 49
         }
       ],
       "gaps": [
-        11,
-        49
+        49,
+        11
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 19.0
     },
     {
-      "from": "Wuppertal-Vohwinkel",
-      "to": "Wuppertal Hbf",
+      "from": "Berlin-Wannsee",
+      "to": "Potsdam Hbf",
       "lines": [
-        "RB37",
-        "RE30"
+        "RE11",
+        "RE71"
       ],
       "departures": [
         {
-          "line": "RE30",
-          "dep_mod60": 38
+          "line": "RE11",
+          "dep_mod60": 19
         },
         {
-          "line": "RB37",
-          "dep_mod60": 49
+          "line": "RE71",
+          "dep_mod60": 30
         }
       ],
       "gaps": [
@@ -1697,44 +1793,20 @@
       "mean_deviation": 19.0
     },
     {
-      "from": "Mönchengladbach Hbf",
-      "to": "Rheydt Hbf",
-      "lines": [
-        "RE32",
-        "RE90"
-      ],
-      "departures": [
-        {
-          "line": "RE32",
-          "dep_mod60": 20
-        },
-        {
-          "line": "RE90",
-          "dep_mod60": 31
-        }
-      ],
-      "gaps": [
-        11,
-        49
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 19.0
-    },
-    {
-      "from": "Jübek",
-      "to": "Schleswig",
+      "from": "Berlin Hbf",
+      "to": "Berlin-Spandau",
       "lines": [
         "RE46",
         "RE77"
       ],
       "departures": [
         {
-          "line": "RE46",
-          "dep_mod60": 10
+          "line": "RE77",
+          "dep_mod60": 32
         },
         {
-          "line": "RE77",
-          "dep_mod60": 21
+          "line": "RE46",
+          "dep_mod60": 43
         }
       ],
       "gaps": [
@@ -1745,58 +1817,52 @@
       "mean_deviation": 19.0
     },
     {
-      "from": "Hamburg-Harburg",
-      "to": "Hamburg-Elbbrücken",
+      "from": "Elmshorn",
+      "to": "Neumünster",
       "lines": [
-        "RE45",
-        "RE90b",
-        "RE91"
+        "RE77",
+        "RE90b"
       ],
       "departures": [
-        {
-          "line": "RE91",
-          "dep_mod60": 26
-        },
-        {
-          "line": "RE45",
-          "dep_mod60": 35
-        },
         {
           "line": "RE90b",
-          "dep_mod60": 38
+          "dep_mod60": 9
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 20
         }
       ],
       "gaps": [
-        9,
-        3,
-        48
+        11,
+        49
       ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 18.7
+      "ideal_gap": 30.0,
+      "mean_deviation": 19.0
     },
     {
-      "from": "Berlin-Wannsee",
-      "to": "Potsdam Hbf",
+      "from": "Viersen",
+      "to": "Mönchengladbach Hbf",
       "lines": [
-        "RE11",
-        "RE71"
+        "RB37",
+        "RE14"
       ],
       "departures": [
         {
-          "line": "RE11",
-          "dep_mod60": 18
+          "line": "RB37",
+          "dep_mod60": 39
         },
         {
-          "line": "RE71",
-          "dep_mod60": 30
+          "line": "RE14",
+          "dep_mod60": 52
         }
       ],
       "gaps": [
-        12,
-        48
+        13,
+        47
       ],
       "ideal_gap": 30.0,
-      "mean_deviation": 18.0
+      "mean_deviation": 17.0
     },
     {
       "from": "Potsdam Hbf",
@@ -1808,59 +1874,11 @@
       "departures": [
         {
           "line": "RE11",
-          "dep_mod60": 23
+          "dep_mod60": 22
         },
         {
           "line": "RE71",
           "dep_mod60": 35
-        }
-      ],
-      "gaps": [
-        12,
-        48
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 18.0
-    },
-    {
-      "from": "Wittenberge",
-      "to": "Hagenow Land",
-      "lines": [
-        "RE46",
-        "RE77"
-      ],
-      "departures": [
-        {
-          "line": "RE46",
-          "dep_mod60": 9
-        },
-        {
-          "line": "RE77",
-          "dep_mod60": 21
-        }
-      ],
-      "gaps": [
-        12,
-        48
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 18.0
-    },
-    {
-      "from": "Wetter (Ruhr)",
-      "to": "Witten Hbf",
-      "lines": [
-        "RB37",
-        "RE40"
-      ],
-      "departures": [
-        {
-          "line": "RE40",
-          "dep_mod60": 11
-        },
-        {
-          "line": "RB37",
-          "dep_mod60": 24
         }
       ],
       "gaps": [
@@ -1880,11 +1898,11 @@
       "departures": [
         {
           "line": "RE35",
-          "dep_mod60": 14
+          "dep_mod60": 32
         },
         {
           "line": "RE35X",
-          "dep_mod60": 27
+          "dep_mod60": 45
         }
       ],
       "gaps": [
@@ -1904,59 +1922,11 @@
       "departures": [
         {
           "line": "RE35",
-          "dep_mod60": 22
+          "dep_mod60": 40
         },
         {
           "line": "RE35X",
-          "dep_mod60": 35
-        }
-      ],
-      "gaps": [
-        13,
-        47
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 17.0
-    },
-    {
-      "from": "Schleswig",
-      "to": "Rendsburg",
-      "lines": [
-        "RE46",
-        "RE77"
-      ],
-      "departures": [
-        {
-          "line": "RE46",
-          "dep_mod60": 19
-        },
-        {
-          "line": "RE77",
-          "dep_mod60": 32
-        }
-      ],
-      "gaps": [
-        13,
-        47
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 17.0
-    },
-    {
-      "from": "Schleswig",
-      "to": "Jübek",
-      "lines": [
-        "RE46",
-        "RE77"
-      ],
-      "departures": [
-        {
-          "line": "RE77",
-          "dep_mod60": 30
-        },
-        {
-          "line": "RE46",
-          "dep_mod60": 43
+          "dep_mod60": 53
         }
       ],
       "gaps": [
@@ -1991,54 +1961,6 @@
       "mean_deviation": 16.0
     },
     {
-      "from": "Rendsburg",
-      "to": "Schleswig",
-      "lines": [
-        "RE46",
-        "RE77"
-      ],
-      "departures": [
-        {
-          "line": "RE77",
-          "dep_mod60": 10
-        },
-        {
-          "line": "RE46",
-          "dep_mod60": 24
-        }
-      ],
-      "gaps": [
-        14,
-        46
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 16.0
-    },
-    {
-      "from": "Hagen Hbf",
-      "to": "Wetter (Ruhr)",
-      "lines": [
-        "RB37",
-        "RE40"
-      ],
-      "departures": [
-        {
-          "line": "RE40",
-          "dep_mod60": 2
-        },
-        {
-          "line": "RB37",
-          "dep_mod60": 17
-        }
-      ],
-      "gaps": [
-        15,
-        45
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 15.0
-    },
-    {
       "from": "Stralsund Hbf",
       "to": "Greifswald",
       "lines": [
@@ -2052,69 +1974,39 @@
         },
         {
           "line": "RE35",
-          "dep_mod60": 17
+          "dep_mod60": 16
         }
       ],
       "gaps": [
-        15,
-        45
+        14,
+        46
       ],
       "ideal_gap": 30.0,
-      "mean_deviation": 15.0
+      "mean_deviation": 16.0
     },
     {
-      "from": "Hagenow Land",
-      "to": "Büchen",
+      "from": "Berlin Hbf",
+      "to": "Berlin Potsdamer Platz",
       "lines": [
         "RE46",
-        "RE77",
-        "RE91"
+        "RE71"
       ],
       "departures": [
         {
-          "line": "RE77",
-          "dep_mod60": 0
-        },
-        {
-          "line": "RE91",
-          "dep_mod60": 1
+          "line": "RE71",
+          "dep_mod60": 6
         },
         {
           "line": "RE46",
-          "dep_mod60": 42
+          "dep_mod60": 20
         }
       ],
       "gaps": [
-        1,
-        41,
-        18
-      ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 14.0
-    },
-    {
-      "from": "Rostock Hbf",
-      "to": "Warnemünde",
-      "lines": [
-        "RE35",
-        "RE35X"
-      ],
-      "departures": [
-        {
-          "line": "RE35",
-          "dep_mod60": 0
-        },
-        {
-          "line": "RE35X",
-          "dep_mod60": 43
-        }
-      ],
-      "gaps": [
-        43,
-        17
+        14,
+        46
       ],
       "ideal_gap": 30.0,
-      "mean_deviation": 13.0
+      "mean_deviation": 16.0
     },
     {
       "from": "Hamburg-Elbbrücken",
@@ -2131,24 +2023,72 @@
         },
         {
           "line": "RE45",
-          "dep_mod60": 20
+          "dep_mod60": 49
         },
         {
           "line": "RE91",
-          "dep_mod60": 50
+          "dep_mod60": 49
         }
       ],
       "gaps": [
-        3,
-        30,
-        27
+        32,
+        0,
+        28
       ],
       "ideal_gap": 20.0,
-      "mean_deviation": 11.3
+      "mean_deviation": 13.3
     },
     {
-      "from": "Büchen",
-      "to": "Hagenow Land",
+      "from": "Hagen Hbf",
+      "to": "Wetter (Ruhr)",
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 17
+        }
+      ],
+      "gaps": [
+        17,
+        43
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 13.0
+    },
+    {
+      "from": "Rostock Hbf",
+      "to": "Warnemünde",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 1
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 18
+        }
+      ],
+      "gaps": [
+        17,
+        43
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 13.0
+    },
+    {
+      "from": "Hagenow Land",
+      "to": "Büchen",
       "lines": [
         "RE46",
         "RE77",
@@ -2157,24 +2097,126 @@
       "departures": [
         {
           "line": "RE91",
-          "dep_mod60": 3
+          "dep_mod60": 0
         },
         {
           "line": "RE77",
-          "dep_mod60": 40
+          "dep_mod60": 1
         },
         {
           "line": "RE46",
-          "dep_mod60": 59
+          "dep_mod60": 25
         }
       ],
       "gaps": [
-        37,
-        19,
-        4
+        1,
+        24,
+        35
       ],
       "ideal_gap": 20.0,
-      "mean_deviation": 11.3
+      "mean_deviation": 12.7
+    },
+    {
+      "from": "Witten Hbf",
+      "to": "Bochum-Langendreer",
+      "lines": [
+        "RB37",
+        "S10 Außenring"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 14
+        },
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 32
+        }
+      ],
+      "gaps": [
+        18,
+        42
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Mönchengladbach Hbf",
+      "to": "Rheydt Hbf",
+      "lines": [
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE90",
+          "dep_mod60": 30
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 48
+        }
+      ],
+      "gaps": [
+        18,
+        42
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Berlin Hbf (tief)",
+      "to": "Berlin Südkreuz",
+      "lines": [
+        "RE35",
+        "RE35X",
+        "RE45"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 19
+        },
+        {
+          "line": "RE45",
+          "dep_mod60": 21
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 55
+        }
+      ],
+      "gaps": [
+        2,
+        34,
+        24
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Wetter (Ruhr)",
+      "to": "Witten Hbf",
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 7
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 26
+        }
+      ],
+      "gaps": [
+        19,
+        41
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 11.0
     },
     {
       "from": "Essen-Steele Ost",
@@ -2249,120 +2291,6 @@
       "mean_deviation": 11.0
     },
     {
-      "from": "Berlin Hbf (tief)",
-      "to": "Berlin Südkreuz",
-      "lines": [
-        "RE35",
-        "RE35X",
-        "RE45"
-      ],
-      "departures": [
-        {
-          "line": "RE35X",
-          "dep_mod60": 19
-        },
-        {
-          "line": "RE45",
-          "dep_mod60": 52
-        },
-        {
-          "line": "RE35",
-          "dep_mod60": 56
-        }
-      ],
-      "gaps": [
-        33,
-        4,
-        23
-      ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 10.7
-    },
-    {
-      "from": "Hagenow Land",
-      "to": "Wittenberge",
-      "lines": [
-        "RE46",
-        "RE77"
-      ],
-      "departures": [
-        {
-          "line": "RE77",
-          "dep_mod60": 0
-        },
-        {
-          "line": "RE46",
-          "dep_mod60": 20
-        }
-      ],
-      "gaps": [
-        20,
-        40
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 10.0
-    },
-    {
-      "from": "Neuss Hbf",
-      "to": "Düsseldorf-Bilk",
-      "lines": [
-        "RB37",
-        "RE32",
-        "RE90"
-      ],
-      "departures": [
-        {
-          "line": "RE90",
-          "dep_mod60": 12
-        },
-        {
-          "line": "RB37",
-          "dep_mod60": 18
-        },
-        {
-          "line": "RE32",
-          "dep_mod60": 40
-        }
-      ],
-      "gaps": [
-        6,
-        22,
-        32
-      ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 9.3
-    },
-    {
-      "from": "Düsseldorf-Bilk",
-      "to": "Düsseldorf Hbf",
-      "lines": [
-        "RB37",
-        "RE32",
-        "RE90"
-      ],
-      "departures": [
-        {
-          "line": "RE90",
-          "dep_mod60": 20
-        },
-        {
-          "line": "RB37",
-          "dep_mod60": 27
-        },
-        {
-          "line": "RE32",
-          "dep_mod60": 48
-        }
-      ],
-      "gaps": [
-        7,
-        21,
-        32
-      ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 8.7
-    },
-    {
       "from": "Mönchengladbach Hbf",
       "to": "Neuss Hbf",
       "lines": [
@@ -2372,12 +2300,12 @@
       ],
       "departures": [
         {
-          "line": "RB37",
-          "dep_mod60": 6
-        },
-        {
           "line": "RE32",
           "dep_mod60": 25
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 49
         },
         {
           "line": "RE90",
@@ -2385,9 +2313,9 @@
         }
       ],
       "gaps": [
-        19,
-        32,
-        9
+        24,
+        8,
+        28
       ],
       "ideal_gap": 20.0,
       "mean_deviation": 8.0
@@ -2417,36 +2345,6 @@
       "mean_deviation": 8.0
     },
     {
-      "from": "Düsseldorf Hbf",
-      "to": "Düsseldorf-Bilk",
-      "lines": [
-        "RB37",
-        "RE32",
-        "RE90"
-      ],
-      "departures": [
-        {
-          "line": "RE90",
-          "dep_mod60": 2
-        },
-        {
-          "line": "RB37",
-          "dep_mod60": 33
-        },
-        {
-          "line": "RE32",
-          "dep_mod60": 49
-        }
-      ],
-      "gaps": [
-        31,
-        16,
-        13
-      ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 7.3
-    },
-    {
       "from": "Wuppertal-Vohwinkel",
       "to": "Düsseldorf Hbf",
       "lines": [
@@ -2471,60 +2369,6 @@
       "mean_deviation": 7.0
     },
     {
-      "from": "Berlin Gesundbrunnen",
-      "to": "Berlin Hbf (tief)",
-      "lines": [
-        "RE35",
-        "RE35X"
-      ],
-      "departures": [
-        {
-          "line": "RE35X",
-          "dep_mod60": 11
-        },
-        {
-          "line": "RE35",
-          "dep_mod60": 48
-        }
-      ],
-      "gaps": [
-        37,
-        23
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 7.0
-    },
-    {
-      "from": "Neuss Hbf",
-      "to": "Mönchengladbach Hbf",
-      "lines": [
-        "RB37",
-        "RE32",
-        "RE90"
-      ],
-      "departures": [
-        {
-          "line": "RE32",
-          "dep_mod60": 4
-        },
-        {
-          "line": "RE90",
-          "dep_mod60": 16
-        },
-        {
-          "line": "RB37",
-          "dep_mod60": 46
-        }
-      ],
-      "gaps": [
-        12,
-        30,
-        18
-      ],
-      "ideal_gap": 20.0,
-      "mean_deviation": 6.7
-    },
-    {
       "from": "Essen-Steele",
       "to": "Essen Hbf",
       "lines": [
@@ -2540,25 +2384,139 @@
         },
         {
           "line": "S3",
-          "dep_mod60": 23
-        },
-        {
-          "line": "RE40",
-          "dep_mod60": 43
+          "dep_mod60": 20
         },
         {
           "line": "S30",
-          "dep_mod60": 47
+          "dep_mod60": 44
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 58
         }
       ],
       "gaps": [
-        23,
         20,
-        4,
-        13
+        24,
+        14,
+        2
       ],
       "ideal_gap": 15.0,
-      "mean_deviation": 6.5
+      "mean_deviation": 7.0
+    },
+    {
+      "from": "Hagenow Land",
+      "to": "Wittenberge",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        37,
+        23
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 7.0
+    },
+    {
+      "from": "Düsseldorf-Bilk",
+      "to": "Düsseldorf Hbf",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 10
+        },
+        {
+          "line": "RE90",
+          "dep_mod60": 20
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 48
+        }
+      ],
+      "gaps": [
+        10,
+        28,
+        22
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 6.7
+    },
+    {
+      "from": "Düsseldorf-Bilk",
+      "to": "Neuss Hbf",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE90",
+          "dep_mod60": 7
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 22
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        15,
+        15,
+        30
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 6.7
+    },
+    {
+      "from": "Neuss Hbf",
+      "to": "Düsseldorf-Bilk",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 1
+        },
+        {
+          "line": "RE90",
+          "dep_mod60": 12
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 40
+        }
+      ],
+      "gaps": [
+        11,
+        28,
+        21
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 6.0
     },
     {
       "from": "Wuppertal Hbf",
@@ -2585,8 +2543,8 @@
       "mean_deviation": 6.0
     },
     {
-      "from": "Düsseldorf-Bilk",
-      "to": "Neuss Hbf",
+      "from": "Neuss Hbf",
+      "to": "Mönchengladbach Hbf",
       "lines": [
         "RB37",
         "RE32",
@@ -2595,21 +2553,21 @@
       "departures": [
         {
           "line": "RE90",
-          "dep_mod60": 8
-        },
-        {
-          "line": "RB37",
-          "dep_mod60": 37
+          "dep_mod60": 15
         },
         {
           "line": "RE32",
-          "dep_mod60": 54
+          "dep_mod60": 32
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 46
         }
       ],
       "gaps": [
-        29,
         17,
-        14
+        14,
+        29
       ],
       "ideal_gap": 20.0,
       "mean_deviation": 6.0
@@ -2624,11 +2582,11 @@
       "departures": [
         {
           "line": "RE77",
-          "dep_mod60": 15
+          "dep_mod60": 16
         },
         {
           "line": "RE11",
-          "dep_mod60": 39
+          "dep_mod60": 40
         }
       ],
       "gaps": [
@@ -2648,11 +2606,11 @@
       "departures": [
         {
           "line": "RE77",
-          "dep_mod60": 20
+          "dep_mod60": 21
         },
         {
           "line": "RE11",
-          "dep_mod60": 44
+          "dep_mod60": 45
         }
       ],
       "gaps": [
@@ -2672,11 +2630,11 @@
       "departures": [
         {
           "line": "RE77",
-          "dep_mod60": 25
+          "dep_mod60": 26
         },
         {
           "line": "RE11",
-          "dep_mod60": 49
+          "dep_mod60": 50
         }
       ],
       "gaps": [
@@ -2687,20 +2645,20 @@
       "mean_deviation": 6.0
     },
     {
-      "from": "Hattingen (Ruhr)",
-      "to": "Bochum-Dahlhausen",
+      "from": "Berlin Hbf",
+      "to": "Berlin Friedrichstraße",
       "lines": [
-        "S3",
-        "S30"
+        "RE11",
+        "RE77"
       ],
       "departures": [
         {
-          "line": "S3",
-          "dep_mod60": 9
+          "line": "RE77",
+          "dep_mod60": 31
         },
         {
-          "line": "S30",
-          "dep_mod60": 33
+          "line": "RE11",
+          "dep_mod60": 55
         }
       ],
       "gaps": [
@@ -2711,20 +2669,20 @@
       "mean_deviation": 6.0
     },
     {
-      "from": "Bochum-Dahlhausen",
-      "to": "Essen-Horst",
+      "from": "Berlin Friedrichstraße",
+      "to": "Berlin Alexanderplatz",
       "lines": [
-        "S3",
-        "S30"
+        "RE11",
+        "RE77"
       ],
       "departures": [
         {
-          "line": "S3",
-          "dep_mod60": 13
+          "line": "RE77",
+          "dep_mod60": 35
         },
         {
-          "line": "S30",
-          "dep_mod60": 37
+          "line": "RE11",
+          "dep_mod60": 59
         }
       ],
       "gaps": [
@@ -2735,25 +2693,49 @@
       "mean_deviation": 6.0
     },
     {
-      "from": "Essen-Horst",
-      "to": "Essen-Steele Ost",
+      "from": "Berlin Alexanderplatz",
+      "to": "Berlin Ostbahnhof",
       "lines": [
-        "S3",
-        "S30"
+        "RE11",
+        "RE77"
       ],
       "departures": [
         {
-          "line": "S3",
-          "dep_mod60": 17
+          "line": "RE11",
+          "dep_mod60": 4
         },
         {
-          "line": "S30",
-          "dep_mod60": 41
+          "line": "RE77",
+          "dep_mod60": 40
         }
       ],
       "gaps": [
-        24,
-        36
+        36,
+        24
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 6.0
+    },
+    {
+      "from": "Berlin Gesundbrunnen",
+      "to": "Berlin Hbf (tief)",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 11
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 47
+        }
+      ],
+      "gaps": [
+        36,
+        24
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 6.0
@@ -2773,26 +2755,128 @@
           "dep_mod60": 0
         },
         {
-          "line": "RE40",
-          "dep_mod60": 12
-        },
-        {
           "line": "S3",
           "dep_mod60": 19
         },
         {
           "line": "S10 Innenring",
           "dep_mod60": 37
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 57
         }
       ],
       "gaps": [
-        12,
-        7,
+        19,
         18,
-        23
+        20,
+        3
       ],
       "ideal_gap": 15.0,
-      "mean_deviation": 5.5
+      "mean_deviation": 6.0
+    },
+    {
+      "from": "Hattingen (Ruhr)",
+      "to": "Bochum-Dahlhausen",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S3",
+          "dep_mod60": 6
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 30
+        }
+      ],
+      "gaps": [
+        24,
+        36
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 6.0
+    },
+    {
+      "from": "Bochum-Dahlhausen",
+      "to": "Essen-Horst",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S3",
+          "dep_mod60": 10
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 34
+        }
+      ],
+      "gaps": [
+        24,
+        36
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 6.0
+    },
+    {
+      "from": "Essen-Horst",
+      "to": "Essen-Steele Ost",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S3",
+          "dep_mod60": 14
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 38
+        }
+      ],
+      "gaps": [
+        24,
+        36
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 6.0
+    },
+    {
+      "from": "Düsseldorf Hbf",
+      "to": "Düsseldorf-Bilk",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE90",
+          "dep_mod60": 1
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 17
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 33
+        }
+      ],
+      "gaps": [
+        16,
+        16,
+        28
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 5.3
     },
     {
       "from": "Wuppertal-Oberbarmen",
@@ -2819,91 +2903,19 @@
       "mean_deviation": 5.0
     },
     {
-      "from": "Berlin Hbf",
-      "to": "Berlin Friedrichstraße",
+      "from": "Buxtehude",
+      "to": "Hamburg-Harburg",
       "lines": [
-        "RE11",
-        "RE77"
+        "RE25",
+        "RE91"
       ],
       "departures": [
         {
-          "line": "RE77",
-          "dep_mod60": 31
-        },
-        {
-          "line": "RE11",
-          "dep_mod60": 56
-        }
-      ],
-      "gaps": [
-        25,
-        35
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 5.0
-    },
-    {
-      "from": "Berlin Friedrichstraße",
-      "to": "Berlin Alexanderplatz",
-      "lines": [
-        "RE11",
-        "RE77"
-      ],
-      "departures": [
-        {
-          "line": "RE11",
-          "dep_mod60": 0
-        },
-        {
-          "line": "RE77",
-          "dep_mod60": 35
-        }
-      ],
-      "gaps": [
-        35,
-        25
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 5.0
-    },
-    {
-      "from": "Berlin Alexanderplatz",
-      "to": "Berlin Ostbahnhof",
-      "lines": [
-        "RE11",
-        "RE77"
-      ],
-      "departures": [
-        {
-          "line": "RE11",
-          "dep_mod60": 5
-        },
-        {
-          "line": "RE77",
-          "dep_mod60": 40
-        }
-      ],
-      "gaps": [
-        35,
-        25
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 5.0
-    },
-    {
-      "from": "Bernau (b Berlin)",
-      "to": "Eberswalde Hbf",
-      "lines": [
-        "RE35",
-        "RE71"
-      ],
-      "departures": [
-        {
-          "line": "RE71",
+          "line": "RE91",
           "dep_mod60": 7
         },
         {
-          "line": "RE35",
+          "line": "RE25",
           "dep_mod60": 42
         }
       ],
@@ -2915,58 +2927,34 @@
       "mean_deviation": 5.0
     },
     {
-      "from": "Essen-Steele Ost",
-      "to": "Essen-Steele",
+      "from": "Hamburg-Harburg",
+      "to": "Hamburg-Elbbrücken",
       "lines": [
-        "S10 Außenring",
-        "S3",
-        "S30"
+        "RE45",
+        "RE90b",
+        "RE91"
       ],
       "departures": [
         {
-          "line": "S3",
-          "dep_mod60": 21
+          "line": "RE45",
+          "dep_mod60": 4
         },
         {
-          "line": "S30",
-          "dep_mod60": 45
+          "line": "RE91",
+          "dep_mod60": 24
         },
         {
-          "line": "S10 Außenring",
-          "dep_mod60": 58
+          "line": "RE90b",
+          "dep_mod60": 37
         }
       ],
       "gaps": [
-        24,
+        20,
         13,
-        23
+        27
       ],
       "ideal_gap": 20.0,
       "mean_deviation": 4.7
-    },
-    {
-      "from": "Buchholz (Nordheide)",
-      "to": "Hamburg-Harburg",
-      "lines": [
-        "RE25",
-        "RE90b"
-      ],
-      "departures": [
-        {
-          "line": "RE90b",
-          "dep_mod60": 22
-        },
-        {
-          "line": "RE25",
-          "dep_mod60": 48
-        }
-      ],
-      "gaps": [
-        26,
-        34
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 4.0
     },
     {
       "from": "Rheydt Hbf",
@@ -2993,20 +2981,20 @@
       "mean_deviation": 4.0
     },
     {
-      "from": "Dortmund Hbf",
-      "to": "Bochum Hbf",
+      "from": "Berlin Potsdamer Platz",
+      "to": "Berlin Hbf",
       "lines": [
-        "RE32",
-        "RE9"
+        "RE46",
+        "RE71"
       ],
       "departures": [
         {
-          "line": "RE9",
-          "dep_mod60": 0
+          "line": "RE71",
+          "dep_mod60": 3
         },
         {
-          "line": "RE32",
-          "dep_mod60": 34
+          "line": "RE46",
+          "dep_mod60": 37
         }
       ],
       "gaps": [
@@ -3017,28 +3005,34 @@
       "mean_deviation": 4.0
     },
     {
-      "from": "Berlin-Spandau",
-      "to": "Berlin Hbf",
+      "from": "Büchen",
+      "to": "Hagenow Land",
       "lines": [
         "RE46",
-        "RE77"
+        "RE77",
+        "RE91"
       ],
       "departures": [
         {
-          "line": "RE77",
-          "dep_mod60": 16
+          "line": "RE91",
+          "dep_mod60": 1
         },
         {
           "line": "RE46",
-          "dep_mod60": 50
+          "dep_mod60": 16
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 40
         }
       ],
       "gaps": [
-        34,
-        26
+        15,
+        24,
+        21
       ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 4.0
+      "ideal_gap": 20.0,
+      "mean_deviation": 3.3
     },
     {
       "from": "Schwelm",
@@ -3060,30 +3054,6 @@
       "gaps": [
         27,
         33
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 3.0
-    },
-    {
-      "from": "Buxtehude",
-      "to": "Hamburg-Harburg",
-      "lines": [
-        "RE25",
-        "RE91"
-      ],
-      "departures": [
-        {
-          "line": "RE91",
-          "dep_mod60": 9
-        },
-        {
-          "line": "RE25",
-          "dep_mod60": 42
-        }
-      ],
-      "gaps": [
-        33,
-        27
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 3.0
@@ -3113,20 +3083,44 @@
       "mean_deviation": 3.0
     },
     {
-      "from": "Eberswalde Hbf",
-      "to": "Angermünde",
+      "from": "Buchholz (Nordheide)",
+      "to": "Hamburg-Harburg",
+      "lines": [
+        "RE25",
+        "RE90b"
+      ],
+      "departures": [
+        {
+          "line": "RE90b",
+          "dep_mod60": 21
+        },
+        {
+          "line": "RE25",
+          "dep_mod60": 48
+        }
+      ],
+      "gaps": [
+        27,
+        33
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 3.0
+    },
+    {
+      "from": "Angermünde",
+      "to": "Eberswalde Hbf",
       "lines": [
         "RE35",
         "RE71"
       ],
       "departures": [
         {
-          "line": "RE71",
-          "dep_mod60": 23
+          "line": "RE35",
+          "dep_mod60": 4
         },
         {
-          "line": "RE35",
-          "dep_mod60": 56
+          "line": "RE71",
+          "dep_mod60": 37
         }
       ],
       "gaps": [
@@ -3135,6 +3129,36 @@
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 3.0
+    },
+    {
+      "from": "Essen-Steele Ost",
+      "to": "Essen-Steele",
+      "lines": [
+        "S10 Außenring",
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S3",
+          "dep_mod60": 18
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 42
+        },
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 58
+        }
+      ],
+      "gaps": [
+        24,
+        16,
+        20
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 2.7
     },
     {
       "from": "Hagen Hbf",
@@ -3185,8 +3209,8 @@
       "mean_deviation": 2.0
     },
     {
-      "from": "Angermünde",
-      "to": "Eberswalde Hbf",
+      "from": "Eberswalde Hbf",
+      "to": "Bernau (b Berlin)",
       "lines": [
         "RE35",
         "RE71"
@@ -3194,11 +3218,11 @@
       "departures": [
         {
           "line": "RE35",
-          "dep_mod60": 5
+          "dep_mod60": 20
         },
         {
           "line": "RE71",
-          "dep_mod60": 37
+          "dep_mod60": 52
         }
       ],
       "gaps": [
@@ -3239,8 +3263,8 @@
       "mean_deviation": 2.0
     },
     {
-      "from": "Kamen",
-      "to": "Hamm (Westf) Hbf",
+      "from": "Dortmund Hbf",
+      "to": "Kamen",
       "lines": [
         "RE17",
         "RE32"
@@ -3248,16 +3272,16 @@
       "departures": [
         {
           "line": "RE32",
-          "dep_mod60": 8
+          "dep_mod60": 0
         },
         {
           "line": "RE17",
-          "dep_mod60": 39
+          "dep_mod60": 29
         }
       ],
       "gaps": [
-        31,
-        29
+        29,
+        31
       ],
       "ideal_gap": 30.0,
       "mean_deviation": 1.0
@@ -3272,11 +3296,11 @@
       "departures": [
         {
           "line": "RE35X",
-          "dep_mod60": 11
+          "dep_mod60": 29
         },
         {
           "line": "RE35",
-          "dep_mod60": 40
+          "dep_mod60": 58
         }
       ],
       "gaps": [
@@ -3287,56 +3311,8 @@
       "mean_deviation": 1.0
     },
     {
-      "from": "Eberswalde Hbf",
-      "to": "Bernau (b Berlin)",
-      "lines": [
-        "RE35",
-        "RE71"
-      ],
-      "departures": [
-        {
-          "line": "RE35",
-          "dep_mod60": 21
-        },
-        {
-          "line": "RE71",
-          "dep_mod60": 52
-        }
-      ],
-      "gaps": [
-        31,
-        29
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 1.0
-    },
-    {
-      "from": "Berlin Hbf",
-      "to": "Berlin-Spandau",
-      "lines": [
-        "RE46",
-        "RE77"
-      ],
-      "departures": [
-        {
-          "line": "RE46",
-          "dep_mod60": 0
-        },
-        {
-          "line": "RE77",
-          "dep_mod60": 31
-        }
-      ],
-      "gaps": [
-        31,
-        29
-      ],
-      "ideal_gap": 30.0,
-      "mean_deviation": 1.0
-    },
-    {
-      "from": "Dortmund Hbf",
-      "to": "Kamen",
+      "from": "Kamen",
+      "to": "Hamm (Westf) Hbf",
       "lines": [
         "RE17",
         "RE32"
@@ -3344,11 +3320,11 @@
       "departures": [
         {
           "line": "RE32",
-          "dep_mod60": 0
+          "dep_mod60": 8
         },
         {
           "line": "RE17",
-          "dep_mod60": 30
+          "dep_mod60": 38
         }
       ],
       "gaps": [
@@ -3367,12 +3343,12 @@
       ],
       "departures": [
         {
-          "line": "RE32",
-          "dep_mod60": 10
+          "line": "RE17",
+          "dep_mod60": 8
         },
         {
-          "line": "RE17",
-          "dep_mod60": 40
+          "line": "RE32",
+          "dep_mod60": 38
         }
       ],
       "gaps": [
@@ -3391,12 +3367,36 @@
       ],
       "departures": [
         {
-          "line": "RE32",
-          "dep_mod60": 20
+          "line": "RE17",
+          "dep_mod60": 18
         },
         {
-          "line": "RE17",
-          "dep_mod60": 50
+          "line": "RE32",
+          "dep_mod60": 48
+        }
+      ],
+      "gaps": [
+        30,
+        30
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 0.0
+    },
+    {
+      "from": "Wittenberge",
+      "to": "Hagenow Land",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 22
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 52
         }
       ],
       "gaps": [
@@ -3508,12 +3508,12 @@
       "line": "RB37",
       "n_common_stops": 31,
       "sigma2_distribution": {
-        "3": 5,
-        "4": 18,
-        "5": 8
+        "46": 5,
+        "47": 18,
+        "48": 8
       },
       "spread": 2,
-      "mean_sigma2": 4.1
+      "mean_sigma2": 47.1
     },
     {
       "line": "RE11",
@@ -3528,11 +3528,11 @@
       "line": "RE14",
       "n_common_stops": 17,
       "sigma2_distribution": {
-        "0": 16,
-        "2": 1
+        "3": 16,
+        "5": 1
       },
       "spread": 2,
-      "mean_sigma2": 0.1
+      "mean_sigma2": 3.1
     },
     {
       "line": "RE2",
@@ -3582,35 +3582,35 @@
       "line": "RE32",
       "n_common_stops": 23,
       "sigma2_distribution": {
-        "27": 2,
-        "30": 2,
-        "31": 3,
-        "32": 5,
-        "33": 4,
-        "34": 1,
-        "41": 2,
-        "42": 4
+        "0": 5,
+        "1": 4,
+        "2": 1,
+        "9": 2,
+        "10": 4,
+        "55": 2,
+        "58": 2,
+        "59": 3
       },
       "spread": 15,
-      "mean_sigma2": 33.9
+      "mean_sigma2": 1.9
     },
     {
       "line": "RE35",
       "n_common_stops": 25,
       "sigma2_distribution": {
-        "15": 25
+        "32": 25
       },
       "spread": 0,
-      "mean_sigma2": 15.0
+      "mean_sigma2": 32.0
     },
     {
       "line": "RE35X",
       "n_common_stops": 14,
       "sigma2_distribution": {
-        "51": 14
+        "9": 14
       },
       "spread": 0,
-      "mean_sigma2": 51.0
+      "mean_sigma2": 9.0
     },
     {
       "line": "RE39",
@@ -3634,12 +3634,12 @@
       "line": "RE45",
       "n_common_stops": 17,
       "sigma2_distribution": {
-        "0": 2,
-        "2": 14,
-        "3": 1
+        "0": 14,
+        "1": 1,
+        "58": 2
       },
       "spread": 3,
-      "mean_sigma2": 1.8
+      "mean_sigma2": 59.8
     },
     {
       "line": "RE46",
@@ -3654,14 +3654,14 @@
       "line": "RE5",
       "n_common_stops": 27,
       "sigma2_distribution": {
-        "0": 7,
+        "0": 11,
         "1": 1,
-        "57": 11,
-        "58": 1,
-        "59": 7
+        "2": 7,
+        "3": 7,
+        "4": 1
       },
       "spread": 4,
-      "mean_sigma2": 58.5
+      "mean_sigma2": 1.5
     },
     {
       "line": "RE57",
@@ -3697,11 +3697,11 @@
       "line": "RE77",
       "n_common_stops": 22,
       "sigma2_distribution": {
-        "0": 14,
-        "59": 8
+        "0": 8,
+        "1": 14
       },
       "spread": 1,
-      "mean_sigma2": 59.6
+      "mean_sigma2": 0.6
     },
     {
       "line": "RE80",
@@ -3725,12 +3725,12 @@
       "line": "RE90",
       "n_common_stops": 20,
       "sigma2_distribution": {
-        "25": 2,
-        "26": 8,
-        "28": 10
+        "24": 2,
+        "25": 8,
+        "27": 10
       },
       "spread": 3,
-      "mean_sigma2": 26.9
+      "mean_sigma2": 25.9
     },
     {
       "line": "RE94",
@@ -3745,22 +3745,22 @@
       "line": "S3",
       "n_common_stops": 7,
       "sigma2_distribution": {
-        "46": 7
+        "43": 7
       },
       "spread": 0,
-      "mean_sigma2": 46.0
+      "mean_sigma2": 43.0
     },
     {
       "line": "S30",
       "n_common_stops": 21,
       "sigma2_distribution": {
-        "47": 5,
-        "49": 6,
-        "50": 4,
-        "51": 6
+        "44": 5,
+        "46": 6,
+        "47": 4,
+        "48": 6
       },
       "spread": 4,
-      "mean_sigma2": 49.3
+      "mean_sigma2": 46.3
     }
   ],
   "fleet": [
@@ -3769,9 +3769,9 @@
       "interval": 30,
       "duration_A": 205,
       "duration_B": 205,
-      "fleet_today": 14,
+      "fleet_today": 15,
       "fleet_new_incl_reserve": 20,
-      "delta": 6,
+      "delta": 5,
       "turnaround_A_min": 80,
       "turnaround_B_min": 80
     },
@@ -3846,9 +3846,9 @@
       "interval": 60,
       "duration_A": 286,
       "duration_B": 286,
-      "fleet_today": 11,
+      "fleet_today": 10,
       "fleet_new_incl_reserve": 13,
-      "delta": 2,
+      "delta": 3,
       "turnaround_A_min": 74,
       "turnaround_B_min": 74
     },
@@ -3912,9 +3912,9 @@
       "interval": 60,
       "duration_A": 435,
       "duration_B": 435,
-      "fleet_today": 16,
+      "fleet_today": 15,
       "fleet_new_incl_reserve": 18,
-      "delta": 2,
+      "delta": 3,
       "turnaround_A_min": 75,
       "turnaround_B_min": 75
     },
@@ -3923,9 +3923,9 @@
       "interval": 60,
       "duration_A": 289,
       "duration_B": 289,
-      "fleet_today": 11,
+      "fleet_today": 10,
       "fleet_new_incl_reserve": 13,
-      "delta": 2,
+      "delta": 3,
       "turnaround_A_min": 71,
       "turnaround_B_min": 71
     },

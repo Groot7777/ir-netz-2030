@@ -1,0 +1,7603 @@
+{
+  "n_variants": 68,
+  "n_base_lines": 31,
+  "n_stations": 474,
+  "data_quality": [
+    "S10_A: Haltename(n) mehrfach in derselben Linie (Ring): ['Unna Hbf', 'Bochum-Langendreer', 'Bochum-Langendreer West', 'Bochum Hbf']",
+    "S10_I: Haltename(n) mehrfach in derselben Linie (Ring): ['Unna Hbf', 'Bochum-Langendreer', 'Bochum-Langendreer West', 'Bochum Hbf']",
+    "Alias-Konflikt: 'Bochum-Höntrop' (RE40) und 'Essen-Höntrop' (S10) sind derselbe physische Bahnhof, aber im Datensatz getrennt — kein Umstieg in der Routensuche, Korridorerkennung übersieht den Mischbetriebsabschnitt."
+  ],
+  "hub_ranking": [
+    {
+      "station": "Düsseldorf Hbf",
+      "score": 66.0,
+      "lines": [
+        "RB37",
+        "RE2",
+        "RE30",
+        "RE32",
+        "RE5",
+        "RE90"
+      ]
+    },
+    {
+      "station": "Berlin Hbf",
+      "score": 42.0,
+      "lines": [
+        "RE11",
+        "RE46",
+        "RE71",
+        "RE77"
+      ]
+    },
+    {
+      "station": "Rostock Hbf",
+      "score": 40.0,
+      "lines": [
+        "RE17",
+        "RE35",
+        "RE35X",
+        "RE91"
+      ]
+    },
+    {
+      "station": "Hamburg-Harburg",
+      "score": 38.0,
+      "lines": [
+        "RE25",
+        "RE45",
+        "RE90b",
+        "RE91"
+      ]
+    },
+    {
+      "station": "Berlin Südkreuz",
+      "score": 38.0,
+      "lines": [
+        "RE35",
+        "RE35X",
+        "RE45",
+        "RE46"
+      ]
+    },
+    {
+      "station": "Essen Hbf",
+      "score": 32.0,
+      "lines": [
+        "RE2",
+        "RE32",
+        "RE40",
+        "S3",
+        "S30"
+      ]
+    },
+    {
+      "station": "Bochum Hbf",
+      "score": 31.0,
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE40",
+        "RE9"
+      ]
+    },
+    {
+      "station": "Mönchengladbach Hbf",
+      "score": 29.0,
+      "lines": [
+        "RB37",
+        "RE14",
+        "RE32",
+        "RE90"
+      ]
+    },
+    {
+      "station": "Hagen Hbf",
+      "score": 26.0,
+      "lines": [
+        "RB37",
+        "RE30",
+        "RE40",
+        "S30"
+      ]
+    },
+    {
+      "station": "Lübeck Hbf",
+      "score": 24.0,
+      "lines": [
+        "RE17",
+        "RE45",
+        "RE46"
+      ]
+    },
+    {
+      "station": "Duisburg Hbf",
+      "score": 24.0,
+      "lines": [
+        "RE2",
+        "RE32",
+        "RE5"
+      ]
+    },
+    {
+      "station": "Pasewalk",
+      "score": 24.0,
+      "lines": [
+        "RE35",
+        "RE35X",
+        "RE71"
+      ]
+    },
+    {
+      "station": "Hamm (Westf) Hbf",
+      "score": 22.0,
+      "lines": [
+        "RE17",
+        "RE30",
+        "RE32"
+      ]
+    },
+    {
+      "station": "Stralsund Hbf",
+      "score": 22.0,
+      "lines": [
+        "RE35",
+        "RE35X",
+        "RE91"
+      ]
+    },
+    {
+      "station": "Berlin-Spandau",
+      "score": 22.0,
+      "lines": [
+        "RE45",
+        "RE46",
+        "RE77"
+      ]
+    },
+    {
+      "station": "Kassel-Wilhelmshöhe",
+      "score": 20.0,
+      "lines": [
+        "RE24",
+        "RE32",
+        "RE7"
+      ]
+    },
+    {
+      "station": "Münster (Westf) Hbf",
+      "score": 20.0,
+      "lines": [
+        "RE2",
+        "RE30",
+        "RE9"
+      ]
+    },
+    {
+      "station": "Eberswalde Hbf",
+      "score": 20.0,
+      "lines": [
+        "RE35",
+        "RE35X",
+        "RE71"
+      ]
+    },
+    {
+      "station": "Bremen Hbf",
+      "score": 20.0,
+      "lines": [
+        "RE7",
+        "RE9",
+        "RE90b"
+      ]
+    },
+    {
+      "station": "Berlin Hbf (tief)",
+      "score": 18.0,
+      "lines": [
+        "RE35",
+        "RE35X",
+        "RE45"
+      ]
+    },
+    {
+      "station": "Hamburg-Elbbrücken",
+      "score": 18.0,
+      "lines": [
+        "RE45",
+        "RE90b",
+        "RE91"
+      ]
+    },
+    {
+      "station": "Büchen",
+      "score": 18.0,
+      "lines": [
+        "RE46",
+        "RE77",
+        "RE91"
+      ]
+    },
+    {
+      "station": "Osnabrück Hbf",
+      "score": 17.0,
+      "lines": [
+        "RE17",
+        "RE2",
+        "RE9"
+      ]
+    },
+    {
+      "station": "Erfurt Hbf",
+      "score": 17.0,
+      "lines": [
+        "RE24",
+        "RE28",
+        "RE39"
+      ]
+    },
+    {
+      "station": "Hagenow Land",
+      "score": 16.0,
+      "lines": [
+        "RE46",
+        "RE77",
+        "RE91"
+      ]
+    },
+    {
+      "station": "Kiel Hbf",
+      "score": 14.0,
+      "lines": [
+        "RE46",
+        "RE90b"
+      ]
+    },
+    {
+      "station": "Saarbrücken Hbf",
+      "score": 12.0,
+      "lines": [
+        "RE14",
+        "RE80",
+        "RE90"
+      ]
+    },
+    {
+      "station": "Zwickau Hbf",
+      "score": 12.0,
+      "lines": [
+        "RE24",
+        "RE35",
+        "RE35X"
+      ]
+    },
+    {
+      "station": "Frankfurt (Main) Hbf",
+      "score": 12.0,
+      "lines": [
+        "RE40",
+        "RE5",
+        "RE7"
+      ]
+    },
+    {
+      "station": "Dortmund Hbf",
+      "score": 10.0,
+      "lines": [
+        "RE17",
+        "RE32",
+        "RE9"
+      ]
+    },
+    {
+      "station": "Neuss Hbf",
+      "score": 8.0,
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ]
+    },
+    {
+      "station": "Düsseldorf-Bilk",
+      "score": 8.0,
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ]
+    },
+    {
+      "station": "Oldenburg (Oldb) Hbf",
+      "score": 8.0,
+      "lines": [
+        "RE17",
+        "RE90b"
+      ]
+    },
+    {
+      "station": "Bad Kleinen",
+      "score": 8.0,
+      "lines": [
+        "RE17",
+        "RE91"
+      ]
+    },
+    {
+      "station": "Hannover Hbf",
+      "score": 8.0,
+      "lines": [
+        "RE25",
+        "RE7"
+      ]
+    },
+    {
+      "station": "Freiberg (Sachs)",
+      "score": 8.0,
+      "lines": [
+        "RE35",
+        "RE35X"
+      ]
+    },
+    {
+      "station": "Chemnitz Hbf",
+      "score": 8.0,
+      "lines": [
+        "RE35",
+        "RE35X"
+      ]
+    },
+    {
+      "station": "Plattling",
+      "score": 8.0,
+      "lines": [
+        "RE39",
+        "RE57"
+      ]
+    },
+    {
+      "station": "Nürnberg Hbf",
+      "score": 8.0,
+      "lines": [
+        "RE39",
+        "RE94"
+      ]
+    },
+    {
+      "station": "Essen-Steele",
+      "score": 8.0,
+      "lines": [
+        "RE40",
+        "S3",
+        "S30"
+      ]
+    }
+  ],
+  "corridors": [
+    {
+      "lines": [
+        "RE40",
+        "S10 Außenring",
+        "S10 Innenring",
+        "S3",
+        "S30"
+      ],
+      "n_lines": 5,
+      "edges": 1,
+      "ends": [
+        "Essen Hbf",
+        "Essen-Steele"
+      ],
+      "nodes": [
+        "Essen Hbf",
+        "Essen-Steele"
+      ]
+    },
+    {
+      "lines": [
+        "S10 Außenring",
+        "S10 Innenring",
+        "S3",
+        "S30"
+      ],
+      "n_lines": 4,
+      "edges": 1,
+      "ends": [
+        "Essen-Steele",
+        "Essen-Steele Ost"
+      ],
+      "nodes": [
+        "Essen-Steele",
+        "Essen-Steele Ost"
+      ]
+    },
+    {
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "n_lines": 3,
+      "edges": 3,
+      "ends": [
+        "Düsseldorf Hbf",
+        "Mönchengladbach Hbf"
+      ],
+      "nodes": [
+        "Düsseldorf Hbf",
+        "Düsseldorf-Bilk",
+        "Mönchengladbach Hbf",
+        "Neuss Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RB37",
+        "S10 Außenring",
+        "S10 Innenring"
+      ],
+      "n_lines": 3,
+      "edges": 1,
+      "ends": [
+        "Bochum-Langendreer",
+        "Witten Hbf"
+      ],
+      "nodes": [
+        "Bochum-Langendreer",
+        "Witten Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE30",
+        "S10 Außenring",
+        "S10 Innenring"
+      ],
+      "n_lines": 3,
+      "edges": 1,
+      "ends": [
+        "Holzwickede",
+        "Schwerte (Ruhr)"
+      ],
+      "nodes": [
+        "Holzwickede",
+        "Schwerte (Ruhr)"
+      ]
+    },
+    {
+      "lines": [
+        "RE35",
+        "RE35X",
+        "RE45"
+      ],
+      "n_lines": 3,
+      "edges": 1,
+      "ends": [
+        "Berlin Hbf (tief)",
+        "Berlin Südkreuz"
+      ],
+      "nodes": [
+        "Berlin Hbf (tief)",
+        "Berlin Südkreuz"
+      ]
+    },
+    {
+      "lines": [
+        "RE45",
+        "RE90b",
+        "RE91"
+      ],
+      "n_lines": 3,
+      "edges": 1,
+      "ends": [
+        "Hamburg-Elbbrücken",
+        "Hamburg-Harburg"
+      ],
+      "nodes": [
+        "Hamburg-Elbbrücken",
+        "Hamburg-Harburg"
+      ]
+    },
+    {
+      "lines": [
+        "RE46",
+        "RE77",
+        "RE91"
+      ],
+      "n_lines": 3,
+      "edges": 1,
+      "ends": [
+        "Büchen",
+        "Hagenow Land"
+      ],
+      "nodes": [
+        "Büchen",
+        "Hagenow Land"
+      ]
+    },
+    {
+      "lines": [
+        "S10 Außenring",
+        "S10 Innenring"
+      ],
+      "n_lines": 2,
+      "edges": 36,
+      "ends": [
+        "Essen Hbf",
+        "Essen-Steele Ost",
+        "Holzwickede"
+      ],
+      "nodes": [
+        "Bochum Hbf",
+        "Bochum West",
+        "Bochum-Bermuda3eck",
+        "Bochum-Hamme",
+        "Bochum-Kohlenstraße",
+        "Bochum-Langendreer",
+        "Bochum-Langendreer West",
+        "Bochum-Riemke",
+        "Bochum-Stahlhausen",
+        "Dortmund Hbf",
+        "Dortmund-Brackel",
+        "Dortmund-Dorstfeld",
+        "Dortmund-Dorstfeld Süd",
+        "Dortmund-Kley",
+        "Dortmund-Oespel",
+        "Dortmund-Universität",
+        "Dortmund-Wickede",
+        "Essen Hbf",
+        "Essen West",
+        "Essen-Altenessen",
+        "Essen-Borbeck",
+        "Essen-Dellwig Ost",
+        "Essen-Eiberg",
+        "Essen-Frohnhausen",
+        "Essen-Höntrop",
+        "Essen-Steele Ost",
+        "Gelsenkirchen Hbf",
+        "Gelsenkirchen-Zollverein Nord",
+        "Holzwickede",
+        "Massen",
+        "Mülheim (Ruhr) Hbf",
+        "Mülheim West",
+        "Mülheim-Styrum",
+        "Oberhausen Hbf",
+        "Unna Hbf",
+        "Unna West",
+        "Wanne-Eickel Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "n_lines": 2,
+      "edges": 5,
+      "ends": [
+        "Düsseldorf Hbf",
+        "Hagen Hbf"
+      ],
+      "nodes": [
+        "Düsseldorf Hbf",
+        "Hagen Hbf",
+        "Schwelm",
+        "Wuppertal Hbf",
+        "Wuppertal-Oberbarmen",
+        "Wuppertal-Vohwinkel"
+      ]
+    },
+    {
+      "lines": [
+        "RE11",
+        "RE77"
+      ],
+      "n_lines": 2,
+      "edges": 3,
+      "ends": [
+        "Berlin Hbf",
+        "Berlin Ostbahnhof"
+      ],
+      "nodes": [
+        "Berlin Alexanderplatz",
+        "Berlin Friedrichstraße",
+        "Berlin Hbf",
+        "Berlin Ostbahnhof"
+      ]
+    },
+    {
+      "lines": [
+        "S10 Außenring",
+        "S10 Innenring"
+      ],
+      "n_lines": 2,
+      "edges": 3,
+      "ends": [
+        "Schwerte (Ruhr)",
+        "Witten Hbf"
+      ],
+      "nodes": [
+        "Hagen-Vorhalle",
+        "Schwerte (Ruhr)",
+        "Wengern",
+        "Witten Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "n_lines": 2,
+      "edges": 3,
+      "ends": [
+        "Essen-Steele Ost",
+        "Hattingen (Ruhr)"
+      ],
+      "nodes": [
+        "Bochum-Dahlhausen",
+        "Essen-Horst",
+        "Essen-Steele Ost",
+        "Hattingen (Ruhr)"
+      ]
+    },
+    {
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "n_lines": 2,
+      "edges": 2,
+      "ends": [
+        "Hagen Hbf",
+        "Witten Hbf"
+      ],
+      "nodes": [
+        "Hagen Hbf",
+        "Wetter (Ruhr)",
+        "Witten Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE17",
+        "RE32"
+      ],
+      "n_lines": 2,
+      "edges": 2,
+      "ends": [
+        "Dortmund Hbf",
+        "Hamm (Westf) Hbf"
+      ],
+      "nodes": [
+        "Dortmund Hbf",
+        "Hamm (Westf) Hbf",
+        "Kamen"
+      ]
+    },
+    {
+      "lines": [
+        "RE2",
+        "RE9"
+      ],
+      "n_lines": 2,
+      "edges": 2,
+      "ends": [
+        "Osnabrück Hbf",
+        "Recklinghausen Hbf"
+      ],
+      "nodes": [
+        "Münster (Westf) Hbf",
+        "Osnabrück Hbf",
+        "Recklinghausen Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE35",
+        "RE71"
+      ],
+      "n_lines": 2,
+      "edges": 2,
+      "ends": [
+        "Angermünde",
+        "Bernau (b Berlin)"
+      ],
+      "nodes": [
+        "Angermünde",
+        "Bernau (b Berlin)",
+        "Eberswalde Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "n_lines": 2,
+      "edges": 2,
+      "ends": [
+        "Jübek",
+        "Rendsburg"
+      ],
+      "nodes": [
+        "Jübek",
+        "Rendsburg",
+        "Schleswig"
+      ]
+    },
+    {
+      "lines": [
+        "RB37",
+        "RE14"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Mönchengladbach Hbf",
+        "Viersen"
+      ],
+      "nodes": [
+        "Mönchengladbach Hbf",
+        "Viersen"
+      ]
+    },
+    {
+      "lines": [
+        "RE11",
+        "RE71"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Berlin-Wannsee",
+        "Potsdam Hbf"
+      ],
+      "nodes": [
+        "Berlin-Wannsee",
+        "Potsdam Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE25",
+        "RE91"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Buxtehude",
+        "Hamburg-Harburg"
+      ],
+      "nodes": [
+        "Buxtehude",
+        "Hamburg-Harburg"
+      ]
+    },
+    {
+      "lines": [
+        "RE25",
+        "RE90b"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Buchholz (Nordheide)",
+        "Hamburg-Harburg"
+      ],
+      "nodes": [
+        "Buchholz (Nordheide)",
+        "Hamburg-Harburg"
+      ]
+    },
+    {
+      "lines": [
+        "RE28",
+        "RE39"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Bamberg",
+        "Erfurt Hbf"
+      ],
+      "nodes": [
+        "Bamberg",
+        "Erfurt Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE32",
+        "RE90"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Mönchengladbach Hbf",
+        "Rheydt Hbf"
+      ],
+      "nodes": [
+        "Mönchengladbach Hbf",
+        "Rheydt Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE32",
+        "RE9"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Bochum Hbf",
+        "Dortmund Hbf"
+      ],
+      "nodes": [
+        "Bochum Hbf",
+        "Dortmund Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Rostock Hbf",
+        "Warnemünde"
+      ],
+      "nodes": [
+        "Rostock Hbf",
+        "Warnemünde"
+      ]
+    },
+    {
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Greifswald",
+        "Stralsund Hbf"
+      ],
+      "nodes": [
+        "Greifswald",
+        "Stralsund Hbf"
+      ]
+    },
+    {
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Berlin Gesundbrunnen",
+        "Berlin Hbf (tief)"
+      ],
+      "nodes": [
+        "Berlin Gesundbrunnen",
+        "Berlin Hbf (tief)"
+      ]
+    },
+    {
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Dresden Hbf",
+        "Dresden-Neustadt"
+      ],
+      "nodes": [
+        "Dresden Hbf",
+        "Dresden-Neustadt"
+      ]
+    },
+    {
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Hagenow Land",
+        "Wittenberge"
+      ],
+      "nodes": [
+        "Hagenow Land",
+        "Wittenberge"
+      ]
+    },
+    {
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Berlin Hbf",
+        "Berlin-Spandau"
+      ],
+      "nodes": [
+        "Berlin Hbf",
+        "Berlin-Spandau"
+      ]
+    },
+    {
+      "lines": [
+        "RE46",
+        "RE71"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Berlin Hbf",
+        "Berlin Potsdamer Platz"
+      ],
+      "nodes": [
+        "Berlin Hbf",
+        "Berlin Potsdamer Platz"
+      ]
+    },
+    {
+      "lines": [
+        "RE57",
+        "RE80"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Kißlegg",
+        "Memmingen"
+      ],
+      "nodes": [
+        "Kißlegg",
+        "Memmingen"
+      ]
+    },
+    {
+      "lines": [
+        "RE77",
+        "RE90b"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Elmshorn",
+        "Neumünster"
+      ],
+      "nodes": [
+        "Elmshorn",
+        "Neumünster"
+      ]
+    },
+    {
+      "lines": [
+        "RE80",
+        "RE94"
+      ],
+      "n_lines": 2,
+      "edges": 1,
+      "ends": [
+        "Neu-Ulm",
+        "Ulm Hbf"
+      ],
+      "nodes": [
+        "Neu-Ulm",
+        "Ulm Hbf"
+      ]
+    }
+  ],
+  "corridor_headways": [
+    {
+      "from": "Bochum Hbf",
+      "to": "Dortmund Hbf",
+      "lines": [
+        "RE32",
+        "RE9"
+      ],
+      "departures": [
+        {
+          "line": "RE32",
+          "dep_mod60": 56
+        },
+        {
+          "line": "RE9",
+          "dep_mod60": 56
+        }
+      ],
+      "gaps": [
+        0,
+        0
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 30.0
+    },
+    {
+      "from": "Berlin Gesundbrunnen",
+      "to": "Berlin Hbf (tief)",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 55
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 55
+        }
+      ],
+      "gaps": [
+        0,
+        0
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 30.0
+    },
+    {
+      "from": "Essen-Steele Ost",
+      "to": "Essen-Horst",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 7
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 7
+        }
+      ],
+      "gaps": [
+        0,
+        0
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 30.0
+    },
+    {
+      "from": "Essen-Horst",
+      "to": "Bochum-Dahlhausen",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 10
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 10
+        }
+      ],
+      "gaps": [
+        0,
+        0
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 30.0
+    },
+    {
+      "from": "Bochum-Dahlhausen",
+      "to": "Hattingen (Ruhr)",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 15
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 15
+        }
+      ],
+      "gaps": [
+        0,
+        0
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 30.0
+    },
+    {
+      "from": "Berlin Hbf",
+      "to": "Berlin Friedrichstraße",
+      "lines": [
+        "RE11",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE11",
+          "dep_mod60": 41
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 42
+        }
+      ],
+      "gaps": [
+        1,
+        59
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 29.0
+    },
+    {
+      "from": "Berlin Friedrichstraße",
+      "to": "Berlin Alexanderplatz",
+      "lines": [
+        "RE11",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE11",
+          "dep_mod60": 45
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 46
+        }
+      ],
+      "gaps": [
+        1,
+        59
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 29.0
+    },
+    {
+      "from": "Berlin Alexanderplatz",
+      "to": "Berlin Ostbahnhof",
+      "lines": [
+        "RE11",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE11",
+          "dep_mod60": 50
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 51
+        }
+      ],
+      "gaps": [
+        1,
+        59
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 29.0
+    },
+    {
+      "from": "Wetter (Ruhr)",
+      "to": "Witten Hbf",
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "departures": [
+        {
+          "line": "RE40",
+          "dep_mod60": 21
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 23
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Witten Hbf",
+      "to": "Bochum-Langendreer",
+      "lines": [
+        "RB37",
+        "S10 Außenring"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 30
+        },
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 32
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Berlin Ostbahnhof",
+      "to": "Berlin Alexanderplatz",
+      "lines": [
+        "RE11",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 4
+        },
+        {
+          "line": "RE11",
+          "dep_mod60": 6
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Berlin Alexanderplatz",
+      "to": "Berlin Friedrichstraße",
+      "lines": [
+        "RE11",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 9
+        },
+        {
+          "line": "RE11",
+          "dep_mod60": 11
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Berlin Friedrichstraße",
+      "to": "Berlin Hbf",
+      "lines": [
+        "RE11",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 14
+        },
+        {
+          "line": "RE11",
+          "dep_mod60": 16
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Berlin-Wannsee",
+      "to": "Potsdam Hbf",
+      "lines": [
+        "RE11",
+        "RE71"
+      ],
+      "departures": [
+        {
+          "line": "RE71",
+          "dep_mod60": 43
+        },
+        {
+          "line": "RE11",
+          "dep_mod60": 45
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Hamm (Westf) Hbf",
+      "to": "Kamen",
+      "lines": [
+        "RE17",
+        "RE32"
+      ],
+      "departures": [
+        {
+          "line": "RE17",
+          "dep_mod60": 25
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 27
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Kamen",
+      "to": "Dortmund Hbf",
+      "lines": [
+        "RE17",
+        "RE32"
+      ],
+      "departures": [
+        {
+          "line": "RE17",
+          "dep_mod60": 35
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Dresden Hbf",
+      "to": "Dresden-Neustadt",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 48
+        },
+        {
+          "line": "RE35X",
+          "dep_mod60": 50
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Neu-Ulm",
+      "to": "Ulm Hbf",
+      "lines": [
+        "RE80",
+        "RE94"
+      ],
+      "departures": [
+        {
+          "line": "RE80",
+          "dep_mod60": 41
+        },
+        {
+          "line": "RE94",
+          "dep_mod60": 43
+        }
+      ],
+      "gaps": [
+        2,
+        58
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 28.0
+    },
+    {
+      "from": "Witten Hbf",
+      "to": "Wetter (Ruhr)",
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 29
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 32
+        }
+      ],
+      "gaps": [
+        3,
+        57
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 27.0
+    },
+    {
+      "from": "Mönchengladbach Hbf",
+      "to": "Viersen",
+      "lines": [
+        "RB37",
+        "RE14"
+      ],
+      "departures": [
+        {
+          "line": "RE14",
+          "dep_mod60": 53
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 56
+        }
+      ],
+      "gaps": [
+        3,
+        57
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 27.0
+    },
+    {
+      "from": "Ulm Hbf",
+      "to": "Neu-Ulm",
+      "lines": [
+        "RE80",
+        "RE94"
+      ],
+      "departures": [
+        {
+          "line": "RE80",
+          "dep_mod60": 10
+        },
+        {
+          "line": "RE94",
+          "dep_mod60": 13
+        }
+      ],
+      "gaps": [
+        3,
+        57
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 27.0
+    },
+    {
+      "from": "Viersen",
+      "to": "Mönchengladbach Hbf",
+      "lines": [
+        "RB37",
+        "RE14"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 55
+        },
+        {
+          "line": "RE14",
+          "dep_mod60": 59
+        }
+      ],
+      "gaps": [
+        4,
+        56
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 26.0
+    },
+    {
+      "from": "Hagen Hbf",
+      "to": "Wetter (Ruhr)",
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "departures": [
+        {
+          "line": "RE40",
+          "dep_mod60": 12
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 16
+        }
+      ],
+      "gaps": [
+        4,
+        56
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 26.0
+    },
+    {
+      "from": "Wetter (Ruhr)",
+      "to": "Hagen Hbf",
+      "lines": [
+        "RB37",
+        "RE40"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 36
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 40
+        }
+      ],
+      "gaps": [
+        4,
+        56
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 26.0
+    },
+    {
+      "from": "Schwerte (Ruhr)",
+      "to": "Holzwickede",
+      "lines": [
+        "RE30",
+        "S10 Innenring"
+      ],
+      "departures": [
+        {
+          "line": "RE30",
+          "dep_mod60": 24
+        },
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 28
+        }
+      ],
+      "gaps": [
+        4,
+        56
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 26.0
+    },
+    {
+      "from": "Bernau (b Berlin)",
+      "to": "Eberswalde Hbf",
+      "lines": [
+        "RE35",
+        "RE71"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 50
+        },
+        {
+          "line": "RE71",
+          "dep_mod60": 54
+        }
+      ],
+      "gaps": [
+        4,
+        56
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 26.0
+    },
+    {
+      "from": "Dortmund Hbf",
+      "to": "Bochum Hbf",
+      "lines": [
+        "RE32",
+        "RE9"
+      ],
+      "departures": [
+        {
+          "line": "RE32",
+          "dep_mod60": 51
+        },
+        {
+          "line": "RE9",
+          "dep_mod60": 56
+        }
+      ],
+      "gaps": [
+        5,
+        55
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 25.0
+    },
+    {
+      "from": "Bochum-Langendreer",
+      "to": "Bochum-Langendreer West",
+      "lines": [
+        "S10 Außenring",
+        "S10 Innenring"
+      ],
+      "departures": [
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 32
+        },
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        5,
+        55
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 25.0
+    },
+    {
+      "from": "Bochum-Langendreer West",
+      "to": "Bochum Hbf",
+      "lines": [
+        "S10 Außenring",
+        "S10 Innenring"
+      ],
+      "departures": [
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 34
+        },
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 39
+        }
+      ],
+      "gaps": [
+        5,
+        55
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 25.0
+    },
+    {
+      "from": "Eberswalde Hbf",
+      "to": "Angermünde",
+      "lines": [
+        "RE35",
+        "RE71"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 4
+        },
+        {
+          "line": "RE71",
+          "dep_mod60": 10
+        }
+      ],
+      "gaps": [
+        6,
+        54
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Wittenberge",
+      "to": "Hagenow Land",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 4
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 10
+        }
+      ],
+      "gaps": [
+        6,
+        54
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Bochum Hbf",
+      "to": "Bochum-Langendreer West",
+      "lines": [
+        "S10 Außenring",
+        "S10 Innenring"
+      ],
+      "departures": [
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 5
+        },
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 59
+        }
+      ],
+      "gaps": [
+        54,
+        6
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Bochum-Langendreer West",
+      "to": "Bochum-Langendreer",
+      "lines": [
+        "S10 Außenring",
+        "S10 Innenring"
+      ],
+      "departures": [
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 2
+        },
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 8
+        }
+      ],
+      "gaps": [
+        6,
+        54
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 24.0
+    },
+    {
+      "from": "Dortmund Hbf",
+      "to": "Kamen",
+      "lines": [
+        "RE17",
+        "RE32"
+      ],
+      "departures": [
+        {
+          "line": "RE32",
+          "dep_mod60": 9
+        },
+        {
+          "line": "RE17",
+          "dep_mod60": 16
+        }
+      ],
+      "gaps": [
+        7,
+        53
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 23.0
+    },
+    {
+      "from": "Kamen",
+      "to": "Hamm (Westf) Hbf",
+      "lines": [
+        "RE17",
+        "RE32"
+      ],
+      "departures": [
+        {
+          "line": "RE32",
+          "dep_mod60": 17
+        },
+        {
+          "line": "RE17",
+          "dep_mod60": 25
+        }
+      ],
+      "gaps": [
+        8,
+        52
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 22.0
+    },
+    {
+      "from": "Hamburg-Harburg",
+      "to": "Buxtehude",
+      "lines": [
+        "RE25",
+        "RE91"
+      ],
+      "departures": [
+        {
+          "line": "RE91",
+          "dep_mod60": 45
+        },
+        {
+          "line": "RE25",
+          "dep_mod60": 53
+        }
+      ],
+      "gaps": [
+        8,
+        52
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 22.0
+    },
+    {
+      "from": "Hattingen (Ruhr)",
+      "to": "Bochum-Dahlhausen",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S3",
+          "dep_mod60": 4
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 12
+        }
+      ],
+      "gaps": [
+        8,
+        52
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 22.0
+    },
+    {
+      "from": "Bochum-Dahlhausen",
+      "to": "Essen-Horst",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S3",
+          "dep_mod60": 8
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 16
+        }
+      ],
+      "gaps": [
+        8,
+        52
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 22.0
+    },
+    {
+      "from": "Essen-Horst",
+      "to": "Essen-Steele Ost",
+      "lines": [
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S3",
+          "dep_mod60": 12
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 20
+        }
+      ],
+      "gaps": [
+        8,
+        52
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 22.0
+    },
+    {
+      "from": "Rheydt Hbf",
+      "to": "Mönchengladbach Hbf",
+      "lines": [
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE32",
+          "dep_mod60": 27
+        },
+        {
+          "line": "RE90",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        10,
+        50
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 20.0
+    },
+    {
+      "from": "Hamburg-Harburg",
+      "to": "Hamburg-Elbbrücken",
+      "lines": [
+        "RE45",
+        "RE90b",
+        "RE91"
+      ],
+      "departures": [
+        {
+          "line": "RE45",
+          "dep_mod60": 12
+        },
+        {
+          "line": "RE90b",
+          "dep_mod60": 19
+        },
+        {
+          "line": "RE91",
+          "dep_mod60": 22
+        }
+      ],
+      "gaps": [
+        7,
+        3,
+        50
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 20.0
+    },
+    {
+      "from": "Berlin Hbf (tief)",
+      "to": "Berlin Südkreuz",
+      "lines": [
+        "RE35",
+        "RE35X",
+        "RE45"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 3
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 3
+        },
+        {
+          "line": "RE45",
+          "dep_mod60": 14
+        }
+      ],
+      "gaps": [
+        0,
+        11,
+        49
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 19.3
+    },
+    {
+      "from": "Hamburg-Elbbrücken",
+      "to": "Hamburg-Harburg",
+      "lines": [
+        "RE45",
+        "RE90b",
+        "RE91"
+      ],
+      "departures": [
+        {
+          "line": "RE90b",
+          "dep_mod60": 31
+        },
+        {
+          "line": "RE91",
+          "dep_mod60": 34
+        },
+        {
+          "line": "RE45",
+          "dep_mod60": 42
+        }
+      ],
+      "gaps": [
+        3,
+        8,
+        49
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 19.3
+    },
+    {
+      "from": "Büchen",
+      "to": "Hagenow Land",
+      "lines": [
+        "RE46",
+        "RE77",
+        "RE91"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 3
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 51
+        },
+        {
+          "line": "RE91",
+          "dep_mod60": 59
+        }
+      ],
+      "gaps": [
+        48,
+        8,
+        4
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 18.7
+    },
+    {
+      "from": "Hagenow Land",
+      "to": "Büchen",
+      "lines": [
+        "RE46",
+        "RE77",
+        "RE91"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 37
+        },
+        {
+          "line": "RE91",
+          "dep_mod60": 45
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 49
+        }
+      ],
+      "gaps": [
+        8,
+        4,
+        48
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 18.7
+    },
+    {
+      "from": "Schwelm",
+      "to": "Hagen Hbf",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 5
+        },
+        {
+          "line": "RE30",
+          "dep_mod60": 52
+        }
+      ],
+      "gaps": [
+        47,
+        13
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 17.0
+    },
+    {
+      "from": "Hagenow Land",
+      "to": "Wittenberge",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 11
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 24
+        }
+      ],
+      "gaps": [
+        13,
+        47
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 17.0
+    },
+    {
+      "from": "Neumünster",
+      "to": "Elmshorn",
+      "lines": [
+        "RE77",
+        "RE90b"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 29
+        },
+        {
+          "line": "RE90b",
+          "dep_mod60": 42
+        }
+      ],
+      "gaps": [
+        13,
+        47
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 17.0
+    },
+    {
+      "from": "Wuppertal-Oberbarmen",
+      "to": "Schwelm",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE30",
+          "dep_mod60": 46
+        }
+      ],
+      "gaps": [
+        46,
+        14
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 16.0
+    },
+    {
+      "from": "Potsdam Hbf",
+      "to": "Berlin-Wannsee",
+      "lines": [
+        "RE11",
+        "RE71"
+      ],
+      "departures": [
+        {
+          "line": "RE11",
+          "dep_mod60": 8
+        },
+        {
+          "line": "RE71",
+          "dep_mod60": 22
+        }
+      ],
+      "gaps": [
+        14,
+        46
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 16.0
+    },
+    {
+      "from": "Rostock Hbf",
+      "to": "Warnemünde",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 8
+        },
+        {
+          "line": "RE35X",
+          "dep_mod60": 22
+        }
+      ],
+      "gaps": [
+        14,
+        46
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 16.0
+    },
+    {
+      "from": "Berlin Hbf",
+      "to": "Berlin Potsdamer Platz",
+      "lines": [
+        "RE46",
+        "RE71"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 7
+        },
+        {
+          "line": "RE71",
+          "dep_mod60": 53
+        }
+      ],
+      "gaps": [
+        46,
+        14
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 16.0
+    },
+    {
+      "from": "Wuppertal Hbf",
+      "to": "Wuppertal-Oberbarmen",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RE30",
+          "dep_mod60": 39
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 55
+        }
+      ],
+      "gaps": [
+        16,
+        44
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 14.0
+    },
+    {
+      "from": "Berlin Südkreuz",
+      "to": "Berlin Hbf (tief)",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 6
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 22
+        }
+      ],
+      "gaps": [
+        16,
+        44
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 14.0
+    },
+    {
+      "from": "Berlin Hbf (tief)",
+      "to": "Berlin Gesundbrunnen",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 14
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 30
+        }
+      ],
+      "gaps": [
+        16,
+        44
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 14.0
+    },
+    {
+      "from": "Essen Hbf",
+      "to": "Essen-Steele",
+      "lines": [
+        "RE40",
+        "S10 Innenring",
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 0
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 2
+        },
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        0,
+        2,
+        35,
+        23
+      ],
+      "ideal_gap": 15.0,
+      "mean_deviation": 14.0
+    },
+    {
+      "from": "Essen-Steele",
+      "to": "Essen-Steele Ost",
+      "lines": [
+        "S10 Innenring",
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S30",
+          "dep_mod60": 4
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 4
+        },
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 41
+        }
+      ],
+      "gaps": [
+        0,
+        37,
+        23
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 13.3
+    },
+    {
+      "from": "Bamberg",
+      "to": "Erfurt Hbf",
+      "lines": [
+        "RE28",
+        "RE39"
+      ],
+      "departures": [
+        {
+          "line": "RE28",
+          "dep_mod60": 37
+        },
+        {
+          "line": "RE39",
+          "dep_mod60": 54
+        }
+      ],
+      "gaps": [
+        17,
+        43
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 13.0
+    },
+    {
+      "from": "Holzwickede",
+      "to": "Schwerte (Ruhr)",
+      "lines": [
+        "RE30",
+        "S10 Außenring"
+      ],
+      "departures": [
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 6
+        },
+        {
+          "line": "RE30",
+          "dep_mod60": 49
+        }
+      ],
+      "gaps": [
+        43,
+        17
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 13.0
+    },
+    {
+      "from": "Elmshorn",
+      "to": "Neumünster",
+      "lines": [
+        "RE77",
+        "RE90b"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 8
+        },
+        {
+          "line": "RE90b",
+          "dep_mod60": 51
+        }
+      ],
+      "gaps": [
+        43,
+        17
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 13.0
+    },
+    {
+      "from": "Düsseldorf Hbf",
+      "to": "Wuppertal-Vohwinkel",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RE30",
+          "dep_mod60": 14
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 32
+        }
+      ],
+      "gaps": [
+        18,
+        42
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Wuppertal-Vohwinkel",
+      "to": "Wuppertal Hbf",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RE30",
+          "dep_mod60": 30
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 48
+        }
+      ],
+      "gaps": [
+        18,
+        42
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Bochum-Langendreer",
+      "to": "Witten Hbf",
+      "lines": [
+        "RB37",
+        "S10 Innenring"
+      ],
+      "departures": [
+        {
+          "line": "S10 Innenring",
+          "dep_mod60": 4
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 22
+        }
+      ],
+      "gaps": [
+        18,
+        42
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Düsseldorf Hbf",
+      "to": "Düsseldorf-Bilk",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE32",
+          "dep_mod60": 6
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 29
+        },
+        {
+          "line": "RE90",
+          "dep_mod60": 31
+        }
+      ],
+      "gaps": [
+        23,
+        2,
+        35
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Hamburg-Harburg",
+      "to": "Buchholz (Nordheide)",
+      "lines": [
+        "RE25",
+        "RE90b"
+      ],
+      "departures": [
+        {
+          "line": "RE25",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE90b",
+          "dep_mod60": 42
+        }
+      ],
+      "gaps": [
+        42,
+        18
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Dresden-Neustadt",
+      "to": "Dresden Hbf",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 18
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 36
+        }
+      ],
+      "gaps": [
+        18,
+        42
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Jübek",
+      "to": "Schleswig",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 14
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 32
+        }
+      ],
+      "gaps": [
+        18,
+        42
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 12.0
+    },
+    {
+      "from": "Neuss Hbf",
+      "to": "Mönchengladbach Hbf",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE32",
+          "dep_mod60": 21
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 42
+        },
+        {
+          "line": "RE90",
+          "dep_mod60": 45
+        }
+      ],
+      "gaps": [
+        21,
+        3,
+        36
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 11.3
+    },
+    {
+      "from": "Schleswig",
+      "to": "Jübek",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 19
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 38
+        }
+      ],
+      "gaps": [
+        19,
+        41
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 11.0
+    },
+    {
+      "from": "Düsseldorf-Bilk",
+      "to": "Neuss Hbf",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE32",
+          "dep_mod60": 11
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 33
+        },
+        {
+          "line": "RE90",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        22,
+        4,
+        34
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 10.7
+    },
+    {
+      "from": "Schleswig",
+      "to": "Rendsburg",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 23
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 43
+        }
+      ],
+      "gaps": [
+        20,
+        40
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 10.0
+    },
+    {
+      "from": "Rendsburg",
+      "to": "Schleswig",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE46",
+          "dep_mod60": 19
+        },
+        {
+          "line": "RE77",
+          "dep_mod60": 59
+        }
+      ],
+      "gaps": [
+        40,
+        20
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 10.0
+    },
+    {
+      "from": "Essen-Steele Ost",
+      "to": "Essen-Steele",
+      "lines": [
+        "S10 Außenring",
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S3",
+          "dep_mod60": 16
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 24
+        },
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 58
+        }
+      ],
+      "gaps": [
+        8,
+        34,
+        18
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 9.3
+    },
+    {
+      "from": "Memmingen",
+      "to": "Kißlegg",
+      "lines": [
+        "RE57",
+        "RE80"
+      ],
+      "departures": [
+        {
+          "line": "RE57",
+          "dep_mod60": 24
+        },
+        {
+          "line": "RE80",
+          "dep_mod60": 45
+        }
+      ],
+      "gaps": [
+        21,
+        39
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 9.0
+    },
+    {
+      "from": "Mönchengladbach Hbf",
+      "to": "Neuss Hbf",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 5
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 34
+        },
+        {
+          "line": "RE90",
+          "dep_mod60": 42
+        }
+      ],
+      "gaps": [
+        29,
+        8,
+        23
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 8.0
+    },
+    {
+      "from": "Neuss Hbf",
+      "to": "Düsseldorf-Bilk",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 17
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 49
+        },
+        {
+          "line": "RE90",
+          "dep_mod60": 57
+        }
+      ],
+      "gaps": [
+        32,
+        8,
+        20
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 8.0
+    },
+    {
+      "from": "Düsseldorf-Bilk",
+      "to": "Düsseldorf Hbf",
+      "lines": [
+        "RB37",
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE90",
+          "dep_mod60": 5
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 26
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 57
+        }
+      ],
+      "gaps": [
+        21,
+        31,
+        8
+      ],
+      "ideal_gap": 20.0,
+      "mean_deviation": 8.0
+    },
+    {
+      "from": "Wuppertal-Vohwinkel",
+      "to": "Düsseldorf Hbf",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 13
+        },
+        {
+          "line": "RE30",
+          "dep_mod60": 51
+        }
+      ],
+      "gaps": [
+        38,
+        22
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 8.0
+    },
+    {
+      "from": "Stralsund Hbf",
+      "to": "Greifswald",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 24
+        },
+        {
+          "line": "RE35X",
+          "dep_mod60": 46
+        }
+      ],
+      "gaps": [
+        22,
+        38
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 8.0
+    },
+    {
+      "from": "Greifswald",
+      "to": "Stralsund Hbf",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35X",
+          "dep_mod60": 8
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 46
+        }
+      ],
+      "gaps": [
+        38,
+        22
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 8.0
+    },
+    {
+      "from": "Angermünde",
+      "to": "Eberswalde Hbf",
+      "lines": [
+        "RE35",
+        "RE71"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 12
+        },
+        {
+          "line": "RE71",
+          "dep_mod60": 50
+        }
+      ],
+      "gaps": [
+        38,
+        22
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 8.0
+    },
+    {
+      "from": "Essen-Steele",
+      "to": "Essen Hbf",
+      "lines": [
+        "RE40",
+        "S10 Außenring",
+        "S3",
+        "S30"
+      ],
+      "departures": [
+        {
+          "line": "S10 Außenring",
+          "dep_mod60": 0
+        },
+        {
+          "line": "S3",
+          "dep_mod60": 18
+        },
+        {
+          "line": "S30",
+          "dep_mod60": 26
+        },
+        {
+          "line": "RE40",
+          "dep_mod60": 53
+        }
+      ],
+      "gaps": [
+        18,
+        8,
+        27,
+        7
+      ],
+      "ideal_gap": 15.0,
+      "mean_deviation": 7.5
+    },
+    {
+      "from": "Wuppertal Hbf",
+      "to": "Wuppertal-Vohwinkel",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 7
+        },
+        {
+          "line": "RE30",
+          "dep_mod60": 44
+        }
+      ],
+      "gaps": [
+        37,
+        23
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 7.0
+    },
+    {
+      "from": "Mönchengladbach Hbf",
+      "to": "Rheydt Hbf",
+      "lines": [
+        "RE32",
+        "RE90"
+      ],
+      "departures": [
+        {
+          "line": "RE90",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE32",
+          "dep_mod60": 37
+        }
+      ],
+      "gaps": [
+        37,
+        23
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 7.0
+    },
+    {
+      "from": "Eberswalde Hbf",
+      "to": "Bernau (b Berlin)",
+      "lines": [
+        "RE35",
+        "RE71"
+      ],
+      "departures": [
+        {
+          "line": "RE71",
+          "dep_mod60": 5
+        },
+        {
+          "line": "RE35",
+          "dep_mod60": 28
+        }
+      ],
+      "gaps": [
+        23,
+        37
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 7.0
+    },
+    {
+      "from": "Kißlegg",
+      "to": "Memmingen",
+      "lines": [
+        "RE57",
+        "RE80"
+      ],
+      "departures": [
+        {
+          "line": "RE57",
+          "dep_mod60": 12
+        },
+        {
+          "line": "RE80",
+          "dep_mod60": 49
+        }
+      ],
+      "gaps": [
+        37,
+        23
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 7.0
+    },
+    {
+      "from": "Wuppertal-Oberbarmen",
+      "to": "Wuppertal Hbf",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RB37",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE30",
+          "dep_mod60": 36
+        }
+      ],
+      "gaps": [
+        36,
+        24
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 6.0
+    },
+    {
+      "from": "Buxtehude",
+      "to": "Hamburg-Harburg",
+      "lines": [
+        "RE25",
+        "RE91"
+      ],
+      "departures": [
+        {
+          "line": "RE91",
+          "dep_mod60": 5
+        },
+        {
+          "line": "RE25",
+          "dep_mod60": 41
+        }
+      ],
+      "gaps": [
+        36,
+        24
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 6.0
+    },
+    {
+      "from": "Berlin Hbf",
+      "to": "Berlin-Spandau",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 20
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 55
+        }
+      ],
+      "gaps": [
+        35,
+        25
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 5.0
+    },
+    {
+      "from": "Schwelm",
+      "to": "Wuppertal-Oberbarmen",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RE30",
+          "dep_mod60": 29
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 55
+        }
+      ],
+      "gaps": [
+        26,
+        34
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 4.0
+    },
+    {
+      "from": "Hagen Hbf",
+      "to": "Schwelm",
+      "lines": [
+        "RB37",
+        "RE30"
+      ],
+      "departures": [
+        {
+          "line": "RE30",
+          "dep_mod60": 18
+        },
+        {
+          "line": "RB37",
+          "dep_mod60": 45
+        }
+      ],
+      "gaps": [
+        27,
+        33
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 3.0
+    },
+    {
+      "from": "Buchholz (Nordheide)",
+      "to": "Hamburg-Harburg",
+      "lines": [
+        "RE25",
+        "RE90b"
+      ],
+      "departures": [
+        {
+          "line": "RE90b",
+          "dep_mod60": 3
+        },
+        {
+          "line": "RE25",
+          "dep_mod60": 36
+        }
+      ],
+      "gaps": [
+        33,
+        27
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 3.0
+    },
+    {
+      "from": "Berlin-Spandau",
+      "to": "Berlin Hbf",
+      "lines": [
+        "RE46",
+        "RE77"
+      ],
+      "departures": [
+        {
+          "line": "RE77",
+          "dep_mod60": 27
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 54
+        }
+      ],
+      "gaps": [
+        27,
+        33
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 3.0
+    },
+    {
+      "from": "Berlin Potsdamer Platz",
+      "to": "Berlin Hbf",
+      "lines": [
+        "RE46",
+        "RE71"
+      ],
+      "departures": [
+        {
+          "line": "RE71",
+          "dep_mod60": 16
+        },
+        {
+          "line": "RE46",
+          "dep_mod60": 49
+        }
+      ],
+      "gaps": [
+        33,
+        27
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 3.0
+    },
+    {
+      "from": "Münster (Westf) Hbf",
+      "to": "Osnabrück Hbf",
+      "lines": [
+        "RE2",
+        "RE9"
+      ],
+      "departures": [
+        {
+          "line": "RE2",
+          "dep_mod60": 24
+        },
+        {
+          "line": "RE9",
+          "dep_mod60": 56
+        }
+      ],
+      "gaps": [
+        32,
+        28
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 2.0
+    },
+    {
+      "from": "Recklinghausen Hbf",
+      "to": "Münster (Westf) Hbf",
+      "lines": [
+        "RE2",
+        "RE9"
+      ],
+      "departures": [
+        {
+          "line": "RE9",
+          "dep_mod60": 23
+        },
+        {
+          "line": "RE2",
+          "dep_mod60": 52
+        }
+      ],
+      "gaps": [
+        29,
+        31
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 1.0
+    },
+    {
+      "from": "Erfurt Hbf",
+      "to": "Bamberg",
+      "lines": [
+        "RE28",
+        "RE39"
+      ],
+      "departures": [
+        {
+          "line": "RE39",
+          "dep_mod60": 10
+        },
+        {
+          "line": "RE28",
+          "dep_mod60": 40
+        }
+      ],
+      "gaps": [
+        30,
+        30
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 0.0
+    },
+    {
+      "from": "Osnabrück Hbf",
+      "to": "Münster (Westf) Hbf",
+      "lines": [
+        "RE2",
+        "RE9"
+      ],
+      "departures": [
+        {
+          "line": "RE2",
+          "dep_mod60": 0
+        },
+        {
+          "line": "RE9",
+          "dep_mod60": 30
+        }
+      ],
+      "gaps": [
+        30,
+        30
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 0.0
+    },
+    {
+      "from": "Münster (Westf) Hbf",
+      "to": "Recklinghausen Hbf",
+      "lines": [
+        "RE2",
+        "RE9"
+      ],
+      "departures": [
+        {
+          "line": "RE9",
+          "dep_mod60": 8
+        },
+        {
+          "line": "RE2",
+          "dep_mod60": 38
+        }
+      ],
+      "gaps": [
+        30,
+        30
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 0.0
+    },
+    {
+      "from": "Warnemünde",
+      "to": "Rostock Hbf",
+      "lines": [
+        "RE35",
+        "RE35X"
+      ],
+      "departures": [
+        {
+          "line": "RE35",
+          "dep_mod60": 12
+        },
+        {
+          "line": "RE35X",
+          "dep_mod60": 42
+        }
+      ],
+      "gaps": [
+        30,
+        30
+      ],
+      "ideal_gap": 30.0,
+      "mean_deviation": 0.0
+    }
+  ],
+  "symmetry": [
+    {
+      "line": "RB37",
+      "n_common_stops": 31,
+      "sigma2_distribution": {
+        "0": 8,
+        "58": 5,
+        "59": 18
+      },
+      "spread": 2,
+      "mean_sigma2": 59.1
+    },
+    {
+      "line": "RE11",
+      "n_common_stops": 16,
+      "sigma2_distribution": {
+        "0": 16
+      },
+      "spread": 0,
+      "mean_sigma2": 0.0
+    },
+    {
+      "line": "RE14",
+      "n_common_stops": 17,
+      "sigma2_distribution": {
+        "0": 16,
+        "2": 1
+      },
+      "spread": 2,
+      "mean_sigma2": 0.1
+    },
+    {
+      "line": "RE2",
+      "n_common_stops": 7,
+      "sigma2_distribution": {
+        "0": 3,
+        "1": 1,
+        "58": 2,
+        "59": 1
+      },
+      "spread": 3,
+      "mean_sigma2": 59.4
+    },
+    {
+      "line": "RE24",
+      "n_common_stops": 15,
+      "sigma2_distribution": {
+        "55": 12,
+        "57": 1,
+        "58": 2
+      },
+      "spread": 3,
+      "mean_sigma2": 55.5
+    },
+    {
+      "line": "RE25",
+      "n_common_stops": 15,
+      "sigma2_distribution": {
+        "46": 1,
+        "47": 1,
+        "48": 12,
+        "49": 1
+      },
+      "spread": 3,
+      "mean_sigma2": 47.9
+    },
+    {
+      "line": "RE28",
+      "n_common_stops": 7,
+      "sigma2_distribution": {
+        "2": 7
+      },
+      "spread": 0,
+      "mean_sigma2": 2.0
+    },
+    {
+      "line": "RE32",
+      "n_common_stops": 23,
+      "sigma2_distribution": {
+        "0": 1,
+        "7": 2,
+        "8": 4,
+        "53": 2,
+        "56": 2,
+        "57": 3,
+        "58": 5,
+        "59": 4
+      },
+      "spread": 15,
+      "mean_sigma2": 59.9
+    },
+    {
+      "line": "RE35",
+      "n_common_stops": 25,
+      "sigma2_distribution": {
+        "30": 25
+      },
+      "spread": 0,
+      "mean_sigma2": 30.0
+    },
+    {
+      "line": "RE35X",
+      "n_common_stops": 14,
+      "sigma2_distribution": {
+        "14": 14
+      },
+      "spread": 0,
+      "mean_sigma2": 14.0
+    },
+    {
+      "line": "RE39",
+      "n_common_stops": 12,
+      "sigma2_distribution": {
+        "49": 12
+      },
+      "spread": 0,
+      "mean_sigma2": 49.0
+    },
+    {
+      "line": "RE40",
+      "n_common_stops": 20,
+      "sigma2_distribution": {
+        "0": 20
+      },
+      "spread": 0,
+      "mean_sigma2": 0.0
+    },
+    {
+      "line": "RE45",
+      "n_common_stops": 17,
+      "sigma2_distribution": {
+        "1": 14,
+        "2": 1,
+        "59": 2
+      },
+      "spread": 3,
+      "mean_sigma2": 0.8
+    },
+    {
+      "line": "RE46",
+      "n_common_stops": 22,
+      "sigma2_distribution": {
+        "59": 22
+      },
+      "spread": 0,
+      "mean_sigma2": 59.0
+    },
+    {
+      "line": "RE5",
+      "n_common_stops": 27,
+      "sigma2_distribution": {
+        "1": 11,
+        "2": 1,
+        "3": 7,
+        "4": 7,
+        "5": 1
+      },
+      "spread": 4,
+      "mean_sigma2": 2.5
+    },
+    {
+      "line": "RE57",
+      "n_common_stops": 21,
+      "sigma2_distribution": {
+        "52": 3,
+        "53": 1,
+        "58": 16,
+        "59": 1
+      },
+      "spread": 7,
+      "mean_sigma2": 57.0
+    },
+    {
+      "line": "RE7",
+      "n_common_stops": 15,
+      "sigma2_distribution": {
+        "0": 15
+      },
+      "spread": 0,
+      "mean_sigma2": 0.0
+    },
+    {
+      "line": "RE71",
+      "n_common_stops": 36,
+      "sigma2_distribution": {
+        "13": 36
+      },
+      "spread": 0,
+      "mean_sigma2": 13.0
+    },
+    {
+      "line": "RE77",
+      "n_common_stops": 22,
+      "sigma2_distribution": {
+        "0": 14,
+        "59": 8
+      },
+      "spread": 1,
+      "mean_sigma2": 59.6
+    },
+    {
+      "line": "RE80",
+      "n_common_stops": 24,
+      "sigma2_distribution": {
+        "55": 24
+      },
+      "spread": 0,
+      "mean_sigma2": 55.0
+    },
+    {
+      "line": "RE9",
+      "n_common_stops": 7,
+      "sigma2_distribution": {
+        "0": 7
+      },
+      "spread": 0,
+      "mean_sigma2": 0.0
+    },
+    {
+      "line": "RE90",
+      "n_common_stops": 20,
+      "sigma2_distribution": {
+        "39": 2,
+        "40": 8,
+        "42": 10
+      },
+      "spread": 3,
+      "mean_sigma2": 40.9
+    },
+    {
+      "line": "RE94",
+      "n_common_stops": 30,
+      "sigma2_distribution": {
+        "0": 30
+      },
+      "spread": 0,
+      "mean_sigma2": 0.0
+    },
+    {
+      "line": "S3",
+      "n_common_stops": 7,
+      "sigma2_distribution": {
+        "22": 7
+      },
+      "spread": 0,
+      "mean_sigma2": 22.0
+    },
+    {
+      "line": "S30",
+      "n_common_stops": 21,
+      "sigma2_distribution": {
+        "26": 5,
+        "28": 6,
+        "29": 4,
+        "30": 6
+      },
+      "spread": 4,
+      "mean_sigma2": 28.3
+    }
+  ],
+  "fleet": [
+    {
+      "line": "RB37",
+      "interval": 30,
+      "duration_A": 205,
+      "duration_B": 205,
+      "fleet_today": 14,
+      "fleet_new_incl_reserve": 20,
+      "delta": 6,
+      "turnaround_A_min": 80,
+      "turnaround_B_min": 80
+    },
+    {
+      "line": "RE11",
+      "interval": 60,
+      "duration_A": 192,
+      "duration_B": 192,
+      "fleet_today": 7,
+      "fleet_new_incl_reserve": 10,
+      "delta": 3,
+      "turnaround_A_min": 78,
+      "turnaround_B_min": 78
+    },
+    {
+      "line": "RE14",
+      "interval": 60,
+      "duration_A": 331,
+      "duration_B": 331,
+      "fleet_today": 12,
+      "fleet_new_incl_reserve": 15,
+      "delta": 3,
+      "turnaround_A_min": 89,
+      "turnaround_B_min": 89
+    },
+    {
+      "line": "RE2",
+      "interval": 60,
+      "duration_A": 117,
+      "duration_B": 118,
+      "fleet_today": 4,
+      "fleet_new_incl_reserve": 8,
+      "delta": 4,
+      "turnaround_A_min": 92,
+      "turnaround_B_min": 93
+    },
+    {
+      "line": "RE24",
+      "interval": 60,
+      "duration_A": 205,
+      "duration_B": 204,
+      "fleet_today": 8,
+      "fleet_new_incl_reserve": 11,
+      "delta": 3,
+      "turnaround_A_min": 95,
+      "turnaround_B_min": 96
+    },
+    {
+      "line": "RE25",
+      "interval": 60,
+      "duration_A": 305,
+      "duration_B": 308,
+      "fleet_today": 11,
+      "fleet_new_incl_reserve": 14,
+      "delta": 3,
+      "turnaround_A_min": 83,
+      "turnaround_B_min": 84
+    },
+    {
+      "line": "RE28",
+      "interval": 60,
+      "duration_A": 162,
+      "duration_B": 162,
+      "fleet_today": 6,
+      "fleet_new_incl_reserve": 9,
+      "delta": 3,
+      "turnaround_A_min": 78,
+      "turnaround_B_min": 78
+    },
+    {
+      "line": "RE32",
+      "interval": 60,
+      "duration_A": 286,
+      "duration_B": 286,
+      "fleet_today": 10,
+      "fleet_new_incl_reserve": 13,
+      "delta": 3,
+      "turnaround_A_min": 74,
+      "turnaround_B_min": 74
+    },
+    {
+      "line": "RE35",
+      "interval": 60,
+      "duration_A": 436,
+      "duration_B": 436,
+      "fleet_today": 16,
+      "fleet_new_incl_reserve": 18,
+      "delta": 2,
+      "turnaround_A_min": 74,
+      "turnaround_B_min": 74
+    },
+    {
+      "line": "RE35X",
+      "interval": 60,
+      "duration_A": 360,
+      "duration_B": 360,
+      "fleet_today": 13,
+      "fleet_new_incl_reserve": 16,
+      "delta": 3,
+      "turnaround_A_min": 90,
+      "turnaround_B_min": 90
+    },
+    {
+      "line": "RE39",
+      "interval": 60,
+      "duration_A": 219,
+      "duration_B": 219,
+      "fleet_today": 8,
+      "fleet_new_incl_reserve": 11,
+      "delta": 3,
+      "turnaround_A_min": 81,
+      "turnaround_B_min": 81
+    },
+    {
+      "line": "RE40",
+      "interval": 60,
+      "duration_A": 243,
+      "duration_B": 243,
+      "fleet_today": 9,
+      "fleet_new_incl_reserve": 12,
+      "delta": 3,
+      "turnaround_A_min": 87,
+      "turnaround_B_min": 87
+    },
+    {
+      "line": "RE45",
+      "interval": 60,
+      "duration_A": 320,
+      "duration_B": 322,
+      "fleet_today": 12,
+      "fleet_new_incl_reserve": 15,
+      "delta": 3,
+      "turnaround_A_min": 99,
+      "turnaround_B_min": 99
+    },
+    {
+      "line": "RE46",
+      "interval": 60,
+      "duration_A": 435,
+      "duration_B": 435,
+      "fleet_today": 15,
+      "fleet_new_incl_reserve": 18,
+      "delta": 3,
+      "turnaround_A_min": 75,
+      "turnaround_B_min": 75
+    },
+    {
+      "line": "RE5",
+      "interval": 60,
+      "duration_A": 289,
+      "duration_B": 289,
+      "fleet_today": 11,
+      "fleet_new_incl_reserve": 13,
+      "delta": 2,
+      "turnaround_A_min": 71,
+      "turnaround_B_min": 71
+    },
+    {
+      "line": "RE57",
+      "interval": 60,
+      "duration_A": 479,
+      "duration_B": 473,
+      "fleet_today": 16,
+      "fleet_new_incl_reserve": 20,
+      "delta": 4,
+      "turnaround_A_min": 94,
+      "turnaround_B_min": 94
+    },
+    {
+      "line": "RE7",
+      "interval": 60,
+      "duration_A": 265,
+      "duration_B": 265,
+      "fleet_today": 9,
+      "fleet_new_incl_reserve": 13,
+      "delta": 4,
+      "turnaround_A_min": 95,
+      "turnaround_B_min": 95
+    },
+    {
+      "line": "RE71",
+      "interval": 60,
+      "duration_A": 553,
+      "duration_B": 553,
+      "fleet_today": 20,
+      "fleet_new_incl_reserve": 22,
+      "delta": 2,
+      "turnaround_A_min": 77,
+      "turnaround_B_min": 77
+    },
+    {
+      "line": "RE77",
+      "interval": 60,
+      "duration_A": 376,
+      "duration_B": 377,
+      "fleet_today": 13,
+      "fleet_new_incl_reserve": 16,
+      "delta": 3,
+      "turnaround_A_min": 73,
+      "turnaround_B_min": 74
+    },
+    {
+      "line": "RE80",
+      "interval": 60,
+      "duration_A": 393,
+      "duration_B": 393,
+      "fleet_today": 14,
+      "fleet_new_incl_reserve": 17,
+      "delta": 3,
+      "turnaround_A_min": 87,
+      "turnaround_B_min": 87
+    },
+    {
+      "line": "RE9",
+      "interval": 60,
+      "duration_A": 214,
+      "duration_B": 214,
+      "fleet_today": 8,
+      "fleet_new_incl_reserve": 11,
+      "delta": 3,
+      "turnaround_A_min": 86,
+      "turnaround_B_min": 86
+    },
+    {
+      "line": "RE90",
+      "interval": 60,
+      "duration_A": 324,
+      "duration_B": 326,
+      "fleet_today": 12,
+      "fleet_new_incl_reserve": 15,
+      "delta": 3,
+      "turnaround_A_min": 95,
+      "turnaround_B_min": 95
+    },
+    {
+      "line": "RE94",
+      "interval": 60,
+      "duration_A": 592,
+      "duration_B": 592,
+      "fleet_today": 20,
+      "fleet_new_incl_reserve": 24,
+      "delta": 4,
+      "turnaround_A_min": 98,
+      "turnaround_B_min": 98
+    },
+    {
+      "line": "S3",
+      "interval": 30,
+      "duration_A": 22,
+      "duration_B": 22,
+      "fleet_today": 2,
+      "fleet_new_incl_reserve": 4,
+      "delta": 2,
+      "turnaround_A_min": 23,
+      "turnaround_B_min": 23
+    },
+    {
+      "line": "S30",
+      "interval": 30,
+      "duration_A": 90,
+      "duration_B": 86,
+      "fleet_today": 6,
+      "fleet_new_incl_reserve": 9,
+      "delta": 3,
+      "turnaround_A_min": 32,
+      "turnaround_B_min": 32
+    }
+  ],
+  "stabling": [
+    {
+      "station": "Essen Hbf",
+      "n_lines": 3,
+      "slots": 11,
+      "total_length_m": 1638,
+      "detail": [
+        {
+          "line": "RE40",
+          "slots": 3,
+          "car_length_m": 130
+        },
+        {
+          "line": "S30",
+          "slots": 4,
+          "car_length_m": 156
+        },
+        {
+          "line": "S3",
+          "slots": 4,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Saarbrücken Hbf",
+      "n_lines": 3,
+      "slots": 9,
+      "total_length_m": 1488,
+      "detail": [
+        {
+          "line": "RE14",
+          "slots": 3,
+          "car_length_m": 130
+        },
+        {
+          "line": "RE80",
+          "slots": 3,
+          "car_length_m": 210
+        },
+        {
+          "line": "RE90",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Zwickau Hbf",
+      "n_lines": 3,
+      "slots": 9,
+      "total_length_m": 1488,
+      "detail": [
+        {
+          "line": "RE24",
+          "slots": 3,
+          "car_length_m": 130
+        },
+        {
+          "line": "RE35X",
+          "slots": 3,
+          "car_length_m": 210
+        },
+        {
+          "line": "RE35",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Düsseldorf Hbf",
+      "n_lines": 3,
+      "slots": 9,
+      "total_length_m": 1251,
+      "detail": [
+        {
+          "line": "RE2",
+          "slots": 3,
+          "car_length_m": 156
+        },
+        {
+          "line": "RE30",
+          "slots": 3,
+          "car_length_m": 105
+        },
+        {
+          "line": "RE90",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Frankfurt (Main) Hbf",
+      "n_lines": 3,
+      "slots": 9,
+      "total_length_m": 1650,
+      "detail": [
+        {
+          "line": "RE40",
+          "slots": 3,
+          "car_length_m": 130
+        },
+        {
+          "line": "RE5",
+          "slots": 3,
+          "car_length_m": 210
+        },
+        {
+          "line": "RE7",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Arnhem Centraal",
+      "n_lines": 2,
+      "slots": 7,
+      "total_length_m": 1050,
+      "detail": [
+        {
+          "line": "RB37",
+          "slots": 4,
+          "car_length_m": 105
+        },
+        {
+          "line": "RE5",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Dortmund Hbf",
+      "n_lines": 2,
+      "slots": 6,
+      "total_length_m": 1098,
+      "detail": [
+        {
+          "line": "RE17",
+          "slots": 3,
+          "car_length_m": 156
+        },
+        {
+          "line": "RE9",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Warnemünde",
+      "n_lines": 2,
+      "slots": 6,
+      "total_length_m": 1098,
+      "detail": [
+        {
+          "line": "RE35X",
+          "slots": 3,
+          "car_length_m": 210
+        },
+        {
+          "line": "RE35",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Passau Hbf",
+      "n_lines": 2,
+      "slots": 6,
+      "total_length_m": 1098,
+      "detail": [
+        {
+          "line": "RE39",
+          "slots": 3,
+          "car_length_m": 210
+        },
+        {
+          "line": "RE57",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Bremerhaven-Lehe",
+      "n_lines": 2,
+      "slots": 6,
+      "total_length_m": 870,
+      "detail": [
+        {
+          "line": "RE91",
+          "slots": 3,
+          "car_length_m": 80
+        },
+        {
+          "line": "RE9",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Bochum Hbf",
+      "n_lines": 1,
+      "slots": 4,
+      "total_length_m": 420,
+      "detail": [
+        {
+          "line": "RB37",
+          "slots": 4,
+          "car_length_m": 105
+        }
+      ]
+    },
+    {
+      "station": "Lüdenscheid Hbf",
+      "n_lines": 1,
+      "slots": 4,
+      "total_length_m": 624,
+      "detail": [
+        {
+          "line": "S30",
+          "slots": 4,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Hattingen Mitte",
+      "n_lines": 1,
+      "slots": 4,
+      "total_length_m": 624,
+      "detail": [
+        {
+          "line": "S3",
+          "slots": 4,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Leipzig Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 552,
+      "detail": [
+        {
+          "line": "RE11",
+          "slots": 3,
+          "car_length_m": 184
+        }
+      ]
+    },
+    {
+      "station": "Frankfurt (Oder)",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 552,
+      "detail": [
+        {
+          "line": "RE11",
+          "slots": 3,
+          "car_length_m": 184
+        }
+      ]
+    },
+    {
+      "station": "Eindhoven",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 390,
+      "detail": [
+        {
+          "line": "RE14",
+          "slots": 3,
+          "car_length_m": 130
+        }
+      ]
+    },
+    {
+      "station": "Wilhelmshaven",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE17",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Østerport",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE17",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Rostock Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE17",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Kassel Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 390,
+      "detail": [
+        {
+          "line": "RE24",
+          "slots": 3,
+          "car_length_m": 130
+        }
+      ]
+    },
+    {
+      "station": "Magdeburg Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 390,
+      "detail": [
+        {
+          "line": "RE25",
+          "slots": 3,
+          "car_length_m": 130
+        }
+      ]
+    },
+    {
+      "station": "Cuxhaven",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 390,
+      "detail": [
+        {
+          "line": "RE25",
+          "slots": 3,
+          "car_length_m": 130
+        }
+      ]
+    },
+    {
+      "station": "Leipzig Hbf (oben)",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE28",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Würzburg Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE28",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Osnabrück Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE2",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Leeuwarden",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 315,
+      "detail": [
+        {
+          "line": "RE30",
+          "slots": 3,
+          "car_length_m": 105
+        }
+      ]
+    },
+    {
+      "station": "Winterberg (Westf)",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 315,
+      "detail": [
+        {
+          "line": "RE30",
+          "slots": 3,
+          "car_length_m": 105
+        }
+      ]
+    },
+    {
+      "station": "Kassel-Wilhelmshöhe",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE32",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Roermond (NL)",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE32",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Erfurt Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE39",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Travemünde Strand",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE45",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Cottbus Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE45",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Berlin Südkreuz",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 315,
+      "detail": [
+        {
+          "line": "RE46",
+          "slots": 3,
+          "car_length_m": 105
+        }
+      ]
+    },
+    {
+      "station": "Esbjerg",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 315,
+      "detail": [
+        {
+          "line": "RE46",
+          "slots": 3,
+          "car_length_m": 105
+        }
+      ]
+    },
+    {
+      "station": "Mulhouse-Ville",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE57",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Hel",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE71",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Brandenburg Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE71",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Berlin Ostbahnhof",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE77",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Fredericia",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE77",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Bremen Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE7",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Chur",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 630,
+      "detail": [
+        {
+          "line": "RE80",
+          "slots": 3,
+          "car_length_m": 210
+        }
+      ]
+    },
+    {
+      "station": "Schönberger Strand",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 240,
+      "detail": [
+        {
+          "line": "RE90b",
+          "slots": 3,
+          "car_length_m": 80
+        }
+      ]
+    },
+    {
+      "station": "Norddeich Mole",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE90b",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Kiel Hbf",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 468,
+      "detail": [
+        {
+          "line": "RE90b",
+          "slots": 3,
+          "car_length_m": 156
+        }
+      ]
+    },
+    {
+      "station": "Groningen",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 240,
+      "detail": [
+        {
+          "line": "RE90b",
+          "slots": 3,
+          "car_length_m": 80
+        }
+      ]
+    },
+    {
+      "station": "Ostseebad Binz",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 240,
+      "detail": [
+        {
+          "line": "RE91",
+          "slots": 3,
+          "car_length_m": 80
+        }
+      ]
+    },
+    {
+      "station": "Sassnitz",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 240,
+      "detail": [
+        {
+          "line": "RE91",
+          "slots": 3,
+          "car_length_m": 80
+        }
+      ]
+    },
+    {
+      "station": "Zürich HB",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 552,
+      "detail": [
+        {
+          "line": "RE94",
+          "slots": 3,
+          "car_length_m": 184
+        }
+      ]
+    },
+    {
+      "station": "Plzeň hlavní nádraží",
+      "n_lines": 1,
+      "slots": 3,
+      "total_length_m": 552,
+      "detail": [
+        {
+          "line": "RE94",
+          "slots": 3,
+          "car_length_m": 184
+        }
+      ]
+    }
+  ],
+  "train_lengths": [
+    {
+      "station": "Oldenburg (Oldb) Hbf",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Hamburg-Harburg",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Buchholz (Nordheide)",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Hamburg-Elbbrücken",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Kiel Hbf",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Neumünster",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Elmshorn",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Bremen Hbf",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Leer (Ostfriesl)",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Rotenburg (Wümme)",
+      "max_length_m": 236,
+      "line": "RE90b",
+      "cars": "3+6"
+    },
+    {
+      "station": "Arnhem Centraal",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Mönchengladbach Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Neuss Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Düsseldorf-Bilk",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Düsseldorf Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Bochum Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Berlin Hbf",
+      "max_length_m": 210,
+      "line": "RE46",
+      "cars": "4+4"
+    },
+    {
+      "station": "Berlin-Wannsee",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Potsdam Hbf",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Saarbrücken Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Dortmund Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Kamen",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Hamm (Westf) Hbf",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Osnabrück Hbf",
+      "max_length_m": 210,
+      "line": "RE9",
+      "cars": "8"
+    },
+    {
+      "station": "Rostock Hbf",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Bützow",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Bad Kleinen",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Lübeck Hbf",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Bad Schwartau",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Timmendorfer Strand/Ratekau",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Scharbeutz",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Oldenburg (Holst)",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Großenbrode/Heiligenhafen",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Rødby",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Nykøbing F.",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Vordingborg",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Næstved",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Ringsted",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Køge Nord",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "København H",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Nørreport",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Østerport",
+      "max_length_m": 210,
+      "line": "RE17",
+      "cars": "8"
+    },
+    {
+      "station": "Zwickau Hbf",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Erfurt Hbf",
+      "max_length_m": 210,
+      "line": "RE28",
+      "cars": "8"
+    },
+    {
+      "station": "Kassel-Wilhelmshöhe",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Hannover Hbf",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Würzburg Hbf",
+      "max_length_m": 210,
+      "line": "RE28",
+      "cars": "8"
+    },
+    {
+      "station": "Schweinfurt Hbf",
+      "max_length_m": 210,
+      "line": "RE28",
+      "cars": "8"
+    },
+    {
+      "station": "Bamberg",
+      "max_length_m": 210,
+      "line": "RE28",
+      "cars": "8"
+    },
+    {
+      "station": "Halle (Saale) Hbf",
+      "max_length_m": 210,
+      "line": "RE28",
+      "cars": "8"
+    },
+    {
+      "station": "Flughafen Leipzig/Halle",
+      "max_length_m": 210,
+      "line": "RE28",
+      "cars": "8"
+    },
+    {
+      "station": "Leipzig Hbf (oben)",
+      "max_length_m": 210,
+      "line": "RE28",
+      "cars": "8"
+    },
+    {
+      "station": "Duisburg Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Essen Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Recklinghausen Hbf",
+      "max_length_m": 210,
+      "line": "RE9",
+      "cars": "8"
+    },
+    {
+      "station": "Münster (Westf) Hbf",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Schwerte (Ruhr)",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Holzwickede",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Unna",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Drensteinfurt",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Rheine",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Bad Bentheim",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Hengelo",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Almelo",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Zwolle",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Meppel",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Leeuwarden",
+      "max_length_m": 210,
+      "line": "RE30",
+      "cars": "4+4"
+    },
+    {
+      "station": "Roermond (NL)",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Dalheim",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Wegberg",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Rheydt Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Düsseldorf Flughafen Bf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Mülheim (Ruhr) Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Wattenscheid Bf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Soest Bf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Lippstadt",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Paderborn Hbf",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Warburg (Westf)",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Hofgeismar",
+      "max_length_m": 210,
+      "line": "RE32",
+      "cars": "8"
+    },
+    {
+      "station": "Warnemünde",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Stralsund Hbf",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Greifswald",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Pasewalk",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Eberswalde Hbf",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Berlin Gesundbrunnen",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Berlin Hbf (tief)",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Berlin Südkreuz",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Dresden-Neustadt",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Dresden Hbf",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Freiberg (Sachs)",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Chemnitz Hbf",
+      "max_length_m": 210,
+      "line": "RE35X",
+      "cars": "8"
+    },
+    {
+      "station": "Angermünde",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Bernau (b Berlin)",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Passau Hbf",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Vilshofen (Niederbay)",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Plattling",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Straubing",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Regensburg Hbf",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Neumarkt (Oberpf)",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Nürnberg Hbf",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Fürth (Bay) Hbf",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Erlangen",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Forchheim (Oberfr)",
+      "max_length_m": 210,
+      "line": "RE39",
+      "cars": "8"
+    },
+    {
+      "station": "Frankfurt (Main) Hbf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Flughafen BER",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Berlin-Spandau",
+      "max_length_m": 210,
+      "line": "RE46",
+      "cars": "4+4"
+    },
+    {
+      "station": "Büchen",
+      "max_length_m": 210,
+      "line": "RE46",
+      "cars": "4+4"
+    },
+    {
+      "station": "Hagenow Land",
+      "max_length_m": 210,
+      "line": "RE46",
+      "cars": "4+4"
+    },
+    {
+      "station": "Wittenberge",
+      "max_length_m": 210,
+      "line": "RE46",
+      "cars": "4+4"
+    },
+    {
+      "station": "Neustadt (Dosse)",
+      "max_length_m": 210,
+      "line": "RE46",
+      "cars": "4+4"
+    },
+    {
+      "station": "Berlin Potsdamer Platz",
+      "max_length_m": 210,
+      "line": "RE46",
+      "cars": "4+4"
+    },
+    {
+      "station": "Kißlegg",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Memmingen",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Zevenaar",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Emmerich",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Empel-Rees",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Wesel",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Dinslaken",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Oberhausen Hbf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Düsseldorf Flughafen",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Düsseldorf-Benrath",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Leverkusen Mitte",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Köln Messe/Deutz",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Köln Hbf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Brühl",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Bonn Hbf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Remagen",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Andernach",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Koblenz Hbf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Boppard Hbf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Oberwesel",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Bingen (Rhein) Hbf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Ingelheim",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Mainz Hbf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Rüsselsheim",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Frankfurt Flughafen Regiobf",
+      "max_length_m": 210,
+      "line": "RE5",
+      "cars": "8"
+    },
+    {
+      "station": "Brandenburg Hbf",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Szczecin Główny",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Runowo Pomorskie",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Szczecinek",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Chojnice",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Starogard Gdański",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Tczew",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Gdańsk Główny",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Gdańsk Wrzeszcz",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Gdańsk Zaspa",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Gdynia Wzgórze Św. Maksymiliana",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Gdynia Główna",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Gdynia Chylonia",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Rumia Janowo",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Rumia",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Reda",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Mrzezino",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Żelistrzewo",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Puck",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Swarzewo",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Władysławowo",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Władysławowo Port",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Chałupy",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Kuźnica",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Jastarnia",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Jurata",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Hel",
+      "max_length_m": 210,
+      "line": "RE71",
+      "cars": "8"
+    },
+    {
+      "station": "Offenbach (Main) Hbf",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Hanau Hbf",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Gelnhausen",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Wächtersbach",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Schlüchtern",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Fulda",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Göttingen",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Hannover-Messe/Laatzen",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Wunstorf",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Nienburg (Weser)",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Verden (Aller)",
+      "max_length_m": 210,
+      "line": "RE7",
+      "cars": "8"
+    },
+    {
+      "station": "Chur",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Landquart",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Sargans",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Buchs SG",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Feldkirch",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Dornbirn",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Bregenz",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Lindau-Reutin",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Neu-Ulm",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Ulm Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Merklingen",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Stuttgart Flughafen",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Stuttgart Hbf (tief)",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Heidelberg Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Mannheim Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Ludwigshafen (Rhein) Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Neustadt (Weinstraße) Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Kaiserslautern Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Landstuhl",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Homburg (Saar) Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Neunkirchen (Saar) Hbf",
+      "max_length_m": 210,
+      "line": "RE80",
+      "cars": "8"
+    },
+    {
+      "station": "Bremerhaven-Lehe",
+      "max_length_m": 210,
+      "line": "RE9",
+      "cars": "8"
+    },
+    {
+      "station": "Frankfurt (Oder)",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Fürstenwalde (Spree)",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Erkner",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Berlin-Ostkreuz",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Berlin Ostbahnhof",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Berlin Alexanderplatz",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Berlin Friedrichstraße",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Berlin Zoologischer Garten",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Berlin-Charlottenburg",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Ludwigsfelde",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Jüterbog",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Lutherstadt Wittenberg Hbf",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Leipzig Hbf",
+      "max_length_m": 184,
+      "line": "RE11",
+      "cars": "7"
+    },
+    {
+      "station": "Aulendorf",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Plzeň hlavní nádraží",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Stříbro",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Mariánské Lázně",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Cheb",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Marktredwitz",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Pegnitz",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Allersberg (Rothsee)",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Ingolstadt Hbf",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Augsburg Hbf",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Dinkelscherben",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Günzburg",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Laupheim West",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Biberach (Riß)",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Ravensburg",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Meckenbeuren",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Friedrichshafen Stadt",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Radolfzell",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Allensbach",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Konstanz-Petershausen",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Konstanz",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Kreuzlingen",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Weinfelden",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Frauenfeld",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Winterthur",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Zürich Flughafen",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Zürich HB",
+      "max_length_m": 184,
+      "line": "RE94",
+      "cars": "7"
+    },
+    {
+      "station": "Buxtehude",
+      "max_length_m": 160,
+      "line": "RE91",
+      "cars": "3+3"
+    },
+    {
+      "station": "Bremerhaven Hbf",
+      "max_length_m": 160,
+      "line": "RE91",
+      "cars": "3+3"
+    },
+    {
+      "station": "Bremervörde",
+      "max_length_m": 160,
+      "line": "RE91",
+      "cars": "3+3"
+    },
+    {
+      "station": "Schwerin Hbf",
+      "max_length_m": 160,
+      "line": "RE91",
+      "cars": "3+3"
+    },
+    {
+      "station": "Rövershagen",
+      "max_length_m": 160,
+      "line": "RE91",
+      "cars": "3+3"
+    },
+    {
+      "station": "Velgast",
+      "max_length_m": 160,
+      "line": "RE91",
+      "cars": "3+3"
+    },
+    {
+      "station": "Bergen auf Rügen",
+      "max_length_m": 160,
+      "line": "RE91",
+      "cars": "3+3"
+    },
+    {
+      "station": "Hagen Hbf",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Witten Hbf",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum-Langendreer",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Rheda-Wiedenbrück",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Gütersloh Hbf",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Bielefeld Hbf",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Herford",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Bünde (Westf)",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Bramsche",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Essen (Oldb)",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Cloppenburg",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Varel (Oldb)",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Sande",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Wilhelmshaven",
+      "max_length_m": 156,
+      "line": "RE17",
+      "cars": "6"
+    },
+    {
+      "station": "Gelsenkirchen Hbf",
+      "max_length_m": 156,
+      "line": "RE2",
+      "cars": "6"
+    },
+    {
+      "station": "Ribnitz-Damgarten West",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Züssow",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Anklam",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Prenzlau",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Zossen",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Elsterwerda",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Freital Hbf",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Flöha",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Glauchau (Sachs)",
+      "max_length_m": 156,
+      "line": "RE35",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Steele",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Cottbus Hbf",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Lübben (Spreewald)",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Königs Wusterhausen",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Potsdamer Platz",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Stendal Hbf",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Salzwedel",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Uelzen",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Lüneburg",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Bad Oldesloe",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Lübeck-Travemünde Hafen",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Travemünde Strand",
+      "max_length_m": 156,
+      "line": "RE45",
+      "cars": "6"
+    },
+    {
+      "station": "Jübek",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Schleswig",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Rendsburg",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Mulhouse-Ville",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Müllheim (Baden)",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Bad Krozingen",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Freiburg (Breisgau) Hbf",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Titisee",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Neustadt (Schwarzw)",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Donaueschingen",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Immendingen",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Tuttlingen",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Sigmaringen",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Buchloe",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Kaufering",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "München-Pasing",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "München Ost",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "München Flughafen",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Landshut (Bay) Hbf",
+      "max_length_m": 156,
+      "line": "RE57",
+      "cars": "6"
+    },
+    {
+      "station": "Fredericia",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Kolding",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Lunderskov",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Vamdrup",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Vojens",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Padborg",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Flensburg",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Hamburg Dammtor",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Hamburg Hbf",
+      "max_length_m": 156,
+      "line": "RE77",
+      "cars": "6"
+    },
+    {
+      "station": "Forbach",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Béning",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Saint-Avold",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Metz-Ville",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Hagondange",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Thionville",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Bettembourg",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Luxembourg",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Ettelbruck",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Liège-Guillemins",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Aachen Hbf",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Herzogenrath",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Geilenkirchen",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Erkelenz",
+      "max_length_m": 156,
+      "line": "RE90",
+      "cars": "6"
+    },
+    {
+      "station": "Emden Hbf",
+      "max_length_m": 156,
+      "line": "RE90b",
+      "cars": "6"
+    },
+    {
+      "station": "Norden",
+      "max_length_m": 156,
+      "line": "RE90b",
+      "cars": "6"
+    },
+    {
+      "station": "Norddeich",
+      "max_length_m": 156,
+      "line": "RE90b",
+      "cars": "6"
+    },
+    {
+      "station": "Norddeich Mole",
+      "max_length_m": 156,
+      "line": "RE90b",
+      "cars": "6"
+    },
+    {
+      "station": "Unna Hbf",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Hagen-Vorhalle",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Wengern",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum-Langendreer West",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum-Stahlhausen",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum-Kohlenstraße",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Höntrop",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Eiberg",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Steele Ost",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Essen West",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Frohnhausen",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Mülheim West",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Mülheim-Styrum",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Dellwig Ost",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Borbeck",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Altenessen",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Gelsenkirchen-Zollverein Nord",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Wanne-Eickel Hbf",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum-Riemke",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum-Hamme",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum West",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum-Bermuda3eck",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Dortmund-Kley",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Dortmund-Oespel",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Dortmund-Universität",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Dortmund-Dorstfeld Süd",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Dortmund-Dorstfeld",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Dortmund-Brackel",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Dortmund-Wickede",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Massen",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Unna West",
+      "max_length_m": 156,
+      "line": "S10 Außenring",
+      "cars": "6"
+    },
+    {
+      "station": "Lüdenscheid Hbf",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Schalksmühle",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Dahlerbrück",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Rummenohl",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Dahl",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Wengern Ost",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Witten Bommern",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Zeche Nachtigall",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Ruine Hardenstein",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Herbede",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Haus Kemnade",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Blankenstein Burg",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Heinrichshütte",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Hattingen (Ruhr)",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Bochum-Dahlhausen",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Essen-Horst",
+      "max_length_m": 156,
+      "line": "S30",
+      "cars": "6"
+    },
+    {
+      "station": "Hattingen Mitte",
+      "max_length_m": 156,
+      "line": "S3",
+      "cars": "6"
+    },
+    {
+      "station": "Venlo",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Viersen",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Wetter (Ruhr)",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Eindhoven",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Grevenbroich",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Rommerskirchen",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Köln-Ehrenfeld",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Köln Süd",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Euskirchen",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Kall",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Gerolstein",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Erdorf",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Trier Hbf",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Merzig (Saar)",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Saarlouis Hbf",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Völklingen",
+      "max_length_m": 130,
+      "line": "RE14",
+      "cars": "5"
+    },
+    {
+      "station": "Gößnitz",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Altenburg",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Neukieritzsch",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Böhlen (b Leipzig)",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Leipzig-Connewitz",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Leipzig MDR",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Leipzig Hbf (tief)",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Gotha",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Eisenach",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Bebra",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Melsungen",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Kassel Hbf",
+      "max_length_m": 130,
+      "line": "RE24",
+      "cars": "5"
+    },
+    {
+      "station": "Cuxhaven",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Stade",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Soltau (Han) Hbf",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Walsrode",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Langenhagen Mitte",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Hannover Messe/Laatzen",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Hildesheim Hbf",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Braunschweig Hbf",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Wolfsburg Hbf",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Haldensleben",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Magdeburg Hbf",
+      "max_length_m": 130,
+      "line": "RE25",
+      "cars": "5"
+    },
+    {
+      "station": "Friedberg (Hess)",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Wetzlar",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Herborn (Dillkr)",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Dillenburg",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Haiger",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Siegen Hbf",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Kreuztal",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Finnentrop",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Plettenberg",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Werdohl",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Altena (Westf)",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Letmathe",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Bochum-Höntrop",
+      "max_length_m": 130,
+      "line": "RE40",
+      "cars": "5"
+    },
+    {
+      "station": "Arnhem Zuid",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Elst",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Nijmegen Lent",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Nijmegen",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Nijmegen Heyendaal",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Mook-Molenhoek",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Cuijk",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Boxmeer",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Vierlingsbeek",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Venray",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Blerick",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Kaldenkirchen",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Breyell",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Boisheim",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Dülken",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Wuppertal-Vohwinkel",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Wuppertal Hbf",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Wuppertal-Oberbarmen",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Schwelm",
+      "max_length_m": 105,
+      "line": "RB37",
+      "cars": "4"
+    },
+    {
+      "station": "Fröndenberg",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Wickede (Ruhr)",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Arnsberg (Westf)",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Bestwig",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Bigge",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Steinhelle",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Siedlinghausen",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Silbach",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Winterberg (Westf)",
+      "max_length_m": 105,
+      "line": "RE30",
+      "cars": "4"
+    },
+    {
+      "station": "Esbjerg",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Bramming",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Ribe",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Tønder",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Niebüll",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Bredstedt",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Husum",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Plön",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Eutin",
+      "max_length_m": 105,
+      "line": "RE46",
+      "cars": "4"
+    },
+    {
+      "station": "Groningen",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Hoogezand-Sappemeer",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Scheemda",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Winschoten",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Bad Nieuweschans",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Weener",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Schönkirchen",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Probsteierhagen",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Schönberg (Holstein)",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Schönberger Strand",
+      "max_length_m": 80,
+      "line": "RE90b",
+      "cars": "3"
+    },
+    {
+      "station": "Ostseebad Binz",
+      "max_length_m": 80,
+      "line": "RE91",
+      "cars": "3"
+    },
+    {
+      "station": "Sassnitz",
+      "max_length_m": 80,
+      "line": "RE91",
+      "cars": "3"
+    }
+  ]
+}

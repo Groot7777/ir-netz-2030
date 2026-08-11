@@ -177,7 +177,9 @@ def main():
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--start", type=int, default=0)
+    ap.add_argument("--batch-size", type=int, default=BATCH_SIZE, help="kleiner = zuverlaessiger bei instabilem Overpass, aber mehr Requests")
     args = ap.parse_args()
+    batch_size = args.batch_size
 
     kml_text = pathlib.Path(args.kml).read_text(encoding="utf-8")
     pattern = re.compile(
@@ -193,7 +195,7 @@ def main():
     out_path = pathlib.Path(args.out)
     results = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() and not args.force else {}
 
-    batches = [stations[i : i + BATCH_SIZE] for i in range(0, len(stations), BATCH_SIZE)]
+    batches = [stations[i : i + batch_size] for i in range(0, len(stations), batch_size)]
     for bi, batch in enumerate(batches, 1):
         batch = [b for b in batch if b[0] not in results or args.force]
         if not batch:

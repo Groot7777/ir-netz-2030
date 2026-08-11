@@ -1501,6 +1501,22 @@
       }
     ]
   },
+  "Bochum-Höntrop": {
+    "max_length_m": 171.0,
+    "source_slug": "Wattenscheid-Hoentrop-12669244",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "96 cm",
+        "length_m": 171.0
+      },
+      {
+        "gleis": "2",
+        "height": "96 cm",
+        "length_m": 171.0
+      }
+    ]
+  },
   "Bochum-Langendreer": {
     "max_length_m": 209.0,
     "source_slug": "Bochum-Langendreer-12678036",
@@ -3538,6 +3554,22 @@
       }
     ]
   },
+  "Essen-Höntrop": {
+    "max_length_m": 171.0,
+    "source_slug": "Wattenscheid-Hoentrop-12669244",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "96 cm",
+        "length_m": 171.0
+      },
+      {
+        "gleis": "2",
+        "height": "96 cm",
+        "length_m": 171.0
+      }
+    ]
+  },
   "Essen-Steele": {
     "max_length_m": 214.0,
     "source_slug": "Essen-Steele-12670998",
@@ -5373,6 +5405,17 @@
         "gleis": "2",
         "height": "76 cm",
         "length_m": 0.0
+      }
+    ]
+  },
+  "Hattingen Mitte": {
+    "max_length_m": 150.0,
+    "source_slug": "Hattingen-Ruhr-Mitte-12674860",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "96 cm",
+        "length_m": 150.0
       }
     ]
   },
@@ -7987,6 +8030,63 @@
       }
     ]
   },
+  "Mülheim West": {
+    "max_length_m": 180.0,
+    "source_slug": "Muelheim-Ruhr-West-12673414",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "5",
+        "height": "90 cm",
+        "length_m": 180.0
+      },
+      {
+        "gleis": "6",
+        "height": "90 cm",
+        "length_m": 180.0
+      }
+    ]
+  },
+  "Mülheim-Styrum": {
+    "max_length_m": 166.0,
+    "source_slug": "Muelheim-Ruhr-Styrum-12670846",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 166.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 155.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 155.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 155.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 155.0
+      }
+    ]
+  },
   "Müllheim (Baden)": {
     "max_length_m": 245.0,
     "source_slug": "Muellheim-im-Markgraeflerland-13204782",
@@ -8005,6 +8105,22 @@
         "gleis": "6",
         "height": "55 cm",
         "length_m": 245.0
+      }
+    ]
+  },
+  "München Flughafen": {
+    "max_length_m": 244.0,
+    "source_slug": "Flughafen-Muenchen-12669976",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "96 cm",
+        "length_m": 244.0
+      },
+      {
+        "gleis": "2",
+        "height": "96 cm",
+        "length_m": 244.0
       }
     ]
   },
@@ -8426,6 +8542,67 @@
         "gleis": "3",
         "height": "55 cm",
         "length_m": 140.0
+      }
+    ]
+  },
+  "Neustadt (Weinstraße) Hbf": {
+    "max_length_m": 388.0,
+    "source_slug": "Neustadt-Weinstr-Hbf-12675298",
+    "tracks": [
+      {
+        "gleis": "1",
+        "height": "76 cm",
+        "length_m": 216.0
+      },
+      {
+        "gleis": "1",
+        "height": "38 cm",
+        "length_m": 0.0
+      },
+      {
+        "gleis": "2",
+        "height": "76 cm",
+        "length_m": 388.0
+      },
+      {
+        "gleis": "2",
+        "height": "38 cm",
+        "length_m": 0.0
+      },
+      {
+        "gleis": "3",
+        "height": "76 cm",
+        "length_m": 388.0
+      },
+      {
+        "gleis": "3",
+        "height": "38 cm",
+        "length_m": 0.0
+      },
+      {
+        "gleis": "4",
+        "height": "38 cm",
+        "length_m": 0.0
+      },
+      {
+        "gleis": "4",
+        "height": "76 cm",
+        "length_m": 286.0
+      },
+      {
+        "gleis": "5",
+        "height": "38 cm",
+        "length_m": 0.0
+      },
+      {
+        "gleis": "5",
+        "height": "76 cm",
+        "length_m": 286.0
+      },
+      {
+        "gleis": "1a",
+        "height": "76 cm",
+        "length_m": 125.0
       }
     ]
   },

@@ -7,10 +7,21 @@ manche Placemark-Koordinaten sitzen nicht exakt auf dem echten Bahnhof
 namensähnlichen OSM-Bahnhofsknoten je KML-Station und meldet die
 Abweichung; ab --threshold-m gilt sie als Korrekturkandidat.
 
-Batches wie tools/overpass_platforms.py: je Station ein "around"-Filter
-in einer gemeinsamen Anfrage, Named-Matching danach lokal in Python (die
-Overpass-Antwort verrät nicht, welcher Treffer zu welcher Abfrage-Station
-gehört — Zuordnung über Namensähnlichkeit + kürzeste Distanz).
+Nominatim (OSM-Geocoding) wurde verworfen: es priorisiert bei knappen
+Ortsnamen wie "Allensbach" die Gemeinde-/Ortskern-Koordinate über den
+tatsächlichen railway=halt-Knoten, was in Stichproben falsche "weit
+daneben"-Befunde lieferte (Allensbach z.B. 251m "Abweichung", obwohl die
+KML-Position exakt auf dem echten OSM-Halt lag). Overpass liest die
+railway=station/halt-Tags direkt und ist daher robuster für diese Aufgabe
+— auch wenn es in dieser Umgebung zeitweise durch Rate-Limiting komplett
+blockiert war; nach einer Wartezeit ohne weitere Anfragen war es wieder
+erreichbar.
+
+Batches: je Station ein "around"-Filter in einer gemeinsamen Anfrage
+(kleine Batches + Pausen, um das Rate-Limit nicht erneut auszulösen),
+Named-Matching danach lokal in Python (die Overpass-Antwort verrät nicht,
+welcher Treffer zu welcher Abfrage-Station gehört — Zuordnung über
+Namensähnlichkeit + kürzeste Distanz).
 
 Nutzung:
     python3 tools/kml_station_check.py --kml <pfad> --out data/kml_work/kml_check.json
@@ -26,11 +37,12 @@ import sys
 import time
 
 BATCH_SIZE = 20
-RADIUS_M = 6000
+RADIUS_M = 4000
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 CACHE_DIR = pathlib.Path("data/kml_work/osm_station_cache")
 MAX_RETRIES = 5
-RETRY_BACKOFF_S = 6
+RETRY_BACKOFF_S = 20
+BATCH_PAUSE_S = 5.0  # zusaetzlich zu wait_for_slot() als Mindestabstand
 
 UMLAUT = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss",
                          "Ä": "Ae", "Ö": "Oe", "Ü": "Ue"})
@@ -39,6 +51,16 @@ ABBREV = [
     (re.compile(r"\bBf\b"), "Bahnhof"),
     (re.compile(r"\bHst\b"), "Haltestelle"),
 ]
+# Generische Bestandteile von Bahnhofsnamen — ein gemeinsames "Hauptbahnhof"
+# oder ein gemeinsamer Stadtname ALLEIN ist KEIN Beleg fuer denselben
+# Bahnhof (z.B. sonst "Lüdenscheid Hbf" == "Mainz Hauptbahnhof", weil beide
+# nur "Hauptbahnhof" teilen; oder "Bochum-Kohlenstraße" == "Bochum-
+# Ehrenfeld", weil beide "Bochum" teilen). Muessen beim Namensvergleich
+# ignoriert werden, damit nur die UNTERSCHEIDENDEN Woerter zaehlen.
+GENERIC_WORDS = {
+    "hauptbahnhof", "bahnhof", "hbf", "bf", "hst", "haltestelle", "bahnhst",
+    "ost", "west", "nord", "sued", "sud", "mitte", "tief", "gleis", "hp",
+}
 
 
 def norm(s):
@@ -58,12 +80,17 @@ def name_match(kml_name, osm_name):
         return False
     if norm(kml_name) == norm(osm_name):
         return True
-    kw, ow = norm_words(kml_name), norm_words(osm_name)
+    kw, ow = norm_words(kml_name) - GENERIC_WORDS, norm_words(osm_name) - GENERIC_WORDS
     if not kw or not ow:
+        # Nur generische Woerter uebrig (z.B. Name bestand nur aus
+        # "Hauptbahnhof") -> kein verlaesslicher Fuzzy-Match moeglich.
         return False
-    # eine Namensmenge muss (fast) vollstaendig in der anderen enthalten sein
+    # Die kleinere (unterscheidende) Wortmenge muss (fast) vollstaendig in
+    # der anderen enthalten sein — wie bei der DB-InfraGO-Namensabgleichung
+    # etabliert, nicht nur ein loser Ueberlappungs-Anteil.
     inter = kw & ow
-    return len(inter) >= max(1, min(len(kw), len(ow)) - 1) and len(inter) / max(len(kw), len(ow)) >= 0.5
+    smaller = min(len(kw), len(ow))
+    return len(inter) >= smaller and len(inter) / max(len(kw), len(ow)) >= 0.5
 
 
 def haversine_m(lat1, lon1, lat2, lon2):
@@ -79,14 +106,32 @@ def build_query(batch):
     clauses = []
     for _name, lon, lat in batch:
         clauses.append(f'node["railway"~"^(station|halt)$"](around:{RADIUS_M},{lat},{lon});')
-        clauses.append(f'node["public_transport"="station"]["railway"](around:{RADIUS_M},{lat},{lon});')
         clauses.append(f'node["public_transport"="station"]["train"="yes"](around:{RADIUS_M},{lat},{lon});')
-    return f'[out:json][timeout:120];({"".join(clauses)});out body;'
+    return f'[out:json][timeout:90];({"".join(clauses)});out body;'
 
 
 def batch_cache_key(batch):
     raw = json.dumps(batch, sort_keys=True)
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
+
+
+def wait_for_slot():
+    """Fragt /api/status, wartet bis ein Slot frei ist, statt blind eine
+    feste Pause zu verstreichen — vermeidet erneutes Rate-Limiting robuster
+    als ein starres time.sleep()."""
+    try:
+        proc = subprocess.run(
+            ["curl", "-sS", "--max-time", "20", "-A", "RENetz2030-Taktoptimierung/1.0", "https://overpass-api.de/api/status"],
+            capture_output=True, text=True, timeout=25,
+        )
+        m = re.search(r"Slot available after: [^,]+, in (-?\d+) seconds", proc.stdout)
+        if m:
+            secs = max(0, int(m.group(1)))
+            if secs > 0:
+                print(f"    warte auf freien Overpass-Slot: {secs}s", file=sys.stderr)
+                time.sleep(min(secs, 90) + 2)
+    except (subprocess.TimeoutExpired, OSError):
+        pass  # Statusabfrage selbst fehlgeschlagen -> einfach mit fester Pause weiter
 
 
 def fetch_batch(batch, force=False):
@@ -96,18 +141,19 @@ def fetch_batch(batch, force=False):
     if cache_path.exists() and not force:
         return json.loads(cache_path.read_text(encoding="utf-8"))
 
+    wait_for_slot()
     query = build_query(batch)
     last_err = None
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             proc = subprocess.run(
                 [
-                    "curl", "-sS", "--max-time", "150", "-X", "POST",
+                    "curl", "-sS", "--max-time", "100", "-X", "POST",
                     "-A", "RENetz2030-Taktoptimierung/1.0 (KML-Stationsabgleich; +https://github.com/Groot7777/ir-netz-2030)",
                     "--data-urlencode", f"data={query}",
                     OVERPASS_URL,
                 ],
-                capture_output=True, text=True, timeout=160,
+                capture_output=True, text=True, timeout=110,
             )
             if proc.returncode != 0:
                 raise RuntimeError(f"curl exit {proc.returncode}: {proc.stderr.strip()[:300]}")
@@ -130,6 +176,7 @@ def main():
     ap.add_argument("--threshold-m", type=float, default=150.0)
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--start", type=int, default=0)
     args = ap.parse_args()
 
     kml_text = pathlib.Path(args.kml).read_text(encoding="utf-8")
@@ -138,14 +185,20 @@ def main():
         re.DOTALL,
     )
     stations = [(m.group(1), float(m.group(2)), float(m.group(3))) for m in pattern.finditer(kml_text)]
+    stations = stations[args.start :]
     if args.limit:
         stations = stations[: args.limit]
-    print(f"{len(stations)} KML-Stationen gefunden")
+    print(f"{len(stations)} KML-Stationen (ab Index {args.start})")
+
+    out_path = pathlib.Path(args.out)
+    results = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() and not args.force else {}
 
     batches = [stations[i : i + BATCH_SIZE] for i in range(0, len(stations), BATCH_SIZE)]
-    results = {}
-    for i, batch in enumerate(batches, 1):
-        print(f"  Batch {i}/{len(batches)} ({batch[0][0]} ... {batch[-1][0]})")
+    for bi, batch in enumerate(batches, 1):
+        batch = [b for b in batch if b[0] not in results or args.force]
+        if not batch:
+            continue
+        print(f"  Batch {bi}/{len(batches)} ({batch[0][0]} ... {batch[-1][0]})")
         resp = fetch_batch(batch, force=args.force)
         elements = resp.get("elements", []) if resp else []
         for name, lon, lat in batch:
@@ -172,15 +225,14 @@ def main():
                     "osm_name": None, "distance_m": None,
                     "osm_ref": None, "n_candidates": 0,
                 }
-        time.sleep(1.5)
-
-    pathlib.Path(args.out).parent.mkdir(parents=True, exist_ok=True)
-    pathlib.Path(args.out).write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+        time.sleep(BATCH_PAUSE_S)
 
     n_ok = sum(1 for r in results.values() if r["distance_m"] is not None and r["distance_m"] <= args.threshold_m)
     n_off = sum(1 for r in results.values() if r["distance_m"] is not None and r["distance_m"] > args.threshold_m)
     n_none = sum(1 for r in results.values() if r["distance_m"] is None)
-    print(f"\n{len(results)} Stationen -> {args.out}")
+    print(f"\n{len(results)} Stationen -> {out_path}")
     print(f"ok (<= {args.threshold_m:.0f}m): {n_ok}   auffaellig (> {args.threshold_m:.0f}m): {n_off}   kein OSM-Treffer: {n_none}")
 
 

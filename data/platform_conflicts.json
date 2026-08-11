@@ -66,17 +66,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Freiberg (Sachs)",
-    "required_m": 210,
-    "line": "RE35X",
-    "cars": "8",
-    "available_m": 36.3,
-    "n_platform_candidates": 7,
-    "confidence": "hoch",
-    "overhang_m": 173.7,
-    "severity": "kritisch"
-  },
-  {
     "station": "Brandenburg Hbf",
     "required_m": 210,
     "line": "RE71",
@@ -96,17 +85,6 @@
     "n_platform_candidates": 4,
     "confidence": "hoch",
     "overhang_m": 167.8,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Berlin Hbf (tief)",
-    "required_m": 210,
-    "line": "RE35X",
-    "cars": "8",
-    "available_m": 46.1,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": 163.9,
     "severity": "kritisch"
   },
   {
@@ -198,17 +176,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Erfurt Hbf",
-    "required_m": 210,
-    "line": "RE28",
-    "cars": "8",
-    "available_m": 67.2,
-    "n_platform_candidates": 11,
-    "confidence": "hoch",
-    "overhang_m": 142.8,
-    "severity": "kritisch"
-  },
-  {
     "station": "Oldenburg (Holst)",
     "required_m": 210,
     "line": "RE17",
@@ -253,17 +220,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Kiel Hbf",
-    "required_m": 236,
-    "line": "RE90b",
-    "cars": "3+6",
-    "available_m": 99.9,
-    "n_platform_candidates": 9,
-    "confidence": "hoch",
-    "overhang_m": 136.1,
-    "severity": "kritisch"
-  },
-  {
     "station": "Dinslaken",
     "required_m": 210,
     "line": "RE5",
@@ -297,17 +253,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Lübeck Hbf",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
-    "available_m": 77.9,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": 132.1,
-    "severity": "kritisch"
-  },
-  {
     "station": "Berlin-Ostkreuz",
     "required_m": 184,
     "line": "RE11",
@@ -338,17 +283,6 @@
     "n_platform_candidates": 10,
     "confidence": "hoch",
     "overhang_m": 127.1,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Neuss Hbf",
-    "required_m": 210,
-    "line": "RE32",
-    "cars": "8",
-    "available_m": 83.1,
-    "n_platform_candidates": 3,
-    "confidence": "hoch",
-    "overhang_m": 126.9,
     "severity": "kritisch"
   },
   {
@@ -418,17 +352,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Kassel-Wilhelmshöhe",
-    "required_m": 210,
-    "line": "RE32",
-    "cars": "8",
-    "available_m": 93.6,
-    "n_platform_candidates": 13,
-    "confidence": "hoch",
-    "overhang_m": 116.4,
-    "severity": "kritisch"
-  },
-  {
     "station": "Fürth (Bay) Hbf",
     "required_m": 210,
     "line": "RE39",
@@ -437,17 +360,6 @@
     "n_platform_candidates": 4,
     "confidence": "hoch",
     "overhang_m": 116.3,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Chemnitz Hbf",
-    "required_m": 210,
-    "line": "RE35X",
-    "cars": "8",
-    "available_m": 93.8,
-    "n_platform_candidates": 10,
-    "confidence": "hoch",
-    "overhang_m": 116.2,
     "severity": "kritisch"
   },
   {
@@ -539,17 +451,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Hamburg-Elbbrücken",
-    "required_m": 236,
-    "line": "RE90b",
-    "cars": "3+6",
-    "available_m": 131.0,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": 105.0,
-    "severity": "kritisch"
-  },
-  {
     "station": "Leipzig MDR",
     "required_m": 130,
     "line": "RE24",
@@ -624,28 +525,6 @@
     "n_platform_candidates": 1,
     "confidence": "niedrig",
     "overhang_m": 95.4,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Bochum Hbf",
-    "required_m": 210,
-    "line": "RE32",
-    "cars": "8",
-    "available_m": 117.8,
-    "n_platform_candidates": 6,
-    "confidence": "hoch",
-    "overhang_m": 92.2,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Berlin-Spandau",
-    "required_m": 210,
-    "line": "RE46",
-    "cars": "4+4",
-    "available_m": 120.5,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": 89.5,
     "severity": "kritisch"
   },
   {
@@ -748,17 +627,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Berlin Hbf",
-    "required_m": 210,
-    "line": "RE46",
-    "cars": "4+4",
-    "available_m": 126.0,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": 84.0,
-    "severity": "kritisch"
-  },
-  {
     "station": "Swarzewo",
     "required_m": 210,
     "line": "RE71",
@@ -800,17 +668,6 @@
     "n_platform_candidates": 1,
     "confidence": "niedrig",
     "overhang_m": 79.8,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Münster (Westf) Hbf",
-    "required_m": 210,
-    "line": "RE30",
-    "cars": "4+4",
-    "available_m": 131.3,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": 78.7,
     "severity": "kritisch"
   },
   {
@@ -924,17 +781,6 @@
     "severity": "kritisch"
   },
   {
-    "station": "Duisburg Hbf",
-    "required_m": 210,
-    "line": "RE32",
-    "cars": "8",
-    "available_m": 141.3,
-    "n_platform_candidates": 5,
-    "confidence": "hoch",
-    "overhang_m": 68.7,
-    "severity": "kritisch"
-  },
-  {
     "station": "Schwerte (Ruhr)",
     "required_m": 210,
     "line": "RE30",
@@ -987,17 +833,6 @@
     "n_platform_candidates": 1,
     "confidence": "niedrig",
     "overhang_m": 64.6,
-    "severity": "kritisch"
-  },
-  {
-    "station": "Düsseldorf Hbf",
-    "required_m": 210,
-    "line": "RE32",
-    "cars": "8",
-    "available_m": 145.7,
-    "n_platform_candidates": 19,
-    "confidence": "hoch",
-    "overhang_m": 64.3,
     "severity": "kritisch"
   },
   {
@@ -1353,6 +1188,17 @@
     "severity": "kritisch"
   },
   {
+    "station": "Hamburg-Elbbrücken",
+    "required_m": 236,
+    "line": "RE90b",
+    "cars": "3+6",
+    "available_m": 210.0,
+    "n_platform_candidates": 2,
+    "confidence": "amtlich",
+    "overhang_m": 26.0,
+    "severity": "kritisch"
+  },
+  {
     "station": "Cloppenburg",
     "required_m": 156,
     "line": "RE17",
@@ -1372,17 +1218,6 @@
     "n_platform_candidates": 2,
     "confidence": "niedrig",
     "overhang_m": 24.8,
-    "severity": "gering"
-  },
-  {
-    "station": "Hamburg-Harburg",
-    "required_m": 236,
-    "line": "RE90b",
-    "cars": "3+6",
-    "available_m": 211.5,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": 24.5,
     "severity": "gering"
   },
   {
@@ -1537,6 +1372,17 @@
     "n_platform_candidates": 9,
     "confidence": "hoch",
     "overhang_m": 10.5,
+    "severity": "gering"
+  },
+  {
+    "station": "Hagenow Land",
+    "required_m": 210,
+    "line": "RE46",
+    "cars": "4+4",
+    "available_m": 200.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich",
+    "overhang_m": 10.0,
     "severity": "gering"
   },
   {
@@ -1760,6 +1606,17 @@
     "severity": "gering"
   },
   {
+    "station": "Bad Kleinen",
+    "required_m": 210,
+    "line": "RE17",
+    "cars": "8",
+    "available_m": 210.0,
+    "n_platform_candidates": 4,
+    "confidence": "amtlich",
+    "overhang_m": 0.0,
+    "severity": "ok"
+  },
+  {
     "station": "Winterthur",
     "required_m": 184,
     "line": "RE94",
@@ -1856,6 +1713,28 @@
     "n_platform_candidates": 3,
     "confidence": "hoch",
     "overhang_m": -8.6,
+    "severity": "ok"
+  },
+  {
+    "station": "Freiberg (Sachs)",
+    "required_m": 210,
+    "line": "RE35X",
+    "cars": "8",
+    "available_m": 220.0,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich",
+    "overhang_m": -10.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Chemnitz Hbf",
+    "required_m": 210,
+    "line": "RE35X",
+    "cars": "8",
+    "available_m": 220.0,
+    "n_platform_candidates": 10,
+    "confidence": "amtlich",
+    "overhang_m": -10.0,
     "severity": "ok"
   },
   {
@@ -2076,17 +1955,6 @@
     "n_platform_candidates": 4,
     "confidence": "hoch",
     "overhang_m": -19.8,
-    "severity": "ok"
-  },
-  {
-    "station": "Oldenburg (Oldb) Hbf",
-    "required_m": 236,
-    "line": "RE90b",
-    "cars": "3+6",
-    "available_m": 256.3,
-    "n_platform_candidates": 2,
-    "confidence": "niedrig",
-    "overhang_m": -20.3,
     "severity": "ok"
   },
   {
@@ -2329,17 +2197,6 @@
     "n_platform_candidates": 4,
     "confidence": "hoch",
     "overhang_m": -40.1,
-    "severity": "ok"
-  },
-  {
-    "station": "Osnabrück Hbf",
-    "required_m": 210,
-    "line": "RE9",
-    "cars": "8",
-    "available_m": 250.2,
-    "n_platform_candidates": 1,
-    "confidence": "niedrig",
-    "overhang_m": -40.2,
     "severity": "ok"
   },
   {
@@ -3058,6 +2915,17 @@
     "severity": "ok"
   },
   {
+    "station": "Zwickau Hbf",
+    "required_m": 210,
+    "line": "RE35X",
+    "cars": "8",
+    "available_m": 306.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich",
+    "overhang_m": -96.0,
+    "severity": "ok"
+  },
+  {
     "station": "Vamdrup",
     "required_m": 156,
     "line": "RE77",
@@ -3176,6 +3044,28 @@
     "n_platform_candidates": 29,
     "confidence": "hoch",
     "overhang_m": -109.7,
+    "severity": "ok"
+  },
+  {
+    "station": "Lübeck Hbf",
+    "required_m": 210,
+    "line": "RE17",
+    "cars": "8",
+    "available_m": 320.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich",
+    "overhang_m": -110.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Eberswalde Hbf",
+    "required_m": 210,
+    "line": "RE35X",
+    "cars": "8",
+    "available_m": 320.0,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich",
+    "overhang_m": -110.0,
     "severity": "ok"
   },
   {
@@ -3311,6 +3201,17 @@
     "severity": "ok"
   },
   {
+    "station": "Pasewalk",
+    "required_m": 210,
+    "line": "RE35X",
+    "cars": "8",
+    "available_m": 333.0,
+    "n_platform_candidates": 5,
+    "confidence": "amtlich",
+    "overhang_m": -123.0,
+    "severity": "ok"
+  },
+  {
     "station": "Bützow",
     "required_m": 210,
     "line": "RE17",
@@ -3330,6 +3231,17 @@
     "n_platform_candidates": 2,
     "confidence": "niedrig",
     "overhang_m": -124.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Oldenburg (Oldb) Hbf",
+    "required_m": 236,
+    "line": "RE90b",
+    "cars": "3+6",
+    "available_m": 364.0,
+    "n_platform_candidates": 7,
+    "confidence": "amtlich",
+    "overhang_m": -128.0,
     "severity": "ok"
   },
   {
@@ -3487,6 +3399,17 @@
     "severity": "ok"
   },
   {
+    "station": "Kiel Hbf",
+    "required_m": 236,
+    "line": "RE90b",
+    "cars": "3+6",
+    "available_m": 388.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich",
+    "overhang_m": -152.0,
+    "severity": "ok"
+  },
+  {
     "station": "Lindau-Reutin",
     "required_m": 210,
     "line": "RE80",
@@ -3539,6 +3462,17 @@
     "n_platform_candidates": 15,
     "confidence": "hoch",
     "overhang_m": -157.5,
+    "severity": "ok"
+  },
+  {
+    "station": "Plattling",
+    "required_m": 210,
+    "line": "RE39",
+    "cars": "8",
+    "available_m": 370.0,
+    "n_platform_candidates": 7,
+    "confidence": "amtlich",
+    "overhang_m": -160.0,
     "severity": "ok"
   },
   {
@@ -3707,6 +3641,17 @@
     "severity": "ok"
   },
   {
+    "station": "Neuss Hbf",
+    "required_m": 210,
+    "line": "RE32",
+    "cars": "8",
+    "available_m": 387.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich",
+    "overhang_m": -177.0,
+    "severity": "ok"
+  },
+  {
     "station": "Scharbeutz",
     "required_m": 210,
     "line": "RE17",
@@ -3748,6 +3693,17 @@
     "n_platform_candidates": 4,
     "confidence": "hoch",
     "overhang_m": -181.3,
+    "severity": "ok"
+  },
+  {
+    "station": "Osnabrück Hbf",
+    "required_m": 210,
+    "line": "RE9",
+    "cars": "8",
+    "available_m": 393.0,
+    "n_platform_candidates": 9,
+    "confidence": "amtlich",
+    "overhang_m": -183.0,
     "severity": "ok"
   },
   {
@@ -3894,6 +3850,28 @@
     "severity": "ok"
   },
   {
+    "station": "Berlin Südkreuz",
+    "required_m": 210,
+    "line": "RE35X",
+    "cars": "8",
+    "available_m": 406.0,
+    "n_platform_candidates": 10,
+    "confidence": "amtlich",
+    "overhang_m": -196.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Berlin-Spandau",
+    "required_m": 210,
+    "line": "RE46",
+    "cars": "4+4",
+    "available_m": 406.0,
+    "n_platform_candidates": 6,
+    "confidence": "amtlich",
+    "overhang_m": -196.0,
+    "severity": "ok"
+  },
+  {
     "station": "Meppel",
     "required_m": 210,
     "line": "RE30",
@@ -4026,6 +4004,50 @@
     "severity": "ok"
   },
   {
+    "station": "Kassel-Wilhelmshöhe",
+    "required_m": 210,
+    "line": "RE32",
+    "cars": "8",
+    "available_m": 428.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich",
+    "overhang_m": -218.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Bochum Hbf",
+    "required_m": 210,
+    "line": "RE32",
+    "cars": "8",
+    "available_m": 430.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich",
+    "overhang_m": -220.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Berlin Hbf",
+    "required_m": 210,
+    "line": "RE46",
+    "cars": "4+4",
+    "available_m": 430.0,
+    "n_platform_candidates": 15,
+    "confidence": "amtlich",
+    "overhang_m": -220.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Berlin Hbf (tief)",
+    "required_m": 210,
+    "line": "RE35X",
+    "cars": "8",
+    "available_m": 430.0,
+    "n_platform_candidates": 15,
+    "confidence": "amtlich",
+    "overhang_m": -220.0,
+    "severity": "ok"
+  },
+  {
     "station": "Büchen",
     "required_m": 210,
     "line": "RE46",
@@ -4100,6 +4122,17 @@
     "n_platform_candidates": 9,
     "confidence": "hoch",
     "overhang_m": -228.6,
+    "severity": "ok"
+  },
+  {
+    "station": "Münster (Westf) Hbf",
+    "required_m": 210,
+    "line": "RE30",
+    "cars": "4+4",
+    "available_m": 440.0,
+    "n_platform_candidates": 9,
+    "confidence": "amtlich",
+    "overhang_m": -230.0,
     "severity": "ok"
   },
   {
@@ -4224,6 +4257,17 @@
     "severity": "ok"
   },
   {
+    "station": "Hamburg-Harburg",
+    "required_m": 236,
+    "line": "RE90b",
+    "cars": "3+6",
+    "available_m": 492.0,
+    "n_platform_candidates": 8,
+    "confidence": "amtlich",
+    "overhang_m": -256.0,
+    "severity": "ok"
+  },
+  {
     "station": "Bielefeld Hbf",
     "required_m": 156,
     "line": "RE17",
@@ -4243,6 +4287,17 @@
     "n_platform_candidates": 25,
     "confidence": "hoch",
     "overhang_m": -260.7,
+    "severity": "ok"
+  },
+  {
+    "station": "Düsseldorf Hbf",
+    "required_m": 210,
+    "line": "RE32",
+    "cars": "8",
+    "available_m": 479.0,
+    "n_platform_candidates": 16,
+    "confidence": "amtlich",
+    "overhang_m": -269.0,
     "severity": "ok"
   },
   {
@@ -4334,21 +4389,32 @@
     "severity": "ok"
   },
   {
+    "station": "Erfurt Hbf",
+    "required_m": 210,
+    "line": "RE28",
+    "cars": "8",
+    "available_m": 554.0,
+    "n_platform_candidates": 10,
+    "confidence": "amtlich",
+    "overhang_m": -344.0,
+    "severity": "ok"
+  },
+  {
+    "station": "Duisburg Hbf",
+    "required_m": 210,
+    "line": "RE32",
+    "cars": "8",
+    "available_m": 620.0,
+    "n_platform_candidates": 16,
+    "confidence": "amtlich",
+    "overhang_m": -410.0,
+    "severity": "ok"
+  },
+  {
     "station": "Neumünster",
     "required_m": 236,
     "line": "RE90b",
     "cars": "3+6",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Bad Kleinen",
-    "required_m": 210,
-    "line": "RE17",
-    "cars": "8",
     "available_m": null,
     "n_platform_candidates": 0,
     "confidence": "niedrig",
@@ -4392,17 +4458,6 @@
     "station": "Nørreport",
     "required_m": 210,
     "line": "RE17",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Zwickau Hbf",
-    "required_m": 210,
-    "line": "RE35X",
     "cars": "8",
     "available_m": null,
     "n_platform_candidates": 0,
@@ -4477,39 +4532,6 @@
     "severity": "keine_daten"
   },
   {
-    "station": "Pasewalk",
-    "required_m": 210,
-    "line": "RE35X",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Eberswalde Hbf",
-    "required_m": 210,
-    "line": "RE35X",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Berlin Südkreuz",
-    "required_m": 210,
-    "line": "RE35X",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
     "station": "Angermünde",
     "required_m": 210,
     "line": "RE71",
@@ -4533,17 +4555,6 @@
   },
   {
     "station": "Vilshofen (Niederbay)",
-    "required_m": 210,
-    "line": "RE39",
-    "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Plattling",
     "required_m": 210,
     "line": "RE39",
     "cars": "8",
@@ -4591,17 +4602,6 @@
     "required_m": 210,
     "line": "RE71",
     "cars": "8",
-    "available_m": null,
-    "n_platform_candidates": 0,
-    "confidence": "niedrig",
-    "overhang_m": null,
-    "severity": "keine_daten"
-  },
-  {
-    "station": "Hagenow Land",
-    "required_m": 210,
-    "line": "RE46",
-    "cars": "4+4",
     "available_m": null,
     "n_platform_candidates": 0,
     "confidence": "niedrig",

@@ -361,6 +361,15 @@ def main():
         ),
     )
     ap.add_argument("--protect-multiplier", type=float, default=4.0)
+    ap.add_argument(
+        "--fix-phase", default="",
+        help=(
+            "Komma-getrennt 'Variantenschlüssel=Phase' — diese Varianten werden "
+            "auf die angegebene Phase hart fixiert (nicht optimiert), z.B. um "
+            "eine hypothetische Zielsituation zu testen und zu sehen, was sich "
+            "im Rest des Netzes dadurch verschiebt."
+        ),
+    )
     args = ap.parse_args()
 
     data = json.loads(pathlib.Path(args.data).read_text(encoding="utf-8"))
@@ -369,6 +378,22 @@ def main():
     free, derived, fixed = build_variable_groups(data)
     base_phase = {k: to_min(v["takt"]["start"]) % v["takt"]["interval"] for k, v in data.items()}
     T_by_key = {k: v["takt"]["interval"] for k, v in data.items()}
+
+    fix_phase = {}
+    for item in args.fix_phase.split(","):
+        item = item.strip()
+        if not item:
+            continue
+        k, val = item.rsplit("=", 1)
+        fix_phase[k.strip()] = int(val)
+    opt_base_phase = dict(base_phase)
+    for k, val in fix_phase.items():
+        opt_base_phase[k] = val
+        if k in free:
+            free.remove(k)
+        fixed.add(k)
+    if fix_phase:
+        print(f"Hart fixierte Varianten: {fix_phase}")
 
     corridors = prepare_corridors(data)
     protect_weights = {}
@@ -382,7 +407,7 @@ def main():
         else:
             protect_weights[item] = args.protect_multiplier
     knot_terms = prepare_knot_terms(
-        data, node_plan, base_phase, derived, fixed, protect_weights=protect_weights,
+        data, node_plan, opt_base_phase, derived, fixed, protect_weights=protect_weights,
     )
     if protect_weights:
         print(f"Geschützte Stationen: {protect_weights}")
@@ -400,16 +425,16 @@ def main():
           f"{len(symmetry_pairs)} Symmetrie-Paare, {len(fleet_lines)} Flotten-Linien")
 
     base_cost, base_breakdown = objective(
-        {k: base_phase[k] for k in free}, derived, base_phase, corridors, knot_terms,
+        {k: opt_base_phase[k] for k in free}, derived, opt_base_phase, corridors, knot_terms,
         ref_groups, symmetry_pairs, fleet_lines, weights,
     )
     print(f"Ist-Kosten: {base_cost:.1f} {base_breakdown}")
 
     best_phases, best_cost = anneal(
-        free, derived, base_phase, T_by_key, corridors, knot_terms, ref_groups,
+        free, derived, opt_base_phase, T_by_key, corridors, knot_terms, ref_groups,
         symmetry_pairs, fleet_lines, weights, args.iterations, args.seed,
     )
-    _, best_breakdown = objective(best_phases, derived, base_phase, corridors, knot_terms,
+    _, best_breakdown = objective(best_phases, derived, opt_base_phase, corridors, knot_terms,
                                    ref_groups, symmetry_pairs, fleet_lines, weights)
     print(f"Optimiert: {best_cost:.1f} {best_breakdown}  (Δ {best_cost - base_cost:+.1f}, "
           f"{(1 - best_cost / base_cost) * 100 if base_cost else 0:.0f}% besser)")
@@ -418,7 +443,9 @@ def main():
     for k in data:
         if k in fixed:
             continue
-        all_phases[k] = resolve_phase(k, best_phases, derived, base_phase)
+        all_phases[k] = resolve_phase(k, best_phases, derived, opt_base_phase)
+    for k, val in fix_phase.items():
+        all_phases[k] = val
 
     pathlib.Path(args.out).write_text(
         json.dumps({"phases": all_phases, "base_phase": base_phase, "fixed": sorted(fixed)},

@@ -514,45 +514,70 @@ def main():
     n_shared_total = 0
     for st, dgroups in station_direction_groups.items():
         info = station_tracks[st]
-        groups_by_key = {}
+
+        # Einzel-Besuche (gk) mit ihrer eigenen Nachbar-Richtung und den
+        # eigenen Durchlaeufen (fuer variantengenaue Pins, die NUR eine
+        # Fahrtrichtung einer sonst zusammengefassten Gruppe herausloesen
+        # muessen — z.B. beide Richtungen derselben S10-Kreuzung auf zwei
+        # verschiedene, feste Gleise statt auf einen gemeinsamen Pool).
+        member_dkey = {}
+        member_occ = {}
         for dkey, gks in dgroups.items():
-            occurrences = []
-            members = []
             for gk in gks:
                 rep_k, rep_i = group_repr[gk]
-                occurrences.extend(visit_occurrences(data[rep_k], rep_i))
-                members.append({"key": gk, "required_length": group_required_length[gk]})
+                member_dkey[gk] = dkey
+                member_occ[gk] = visit_occurrences(data[rep_k], rep_i)
+
+        remaining = {gk for gks in dgroups.values() for gk in gks}
+
+        def make_group(gks):
+            occurrences = [o for gk in gks for o in member_occ[gk]]
             lanes, _ = schedule_lanes(occurrences)
-            groups_by_key[dkey] = {
-                "direction_keys": frozenset({dkey}), "members": members,
+            return {
+                "direction_keys": frozenset(member_dkey[gk] for gk in gks),
+                "members": [{"key": gk, "required_length": group_required_length[gk]} for gk in gks],
                 "occurrences": occurrences, "lanes": lanes,
             }
 
         # Vom Nutzer bestaetigte feste Gleis-Pins (data/manual_track_pins.json):
-        # die referenzierten Richtungsgruppen (+ optional weitere, damit
-        # zusammengelegte Gruppen) aus dem automatischen Pool herausnehmen.
-        pinned_groups = []
+        # 'variant'(+optional 'idx') pickt EINZELNE Besuche heraus (praezise,
+        # auch um zwei Richtungen derselben Richtungsgruppe zu trennen);
+        # 'neighbors' pinnt eine GANZE Richtungsgruppe (+ optional 'merge_with'
+        # fuer weitere Gruppen) auf einen gemeinsamen Gleis-Pool. Pins mit
+        # identischer Ziel-Gleisliste werden zusammengefasst, damit ihre
+        # Minuten-Konfliktpruefung gemeinsam laeuft.
+        pin_buckets = {}  # tuple(tracks) -> [gk, ...]
         for pin in track_pins.get(st, []):
-            key = frozenset(pin["neighbors"])
-            if key not in groups_by_key:
-                continue
-            merged = groups_by_key.pop(key)
-            for extra_neighbors in pin.get("merge_with", []):
-                ek = frozenset(extra_neighbors)
-                if ek in groups_by_key:
-                    extra = groups_by_key.pop(ek)
-                    combined_occ = merged["occurrences"] + extra["occurrences"]
-                    combined_lanes, _ = schedule_lanes(combined_occ)
-                    merged = {
-                        "direction_keys": merged["direction_keys"] | extra["direction_keys"],
-                        "members": merged["members"] + extra["members"],
-                        "occurrences": combined_occ,
-                        "lanes": combined_lanes,
-                    }
-            merged["pin_tracks"] = pin["tracks"]
-            pinned_groups.append(merged)
+            tracks_key = tuple(pin["tracks"])
+            if "variant" in pin:
+                matches = [gk for gk in remaining
+                           if gk[0] == pin["variant"] and (pin.get("idx") is None or gk[1] == pin["idx"])]
+                for gk in matches:
+                    remaining.discard(gk)
+                pin_buckets.setdefault(tracks_key, []).extend(matches)
+            elif "neighbors" in pin:
+                keys = [pin["neighbors"]] + pin.get("merge_with", [])
+                for neighbors in keys:
+                    dkey = frozenset(neighbors)
+                    matches = [gk for gk in remaining if member_dkey[gk] == dkey]
+                    for gk in matches:
+                        remaining.discard(gk)
+                    pin_buckets.setdefault(tracks_key, []).extend(matches)
 
-        groups_input = list(groups_by_key.values())
+        pinned_groups = []
+        for tracks_key, gks in pin_buckets.items():
+            if not gks:
+                continue
+            g = make_group(gks)
+            g["pin_tracks"] = list(tracks_key)
+            pinned_groups.append(g)
+
+        # Restliche (ungepinnte) Besuche zurueck zu ihren natuerlichen
+        # Richtungsgruppen buendeln, fuer den automatischen Algorithmus.
+        remaining_by_dkey = collections.defaultdict(list)
+        for gk in remaining:
+            remaining_by_dkey[member_dkey[gk]].append(gk)
+        groups_input = [make_group(gks) for gks in remaining_by_dkey.values()]
         assignment, resolved_tracks, n_shared = assign_station_directional(
             groups_input, info["tracks"], info["source"], pinned_groups=pinned_groups,
         )

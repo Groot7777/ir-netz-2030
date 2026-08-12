@@ -1,15 +1,63 @@
 {
   "Bochum Hbf": [
     {
-      "note": "RE32 (durchgehend Wattenscheid <-> Dortmund) — vom Nutzer bestaetigt: faehrt ueber Wattenscheid Richtung Essen, feste Gleise 3/4.",
-      "neighbors": ["Wattenscheid Bf", "Dortmund Hbf"],
-      "tracks": ["3", "4"]
+      "note": "RE32 Richtung Wattenscheid/Essen (aus Witten/Dortmund kommend) — vom Nutzer bestaetigt.",
+      "variant": "RE32_S",
+      "tracks": ["3"]
     },
     {
-      "note": "RE40 (durchgehend Witten <-> Bochum-Hoentrop/Essen) faehrt laut Nutzer planmaessig ueber die S-Bahn-Gleise — zusammengelegt mit der S10-Richtungsgruppe, die ohnehin schon auf Gleis 7 liegt (Bochum-Langendreer West/Bochum-Stahlhausen).",
-      "neighbors": ["Bochum-Höntrop", "Witten Hbf"],
-      "merge_with": [["Bochum-Langendreer West", "Bochum-Stahlhausen"]],
-      "tracks": ["7", "8"]
+      "note": "RB37 (aus Witten/Langendreer kommend) endet hier ersatzweise auf dem freien Gleis der Witten/Dortmund<->Wattenscheid/Essen-Gruppe — vom Nutzer bestaetigt erlaubt ('Endstation/Abstellung, wenn Kapazitaet passt').",
+      "variant": "RB37_A",
+      "tracks": ["4"]
+    },
+    {
+      "variant": "RB37_B",
+      "tracks": ["4"]
+    },
+    {
+      "note": "RE32 Richtung Dortmund/Witten (aus Wattenscheid/Essen kommend) — vom Nutzer bestaetigt.",
+      "variant": "RE32_N",
+      "tracks": ["5"]
+    },
+    {
+      "note": "RE9 (einzige weitere Dortmund-Richtung-Linie) auf dem freien Gleis der Gruppe 5/6.",
+      "variant": "RE9_A",
+      "tracks": ["6"]
+    },
+    {
+      "variant": "RE9_B",
+      "tracks": ["6"]
+    },
+    {
+      "note": "S10-Kreuzung Langendreer->Hoentrop + RE40 Richtung Essen — vom Nutzer bestaetigt (vorher faelschlich auf Gleis 8).",
+      "variant": "S10_A",
+      "idx": 8,
+      "tracks": ["7"]
+    },
+    {
+      "variant": "RE40_N",
+      "tracks": ["7"]
+    },
+    {
+      "note": "S10-Kreuzung Hoentrop->Langendreer + RE40 Richtung Frankfurt — vom Nutzer bestaetigt.",
+      "variant": "S10_I",
+      "idx": 37,
+      "tracks": ["8"]
+    },
+    {
+      "variant": "RE40_S",
+      "tracks": ["8"]
+    },
+    {
+      "note": "Andere S10-Kreuzung (Bermuda3eck/Dortmund-Seite), beide Richtungen zusammen auf dem regulaeren Durchgangsgleis 2.",
+      "variant": "S10_A",
+      "idx": 32,
+      "tracks": ["2"]
+    },
+    {
+      "variant": "S10_I",
+      "idx": 13,
+      "tracks": ["2"]
     }
   ]
 }

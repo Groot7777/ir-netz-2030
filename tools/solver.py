@@ -27,6 +27,7 @@ import json
 import math
 import pathlib
 import random
+import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -287,14 +288,34 @@ def objective(phases, derived, base_phase, corridors, knot_terms, ref_groups_res
 
 
 def resolve_reference_groups(data):
+    """Fuer jede REFERENCE_GROUPS-Zeile ALLE Richtungsvarianten von Linie A
+    mit der passenden Richtungsvariante von Linie B paaren (per
+    Schluessel-Suffix, z.B. S3_N<->S30_N, S3_S<->S30_S) — ein einzelnes
+    next() ueber alle Varianten einer Linie wuerde nur die ERSTE (in
+    Dict-Reihenfolge) erwischen und die andere Richtung ganz ohne
+    Versatz-Vorgabe lassen (genau das ist S3_S/S30_S laenger passiert:
+    beide auf Phase 0 statt 15 Min versetzt)."""
+    suffix_re = re.compile(r"_[A-Za-z0-9]+$")
     out = []
     for name_a, name_b, station, want in REFERENCE_GROUPS:
-        ka = next(k for k, v in data.items() if v["name"] == name_a and station in {s["name"] for s in v["stops"]})
-        kb = next(k for k, v in data.items() if v["name"] == name_b and station in {s["name"] for s in v["stops"]})
-        off_a = next(s["dep"] if s.get("dep") is not None else s["off"] for s in data[ka]["stops"] if s["name"] == station)
-        off_b = next(s["dep"] if s.get("dep") is not None else s["off"] for s in data[kb]["stops"] if s["name"] == station)
-        T = data[ka]["takt"]["interval"]
-        out.append({"a": ka, "b": kb, "off_a": off_a, "off_b": off_b, "T": T, "want": want})
+        by_suffix_a = {}
+        for k, v in data.items():
+            if v["name"] == name_a and station in {s["name"] for s in v["stops"]}:
+                m = suffix_re.search(k)
+                by_suffix_a[m.group(0) if m else k] = k
+        by_suffix_b = {}
+        for k, v in data.items():
+            if v["name"] == name_b and station in {s["name"] for s in v["stops"]}:
+                m = suffix_re.search(k)
+                by_suffix_b[m.group(0) if m else k] = k
+        for suffix, ka in by_suffix_a.items():
+            kb = by_suffix_b.get(suffix)
+            if kb is None:
+                continue
+            off_a = next(s["dep"] if s.get("dep") is not None else s["off"] for s in data[ka]["stops"] if s["name"] == station)
+            off_b = next(s["dep"] if s.get("dep") is not None else s["off"] for s in data[kb]["stops"] if s["name"] == station)
+            T = data[ka]["takt"]["interval"]
+            out.append({"a": ka, "b": kb, "off_a": off_a, "off_b": off_b, "T": T, "want": want})
     return out
 
 

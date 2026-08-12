@@ -20,13 +20,13 @@
       "tracks": ["5"]
     },
     {
-      "note": "RE9 (einzige weitere Dortmund-Richtung-Linie) auf dem freien Gleis der Gruppe 5/6.",
+      "note": "RE9 faehrt ueber die Glueckaufbahn Richtung Recklinghausen — dieselbe Strecke wie Gleis 2 (Glueckaufbahn/Bermuda3eck-Seite), fuer beide Richtungen nur Gleis 2 moeglich. Vom Nutzer bestaetigt.",
       "variant": "RE9_A",
-      "tracks": ["6"]
+      "tracks": ["2"]
     },
     {
       "variant": "RE9_B",
-      "tracks": ["6"]
+      "tracks": ["2"]
     },
     {
       "note": "S10-Kreuzung Langendreer->Hoentrop + RE40 Richtung Essen — vom Nutzer bestaetigt (vorher faelschlich auf Gleis 8).",

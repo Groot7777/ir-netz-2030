@@ -1058,21 +1058,21 @@
       {
         "idx": 14,
         "line": "RE45",
-        "overhang_m": -40.0,
-        "required_length_m": 156,
-        "severity": "ok",
-        "shared": false,
-        "track": "4",
-        "variant": "RE45_N"
-      },
-      {
-        "idx": 3,
-        "line": "RE45",
         "overhang_m": -85.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
         "track": "3",
+        "variant": "RE45_N"
+      },
+      {
+        "idx": 3,
+        "line": "RE45",
+        "overhang_m": -40.0,
+        "required_length_m": 156,
+        "severity": "ok",
+        "shared": false,
+        "track": "4",
         "variant": "RE45_S"
       }
     ],
@@ -1140,41 +1140,41 @@
       {
         "idx": 2,
         "line": "RE28",
-        "overhang_m": -170.0,
+        "overhang_m": -165.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "8",
         "variant": "RE28_N"
       },
       {
         "idx": 4,
         "line": "RE28",
-        "overhang_m": -170.0,
+        "overhang_m": -165.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "8",
         "variant": "RE28_S"
       },
       {
         "idx": 10,
         "line": "RE39",
-        "overhang_m": -165.0,
+        "overhang_m": -170.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "8",
+        "track": "2",
         "variant": "RE39_N"
       },
       {
         "idx": 1,
         "line": "RE39",
-        "overhang_m": -165.0,
+        "overhang_m": -170.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "8",
+        "track": "2",
         "variant": "RE39_S"
       }
     ],
@@ -1745,7 +1745,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "4",
+        "track": "3",
         "variant": "RE45_N"
       },
       {
@@ -1755,7 +1755,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "3",
+        "track": "4",
         "variant": "RE45_S"
       }
     ],
@@ -2030,21 +2030,21 @@
       {
         "idx": 4,
         "line": "RE45",
-        "overhang_m": -27.0,
-        "required_length_m": 156,
-        "severity": "ok",
-        "shared": false,
-        "track": "11",
-        "variant": "RE45_N"
-      },
-      {
-        "idx": 12,
-        "line": "RE45",
         "overhang_m": -4.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
         "track": "2",
+        "variant": "RE45_N"
+      },
+      {
+        "idx": 12,
+        "line": "RE45",
+        "overhang_m": -27.0,
+        "required_length_m": 156,
+        "severity": "ok",
+        "shared": false,
+        "track": "11",
         "variant": "RE45_S"
       },
       {
@@ -2911,21 +2911,21 @@
       {
         "idx": 5,
         "line": "RE9",
-        "overhang_m": -220.0,
+        "overhang_m": -17.0,
         "required_length_m": 210,
         "severity": "ok",
-        "shared": false,
-        "track": "6",
+        "shared": true,
+        "track": "2",
         "variant": "RE9_A"
       },
       {
         "idx": 1,
         "line": "RE9",
-        "overhang_m": -220.0,
+        "overhang_m": -17.0,
         "required_length_m": 210,
         "severity": "ok",
-        "shared": false,
-        "track": "6",
+        "shared": true,
+        "track": "2",
         "variant": "RE9_B"
       },
       {
@@ -2944,7 +2944,7 @@
         "overhang_m": -71.0,
         "required_length_m": 156,
         "severity": "ok",
-        "shared": false,
+        "shared": true,
         "track": "2",
         "variant": "S10_A"
       },
@@ -2954,7 +2954,7 @@
         "overhang_m": -71.0,
         "required_length_m": 156,
         "severity": "ok",
-        "shared": false,
+        "shared": true,
         "track": "2",
         "variant": "S10_I"
       },
@@ -3076,7 +3076,7 @@
         "required_length_m": 156,
         "severity": "gering",
         "shared": false,
-        "track": "1",
+        "track": "3",
         "variant": "S30_N"
       },
       {
@@ -3106,7 +3106,7 @@
         "required_length_m": 156,
         "severity": "gering",
         "shared": false,
-        "track": "1",
+        "track": "3",
         "variant": "S3_S"
       }
     ],
@@ -3264,7 +3264,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": true,
-        "track": "2",
+        "track": "1",
         "variant": "S10_A"
       },
       {
@@ -3274,7 +3274,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": true,
-        "track": "1",
+        "track": "2",
         "variant": "S10_A"
       },
       {
@@ -3284,7 +3284,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": true,
-        "track": "1",
+        "track": "2",
         "variant": "S10_I"
       },
       {
@@ -3294,7 +3294,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": true,
-        "track": "2",
+        "track": "1",
         "variant": "S10_I"
       }
     ],
@@ -3842,21 +3842,21 @@
       {
         "idx": 14,
         "line": "RE7",
-        "overhang_m": -166.0,
-        "required_length_m": 210,
-        "severity": "ok",
-        "shared": false,
-        "track": "2",
-        "variant": "RE7_A"
-      },
-      {
-        "idx": 0,
-        "line": "RE7",
         "overhang_m": -108.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
         "track": "1",
+        "variant": "RE7_A"
+      },
+      {
+        "idx": 0,
+        "line": "RE7",
+        "overhang_m": -166.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "shared": false,
+        "track": "2",
         "variant": "RE7_B"
       },
       {
@@ -4539,7 +4539,7 @@
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE24_N"
       },
       {
@@ -4549,7 +4549,7 @@
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE24_S"
       }
     ],
@@ -5844,7 +5844,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "S10_A"
       },
       {
@@ -5854,7 +5854,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "S10_I"
       }
     ],
@@ -6491,7 +6491,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "11",
+        "track": "12",
         "variant": "RE90_A"
       },
       {
@@ -6501,7 +6501,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "11",
         "variant": "RE90_B"
       }
     ],
@@ -6625,7 +6625,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "4",
+        "track": "3",
         "variant": "RB37_A"
       },
       {
@@ -6635,7 +6635,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "3",
+        "track": "4",
         "variant": "RB37_B"
       },
       {
@@ -6651,11 +6651,11 @@
       {
         "idx": 16,
         "line": "RE32",
-        "overhang_m": 50.0,
+        "overhang_m": -29.0,
         "required_length_m": 210,
-        "severity": "kritisch",
+        "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "3",
         "variant": "RE32_S"
       },
       {
@@ -6665,7 +6665,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "3",
+        "track": "4",
         "variant": "RE90_A"
       },
       {
@@ -6675,7 +6675,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "4",
+        "track": "3",
         "variant": "RE90_B"
       }
     ],
@@ -7568,7 +7568,7 @@
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "11",
+        "track": "12",
         "variant": "RE40_N"
       },
       {
@@ -7578,27 +7578,27 @@
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "11",
         "variant": "RE40_S"
       },
       {
         "idx": 15,
         "line": "S10 Außenring",
-        "overhang_m": -124.0,
+        "overhang_m": -74.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "21",
+        "track": "22",
         "variant": "S10_A"
       },
       {
         "idx": 30,
         "line": "S10 Innenring",
-        "overhang_m": -124.0,
+        "overhang_m": -74.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "21",
+        "track": "22",
         "variant": "S10_I"
       },
       {
@@ -7608,7 +7608,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "11",
+        "track": "12",
         "variant": "S30_N"
       },
       {
@@ -7638,7 +7638,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "11",
         "variant": "S3_S"
       }
     ],
@@ -7785,7 +7785,7 @@
         "required_length_m": 156,
         "severity": "gering",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_A"
       },
       {
@@ -7795,7 +7795,7 @@
         "required_length_m": 156,
         "severity": "gering",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_I"
       }
     ],
@@ -7847,21 +7847,21 @@
       {
         "idx": 12,
         "line": "S10 Außenring",
-        "overhang_m": -15.0,
+        "overhang_m": -14.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_A"
       },
       {
         "idx": 33,
         "line": "S10 Innenring",
-        "overhang_m": -15.0,
+        "overhang_m": -14.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_I"
       }
     ],
@@ -7882,21 +7882,21 @@
       {
         "idx": 17,
         "line": "S10 Außenring",
-        "overhang_m": -53.0,
+        "overhang_m": -59.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_A"
       },
       {
         "idx": 28,
         "line": "S10 Innenring",
-        "overhang_m": -53.0,
+        "overhang_m": -59.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_I"
       }
     ],
@@ -8027,7 +8027,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "101",
+        "track": "103",
         "variant": "S10_A"
       },
       {
@@ -8037,7 +8037,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "103",
+        "track": "101",
         "variant": "S10_I"
       },
       {
@@ -8063,11 +8063,11 @@
       {
         "idx": 5,
         "line": "S3",
-        "overhang_m": -56.0,
+        "overhang_m": -58.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "101",
+        "track": "102",
         "variant": "S3_N"
       },
       {
@@ -8077,7 +8077,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "101",
+        "track": "103",
         "variant": "S3_S"
       }
     ],
@@ -8130,7 +8130,7 @@
         "required_length_m": 156,
         "severity": "gering",
         "shared": false,
-        "track": "4",
+        "track": "2",
         "variant": "S30_N"
       },
       {
@@ -8150,7 +8150,7 @@
         "required_length_m": 156,
         "severity": "gering",
         "shared": false,
-        "track": "4",
+        "track": "2",
         "variant": "S3_N"
       },
       {
@@ -8662,7 +8662,7 @@
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "104",
+        "track": "103",
         "variant": "RE40_N"
       },
       {
@@ -8672,7 +8672,7 @@
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "103",
+        "track": "104",
         "variant": "RE40_S"
       },
       {
@@ -9053,21 +9053,21 @@
       {
         "idx": 20,
         "line": "RE35",
-        "overhang_m": -14.0,
-        "required_length_m": 156,
-        "severity": "ok",
-        "shared": false,
-        "track": "3",
-        "variant": "RE35_N"
-      },
-      {
-        "idx": 4,
-        "line": "RE35",
         "overhang_m": -57.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
         "track": "2",
+        "variant": "RE35_N"
+      },
+      {
+        "idx": 4,
+        "line": "RE35",
+        "overhang_m": -14.0,
+        "required_length_m": 156,
+        "severity": "ok",
+        "shared": false,
+        "track": "3",
         "variant": "RE35_S"
       }
     ],
@@ -9896,7 +9896,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "4",
         "variant": "S10_A"
       },
       {
@@ -9906,7 +9906,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "4",
         "variant": "S10_I"
       }
     ],
@@ -10470,21 +10470,21 @@
       {
         "idx": 1,
         "line": "RE24",
-        "overhang_m": -31.0,
-        "required_length_m": 130,
-        "severity": "ok",
-        "shared": false,
-        "track": "2b",
-        "variant": "RE24_N"
-      },
-      {
-        "idx": 13,
-        "line": "RE24",
         "overhang_m": -80.0,
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
         "track": "Gl 02",
+        "variant": "RE24_N"
+      },
+      {
+        "idx": 13,
+        "line": "RE24",
+        "overhang_m": -31.0,
+        "required_length_m": 130,
+        "severity": "ok",
+        "shared": false,
+        "track": "2b",
         "variant": "RE24_S"
       }
     ],
@@ -10675,7 +10675,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "14",
+        "track": "13",
         "variant": "S30_N"
       },
       {
@@ -10685,7 +10685,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "14",
+        "track": "13",
         "variant": "S30_S"
       }
     ],
@@ -11651,7 +11651,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE7_A"
       },
       {
@@ -11661,7 +11661,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE7_B"
       }
     ],
@@ -12542,7 +12542,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "4",
+        "track": "5",
         "variant": "S10_A"
       },
       {
@@ -12552,7 +12552,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "4",
+        "track": "5",
         "variant": "S10_I"
       }
     ],
@@ -13310,21 +13310,21 @@
       {
         "idx": 22,
         "line": "RE32",
-        "overhang_m": -199.0,
-        "required_length_m": 210,
-        "severity": "ok",
-        "shared": false,
-        "track": "8",
-        "variant": "RE32_N"
-      },
-      {
-        "idx": 0,
-        "line": "RE32",
         "overhang_m": -205.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
         "track": "2",
+        "variant": "RE32_N"
+      },
+      {
+        "idx": 0,
+        "line": "RE32",
+        "overhang_m": -199.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "shared": false,
+        "track": "8",
         "variant": "RE32_S"
       },
       {
@@ -14495,7 +14495,7 @@
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE90b_GS"
       },
       {
@@ -14505,7 +14505,7 @@
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE90b_KN"
       },
       {
@@ -14515,7 +14515,7 @@
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE90b_NK"
       },
       {
@@ -14525,7 +14525,7 @@
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE90b_SG"
       }
     ],
@@ -15637,7 +15637,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE17OR_N"
       },
       {
@@ -15647,7 +15647,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE17OR_S"
       },
       {
@@ -16643,21 +16643,21 @@
       {
         "idx": 18,
         "line": "RE32",
-        "overhang_m": -123.0,
+        "overhang_m": 0.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "5",
         "variant": "RE32_S"
       },
       {
         "idx": 16,
         "line": "RE90",
-        "overhang_m": -54.0,
+        "overhang_m": -177.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "1",
         "variant": "RE90_A"
       },
       {
@@ -16740,7 +16740,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "S10_A"
       },
       {
@@ -16750,7 +16750,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "S10_I"
       }
     ],
@@ -16822,21 +16822,21 @@
       {
         "idx": 20,
         "line": "S10 Außenring",
-        "overhang_m": -10.0,
+        "overhang_m": 1.0,
         "required_length_m": 156,
-        "severity": "ok",
+        "severity": "gering",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_A"
       },
       {
         "idx": 25,
         "line": "S10 Innenring",
-        "overhang_m": -10.0,
+        "overhang_m": 1.0,
         "required_length_m": 156,
-        "severity": "ok",
+        "severity": "gering",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_I"
       }
     ],
@@ -17505,21 +17505,21 @@
       {
         "idx": 11,
         "line": "RB37",
-        "overhang_m": -247.0,
+        "overhang_m": -245.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "8",
+        "track": "6",
         "variant": "RB37_B"
       },
       {
         "idx": 5,
         "line": "RE32",
-        "overhang_m": -142.0,
+        "overhang_m": -140.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "7",
+        "track": "5",
         "variant": "RE32_N"
       },
       {
@@ -17529,7 +17529,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "6",
+        "track": "5",
         "variant": "RE32_S"
       },
       {
@@ -17539,7 +17539,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "6",
         "variant": "RE90_A"
       },
       {
@@ -17549,7 +17549,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "6",
+        "track": "5",
         "variant": "RE90_B"
       }
     ],
@@ -18197,7 +18197,7 @@
         "required_length_m": 210,
         "severity": "gering",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE17OR_N"
       },
       {
@@ -18207,7 +18207,7 @@
         "required_length_m": 210,
         "severity": "gering",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE17OR_S"
       }
     ],
@@ -20321,7 +20321,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE17OR_N"
       },
       {
@@ -20331,7 +20331,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE17OR_S"
       },
       {
@@ -20341,7 +20341,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE35X_N"
       },
       {
@@ -20351,7 +20351,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE35X_S"
       },
       {
@@ -21468,7 +21468,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RB37_B"
       },
       {
@@ -21478,7 +21478,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE30_DL"
       },
       {
@@ -21620,21 +21620,21 @@
       {
         "idx": 2,
         "line": "S10 Außenring",
-        "overhang_m": -30.0,
+        "overhang_m": -31.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "S10_A"
       },
       {
         "idx": 43,
         "line": "S10 Innenring",
-        "overhang_m": -30.0,
+        "overhang_m": -31.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "S10_I"
       }
     ],
@@ -21858,21 +21858,21 @@
       {
         "idx": 9,
         "line": "RE57",
-        "overhang_m": -1.0,
-        "required_length_m": 156,
-        "severity": "ok",
-        "shared": false,
-        "track": "2",
-        "variant": "RE57_A"
-      },
-      {
-        "idx": 11,
-        "line": "RE57",
         "overhang_m": -46.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
         "track": "4",
+        "variant": "RE57_A"
+      },
+      {
+        "idx": 11,
+        "line": "RE57",
+        "overhang_m": -1.0,
+        "required_length_m": 156,
+        "severity": "ok",
+        "shared": false,
+        "track": "2",
         "variant": "RE57_B"
       }
     ],
@@ -23205,7 +23205,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "18",
+        "track": "4",
         "variant": "S10_A"
       },
       {
@@ -23215,7 +23215,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "18",
+        "track": "4",
         "variant": "S10_I"
       },
       {
@@ -23430,21 +23430,21 @@
       {
         "idx": 12,
         "line": "RB37",
-        "overhang_m": -106.3,
+        "overhang_m": -113.1,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "4a",
+        "track": "4b",
         "variant": "RB37_A"
       },
       {
         "idx": 18,
         "line": "RB37",
-        "overhang_m": -106.3,
+        "overhang_m": -113.1,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "4a",
+        "track": "4b",
         "variant": "RB37_B"
       },
       {
@@ -24337,11 +24337,11 @@
       {
         "idx": 27,
         "line": "RB37",
-        "overhang_m": -115.0,
+        "overhang_m": -116.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RB37_A"
       },
       {
@@ -24673,61 +24673,61 @@
       {
         "idx": 28,
         "line": "RB37",
-        "overhang_m": -114.0,
+        "overhang_m": -115.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": true,
-        "track": "2",
+        "track": "1",
         "variant": "RB37_A"
       },
       {
         "idx": 2,
         "line": "RB37",
-        "overhang_m": -114.0,
+        "overhang_m": -116.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": true,
-        "track": "2",
+        "track": "3",
         "variant": "RB37_B"
       },
       {
         "idx": 15,
-        "line": "RE40",
-        "overhang_m": -90.0,
-        "required_length_m": 130,
-        "severity": "ok",
-        "shared": true,
-        "track": "1",
-        "variant": "RE40_N"
-      },
-      {
-        "idx": 4,
         "line": "RE40",
         "overhang_m": -89.0,
         "required_length_m": 130,
         "severity": "ok",
         "shared": true,
         "track": "2",
+        "variant": "RE40_N"
+      },
+      {
+        "idx": 4,
+        "line": "RE40",
+        "overhang_m": -90.0,
+        "required_length_m": 130,
+        "severity": "ok",
+        "shared": true,
+        "track": "1",
         "variant": "RE40_S"
       },
       {
         "idx": 5,
         "line": "S10 Außenring",
-        "overhang_m": -63.0,
+        "overhang_m": -65.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": true,
-        "track": "2",
+        "track": "4",
         "variant": "S10_A"
       },
       {
         "idx": 40,
         "line": "S10 Innenring",
-        "overhang_m": -63.0,
+        "overhang_m": -65.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": true,
-        "track": "2",
+        "track": "3",
         "variant": "S10_I"
       }
     ],
@@ -24963,7 +24963,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "4",
         "variant": "RE30_LD"
       }
     ],
@@ -25002,7 +25002,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "6",
+        "track": "5",
         "variant": "RB37_B"
       },
       {
@@ -25022,7 +25022,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "6",
+        "track": "5",
         "variant": "RE30_LD"
       }
     ],
@@ -25063,7 +25063,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "11",
+        "track": "12",
         "variant": "RB37_A"
       },
       {
@@ -25073,7 +25073,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "11",
+        "track": "12",
         "variant": "RB37_B"
       },
       {
@@ -25083,7 +25083,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "11",
         "variant": "RE30_DL"
       },
       {

@@ -6,8 +6,8 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 
 - 474 Stationen, 1317 Zuweisungen (Variante×Halt)
 - Quellen: amtlich 341, amtlich-ausland 57, fiktiv 12, geschaetzt 11, osm 53
-- Konfliktstufen (Bahnsteiglänge): gering 73, kritisch 48, ok 1196 (ok = passt, gering = ≤25 m Überhang/SDO ausreichend, kritisch = >25 m)
-- 24 Zuweisungen auf einem Gleis, das sich zwei verschiedene Richtungen teilen (Gleiszahl der Station reicht nicht für volle Richtungstrennung) — überall sonst: eine Richtung = ein festes Gleis.
+- Konfliktstufen (Bahnsteiglänge): gering 75, kritisch 47, ok 1195 (ok = passt, gering = ≤25 m Überhang/SDO ausreichend, kritisch = >25 m)
+- 28 Zuweisungen auf einem Gleis, das sich zwei verschiedene Richtungen teilen (Gleiszahl der Station reicht nicht für volle Richtungstrennung) — überall sonst: eine Richtung = ein festes Gleis.
 
 ## Kritisch (>25 m Überhang)
 
@@ -50,7 +50,6 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Hagenow Land | RE91 | RE91_SB | 1b | 160 m | +55 m | amtlich |
 | Gdynia Wzgórze Św. Maksymiliana | RE71 | RE71_A | 101 | 210 m | +55 m | osm |
 | Gdynia Wzgórze Św. Maksymiliana | RE71 | RE71_B | 101 | 210 m | +55 m | osm |
-| Düsseldorf-Bilk | RE32 | RE32_S | 1 | 210 m | +50 m | amtlich |
 | Chojnice | RE71 | RE71_A | 12 | 210 m | +50 m | amtlich-ausland |
 | Chojnice | RE71 | RE71_B | 12 | 210 m | +50 m | amtlich-ausland |
 | Büchen | RE77 | RE77_A | 21 | 156 m | +44 m | amtlich |
@@ -104,14 +103,14 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Bochum-Hamme | S10 Innenring | S10_I | 1 | 156 m | +16 m | amtlich |
 | Allersberg (Rothsee) | RE94 | RE94_A | 1 | 184 m | +14 m | amtlich |
 | Allersberg (Rothsee) | RE94 | RE94_B | 1 | 184 m | +14 m | amtlich |
-| Essen-Borbeck | S10 Außenring | S10_A | 1 | 156 m | +14 m | amtlich |
-| Essen-Borbeck | S10 Innenring | S10_I | 1 | 156 m | +14 m | amtlich |
+| Essen-Borbeck | S10 Außenring | S10_A | 2 | 156 m | +14 m | amtlich |
+| Essen-Borbeck | S10 Innenring | S10_I | 2 | 156 m | +14 m | amtlich |
 | Bochum West | S10 Außenring | S10_A | 1 | 156 m | +12 m | amtlich |
 | Bochum West | S10 Innenring | S10_I | 1 | 156 m | +12 m | amtlich |
 | Hagenow Land | RE46 | RE46_A | 3 | 210 m | +10 m | amtlich |
 | Hagenow Land | RE46 | RE46_B | 2 | 210 m | +10 m | amtlich |
-| Nørreport | RE17 | RE17OR_N | 2 | 210 m | +7 m | amtlich-ausland |
-| Nørreport | RE17 | RE17OR_S | 1 | 210 m | +7 m | amtlich-ausland |
+| Nørreport | RE17 | RE17OR_N | 1 | 210 m | +7 m | amtlich-ausland |
+| Nørreport | RE17 | RE17OR_S | 2 | 210 m | +7 m | amtlich-ausland |
 | Essen-Steele Ost | S10 Außenring | S10_A | 1 | 156 m | +7 m | amtlich |
 | Essen-Steele Ost | S10 Innenring | S10_I | 1 | 156 m | +7 m | amtlich |
 | Zeche Nachtigall | S30 | S30_N | 1 | 156 m | +6 m | osm |
@@ -120,9 +119,9 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Haus Kemnade | S30 | S30_S | 1 | 156 m | +6 m | osm |
 | Hattingen Mitte | S3 | S3_N | 1 | 156 m | +6 m | amtlich |
 | Hattingen Mitte | S3 | S3_S | 1 | 156 m | +6 m | amtlich |
-| Essen-Steele Ost | S30 | S30_N | 4 | 156 m | +5 m | amtlich |
+| Essen-Steele Ost | S30 | S30_N | 2 | 156 m | +5 m | amtlich |
 | Essen-Steele Ost | S30 | S30_S | 2 | 156 m | +5 m | amtlich |
-| Essen-Steele Ost | S3 | S3_N | 4 | 156 m | +5 m | amtlich |
+| Essen-Steele Ost | S3 | S3_N | 2 | 156 m | +5 m | amtlich |
 | Essen-Steele Ost | S3 | S3_S | 2 | 156 m | +5 m | amtlich |
 | Heinrichshütte | S30 | S30_N | 1 | 156 m | +4 m | osm |
 | Heinrichshütte | S30 | S30_S | 1 | 156 m | +4 m | osm |
@@ -135,18 +134,20 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Tønder | RE46 | RE46_B | 2 | 105 m | +2 m | amtlich-ausland |
 | Dortmund-Brackel | S10 Außenring | S10_A | 1 | 156 m | +2 m | amtlich |
 | Dortmund-Brackel | S10 Innenring | S10_I | 1 | 156 m | +2 m | amtlich |
-| Bochum-Dahlhausen | S30 | S30_N | 1 | 156 m | +2 m | amtlich |
+| Bochum-Dahlhausen | S30 | S30_N | 3 | 156 m | +2 m | amtlich |
 | Bochum-Dahlhausen | S30 | S30_S | 1 | 156 m | +2 m | amtlich |
 | Bochum-Dahlhausen | S3 | S3_N | 1 | 156 m | +2 m | amtlich |
-| Bochum-Dahlhausen | S3 | S3_S | 1 | 156 m | +2 m | amtlich |
+| Bochum-Dahlhausen | S3 | S3_S | 3 | 156 m | +2 m | amtlich |
+| Mülheim-Styrum | S10 Außenring | S10_A | 2 | 156 m | +1 m | amtlich |
+| Mülheim-Styrum | S10 Innenring | S10_I | 2 | 156 m | +1 m | amtlich |
 
 ## Stationen mit geteilten Gleisen (Richtungstrennung nicht möglich)
 
 | Station | Betroffene Zuweisungen |
 |---|---|
+| Bochum Hbf | 8 |
 | Witten Hbf | 6 |
 | Bochum-Langendreer | 6 |
-| Bochum Hbf | 4 |
 | Hagen-Vorhalle | 4 |
 | Hattingen (Ruhr) | 4 |
 

@@ -220,8 +220,14 @@ def main():
                 if not name_match(name, osm_name):
                     continue
                 d = haversine_m(lat, lon, el["lat"], el["lon"])
-                candidates.append((d, el["lat"], el["lon"], osm_name, el["type"], el["id"]))
-            candidates.sort(key=lambda c: c[0])
+                is_exact = norm(name) == norm(osm_name or "")
+                candidates.append((is_exact, d, el["lat"], el["lon"], osm_name, el["type"], el["id"]))
+            # Exakte Namensuebereinstimmung IMMER vor ungenauer, unabhaengig
+            # von der Distanz (Koblenz-Fall: ein naeherer, andersnamiger
+            # Nachbarbahnhof darf den weiter entfernten, aber tatsaechlich
+            # richtigen exakten Treffer nicht schlagen).
+            candidates.sort(key=lambda c: (not c[0], c[1]))
+            candidates = [(d, lat_, lon_, nm, t, i) for _exact, d, lat_, lon_, nm, t, i in candidates]
             if candidates:
                 d, olat, olon, osm_name, etype, eid = candidates[0]
                 results[name] = {

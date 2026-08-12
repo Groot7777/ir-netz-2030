@@ -17,7 +17,7 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from kml_station_check import haversine_m, name_match  # noqa: E402
+from kml_station_check import haversine_m, name_match, norm  # noqa: E402
 
 KML_PLACEMARK_PATTERN = re.compile(
     r"<Placemark>\s*<name>(.*?)</name>.*?<Point><coordinates>([\d.\-]+),([\d.\-]+),\d+</coordinates></Point>\s*</Placemark>",
@@ -56,8 +56,15 @@ def main():
             d = haversine_m(lat, lon, el["lat"], el["lon"])
             if d > args.radius_m:
                 continue
-            candidates.append((d, el["lat"], el["lon"], osm_name, el["type"], el["id"]))
-        candidates.sort(key=lambda c: c[0])
+            is_exact = norm(name) == norm(osm_name or "")
+            candidates.append((is_exact, d, el["lat"], el["lon"], osm_name, el["type"], el["id"]))
+        # Exakte Namensuebereinstimmung IMMER vor ungenauer, unabhaengig von
+        # der Distanz — sonst gewinnt bei einer falsch platzierten KML-
+        # Station ein naeherer, aber andersnamiger Nachbarbahnhof gegen den
+        # weiter entfernten, aber tatsaechlich richtigen (Koblenz-Fall:
+        # 'Koblenz Stadtmitte' bei 291m schlug 'Koblenz Hbf' bei 1300m).
+        candidates.sort(key=lambda c: (not c[0], c[1]))
+        candidates = [(d, lat_, lon_, nm, t, i) for _exact, d, lat_, lon_, nm, t, i in candidates]
         if candidates:
             d, olat, olon, osm_name, etype, eid = candidates[0]
             results[name] = {

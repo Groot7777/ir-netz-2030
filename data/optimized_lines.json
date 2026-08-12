@@ -2529,27 +2529,27 @@
     "dest": "Zwickau Hbf",
     "extraTrips": [
       {
-        "dep": "04:23",
+        "dep": "03:55",
         "from": "Berlin Hbf (tief)"
       },
       {
-        "dep": "04:06",
+        "dep": "03:38",
         "from": "Stralsund Hbf"
       },
       {
-        "dep": "21:02",
+        "dep": "20:34",
         "to": "Chemnitz Hbf"
       },
       {
-        "dep": "22:02",
+        "dep": "21:34",
         "to": "Dresden Hbf"
       },
       {
-        "dep": "23:02",
+        "dep": "22:34",
         "to": "Berlin Hbf (tief)"
       },
       {
-        "dep": "01:02",
+        "dep": "00:34",
         "to": "Stralsund Hbf"
       }
     ],
@@ -2626,9 +2626,9 @@
       }
     ],
     "takt": {
-      "end": "20:02",
+      "end": "19:34",
       "interval": 60,
-      "start": "04:02"
+      "start": "03:34"
     }
   },
   "RE35X_S": {
@@ -2637,35 +2637,35 @@
     "dest": "Warnemünde",
     "extraTrips": [
       {
-        "dep": "02:40",
+        "dep": "03:11",
         "from": "Berlin Hbf (tief)"
       },
       {
-        "dep": "03:16",
+        "dep": "03:47",
         "from": "Dresden Hbf"
       },
       {
-        "dep": "03:40",
+        "dep": "04:11",
         "from": "Berlin Hbf (tief)"
       },
       {
-        "dep": "19:58",
+        "dep": "20:29",
         "to": "Stralsund Hbf"
       },
       {
-        "dep": "20:58",
+        "dep": "21:29",
         "to": "Pasewalk"
       },
       {
-        "dep": "21:58",
+        "dep": "22:29",
         "to": "Eberswalde Hbf"
       },
       {
-        "dep": "22:58",
+        "dep": "23:29",
         "to": "Berlin Hbf (tief)"
       },
       {
-        "dep": "23:58",
+        "dep": "00:29",
         "to": "Dresden Hbf"
       }
     ],
@@ -2742,9 +2742,9 @@
       }
     ],
     "takt": {
-      "end": "18:58",
+      "end": "19:29",
       "interval": 60,
-      "start": "02:58"
+      "start": "03:29"
     }
   },
   "RE35_N": {
@@ -2753,15 +2753,15 @@
     "dest": "Zwickau Hbf",
     "extraTrips": [
       {
-        "dep": "03:46",
+        "dep": "04:01",
         "from": "Bernau (b Berlin)"
       },
       {
-        "dep": "04:09",
+        "dep": "04:24",
         "from": "Berlin Hbf (tief)"
       },
       {
-        "dep": "00:18",
+        "dep": "00:33",
         "to": "Stralsund Hbf"
       }
     ],
@@ -2893,9 +2893,9 @@
       }
     ],
     "takt": {
-      "end": "16:18",
+      "end": "16:33",
       "interval": 60,
-      "start": "03:18"
+      "start": "03:33"
     }
   },
   "RE35_S": {
@@ -8159,10 +8159,10 @@
       }
     ],
     "takt": {
-      "end": "06:53",
+      "end": "07:00",
       "interval": 30,
       "note": "Halbstundentakt Essen–Hagen (überlagert mit S3), Einzeltakt Hagen–Lüdenscheid",
-      "start": "06:53"
+      "start": "07:00"
     }
   },
   "S30_S": {
@@ -8311,10 +8311,10 @@
       }
     ],
     "takt": {
-      "end": "07:38",
+      "end": "07:23",
       "interval": 30,
       "note": "Halbstundentakt, 15 Min versetzt zu S30 → effektiv 15-Min-Trunk Essen–Hattingen",
-      "start": "07:38"
+      "start": "07:23"
     }
   },
   "S3_S": {
@@ -8357,10 +8357,10 @@
       }
     ],
     "takt": {
-      "end": "07:30",
+      "end": "07:45",
       "interval": 30,
       "note": "Halbstundentakt, 15 Min versetzt zu S30 → effektiv 15-Min-Trunk Essen–Hattingen",
-      "start": "07:30"
+      "start": "07:45"
     }
   }
 }

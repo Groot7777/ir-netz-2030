@@ -6,7 +6,7 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 
 - 474 Stationen, 1317 Zuweisungen (Variante×Halt)
 - Quellen: amtlich 341, amtlich-ausland 57, fiktiv 12, geschaetzt 11, osm 53
-- Konfliktstufen (Bahnsteiglänge): gering 75, kritisch 47, ok 1195 (ok = passt, gering = ≤25 m Überhang/SDO ausreichend, kritisch = >25 m)
+- Konfliktstufen (Bahnsteiglänge): gering 77, kritisch 45, ok 1195 (ok = passt, gering = ≤25 m Überhang/SDO ausreichend, kritisch = >25 m)
 - 28 Zuweisungen auf einem Gleis, das sich zwei verschiedene Richtungen teilen (Gleiszahl der Station reicht nicht für volle Richtungstrennung) — überall sonst: eine Richtung = ein festes Gleis.
 
 ## Kritisch (>25 m Überhang)
@@ -16,8 +16,8 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Roermond (NL) | RE32 | RE32_N | 1 | 210 m | +188 m | osm |
 | Roermond (NL) | RE32 | RE32_S | 1 | 210 m | +188 m | osm |
 | Gdańsk Zaspa | RE71 | RE71_A | 1 | 210 m | +160 m | osm |
-| Bochum-Kohlenstraße | S11 Außenring | S10_A | 2 | 156 m | +123 m | osm |
-| Bochum-Kohlenstraße | S10 Innenring | S10_I | 2 | 156 m | +123 m | osm |
+| Bochum-Kohlenstraße | S11 Außenring | S10_A | 1 | 156 m | +122 m | osm |
+| Bochum-Kohlenstraße | S10 Innenring | S10_I | 1 | 156 m | +122 m | osm |
 | Wengern | S11 Außenring | S10_A | 1 | 156 m | +112 m | osm |
 | Wengern | S10 Innenring | S10_I | 1 | 156 m | +112 m | osm |
 | Luxembourg | RE90 | RE90_A | 1 | 156 m | +102 m | osm |
@@ -42,8 +42,6 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Ruine Hardenstein | S30 | S30_S | 1 | 156 m | +74 m | osm |
 | Neustadt (Dosse) | RE46 | RE46_A | 1 | 210 m | +70 m | amtlich |
 | Neustadt (Dosse) | RE46 | RE46_B | 1 | 210 m | +70 m | amtlich |
-| Greifswald | RE35X | RE35X_N | 3 | 210 m | +68 m | amtlich |
-| Greifswald | RE35X | RE35X_S | 3 | 210 m | +68 m | amtlich |
 | Hagenow Land | RE91 | RE91_BO | 1b | 160 m | +55 m | amtlich |
 | Hagenow Land | RE91 | RE91_BS | 1b | 160 m | +55 m | amtlich |
 | Hagenow Land | RE91 | RE91_OB | 1b | 160 m | +55 m | amtlich |
@@ -95,12 +93,14 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Rotenburg (Wümme) | RE90b | RE90b_KN | 4 | 236 m | +16 m | amtlich |
 | Rotenburg (Wümme) | RE90b | RE90b_NK | 4 | 236 m | +16 m | amtlich |
 | Rotenburg (Wümme) | RE90b | RE90b_SG | 4 | 236 m | +16 m | amtlich |
-| Hagen-Vorhalle | S11 Außenring | S10_A | 2 | 156 m | +16 m | amtlich |
-| Hagen-Vorhalle | S10 Innenring | S10_I | 2 | 156 m | +16 m | amtlich |
+| Hagen-Vorhalle | S11 Außenring | S10_A | 1 | 156 m | +16 m | amtlich |
+| Hagen-Vorhalle | S10 Innenring | S10_I | 1 | 156 m | +16 m | amtlich |
 | Hagen-Vorhalle | S30 | S30_N | 2 | 156 m | +16 m | amtlich |
 | Hagen-Vorhalle | S30 | S30_S | 2 | 156 m | +16 m | amtlich |
 | Bochum-Hamme | S11 Außenring | S10_A | 1 | 156 m | +16 m | amtlich |
 | Bochum-Hamme | S10 Innenring | S10_I | 1 | 156 m | +16 m | amtlich |
+| Greifswald | RE35 | RE35_N | 3 | 156 m | +14 m | amtlich |
+| Greifswald | RE35 | RE35_S | 3 | 156 m | +14 m | amtlich |
 | Allersberg (Rothsee) | RE94 | RE94_A | 1 | 184 m | +14 m | amtlich |
 | Allersberg (Rothsee) | RE94 | RE94_B | 1 | 184 m | +14 m | amtlich |
 | Essen-Borbeck | S11 Außenring | S10_A | 2 | 156 m | +14 m | amtlich |
@@ -120,8 +120,8 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Hattingen Mitte | S3 | S3_N | 1 | 156 m | +6 m | amtlich |
 | Hattingen Mitte | S3 | S3_S | 1 | 156 m | +6 m | amtlich |
 | Essen-Steele Ost | S30 | S30_N | 2 | 156 m | +5 m | amtlich |
-| Essen-Steele Ost | S30 | S30_S | 2 | 156 m | +5 m | amtlich |
-| Essen-Steele Ost | S3 | S3_N | 2 | 156 m | +5 m | amtlich |
+| Essen-Steele Ost | S30 | S30_S | 4 | 156 m | +5 m | amtlich |
+| Essen-Steele Ost | S3 | S3_N | 4 | 156 m | +5 m | amtlich |
 | Essen-Steele Ost | S3 | S3_S | 2 | 156 m | +5 m | amtlich |
 | Heinrichshütte | S30 | S30_N | 1 | 156 m | +4 m | osm |
 | Heinrichshütte | S30 | S30_S | 1 | 156 m | +4 m | osm |
@@ -134,8 +134,8 @@ Jede Richtungsvariante bekommt an jedem Halt ein festes, längenpassendes Gleis 
 | Tønder | RE46 | RE46_B | 2 | 105 m | +2 m | amtlich-ausland |
 | Dortmund-Brackel | S11 Außenring | S10_A | 1 | 156 m | +2 m | amtlich |
 | Dortmund-Brackel | S10 Innenring | S10_I | 1 | 156 m | +2 m | amtlich |
-| Bochum-Dahlhausen | S30 | S30_N | 1 | 156 m | +2 m | amtlich |
-| Bochum-Dahlhausen | S30 | S30_S | 1 | 156 m | +2 m | amtlich |
+| Bochum-Dahlhausen | S30 | S30_N | 2 | 156 m | +2 m | amtlich |
+| Bochum-Dahlhausen | S30 | S30_S | 2 | 156 m | +2 m | amtlich |
 | Bochum-Dahlhausen | S3 | S3_N | 1 | 156 m | +2 m | amtlich |
 | Bochum-Dahlhausen | S3 | S3_S | 1 | 156 m | +2 m | amtlich |
 | Mülheim-Styrum | S11 Außenring | S10_A | 2 | 156 m | +1 m | amtlich |

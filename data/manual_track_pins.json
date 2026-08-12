@@ -1,0 +1,15 @@
+{
+  "Bochum Hbf": [
+    {
+      "note": "RE32 (durchgehend Wattenscheid <-> Dortmund) — vom Nutzer bestaetigt: faehrt ueber Wattenscheid Richtung Essen, feste Gleise 3/4.",
+      "neighbors": ["Wattenscheid Bf", "Dortmund Hbf"],
+      "tracks": ["3", "4"]
+    },
+    {
+      "note": "RE40 (durchgehend Witten <-> Bochum-Hoentrop/Essen) faehrt laut Nutzer planmaessig ueber die S-Bahn-Gleise — zusammengelegt mit der S10-Richtungsgruppe, die ohnehin schon auf Gleis 7 liegt (Bochum-Langendreer West/Bochum-Stahlhausen).",
+      "neighbors": ["Bochum-Höntrop", "Witten Hbf"],
+      "merge_with": [["Bochum-Langendreer West", "Bochum-Stahlhausen"]],
+      "tracks": ["7", "8"]
+    }
+  ]
+}

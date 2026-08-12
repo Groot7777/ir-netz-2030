@@ -2871,11 +2871,11 @@
       {
         "idx": 13,
         "line": "RE32",
-        "overhang_m": -17.0,
+        "overhang_m": -141.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "3",
         "variant": "RE32_N"
       },
       {
@@ -2891,21 +2891,21 @@
       {
         "idx": 16,
         "line": "RE40",
-        "overhang_m": -300.0,
+        "overhang_m": -50.0,
         "required_length_m": 130,
         "severity": "ok",
         "shared": true,
-        "track": "6",
+        "track": "8",
         "variant": "RE40_N"
       },
       {
         "idx": 3,
         "line": "RE40",
-        "overhang_m": -300.0,
+        "overhang_m": -50.0,
         "required_length_m": 130,
         "severity": "ok",
         "shared": true,
-        "track": "6",
+        "track": "8",
         "variant": "RE40_S"
       },
       {
@@ -2914,7 +2914,7 @@
         "overhang_m": -220.0,
         "required_length_m": 210,
         "severity": "ok",
-        "shared": true,
+        "shared": false,
         "track": "6",
         "variant": "RE9_A"
       },
@@ -2924,7 +2924,7 @@
         "overhang_m": -220.0,
         "required_length_m": 210,
         "severity": "ok",
-        "shared": true,
+        "shared": false,
         "track": "6",
         "variant": "RE9_B"
       },
@@ -2934,28 +2934,28 @@
         "overhang_m": -24.0,
         "required_length_m": 156,
         "severity": "ok",
-        "shared": false,
+        "shared": true,
         "track": "7",
         "variant": "S10_A"
       },
       {
         "idx": 32,
         "line": "S10 Außenring",
-        "overhang_m": -195.0,
+        "overhang_m": -71.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "3",
+        "track": "2",
         "variant": "S10_A"
       },
       {
         "idx": 13,
         "line": "S10 Innenring",
-        "overhang_m": -195.0,
+        "overhang_m": -71.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "3",
+        "track": "2",
         "variant": "S10_I"
       },
       {
@@ -2964,7 +2964,7 @@
         "overhang_m": -24.0,
         "required_length_m": 156,
         "severity": "ok",
-        "shared": false,
+        "shared": true,
         "track": "7",
         "variant": "S10_I"
       }

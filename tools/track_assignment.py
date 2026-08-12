@@ -235,13 +235,17 @@ def best_merge(groups):
     return best[1], best[2], best[3]
 
 
-def assign_station_directional(station_groups, tracks, source, sdo_tolerance_m=25):
+def assign_station_directional(station_groups, tracks, source, sdo_tolerance_m=25, pinned_groups=None):
     """station_groups: [{'direction_keys' (frozenset), 'members' (list of
     dict mit key, required_length), 'occurrences', 'lanes'}]. tracks:
-    [(label, length)]. Reduziert Gruppen per Verschmelzung, bis die
-    Lane-Summe in die vorhandene Gleiszahl passt (oder — falls selbst EINE
-    Gruppe nicht mehr passt — auf die Gleiszahl gedeckelt wird), verteilt
-    dann echte Gleis-Label pro Gruppe/Lane und je Besuch dessen Lane-Gleis.
+    [(label, length)]. pinned_groups: optionale Liste vom selben Aufbau
+    PLUS 'pin_tracks': [label,...] — vom Nutzer bestaetigte, feste
+    Gleis-Label fuer diese Richtungsgruppe (z.B. aus data/manual_track_
+    pins.json), die VOR allem anderen exklusiv reserviert werden. Reduziert
+    die restlichen Gruppen per Verschmelzung, bis die Lane-Summe in die
+    verbleibende Gleiszahl passt (oder — falls selbst EINE Gruppe nicht
+    mehr passt — auf die Gleiszahl gedeckelt wird), verteilt dann echte
+    Gleis-Label pro Gruppe/Lane und je Besuch dessen Lane-Gleis.
     Gibt (assignment: {key: {track, severity, overhang_m, shared}},
     resolved_tracks, n_shared) zurück; n_shared zählt Besuche auf einem mit
     einer ANDEREN Richtungsgruppe geteilten Gleis (Kapazitätsengpass,
@@ -249,8 +253,32 @@ def assign_station_directional(station_groups, tracks, source, sdo_tolerance_m=2
     if source == "geschaetzt" and not tracks:
         est = max((m["required_length"] for g in station_groups for m in g["members"]), default=0)
         tracks = [("1 (geschätzt)", est)]
+    all_tracks = tracks
 
-    n_tracks = max(1, len(tracks))
+    assignment = {}
+    n_shared = 0
+    used_labels = set()
+    length_by_label = {label: length for label, length in tracks}
+    for pg in (pinned_groups or []):
+        pin_labels = [l for l in pg["pin_tracks"] if l in length_by_label]
+        _, assign = schedule_lanes(pg["occurrences"])
+        n_lanes = min(pg["lanes"], max(1, len(pin_labels)))
+        assign = [min(a, n_lanes - 1) for a in assign]
+        is_mixed = len(pg["direction_keys"]) > 1
+        for member, lane in zip(pg["members"], assign):
+            label = pin_labels[min(lane, len(pin_labels) - 1)] if pin_labels else tracks[0][0]
+            length = length_by_label.get(label, 0)
+            overhang = round(member["required_length"] - length, 1)
+            assignment[member["key"]] = {
+                "track": label, "severity": classify(overhang, sdo_tolerance_m),
+                "overhang_m": overhang, "shared": is_mixed,
+            }
+            if is_mixed:
+                n_shared += 1
+        used_labels |= set(pin_labels)
+
+    tracks = [t for t in tracks if t[0] not in used_labels]
+    n_tracks = max(1, len(tracks)) if tracks else 1
     groups = [dict(g) for g in station_groups]
 
     while len(groups) > 1 and sum(g["lanes"] for g in groups) > n_tracks:
@@ -279,7 +307,7 @@ def assign_station_directional(station_groups, tracks, source, sdo_tolerance_m=2
     # ausreichende Gleis waehlen (kein unnoetig langes Gleis fuer eine kurze
     # Richtung verschwenden).
     tracks_sorted = sorted(tracks, key=lambda t: -t[1])
-    used_labels = set()
+    used_labels = set()  # nur die vom UNGEPINNTEN Algorithmus vergebenen Label
     group_lane_track = {}  # (group_idx, lane) -> (label, length)
     groups_order = sorted(range(len(groups)),
                            key=lambda gi: (-groups[gi]["lanes"],
@@ -306,8 +334,6 @@ def assign_station_directional(station_groups, tracks, source, sdo_tolerance_m=2
             used_labels.add(chosen[0])
             group_lane_track[(gi, lane)] = chosen
 
-    n_shared = 0
-    assignment = {}
     for gi, g in enumerate(groups):
         is_mixed = len(g["direction_keys"]) > 1
         for member, lane in zip(g["members"], g["_lane_assign"]):
@@ -321,7 +347,7 @@ def assign_station_directional(station_groups, tracks, source, sdo_tolerance_m=2
             }
             if is_mixed:
                 n_shared += 1
-    return assignment, tracks, n_shared
+    return assignment, all_tracks, n_shared
 
 
 def render_markdown(result, n_by_source, n_by_severity, n_shared_total):
@@ -427,10 +453,13 @@ def main():
     ap.add_argument("--platform-lengths", default="data/platform_lengths.json")
     ap.add_argument("--out", default="data/track_assignment.json")
     ap.add_argument("--md-out", default="data/track_assignment.md")
+    ap.add_argument("--track-pins", default="data/manual_track_pins.json")
     args = ap.parse_args()
 
     data = json.loads(pathlib.Path(args.data).read_text(encoding="utf-8"))
     manual = json.loads(pathlib.Path(args.manual_overrides).read_text(encoding="utf-8"))
+    pins_path = pathlib.Path(args.track_pins)
+    track_pins = json.loads(pins_path.read_text(encoding="utf-8")) if pins_path.exists() else {}
     dbinfrago = json.loads(pathlib.Path(args.dbinfrago).read_text(encoding="utf-8"))
     foreign_path = pathlib.Path(args.foreign)
     foreign = json.loads(foreign_path.read_text(encoding="utf-8")) if foreign_path.exists() else {}
@@ -485,7 +514,7 @@ def main():
     n_shared_total = 0
     for st, dgroups in station_direction_groups.items():
         info = station_tracks[st]
-        groups_input = []
+        groups_by_key = {}
         for dkey, gks in dgroups.items():
             occurrences = []
             members = []
@@ -494,12 +523,38 @@ def main():
                 occurrences.extend(visit_occurrences(data[rep_k], rep_i))
                 members.append({"key": gk, "required_length": group_required_length[gk]})
             lanes, _ = schedule_lanes(occurrences)
-            groups_input.append({
+            groups_by_key[dkey] = {
                 "direction_keys": frozenset({dkey}), "members": members,
                 "occurrences": occurrences, "lanes": lanes,
-            })
+            }
+
+        # Vom Nutzer bestaetigte feste Gleis-Pins (data/manual_track_pins.json):
+        # die referenzierten Richtungsgruppen (+ optional weitere, damit
+        # zusammengelegte Gruppen) aus dem automatischen Pool herausnehmen.
+        pinned_groups = []
+        for pin in track_pins.get(st, []):
+            key = frozenset(pin["neighbors"])
+            if key not in groups_by_key:
+                continue
+            merged = groups_by_key.pop(key)
+            for extra_neighbors in pin.get("merge_with", []):
+                ek = frozenset(extra_neighbors)
+                if ek in groups_by_key:
+                    extra = groups_by_key.pop(ek)
+                    combined_occ = merged["occurrences"] + extra["occurrences"]
+                    combined_lanes, _ = schedule_lanes(combined_occ)
+                    merged = {
+                        "direction_keys": merged["direction_keys"] | extra["direction_keys"],
+                        "members": merged["members"] + extra["members"],
+                        "occurrences": combined_occ,
+                        "lanes": combined_lanes,
+                    }
+            merged["pin_tracks"] = pin["tracks"]
+            pinned_groups.append(merged)
+
+        groups_input = list(groups_by_key.values())
         assignment, resolved_tracks, n_shared = assign_station_directional(
-            groups_input, info["tracks"], info["source"],
+            groups_input, info["tracks"], info["source"], pinned_groups=pinned_groups,
         )
         n_shared_total += n_shared
 

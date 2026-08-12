@@ -182,11 +182,21 @@ def main():
     batch_size = args.batch_size
 
     kml_text = pathlib.Path(args.kml).read_text(encoding="utf-8")
-    pattern = re.compile(
-        r"<Placemark>\s*<name>(.*?)</name>.*?<Point><coordinates>([\d.\-]+),([\d.\-]+),\d+</coordinates></Point>\s*</Placemark>",
-        re.DOTALL,
-    )
-    stations = [(m.group(1), float(m.group(2)), float(m.group(3))) for m in pattern.finditer(kml_text)]
+    # Erst einzelne Placemark-Bloecke sauber abgrenzen, dann je Block nach
+    # Point suchen — ein Placemark OHNE Point (z.B. eine Linien-Route als
+    # LineString) darf den Point-Suchbereich NICHT ins naechste Placemark
+    # hineinlaufen lassen. Ein frueherer '.*?<Point>...</Placemark>'-Ansatz
+    # ohne Block-Grenze hat genau das getan: der Name der ersten Linie
+    # ("RE2 Düsseldorf-Osnabrück", ohne eigenen Point) wurde faelschlich mit
+    # dem Point des naechsten ECHTEN Stations-Placemarks (Aachen Hbf)
+    # verknuepft, wodurch Aachen Hbf komplett aus der Liste verschwand.
+    placemark_pat = re.compile(r"<Placemark>(.*?)</Placemark>", re.DOTALL)
+    point_pat = re.compile(r"<name>(.*?)</name>.*?<Point><coordinates>([\d.\-]+),([\d.\-]+),\d+</coordinates></Point>", re.DOTALL)
+    stations = []
+    for block in placemark_pat.finditer(kml_text):
+        m = point_pat.search(block.group(1))
+        if m:
+            stations.append((m.group(1), float(m.group(2)), float(m.group(3))))
     stations = stations[args.start :]
     if args.limit:
         stations = stations[: args.limit]

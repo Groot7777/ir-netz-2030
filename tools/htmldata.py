@@ -68,3 +68,24 @@ def extract_const(html_text, var_name):
             f"gefunden: {len(matches)}"
         )
     return json.loads(matches[0].group(1))
+
+
+def replace_const(html_text, var_name, data):
+    """Schreibendes Gegenstück zu extract_const() — ersetzt verlustfrei nur
+    diese eine 'const NAME = ...;'-Zeile, im selben kompakten JSON-Stil wie
+    dump_lines_json() (fuer byte-identischen Round-Trip bei unveraenderten
+    Daten)."""
+    pattern = re.compile(
+        r"^(const " + re.escape(var_name) + r" = )(\{.*\}|\[.*\])(;)\s*$",
+        re.MULTILINE,
+    )
+    matches = list(pattern.finditer(html_text))
+    if len(matches) != 1:
+        raise ValueError(
+            f"Erwartet genau 1 Treffer für 'const {var_name} = ...;', "
+            f"gefunden: {len(matches)}"
+        )
+    m = matches[0]
+    new_json = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+    new_line = m.group(1) + new_json + m.group(3)
+    return html_text[: m.start()] + new_line + html_text[m.end() :]

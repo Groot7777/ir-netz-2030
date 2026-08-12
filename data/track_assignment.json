@@ -1058,21 +1058,21 @@
       {
         "idx": 14,
         "line": "RE45",
-        "overhang_m": -85.0,
-        "required_length_m": 156,
-        "severity": "ok",
-        "shared": false,
-        "track": "3",
-        "variant": "RE45_N"
-      },
-      {
-        "idx": 3,
-        "line": "RE45",
         "overhang_m": -40.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
         "track": "4",
+        "variant": "RE45_N"
+      },
+      {
+        "idx": 3,
+        "line": "RE45",
+        "overhang_m": -85.0,
+        "required_length_m": 156,
+        "severity": "ok",
+        "shared": false,
+        "track": "3",
         "variant": "RE45_S"
       }
     ],
@@ -1140,41 +1140,41 @@
       {
         "idx": 2,
         "line": "RE28",
-        "overhang_m": -165.0,
+        "overhang_m": -170.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "8",
+        "track": "2",
         "variant": "RE28_N"
       },
       {
         "idx": 4,
         "line": "RE28",
-        "overhang_m": -165.0,
+        "overhang_m": -170.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "8",
+        "track": "2",
         "variant": "RE28_S"
       },
       {
         "idx": 10,
         "line": "RE39",
-        "overhang_m": -170.0,
+        "overhang_m": -165.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "8",
         "variant": "RE39_N"
       },
       {
         "idx": 1,
         "line": "RE39",
-        "overhang_m": -170.0,
+        "overhang_m": -165.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "8",
         "variant": "RE39_S"
       }
     ],
@@ -1915,7 +1915,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE46_A"
       },
       {
@@ -1925,7 +1925,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE46_B"
       },
       {
@@ -1935,7 +1935,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE71_A"
       },
       {
@@ -1945,7 +1945,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE71_B"
       }
     ],
@@ -2010,21 +2010,21 @@
       {
         "idx": 14,
         "line": "RE35",
-        "overhang_m": -4.0,
+        "overhang_m": -27.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "11",
         "variant": "RE35_N"
       },
       {
         "idx": 10,
         "line": "RE35",
-        "overhang_m": -4.0,
+        "overhang_m": -27.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "11",
         "variant": "RE35_S"
       },
       {
@@ -2034,17 +2034,17 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE45_N"
       },
       {
         "idx": 12,
         "line": "RE45",
-        "overhang_m": -27.0,
+        "overhang_m": -4.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "11",
+        "track": "2",
         "variant": "RE45_S"
       },
       {
@@ -2930,7 +2930,7 @@
       },
       {
         "idx": 8,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -24.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -2940,7 +2940,7 @@
       },
       {
         "idx": 32,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -71.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -3009,7 +3009,7 @@
     "assignments": [
       {
         "idx": 30,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 12.0,
         "required_length_m": 156,
         "severity": "gering",
@@ -3040,7 +3040,7 @@
     "assignments": [
       {
         "idx": 31,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 28.0,
         "required_length_m": 156,
         "severity": "kritisch",
@@ -3076,7 +3076,7 @@
         "required_length_m": 156,
         "severity": "gering",
         "shared": false,
-        "track": "3",
+        "track": "1",
         "variant": "S30_N"
       },
       {
@@ -3106,7 +3106,7 @@
         "required_length_m": 156,
         "severity": "gering",
         "shared": false,
-        "track": "3",
+        "track": "1",
         "variant": "S3_S"
       }
     ],
@@ -3130,7 +3130,7 @@
     "assignments": [
       {
         "idx": 29,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 16.0,
         "required_length_m": 156,
         "severity": "gering",
@@ -3196,7 +3196,7 @@
     "assignments": [
       {
         "idx": 10,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 123.0,
         "required_length_m": 156,
         "severity": "kritisch",
@@ -3244,7 +3244,7 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": true,
-        "track": "2",
+        "track": "1",
         "variant": "RB37_A"
       },
       {
@@ -3254,22 +3254,22 @@
         "required_length_m": 105,
         "severity": "ok",
         "shared": true,
-        "track": "2",
+        "track": "1",
         "variant": "RB37_B"
       },
       {
         "idx": 6,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -53.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": true,
-        "track": "1",
+        "track": "2",
         "variant": "S10_A"
       },
       {
         "idx": 34,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -53.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -3314,7 +3314,7 @@
     "assignments": [
       {
         "idx": 7,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -59.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -3324,7 +3324,7 @@
       },
       {
         "idx": 33,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -59.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -3369,7 +3369,7 @@
     "assignments": [
       {
         "idx": 28,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -4,
         "required_length_m": 156,
         "severity": "ok",
@@ -3400,7 +3400,7 @@
     "assignments": [
       {
         "idx": 9,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -4,
         "required_length_m": 156,
         "severity": "ok",
@@ -3842,21 +3842,21 @@
       {
         "idx": 14,
         "line": "RE7",
-        "overhang_m": -108.0,
-        "required_length_m": 210,
-        "severity": "ok",
-        "shared": false,
-        "track": "1",
-        "variant": "RE7_A"
-      },
-      {
-        "idx": 0,
-        "line": "RE7",
         "overhang_m": -166.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
         "track": "2",
+        "variant": "RE7_A"
+      },
+      {
+        "idx": 0,
+        "line": "RE7",
+        "overhang_m": -108.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "shared": false,
+        "track": "1",
         "variant": "RE7_B"
       },
       {
@@ -5557,22 +5557,22 @@
       },
       {
         "idx": 40,
-        "line": "S10 Außenring",
-        "overhang_m": -38.0,
+        "line": "S11 Außenring",
+        "overhang_m": -34.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "5",
         "variant": "S10_A"
       },
       {
         "idx": 5,
         "line": "S10 Innenring",
-        "overhang_m": -38.0,
+        "overhang_m": -34.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "5",
         "variant": "S10_I"
       }
     ],
@@ -5648,7 +5648,7 @@
     "assignments": [
       {
         "idx": 41,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 2.0,
         "required_length_m": 156,
         "severity": "gering",
@@ -5683,7 +5683,7 @@
     "assignments": [
       {
         "idx": 39,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -1.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -5734,7 +5734,7 @@
     "assignments": [
       {
         "idx": 38,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -49.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -5769,7 +5769,7 @@
     "assignments": [
       {
         "idx": 35,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -49.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -5804,7 +5804,7 @@
     "assignments": [
       {
         "idx": 36,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -50.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -5839,7 +5839,7 @@
     "assignments": [
       {
         "idx": 37,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -63.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -5874,7 +5874,7 @@
     "assignments": [
       {
         "idx": 42,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -3.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -6387,21 +6387,21 @@
       {
         "idx": 21,
         "line": "RB37",
-        "overhang_m": -314.0,
+        "overhang_m": -316.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "4",
         "variant": "RB37_A"
       },
       {
         "idx": 9,
         "line": "RB37",
-        "overhang_m": -314.0,
+        "overhang_m": -316.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "4",
         "variant": "RB37_B"
       },
       {
@@ -6447,41 +6447,41 @@
       {
         "idx": 7,
         "line": "RE32",
-        "overhang_m": -163.0,
-        "required_length_m": 210,
-        "severity": "ok",
-        "shared": false,
-        "track": "7",
-        "variant": "RE32_N"
-      },
-      {
-        "idx": 15,
-        "line": "RE32",
-        "overhang_m": -69.0,
-        "required_length_m": 210,
-        "severity": "ok",
-        "shared": false,
-        "track": "6",
-        "variant": "RE32_S"
-      },
-      {
-        "idx": 9,
-        "line": "RE5",
-        "overhang_m": -202.0,
-        "required_length_m": 210,
-        "severity": "ok",
-        "shared": false,
-        "track": "17",
-        "variant": "RE5_A"
-      },
-      {
-        "idx": 17,
-        "line": "RE5",
         "overhang_m": -205.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
         "track": "18",
+        "variant": "RE32_N"
+      },
+      {
+        "idx": 15,
+        "line": "RE32",
+        "overhang_m": -202.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "shared": false,
+        "track": "17",
+        "variant": "RE32_S"
+      },
+      {
+        "idx": 9,
+        "line": "RE5",
+        "overhang_m": -69.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "shared": false,
+        "track": "6",
+        "variant": "RE5_A"
+      },
+      {
+        "idx": 17,
+        "line": "RE5",
+        "overhang_m": -163.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "shared": false,
+        "track": "7",
         "variant": "RE5_B"
       },
       {
@@ -6621,11 +6621,11 @@
       {
         "idx": 20,
         "line": "RB37",
-        "overhang_m": -134.0,
+        "overhang_m": -55.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "3",
+        "track": "1",
         "variant": "RB37_A"
       },
       {
@@ -6665,7 +6665,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "4",
+        "track": "3",
         "variant": "RE90_A"
       },
       {
@@ -7568,37 +7568,37 @@
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "11",
         "variant": "RE40_N"
       },
       {
         "idx": 0,
         "line": "RE40",
-        "overhang_m": -69.0,
+        "overhang_m": -79.0,
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "11",
+        "track": "8",
         "variant": "RE40_S"
       },
       {
         "idx": 15,
-        "line": "S10 Außenring",
-        "overhang_m": -74.0,
+        "line": "S11 Außenring",
+        "overhang_m": -124.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "22",
+        "track": "21",
         "variant": "S10_A"
       },
       {
         "idx": 30,
         "line": "S10 Innenring",
-        "overhang_m": -74.0,
+        "overhang_m": -124.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "22",
+        "track": "21",
         "variant": "S10_I"
       },
       {
@@ -7608,17 +7608,17 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "11",
         "variant": "S30_N"
       },
       {
         "idx": 0,
         "line": "S30",
-        "overhang_m": -53.0,
+        "overhang_m": -43.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "8",
+        "track": "12",
         "variant": "S30_S"
       },
       {
@@ -7702,7 +7702,7 @@
     "assignments": [
       {
         "idx": 16,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -53.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -7745,7 +7745,7 @@
     "assignments": [
       {
         "idx": 24,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -65.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -7780,7 +7780,7 @@
     "assignments": [
       {
         "idx": 23,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 14.0,
         "required_length_m": 156,
         "severity": "gering",
@@ -7815,7 +7815,7 @@
     "assignments": [
       {
         "idx": 22,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -4,
         "required_length_m": 156,
         "severity": "ok",
@@ -7846,7 +7846,7 @@
     "assignments": [
       {
         "idx": 12,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -14.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -7881,7 +7881,7 @@
     "assignments": [
       {
         "idx": 17,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -59.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -7967,7 +7967,7 @@
     "assignments": [
       {
         "idx": 11,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -15.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -8022,22 +8022,22 @@
       },
       {
         "idx": 14,
-        "line": "S10 Außenring",
-        "overhang_m": -56.0,
+        "line": "S11 Außenring",
+        "overhang_m": -58.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "103",
+        "track": "102",
         "variant": "S10_A"
       },
       {
         "idx": 31,
         "line": "S10 Innenring",
-        "overhang_m": -56.0,
+        "overhang_m": -58.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "101",
+        "track": "102",
         "variant": "S10_I"
       },
       {
@@ -8057,17 +8057,17 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "103",
+        "track": "101",
         "variant": "S30_S"
       },
       {
         "idx": 5,
         "line": "S3",
-        "overhang_m": -58.0,
+        "overhang_m": -56.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "102",
+        "track": "101",
         "variant": "S3_N"
       },
       {
@@ -8077,7 +8077,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "103",
+        "track": "101",
         "variant": "S3_S"
       }
     ],
@@ -8105,7 +8105,7 @@
     "assignments": [
       {
         "idx": 13,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 7.0,
         "required_length_m": 156,
         "severity": "gering",
@@ -9053,21 +9053,21 @@
       {
         "idx": 20,
         "line": "RE35",
-        "overhang_m": -57.0,
-        "required_length_m": 156,
-        "severity": "ok",
-        "shared": false,
-        "track": "2",
-        "variant": "RE35_N"
-      },
-      {
-        "idx": 4,
-        "line": "RE35",
         "overhang_m": -14.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
         "track": "3",
+        "variant": "RE35_N"
+      },
+      {
+        "idx": 4,
+        "line": "RE35",
+        "overhang_m": -57.0,
+        "required_length_m": 156,
+        "severity": "ok",
+        "shared": false,
+        "track": "2",
         "variant": "RE35_S"
       }
     ],
@@ -9891,7 +9891,7 @@
       },
       {
         "idx": 26,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -230.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -9942,7 +9942,7 @@
     "assignments": [
       {
         "idx": 25,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -54.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -10761,7 +10761,7 @@
     "assignments": [
       {
         "idx": 3,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 16.0,
         "required_length_m": 156,
         "severity": "gering",
@@ -11536,7 +11536,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "13",
         "variant": "RE30_DL"
       },
       {
@@ -11546,7 +11546,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "13",
         "variant": "RE30_LD"
       },
       {
@@ -11556,7 +11556,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "13",
         "variant": "RE30_LW"
       },
       {
@@ -11566,7 +11566,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "12",
+        "track": "13",
         "variant": "RE30_WL"
       },
       {
@@ -11576,7 +11576,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "13",
+        "track": "12",
         "variant": "RE32_N"
       },
       {
@@ -11586,7 +11586,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "13",
+        "track": "12",
         "variant": "RE32_S"
       }
     ],
@@ -11651,7 +11651,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE7_A"
       },
       {
@@ -11661,7 +11661,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE7_B"
       }
     ],
@@ -12537,7 +12537,7 @@
       },
       {
         "idx": 1,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -7.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -13190,7 +13190,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "4",
+        "track": "2",
         "variant": "RE17DW_B"
       },
       {
@@ -13200,7 +13200,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "4",
         "variant": "RE32_N"
       },
       {
@@ -13310,21 +13310,21 @@
       {
         "idx": 22,
         "line": "RE32",
-        "overhang_m": -205.0,
-        "required_length_m": 210,
-        "severity": "ok",
-        "shared": false,
-        "track": "2",
-        "variant": "RE32_N"
-      },
-      {
-        "idx": 0,
-        "line": "RE32",
         "overhang_m": -199.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
         "track": "8",
+        "variant": "RE32_N"
+      },
+      {
+        "idx": 0,
+        "line": "RE32",
+        "overhang_m": -205.0,
+        "required_length_m": 210,
+        "severity": "ok",
+        "shared": false,
+        "track": "2",
         "variant": "RE32_S"
       },
       {
@@ -13456,41 +13456,41 @@
       {
         "idx": 15,
         "line": "RE90b",
-        "overhang_m": -4.0,
+        "overhang_m": -31.0,
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "1",
         "variant": "RE90b_GS"
       },
       {
         "idx": 0,
         "line": "RE90b",
+        "overhang_m": -4.0,
+        "required_length_m": 236,
+        "severity": "ok",
+        "shared": false,
+        "track": "5",
+        "variant": "RE90b_KN"
+      },
+      {
+        "idx": 13,
+        "line": "RE90b",
         "overhang_m": -31.0,
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
         "track": "1",
-        "variant": "RE90b_KN"
+        "variant": "RE90b_NK"
       },
       {
-        "idx": 13,
+        "idx": 4,
         "line": "RE90b",
         "overhang_m": -4.0,
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
         "track": "5",
-        "variant": "RE90b_NK"
-      },
-      {
-        "idx": 4,
-        "line": "RE90b",
-        "overhang_m": -31.0,
-        "required_length_m": 236,
-        "severity": "ok",
-        "shared": false,
-        "track": "1",
         "variant": "RE90b_SG"
       }
     ],
@@ -14495,7 +14495,7 @@
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE90b_GS"
       },
       {
@@ -14505,7 +14505,7 @@
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE90b_KN"
       },
       {
@@ -14515,7 +14515,7 @@
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE90b_NK"
       },
       {
@@ -14525,7 +14525,7 @@
         "required_length_m": 236,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE90b_SG"
       }
     ],
@@ -15637,7 +15637,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE17OR_N"
       },
       {
@@ -15647,7 +15647,7 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE17OR_S"
       },
       {
@@ -16131,7 +16131,7 @@
     "assignments": [
       {
         "idx": 43,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -4,
         "required_length_m": 156,
         "severity": "ok",
@@ -16643,21 +16643,21 @@
       {
         "idx": 18,
         "line": "RE32",
-        "overhang_m": 0.0,
+        "overhang_m": -123.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "1",
         "variant": "RE32_S"
       },
       {
         "idx": 16,
         "line": "RE90",
-        "overhang_m": -177.0,
+        "overhang_m": -54.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "5",
         "variant": "RE90_A"
       },
       {
@@ -16735,7 +16735,7 @@
       },
       {
         "idx": 18,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -214.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -16778,7 +16778,7 @@
     "assignments": [
       {
         "idx": 19,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -24.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -16821,7 +16821,7 @@
     "assignments": [
       {
         "idx": 20,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 1.0,
         "required_length_m": 156,
         "severity": "gering",
@@ -17357,7 +17357,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "4",
+        "track": "3",
         "variant": "RE77_A"
       },
       {
@@ -17367,7 +17367,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "3",
+        "track": "4",
         "variant": "RE77_B"
       },
       {
@@ -17505,11 +17505,11 @@
       {
         "idx": 11,
         "line": "RB37",
-        "overhang_m": -245.0,
+        "overhang_m": -247.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "6",
+        "track": "7",
         "variant": "RB37_B"
       },
       {
@@ -17519,17 +17519,17 @@
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "6",
         "variant": "RE32_N"
       },
       {
         "idx": 17,
         "line": "RE32",
-        "overhang_m": -140.0,
+        "overhang_m": -142.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "5",
+        "track": "8",
         "variant": "RE32_S"
       },
       {
@@ -17539,7 +17539,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "6",
+        "track": "5",
         "variant": "RE90_A"
       },
       {
@@ -18390,12 +18390,12 @@
       },
       {
         "idx": 21,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -48.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "15",
+        "track": "16",
         "variant": "S10_A"
       },
       {
@@ -18405,7 +18405,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "15",
+        "track": "16",
         "variant": "S10_I"
       }
     ],
@@ -18898,21 +18898,21 @@
       {
         "idx": 4,
         "line": "RE35X",
-        "overhang_m": -120.0,
+        "overhang_m": -123.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE35X_N"
       },
       {
         "idx": 9,
         "line": "RE35X",
-        "overhang_m": -120.0,
+        "overhang_m": -123.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RE35X_S"
       },
       {
@@ -18938,21 +18938,21 @@
       {
         "idx": 9,
         "line": "RE71",
-        "overhang_m": -123.0,
+        "overhang_m": -120.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE71_A"
       },
       {
         "idx": 26,
         "line": "RE71",
-        "overhang_m": -123.0,
+        "overhang_m": -120.0,
         "required_length_m": 210,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE71_B"
       }
     ],
@@ -21619,22 +21619,22 @@
       },
       {
         "idx": 2,
-        "line": "S10 Außenring",
-        "overhang_m": -31.0,
+        "line": "S11 Außenring",
+        "overhang_m": -30.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_A"
       },
       {
         "idx": 43,
         "line": "S10 Innenring",
-        "overhang_m": -31.0,
+        "overhang_m": -30.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "S10_I"
       }
     ],
@@ -21858,21 +21858,21 @@
       {
         "idx": 9,
         "line": "RE57",
-        "overhang_m": -46.0,
-        "required_length_m": 156,
-        "severity": "ok",
-        "shared": false,
-        "track": "4",
-        "variant": "RE57_A"
-      },
-      {
-        "idx": 11,
-        "line": "RE57",
         "overhang_m": -1.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
         "track": "2",
+        "variant": "RE57_A"
+      },
+      {
+        "idx": 11,
+        "line": "RE57",
+        "overhang_m": -46.0,
+        "required_length_m": 156,
+        "severity": "ok",
+        "shared": false,
+        "track": "4",
         "variant": "RE57_B"
       }
     ],
@@ -23190,17 +23190,17 @@
     "assignments": [
       {
         "idx": 0,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -64.0,
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "S10_A"
       },
       {
         "idx": 45,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -64.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -23225,7 +23225,7 @@
         "required_length_m": 156,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "S10_I"
       }
     ],
@@ -23261,7 +23261,7 @@
     "assignments": [
       {
         "idx": 44,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -4,
         "required_length_m": 156,
         "severity": "ok",
@@ -23430,21 +23430,21 @@
       {
         "idx": 12,
         "line": "RB37",
-        "overhang_m": -113.1,
+        "overhang_m": -106.3,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "4b",
+        "track": "4a",
         "variant": "RB37_A"
       },
       {
         "idx": 18,
         "line": "RB37",
-        "overhang_m": -113.1,
+        "overhang_m": -106.3,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "4b",
+        "track": "4a",
         "variant": "RB37_B"
       },
       {
@@ -23493,21 +23493,21 @@
       {
         "idx": 10,
         "line": "RB37",
-        "overhang_m": -97.6,
+        "overhang_m": -98.5,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "3",
         "variant": "RB37_A"
       },
       {
         "idx": 20,
         "line": "RB37",
-        "overhang_m": -97.6,
+        "overhang_m": -98.5,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "3",
         "variant": "RB37_B"
       }
     ],
@@ -23875,7 +23875,7 @@
     "assignments": [
       {
         "idx": 27,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -63.0,
         "required_length_m": 156,
         "severity": "ok",
@@ -24180,7 +24180,7 @@
     "assignments": [
       {
         "idx": 4,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": 111.6,
         "required_length_m": 156,
         "severity": "kritisch",
@@ -24337,31 +24337,31 @@
       {
         "idx": 27,
         "line": "RB37",
-        "overhang_m": -116.0,
+        "overhang_m": -115.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RB37_A"
       },
       {
         "idx": 3,
         "line": "RB37",
-        "overhang_m": -116.0,
+        "overhang_m": -115.0,
         "required_length_m": 105,
         "severity": "ok",
         "shared": false,
-        "track": "1",
+        "track": "2",
         "variant": "RB37_B"
       },
       {
         "idx": 14,
         "line": "RE40",
-        "overhang_m": -90.0,
+        "overhang_m": -91.0,
         "required_length_m": 130,
         "severity": "ok",
         "shared": false,
-        "track": "2",
+        "track": "1",
         "variant": "RE40_N"
       },
       {
@@ -24693,26 +24693,26 @@
       {
         "idx": 15,
         "line": "RE40",
-        "overhang_m": -89.0,
-        "required_length_m": 130,
-        "severity": "ok",
-        "shared": true,
-        "track": "2",
-        "variant": "RE40_N"
-      },
-      {
-        "idx": 4,
-        "line": "RE40",
         "overhang_m": -90.0,
         "required_length_m": 130,
         "severity": "ok",
         "shared": true,
         "track": "1",
+        "variant": "RE40_N"
+      },
+      {
+        "idx": 4,
+        "line": "RE40",
+        "overhang_m": -89.0,
+        "required_length_m": 130,
+        "severity": "ok",
+        "shared": true,
+        "track": "2",
         "variant": "RE40_S"
       },
       {
         "idx": 5,
-        "line": "S10 Außenring",
+        "line": "S11 Außenring",
         "overhang_m": -65.0,
         "required_length_m": 156,
         "severity": "ok",

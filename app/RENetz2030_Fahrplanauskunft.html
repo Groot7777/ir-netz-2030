@@ -2054,15 +2054,20 @@ function mockCO2Saved(durationMin){
   return { distanceKm, kg };
 }
 // One leg = one train ride from fromName to toName (or to terminus if toName undefined).
-function buildLegHTML(key, depAtFirst, fromName, toName, minOff, maxOff, contextStop){
+function buildLegHTML(key, depAtFirst, fromName, toName, minOff, maxOff, contextStop, fromIdx, toIdx){
   const l = LINES[key];
   const col = lineColor(l.name);
   // contextStop: welcher Halt im Fahrtinformationen-Popup markiert wird — normalerweise
   // die Einstiegsstation, bei einer Ankünfte-Detailansicht aber die Ankunftsstation
   // (das ist dort "toName", nicht "fromName", da das Bein von der Herkunft bis hierher läuft).
   const fiContext = contextStop !== undefined ? contextStop : fromName;
-  const idxFrom = l.stops.findIndex(s=>s.name===fromName);
-  const idxTo = (toName!==undefined) ? l.stops.findIndex(s=>s.name===toName) : l.stops.length-1;
+  // fromIdx/toIdx (falls uebergeben): der GENAU gemeinte Halt-Index — wichtig fuer
+  // Linien, die dieselbe Station mehrfach anfahren (z.B. S10/S11 an Bochum Hbf, das
+  // die Achterschleife zweimal pro Umlauf kreuzt). Ohne das faende findIndex() immer
+  // nur den ERSTEN Namenstreffer, egal welche der beiden Abfahrten angeklickt wurde —
+  // Gleis und Zeit in der Detailansicht koennten dann von der Tafel abweichen.
+  const idxFrom = fromIdx !== undefined ? fromIdx : l.stops.findIndex(s=>s.name===fromName);
+  const idxTo = toIdx !== undefined ? toIdx : ((toName!==undefined) ? l.stops.findIndex(s=>s.name===toName) : l.stops.length-1);
   const timeFrom = depAtFirst + stopDep(l.stops[idxFrom]);
   const timeTo = depAtFirst + stopArr(l.stops[idxTo]);
   const platFrom = l.stops[idxFrom].track;
@@ -2147,7 +2152,7 @@ function addReturnTrip(from, to, afterMin){
   renderVerbundCard();
 }
 
-function openBoardDetail(key, depAtFirst, boardStation, mode, otherStation, minOff, maxOff){
+function openBoardDetail(key, depAtFirst, boardStation, mode, otherStation, minOff, maxOff, boardIdx){
   const l = LINES[key];
   const col = lineColor(l.name);
   if (mode === "arr"){
@@ -2157,9 +2162,9 @@ function openBoardDetail(key, depAtFirst, boardStation, mode, otherStation, minO
     const originName = otherStation || l.stops[0].name;
     const head = `<b><span class="chip" style="background:${col};margin-right:8px;">${l.name}</span>von ${originName}</b><span>${l.rolling}</span>`;
     TL_COLLAPSE_COUNTER = 0;
-    const leg = buildLegHTML(key, depAtFirst, originName, boardStation, minOff, maxOff, boardStation);
+    const leg = buildLegHTML(key, depAtFirst, originName, boardStation, minOff, maxOff, boardStation, undefined, boardIdx);
     const originIdx = otherStation ? l.stops.findIndex(s=>s.name===otherStation) : 0;
-    const boardStop = l.stops[r_offset(key,boardStation)];
+    const boardStop = l.stops[boardIdx !== undefined ? boardIdx : r_offset(key,boardStation)];
     const depAbs = depAtFirst + stopDep(l.stops[originIdx]);
     const arrAbs = depAtFirst + stopArr(boardStop);
     const dayOffset = Math.floor(arrAbs/1440);
@@ -2170,8 +2175,8 @@ function openBoardDetail(key, depAtFirst, boardStation, mode, otherStation, minO
   const displayDest = otherStation || l.dest;
   const head = `<b><span class="chip" style="background:${col};margin-right:8px;">${l.name}</span>Richtung ${displayDest}</b><span>${l.rolling}</span>`;
   TL_COLLAPSE_COUNTER = 0;
-  const leg = buildLegHTML(key, depAtFirst, boardStation, otherStation, minOff, maxOff);
-  const boardStop = l.stops[r_offset(key,boardStation)];
+  const leg = buildLegHTML(key, depAtFirst, boardStation, otherStation, minOff, maxOff, undefined, boardIdx);
+  const boardStop = l.stops[boardIdx !== undefined ? boardIdx : r_offset(key,boardStation)];
   const lastStop = otherStation ? l.stops[l.stops.findIndex(s=>s.name===otherStation)] : l.stops[l.stops.length-1];
   const dayOffset = Math.floor((depAtFirst + stopDep(boardStop))/1440);
   const lastStopName = lastStop.name;
@@ -2390,7 +2395,7 @@ function renderBoard(){
       const fullEndOff = stopArr(l.stops[l.stops.length-1]);
       deps.forEach(({dep, maxOff, minOff})=>{
         const isShort = maxOff < fullEndOff || minOff > 0;
-        entries.push({key, line:l.name, dest: actualDestName(l, maxOff), dep, off, minOff, maxOff, origin: actualOriginName(l, minOff), shortWorking: isShort, track: l.stops[idx].track});
+        entries.push({key, idx, line:l.name, dest: actualDestName(l, maxOff), dep, off, minOff, maxOff, origin: actualOriginName(l, minOff), shortWorking: isShort, track: l.stops[idx].track});
       });
     });
   } else {
@@ -2407,7 +2412,7 @@ function renderBoard(){
       const fullEndOff = stopArr(l.stops[l.stops.length-1]);
       deps.forEach(({dep, maxOff, minOff})=>{
         const isShort = maxOff < fullEndOff || minOff > 0;
-        entries.push({key, line:l.name, dest: actualDestName(l, maxOff), dep, off, minOff, maxOff, origin: actualOriginName(l, minOff), shortWorking: isShort, track: l.stops[idx].track});
+        entries.push({key, idx, line:l.name, dest: actualDestName(l, maxOff), dep, off, minOff, maxOff, origin: actualOriginName(l, minOff), shortWorking: isShort, track: l.stops[idx].track});
       });
     });
   }
@@ -2461,7 +2466,7 @@ function renderBoard(){
       // Kurzläufer-Herkunft — nur gesetzt, wenn es sich wirklich um einen Kurzläufer
       // handelt, sonst greift in openBoardDetail() der reguläre Linienend-/Startfallback.
       const otherStation = e.shortWorking ? (BOARD_MODE==='arr' ? e.origin : e.dest) : undefined;
-      openBoardDetail(e.key, depAtFirst, station, BOARD_MODE, otherStation, e.minOff||0, e.maxOff);
+      openBoardDetail(e.key, depAtFirst, station, BOARD_MODE, otherStation, e.minOff||0, e.maxOff, e.idx);
     });
   });
 }

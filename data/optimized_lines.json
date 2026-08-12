@@ -5,19 +5,19 @@
     "dest": "Bochum Hbf",
     "extraTrips": [
       {
-        "dep": "04:09",
+        "dep": "03:56",
         "from": "Wuppertal Hbf"
       },
       {
-        "dep": "03:46",
+        "dep": "03:33",
         "from": "Venlo"
       },
       {
-        "dep": "23:31",
+        "dep": "23:18",
         "to": "Wuppertal Hbf"
       },
       {
-        "dep": "00:31",
+        "dep": "00:18",
         "to": "Mönchengladbach Hbf"
       }
     ],
@@ -179,10 +179,10 @@
       }
     ],
     "takt": {
-      "end": "22:31",
+      "end": "22:18",
       "interval": 30,
       "note": "Regeltakt Halbstundentakt (xx:17/xx:47) versetzt zu RE13/RE14",
-      "start": "03:31"
+      "start": "03:18"
     }
   },
   "RB37_B": {
@@ -191,19 +191,19 @@
     "dest": "Arnhem Centraal",
     "extraTrips": [
       {
-        "dep": "03:57",
+        "dep": "03:58",
         "from": "Mönchengladbach Hbf"
       },
       {
-        "dep": "03:32",
+        "dep": "03:33",
         "from": "Venlo"
       },
       {
-        "dep": "23:18",
+        "dep": "23:19",
         "to": "Nijmegen"
       },
       {
-        "dep": "00:18",
+        "dep": "00:19",
         "to": "Mönchengladbach Hbf"
       }
     ],
@@ -365,10 +365,10 @@
       }
     ],
     "takt": {
-      "end": "22:18",
+      "end": "22:19",
       "interval": 30,
       "note": "Regeltakt Halbstundentakt (xx:17/xx:47) versetzt zu RE13/RE14",
-      "start": "03:18"
+      "start": "03:19"
     }
   },
   "RE11_A": {
@@ -669,10 +669,10 @@
       }
     ],
     "takt": {
-      "end": "18:58",
+      "end": "19:25",
       "interval": 60,
-      "note": "Spätfahrten 19:58–22:58 sowie 23:58, Frühfahrten ab Trier/Gerolstein/Köln Süd/Mönchengladbach",
-      "start": "04:58"
+      "note": "Spätfahrten 20:25–23:25 sowie 00:25, Frühfahrten ab Trier/Gerolstein/Köln Süd/Mönchengladbach",
+      "start": "05:25"
     }
   },
   "RE14_B": {
@@ -767,10 +767,10 @@
       }
     ],
     "takt": {
-      "end": "19:34",
+      "end": "19:06",
       "interval": 60,
-      "note": "Spätfahrten 20:34–23:34 sowie 00:34, Frühfahrten ab Köln Süd/Euskirchen/Gerolstein/Trier",
-      "start": "04:34"
+      "note": "Spätfahrten 20:06–23:06 sowie 00:06, Frühfahrten ab Köln Süd/Euskirchen/Gerolstein/Trier",
+      "start": "04:06"
     }
   },
   "RE17DW_A": {
@@ -1447,10 +1447,10 @@
       }
     ],
     "takt": {
-      "end": "19:44",
+      "end": "19:40",
       "interval": 60,
-      "note": "Spätfahrten 20:44–23:44 sowie 00:44; 30-Min-Versatz zu RE5, Akkubetrieb Cuxhaven–Stade und Buchholz–Hannover mit OL-Inseln Soltau/Walsrode",
-      "start": "04:44"
+      "note": "Spätfahrten 20:40–23:40 sowie 00:40; 30-Min-Versatz zu RE5, Akkubetrieb Cuxhaven–Stade und Buchholz–Hannover mit OL-Inseln Soltau/Walsrode",
+      "start": "04:40"
     }
   },
   "RE25_B": {
@@ -1665,11 +1665,11 @@
     "dest": "Osnabrück Hbf",
     "extraTrips": [
       {
-        "dep": "02:55",
+        "dep": "03:09",
         "from": "Münster (Westf) Hbf"
       },
       {
-        "dep": "22:33",
+        "dep": "22:47",
         "to": "Münster (Westf) Hbf"
       }
     ],
@@ -1711,10 +1711,10 @@
       }
     ],
     "takt": {
-      "end": "21:33",
+      "end": "21:47",
       "interval": 60,
       "note": "Halbstundentakt mit RE9 auf Osnabrück–Münster–Recklinghausen",
-      "start": "03:33"
+      "start": "03:47"
     }
   },
   "RE2_B": {
@@ -1723,11 +1723,11 @@
     "dest": "Düsseldorf Hbf",
     "extraTrips": [
       {
-        "dep": "04:08",
+        "dep": "03:53",
         "from": "Münster (Westf) Hbf"
       },
       {
-        "dep": "23:30",
+        "dep": "23:15",
         "to": "Münster (Westf) Hbf"
       }
     ],
@@ -1769,10 +1769,10 @@
       }
     ],
     "takt": {
-      "end": "22:30",
+      "end": "22:15",
       "interval": 60,
       "note": "Halbstundentakt mit RE9 auf Osnabrück–Münster–Recklinghausen",
-      "start": "04:30"
+      "start": "04:15"
     }
   },
   "RE30_DL": {
@@ -1886,9 +1886,9 @@
       }
     ],
     "takt": {
-      "end": "20:12",
+      "end": "19:51",
       "interval": 60,
-      "start": "04:12"
+      "start": "03:51"
     }
   },
   "RE30_LD": {
@@ -2264,9 +2264,9 @@
       }
     ],
     "takt": {
-      "end": "20:37",
+      "end": "20:16",
       "interval": 60,
-      "start": "04:37"
+      "start": "04:16"
     }
   },
   "RE32_N": {
@@ -2391,9 +2391,9 @@
       }
     ],
     "takt": {
-      "end": "21:33",
+      "end": "21:14",
       "interval": 60,
-      "start": "03:33"
+      "start": "03:14"
     }
   },
   "RE32_S": {
@@ -3263,27 +3263,27 @@
     "dest": "Essen Hbf",
     "extraTrips": [
       {
-        "dep": "03:57",
+        "dep": "04:14",
         "from": "Hagen Hbf"
       },
       {
-        "dep": "04:57",
+        "dep": "05:14",
         "from": "Hagen Hbf"
       },
       {
-        "dep": "04:30",
+        "dep": "04:47",
         "from": "Siegen Hbf"
       },
       {
-        "dep": "23:43",
+        "dep": "00:00",
         "to": "Siegen Hbf"
       },
       {
-        "dep": "00:43",
+        "dep": "01:00",
         "to": "Wetzlar"
       },
       {
-        "dep": "22:43",
+        "dep": "23:00",
         "to": "Hagen Hbf"
       }
     ],
@@ -3390,9 +3390,9 @@
       }
     ],
     "takt": {
-      "end": "21:43",
+      "end": "22:00",
       "interval": 60,
-      "start": "03:43"
+      "start": "04:00"
     }
   },
   "RE40_S": {
@@ -3401,23 +3401,23 @@
     "dest": "Frankfurt (Main) Hbf",
     "extraTrips": [
       {
-        "dep": "03:24",
+        "dep": "03:07",
         "from": "Wetzlar"
       },
       {
-        "dep": "03:35",
+        "dep": "03:18",
         "from": "Siegen Hbf"
       },
       {
-        "dep": "04:35",
+        "dep": "04:18",
         "from": "Siegen Hbf"
       },
       {
-        "dep": "00:14",
+        "dep": "23:57",
         "to": "Siegen Hbf"
       },
       {
-        "dep": "23:14",
+        "dep": "22:57",
         "to": "Wetzlar"
       }
     ],
@@ -3524,9 +3524,9 @@
       }
     ],
     "takt": {
-      "end": "22:14",
+      "end": "21:57",
       "interval": 60,
-      "start": "03:14"
+      "start": "02:57"
     }
   },
   "RE45_N": {
@@ -3655,27 +3655,27 @@
     "dest": "Cottbus Hbf",
     "extraTrips": [
       {
-        "dep": "02:55",
+        "dep": "02:56",
         "from": "Berlin Hbf (tief)"
       },
       {
-        "dep": "03:09",
+        "dep": "03:10",
         "from": "Stendal Hbf"
       },
       {
-        "dep": "03:11",
+        "dep": "03:12",
         "from": "Uelzen"
       },
       {
-        "dep": "22:05",
+        "dep": "22:06",
         "to": "Hamburg-Elbbrücken"
       },
       {
-        "dep": "23:05",
+        "dep": "23:06",
         "to": "Uelzen"
       },
       {
-        "dep": "00:05",
+        "dep": "00:06",
         "to": "Stendal Hbf"
       }
     ],
@@ -3767,9 +3767,9 @@
       }
     ],
     "takt": {
-      "end": "19:05",
+      "end": "19:06",
       "interval": 60,
-      "start": "04:05"
+      "start": "04:06"
     }
   },
   "RE46_A": {
@@ -3784,43 +3784,43 @@
     "dest": "Berlin Südkreuz",
     "extraTrips": [
       {
-        "dep": "03:57",
+        "dep": "03:47",
         "from": "Berlin-Spandau"
       },
       {
-        "dep": "05:01",
+        "dep": "04:51",
         "from": "Wittenberge"
       },
       {
-        "dep": "03:40",
+        "dep": "03:30",
         "from": "Lübeck Hbf"
       },
       {
-        "dep": "03:23",
+        "dep": "03:13",
         "from": "Kiel Hbf"
       },
       {
-        "dep": "04:01",
+        "dep": "03:51",
         "from": "Husum"
       },
       {
-        "dep": "20:08",
+        "dep": "19:58",
         "to": "Wittenberge"
       },
       {
-        "dep": "21:08",
+        "dep": "20:58",
         "to": "Büchen"
       },
       {
-        "dep": "22:08",
+        "dep": "21:58",
         "to": "Lübeck Hbf"
       },
       {
-        "dep": "23:08",
+        "dep": "22:58",
         "to": "Kiel Hbf"
       },
       {
-        "dep": "00:08",
+        "dep": "23:58",
         "to": "Husum"
       }
     ],
@@ -3937,10 +3937,10 @@
       }
     ],
     "takt": {
-      "end": "19:08",
+      "end": "18:58",
       "interval": 60,
       "note": "Zugstärkung in Lübeck Hbf; Treppen-Kaskade bei Früh-/Spätfahrten",
-      "start": "03:08"
+      "start": "02:58"
     }
   },
   "RE46_B": {
@@ -3955,39 +3955,39 @@
     "dest": "Esbjerg",
     "extraTrips": [
       {
-        "dep": "03:02",
+        "dep": "03:12",
         "from": "Husum"
       },
       {
-        "dep": "03:12",
+        "dep": "03:22",
         "from": "Rendsburg"
       },
       {
-        "dep": "03:44",
+        "dep": "03:54",
         "from": "Kiel Hbf"
       },
       {
-        "dep": "03:27",
+        "dep": "03:37",
         "from": "Lübeck Hbf"
       },
       {
-        "dep": "02:59",
+        "dep": "03:09",
         "from": "Wittenberge"
       },
       {
-        "dep": "19:37",
+        "dep": "19:47",
         "to": "Niebüll"
       },
       {
-        "dep": "21:37",
+        "dep": "21:47",
         "to": "Kiel Hbf"
       },
       {
-        "dep": "23:37",
+        "dep": "23:47",
         "to": "Büchen"
       },
       {
-        "dep": "00:37",
+        "dep": "00:47",
         "to": "Wittenberge"
       }
     ],
@@ -4104,10 +4104,10 @@
       }
     ],
     "takt": {
-      "end": "18:37",
+      "end": "18:47",
       "interval": 60,
       "note": "Flügelung in Lübeck Hbf; Treppen-Kaskade bei Früh-/Spätfahrten",
-      "start": "03:37"
+      "start": "03:47"
     }
   },
   "RE57_A": {
@@ -4116,47 +4116,47 @@
     "dest": "Passau Hbf",
     "extraTrips": [
       {
-        "dep": "03:07",
+        "dep": "03:03",
         "from": "Sigmaringen"
       },
       {
-        "dep": "03:07",
+        "dep": "03:03",
         "from": "Donaueschingen"
       },
       {
-        "dep": "03:33",
+        "dep": "03:29",
         "from": "Memmingen"
       },
       {
-        "dep": "03:44",
+        "dep": "03:40",
         "from": "Freiburg (Breisgau) Hbf"
       },
       {
-        "dep": "03:51",
+        "dep": "03:47",
         "from": "München Ost"
       },
       {
-        "dep": "18:57",
+        "dep": "18:53",
         "to": "Landshut (Bay) Hbf"
       },
       {
-        "dep": "19:57",
+        "dep": "19:53",
         "to": "München-Pasing"
       },
       {
-        "dep": "20:57",
+        "dep": "20:53",
         "to": "Memmingen"
       },
       {
-        "dep": "21:57",
+        "dep": "21:53",
         "to": "Aulendorf"
       },
       {
-        "dep": "22:57",
+        "dep": "22:53",
         "to": "Sigmaringen"
       },
       {
-        "dep": "23:57",
+        "dep": "23:53",
         "to": "Donaueschingen"
       }
     ],
@@ -4268,9 +4268,9 @@
       }
     ],
     "takt": {
-      "end": "17:57",
+      "end": "17:53",
       "interval": 60,
-      "start": "02:57"
+      "start": "02:53"
     }
   },
   "RE57_B": {
@@ -4279,55 +4279,55 @@
     "dest": "Mulhouse-Ville",
     "extraTrips": [
       {
-        "dep": "03:06",
+        "dep": "03:12",
         "from": "Donaueschingen"
       },
       {
-        "dep": "03:06",
+        "dep": "03:12",
         "from": "Sigmaringen"
       },
       {
-        "dep": "03:17",
+        "dep": "03:23",
         "from": "Freiburg (Breisgau) Hbf"
       },
       {
-        "dep": "03:19",
+        "dep": "03:25",
         "from": "Aulendorf"
       },
       {
-        "dep": "03:24",
+        "dep": "03:30",
         "from": "München-Pasing"
       },
       {
-        "dep": "03:30",
+        "dep": "03:36",
         "from": "Memmingen"
       },
       {
-        "dep": "03:45",
+        "dep": "03:51",
         "from": "München Flughafen"
       },
       {
-        "dep": "19:06",
+        "dep": "19:12",
         "to": "Freiburg (Breisgau) Hbf"
       },
       {
-        "dep": "20:06",
+        "dep": "20:12",
         "to": "Donaueschingen"
       },
       {
-        "dep": "21:06",
+        "dep": "21:12",
         "to": "Sigmaringen"
       },
       {
-        "dep": "22:06",
+        "dep": "22:12",
         "to": "Aulendorf"
       },
       {
-        "dep": "23:06",
+        "dep": "23:12",
         "to": "Memmingen"
       },
       {
-        "dep": "00:06",
+        "dep": "00:12",
         "to": "München Ost"
       }
     ],
@@ -4439,9 +4439,9 @@
       }
     ],
     "takt": {
-      "end": "18:06",
+      "end": "18:12",
       "interval": 60,
-      "start": "03:06"
+      "start": "03:12"
     }
   },
   "RE5_A": {
@@ -4450,39 +4450,39 @@
     "dest": "Frankfurt (Main) Hbf",
     "extraTrips": [
       {
-        "dep": "03:25",
+        "dep": "03:12",
         "from": "Mainz Hbf"
       },
       {
-        "dep": "03:19",
+        "dep": "03:06",
         "from": "Koblenz Hbf"
       },
       {
-        "dep": "04:19",
+        "dep": "04:06",
         "from": "Koblenz Hbf"
       },
       {
-        "dep": "04:18",
+        "dep": "04:05",
         "from": "Köln Hbf"
       },
       {
-        "dep": "04:18",
+        "dep": "04:05",
         "from": "Duisburg Hbf"
       },
       {
-        "dep": "00:11",
+        "dep": "23:58",
         "to": "Köln Hbf"
       },
       {
-        "dep": "23:11",
+        "dep": "22:58",
         "to": "Koblenz Hbf"
       },
       {
-        "dep": "01:11",
+        "dep": "00:58",
         "to": "Duisburg Hbf"
       },
       {
-        "dep": "22:11",
+        "dep": "21:58",
         "to": "Mainz Hbf"
       }
     ],
@@ -4624,10 +4624,10 @@
       }
     ],
     "takt": {
-      "end": "21:11",
+      "end": "20:58",
       "interval": 60,
-      "note": "Frühfahrten ab Koblenz/Köln/Mainz/Duisburg, letzte Vollfahrt 21:11, Spätfahrten bis 22:11",
-      "start": "04:11"
+      "note": "Frühfahrten ab Koblenz/Köln/Mainz/Duisburg, letzte Vollfahrt 20:58, Spätfahrten bis 21:58",
+      "start": "03:58"
     }
   },
   "RE5_B": {
@@ -4636,31 +4636,31 @@
     "dest": "Arnhem Centraal",
     "extraTrips": [
       {
-        "dep": "03:23",
+        "dep": "03:33",
         "from": "Düsseldorf Hbf"
       },
       {
-        "dep": "04:23",
+        "dep": "04:33",
         "from": "Düsseldorf Hbf"
       },
       {
-        "dep": "04:45",
+        "dep": "04:55",
         "from": "Köln Hbf"
       },
       {
-        "dep": "03:37",
+        "dep": "03:47",
         "from": "Mainz Hbf"
       },
       {
-        "dep": "00:00",
+        "dep": "00:10",
         "to": "Koblenz Hbf"
       },
       {
-        "dep": "23:00",
+        "dep": "23:10",
         "to": "Köln Hbf"
       },
       {
-        "dep": "22:00",
+        "dep": "22:10",
         "to": "Wesel"
       }
     ],
@@ -4802,10 +4802,10 @@
       }
     ],
     "takt": {
-      "end": "21:00",
+      "end": "21:10",
       "interval": 60,
       "note": "Spätfahrten alle als Kurzläufer (bis Koblenz/Köln/Wesel)",
-      "start": "04:00"
+      "start": "04:10"
     }
   },
   "RE71_A": {
@@ -5676,51 +5676,51 @@
     "dest": "Saarbrücken Hbf",
     "extraTrips": [
       {
-        "dep": "03:09",
+        "dep": "03:05",
         "from": "Kaiserslautern Hbf"
       },
       {
-        "dep": "03:21",
+        "dep": "03:17",
         "from": "Mannheim Hbf"
       },
       {
-        "dep": "03:27",
+        "dep": "03:23",
         "from": "Stuttgart Hbf (tief)"
       },
       {
-        "dep": "03:40",
+        "dep": "03:36",
         "from": "Ulm Hbf"
       },
       {
-        "dep": "03:11",
+        "dep": "03:07",
         "from": "Lindau-Reutin"
       },
       {
-        "dep": "03:09",
+        "dep": "03:05",
         "from": "Buchs SG"
       },
       {
-        "dep": "19:27",
+        "dep": "19:23",
         "to": "Buchs SG"
       },
       {
-        "dep": "20:27",
+        "dep": "20:23",
         "to": "Lindau-Reutin"
       },
       {
-        "dep": "21:27",
+        "dep": "21:23",
         "to": "Ulm Hbf"
       },
       {
-        "dep": "22:27",
+        "dep": "22:23",
         "to": "Stuttgart Hbf (tief)"
       },
       {
-        "dep": "23:27",
+        "dep": "23:23",
         "to": "Mannheim Hbf"
       },
       {
-        "dep": "00:27",
+        "dep": "00:23",
         "to": "Kaiserslautern Hbf"
       }
     ],
@@ -5847,10 +5847,10 @@
       }
     ],
     "takt": {
-      "end": "18:27",
+      "end": "18:23",
       "interval": 60,
       "note": "Treppen-Kaskade: 6 Frühzüge mit versetztem Startbahnhof, 6 Spätzüge mit versetztem Endbahnhof",
-      "start": "03:27"
+      "start": "03:23"
     }
   },
   "RE80_B": {
@@ -5859,51 +5859,51 @@
     "dest": "Chur",
     "extraTrips": [
       {
-        "dep": "03:36",
+        "dep": "03:42",
         "from": "Buchs SG"
       },
       {
-        "dep": "03:52",
+        "dep": "03:58",
         "from": "Lindau-Reutin"
       },
       {
-        "dep": "03:25",
+        "dep": "03:31",
         "from": "Ulm Hbf"
       },
       {
-        "dep": "03:38",
+        "dep": "03:44",
         "from": "Stuttgart Hbf (tief)"
       },
       {
-        "dep": "03:42",
+        "dep": "03:48",
         "from": "Mannheim Hbf"
       },
       {
-        "dep": "03:54",
+        "dep": "04:00",
         "from": "Kaiserslautern Hbf"
       },
       {
-        "dep": "20:00",
+        "dep": "20:06",
         "to": "Buchs SG"
       },
       {
-        "dep": "21:00",
+        "dep": "21:06",
         "to": "Lindau-Reutin"
       },
       {
-        "dep": "22:00",
+        "dep": "22:06",
         "to": "Ulm Hbf"
       },
       {
-        "dep": "23:00",
+        "dep": "23:06",
         "to": "Stuttgart Hbf (tief)"
       },
       {
-        "dep": "00:00",
+        "dep": "00:06",
         "to": "Mannheim Hbf"
       },
       {
-        "dep": "01:00",
+        "dep": "01:06",
         "to": "Kaiserslautern Hbf"
       }
     ],
@@ -6030,10 +6030,10 @@
       }
     ],
     "takt": {
-      "end": "19:00",
+      "end": "19:06",
       "interval": 60,
       "note": "Treppen-Kaskade: 6 Frühzüge mit versetztem Startbahnhof, 6 Spätzüge mit versetztem Endbahnhof",
-      "start": "04:00"
+      "start": "04:06"
     }
   },
   "RE90_A": {
@@ -6205,51 +6205,51 @@
     "dest": "Saarbrücken Hbf",
     "extraTrips": [
       {
-        "dep": "02:36",
+        "dep": "03:03",
         "from": "Metz-Ville"
       },
       {
-        "dep": "02:43",
+        "dep": "03:10",
         "from": "Luxembourg"
       },
       {
-        "dep": "03:14",
+        "dep": "03:41",
         "from": "Ettelbruck"
       },
       {
-        "dep": "02:50",
+        "dep": "03:17",
         "from": "Liège-Guillemins"
       },
       {
-        "dep": "03:25",
+        "dep": "03:52",
         "from": "Aachen Hbf"
       },
       {
-        "dep": "03:30",
+        "dep": "03:57",
         "from": "Mönchengladbach Hbf"
       },
       {
-        "dep": "19:03",
+        "dep": "19:30",
         "to": "Metz-Ville"
       },
       {
-        "dep": "20:03",
+        "dep": "20:30",
         "to": "Luxembourg"
       },
       {
-        "dep": "21:03",
+        "dep": "21:30",
         "to": "Ettelbruck"
       },
       {
-        "dep": "22:03",
+        "dep": "22:30",
         "to": "Liège-Guillemins"
       },
       {
-        "dep": "23:03",
+        "dep": "23:30",
         "to": "Aachen Hbf"
       },
       {
-        "dep": "00:03",
+        "dep": "00:30",
         "to": "Mönchengladbach Hbf"
       }
     ],
@@ -6356,10 +6356,10 @@
       }
     ],
     "takt": {
-      "end": "18:03",
+      "end": "18:30",
       "interval": 60,
-      "note": "Treppen-Kaskade: 6 Frühzüge mit versetztem Startbahnhof, 6 Spätzüge mit versetztem Endbahnhof (Umlaufsymmetrie 00:32-01:47 Uhr)",
-      "start": "03:03"
+      "note": "Treppen-Kaskade: 6 Frühzüge mit versetztem Startbahnhof, 6 Spätzüge mit versetztem Endbahnhof (Umlaufsymmetrie 00:59-02:14 Uhr)",
+      "start": "03:30"
     }
   },
   "RE90b_GS": {
@@ -6570,10 +6570,10 @@
       }
     ],
     "takt": {
-      "end": "20:28",
+      "end": "20:07",
       "interval": 60,
       "note": "Zweistufige Flügelung: Kupplung/Trennung Kiel Hbf UND Leer (Ostfriesl) — siehe coupling-Feld",
-      "start": "04:28"
+      "start": "04:07"
     }
   },
   "RE90b_NK": {
@@ -6784,10 +6784,10 @@
       }
     ],
     "takt": {
-      "end": "20:28",
+      "end": "20:07",
       "interval": 60,
       "note": "Zweistufige Flügelung: Kupplung/Trennung Kiel Hbf UND Leer (Ostfriesl) — siehe coupling-Feld",
-      "start": "04:28"
+      "start": "04:07"
     }
   },
   "RE91_BO": {
@@ -6886,10 +6886,10 @@
       }
     ],
     "takt": {
-      "end": "20:51",
+      "end": "20:56",
       "interval": 60,
-      "note": "Frühfahrten ab 03:04, Spätfahrten bis 00:51",
-      "start": "04:51"
+      "note": "Frühfahrten ab 03:09, Spätfahrten bis 00:56",
+      "start": "04:56"
     }
   },
   "RE91_BS": {
@@ -6988,10 +6988,10 @@
       }
     ],
     "takt": {
-      "end": "20:51",
+      "end": "20:56",
       "interval": 60,
-      "note": "Frühfahrten ab 03:04, Spätfahrten bis 00:51",
-      "start": "04:51"
+      "note": "Frühfahrten ab 03:09, Spätfahrten bis 00:56",
+      "start": "04:56"
     }
   },
   "RE91_OB": {
@@ -7354,10 +7354,10 @@
       }
     ],
     "takt": {
-      "end": "22:52",
+      "end": "22:48",
       "interval": 60,
       "note": "Reisezeit 9h52min; HPC-Ladestopps Marktredwitz/Pegnitz; Durchfahrt ohne Halt in Markdorf, Salem, Überlingen Therme, Reichenau (Bahnsteig <185m)",
-      "start": "04:52"
+      "start": "04:48"
     }
   },
   "RE94_B": {
@@ -7517,10 +7517,10 @@
       }
     ],
     "takt": {
-      "end": "22:16",
+      "end": "22:22",
       "interval": 60,
       "note": "Reisezeit 9h52min; HPC-Ladestopps Pegnitz/Marktredwitz; Durchfahrt ohne Halt in Reichenau, Überlingen Therme, Salem, Markdorf (Bahnsteig <185m)",
-      "start": "04:16"
+      "start": "04:22"
     }
   },
   "RE9_A": {
@@ -8159,10 +8159,10 @@
       }
     ],
     "takt": {
-      "end": "06:54",
+      "end": "06:53",
       "interval": 30,
       "note": "Halbstundentakt Essen–Hagen (überlagert mit S3), Einzeltakt Hagen–Lüdenscheid",
-      "start": "06:54"
+      "start": "06:53"
     }
   },
   "S30_S": {
@@ -8265,10 +8265,10 @@
       }
     ],
     "takt": {
-      "end": "07:05",
+      "end": "07:00",
       "interval": 30,
-      "note": "Halbstundentakt Essen–Hagen (überlagert mit S3 zu effektiv 15-Min-Trunk), Einzeltakt Hagen–Lüdenscheid; Frühverstärker ab 03:35 (Essen), letzte Fahrt 00:50",
-      "start": "07:05"
+      "note": "Halbstundentakt Essen–Hagen (überlagert mit S3 zu effektiv 15-Min-Trunk), Einzeltakt Hagen–Lüdenscheid; Frühverstärker ab 03:30 (Essen), letzte Fahrt 00:45",
+      "start": "07:00"
     }
   },
   "S3_N": {

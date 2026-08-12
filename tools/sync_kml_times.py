@@ -67,7 +67,7 @@ def minimal_shift(old_phase, new_phase, interval):
 
 
 def build_variant_shifts(baseline, current):
-    """{key: {"name", "dest", "stop0", "shift", "interval"}}"""
+    """{key: {"name", "dest", "stop0", "stops", "shift", "interval"}}"""
     out = {}
     for k, v in current.items():
         if k not in baseline:
@@ -78,7 +78,8 @@ def build_variant_shifts(baseline, current):
         shift = minimal_shift(old_phase, new_phase, interval)
         out[k] = {
             "name": v["name"], "dest": v["dest"],
-            "stop0": v["stops"][0]["name"], "shift": shift, "interval": interval,
+            "stop0": v["stops"][0]["name"], "stops": [s["name"] for s in v["stops"]],
+            "shift": shift, "interval": interval,
         }
     return out
 
@@ -94,6 +95,29 @@ def dest_shift_lookup(variant_shifts):
         lut.setdefault(key, info["shift"])
         lut.setdefault((norm(info["name"]), loose_norm(info["dest"])), info["shift"])
     return lut
+
+
+def build_subsequence_index(variant_shifts):
+    """{norm(name): [(norm_stops_list, shift), ...]} — fuer Ast-Segmente
+    von Flügelzug-Uebersichten (RE90b/RE91), die nur einen TEILABSCHNITT
+    einer Variante zeigen (z.B. den gekuppelten Mittelteil), nicht deren
+    volle stop0->dest-Spanne. Ast-Herkunft/-Ziel werden als Teilfolge in
+    der VOLLSTAENDIGEN Haltefolge irgendeiner Variante gesucht."""
+    idx = {}
+    for k, info in variant_shifts.items():
+        idx.setdefault(norm(info["name"]), []).append(
+            ([norm(s) for s in info["stops"]], info["shift"])
+        )
+    return idx
+
+
+def subsequence_shift(subseq_idx, line_name, origin, dest):
+    candidates = subseq_idx.get(norm(line_name), [])
+    no, nd = norm(origin), norm(dest)
+    for stops_norm, shift in candidates:
+        if no in stops_norm and nd in stops_norm and stops_norm.index(no) <= stops_norm.index(nd):
+            return shift
+    return None
 
 
 def route_shift_lookup(variant_shifts):
@@ -156,9 +180,58 @@ def update_station_description(desc, dest_lut):
 
 HEADER_RE = re.compile(r"<b>([^<]+?)\s*→\s*([^<]+?)</b>")
 BULLET_STOP_RE = re.compile(r"&#8226;&#160;<b>([^<]+)</b>")
+AST_RE = re.compile(r"<u>Ast \d+:\s*([^<→]+?)\s*→\s*([^<]+?)</u>")
 
 
-def update_line_description(desc, placemark_line_name, route_lut):
+def _lookup_shift(route_lut, placemark_line_name, origin, dest):
+    shift = route_lut.get((norm(placemark_line_name), norm(origin), norm(dest)))
+    if shift is None:
+        shift = route_lut.get((norm(placemark_line_name), loose_norm(origin), loose_norm(dest)))
+    return shift
+
+
+def update_line_description(desc, placemark_line_name, route_lut, subseq_idx):
+    """Gibt (neue_beschreibung, status) zurueck. status: 'matched' (>=1
+    Ast/Route zugeordnet und Zeit ggf. verschoben), 'nochange' (zugeordnet,
+    aber Shift=0 — z.B. S10 Innen-/Aussenring, beide Solver-Fixpunkte ohne
+    Phasenaenderung) oder 'unmatched' (keine Zuordnung moeglich)."""
+    ast_matches = list(AST_RE.finditer(desc))
+    if ast_matches:
+        # Flügelzug-Uebersichten mit mehreren "<u>Ast N: A → B</u>"-
+        # Unterabschnitten (RE90b, RE91): jeden Ast eigenstaendig anhand
+        # SEINER EIGENEN Herkunfts-/Zielstation der passenden Variante
+        # zuordnen und nur den jeweiligen Abschnittstext verschieben —
+        # nicht die ganze Beschreibung mit einem einzigen Shift.
+        parts = []
+        prev_end = 0
+        any_matched = False
+        any_shifted = False
+        for i, am in enumerate(ast_matches):
+            seg_start = am.start()
+            seg_end = ast_matches[i + 1].start() if i + 1 < len(ast_matches) else len(desc)
+            if i == 0:
+                parts.append(desc[prev_end:seg_start])
+            segment = desc[seg_start:seg_end]
+            origin, dest = am.group(1).strip(), am.group(2).strip()
+            shift = _lookup_shift(route_lut, placemark_line_name, origin, dest)
+            if shift is None:
+                # Ast zeigt oft nur einen TEILABSCHNITT (z.B. den
+                # gekuppelten Mittelteil) statt der vollen stop0->dest-
+                # Spanne einer Variante — als Teilfolge in irgendeiner
+                # vollstaendigen Haltefolge derselben Linie suchen.
+                shift = subsequence_shift(subseq_idx, placemark_line_name, origin, dest)
+            if shift is not None:
+                any_matched = True
+                if shift != 0:
+                    segment = shift_hhmm(segment, shift)
+                    any_shifted = True
+            parts.append(segment)
+            prev_end = seg_end
+        new_desc = "".join(parts)
+        if not any_matched:
+            return desc, "unmatched"
+        return new_desc, ("matched" if any_shifted else "nochange")
+
     hm = HEADER_RE.search(desc)
     if hm:
         origin, dest = hm.group(1).strip(), hm.group(2).strip()
@@ -168,16 +241,14 @@ def update_line_description(desc, placemark_line_name, route_lut):
         # letzten Halte-Aufzaehlungspunkt der Bahnhofsliste ableiten.
         stops = BULLET_STOP_RE.findall(desc)
         if len(stops) < 2:
-            return desc, None
+            return desc, "unmatched"
         origin, dest = stops[0].strip(), stops[-1].strip()
-    key = (norm(placemark_line_name), norm(origin), norm(dest))
-    shift = route_lut.get(key)
+    shift = _lookup_shift(route_lut, placemark_line_name, origin, dest)
     if shift is None:
-        loose_key = (norm(placemark_line_name), loose_norm(origin), loose_norm(dest))
-        shift = route_lut.get(loose_key)
-    if shift is None or shift == 0:
-        return desc, shift
-    return shift_hhmm(desc, shift), shift
+        return desc, "unmatched"
+    if shift == 0:
+        return desc, "nochange"
+    return shift_hhmm(desc, shift), "matched"
 
 
 def main():
@@ -199,6 +270,7 @@ def main():
     variant_shifts = build_variant_shifts(baseline, current)
     dest_lut = dest_shift_lookup(variant_shifts)
     route_lut = route_shift_lookup(variant_shifts)
+    subseq_idx = build_subsequence_index(variant_shifts)
 
     kml_text = pathlib.Path(args.kml).read_text(encoding="utf-8")
     placemark_pat = re.compile(r"<Placemark>.*?</Placemark>", re.DOTALL)
@@ -230,10 +302,10 @@ def main():
             block = block[: dm.start()] + dm.group(1) + new_desc + dm.group(3) + block[dm.end() :]
         elif has_line.search(block):
             line_name = pname.split(" ")[0]
-            new_desc, shift = update_line_description(desc, line_name, route_lut)
-            if shift is None:
+            new_desc, status = update_line_description(desc, line_name, route_lut, subseq_idx)
+            if status == "unmatched":
                 unmatched_lines.append(pname)
-            elif shift != 0:
+            elif status == "matched":
                 n_line_updates += 1
             block = block[: dm.start()] + dm.group(1) + new_desc + dm.group(3) + block[dm.end() :]
         return block

@@ -2124,8 +2124,8 @@ function openRouteDetail(route){
     : `<b>${chips}</b><span>${legs.length-1}× Umstieg</span>`;
   let body = "";
   legs.forEach((leg, i)=>{
-    const depAtFirst = leg.dep - stopDep(LINES[leg.key].stops.find(s=>s.name===leg.from));
-    const built = buildLegHTML(leg.key, depAtFirst, leg.from, leg.to, leg.minOff, leg.maxOff);
+    const { fromIdx, toIdx, depAtFirst } = resolveLegStopIndices(leg.key, leg.from, leg.to, leg.dep, leg.arr, leg.minOff, leg.maxOff);
+    const built = buildLegHTML(leg.key, depAtFirst, leg.from, leg.to, leg.minOff, leg.maxOff, undefined, fromIdx, toIdx);
     body += built.html;
     if (i < legs.length-1){
       const wait = legs[i+1].dep - leg.arr;
@@ -2152,6 +2152,51 @@ function addReturnTrip(from, to, afterMin){
   renderVerbundCard();
 }
 
+// Findet den Halt-Index einer Station per Name, bevorzugt den, dessen Ankunfts-
+// bzw. Abfahrts-Offset zu einem bekannten Ziel-Offset passt — noetig fuer Linien,
+// die dieselbe Station mehrfach anfahren (S10/S11 an Bochum Hbf etc.), wo ein
+// reiner Namenstreffer immer den ERSTEN erwischen wuerde, egal ob der zur
+// tatsaechlich gemeinten Fahrt passt.
+function findStopIdxNear(stops, name, wantOff){
+  let best = -1, bestDiff = Infinity;
+  stops.forEach((s,i)=>{
+    if (s.name !== name) return;
+    if (wantOff === undefined || wantOff === null){ if (best === -1) best = i; return; }
+    const diff = Math.abs(stopArr(s) - wantOff);
+    if (diff < bestDiff){ bestDiff = diff; best = i; }
+  });
+  return best;
+}
+
+// Bestimmt für ein Bein einer Routensuche (leg.key/from/to/dep/arr) die exakt
+// gemeinten Halt-Indizes — nötig für Linien, die dieselbe Station mehrfach anfahren
+// (z.B. S10/S11 an Bochum Hbf, Achterschleife). leg.dep/leg.arr sind die von der
+// Streckensuche selbst bestimmten, garantiert korrekten absoluten Zeiten; hier wird
+// die Index-Kombination gesucht, deren Halt-Offsets exakt zu diesen Zeiten passt,
+// statt sich (wie ein reiner Namenstreffer es täte) blind auf den ERSTEN
+// Namensvorkommen zu verlassen — das führte sonst zu falscher Dauer/Haltestellenliste,
+// wenn die tatsächlich gebuchte Durchfahrt nicht die erste war.
+function resolveLegStopIndices(key, fromName, toName, dep, arr, minOff, maxOff){
+  const l = LINES[key];
+  const fromCands = [];
+  l.stops.forEach((s,i)=>{
+    if (s.name !== fromName) return;
+    if (minOff !== undefined && minOff !== null && stopDep(s) < minOff) return;
+    if (maxOff !== undefined && maxOff !== null && stopDep(s) > maxOff) return;
+    fromCands.push(i);
+  });
+  for (const fromIdx of fromCands){
+    const depAtFirst = dep - stopDep(l.stops[fromIdx]);
+    for (let toIdx = fromIdx+1; toIdx < l.stops.length; toIdx++){
+      if (l.stops[toIdx].name !== toName) continue;
+      if (depAtFirst + stopArr(l.stops[toIdx]) === arr) return { fromIdx, toIdx, depAtFirst };
+    }
+  }
+  // Fallback (sollte bei konsistenten Suchergebnissen nicht eintreten).
+  const fromIdx = l.stops.findIndex(s=>s.name===fromName);
+  const toIdx = l.stops.findIndex(s=>s.name===toName);
+  return { fromIdx, toIdx, depAtFirst: dep - stopDep(l.stops[fromIdx]) };
+}
 function openBoardDetail(key, depAtFirst, boardStation, mode, otherStation, minOff, maxOff, boardIdx){
   const l = LINES[key];
   const col = lineColor(l.name);
@@ -2162,8 +2207,8 @@ function openBoardDetail(key, depAtFirst, boardStation, mode, otherStation, minO
     const originName = otherStation || l.stops[0].name;
     const head = `<b><span class="chip" style="background:${col};margin-right:8px;">${l.name}</span>von ${originName}</b><span>${l.rolling}</span>`;
     TL_COLLAPSE_COUNTER = 0;
-    const leg = buildLegHTML(key, depAtFirst, originName, boardStation, minOff, maxOff, boardStation, undefined, boardIdx);
-    const originIdx = otherStation ? l.stops.findIndex(s=>s.name===otherStation) : 0;
+    const originIdx = otherStation ? findStopIdxNear(l.stops, otherStation, minOff) : 0;
+    const leg = buildLegHTML(key, depAtFirst, originName, boardStation, minOff, maxOff, boardStation, originIdx, boardIdx);
     const boardStop = l.stops[boardIdx !== undefined ? boardIdx : r_offset(key,boardStation)];
     const depAbs = depAtFirst + stopDep(l.stops[originIdx]);
     const arrAbs = depAtFirst + stopArr(boardStop);
@@ -2175,7 +2220,8 @@ function openBoardDetail(key, depAtFirst, boardStation, mode, otherStation, minO
   const displayDest = otherStation || l.dest;
   const head = `<b><span class="chip" style="background:${col};margin-right:8px;">${l.name}</span>Richtung ${displayDest}</b><span>${l.rolling}</span>`;
   TL_COLLAPSE_COUNTER = 0;
-  const leg = buildLegHTML(key, depAtFirst, boardStation, otherStation, minOff, maxOff, undefined, boardIdx);
+  const lastIdx = otherStation ? findStopIdxNear(l.stops, otherStation, maxOff) : undefined;
+  const leg = buildLegHTML(key, depAtFirst, boardStation, otherStation, minOff, maxOff, undefined, boardIdx, lastIdx);
   const boardStop = l.stops[boardIdx !== undefined ? boardIdx : r_offset(key,boardStation)];
   const lastStop = otherStation ? l.stops[l.stops.findIndex(s=>s.name===otherStation)] : l.stops[l.stops.length-1];
   const dayOffset = Math.floor((depAtFirst + stopDep(boardStop))/1440);

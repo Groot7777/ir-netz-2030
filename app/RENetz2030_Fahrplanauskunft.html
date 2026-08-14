@@ -1178,6 +1178,39 @@ function regionLabel(name){
   return r ? r.label : "";
 }
 
+// ===================== Zurück-Navigation (Android-Geste / Browser-Zurück) =====================
+// Ohne eigene history-Einträge verlässt "Zurück" sofort die ganze Seite, sobald irgendein
+// Overlay/Sheet offen ist — die Android-Zurück-Geste sprang deshalb direkt aus dem Browser,
+// statt nur das offene Feld/Sheet zu schließen. Jedes Overlay bekommt daher beim Öffnen einen
+// eigenen history-Eintrag (per Schlüssel, ein erneutes Öffnen mit demselben Schlüssel — z.B.
+// Inhaltswechsel innerhalb des schon offenen Sheets — ersetzt nur den Schließer, ohne einen
+// weiteren Eintrag anzulegen). "Zurück" (System-Geste, Browser-Button oder popstate) schließt
+// dann nur das zuletzt geöffnete; ein expliziter Schließen-Klick (X, Scrim, "Zurück"-Pfeil im
+// UI) räumt zusätzlich alle darüber liegenden Einträge mit auf, statt sie als Leichen im
+// Verlauf zurückzulassen.
+let NAV_STACK = [];
+let NAV_SUPPRESS = 0; // zaehlt selbst ausgeloeste history.go()-Sprünge, deren Popstate NICHT
+                        // nochmal die (schon erledigte) Schliess-Logik anstossen soll.
+function navOpen(key, closeFn){
+  const existing = NAV_STACK.find(e=>e.key===key);
+  if (existing){ existing.closeFn = closeFn; return; }
+  NAV_STACK.push({ key, closeFn });
+  history.pushState({ renetzNavDepth: NAV_STACK.length }, "");
+}
+function navClose(key){
+  const idx = NAV_STACK.findIndex(e=>e.key===key);
+  if (idx === -1) return;
+  const removed = NAV_STACK.splice(idx);
+  removed.forEach(e=>e.closeFn());
+  NAV_SUPPRESS++;
+  history.go(-removed.length);
+}
+window.addEventListener("popstate", ()=>{
+  if (NAV_SUPPRESS > 0){ NAV_SUPPRESS--; return; }
+  const top = NAV_STACK.pop();
+  if (top) top.closeFn();
+});
+
 // ===================== Station Picker Overlay =====================
 let pickerOnSelect = null;
 function openStationPicker(title, onSelect){
@@ -1186,10 +1219,11 @@ function openStationPicker(title, onSelect){
   document.getElementById("pickerSearchInput").value = "";
   renderPickerList("");
   document.getElementById("pickerOverlay").classList.add("open");
+  navOpen("picker", ()=> document.getElementById("pickerOverlay").classList.remove("open"));
   setTimeout(()=>document.getElementById("pickerSearchInput").focus(), 260);
 }
 function closeStationPicker(){
-  document.getElementById("pickerOverlay").classList.remove("open");
+  navClose("picker");
 }
 function renderPickerList(query){
   const list = document.getElementById("pickerList");
@@ -1585,9 +1619,10 @@ function optionsSummaryRefresh(){
 function openOptionsOverlay(){
   optionsSummaryRefresh();
   document.getElementById("optionsOverlay").classList.add("open");
+  navOpen("options", ()=> document.getElementById("optionsOverlay").classList.remove("open"));
 }
 function closeOptionsOverlay(){
-  document.getElementById("optionsOverlay").classList.remove("open");
+  navClose("options");
 }
 function renderZwischenhalte(){
   const body = document.getElementById("zwBody");
@@ -1626,11 +1661,14 @@ function renderZwischenhalte(){
 function openZwOverlay(){
   renderZwischenhalte();
   document.getElementById("zwOverlay").classList.add("open");
+  navOpen("zw", ()=>{
+    document.getElementById("zwOverlay").classList.remove("open");
+    optionsSummaryRefresh();
+    renderResults();
+  });
 }
 function closeZwOverlay(){
-  document.getElementById("zwOverlay").classList.remove("open");
-  optionsSummaryRefresh();
-  renderResults();
+  navClose("zw");
 }
 
 // ===================== Detail Sheet (Zuglauf) =====================
@@ -1644,6 +1682,10 @@ function openSheet(headHtml, metaHtml, bodyHtml){
   document.getElementById("sheetFavBtn").classList.remove("active");
   document.getElementById("detailSheet").classList.add("open");
   document.getElementById("sheetScrim").classList.add("open");
+  navOpen("sheet", ()=>{
+    document.getElementById("detailSheet").classList.remove("open");
+    document.getElementById("sheetScrim").classList.remove("open");
+  });
   document.querySelectorAll(".tl-collapse-toggle").forEach(btn=>{
     btn.addEventListener("click", ()=>{
       const body = document.getElementById(btn.dataset.target);
@@ -1668,8 +1710,7 @@ function openSheet(headHtml, metaHtml, bodyHtml){
   wireStationLinks(document.getElementById("sheetBody"));
 }
 function closeSheet(){
-  document.getElementById("detailSheet").classList.remove("open");
-  document.getElementById("sheetScrim").classList.remove("open");
+  navClose("sheet");
 }
 // Tippen auf einen Stationsnamen im Zuglauf -> Abfahrtstafel dieser Station öffnen
 // (wie im echten DB Navigator: von jedem Halt direkt zu dessen Abfahrt/Ankunft-Tab).
@@ -1699,8 +1740,7 @@ function goToBoard(stationName, mode){
   renderBoard();
 }
 function closeZwOverlayQuiet(){
-  const el = document.getElementById("zwOverlay");
-  if (el) el.classList.remove("open");
+  navClose("zw");
 }
 
 // ===================== Fahrtinformationen Overlay (Fahrtverlauf / Wagenreihung) =====================
@@ -1756,9 +1796,10 @@ function openFahrtinfo(key, depAtFirst, contextStop, minOff, maxOff){
   };
   renderFahrtinfo();
   document.getElementById("fahrtinfoOverlay").classList.add("open");
+  navOpen("fahrtinfo", ()=> document.getElementById("fahrtinfoOverlay").classList.remove("open"));
 }
 function closeFahrtinfo(){
-  document.getElementById("fahrtinfoOverlay").classList.remove("open");
+  navClose("fahrtinfo");
 }
 
 // ===================== Fahrweg-Karte (Satelliten-Ansicht, exakte KML-Streckenführung) =====================
@@ -1836,6 +1877,7 @@ function openRouteMap(route){
   document.getElementById("routeMapTitle").textContent = "Fahrweg";
   document.getElementById("netzMapLegend").style.display = "none";
   document.getElementById("routeMapOverlay").classList.add("open");
+  navOpen("routemap", ()=> document.getElementById("routeMapOverlay").classList.remove("open"));
   const container = document.getElementById("routeMapContainer");
   if (typeof L === "undefined"){
     container.innerHTML = '<div class="empty-state"><div class="big">Karte nicht verfügbar</div>Die Kartenbibliothek (Leaflet) konnte nicht geladen werden — vermutlich fehlt gerade eine Internetverbindung. Die Fahrweg-Karte lädt Kartenkacheln von einem externen Dienst und benötigt daher Online-Zugriff.</div>';
@@ -1943,7 +1985,7 @@ function openRouteMap(route){
   setTimeout(()=>{ if (ROUTE_LEAFLET_MAP===map) map.invalidateSize(); }, 200);
 }
 function closeRouteMap(){
-  document.getElementById("routeMapOverlay").classList.remove("open");
+  navClose("routemap");
 }
 // ===================== Gesamtnetzkarte (alle Linien gleichzeitig) =====================
 // Nutzt denselben Karten-Container/Overlay wie die Fahrweg-Karte (openRouteMap) — es ist
@@ -1980,6 +2022,7 @@ function initMapboxBaseLayer(map, container){
 function openNetzMap(){
   document.getElementById("routeMapTitle").textContent = "Streckennetz";
   document.getElementById("routeMapOverlay").classList.add("open");
+  navOpen("routemap", ()=> document.getElementById("routeMapOverlay").classList.remove("open"));
   const container = document.getElementById("routeMapContainer");
   if (typeof L === "undefined"){
     container.innerHTML = '<div class="empty-state"><div class="big">Karte nicht verfügbar</div>Die Kartenbibliothek (Leaflet) konnte nicht geladen werden — vermutlich fehlt gerade eine Internetverbindung.</div>';
@@ -2698,12 +2741,15 @@ function openStationProfile(name){
   document.getElementById("spTitle").textContent = name;
   document.getElementById("spBody").innerHTML = stationProfileHTML(name);
   document.getElementById("stationProfileOverlay").classList.add("open");
+  navOpen("stationprofile", ()=>{
+    const el = document.getElementById("stationProfileOverlay");
+    if (el) el.classList.remove("open");
+  });
   document.getElementById("spToDepBtn").addEventListener("click", ()=> goToBoard(name, "dep"));
   document.getElementById("spToArrBtn").addEventListener("click", ()=> goToBoard(name, "arr"));
 }
 function closeStationProfile(){
-  const el = document.getElementById("stationProfileOverlay");
-  if (el) el.classList.remove("open");
+  navClose("stationprofile");
 }
 
 // ===================== Drawer =====================
@@ -2740,14 +2786,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
   document.getElementById("menuBtn").addEventListener("click", ()=>{
     document.getElementById("drawer").classList.add("open");
     document.getElementById("scrim").classList.add("open");
+    navOpen("drawer", ()=>{
+      document.getElementById("drawer").classList.remove("open");
+      document.getElementById("scrim").classList.remove("open");
+    });
   });
   document.getElementById("drawerClose").addEventListener("click", closeDrawer);
   document.getElementById("scrim").addEventListener("click", closeDrawer);
   document.getElementById("sheetClose").addEventListener("click", closeSheet);
   document.getElementById("sheetScrim").addEventListener("click", closeSheet);
   function closeDrawer(){
-    document.getElementById("drawer").classList.remove("open");
-    document.getElementById("scrim").classList.remove("open");
+    navClose("drawer");
   }
   renderDrawer();
 

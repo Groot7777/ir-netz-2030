@@ -492,6 +492,8 @@
 .netz-group[open]>summary::before{transform:rotate(90deg);}
 .netz-group>summary .cnt{margin-left:auto;font-size:11px;font-weight:600;color:var(--text-dim);background:var(--surface-2);border-radius:999px;padding:2px 9px;}
 .stop-row.transfer-marker{display:block;padding:6px 0 6px 86px;color:var(--signal-amber);font-size:12px;line-height:1.4;}
+.netz-pill{border-color:var(--c);color:var(--text);background:rgba(11,16,32,.78);font-weight:600;opacity:.5;}
+.netz-pill.active{background:color-mix(in srgb,var(--c) 40%,#0b1020);color:#fff;border-color:var(--c);opacity:1;font-weight:700;}
 .wg-select{background:var(--surface-2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;font-size:13px;max-width:100%;}
 #loadingOverlay{position:fixed;inset:0;z-index:9999;background:var(--bg,#0b1020);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--text,#e8ecf8);font-family:var(--sans,sans-serif);text-align:center;padding:24px;}
 #loadingOverlay .ld-spin{width:34px;height:34px;border-radius:50%;border:3px solid rgba(255,255,255,.18);border-top-color:var(--accent-2,#6EA8FF);animation:ldspin .8s linear infinite;}
@@ -2124,47 +2126,7 @@ function openRouteMap(route){
   if (ROUTE_LEAFLET_MAP){ ROUTE_LEAFLET_MAP.remove(); ROUTE_LEAFLET_MAP = null; }
   const map = L.map(container, { zoomControl: true, attributionControl: true }).setView([51.3, 9.5], 6);
   ROUTE_LEAFLET_MAP = map;
-  // Fahrweg-Karte: Mapbox "Satellite Streets" — Luftbild UND Beschriftung in einem
-  // Style, landessprachlich per Voreinstellung (kein "name_en"-Bevorzugungsproblem
-  // wie bei den zuvor getesteten Fremd-Layern Esri Reference/World_Boundaries_and_
-  // Places, CARTO Voyager, OpenFreeMap+MapLibre). Voller Verlauf dieser Odyssee im
-  // Chat, hier nur noch die funktionierende Lösung.
-  const MAPBOX_TOKEN = "pk.eyJ1Ijoic3RldmVuZGsxODQ4IiwiYSI6ImNtaWl2cjU1YTAwYW4zZHM1OHlrOGZsZHIifQ.t5DaUMqtZU-gA8VxCXml3Q";
-  if (typeof L.mapboxGL === "function"){
-    try {
-      const mbLayer = L.mapboxGL({
-        accessToken: MAPBOX_TOKEN,
-        style: "mapbox://styles/mapbox/satellite-streets-v12"
-      }).addTo(map);
-      const mbMap = mbLayer.getMapboxMap && mbLayer.getMapboxMap();
-      if (mbMap){
-        // Landessprachliche Beschriftung statt Browser-/Gerätesprache: 'mul' ist
-        // der von mapbox-gl-language offiziell dafür vorgesehene Wert (mappt laut
-        // Plugin-Quellcode direkt auf das "name"-Feld der Vector-Tiles = Name in
-        // der jeweiligen Landessprache). Deutsche Ausnahmen (Prag statt Praha etc.)
-        // erstmal bewusst weggelassen — die eigene languageTransform-Erweiterung
-        // dafür hatte einen Bug ("Failed to fetch mul"); kommt sauberer nach, sobald
-        // die Grundfunktion bestätigt läuft.
-        if (typeof MapboxLanguage === "function"){
-          const language = new MapboxLanguage({ defaultLanguage: "mul" });
-          mbMap.addControl(language);
-        } else {
-          console.error("[Mapbox] mapbox-gl-language nicht verfügbar — Beschriftung bleibt in Gerätesprache.");
-        }
-        mbMap.on("error", (e)=>{
-          console.error("[Mapbox]", e && e.error);
-          const el = document.createElement("div");
-          el.style.cssText = "position:absolute;left:8px;right:8px;bottom:8px;z-index:9999;background:rgba(200,30,30,.94);color:#fff;font:12px/1.4 -apple-system,sans-serif;padding:8px 10px;border-radius:8px;";
-          el.textContent = "Mapbox-Fehler: " + ((e && e.error && e.error.message) || "unbekannt — Token prüfen oder Internetverbindung.");
-          container.appendChild(el);
-        });
-      }
-    } catch(err){
-      console.error("[Mapbox] konnte nicht initialisiert werden:", err);
-    }
-  } else {
-    console.error("[Mapbox] L.mapboxGL nicht verfügbar — mapbox-gl-leaflet konnte nicht geladen werden.");
-  }
+  initMapboxBaseLayer(map, container);
 
 
 
@@ -2230,32 +2192,64 @@ function closeRouteMap(){
 // Fahrtrichtungen einer Linie teilen sich dieselbe Geometrie) wird einmal gezeichnet.
 let NETZ_MAP_LAYERS = {};
 function initMapboxBaseLayer(map, container){
+  // Satellite Streets (Luftbild + Beschriftung). Standard: Mapbox-Rasterkacheln als
+  // normale Leaflet-Kacheln. Sie laufen beim Ziehen, Drehen (Zwei-Finger-Geste) und Zoomen
+  // exakt synchron mit den Linien. Die Vektor-GL-Karte (mapbox-gl-leaflet) hinkt dem
+  // Leaflet-Overlay bei jeder Bewegung ein paar Frames hinterher, deshalb nur noch
+  // als Rückfall, falls die Rasterkacheln nicht erreichbar sind.
   const MAPBOX_TOKEN = "pk.eyJ1Ijoic3RldmVuZGsxODQ4IiwiYSI6ImNtaWl2cjU1YTAwYW4zZHM1OHlrOGZsZHIifQ.t5DaUMqtZU-gA8VxCXml3Q";
-  if (typeof L.mapboxGL !== "function"){
-    console.error("[Mapbox] L.mapboxGL nicht verfügbar — mapbox-gl-leaflet konnte nicht geladen werden.");
-    return;
+  function banner(msg){
+    const el = document.createElement("div");
+    el.style.cssText = "position:absolute;left:8px;right:8px;bottom:8px;z-index:9999;background:rgba(200,30,30,.94);color:#fff;font:12px/1.4 -apple-system,sans-serif;padding:8px 10px;border-radius:8px;";
+    el.textContent = msg;
+    container.appendChild(el);
   }
-  try {
-    const mbLayer = L.mapboxGL({ accessToken: MAPBOX_TOKEN, style: "mapbox://styles/mapbox/satellite-streets-v12" }).addTo(map);
-    const mbMap = mbLayer.getMapboxMap && mbLayer.getMapboxMap();
-    if (mbMap){
-      if (typeof MapboxLanguage === "function"){
-        mbMap.addControl(new MapboxLanguage({ defaultLanguage: "mul" }));
-      } else {
-        console.error("[Mapbox] mapbox-gl-language nicht verfügbar — Beschriftung bleibt in Gerätesprache.");
-      }
-      mbMap.on("error", (e)=>{
-        console.error("[Mapbox]", e && e.error);
-        const el = document.createElement("div");
-        el.style.cssText = "position:absolute;left:8px;right:8px;bottom:8px;z-index:9999;background:rgba(200,30,30,.94);color:#fff;font:12px/1.4 -apple-system,sans-serif;padding:8px 10px;border-radius:8px;";
-        el.textContent = "Mapbox-Fehler: " + ((e && e.error && e.error.message) || "unbekannt — Token prüfen oder Internetverbindung.");
-        container.appendChild(el);
-      });
+  function addGL(){
+    if (typeof L.mapboxGL !== "function"){
+      console.error("[Mapbox] L.mapboxGL nicht verfügbar — mapbox-gl-leaflet konnte nicht geladen werden.");
+      banner("Mapbox-Fehler: Kartenkacheln nicht erreichbar — Internetverbindung oder Token prüfen.");
+      return;
     }
-  } catch(err){
-    console.error("[Mapbox] konnte nicht initialisiert werden:", err);
+    try {
+      const mbLayer = L.mapboxGL({ accessToken: MAPBOX_TOKEN, style: "mapbox://styles/mapbox/satellite-streets-v12", updateInterval: 0 }).addTo(map);
+      const mbMap = mbLayer.getMapboxMap && mbLayer.getMapboxMap();
+      if (mbMap){
+        if (typeof MapboxLanguage === "function") mbMap.addControl(new MapboxLanguage({ defaultLanguage: "mul" }));
+        mbMap.on("error", (e)=>{
+          console.error("[Mapbox]", e && e.error);
+          banner("Mapbox-Fehler: " + ((e && e.error && e.error.message) || "unbekannt — Token prüfen oder Internetverbindung."));
+        });
+      }
+    } catch(err){
+      console.error("[Mapbox] konnte nicht initialisiert werden:", err);
+    }
   }
+  const retina = (window.devicePixelRatio || 1) > 1.5 ? "@2x" : "";
+  const raster = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v12/tiles/512/{z}/{x}/{y}" + retina + "?access_token=" + MAPBOX_TOKEN, {
+    tileSize: 512, zoomOffset: -1, minZoom: 1, maxZoom: 20, maxNativeZoom: 20,
+    attribution: '© <a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">Mapbox</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+  }).addTo(map);
+  let ok = 0, bad = 0, swapped = false;
+  raster.on("tileload", ()=>{ ok++; });
+  raster.on("tileerror", ()=>{
+    bad++;
+    if (!swapped && ok === 0 && bad >= 3){
+      swapped = true;
+      console.error("[Mapbox] Rasterkacheln nicht ladbar — wechsle auf GL-Karte.");
+      map.removeLayer(raster);
+      addGL();
+    }
+  });
+  // Kartengröße nachführen (sonst bleibt am Rand ein grauer Streifen, wenn sich der
+  // Container nach dem Öffnen noch ändert: Overlay-Animation, Scrollbalken, Drehen des Geräts)
+  if (typeof ResizeObserver === "function"){
+    const ro = new ResizeObserver(()=>{ if (map._loaded && map._container) map.invalidateSize({ animate: false }); });
+    ro.observe(container);
+    map.on("unload", ()=>ro.disconnect());
+  }
+  [60, 250, 700].forEach(ms=>setTimeout(()=>{ if (map._loaded && map._container) map.invalidateSize({ animate: false }); }, ms));
 }
+
 function openNetzMap(){
   document.getElementById("routeMapTitle").textContent = "Streckennetz";
   document.getElementById("routeMapOverlay").classList.add("open");
@@ -2266,7 +2260,7 @@ function openNetzMap(){
   }
   container.innerHTML = "";
   if (ROUTE_LEAFLET_MAP){ ROUTE_LEAFLET_MAP.remove(); ROUTE_LEAFLET_MAP = null; }
-  const map = L.map(container, { zoomControl: true, attributionControl: true, preferCanvas: true }).setView([51.3, 9.5], 5);
+  const map = L.map(container, { zoomControl: true, attributionControl: true, renderer: L.canvas({ padding: 0.6 }) }).setView([51.3, 9.5], 5);
   ROUTE_LEAFLET_MAP = map;
   initMapboxBaseLayer(map, container);
 
@@ -2339,13 +2333,12 @@ function renderNetzMapLegend(){
     const la = NETZ_MAP_LAYERS[a].lazy ? 1 : 0, lb = NETZ_MAP_LAYERS[b].lazy ? 1 : 0;
     return (la-lb) || a.localeCompare(b,"de",{numeric:true});
   });
-  el.innerHTML = ids.map(id=>{ const e = NETZ_MAP_LAYERS[id]; return `<button class="train-pill ${e.lazy?"":"active"}" data-line="${id}" style="border-color:${e.color};color:${e.color};${e.lazy?"opacity:.35;":""}">${e.name}</button>`; }).join("");
+  el.innerHTML = ids.map(id=>{ const e = NETZ_MAP_LAYERS[id]; return `<button class="train-pill netz-pill ${e.lazy?"":"active"}" data-line="${id}" style="--c:${e.color}">${e.name}</button>`; }).join("");
   el.querySelectorAll(".train-pill").forEach(btn=>{
     btn.addEventListener("click", ()=>{
       const entry = NETZ_MAP_LAYERS[btn.dataset.line];
       if (!entry || !ROUTE_LEAFLET_MAP) return;
       const isOn = btn.classList.toggle("active");
-      btn.style.opacity = isOn ? "1" : "0.35";
       if (isOn){ if (entry.lazy && !entry.built) entry.build(); entry.layer.addTo(ROUTE_LEAFLET_MAP); }
       else ROUTE_LEAFLET_MAP.removeLayer(entry.layer);
     });

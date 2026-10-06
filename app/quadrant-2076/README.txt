@@ -38,3 +38,5 @@ Annahmen
 Bekannte Lücke in den Quelldaten
   Sieben kleine Teilnetze (zusammen 327 Halte, z. B. um Bonn-Todenfeld und Bielefeld-Rheda-Wiedenbrück)
   hängen in den Quelldateien an keiner anderen Linie und keinem Bahnhof. Von dort gibt es keine Verbindung ins restliche Netz.
+
+Karte: Satellitenbild kommt jetzt als Mapbox-Rasterkacheln (normale Leaflet-Kacheln), damit Linien und Hintergrund beim Ziehen, Drehen und Zoomen exakt zusammenbleiben. Nur wenn die Rasterkacheln nicht ladbar sind, springt die Seite auf die frühere GL-Karte zurück.

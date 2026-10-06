@@ -1,2 +1,5 @@
 data/
 __pycache__/
+
+# Daten der Quadrant-2076-Auskunft müssen mit ins Repository
+!app/quadrant-2076/data/

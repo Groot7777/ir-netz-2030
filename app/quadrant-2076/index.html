@@ -2417,10 +2417,38 @@ function mockPrice(durationMin){
 // Streckenkilometer-Modell vorhanden): ~78 km/h Reisegeschwindigkeit als Faustwert,
 // ~0,09 kg CO2 Einsparung pro Personenkilometer ggü. Pkw (grobe Anlehnung an
 // Umweltbundesamt-Vergleichswerte Bahn-Nahverkehr vs. Pkw).
-function mockCO2Saved(durationMin){
-  const distanceKm = Math.round(durationMin * 1.3);
-  const kg = Math.round(distanceKm * 0.09);
-  return { distanceKm, kg };
+// CO₂-Ersparnis ggü. Pkw: echte Strecke aus den Stations-Koordinaten (Luftlinie von Halt zu Halt
+// entlang der Fahrt). Pkw 0,147 kg/km, Bahn RE/S/IR 0,035 kg/km, Quadrant-Verkehrsmittel 0,015 kg/km.
+function fmtNum(n){ return Number(n).toLocaleString("de-DE"); }
+function coordOfStop(name){
+  if (STATION_COORDS[name]) return STATION_COORDS[name];
+  for (const n of aliasesOf(name)){ if (STATION_COORDS[n]) return STATION_COORDS[n]; }
+  return null;
+}
+function haversineKm(a, b){
+  const R = 6371, rad = Math.PI/180;
+  const dLat = (b[1]-a[1])*rad, dLon = (b[0]-a[0])*rad;
+  const h = Math.sin(dLat/2)**2 + Math.cos(a[1]*rad)*Math.cos(b[1]*rad)*Math.sin(dLon/2)**2;
+  return 2*R*Math.asin(Math.min(1, Math.sqrt(h)));
+}
+function mockCO2Saved(route){
+  let distanceKm = 0, trainKg = 0;
+  (route.legs||[]).forEach(leg=>{
+    const l = LINES[leg.key];
+    const i1 = l.stops.findIndex(s=>s.name===leg.from);
+    let i2 = l.stops.findIndex((s,q)=>q>i1 && s.name===leg.to);
+    if (i1 < 0 || i2 < 0) return;
+    let km = 0, prev = null;
+    for (let q = i1; q <= i2; q++){
+      const c = coordOfStop(l.stops[q].name);
+      if (c && prev) km += haversineKm(prev, c);
+      if (c) prev = c;
+    }
+    const f = (l.mode==="re" || l.mode==="s" || l.mode==="ir") ? 0.035 : 0.015;
+    distanceKm += km; trainKg += km*f;
+  });
+  const kg = Math.max(0, Math.round(distanceKm*0.147 - trainKg));
+  return { distanceKm: Math.round(distanceKm), kg };
 }
 // One leg = one train ride from fromName to toName (or to terminus if toName undefined).
 function buildLegHTML(key, depAtFirst, fromName, toName, minOff, maxOff, contextStop){
@@ -2514,11 +2542,11 @@ function openRouteDetail(route){
   const dayOffset = Math.floor(route.depO/1440);
   const returnFrom = route.tailWalk ? route.tailWalk.to : legs[legs.length-1].to, returnTo = legs[0].from;
   body += `<div style="padding:0 18px;"><button class="zw-add-btn" id="addReturnBtn" data-from="${returnFrom.replace(/"/g,'&quot;')}" data-to="${returnTo.replace(/"/g,'&quot;')}" data-afterarr="${route.arrD}" style="margin-top:16px;">Rückfahrt hinzufügen</button></div>`;
-  const detailCO2 = mockCO2Saved(route.duration);
+  const detailCO2 = mockCO2Saved(route);
   if (isQuadrantRoute(route)){
-    body += `<div class="tl-fare-box"><div><div class="price">kostenlos</div><span class="pricelabel">Quadrant-Verbindung</span></div><div style="text-align:right;font-size:12px;color:var(--signal-green);">🌱 ca. ${detailCO2.kg} kg CO₂ gespart<br><span style="color:var(--text-faint);font-size:10.5px;">ggü. Pkw auf ca. ${detailCO2.distanceKm} km</span></div></div>`;
+    body += `<div class="tl-fare-box"><div><div class="price">kostenlos</div><span class="pricelabel">Quadrant-Verbindung</span></div><div style="text-align:right;font-size:12px;color:var(--signal-green);">🌱 ca. ${fmtNum(detailCO2.kg)} kg CO₂ gespart<br><span style="color:var(--text-faint);font-size:10.5px;">ggü. Pkw auf ca. ${fmtNum(detailCO2.distanceKm)} km</span></div></div>`;
   } else {
-    body += `<div class="tl-fare-box"><div><div class="price">ab ${mockPrice(route.duration)} €</div><span class="pricelabel">Teilstreckenpreis¹</span></div><div style="text-align:right;font-size:12px;color:var(--signal-green);">🌱 ca. ${detailCO2.kg} kg CO₂ gespart<br><span style="color:var(--text-faint);font-size:10.5px;">ggü. Pkw auf ca. ${detailCO2.distanceKm} km</span></div></div>`;
+    body += `<div class="tl-fare-box"><div><div class="price">ab ${mockPrice(route.duration)} €</div><span class="pricelabel">Teilstreckenpreis¹</span></div><div style="text-align:right;font-size:12px;color:var(--signal-green);">🌱 ca. ${fmtNum(detailCO2.kg)} kg CO₂ gespart<br><span style="color:var(--text-faint);font-size:10.5px;">ggü. Pkw auf ca. ${fmtNum(detailCO2.distanceKm)} km</span></div></div>`;
     body += `<button class="tl-offer-btn" id="toOfferBtn" style="width:calc(100% - 36px);display:block;">Zur Angebotsauswahl</button>`;
   }
   openSheet(head, sheetMetaHTML(dayOffset, route.duration), body);
@@ -2691,7 +2719,7 @@ function routeCard(route, from, to, idx){
   const couplingRow = couplingHints.length
     ? `<div class="conn-mid" style="color:var(--signal-amber);font-size:11px;">${couplingHints.join(" · ")}</div>`
     : "";
-  const co2 = mockCO2Saved(route.duration);
+  const co2 = mockCO2Saved(route);
   el.innerHTML = `
     <div class="conn-top">
       <div class="conn-times mono">${fmt(route.depO)}<span class="arrow">→</span>${fmt(route.arrD)}</div>
@@ -2700,7 +2728,7 @@ function routeCard(route, from, to, idx){
     ${mid}
     ${couplingRow}
     <div class="conn-mid">${badge}</div>
-    <div class="conn-mid" style="color:var(--signal-green);font-size:11px;">🌱 ca. ${co2.kg} kg CO₂ gespart ggü. Pkw</div>`;
+    <div class="conn-mid" style="color:var(--signal-green);font-size:11px;">🌱 ca. ${fmtNum(co2.kg)} kg CO₂ gespart ggü. Pkw</div>`;
   return el;
 }
 

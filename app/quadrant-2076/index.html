@@ -3269,5 +3269,77 @@ window.startApp = function(){
 })();
 
 </script>
+<script>
+// ===================== Zurück-Taste (Handy): eine Aktion zurück statt Seite verlassen =====================
+// Jedes Fenster (Menü, Auswahl, Details, Karte, Profil ...) und jeder Tab-Wechsel wird als Verlaufsschritt
+// gemerkt. Zurück schließt zuerst das oberste Fenster, danach geht es zum vorigen Tab. Erst auf der
+// Startansicht verlässt die Zurück-Taste die Seite.
+(function(){
+  if (!window.history || !history.pushState) return;
+  var $ = function(id){ return document.getElementById(id); };
+  var last = 0, ignore = 0;
+  function nextSeq(){ last = Math.max(last + 1, Date.now()); return last; }
+  function curView(){ var v = document.querySelector(".view.active"); return v ? v.id.replace(/^view-/, "") : null; }
+  function safe(fn){ try { fn(); } catch(e){ console.error(e); } }
+
+  var LAYERS = [
+    { id:"pickerOverlay",         close:function(){ closeStationPicker(); } },
+    { id:"optionsOverlay",        close:function(){ closeOptionsOverlay(); renderResults(); } },
+    { id:"zwOverlay",             close:function(){ closeZwOverlay(); } },
+    { id:"detailSheet",           close:function(){ closeSheet(); } },
+    { id:"fahrtinfoOverlay",      close:function(){ closeFahrtinfo(); } },
+    { id:"routeMapOverlay",       close:function(){ closeRouteMap(); } },
+    { id:"stationProfileOverlay", close:function(){ closeStationProfile(); } },
+    { id:"drawer",                close:function(){ $("drawer").classList.remove("open"); var s=$("scrim"); if (s) s.classList.remove("open"); } }
+  ];
+
+  try { history.replaceState({ t:"view", seq:0, view:curView() }, ""); } catch(e){}
+
+  LAYERS.forEach(function(L){
+    L.el = $(L.id); L.pushSeq = 0;
+    if (!L.el) return;
+    new MutationObserver(function(){
+      var open = L.el.classList.contains("open");
+      if (open && !L.pushSeq){
+        L.pushSeq = nextSeq();
+        history.pushState({ t:"layer", id:L.id, seq:L.pushSeq }, "");
+      } else if (!open && L.pushSeq){
+        // per Button geschlossen: den zugehörigen Verlaufsschritt wieder abbauen, falls er ganz oben liegt
+        if (history.state && history.state.seq === L.pushSeq){ ignore++; history.back(); }
+        L.pushSeq = 0;
+      }
+    }).observe(L.el, { attributes:true, attributeFilter:["class"] });
+  });
+
+  // Tab-Wechsel als Verlaufsschritt
+  var origSwitch = window.switchView, restoring = false;
+  if (typeof origSwitch === "function"){
+    window.switchView = function(name){
+      var before = curView();
+      origSwitch.apply(this, arguments);
+      if (!restoring && name !== before){
+        history.pushState({ t:"view", seq:nextSeq(), view:name }, "");
+      }
+    };
+  }
+
+  window.addEventListener("popstate", function(e){
+    if (ignore > 0){ ignore--; return; }
+    var s = e.state || { t:"view", seq:0, view:null };
+    var sseq = s.seq || 0;
+    // Fenster schließen, deren Verlaufsschritt gerade zurückgegangen wurde (oberstes zuerst)
+    LAYERS.filter(function(L){ return L.pushSeq && L.pushSeq > sseq; })
+          .sort(function(a,b){ return b.pushSeq - a.pushSeq; })
+          .forEach(function(L){ L.pushSeq = 0; safe(L.close); });
+    if (s.t === "layer"){
+      // veralteter Schritt (Fenster ist schon zu): überspringen
+      var alive = LAYERS.some(function(L){ return L.pushSeq === sseq; });
+      if (!alive) history.back();
+    } else if (s.t === "view" && s.view && s.view !== curView()){
+      restoring = true; safe(function(){ origSwitch(s.view); }); restoring = false;
+    }
+  });
+})();
+</script>
 </body>
 </html>

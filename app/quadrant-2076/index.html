@@ -2417,8 +2417,17 @@ function mockPrice(durationMin){
 // Streckenkilometer-Modell vorhanden): ~78 km/h Reisegeschwindigkeit als Faustwert,
 // ~0,09 kg CO2 Einsparung pro Personenkilometer ggü. Pkw (grobe Anlehnung an
 // Umweltbundesamt-Vergleichswerte Bahn-Nahverkehr vs. Pkw).
-// CO₂-Ersparnis ggü. Pkw: echte Strecke aus den Stations-Koordinaten (Luftlinie von Halt zu Halt
-// entlang der Fahrt). Pkw 0,147 kg/km, Bahn RE/S/IR 0,035 kg/km, Quadrant-Verkehrsmittel 0,015 kg/km.
+// CO₂-Ersparnis ggü. Pkw und Flugzeug: Strecke aus den Stations-Koordinaten (Luftlinie von Halt zu Halt
+// entlang der Fahrt). Werte: Umweltbundesamt, TREMOD 6.71B (Bezugsjahr 2024, Stand 10/2025), in kg CO₂-Äq./Pkm:
+// Pkw 0,164 · Flugzeug Inland 0,290 (inkl. Nicht-CO₂-Effekte) · Bahn Fernverkehr 0,026 · Bahn Nahverkehr 0,044 ·
+// Straßen-/Stadt-/U-Bahn 0,042. Quadrant-Verkehrsmittel (Maglev, Vactrain): eigene Annahme 0,015.
+const CO2_PKW = 0.164, CO2_FLUG = 0.290;
+function co2FactorOfLine(l){
+  if (l.mode==="ir") return 0.026;
+  if (l.mode==="re" || l.mode==="s") return 0.044;
+  if (l.mode==="metro" || l.mode==="mx") return 0.042;
+  return 0.015;
+}
 function fmtNum(n){ return Number(n).toLocaleString("de-DE"); }
 function coordOfStop(name){
   if (STATION_COORDS[name]) return STATION_COORDS[name];
@@ -2444,19 +2453,17 @@ function mockCO2Saved(route){
       if (c && prev) km += haversineKm(prev, c);
       if (c) prev = c;
     }
-    const f = (l.mode==="re" || l.mode==="s" || l.mode==="ir") ? 0.035 : 0.015;
-    distanceKm += km; trainKg += km*f;
+    distanceKm += km; trainKg += km*co2FactorOfLine(l);
   });
-  const kg = Math.max(0, Math.round(distanceKm*0.147 - trainKg));
-  // Flugzeug: Luftlinie Start–Ziel +5 % Umwege + 50 km (Start/Landung), 0,214 kg CO₂/Personenkilometer
-  // (Richtwert Umweltbundesamt für Flüge inkl. Nicht-CO₂-Effekte, Stand 2020er; Annahme für 2026).
+  const kg = Math.max(0, Math.round(distanceKm*CO2_PKW - trainKg));
+  // Flugzeug: Luftlinie Start–Ziel +5 % Umwege + 50 km (Start/Landung); UBA-Wert gilt für Inlandsflüge.
   let flightKm = 0;
   const L = route.legs||[];
   if (L.length){
     const c1 = coordOfStop(L[0].from), c2 = coordOfStop(L[L.length-1].to);
     if (c1 && c2) flightKm = haversineKm(c1, c2)*1.05 + 50;
   }
-  const flightKg = Math.max(0, Math.round(flightKm*0.214 - trainKg));
+  const flightKg = Math.max(0, Math.round(flightKm*CO2_FLUG - trainKg));
   return { distanceKm: Math.round(distanceKm), kg, flightKm: Math.round(flightKm), flightKg };
 }
 // One leg = one train ride from fromName to toName (or to terminus if toName undefined).

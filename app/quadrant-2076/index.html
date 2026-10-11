@@ -1289,8 +1289,12 @@ function lineMatches(l, mode){
     case "s": return m==="s";
     case "ir": return m==="ir";
     case "hb": return m==="metro" || m==="xf" || m==="xe" || m==="mx";
+    case "metro": return m==="metro";
+    case "xf": return m==="xf";
+    case "xe": return m==="xe";
     case "mx": return m==="mx";
-    case "mg": return m==="mg700" || m==="erde";
+    case "mg": return m==="mg700" || (m==="erde" && !/^Vactrain/.test(l.rolling));
+    case "vt": return m==="erde" && /^Vactrain/.test(l.rolling);
   }
   return true;
 }
@@ -2701,9 +2705,9 @@ function routeCard(route, from, to, idx){
 }
 
 // ===================== Verkehrsmittel-Filter =====================
-const VM_ORDER = ["alle","re","s","ir","hb","mx","mg"];
+const VM_ORDER = ["alle","re","s","ir","hb","metro","mx","xf","xe","mg","vt"];
 function vmLabel(m){
-  return { alle:"Alle", re:"Nur RE/RB", s:"Nur S-Bahn", ir:"Nur IR", hb:"Nur Hochbahn (Metro/MetroX/Maglev)", mx:"Nur MetroX", mg:"Nur Maglev 700/Erde" }[m] || "Alle";
+  return { alle:"Alle", re:"Nur RE/RB", s:"Nur S-Bahn", ir:"Nur IR", hb:"Nur Hochbahn (Metro/MetroX/Maglev XF/XE)", metro:"Nur Metro", mx:"Nur MetroX", xf:"Nur Maglev XF", xe:"Nur Express XE", mg:"Nur Maglev 700 (Erde)", vt:"Nur Vactrain" }[m] || "Alle";
 }
 function modeIconSvg(mode){
   if (mode==="s") return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M8 21l1.5-3h5L16 21M8 11h8"/></svg>';

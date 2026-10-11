@@ -464,6 +464,10 @@
 
   /* ---- Leaflet Karte (Fahrweg-Ansicht) ---- */
   #routeMapContainer .leaflet-container{ background:#0A0F1C; width:100%; height:100%; }
+  #routeMapContainer .mapboxgl-map{ width:100%; height:100%; background:#04060e; }
+  .mapboxgl-popup-content{ background:#121a30; color:#E8ECF6; font:13px/1.4 -apple-system,sans-serif; border-radius:8px; }
+  .mapboxgl-popup-tip{ display:none; }
+  .mapboxgl-popup-close-button{ color:#E8ECF6; }
   .leaflet-popup-content-wrapper{ background:var(--surface); color:var(--text); border-radius:10px; }
   .leaflet-popup-tip{ background:var(--surface); }
   .rm-station-icon{
@@ -2167,7 +2171,7 @@ function legPathCoords(leg){
 }
 let CURRENT_SHEET_ROUTE = null;
 let ROUTE_LEAFLET_MAP = null;
-function openRouteMap(route){
+function openRouteMapLeaflet(route){
   if (!route || !route.legs || !route.legs.length) return;
   document.getElementById("routeMapTitle").textContent = "Fahrweg";
   document.getElementById("netzMapLegend").style.display = "none";
@@ -2240,6 +2244,7 @@ function openRouteMap(route){
 }
 function closeRouteMap(){
   document.getElementById("routeMapOverlay").classList.remove("open");
+  if (typeof GL_MAP !== "undefined" && GL_MAP){ try { GL_MAP.remove(); } catch(e){} GL_MAP = null; }
 }
 // ===================== Gesamtnetzkarte (alle Linien gleichzeitig) =====================
 // Nutzt denselben Karten-Container/Overlay wie die Fahrweg-Karte (openRouteMap) — es ist
@@ -2305,7 +2310,7 @@ function initMapboxBaseLayer(map, container){
   [60, 250, 700].forEach(ms=>setTimeout(()=>{ if (map._loaded && map._container) map.invalidateSize({ animate: false }); }, ms));
 }
 
-function openNetzMap(){
+function openNetzMapLeaflet(){
   document.getElementById("routeMapTitle").textContent = "Streckennetz";
   document.getElementById("routeMapOverlay").classList.add("open");
   const container = document.getElementById("routeMapContainer");
@@ -2379,6 +2384,237 @@ function openNetzMap(){
   if (allLatLngs.length) map.fitBounds(allLatLngs, { padding:[20,20] });
   setTimeout(()=>{ if (ROUTE_LEAFLET_MAP===map) map.invalidateSize(); }, 200);
   renderNetzMapLegend();
+}
+// ===================== Globus-Karten (Mapbox GL, Projektion "globe") =====================
+// Fahrweg und Streckennetz laufen auf einer Kugel. Die Linien sind echte Karten-Ebenen (GeoJSON in
+// der Karte selbst), sie bleiben deshalb beim Drehen, Kippen und Zoomen fest an ihrem Ort.
+// Lange Strecken werden entlang des Großkreises verdichtet, Längengrade fortlaufend ausgerollt
+// (z.B. über die Datumsgrenze), damit kein Strich quer um die Welt läuft.
+const MAPBOX_GL_TOKEN = "pk.eyJ1Ijoic3RldmVuZGsxODQ4IiwiYSI6ImNtaWl2cjU1YTAwYW4zZHM1OHlrOGZsZHIifQ.t5DaUMqtZU-gA8VxCXml3Q";
+let GL_MAP = null;
+function glSupported(){
+  try { return typeof mapboxgl !== "undefined" && mapboxgl.supported && mapboxgl.supported({ failIfMajorPerformanceCaveat:false }); }
+  catch(e){ return false; }
+}
+function gcInterp(a, b, f){
+  const rad = Math.PI/180, deg = 180/Math.PI;
+  const la1=a[1]*rad, lo1=a[0]*rad, la2=b[1]*rad, lo2=b[0]*rad;
+  const d = 2*Math.asin(Math.sqrt(Math.sin((la2-la1)/2)**2 + Math.cos(la1)*Math.cos(la2)*Math.sin((lo2-lo1)/2)**2));
+  if (d < 1e-9) return [a[0], a[1]];
+  const A = Math.sin((1-f)*d)/Math.sin(d), B = Math.sin(f*d)/Math.sin(d);
+  const x = A*Math.cos(la1)*Math.cos(lo1) + B*Math.cos(la2)*Math.cos(lo2);
+  const y = A*Math.cos(la1)*Math.sin(lo1) + B*Math.cos(la2)*Math.sin(lo2);
+  const z = A*Math.sin(la1) + B*Math.sin(la2);
+  return [Math.atan2(y,x)*deg, Math.atan2(z, Math.sqrt(x*x+y*y))*deg];
+}
+// pts: [[lon,lat],...] -> verdichtet + fortlaufende Längengrade
+function glLine(pts){
+  const out = [];
+  const push = (p)=>{
+    let lon = p[0];
+    if (out.length){ const pl = out[out.length-1][0]; while (lon - pl > 180) lon -= 360; while (lon - pl < -180) lon += 360; }
+    out.push([lon, p[1]]);
+  };
+  for (let i = 0; i < pts.length; i++){
+    if (i === 0){ push(pts[0]); continue; }
+    const a = pts[i-1], b = pts[i];
+    const dLat = Math.abs(b[1]-a[1]);
+    let dLon = Math.abs(b[0]-a[0]); if (dLon > 180) dLon = 360-dLon;
+    if (dLat + dLon > 0.8){ // grob > 70 km: Großkreis verdichten
+      const km = haversineKm(a, b), n = Math.min(400, Math.ceil(km/60));
+      for (let k = 1; k < n; k++) push(gcInterp(a, b, k/n));
+    }
+    push(b);
+  }
+  return out;
+}
+const toLonLat = latlngs => latlngs.map(([la,lo])=>[lo,la]);
+// Mapbox kennt nur "hsl(h, s%, l%)" mit Kommas -> Farben vorher über ein Canvas in #rrggbb umrechnen
+const __glc = {}; let __glcCtx = null;
+function glColor(c){
+  if (__glc[c]) return __glc[c];
+  if (!__glcCtx) __glcCtx = document.createElement("canvas").getContext("2d");
+  __glcCtx.fillStyle = "#000"; __glcCtx.fillStyle = c;
+  return (__glc[c] = __glcCtx.fillStyle);
+}
+function glCreateMap(container, onReady){
+  mapboxgl.accessToken = MAPBOX_GL_TOKEN;
+  if (GL_MAP){ try { GL_MAP.remove(); } catch(e){} GL_MAP = null; }
+  container.innerHTML = "";
+  const map = new mapboxgl.Map({
+    container, style: "mapbox://styles/mapbox/satellite-streets-v12",
+    projection: "globe", center: [10, 30], zoom: 1.4, attributionControl: true
+  });
+  GL_MAP = map;
+  map.addControl(new mapboxgl.NavigationControl({ visualizePitch:true }), "top-left");
+  if (typeof MapboxLanguage === "function"){ try { map.addControl(new MapboxLanguage({ defaultLanguage: "mul" })); } catch(e){} }
+  map.on("error", (e)=>{
+    console.error("[Mapbox]", e && e.error);
+    if (container.querySelector(".gl-err")) return;
+    const el = document.createElement("div"); el.className = "gl-err";
+    el.style.cssText = "position:absolute;left:8px;right:8px;bottom:28px;z-index:9;background:rgba(200,30,30,.94);color:#fff;font:12px/1.4 -apple-system,sans-serif;padding:8px 10px;border-radius:8px;";
+    el.textContent = "Mapbox-Fehler: " + ((e && e.error && e.error.message) || "unbekannt — Token prüfen oder Internetverbindung.");
+    container.appendChild(el);
+  });
+  map.on("style.load", ()=>{
+    try { map.setFog({ color:"rgb(14,20,40)", "high-color":"rgb(30,50,100)", "horizon-blend":0.04, "space-color":"rgb(4,6,14)", "star-intensity":0.6 }); } catch(e){}
+    onReady(map);
+  });
+  [60, 250, 700].forEach(ms=>setTimeout(()=>{ if (GL_MAP === map) map.resize(); }, ms));
+  return map;
+}
+function glAddLines(map, id, features, width, opacity){
+  map.addSource(id, { type:"geojson", data:{ type:"FeatureCollection", features } });
+  map.addLayer({ id, type:"line", source:id, layout:{ "line-cap":"round", "line-join":"round" },
+    paint:{ "line-color":["get","c"], "line-width":width, "line-opacity":opacity } });
+  map.on("click", id, (e)=>{
+    const f = e.features && e.features[0]; if (!f) return;
+    new mapboxgl.Popup({ closeButton:true }).setLngLat(e.lngLat).setHTML(f.properties.t || "").addTo(map);
+  });
+  map.on("mouseenter", id, ()=>{ map.getCanvas().style.cursor = "pointer"; });
+  map.on("mouseleave", id, ()=>{ map.getCanvas().style.cursor = ""; });
+}
+function glFit(map, lines, pad){
+  const b = new mapboxgl.LngLatBounds(); let any = false;
+  lines.forEach(l=>l.forEach(p=>{ b.extend(p); any = true; }));
+  if (any) map.fitBounds(b, { padding:pad||40, maxZoom:12, duration:0 });
+}
+function openRouteMapGL(route){
+  document.getElementById("routeMapTitle").textContent = "Fahrweg";
+  document.getElementById("netzMapLegend").style.display = "none";
+  document.getElementById("routeMapOverlay").classList.add("open");
+  const container = document.getElementById("routeMapContainer");
+  glCreateMap(container, (map)=>{
+    const lineFeat = [], lines = [], minor = [], marks = [];
+    route.legs.forEach(leg=>{
+      const coords = legPathCoords(leg);
+      if (coords.length < 2) return;
+      const ln = glLine(toLonLat(coords));
+      lines.push(ln);
+      lineFeat.push({ type:"Feature", properties:{ c:glColor(lineColor(LINES[leg.key].name)), t:`<b>${LINES[leg.key].name}</b>` }, geometry:{ type:"LineString", coordinates: ln } });
+    });
+    // Zwischenhalte (klein) — Namen beim Antippen
+    route.legs.forEach(leg=>{
+      const l = LINES[leg.key];
+      const i1 = l.stops.findIndex(s=>s.name===leg.from);
+      const i2 = l.stops.findIndex((s,k)=>k>i1 && s.name===leg.to);
+      if (i1 === -1 || i2 === -1) return;
+      for (let k = i1+1; k < i2; k++){
+        const c = getStationCoord(l.stops[k].name); if (!c) continue;
+        minor.push({ type:"Feature", properties:{ t:`<b>${l.stops[k].name}</b>` }, geometry:{ type:"Point", coordinates:[c[0], c[1]] } });
+      }
+    });
+    route.legs.forEach((leg, i)=>{
+      const fromC = getStationCoord(leg.from), toC = getStationCoord(leg.to);
+      if (fromC){ const st = i===0;
+        marks.push({ type:"Feature", properties:{ c: st?"#21C77A":"#F5A623", label: leg.from, t:`<b>${leg.from}</b><br>${st?"Einstieg":"Umstieg"} · ${fmt(leg.dep)}` }, geometry:{ type:"Point", coordinates:[fromC[0], fromC[1]] } }); }
+      if (toC && i === route.legs.length-1)
+        marks.push({ type:"Feature", properties:{ c:"#F0455C", label: leg.to, t:`<b>${leg.to}</b><br>Ausstieg · ${fmt(leg.arr)}` }, geometry:{ type:"Point", coordinates:[toC[0], toC[1]] } });
+    });
+    glAddLines(map, "route-lines", lineFeat, 5, 0.95);
+    map.addSource("route-minor", { type:"geojson", data:{ type:"FeatureCollection", features:minor } });
+    map.addLayer({ id:"route-minor", type:"circle", source:"route-minor", paint:{ "circle-radius":4, "circle-color":"#9AA5B8", "circle-stroke-color":"#fff", "circle-stroke-width":1.5 } });
+    map.addSource("route-marks", { type:"geojson", data:{ type:"FeatureCollection", features:marks } });
+    map.addLayer({ id:"route-marks", type:"circle", source:"route-marks", paint:{ "circle-radius":7, "circle-color":["get","c"], "circle-stroke-color":"#fff", "circle-stroke-width":2 } });
+    map.addLayer({ id:"route-labels", type:"symbol", source:"route-marks", layout:{ "text-field":["get","label"], "text-font":["DIN Pro Medium","Arial Unicode MS Regular"], "text-size":13, "text-offset":[0,-1.4], "text-anchor":"bottom", "text-max-width":10, "text-allow-overlap":true },
+      paint:{ "text-color":"#fff", "text-halo-color":"rgba(10,15,28,.95)", "text-halo-width":2 } });
+    ["route-minor","route-marks"].forEach(id=>{
+      map.on("click", id, (e)=>{ const f = e.features && e.features[0]; if (f) new mapboxgl.Popup().setLngLat(f.geometry.coordinates).setHTML(f.properties.t).addTo(map); });
+    });
+    glFit(map, lines.length ? lines : [marks.map(m=>m.geometry.coordinates)], 40);
+  });
+}
+function openNetzMapGL(){
+  document.getElementById("routeMapTitle").textContent = "Streckennetz";
+  document.getElementById("routeMapOverlay").classList.add("open");
+  const container = document.getElementById("routeMapContainer");
+  NETZ_MAP_LAYERS = {};
+  glCreateMap(container, (map)=>{
+    const fit = [];
+    const add = (id, feats, width)=>{ glAddLines(map, id, feats, width, 0.88); };
+    const feat = (pts, col, html)=>({ type:"Feature", properties:{ c:glColor(col), t:html }, geometry:{ type:"LineString", coordinates: glLine(toLonLat(pts)) } });
+    // RE-/S-/IR-Netz: je Linie eigene Ebene (an-/abschaltbar)
+    const seenBase = new Set();
+    Object.keys(LINES).forEach(key=>{
+      const l = LINES[key];
+      if (l.grp !== "RE-Netz 2030") return;
+      const baseId = deriveBaseLineId(key);
+      if (seenBase.has(baseId)) return; seenBase.add(baseId);
+      const styleId = BASE_TO_STYLE[baseId], path = styleId && LINE_PATHS[styleId];
+      let coords = null;
+      if (path && path.length >= 2) coords = path.map(([lon,lat])=>[lat,lon]);
+      else { const pts = stopPolyline(l, 0, l.stops.length-1); if (pts.length >= 2) coords = pts; }
+      if (!coords) return;
+      const col = lineColor(l.name), id = "l-"+baseId;
+      const f = feat(coords, col, `<b>${l.name}</b><br>${l.stops[0].name} ↔ ${l.stops[l.stops.length-1].name}`);
+      add(id, [f], 4); fit.push(f.geometry.coordinates);
+      NETZ_MAP_LAYERS[baseId] = { glLayer:id, name:l.name, color:col };
+    });
+    // Hochbahn / Maglev 700 / Erde: je Gruppe eine Ebene
+    GROUPS.forEach(g=>{
+      if (g.heavy) return;
+      const feats = [];
+      Object.keys(LINES).forEach(key=>{
+        const l = LINES[key];
+        if (l.grp !== g.label || !/_(A|H|U)$/.test(key)) return;
+        const pts = stopPolyline(l, 0, l.stops.length-1); if (pts.length < 2) return;
+        const f = feat(pts, lineColor(l.name), `<b>${l.name}</b><br>${l.stops[0].name} → ${l.stops[l.stops.length-1].name}`);
+        feats.push(f);
+        if (g.mode!=="mg700" && g.mode!=="erde") fit.push(f.geometry.coordinates);
+      });
+      const id = "g-"+g.id;
+      add(id, feats, g.mode==="metro" ? 2.2 : 3);
+      NETZ_MAP_LAYERS["g:"+g.id] = { glLayer:id, name:g.short, color:g.color };
+    });
+    // Metro-Außenlinien: erst beim Einschalten gebaut
+    GROUPS.filter(g=>g.label.startsWith("Metro-Außenlinien ")).forEach(g=>{
+      const id = "x-"+g.id;
+      const entry = { glLayer:id, name:"Außen "+g.label.replace("Metro-Außenlinien ",""), color:"#B58CF0", lazy:true, built:false };
+      entry.build = ()=>{
+        entry.built = true;
+        const feats = [];
+        Object.keys(LINES).forEach(key=>{
+          const l = LINES[key];
+          if (l.grp !== g.label || !/_A$/.test(key)) return;
+          const pts = stopPolyline(l, 0, l.stops.length-1); if (pts.length < 2) return;
+          feats.push(feat(pts, lineColor(l.name), `<b>${l.name}</b><br>${l.stops[0].name} ↔ ${l.stops[l.stops.length-1].name}`));
+        });
+        add(id, feats, 2);
+      };
+      NETZ_MAP_LAYERS["x:"+g.id] = entry;
+    });
+    glFit(map, fit, 20);
+    renderNetzMapLegendGL(map);
+  });
+}
+function renderNetzMapLegendGL(map){
+  const el = document.getElementById("netzMapLegend");
+  if (!el) return;
+  el.style.display = "";
+  const ids = Object.keys(NETZ_MAP_LAYERS).sort((a,b)=>{
+    const la = NETZ_MAP_LAYERS[a].lazy ? 1 : 0, lb = NETZ_MAP_LAYERS[b].lazy ? 1 : 0;
+    return (la-lb) || a.localeCompare(b,"de",{numeric:true});
+  });
+  el.innerHTML = ids.map(id=>{ const e = NETZ_MAP_LAYERS[id]; return `<button class="train-pill netz-pill ${e.lazy?"":"active"}" data-line="${id}" style="--c:${e.color}">${e.name}</button>`; }).join("");
+  const setVis = (e, on)=>{ if (map.getLayer(e.glLayer)) map.setLayoutProperty(e.glLayer, "visibility", on ? "visible" : "none"); };
+  ids.forEach(id=>{ const e = NETZ_MAP_LAYERS[id]; if (e.lazy) return; });
+  el.querySelectorAll(".train-pill").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const entry = NETZ_MAP_LAYERS[btn.dataset.line]; if (!entry || GL_MAP !== map) return;
+      const on = btn.classList.toggle("active");
+      if (on && entry.lazy && !entry.built) entry.build();
+      setVis(entry, on);
+    });
+  });
+}
+function openRouteMap(route){
+  if (!route || !route.legs || !route.legs.length) return;
+  if (glSupported()) return openRouteMapGL(route);
+  return openRouteMapLeaflet(route);
+}
+function openNetzMap(){
+  if (glSupported()) return openNetzMapGL();
+  return openNetzMapLeaflet();
 }
 function renderNetzMapLegend(){
   const el = document.getElementById("netzMapLegend");

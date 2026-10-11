@@ -2044,7 +2044,7 @@ function fiVerlaufHTML(key, depAtFirst, contextStopName, minOff, maxOff){
         ${stopTimeHTML(depAtFirst, s, isFirst, isLast)}
         <div class="stop-dot-col"><div class="stop-dot"></div>${i<visibleStops.length-1?'<div class="stop-line-seg"></div>':''}</div>
         <div class="stop-name stationlink" data-station="${s.name.replace(/"/g,'&quot;')}">${flagBadge(s.name)} ${s.name}</div>
-        <div class="tl-platform" style="align-self:center;">Gl. ${platformFor(s.name+key+"FI")}</div>
+        <div class="tl-platform" style="align-self:center;">Gl. ${trackOf(s.name,key)}</div>
       </div>`;
   }).join("");
 }
@@ -2059,7 +2059,7 @@ function renderFahrtinfo(){
     body.innerHTML = fiVerlaufHTML(key, depAtFirst, contextStop, minOff, maxOff);
     wireStationLinks(body);
   } else {
-    const plat = platformFor(contextStop+key+"F");
+    const plat = trackOf(contextStop,key);
     body.innerHTML = `
       <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;">
         <div style="font-size:13px;color:var(--text-dim);">Gl. <b style="color:var(--text)">${plat}</b> · Fahrtrichtung</div>
@@ -2434,8 +2434,8 @@ function buildLegHTML(key, depAtFirst, fromName, toName, minOff, maxOff, context
   const idxTo = (toName!==undefined) ? (()=>{ const k = l.stops.findIndex((s,q)=>q>idxFrom && s.name===toName); return k>=0 ? k : l.stops.findIndex(s=>s.name===toName); })() : l.stops.length-1;
   const timeFrom = depAtFirst + stopDep(l.stops[idxFrom]);
   const timeTo = depAtFirst + stopArr(l.stops[idxTo]);
-  const platFrom = platformFor(fromName+key+"F");
-  const platTo = platformFor((toName||l.stops[idxTo].name)+key+"T");
+  const platFrom = trackOf(fromName,key);
+  const platTo = trackOf((toName||l.stops[idxTo].name),key);
   const middle = l.stops.slice(idxFrom+1, idxTo);
   TL_COLLAPSE_COUNTER++;
   const cid = "tlcol-"+TL_COLLAPSE_COUNTER;
@@ -2761,9 +2761,54 @@ function couplingHintFor(key, off){
   else if (cp.coupledFrom) windowText = ` ab ${cp.coupledFrom}`;
   return `⧓ gekuppelt mit ${cp.partnerLine.name} → ${cp.partnerLine.dest}${windowText}`;
 }
-function platformFor(seedStr){
-  let h=0; for(const c of seedStr) h = (h*31 + c.charCodeAt(0)) % 9973;
-  return 1 + (h % 12);
+// ===================== Feste Gleise je Linie und Richtung =====================
+// Jede Linie hat in jeder Richtung an jeder Station ein festes Gleis. Verkehrsmittel teilen sich nie ein
+// Gleis: pro Station bekommt jede Verkehrsmittel-Klasse einen eigenen, zusammenhängenden Gleisblock
+// (S-Bahn, RE, IR, Metro, MetroX, Maglev XF/XE, Maglev 700, Vactrain).
+// Bochum Hub: 218 Gleise nach dem Nummernplan des Mega-Hubs (Blöcke unten, ein Teil davon Reserve).
+const TRACK_CLASSES = ["s","re","ir","metro","mx","xfxe","mg","vt"];
+function trackClassOf(l){
+  if (l.mode==="erde") return /^Vactrain/.test(l.rolling) ? "vt" : "mg";
+  if (l.mode==="mg700") return "mg";
+  if (l.mode==="xf" || l.mode==="xe") return "xfxe";
+  return l.mode;
+}
+const BOCHUM_HUB_BLOCKS = [ ["re",30,"s","re","ir"], ["metro",20], ["mx",16], ["xfxe",12], ["mg",46], ["vt",80] ]; // + 14 Reserve (Shinkansen) = 218
+const __TRACK_CACHE = new Map();
+function stationTracks(name){
+  const canon = aliasesOf(name)[0];
+  let m = __TRACK_CACHE.get(canon);
+  if (m) return m;
+  const byClass = {};
+  const seen = new Set();
+  stationEntries(name).forEach(({key})=>{
+    if (seen.has(key)) return; seen.add(key);
+    const c = trackClassOf(LINES[key]);
+    (byClass[c] = byClass[c] || []).push(key);
+  });
+  const cmp = (a,b)=> LINES[a].name.localeCompare(LINES[b].name, "de", {numeric:true}) || a.localeCompare(b, "de", {numeric:true});
+  Object.keys(byClass).forEach(c=>byClass[c].sort(cmp));
+  m = { map:{}, total:0 };
+  if (aliasesOf(name).indexOf("Bochum Hub") >= 0){
+    let pos = 1;
+    BOCHUM_HUB_BLOCKS.forEach(([cls,size,...merged])=>{
+      const groups = merged.length ? merged : [cls];
+      let keys = []; groups.forEach(g=>{ keys = keys.concat(byClass[g]||[]); });
+      keys.forEach((k,i)=>{ m.map[k] = pos + i; });
+      pos += Math.max(size, keys.length);
+    });
+    m.total = Math.max(218, pos-1+14);
+  } else {
+    let pos = 1;
+    TRACK_CLASSES.forEach(c=>{ (byClass[c]||[]).forEach(k=>{ m.map[k] = pos++; }); });
+    m.total = pos-1;
+  }
+  __TRACK_CACHE.set(canon, m);
+  return m;
+}
+function trackOf(stationName, key){
+  const t = stationTracks(stationName).map[key];
+  return t === undefined ? 1 : t;
 }
 function auslastungFor(seedStr){
   let h=0; for(const c of seedStr) h = (h*31 + c.charCodeAt(0)) % 9973;
@@ -2795,13 +2840,17 @@ function renderBoard(){
   }
   const baseMin = boardBaseMin();
   const entries = [];
+  // Große Hubs (viele Linien): je Linie und Richtung die nächste Abfahrt, damit alle Verkehrsmittel
+  // sichtbar sind und nicht ein dichter Metro-Takt die Tafel füllt. Kleine Bahnhöfe: wie bisher 3 je Linie.
+  const bigHub = stationEntries(station).length > 12;
+  const perKey = bigHub ? 1 : 3, boardCap = bigHub ? 160 : 40;
   if (BOARD_MODE === "dep"){
     stationEntries(station).forEach(({key, idx})=>{
       const l = LINES[key];
       if (!matchesVerkehrsmittel(l, BOARD_VMODE)) return;
       if (idx === l.stops.length-1) return; // Endstation, keine Abfahrt
       const off = stopDep(l.stops[idx]);
-      const deps = nextDeparturesAtStop(key, off, baseMin, 3);
+      const deps = nextDeparturesAtStop(key, off, baseMin, perKey);
       const fullEndOff = stopArr(l.stops[l.stops.length-1]);
       deps.forEach(({dep, maxOff, minOff})=>{
         const isShort = maxOff < fullEndOff || minOff > 0;
@@ -2818,7 +2867,7 @@ function renderBoard(){
       if (!matchesVerkehrsmittel(l, BOARD_VMODE)) return;
       if (idx === 0) return; // Startstation, keine Ankunft
       const off = l.stops[idx].off;
-      const deps = nextDeparturesAtStop(key, off, baseMin, 3);
+      const deps = nextDeparturesAtStop(key, off, baseMin, perKey);
       const fullEndOff = stopArr(l.stops[l.stops.length-1]);
       deps.forEach(({dep, maxOff, minOff})=>{
         const isShort = maxOff < fullEndOff || minOff > 0;
@@ -2826,8 +2875,9 @@ function renderBoard(){
       });
     });
   }
-  entries.sort((a,b)=>a.dep-b.dep);
-  LAST_BOARD_ENTRIES = entries.slice(0,10);
+  const modeRank = e => TRACK_CLASSES.indexOf(trackClassOf(LINES[e.key]));
+  entries.sort((a,b)=> (a.dep-b.dep) || (modeRank(a)-modeRank(b)) || (trackOf(station,a.key)-trackOf(station,b.key)));
+  LAST_BOARD_ENTRIES = entries.slice(0,boardCap);
   const dayOffset = LAST_BOARD_ENTRIES.length ? Math.floor(LAST_BOARD_ENTRIES[0].dep/1440) : Math.floor(baseMin/1440);
   if (dateLabelEl) dateLabelEl.textContent = formatDateDE(dayOffset);
   if (!LAST_BOARD_ENTRIES.length){
@@ -2850,7 +2900,7 @@ function renderBoard(){
       <div class="board-dest"><b>${modeNoun(bl)} ${e.line}</b><br>${flagBadge(BOARD_MODE==='dep'?e.dest:e.origin)} ${label}${shortBadge}${cHint?`<br><span style="color:var(--signal-amber);font-size:11px;">${cHint}</span>`:''}</div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
         <div class="board-status ${delay.cls}">${delay.label}</div>
-        <div class="platform-pill">Gl. ${platformFor(station+e.key+i)}</div>
+        <div class="platform-pill">Gl. ${trackOf(station,e.key)}</div>
       </div>
     </div>`;
   }).join("");

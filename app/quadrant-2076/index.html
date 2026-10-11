@@ -914,6 +914,56 @@ function buildGroups(){
     return { id: label.replace(/[^A-Za-z0-9]+/g, "_"), label, heavy: rank(label) >= 200, short: label.replace("Hochbahn-Maglev ", "").replace("Fernnetz","XF").replace("Express","XE"), items, mode, color: MODE_META[mode].color };
   });
 }
+// ===================== Bereinigung: Doppelte Stationen + fehlende Bundesland-Flaggen =====================
+// Dieselbe Station kam unter mehreren Namen vor (z.B. 5x Bochum, 3x Bermuda3eck, "Köln" und "Köln Hbf").
+// STATION_MERGE: alter Name -> gemeinsamer Name (wird beim Laden auf alle Fahrpläne angewendet).
+// STATION_REGION_FIX: Stationen, die keine Flagge oder nur "Deutschland" hatten -> Bundesland / Land.
+const STATION_MERGE = {"Aachen":"Aachen Hbf","Aalborg":"Aalborg Hbf","Aarhus":"Aarhus Hbf","Augsburg":"Augsburg Hbf","Berlin":"Berlin Hbf","Bielefeld":"Bielefeld Hbf","Bochum Hub (ehem. Hbf)":"Bochum Hub","Bochum Hbf (Mega-Hub)":"Bochum Hub","Bochum Hbf":"Bochum Hub","Bochum":"Bochum Hub","Bochum (Hauptbahnhof)":"Bochum Hub","Bochum-Kohlenstraße":"Bochum Kohlenstraße","Bonn":"Bonn Hbf","Boppard":"Boppard Hbf","Braunschweig":"Braunschweig Hbf","Bremen":"Bremen Hbf","Bremen Hub":"Bremen Hbf","Bremerhaven":"Bremerhaven Hbf","Brüssel":"Brüssel Hbf","Cottbus":"Cottbus Hbf","Duisburg":"Duisburg Hbf","Düsseldorf":"Düsseldorf Hbf","Düsseldorf Flughafen Bf":"Düsseldorf Flughafen","Esbjerg":"Esbjerg Hbf","Essen":"Essen Hbf","Flensburg":"Flensburg Hbf","Göttingen":"Göttingen Hbf","Hamburg":"Hamburg Hbf","Hamm (Westf)":"Hamm (Westf) Hbf","Hannover":"Hannover Hbf","Hannover-Messe/Laatzen":"Hannover Messe/Laatzen","Izmir (Bornova-Ost)":"Izmir (Bornova Ost)","Kiel":"Kiel Hbf","Koblenz":"Koblenz Hbf","Kolding":"Kolding Hbf","Köln":"Köln Hbf","Leipzig":"Leipzig Hbf","Lutherstadt Wittenberg":"Lutherstadt Wittenberg Hbf","Magdeburg":"Magdeburg Hbf","Mannheim":"Mannheim Hbf","München":"München Hbf","Oberhausen":"Oberhausen Hbf","Odense":"Odense Hbf","Osnabrück":"Osnabrück Hbf","Recklinghausen":"Recklinghausen Hbf","Ringsted":"Ringsted Hbf","Saarbrücken":"Saarbrücken Hbf","Schwerin":"Schwerin Hbf","Stendal":"Stendal Hbf","Stuttgart":"Stuttgart Hbf","Stuttgart Hbf (tief)":"Stuttgart Hbf","Uelzen":"Uelzen Hbf","Ulm":"Ulm Hbf","Unna":"Unna Hbf","Velbert-Langenberg Bahnhof":"Velbert-Langenberg","Venlo":"Venlo Hbf","Wuppertal":"Wuppertal Hbf","Wuppertal-Barmen":"Wuppertal Barmen","Wuppertal Oberbarmen":"Wuppertal-Oberbarmen","Wuppertal - Sonnborn":"Wuppertal-Sonnborn","Steinefrenz":"Steinefrenz Bahnhof","Arnhem":"Arnhem Hbf","Arnhem Centraal":"Arnhem Hbf","Bochum Bermuda3eck":"Bermuda3eck","Bochum-Bermuda3eck":"Bermuda3eck","Bochum-Langendreer":"Bochum Langendreer","Bochum Langendreer (S)":"Bochum Langendreer","Chicago (Joliet Logistics Mega-Gateway)":"Chicago-Joliet Mega-Hub","Columbus-West Terminal":"Columbus-West Hub","Halifax-Dartmouth Port Gateway":"Halifax-Dartmouth Terminus","Indianapolis-South Logistics Hub":"Indianapolis-South Hub","Minneapolis (Maple Grove Freight Terminal)":"Minneapolis-Maple Grove Hub","Moncton-Maritime Freight Hub":"Moncton-Maritime Hub","Philadelphia (Northeast Freight Corridor)":"Philadelphia-Northeast Hub","Surrey-Gateway (Vancouver)":"Surrey (Vancouver)","Friedrichshafen Stadt":"Friedrichshafen","Kamen City":"Kamen","København H":"København Hbf","København":"København Hbf","Münster":"Münster Hbf","Münster (Westf) Hbf":"Münster Hbf","Nykøbing Falster":"Nykøbing F.","Gdynia":"Gdynia Główna","Zürich":"Zürich HB","Verden (Aller)":"Verden","Dorsten Bahnhof/City":"Dorsten","Forchheim (Oberfr)":"Forchheim","Velbert Nierenhof Busbahnhof":"Velbert-Nierenhof","Freiburg":"Freiburg (Breisgau) Hbf"};
+const STATION_REGION_FIX = {"Anrath":"NW","Au (Sieg)":"NW","Blankenberg (Sieg)":"NW","Borken (Westf)":"NW","Bottrop Hbf":"NW","Bottrop-Boy":"NW","Bottrop-Vonderort":"NW","Dattenfeld (Sieg)":"NW","Diepholz":"NI","Dorsten":"NW","Duisburg-Meiderich Süd":"NW","Duisburg-Obermeiderich":"NW","Dülmen":"NW","Düsseldorf Volksgarten":"NW","Düsseldorf-Eller":"NW","Düsseldorf-Eller Mitte":"NW","Düsseldorf-Oberbilk":"NW","Eitorf":"NW","Essen-Holthausen":"NW","Essen-Kray Nord":"NW","Essen-Kupferdreh":"NW","Essen-Überruhr":"NW","Feldhausen":"NW","Forchheim":"BY","Gelsenkirchen-Rotthausen":"NW","Gladbeck West":"NW","Gladbeck-Zweckel":"NW","Hamm (Westf)":"NW","Hennef (Sieg)":"NW","Herchen":"NW","Hervest-Dorsten":"NW","Hilden":"NW","Hilden Süd":"NW","Hochneukirch":"NW","Jüchen":"NW","Köln Frankfurter Straße":"NW","Köln Hansaring":"NW","Köln Trimbornstraße":"NW","Köln/Bonn Flughafen":"NW","Krefeld Hbf":"NW","Krefeld-Hohenbudberg Chempark":"NW","Krefeld-Linn":"NW","Krefeld-Oppum":"NW","Krefeld-Uerdingen":"NW","Lutherstadt Wittenberg":"ST","Marbeck-Heiden":"NW","Merten (Sieg)":"NW","Moers":"NW","München Hbf":"BY","Oberhausen-Osterfeld Süd":"NW","Oebisfelde":"ST","Porz-Wahn":"NW","Pulheim":"NW","Recklinghausen Süd":"NW","Remscheid Hbf":"NW","Remscheid-Güldenwerth":"NW","Remscheid-Lennep":"NW","Remscheid-Lüttringhausen":"NW","Rheydt-Odenkirchen":"NW","Rosbach (Sieg)":"NW","Rumeln":"NW","Schladern (Sieg)":"NW","Siegburg/Bonn":"NW","Solingen Grünewald":"NW","Solingen Hbf":"NW","Solingen Mitte":"NW","Solingen Vogelpark":"NW","Spich":"NW","Stendal":"ST","Stommeln":"NW","Troisdorf":"NW","Trompet":"NW","Velbert Rosenhügel":"NW","Velbert-Langenberg":"NW","Velbert-Neviges":"NW","Velbert-Nierenhof":"NW","Wülfrath-Aprath":"NW","Wuppertal Zoologischer Garten":"NW","Wuppertal-Barmen":"NW","Wuppertal-Ronsdorf":"NW","Wuppertal-Sonnborn":"NW","Wuppertal-Steinbeck":"NW","Wuppertal-Unterbarmen":"NW","Bochum (Hauptbahnhof)":"NW","Kassel (Kreuz Mitte)":"HE","Leipzig (Schkeuditz)":"SN","Chemnitz (Nord)":"SN","Bochum":"NW","Essen":"NW","Duisburg":"NW","Düsseldorf":"NW","Köln":"NW","Koblenz":"RP","Frankfurt Flughafen":"HE","Mannheim":"BW","Stuttgart":"BW","Ulm":"BW","Augsburg":"BY","Bielefeld":"NW","Hannover":"NI","Berlin":"BE","Rostock (Seehafen)":"MV","Schwerin":"MV","Hannover (Lehrte)":"NI","Münster (Turmbahnhof)":"NW","Bochum Hbf (Mega-Hub)":"NW","Oberhausen":"NW","Langeoog":"NI","St. Peter-Ording":"SH","High Speed Hub Wuppertal Nord":"NW","IKEA Wuppertal":"NW","Wuppertal Oberbarmen":"NW","Wuppertal Barmen":"NW","Rotter Platz – Wuppertal":"NW","Wuppertal Büchenring":"NW","Wuppertal Dönberg Kirche":"NW","Velbert Lembeck":"NW","Velbert Gartenheimstraße":"NW","Velbert-Langenberg Bahnhof":"NW","Velbert Nierenhof Busbahnhof":"NW","Hattingen Lembeck":"NW","Hattingen Südring":"NW","Hattingen Mitte":"NW","Bochum Lewackerstraße":"NW","Linden Mitte":"NW","Bochum Südbad":"NW","Bochum Am Röderschacht":"NW","Bochum Blankensteiner Straße":"NW","Bochum Weitmar Mitte":"NW","Bochum Kohlenstraße":"NW","Bochum Bergmannsheil":"NW","Bochum Bermuda3eck":"NW","Bochum Hub":"NW","Bochumer Ruhrstadion":"NW","Bochum Ruhrpark":"NW","Castrop-Rauxel Breckenstraße":"NW","Castrop-Rauxel Münsterplatz":"NW","Kamener Kreuz":"NW","Kamen City":"NW","IKEA Kamen":"NW","Flughafen Dortmund":"NW","Stadtkrone Ost":"NW","Märkische Straße":"NW","Westfalenpark":"NW","Signal Iduna Park":"NW","Kreuz Dortmund West":"NW","IKEA Dortmund":"NW","Bochum Langendreer (S)":"NW","Bochum Hub (ehem. Hbf)":"NW","Bermuda3eck":"NW","Bochum Ehrenfeld (S)":"NW","Wattenscheider Straße":"NW","Regio Hub Kreuz Bochum":"NW","August-Bebel-Platz":"NW","Ückendorfer Platz":"NW","Alter GE Hbf/Innenstadt":"NW","Veltins Arena":"NW","Buer Mitte/Rathaus":"NW","Valentinstraße":"NW","Polsum":"NW","Marler Straße/L608":"NW","Dorsten Gottlieb-Daimler-Straße":"NW","Dorsten Bahnhof/City":"NW","DOR Borkener-/Friedrichstraße":"NW","Erle Friedholt – Raesfeld":"NW","Raesfeld Kirche":"NW","Kreuz B70/B67":"NW","B67/Brünenerstraße":"NW","Bocholt Bahnhof/City":"NW","Wuppertal":"NW","Aachen":"NW","Münster":"NW","Osnabrück":"NI","Bremen":"HB","Hamburg":"HH","Kiel":"SH","Flensburg":"SH","Dortmund Hbf":"NW","Essen Hbf":"NW","Düsseldorf Flughafen":"NW","Büsum":"SH","Cuxhaven":"NI","Bremerhaven":"HB","Bremen Hub":"HB","Verden":"NI","Nienburg":"NI","Minden":"NW","Recklinghausen":"NW","Cottbus":"BB","Leipzig":"SN","Halle":"ST","Magdeburg":"ST","Braunschweig":"NI","Lindau":"BY","Friedrichshafen":"BW","Konstanz":"BW","Titisee":"BW","Freiburg":"BW","Saarbrücken":"SL","Idar-Oberstein":"RP","Bonn":"NW","Frankfurt":"HE","Niebüll":"SH","Husum":"SH","Bitterfeld":"ST","Coburg":"BY","Dachau":"BY","Dorsten-Rhade":"NW","Frankfurt Flughafen Regiobf":"HE","Grevenbroich-Erftwerk":"NW","Hannover-Messe/Laatzen":"NI","Hennef im Siegbogen":"NW","Kinding (Altmühltal)":"BY","København Lufthavn":"c:DK","København Syd":"c:DK","Köln-Müngersdorf Technologiepark":"NW","Krefeld-Forsthaus":"NW","Malmö C":"c:SE","Middelfart":"c:DK","Naumburg (Saale)":"ST","Nyborg":"c:DK","Odense":"c:DK","Pfaffenhofen (Ilm)":"BY","Rathenow":"BB","Slagelse":"c:DK","Solingen Schaberg":"NW","Tinglev":"c:DK","Viersen-Helenabrunn":"NW","München":"BY","Rosenheim":"BY","Wismar":"MV","Borkum":"NI","Juist":"NI","Norderney":"NI","Baltrum":"NI","Spiekeroog":"NI","Wangerooge":"NI","Helgoland (Tiefseehub)":"SH","Amrum":"SH","Hörnum (Sylt)":"SH","Westerland (Sylt / Hub)":"SH","List (Sylt)":"SH","Westerland (Sylt)":"SH","Wyk (Föhr)":"SH","Pellworm":"SH","Singen":"BW"};
+function applyStationCleanup(){
+  const isState = code => { const t = REG_TABLE[code]; return !!t && t.type === 'state'; };
+  // 1) fehlende / nur-"Deutschland"-Flaggen auf Bundesland setzen
+  Object.keys(STATION_REGION_FIX).forEach(n=>{
+    const code = STATION_REGION_FIX[n];
+    const cur = STATION_REGIONS[n] || (STOP_REGION[n] ? REG_TABLE[STOP_REGION[n]] : null);
+    if (cur && cur.type === 'state') return;
+    if (cur && cur.type === 'country' && code === 'c:DE') return;
+    if (cur && cur.type === 'country' && !isState(code) && STOP_REGION[n] !== 'c:DE') return;
+    delete STATION_REGIONS[n];
+    STOP_REGION[n] = code;
+  });
+  // 2) Namen zusammenlegen
+  const M = STATION_MERGE;
+  const regOf = n => STATION_REGIONS[n] || (STOP_REGION[n] ? REG_TABLE[STOP_REGION[n]] : null);
+  Object.keys(M).forEach(v=>{
+    const c = M[v];
+    if (STATION_COORDS[v] && !STATION_COORDS[c]) STATION_COORDS[c] = STATION_COORDS[v];
+    if (STOP_BF[v] && !STOP_BF[c]) STOP_BF[c] = STOP_BF[v];
+    if (STATION_TIER[v] !== undefined && (STATION_TIER[c] === undefined || STATION_TIER[v] < STATION_TIER[c])) STATION_TIER[c] = STATION_TIER[v];
+    const rc = regOf(c), rv = regOf(v);
+    if (rv && (!rc || (rc.type !== 'state' && rv.type === 'state'))){
+      if (STATION_REGIONS[v]){ STATION_REGIONS[c] = STATION_REGIONS[v]; delete STOP_REGION[c]; }
+      else if (STOP_REGION[v]){ STOP_REGION[c] = STOP_REGION[v]; delete STATION_REGIONS[c]; }
+    }
+  });
+  Object.keys(LINES).forEach(k=>{
+    const l = LINES[k];
+    l.stops.forEach(s=>{ if (M[s.name]) s.name = M[s.name]; });
+    if (M[l.dest]) l.dest = M[l.dest];
+  });
+}
+function mergeHubNames(hubsJson){
+  const out = {};
+  Object.keys(hubsJson).forEach(h=>{
+    const m = new Map();
+    hubsJson[h].forEach(([n,w])=>{
+      const nn = STATION_MERGE[n] || n;
+      if (!m.has(nn) || w < m.get(nn)) m.set(nn, w);
+    });
+    out[h] = [...m.entries()];
+  });
+  return out;
+}
 async function loadAllData(setStatus){
   const j = async (u)=>{
     const r = await fetch(u);
@@ -953,8 +1003,9 @@ async function loadAllData(setStatus){
   packs.sort((a,b)=> meta.packs.indexOf(a.p) - meta.packs.indexOf(b.p));
   packs.forEach(({p,d})=> inflatePack(d, tierOf(p.id)));
   setStatus("Netz aufbauen …");
+  applyStationCleanup();
   buildGroups();
-  return hubs;
+  return mergeHubNames(hubs);
 }
 
 // ===================== Helpers =====================
@@ -3243,7 +3294,7 @@ window.startApp = function(){
   });
 
   // Defaults to make first load feel alive
-  selectedFrom = "Bochum Hbf"; selectedTo = "Essen Hbf"; selectedBoard = "Bochum Hbf";
+  selectedFrom = "Bochum Hub"; selectedTo = "Essen Hbf"; selectedBoard = "Bochum Hub";
   setPickerField("fromField", selectedFrom);
   setPickerField("toField", selectedTo);
   setPickerField("boardField", selectedBoard);

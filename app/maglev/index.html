@@ -2862,6 +2862,21 @@ const MAGLEV_WAGONS = (()=>{
   const seq = 'K' + 'SSSSSS' + 'L' + 'R' + 'ZZZZZZ' + 'L' + 'Z' + 'B' + 'SSSSSS' + 'L' + 'R' + 'V' + 'K';
   return [...seq].map(c=>({icon:t[c][0], label:t[c][1], first: c!=='V'}));
 })();
+function maglevPlatformHTML(wagons){
+  // 1 Wagen = 25 m = 68 px (64 px Wagen + 4 px Abstand). Bahnsteig 750 m, Zug 700 m steht mittig (25 m Rand).
+  const PX = 68/25, L = 750, SEC = 50, W = Math.round(L*PX), letters = "ABCDEFGHIJKLMNO";
+  const secs = [...letters].map((s,i)=>`<span class="sectorbadge" style="position:absolute;top:0;left:${Math.round(i*SEC*PX)+2}px;width:${Math.round(SEC*PX)-4}px;text-align:center;margin:0;background:var(--accent);color:#fff;font-weight:800;border-radius:6px;padding:3px 0;font-family:var(--mono);font-size:12px;">${s}</span>`).join("");
+  const marks = [0,100,200,300,400,500,600,700,750].map(m=>`<span style="position:absolute;left:${Math.round(m*PX)}px;transform:translateX(${m===0?'0':m===750?'-100%':'-50%'});font-family:var(--mono);font-size:10px;color:var(--text-faint);">${m} m</span>`).join("");
+  return `<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -2px;padding:0 2px 6px;">
+    <div style="position:relative;width:${W}px;">
+      <div class="platform-track" style="background:repeating-linear-gradient(90deg, var(--line) 0 2px, transparent 2px ${SEC*PX}px);"></div>
+      <div style="position:relative;height:24px;margin:6px 0 10px;">${secs}</div>
+      <div class="wagen-row" style="overflow:visible;padding-left:${Math.round(25*PX)}px;">${wagons}</div>
+      <div style="position:relative;height:16px;">${marks}</div>
+    </div>
+  </div>
+  <div style="font-size:12px;color:var(--text-dim);margin:6px 0 4px;">Bahnsteig 750 m · Sektoren A–O je 50 m · Zug 700 m (28 Wagen à 25 m), hält mittig</div>`;
+}
 function computeWagenHTML(key){
   const l = LINES[key];
   const n = l.cars;
@@ -2949,9 +2964,9 @@ function computeWagenHTML(key){
     </div>
     <p style="font-size:12px;color:var(--text-dim);margin:0 0 14px;">${l.rolling}${l.coupled && !cp && !cs?' · gekuppelte Doppeltraktion':''}</p>
     ${couplingNote}
-    <div class="platform-track"></div>
+    ${n===28 ? maglevPlatformHTML(wagons) : `<div class="platform-track"></div>
     <div class="sector-labels">${[...sectors].map(s=>`<span class="sectorbadge">${s}</span>`).join("")}</div>
-    <div class="wagen-row">${wagons}</div>
+    <div class="wagen-row">${wagons}</div>`}
     <div class="legend">
       ${n===28 ? '<span>🚄 Kopfwagen</span><span>1. — Sitzwagen First Class (Flugzeugsitze)</span><span>🛏 Schlafwagen</span><span>🌄 Panorama-Lounge</span><span>🍴 Restaurant</span><span>🍸 Restaurant & Bar</span><span>🧰 Service</span><span>♿ Rollstuhlplatz</span><span>🚻 WC</span>'
        : `<span>🚲 Fahrradabteil</span><span>♿ Rollstuhlplatz</span><span>🚻 WC</span>${totalN>=8?'<span>☕ Bordbistro</span>':''}

@@ -2191,14 +2191,34 @@ function renderNetzMapLegendGL(map){
     });
   });
 }
+// Globus-Karte immer zuerst versuchen. mapboxgl.supported() meldet in manchen Browsern (z. B. Brave mit
+// Fingerprint-Schutz) fälschlich "nicht unterstützt", obwohl WebGL läuft — daher nur prüfen, ob die
+// Bibliothek geladen ist, und bei einem echten Fehler auf die Leaflet-Karte zurückfallen.
+function glAvailable(){ return typeof mapboxgl !== "undefined" && typeof mapboxgl.Map === "function"; }
 function openRouteMap(route){
   if (!route || !route.legs || !route.legs.length) return;
-  if (glSupported()) return openRouteMapGL(route);
+  if (glAvailable()){ try { return openRouteMapGL(route); } catch(err){ console.error("[Mapbox GL]", err); } }
   return openRouteMapLeaflet(route);
 }
 function openNetzMap(){
-  if (glSupported()) return openNetzMapGL();
+  if (glAvailable()){ try { return openNetzMapGL(); } catch(err){ console.error("[Mapbox GL]", err); } }
   return openNetzMapLeaflet();
+}
+// Rückfall-Karte (Leaflet): Längengrade fortlaufend, damit Linien über die Datumsgrenze nicht quer
+// über die ganze Karte springen
+if (typeof L !== "undefined" && L.polyline){
+  const __pl = L.polyline;
+  const __unwrap = (ll)=>{
+    if (!Array.isArray(ll) || !ll.length) return ll;
+    if (Array.isArray(ll[0]) && Array.isArray(ll[0][0])) return ll.map(__unwrap);
+    let prev = null;
+    return ll.map(p=>{
+      let lat, lon; if (Array.isArray(p)){ lat = p[0]; lon = p[1]; } else { lat = p.lat; lon = p.lng; }
+      if (prev !== null){ while (lon - prev > 180) lon -= 360; while (lon - prev < -180) lon += 360; }
+      prev = lon; return [lat, lon];
+    });
+  };
+  L.polyline = function(ll, opts){ return __pl(__unwrap(ll), opts); };
 }
 
 // ===================== Gesamtnetzkarte (alle Linien gleichzeitig) =====================
@@ -2226,7 +2246,7 @@ function initMapboxBaseLayer(map, container){
       return;
     }
     try {
-      const mbLayer = L.mapboxGL({ accessToken: MAPBOX_TOKEN, style: "mapbox://styles/mapbox/satellite-streets-v12", updateInterval: 0 }).addTo(map);
+      const mbLayer = L.mapboxGL({ accessToken: MAPBOX_TOKEN, style: "mapbox://styles/mapbox/satellite-streets-v12", updateInterval: 0, projection: "mercator" }).addTo(map);
       const mbMap = mbLayer.getMapboxMap && mbLayer.getMapboxMap();
       if (mbMap){
         if (typeof MapboxLanguage === "function") mbMap.addControl(new MapboxLanguage({ defaultLanguage: "mul" }));
